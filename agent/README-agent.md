@@ -128,15 +128,19 @@ and the patcher will find the matching row.
 
 Three options, pick the one that fits your agent's runtime:
 
-1. **From the live site** — once Netlify deploys the repo, the modules are at
-   `https://<your-site>.netlify.app/agent/apply_quotes.mjs` and
-   `https://<your-site>.netlify.app/agent/update_via_github.mjs`. CORS is
-   open by default for static Netlify assets, so dynamic `import()` works
-   from any origin. Cleanest if the agent has dynamic-import support.
+1. **From the live site** (recommended):
+   - `https://www.1aminvesting.com/agent/apply_quotes.mjs`
+   - `https://www.1aminvesting.com/agent/update_via_github.mjs`
 
-2. **From jsDelivr (GitHub CDN)** — even before/without Netlify:
+   Both serve as `application/javascript` with open CORS, so dynamic `import()`
+   works from any origin. Use the `www.` form — the apex `1aminvesting.com`
+   301-redirects, which most fetch contexts handle but a few module loaders
+   don't.
+
+2. **From jsDelivr (GitHub CDN)** — useful if Netlify is rolling a deploy:
    `https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@main/agent/apply_quotes.mjs`.
-   Served with proper module MIME so `import()` works.
+   Served with the correct module MIME. Cached aggressively, so it lags new
+   commits by up to 12 hours unless you bust with a `?v=…` query.
 
 3. **Inlined into the agent's instructions** — paste the source directly. Both
    files are short (< 200 lines each, zero dependencies).
