@@ -38,14 +38,15 @@ jobs:
         with:
           python-version: '3.12'
           cache: 'pip'
+          cache-dependency-path: 'scripts/requirements.txt'
 
-      - name: Install yfinance
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Pinned to a known-working version. Bump this if Yahoo's endpoints
-          # change and the pinned version stops working — community usually
-          # ships a fix within days.
-          pip install 'yfinance>=0.2.40,<0.3' openpyxl pandas
+          # Pinned versions live in scripts/requirements.txt. Bump there if
+          # Yahoo's endpoints change and the pin stops working — yfinance
+          # community usually ships a fix within days.
+          pip install -r scripts/requirements.txt
 
       - name: Fetch prices and patch data.js
         run: python scripts/fetch_yahoo.py

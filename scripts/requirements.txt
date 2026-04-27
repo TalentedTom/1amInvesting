@@ -1,0 +1,8 @@
+# Dependencies for the GitHub Actions price-refresh cron
+# (see .github/workflows/refresh-prices.yml).
+#
+# Local Python tools at repo root (update_data.py, apply_quotes.py, etc.)
+# don't share these — apply_quotes.py is stdlib-only, update_data.py uses
+# pandas/openpyxl/deep_translator which the user installs locally.
+
+yfinance>=0.2.40,<0.3
