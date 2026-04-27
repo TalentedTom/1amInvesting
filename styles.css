@@ -229,7 +229,10 @@ body.light-mode .position-toggle {
     top: 4px;
     bottom: 4px;
     left: 4px;
-    width: calc(50% - 4px);
+    /* Thumb spans one third of the inner area (container minus 8px padding).
+       translateX(100%) moves it by exactly one button width since each button
+       is also 1/3 of the inner area. */
+    width: calc((100% - 8px) / 3);
     border-radius: 999px;
     background: var(--accent);
     box-shadow: 0 0 12px var(--accent-glow);
@@ -237,8 +240,11 @@ body.light-mode .position-toggle {
     pointer-events: none;
     z-index: 0;
 }
-.position-toggle.bottleneck-active .position-toggle-thumb {
+.position-toggle.chokepoint-active .position-toggle-thumb {
     transform: translateX(100%);
+}
+.position-toggle.bottleneck-active .position-toggle-thumb {
+    transform: translateX(200%);
 }
 .position-btn {
     position: relative;

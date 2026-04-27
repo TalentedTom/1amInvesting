@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'en';
     let sortState = { col: null, asc: true };
     let hiddenCols = new Set();
-    let positionFilter = (localStorage.getItem('positionFilter') === 'bottleneck') ? 'bottleneck' : 'chokepoint';
+    // Default to 'all'. Existing visitors who explicitly chose 'chokepoint' or
+    // 'bottleneck' keep their preference (it's still in localStorage).
+    let positionFilter = (() => {
+        const stored = localStorage.getItem('positionFilter');
+        return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
+    })();
 
     // Columns Dropdown Logic
     const columnsBtn = document.getElementById('columns-btn');
@@ -85,13 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     applyTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
 
-    // Position Type Filter (Bottleneck vs Chokepoint) — persists choice in localStorage.
+    // Position Type Filter (All / Chokepoint / Bottleneck) — persists in localStorage.
     const positionToggle = document.getElementById('position-toggle');
     const positionBtns = document.querySelectorAll('.position-btn');
+    const setSliderPosition = (val) => {
+        if (!positionToggle) return;
+        // No class for 'all' — thumb sits at translateX(0%) by default.
+        positionToggle.classList.toggle('chokepoint-active', val === 'chokepoint');
+        positionToggle.classList.toggle('bottleneck-active', val === 'bottleneck');
+    };
     const applyPositionFilter = (val) => {
         positionFilter = val;
         positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === val));
-        if (positionToggle) positionToggle.classList.toggle('bottleneck-active', val === 'bottleneck');
+        setSliderPosition(val);
         try { localStorage.setItem('positionFilter', val); } catch (_) {}
         renderData();
     };
@@ -100,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Reflect the loaded filter on the buttons + slider (no re-render — initial render handles it).
     positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === positionFilter));
-    if (positionToggle) positionToggle.classList.toggle('bottleneck-active', positionFilter === 'bottleneck');
+    setSliderPosition(positionFilter);
 
     // Initialize Data from global JS variable
     function renderData() {
@@ -110,11 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = fullData[currentLang];
             const enData = fullData['en'] || data;
 
-            // Filter out empty rows AND apply the Bottleneck/Chokepoint position filter.
+            // Filter out empty rows AND apply the position-type filter (if any).
             // Filter is keyed off the English Position Type so language switches don't break it.
-            const wanted = positionFilter.toUpperCase();   // "BOTTLENECK" or "CHOKEPOINT"
+            // 'all' bypasses the type check entirely.
+            const wanted = positionFilter.toUpperCase();   // "ALL" / "CHOKEPOINT" / "BOTTLENECK"
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
+                if (positionFilter === 'all') return true;
                 const ptEn = String((enData[i] && enData[i]['Position Type']) || '').toUpperCase();
                 return ptEn.includes(wanted);
             });
