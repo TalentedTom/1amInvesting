@@ -1,0 +1,21 @@
+# Local Claude Code state
+.claude/
+.claudeignore
+
+# Source xlsx — kept local, contains personal portfolio data and live prices
+*.xlsx
+
+# Older artifact, no longer referenced by the site
+data.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp

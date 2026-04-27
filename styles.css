@@ -1,0 +1,620 @@
+:root {
+    --bg-dark: #0a0b10;
+    --bg-panel: #13151c;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+    --accent: #3b82f6;
+    --accent-glow: rgba(59, 130, 246, 0.5);
+    
+    --elite-color: #f59e0b;
+    --elite-glow: rgba(245, 158, 11, 0.4);
+    
+    --hc-color: #10b981;
+    --hc-glow: rgba(16, 185, 129, 0.4);
+
+    --border: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(19, 21, 28, 0.7);
+    --row-hover: rgba(255, 255, 255, 0.03);
+    --sticky-bg: #1a1d26;
+    --th-bg: rgba(255, 255, 255, 0.02);
+    --th-hover-bg: rgba(255, 255, 255, 0.05);
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body.light-mode {
+    --bg-dark: #f5f7fa;
+    --bg-panel: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border: rgba(0, 0, 0, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --row-hover: rgba(0, 0, 0, 0.03);
+    --sticky-bg: #eef2f7;
+    --th-bg: rgba(0, 0, 0, 0.03);
+    --th-hover-bg: rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark); 
+}
+::-webkit-scrollbar-thumb {
+    background: #334155; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569; 
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.glass-header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    /* 3-col grid centers the title; controls floated to the right column. */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.header-content .logo-area {
+    grid-column: 2;
+    text-align: center;
+}
+.header-content .controls-area {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.logo-area h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.logo-area h1 span {
+    color: var(--accent);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
+
+/* Toggle Switch and Language Selectors */
+.controls-area {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lang-selector {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.lang-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.lang-btn.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent);
+    box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+/* Main Content & Table */
+.table-container {
+    flex: 1;
+    padding: 1rem 1.25rem;
+    overflow: hidden; /* we handle scroll in wrapper */
+    display: flex;
+    justify-content: center;
+}
+
+.table-wrapper {
+    /* width:auto lets the wrapper hug the table on wide screens so the flex parent can center it.
+       max-width:100% keeps it capped on narrow screens so the overflow:auto scroll still works. */
+    width: auto;
+    max-width: 100%;
+    background: var(--bg-panel);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    /* Hide scrollbars to reclaim space — wheel, keyboard, and touch still scroll */
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* legacy Edge / IE */
+}
+.table-wrapper::-webkit-scrollbar {  /* Chromium, Safari */
+    display: none;
+}
+
+/* Filter bar above the list — Chokepoint/Bottleneck slider plus inline explainer */
+.position-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 0.9rem 1.25rem 0.5rem;
+    flex-wrap: wrap;
+}
+.position-explainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    text-align: left;
+}
+.position-explainer strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Sliding-pill segmented control: a moving accent thumb shows which side is active */
+.position-toggle {
+    position: relative;
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px;
+    overflow: hidden;
+}
+body.light-mode .position-toggle {
+    background: rgba(0, 0, 0, 0.05);
+}
+.position-toggle-thumb {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    border-radius: 999px;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 0;
+}
+.position-toggle.bottleneck-active .position-toggle-thumb {
+    transform: translateX(100%);
+}
+.position-btn {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem 1.1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: color 0.28s ease;
+}
+.position-btn.active {
+    color: #ffffff;
+}
+.position-btn:hover:not(.active) {
+    color: var(--text-primary);
+}
+
+table {
+    /* width:auto keeps columns content-sized so they don't stretch to fill a 4K viewport */
+    width: auto;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th, td {
+    padding: 0.38rem 0.45rem;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    background: var(--th-bg);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+}
+
+th:hover {
+    color: var(--text-primary);
+    background: var(--th-hover-bg);
+}
+
+th .sort-icon {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 0.75rem;
+    opacity: 0.3;
+}
+
+th.asc .sort-icon,
+th.desc .sort-icon {
+    opacity: 1;
+    color: var(--accent);
+}
+
+/* Base Truncated Style */
+td {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+/* Make Rank, Ticker, and Name slightly sticky to the left so they are always visible */
+/* Also optimizing widths for efficiency */
+/* Sticky left columns: Rank (1), Ticker (2), Name (3). */
+th:nth-child(1), td:nth-child(1) { width: 42px; max-width: 50px; min-width: 40px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
+th:nth-child(2), td:nth-child(2) { width: 78px; max-width: 88px; min-width: 72px; position: sticky; left: 42px; z-index: 20; background: var(--bg-panel); }
+th:nth-child(3), td:nth-child(3) { width: 125px; max-width: 145px; min-width: 115px; position: sticky; left: 120px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+
+/* Fix header z-index for sticky cols */
+th:nth-child(1), th:nth-child(2), th:nth-child(3) {
+    z-index: 30;
+    background: var(--sticky-bg);
+}
+
+/* Expansion logic */
+tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover td {
+    background-color: var(--row-hover);
+}
+
+tr.row-expanded td {
+    white-space: pre-wrap;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: none;
+    vertical-align: top;
+    background-color: rgba(255, 255, 255, 0.02); /* slight highlight when expanded */
+}
+
+/* Ensure sticky columns maintain their background in expanded/hover states */
+/* But also get the hover/expanded background mix */
+tbody tr:hover td:nth-child(1), tbody tr:hover td:nth-child(2), tbody tr:hover td:nth-child(3) {
+    background-color: var(--sticky-bg);
+}
+tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2), tr.row-expanded td:nth-child(3) {
+    background-color: var(--sticky-bg);
+}
+
+
+.badge {
+    display: inline-block;
+    padding: 0.14rem 0.38rem;
+    border-radius: 5px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.badge.elite {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--elite-color);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    box-shadow: 0 0 10px var(--elite-glow);
+}
+
+.badge.score-glow {
+    background: rgba(0, 255, 128, 0.2);
+    color: #00ff80;
+    border: 1px solid #00ff80;
+    box-shadow: 0 0 20px 6px rgba(0, 255, 128, 0.6);
+    text-shadow: 0 0 5px rgba(0, 255, 128, 0.8);
+}
+
+/* Tiered score badges for Total / Base / Entry.
+   Fill intensifies as score rises so higher numbers have more "green volume". */
+.badge.score-tier-1 {
+    background: rgba(16, 185, 129, 0.18);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+.badge.score-tier-2 {
+    background: rgba(16, 185, 129, 0.55);
+    color: #ffffff;
+    border: 1px solid rgba(16, 185, 129, 0.8);
+}
+.badge.score-tier-3 {
+    background: #047857;
+    color: #ffffff;
+    border: 1px solid #065f46;
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.5);
+    text-shadow: 0 0 4px rgba(4, 120, 87, 0.9);
+}
+
+body.light-mode .badge.score-tier-1 {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #6ee7b7;
+}
+body.light-mode .badge.score-tier-2 {
+    background: #10b981;
+    color: #ffffff;
+    border-color: #059669;
+}
+body.light-mode .badge.score-tier-3 {
+    background: #064e3b;
+    color: #ffffff;
+    border-color: #022c22;
+    box-shadow: 0 0 10px rgba(5, 150, 105, 0.35);
+    text-shadow: none;
+}
+
+/* Red tiers — mirror of the green tiers, deeper red as the score drops */
+.badge.score-tier-red-1 {
+    background: rgba(239, 68, 68, 0.18);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+.badge.score-tier-red-2 {
+    background: rgba(239, 68, 68, 0.55);
+    color: #ffffff;
+    border: 1px solid rgba(239, 68, 68, 0.8);
+}
+.badge.score-tier-red-3 {
+    background: #991b1b;
+    color: #ffffff;
+    border: 1px solid #7f1d1d;
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.5);
+    text-shadow: 0 0 4px rgba(153, 27, 27, 0.9);
+}
+
+body.light-mode .badge.score-tier-red-1 {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #fecaca;
+}
+body.light-mode .badge.score-tier-red-2 {
+    background: #ef4444;
+    color: #ffffff;
+    border-color: #dc2626;
+}
+body.light-mode .badge.score-tier-red-3 {
+    background: #7f1d1d;
+    color: #ffffff;
+    border-color: #450a0a;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.35);
+    text-shadow: none;
+}
+
+/* Gradient score badge — colors are computed per-row and applied inline.
+   This class just handles the shared structural bits. */
+.badge.score-gradient {
+    border: 1px solid transparent;
+    font-weight: 700;
+    min-width: 26px;
+    text-align: center;
+}
+
+/* Theme-toggle icon buttons — compact and center the SVG */
+.theme-btn {
+    padding: 0.4rem 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.theme-btn svg {
+    display: block;
+}
+
+/* Flag buttons — swap the text label for a compact flag icon */
+.flag-btn {
+    padding: 0.4rem 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.flag-icon {
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+    pointer-events: none; /* clicks pass through to the button */
+}
+body.light-mode .flag-icon {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.badge.hc {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--hc-color);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge.standard {
+    background: rgba(148, 163, 184, 0.15);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+tbody tr {
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: var(--sticky-bg);
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    z-index: 300;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 0.8rem 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.dropdown-content.hidden {
+    display: none;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.2rem;
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dropdown-item input {
+    cursor: pointer;
+    accent-color: var(--accent);
+    width: 14px;
+    height: 14px;
+}
+
+/* Narrow screens: tighten everything further so columns aren't padded out on mobile */
+@media (max-width: 768px) {
+    .glass-header {
+        padding: 0.8rem 0.9rem;
+    }
+    .header-content {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+    .controls-area {
+        gap: 0.6rem;
+        flex-wrap: wrap;
+    }
+    .logo-area h1 {
+        font-size: 1.3rem;
+    }
+    .subtitle {
+        font-size: 0.75rem;
+    }
+    .table-container {
+        padding: 0.5rem;
+    }
+    th, td {
+        padding: 0.35rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    td {
+        max-width: 160px;
+    }
+    .badge {
+        padding: 0.15rem 0.35rem;
+        font-size: 0.7rem;
+    }
+    /* Shrink the sticky left columns so the Rank/Ticker/Name trio doesn't eat the viewport */
+    th:nth-child(1), td:nth-child(1) { width: 34px; max-width: 38px; min-width: 32px; }
+    th:nth-child(2), td:nth-child(2) { width: 66px; max-width: 72px; min-width: 60px; left: 32px; }
+    th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 120px; min-width: 100px; left: 98px; }
+}
