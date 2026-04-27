@@ -119,13 +119,73 @@ document.addEventListener('DOMContentLoaded', () => {
                 return ptEn.includes(wanted);
             });
 
-            // Sorting logic — missing/non-numeric cells always sink to the bottom,
-            // regardless of ascending vs descending direction.
+            // === Compute live ranks based on current Total ===
+            // The Rank column in data.js was authored manually (or by a prior
+            // run) and may be stale relative to the latest cron-computed Total.
+            // We recompute ranks here every render so the table always reflects
+            // current scores. Unranked rows (Rank "—" or non-numeric) stay
+            // unranked — they're placeholders and never receive a number.
+            const isRanked = (row) => {
+                const r = row && row['Rank'];
+                if (r === '' || r === '—' || r === null || r === undefined) return false;
+                return !isNaN(parseFloat(r));
+            };
+
+            const ranked = validData.filter(isRanked).slice().sort((a, b) => {
+                const at = parseFloat(a['Total']);
+                const bt = parseFloat(b['Total']);
+                if (isNaN(at) && isNaN(bt)) return 0;
+                if (isNaN(at)) return 1;
+                if (isNaN(bt)) return -1;
+                return bt - at;   // higher Total first
+            });
+
+            // Competition ranking: tied Totals share a rank, next rank skips
+            // ahead. Mirrors the analyst's existing convention (1, 2, 3, 3, 5…).
+            let _prevTotal = null;
+            let _lastRank = 0;
+            ranked.forEach((row, idx) => {
+                const t = parseFloat(row['Total']);
+                if (t === _prevTotal) {
+                    row._displayRank = _lastRank;
+                } else {
+                    row._displayRank = idx + 1;
+                    _lastRank = row._displayRank;
+                    _prevTotal = t;
+                }
+            });
+            validData.forEach((row) => {
+                if (!isRanked(row)) row._displayRank = '—';
+            });
+
+            // === Sort the rows for display ===
+            // Unranked rows are ALWAYS pinned at the bottom regardless of which
+            // column the user is sorting by — they're placeholders, not entries.
+            const pinUnrankedComparator = (a, b) => {
+                const aR = isRanked(a);
+                const bR = isRanked(b);
+                if (aR && !bR) return -1;
+                if (!aR && bR) return 1;
+                if (!aR && !bR) return 0;
+                return null;   // both ranked — caller decides
+            };
+
             if (sortState.col) {
                 const col = sortState.col;
                 const isMissing = v => v === undefined || v === null || v === "";
                 const toNum = v => parseFloat(String(v).replace(/[$,%]/g, ''));
                 validData.sort((a, b) => {
+                    const pinned = pinUnrankedComparator(a, b);
+                    if (pinned !== null) return pinned;
+
+                    // For the Rank column specifically, sort by the live
+                    // computed rank rather than the stale stored value.
+                    if (col === 'Rank') {
+                        const aR = a._displayRank;
+                        const bR = b._displayRank;
+                        return sortState.asc ? aR - bR : bR - aR;
+                    }
+
                     const rawA = a[col];
                     const rawB = b[col];
                     const emptyA = isMissing(rawA);
@@ -139,16 +199,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     const aIsNum = !isNaN(numA);
                     const bIsNum = !isNaN(numB);
                     if (aIsNum && bIsNum) return sortState.asc ? numA - numB : numB - numA;
-                    // If only one side is numeric, the non-numeric side sinks.
                     if (aIsNum) return -1;
                     if (bIsNum) return 1;
 
-                    // Both non-numeric: plain string compare in the chosen direction.
                     const sA = String(rawA).toLowerCase();
                     const sB = String(rawB).toLowerCase();
                     if (sA < sB) return sortState.asc ? -1 : 1;
                     if (sA > sB) return sortState.asc ? 1 : -1;
                     return 0;
+                });
+            } else {
+                // Default order: live rank ascending (= Total descending),
+                // unranked pinned at the bottom in original data.js order.
+                validData.sort((a, b) => {
+                    const pinned = pinUnrankedComparator(a, b);
+                    if (pinned !== null) return pinned;
+                    return a._displayRank - b._displayRank;
                 });
             }
 
@@ -204,7 +270,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
-                    bodyHtml += `<td class="col-simple">${formatCell(col, row[col])}</td>`;
+                    // Pass the row through so formatCell can read computed
+                    // fields like _displayRank for the Rank column.
+                    bodyHtml += `<td class="col-simple">${formatCell(col, row[col], row)}</td>`;
                 }
             });
 
@@ -274,7 +342,14 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    function formatCell(colName, value) {
+    function formatCell(colName, value, row) {
+        // Rank column: prefer the live, Total-derived rank stamped on the row
+        // by renderData. Falls back to the raw value for any caller that
+        // doesn't pass `row` (defensive — current code always passes it).
+        if (colName === 'Rank' && row && row._displayRank !== undefined) {
+            value = row._displayRank;
+        }
+
         if (value === null || value === undefined || value === "") {
             return `<span style="color: #64748b;">-</span>`;
         }
