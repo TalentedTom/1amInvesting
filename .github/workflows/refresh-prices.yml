@@ -68,4 +68,26 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data.js
           git commit -m "prices $(date -u +'%Y-%m-%d %H:%M') UTC (yfinance)"
-          git push
+
+          # Race-aware push: another commit (a parallel bot run, or a human
+          # code push) may have landed on main between checkout and now.
+          # On rejection, rebase our single commit onto fresh main, taking
+          # OUR data.js in any conflict (we hold the freshest Yahoo prices),
+          # and try again. Bounded retry so we never loop forever.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; rebasing on origin/main."
+            git fetch origin main
+            # In rebase semantics, 'theirs' = the commit being replayed (ours).
+            # So '-X theirs' keeps our data.js when conflicts occur.
+            if ! git rebase -X theirs origin/main; then
+              echo "Rebase had unresolvable conflict; aborting and giving up."
+              git rebase --abort || true
+              exit 1
+            fi
+          done
+          echo "Push still failing after 5 attempts; giving up. Next cron tick will retry."
+          exit 1
