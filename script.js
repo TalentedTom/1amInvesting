@@ -17,10 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'en';
     let sortState = { col: null, asc: true };
     let hiddenCols = new Set();
-    // Default to 'all'. Existing visitors who explicitly chose 'chokepoint' or
-    // 'bottleneck' keep their preference (it's still in localStorage).
+    // Default to 'all'. Storage key is intentionally bumped to v2 so any old
+    // 'positionFilter' value from before the All option existed is ignored —
+    // every visitor now lands on All on first open. Subsequent clicks save
+    // under the v2 key and persist normally.
+    const POSITION_STORAGE_KEY = 'positionFilter_v2';
     let positionFilter = (() => {
-        const stored = localStorage.getItem('positionFilter');
+        const stored = localStorage.getItem(POSITION_STORAGE_KEY);
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
 
@@ -103,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         positionFilter = val;
         positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === val));
         setSliderPosition(val);
-        try { localStorage.setItem('positionFilter', val); } catch (_) {}
+        try { localStorage.setItem(POSITION_STORAGE_KEY, val); } catch (_) {}
         renderData();
     };
     positionBtns.forEach(btn => {

@@ -1,19 +1,30 @@
 name: Refresh Yahoo prices
 
-# Runs every 10 minutes Mon-Fri (UTC). The schedule covers global market
-# hours: Asia (~00:00-07:00 UTC), Europe (~08:00-16:30 UTC), US
-# (~13:30-21:00 UTC). Weekend off-hours are skipped to avoid wasted runs.
+# Runs every 10 minutes Mon-Fri (UTC). Coverage by market session:
+#
+#   00:00-06:30 UTC  Asian session    Korea (KS), Japan, Australia (AX),
+#                                     Taiwan (TW/TWO), China (SS/SZ),
+#                                     Hong Kong (HK)
+#   07:00-15:30 UTC  European session Sweden (ST) ← SIVE.ST top pick,
+#                                     UK (L), Germany (DE), France (PA),
+#                                     Denmark (CO), Norway (OL)
+#                                     (CEST in summer; winter is +1h)
+#   13:30-21:00 UTC  North American   NYSE/NASDAQ, TSX (TO/V)
+#   22:00-23:59 UTC  All major closed (cron skipped to save runs)
+#
+# Cron offset to :07/:17/:27/... avoids GitHub's :00 boundary, which has
+# higher cron-load contention and occasionally drops scheduled jobs.
 #
 # To change cadence: edit the cron expression below. Cheat sheet:
-#   '*/10 * * * 1-5'   = every 10 min, Mon-Fri, all hours UTC  (current)
-#   '*/15 13-21 * * 1-5' = every 15 min during US market hours only
-#   '*/10 * * * *'     = every 10 min, 24/7 (incl. weekends)
+#   '7-57/10 0-21 * * 1-5'  = every 10 min, 22h Mon-Fri UTC  (current)
+#   '*/15 13-21 * * 1-5'    = every 15 min during US market hours only
+#   '*/10 * * * *'          = every 10 min, 24/7 (incl. weekends)
 #
-# Public repos get unlimited Actions minutes, so even the 24/7 variant is free.
+# Public repos get unlimited Actions minutes, so cadence is essentially free.
 
 on:
   schedule:
-    - cron: '*/10 * * * 1-5'
+    - cron: '7-57/10 0-21 * * 1-5'
   workflow_dispatch:   # allow manual trigger from Actions tab
 
 permissions:
