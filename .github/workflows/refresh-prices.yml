@@ -1,0 +1,63 @@
+name: Refresh Yahoo prices
+
+# Runs every 10 minutes Mon-Fri (UTC). The schedule covers global market
+# hours: Asia (~00:00-07:00 UTC), Europe (~08:00-16:30 UTC), US
+# (~13:30-21:00 UTC). Weekend off-hours are skipped to avoid wasted runs.
+#
+# To change cadence: edit the cron expression below. Cheat sheet:
+#   '*/10 * * * 1-5'   = every 10 min, Mon-Fri, all hours UTC  (current)
+#   '*/15 13-21 * * 1-5' = every 15 min during US market hours only
+#   '*/10 * * * *'     = every 10 min, 24/7 (incl. weekends)
+#
+# Public repos get unlimited Actions minutes, so even the 24/7 variant is free.
+
+on:
+  schedule:
+    - cron: '*/10 * * * 1-5'
+  workflow_dispatch:   # allow manual trigger from Actions tab
+
+permissions:
+  contents: write       # we need to push the updated data.js
+
+# If a run is still in flight when the next cron fires, kill the old one.
+# Avoids overlapping commits on slow Yahoo days.
+concurrency:
+  group: refresh-prices
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install yfinance
+        run: |
+          python -m pip install --upgrade pip
+          # Pinned to a known-working version. Bump this if Yahoo's endpoints
+          # change and the pinned version stops working — community usually
+          # ships a fix within days.
+          pip install 'yfinance>=0.2.40,<0.3' openpyxl pandas
+
+      - name: Fetch prices and patch data.js
+        run: python scripts/fetch_yahoo.py
+
+      - name: Commit and push if data.js changed
+        run: |
+          if git diff --quiet -- data.js; then
+            echo "No price changes; nothing to commit."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data.js
+          git commit -m "prices $(date -u +'%Y-%m-%d %H:%M') UTC (yfinance)"
+          git push
