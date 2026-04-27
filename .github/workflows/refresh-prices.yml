@@ -51,6 +51,13 @@ jobs:
       - name: Fetch prices and patch data.js
         run: python scripts/fetch_yahoo.py
 
+      - name: Recalculate Entry/Total/Upside (live scoring)
+        # Reads the Current Price just patched, plus Base + Ceiling Target
+        # already in data.js, and rewrites Entry/Total/Upside per the
+        # 0.6*Base + 0.4*Entry framework. Bucket transitions and
+        # ceiling-breach signals are surfaced as alerts in the log.
+        run: python scripts/score.py
+
       - name: Commit and push if data.js changed
         run: |
           if git diff --quiet -- data.js; then
