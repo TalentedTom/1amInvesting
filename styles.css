@@ -627,9 +627,9 @@ tbody tr {
 
 /* Phone-portrait optimization (iPhone 16 Pro Max ≈ 440px CSS, smaller phones
    down to ~360px). Goal: every data column visible at a glance, no horizontal
-   scroll. We achieve this by hiding the Name column (Ticker is a unique
-   identifier on its own) and tightening padding, font sizes, and badge
-   spacing. Long tickers like "601208.SSE" still truncate with ellipsis. */
+   scroll. Hide the Name column, kill sort icons, collapse padding, and force
+   the position-type toggle's buttons to equal widths so the slider thumb
+   doesn't bleed across button boundaries. */
 @media (max-width: 480px) {
     /* === Header chrome === */
     .glass-header {
@@ -655,23 +655,28 @@ tbody tr {
         gap: 0.4rem;
     }
 
-    /* === Position-type toggle: shrink buttons so 3 fit comfortably === */
+    /* === Position-type toggle ===
+       Force equal-width segments so the slider thumb (which assumes 1/3
+       widths) doesn't bleed past the active button. min-width: 80px fits
+       "Chokepoint" at the chosen font; flex:1 lets them all grow equally
+       when there's extra room. */
     .position-filter-bar {
         gap: 0.5rem;
         padding: 0.5rem 0.4rem 0.3rem;
     }
     .position-btn {
-        min-width: 0;
+        flex: 1 1 0;
+        min-width: 80px;
         font-size: 0.72rem;
-        padding: 0.4rem 0.5rem;
+        padding: 0.4rem 0.4rem;
     }
     .position-explainer {
-        font-size: 0.7rem;
+        font-size: 0.68rem;
     }
 
-    /* === Table: hide Name column, shrink everything === */
+    /* === Table: hide Name column, kill sort icons, collapse padding === */
     .table-container {
-        padding: 0.3rem 0.25rem;
+        padding: 0.3rem 0.2rem;
     }
 
     /* Hide the Name column (3rd) entirely on phones */
@@ -679,13 +684,22 @@ tbody tr {
         display: none;
     }
 
+    /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small
+       screens — every column header gives up ~12px to it. Hidden on phone;
+       headers are still clickable, the cursor stays pointer, and the
+       hover/active background still telegraphs sortability. */
+    th .sort-icon {
+        display: none;
+    }
+
     th, td {
-        padding: 0.28rem 0.25rem;
+        padding: 0.28rem 0.18rem;
         font-size: 0.7rem;
     }
     th {
         font-size: 0.62rem;
         letter-spacing: 0;
+        padding: 0.3rem 0.18rem;
     }
     td {
         max-width: 110px;
@@ -694,22 +708,24 @@ tbody tr {
     /* Sticky columns now Rank (1) + Ticker (2) only */
     th:nth-child(1), td:nth-child(1) {
         width: 28px; max-width: 32px; min-width: 26px;
-        padding-left: 0.25rem; padding-right: 0.15rem;
+        padding-left: 0.2rem; padding-right: 0.1rem;
     }
     th:nth-child(2), td:nth-child(2) {
         width: 62px; max-width: 70px; min-width: 56px;
         left: 26px;
-        padding-left: 0.2rem; padding-right: 0.25rem;
+        padding-left: 0.15rem; padding-right: 0.2rem;
     }
 
-    /* Score badges — keep readable but tighter */
+    /* Score badges — minimum width removed so cells collapse to badge size,
+       padding tightened so Total/Base/Entry don't accumulate visual gaps. */
     .badge {
-        padding: 0.1rem 0.3rem;
-        font-size: 0.65rem;
-        min-width: 22px;
-        border-radius: 4px;
+        padding: 0.08rem 0.25rem;
+        font-size: 0.62rem;
+        min-width: 0;
+        border-radius: 3px;
     }
-    /* Dim the gradient glow on small screens — at this size it bleeds */
+    /* Disable the gradient glow on small screens — it bleeds visually at
+       this size and adds no information. */
     .badge.score-gradient {
         box-shadow: none;
     }
