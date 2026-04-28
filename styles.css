@@ -624,3 +624,94 @@ tbody tr {
     th:nth-child(2), td:nth-child(2) { width: 66px; max-width: 72px; min-width: 60px; left: 32px; }
     th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 120px; min-width: 100px; left: 98px; }
 }
+
+/* Phone-portrait optimization (iPhone 16 Pro Max ≈ 440px CSS, smaller phones
+   down to ~360px). Goal: every data column visible at a glance, no horizontal
+   scroll. We achieve this by hiding the Name column (Ticker is a unique
+   identifier on its own) and tightening padding, font sizes, and badge
+   spacing. Long tickers like "601208.SSE" still truncate with ellipsis. */
+@media (max-width: 480px) {
+    /* === Header chrome === */
+    .glass-header {
+        padding: 0.55rem 0.6rem;
+    }
+    .header-content {
+        /* Stack title above controls on phone — saves horizontal real estate */
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .header-content .logo-area,
+    .header-content .controls-area {
+        grid-column: 1;
+        justify-self: center;
+    }
+    .logo-area h1 {
+        font-size: 1.15rem;
+    }
+    .subtitle {
+        font-size: 0.68rem;
+    }
+    .controls-area {
+        gap: 0.4rem;
+    }
+
+    /* === Position-type toggle: shrink buttons so 3 fit comfortably === */
+    .position-filter-bar {
+        gap: 0.5rem;
+        padding: 0.5rem 0.4rem 0.3rem;
+    }
+    .position-btn {
+        min-width: 0;
+        font-size: 0.72rem;
+        padding: 0.4rem 0.5rem;
+    }
+    .position-explainer {
+        font-size: 0.7rem;
+    }
+
+    /* === Table: hide Name column, shrink everything === */
+    .table-container {
+        padding: 0.3rem 0.25rem;
+    }
+
+    /* Hide the Name column (3rd) entirely on phones */
+    th:nth-child(3), td:nth-child(3) {
+        display: none;
+    }
+
+    th, td {
+        padding: 0.28rem 0.25rem;
+        font-size: 0.7rem;
+    }
+    th {
+        font-size: 0.62rem;
+        letter-spacing: 0;
+    }
+    td {
+        max-width: 110px;
+    }
+
+    /* Sticky columns now Rank (1) + Ticker (2) only */
+    th:nth-child(1), td:nth-child(1) {
+        width: 28px; max-width: 32px; min-width: 26px;
+        padding-left: 0.25rem; padding-right: 0.15rem;
+    }
+    th:nth-child(2), td:nth-child(2) {
+        width: 62px; max-width: 70px; min-width: 56px;
+        left: 26px;
+        padding-left: 0.2rem; padding-right: 0.25rem;
+    }
+
+    /* Score badges — keep readable but tighter */
+    .badge {
+        padding: 0.1rem 0.3rem;
+        font-size: 0.65rem;
+        min-width: 22px;
+        border-radius: 4px;
+    }
+    /* Dim the gradient glow on small screens — at this size it bleeds */
+    .badge.score-gradient {
+        box-shadow: none;
+    }
+}
+
