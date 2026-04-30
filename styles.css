@@ -730,13 +730,14 @@ tbody tr {
        Name was already removed from simpleCols entirely. Upside (Target/Price
        multiplier) is the most redundant column on mobile — Target conveys
        essentially the same info as a price range. Hidden below 480px to make
-       room for the new Change % column. Re-appears in landscape (>480px). */
+       room for the new Change % column. Re-appears in landscape (>480px).
+       After Target/Upside swap, Upside lives at position 8 (Target is now 9). */
     .table-container {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the Upside column (9th and last) on phones */
-    th:nth-child(9), td:nth-child(9) {
+    /* Hide the Upside column (now 8th, after the swap with Target) on phones */
+    th:nth-child(8), td:nth-child(8) {
         display: none;
     }
 

@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Determine the columns based on requirements
     const simpleCols = [
         "Rank", "Ticker", "Total", "Base", "Entry",
-        "Current Price", "Change %", "Ceiling Target",
-        "Upside"
+        "Current Price", "Change %", "Upside",
+        "Ceiling Target"
     ];
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
