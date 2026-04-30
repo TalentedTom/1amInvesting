@@ -279,7 +279,7 @@ table {
 }
 
 th, td {
-    padding: 0.32rem 0.25rem;
+    padding: 0.32rem 0.12rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -287,10 +287,10 @@ th {
     background: var(--th-bg);
     font-family: var(--font-heading);
     font-weight: 600;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -305,15 +305,17 @@ th:hover {
     background: var(--th-hover-bg);
 }
 
+/* Sort icons hidden by default — they were stealing ~14px per column.
+   Headers stay clickable and the cursor stays pointer. The icon shows up
+   only when a sort is actually active on that column (asc/desc state). */
 th .sort-icon {
+    display: none;
+}
+th.asc .sort-icon,
+th.desc .sort-icon {
     display: inline-block;
     margin-left: 3px;
     font-size: 0.7rem;
-    opacity: 0.3;
-}
-
-th.asc .sort-icon,
-th.desc .sort-icon {
     opacity: 1;
     color: var(--accent);
 }
@@ -329,7 +331,7 @@ td {
     /* Cap cell width so a long Target string ('GBp 900-1,600 (FY2028-31...')
        doesn't stretch its column past everything else. Truncates with
        ellipsis; full text still visible on row tap-expand. */
-    max-width: 130px;
+    max-width: 100px;
 }
 
 /* Make Rank, Ticker, and Name slightly sticky to the left so they are always visible */
