@@ -141,7 +141,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL (was HC — governance downgrade after Grizzly/ASIC/Goldrone)",
             "Port": "",
-            "Current Price": "AUD 9.12",
+            "Current Price": "AUD 9.06",
             "Ceiling Target": "A$20-A$50",
             "Upside": "2.0x-5.1x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: Speed-of-light directed energy + ITAR-free. Zero marginal cost/shot. 2026-2035+",
@@ -152,7 +152,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "ITAR-free moat. ONLY non-US company that can export integrated directed energy weapons to allied nations.",
             "IR Check": "Next earnings: late Apr/early May 2026. FY report Jun 3.",
             "Supercycle": "DB8 Defense Supercycle — Directed Energy / Counter-Drone",
-            "Change %": "-4.30%"
+            "Change %": "-4.93%"
         },
         {
             "Rank": 8,
@@ -163,7 +163,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL — CPO packaging OSAT. NVIDIA pushing = packaging demand accelerates.",
             "Port": "✓",
-            "Current Price": "TWD 428",
+            "Current Price": "TWD 431",
             "Ceiling Target": "TWD 800-2,240",
             "Upside": "1.9x-5.2x",
             "Position Type": "🔒 CHOKEPOINT\nArchitectural: CPO packaging — Foxconn FAU alignment for optical engines. 2027-2032+",
@@ -174,7 +174,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "POSITION OPEN — Tom went long",
             "IR Check": "❌ NEEDS REVIEW\nRule 0: Taiwanese broker research\nVerify 2027 optical revenue %\nVerify fwd PE estimate\nConfirm NVIDIA CPO assembly path\nUpgrade to HC if CPO revenue confirms",
             "Supercycle": "Optical — CPO/Transceiver Packaging",
-            "Change %": "+7.81%"
+            "Change %": "+8.56%"
         },
         {
             "Rank": 8,
@@ -207,9 +207,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC (top)",
             "Port": "",
-            "Current Price": "KRW 1,307,000",
+            "Current Price": "KRW 1,291,000",
             "Ceiling Target": "KRW 2,500,000-4,500,000",
-            "Upside": "1.9x-3.4x",
+            "Upside": "1.9x-3.5x",
             "Position Type": "🔒 CHOKEPOINT\nArchitectural: #1 HBM — 4nm logic base die lead widens each gen. Memory architecture permanent. 2026-2030+",
             "Revenue Explosion": "🔥 QUARTERLY BEAT CASCADE\nTrigger: Q1 EPS ≥ KRW 37,600 + Q2 raise\nTiming: Apr 29 2026 🔥 IMMINENT\nEach beat compounds: Apr→Jul→Oct\nExpected move: 15-25% per beat\n\n📡 Apr 2026 SIGNAL: Strategic investment in Semidynamics (Spanish RISC-V startup)\nMoving beyond HBM supply → memory-centric AI architecture play\nNot just supplier — positioning as ecosystem architect\nValidates multi-agent AI / unified memory thesis\nManagement thinking 5-10 years ahead of typical memory co.",
             "Updated": "Apr 24",
@@ -218,7 +218,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: NOW\n(earnings Apr 29 is 17 days away)\nHold through Jul Q2 earnings\nEach beat = hold/add\nFirst miss = trim to market weight",
             "IR Check": "❌ NEEDS REVIEW\nHBM4 roadmap deck\nInvestor forum presentations\nMgmt commentary on Semidynamics strategy",
             "Supercycle": "HBM #1 + NVIDIA",
-            "Change %": "+1.08%"
+            "Change %": "-0.15%"
         },
         {
             "Rank": 11,
@@ -361,9 +361,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL (China's default integrated semi partner)",
             "Port": "",
-            "Current Price": "KRW 225,250",
+            "Current Price": "KRW 222,000",
             "Ceiling Target": "KRW 400,000-700,000",
-            "Upside": "1.8x-3.1x",
+            "Upside": "1.8x-3.2x",
             "Position Type": "🔒 CHOKEPOINT\nArchitectural: Only non-US foundry+memory for China. Samsung = default Chinese AI partner. 2026-2030+",
             "Revenue Explosion": "📈 HBM4 BUNDLING REVENUE\nTrigger: Foundry profitability + HBM4 pull-through\nTiming: Q4 2026 foundry breakeven target\nExpected move: 30-50% if foundry turns positive\nCapped by CXMT squeeze from below",
             "Updated": "Apr 23",
@@ -372,7 +372,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "UNDERWEIGHT vs SK Hynix\nOwn via DRAM ETF at market weight\nDon't overweight Samsung directly\nSK Hynix captures more upside",
             "IR Check": "❌ NEEDS REVIEW\nChina foundry strategy\nHBM4 progress vs SK Hynix",
             "Supercycle": "Foundry+Memory+China",
-            "Change %": "-0.66%"
+            "Change %": "-1.77%"
         },
         {
             "Rank": 18,
@@ -383,9 +383,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "WL (Compound Semi TSMC, >50% GaAs, adding InP)",
             "Port": "",
-            "Current Price": "TWD 542",
+            "Current Price": "TWD 536",
             "Ceiling Target": "TWD 1,000-2,000",
-            "Upside": "1.8x-3.7x",
+            "Upside": "1.9x-3.7x",
             "Position Type": "🔒 CHOKEPOINT\nCapital+Qual: Only pure-play III-V foundry. SIVE qualifying InP CW at Win Semi. 2026-2032+",
             "Revenue Explosion": "📈 GaAs FOUNDRY CPO PULL-THROUGH\nTrigger: CPO-related GaAs orders\nTiming: H2 2026-2027\nExpected move: 30-50% as CPO ramps",
             "Updated": "Apr 23",
@@ -394,7 +394,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 1% allocation\nMonitor CPO timeline (ASE H2 2026)\nUpgrade if CPO pulls Win Semi demand",
             "IR Check": "❌ NEEDS REVIEW\nInP foundry qualification",
             "Supercycle": "DB1 III-V Foundry",
-            "Change %": "+7.97%"
+            "Change %": "+6.77%"
         },
         {
             "Rank": 18,
@@ -427,7 +427,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL (LOW) — Broadcom exclusive ELSFP. POET cancellation validates single-platform risk. Broadcom dragging feet on CPO.",
             "Port": "",
-            "Current Price": "TWD 218.50",
+            "Current Price": "TWD 217.50",
             "Ceiling Target": "TWD 500-1,200",
             "Upside": "2.3x-5.5x",
             "Position Type": "🔒 CHOKEPOINT\nArchitectural: Broadcom exclusive ELSFP — 1-to-32 multiplier for CPO. 2027-2032+",
@@ -438,7 +438,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "WAIT — DO NOT BUILD YET\nRevenue hasn't inflected (Jan -43% YoY)\nSingle customer risk (Broadcom)\nTSMC COUPE transition uncertainty\nStock already ran TWD 75→200\nWhen CPO revenue appears → upgrade to HC\nEntry: TWD 150-170 or revenue inflection\nSize: 1-2% when confirmed\nTaiwanese pricing culture ✅\nIBKR accessible ✅",
             "IR Check": "❌ NEEDS DEEP DIVE\nBroadcom next-gen (Davisson 102.4T) ELSFP confirmation\nTSMC COUPE impact on ELSFP demand\nQ1/Q2 2026 revenue trajectory\nELSFP mass production timeline\nCompetitor emergence risk\nMargin expansion path to 30%",
             "Supercycle": "DB1 Photonics/CPO",
-            "Change %": "+4.05%"
+            "Change %": "+3.57%"
         },
         {
             "Rank": 20,
@@ -702,7 +702,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD READY: 1% allocation\nTakeover = event-driven\nEML shortage = steady catalyst\nTime-limited bottleneck (2-3 years)",
             "IR Check": "❌ NEEDS REVIEW\nStrategic Review updates\nPhotonics segment breakdown",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "+0.37%"
+            "Change %": "-2.30%"
         },
         {
             "Rank": 32,
@@ -845,7 +845,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "FAIL — #1 AI PCB globally. Sole-source GB300 OAM + Rubin backplane. BUT: 70% NVIDIA concentration, $35B MC, fully valued.",
             "Port": "",
-            "Current Price": "CNY 330.87",
+            "Current Price": "CNY 328.86",
             "Ceiling Target": "CNY 165-285 (FY2027-29 blended, 15%/yr)",
             "Upside": "0.5x-0.9x",
             "Position Type": "⚡ BOTTLENECK\nTemporal: #1 AI PCB, sole-source NVIDIA GB300/Rubin. 8+ layer HDI tech lead. But PCB manufacturing replicable. 70% NVIDIA concentration. 1-2yr window.",
@@ -856,7 +856,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5 AI Packaging",
-            "Change %": "-0.90%"
+            "Change %": "-1.50%"
         },
         {
             "Rank": 40,
@@ -977,9 +977,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 8,
             "Rating": "WL (strong)",
             "Port": "",
-            "Current Price": "HKD 125",
+            "Current Price": "HKD 122.70",
             "Ceiling Target": "HKD 80-130",
-            "Upside": "0.6x-1.0x",
+            "Upside": "0.7x-1.1x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Chinese optical transceiver — 29% CAGR China market. Competitive. 2-3yr window.",
             "Revenue Explosion": "🔥 WESTERN DISCOVERY\nTrigger: 800G revenue visible + Western analyst\ninitiates coverage\nTiming: H2 2026-2027\nExpected move: 80-120% as H/A gap closes\n69% discount = coiled spring",
             "Updated": "",
@@ -988,7 +988,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: H1 2027\n(build position as 800G ramp visible)\nH-share discount = free margin of safety\nNeed 2-3 Chinese broker confirmations first",
             "IR Check": "✅ Annual report Apr 2\n华鑫证券 Jan 22 2026\nNeed 2-3 more brokers",
             "Supercycle": "DB1 Photonics",
-            "Change %": "-2.11%"
+            "Change %": "-3.92%"
         },
         {
             "Rank": 46,
@@ -1153,9 +1153,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "TWD 132.5",
             "Port": "",
-            "Current Price": "TWD 160.50",
+            "Current Price": "TWD 154",
             "Ceiling Target": "TWD 200-350",
-            "Upside": "1.2x-2.2x",
+            "Upside": "1.3x-2.3x",
             "Position Type": "⚡ BOTTLENECK\nTemporary: Accidental NOR/eMMC monopoly — China replicates in 2-3yrs. Expiration date visible.",
             "Revenue Explosion": "⏳ eMMC MONOPOLY EMERGING\nBig Four (Samsung/SK/Micron/Kioxia) EXITING eMMC\nSamsung EOL MLC eMMC June 2026\nMacronix becoming sole scale supplier\nCEO: '想漲多少漲多少' (raise prices however you want)\n200%+ price hikes accepted by customers\nNOR flash GLOBAL LEADER (main supplier)\nNVIDIA Rubin offloading HBM→NAND SSDs = new demand\nMorgan Stanley: Rev TWD 28.88B → 73.8B (2027) = +155%\nNet income: -TWD 3.3B → +TWD 20B = TWD 23B swing\nTaiwanese pricing culture ✅ (EXTREMELY explicit)\nStock +149% YTD 2026 = biggest Taiwan memory mover",
             "Updated": "Apr 24",
@@ -1164,7 +1164,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT ADD YET — WAIT FOR ENTRY\nStock already ran +149% YTD 2026\nPost-parabolic, at all-time high TWD 170\nPortfolio already has SK Hynix (83 HC) for memory\nAvoid memory over-allocation\nEntry triggers:\n  • Pullback to TWD 130-140\n  • May 5 Q1 2026 earnings beat\n  • Samsung eMMC EOL June 2026 confirmation\nIf entering: 2-3% starter only\nSK Hynix remains better memory allocation (83 HC, 2.2-3.1x)",
             "IR Check": "❌ MONITORING FOR ENTRY\nPullback to TWD 130-140 range\nMay 5, 2026 Q1 earnings\nSamsung eMMC EOL June 2026\nMargin inflection visibility\nQ2 profit confirmation",
             "Supercycle": "DB1 Memory",
-            "Change %": "-3.60%"
+            "Change %": "-7.51%"
         },
         {
             "Rank": "—",
@@ -1175,7 +1175,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 2,
             "Rating": "WL (top)",
             "Port": "",
-            "Current Price": "HKD 203.80",
+            "Current Price": "HKD 200.40",
             "Ceiling Target": "HKD 45-70",
             "Upside": "0.2x-0.3x",
             "Position Type": "⚡ BOTTLENECK\nSupply: #1 global fiber — 100% utilization, no new capacity until 2028. 2-3yr window.",
@@ -1186,7 +1186,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 1-2% allocation\nDomestic Chinese fiber monopoly\nSteady compounder, not explosive",
             "IR Check": "❌ NEEDS REVIEW\nFiber capacity plans",
             "Supercycle": "DB1 Fiber",
-            "Change %": "-11.70%"
+            "Change %": "-13.17%"
         },
         {
             "Rank": "—",
@@ -1197,7 +1197,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "WL (pricing power)",
             "Port": "",
-            "Current Price": "HKD 34.56",
+            "Current Price": "HKD 34.82",
             "Ceiling Target": "HKD 30-50",
             "Upside": "0.9x-1.4x",
             "Position Type": "⚡ BOTTLENECK\nSupply: CCL/laminates for PCB. Competitive. 1-2yr window.",
@@ -1208,7 +1208,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 1% allocation\n3rd supercycle pricing layer\nMonitor for next price hike notice",
             "IR Check": "— Low priority (Fail)",
             "Supercycle": "DB5 CCL/PCB",
-            "Change %": "-7.84%"
+            "Change %": "-7.15%"
         },
         {
             "Rank": "—",
@@ -1219,7 +1219,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Fail (border)",
             "Port": "",
-            "Current Price": "CNY 83.98",
+            "Current Price": "CNY 83.74",
             "Ceiling Target": "RMB 100-200",
             "Upside": "1.2x-2.4x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Offshore wind monopile fabrication — XXL yard scarcity. 2-3yr window.",
@@ -1230,7 +1230,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Low priority (Fail)",
             "Supercycle": "DB2 Wind",
-            "Change %": "-1.71%"
+            "Change %": "-1.99%"
         },
         {
             "Rank": "—",
@@ -1262,7 +1262,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "MONITOR — M9 resin for NVIDIA. Sole-source claim unverified. Ceiling compressed RMB 80-120.",
             "Port": "",
-            "Current Price": "CNY 38.57",
+            "Current Price": "CNY 39.12",
             "Ceiling Target": "CNY 80-120 (FY2028-30 blended, 15%/yr)",
             "Upside": "2.3x-3.5x",
             "Position Type": "🔒 CHOKEPOINT\nChemistry: Claimed sole-source M9 resin for NVIDIA GB300. Layer 0 packaging material. 2026-2030+",
@@ -1273,7 +1273,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 1-2% allocation\nChinese DC buildout = demand driver\nMonitor fiber pricing data quarterly",
             "IR Check": "❌ NEEDS REVIEW\nM9/M10 capacity, NVIDIA",
             "Supercycle": "DB5 ABF Pkg",
-            "Change %": "-0.23%"
+            "Change %": "+1.19%"
         },
         {
             "Rank": "—",
@@ -1305,9 +1305,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Fail (border)",
             "Port": "",
-            "Current Price": "CNY 475.90",
+            "Current Price": "CNY 482.88",
             "Ceiling Target": "RMB 600-1,000",
-            "Upside": "1.3x-2.1x",
+            "Upside": "1.2x-2.1x",
             "Position Type": "⚡ BOTTLENECK\nDistressed: ficonTEC assembly — acquired/restructured. FAIL.",
             "Revenue Explosion": "",
             "Updated": "",
@@ -1316,7 +1316,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Low priority (Fail)",
             "Supercycle": "DB1 CPO Equip",
-            "Change %": "-2.54%"
+            "Change %": "-1.11%"
         },
         {
             "Rank": "—",
@@ -1327,7 +1327,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "Fail",
             "Port": "",
-            "Current Price": "HKD 27.04",
+            "Current Price": "HKD 26.94",
             "Ceiling Target": "HKD 45-65",
             "Upside": "1.7x-2.4x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Smart meter/grid — competitive Chinese market. 1-2yr window.",
@@ -1338,7 +1338,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Low priority (Fail)",
             "Supercycle": "DC Power Dist",
-            "Change %": "+2.19%"
+            "Change %": "+1.81%"
         },
         {
             "Rank": "—",
@@ -1349,7 +1349,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "Fail",
             "Port": "",
-            "Current Price": "CNY 114.60",
+            "Current Price": "CNY 115.38",
             "Ceiling Target": "—",
             "Upside": "—",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Chinese supplier — minimal data. FAIL.",
@@ -1360,7 +1360,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— (Fail)",
             "Supercycle": "",
-            "Change %": "+2.65%"
+            "Change %": "+3.35%"
         },
         {
             "Rank": "—",
@@ -1415,7 +1415,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 30,
             "Rating": "FAIL (monitor — WL at RMB 65)",
             "Port": "",
-            "Current Price": "CNY 141.50",
+            "Current Price": "CNY 142.35",
             "Ceiling Target": "RMB 100-290",
             "Upside": "0.7x-2.0x",
             "Position Type": "⚡ BOTTLENECK\nSupply: Litong Electronics — optical components China. Competitive. 1-2yr window.",
@@ -1426,7 +1426,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT CHASE — wait for pullback to RMB 65-75 for WL entry",
             "IR Check": "⏳ Chinese-language only. 新浪财经, 东方财富, 上交所公告.",
             "Supercycle": "DB4 / Neocloud",
-            "Change %": "+7.78%"
+            "Change %": "+8.42%"
         },
         {
             "Rank": "—",
@@ -1593,7 +1593,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL（原为 HC — Grizzly/ASIC/Goldrone 之后治理降级）",
             "Port": "",
-            "Current Price": "AUD 9.12",
+            "Current Price": "AUD 9.06",
             "Ceiling Target": "20 澳元至 50 澳元",
             "Upside": "2.0倍-5.1倍",
             "Position Type": "🔒 阻塞点\n物理：光速定向能 + 不受 ITAR 限制。每次射击的边际成本为零。 2026-2035+",
@@ -1604,7 +1604,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不受 ITAR 保护的护城河。唯一一家能够向盟国出口集成定向能武器的非美国公司。",
             "IR Check": "下一次收益：2026 年 4 月底/5 月初。6 月 3 日财年报告。",
             "Supercycle": "DB8 防御超级循环 — 定向能/反无人机",
-            "Change %": "-4.30%"
+            "Change %": "-4.93%"
         },
         {
             "Rank": 8,
@@ -1615,7 +1615,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL — CPO 封装 OSAT。 NVIDIA 推动 = 封装需求加速。",
             "Port": "✓",
-            "Current Price": "TWD 428",
+            "Current Price": "TWD 431",
             "Ceiling Target": "新台币 800-2,240",
             "Upside": "1.9x-5.2x",
             "Position Type": "🔒 阻塞点\n建筑：CPO 封装 — 富士康光学引擎 FAU 对准。 2027-2032+",
@@ -1626,7 +1626,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "开仓 — 汤姆做多",
             "IR Check": "❌ 需要审查\n规则0：台湾经纪商研究\n验证 2027 年光学收入百分比\n验证转发 PE 估计\n确认NVIDIA CPO装配路径\n如果 CPO 收入确认，则升级至 HC",
             "Supercycle": "光学 — CPO/收发器封装",
-            "Change %": "+7.81%"
+            "Change %": "+8.56%"
         },
         {
             "Rank": 8,
@@ -1659,9 +1659,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC（上）",
             "Port": "",
-            "Current Price": "KRW 1,307,000",
+            "Current Price": "KRW 1,291,000",
             "Ceiling Target": "2,500,000-4,500,000韩元",
-            "Upside": "1.9x-3.4x",
+            "Upside": "1.9x-3.5x",
             "Position Type": "🔒 阻塞点\n架构：#1 HBM — 4nm 逻辑基芯片引线加宽了每一代。内存架构永久。 2026-2030+",
             "Revenue Explosion": "🔥 每季节拍级联\n触发条件：第一季度 EPS ≥ 37,600 韩元 + 第二季度上涨\n时间：2026 年 4 月 29 日 🔥 即将到来\n每个节拍复合：四月→七月→十月\n预期移动：每节拍 15-25%\n\n📡 2026 年 4 月 SIGNAL：对 Semidynamics（西班牙 RISC-V 初创公司）的战略投资\n超越 HBM 供应 → 以内存为中心的 AI 架构玩法\n不仅仅是供应商——定位为生态系统架构师\n验证多智能体人工智能/统一记忆理论\n管理思维比典型存储器公司领先 5-10 年。",
             "Updated": "4月24日",
@@ -1670,7 +1670,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "超重：现在\n（距离 4 月 29 日公布财报还有 17 天）\n维持至 7 月第二季度收益\n每个节拍 = 保持/添加\n第一次错过 = 修剪至市场重量",
             "IR Check": "❌ 需要审查\nHBM4 路线图平台\n投资者论坛演讲\n管理层对 Semidynamics 战略的评论",
             "Supercycle": "HBM #1 + NVIDIA",
-            "Change %": "+1.08%"
+            "Change %": "-0.15%"
         },
         {
             "Rank": 11,
@@ -1813,9 +1813,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL（中国默认集成半合作伙伴）",
             "Port": "",
-            "Current Price": "KRW 225,250",
+            "Current Price": "KRW 222,000",
             "Ceiling Target": "400,000-700,000韩元",
-            "Upside": "1.8x-3.1x",
+            "Upside": "1.8x-3.2x",
             "Position Type": "🔒 阻塞点\n建筑：中国唯一的非美国代工厂+存储器。三星=默认的中国人工智能合作伙伴。 2026-2030+",
             "Revenue Explosion": "📈 HBM4 捆绑收入\n触发点：代工厂盈利+HBM4拉动\n时间安排：2026 年第四季度代工厂盈亏平衡目标\n预期变动：如果代工转正，则上涨 30-50%\n受长鑫存储自下方挤压的限制",
             "Updated": "4月23日",
@@ -1824,7 +1824,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "减持 vs SK 海力士\n通过 DRAM ETF 按市场权重持有\n不要直接超重三星\nSK海力士抓住更多上涨空间",
             "IR Check": "❌ 需要审查\n中国代工战略\nHBM4 对阵 SK 海力士的进展",
             "Supercycle": "代工+内存+中国",
-            "Change %": "-0.66%"
+            "Change %": "-1.77%"
         },
         {
             "Rank": 18,
@@ -1835,9 +1835,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "WL（Compound Semi TSMC，>50% GaAs，添加 InP）",
             "Port": "",
-            "Current Price": "TWD 542",
+            "Current Price": "TWD 536",
             "Ceiling Target": "新台币 1,000-2,000",
-            "Upside": "1.8x-3.7x",
+            "Upside": "1.9x-3.7x",
             "Position Type": "🔒 阻塞点\nCapital+Qual：唯一的纯III-V代工厂。 SIVE 在 Win Semi 取得 InP CW 资格。 2026-2032+",
             "Revenue Explosion": "📈 GaAs 代工 CPO 拉通\n触发因素：CPO相关GaAs订单\n时间：2026-2027 年下半年\n预期变动：随着原棕油产量增加 30-50%",
             "Updated": "4月23日",
@@ -1846,7 +1846,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：1% 分配\n监控 CPO 时间表（ASE H2 2026）\n如果 CPO 拉动 Win Semi 需求，则升级",
             "IR Check": "❌ 需要审查\nInP代工资质",
             "Supercycle": "DB1 III-V代工厂",
-            "Change %": "+7.97%"
+            "Change %": "+6.77%"
         },
         {
             "Rank": 18,
@@ -1879,7 +1879,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL（低）— Broadcom 独家 ELSFP。 POET 取消验证了单一平台风险。博通在 CPO 上拖拖拉拉。",
             "Port": "",
-            "Current Price": "TWD 218.50",
+            "Current Price": "TWD 217.50",
             "Ceiling Target": "新台币 500-1,200",
             "Upside": "2.3x-5.5x",
             "Position Type": "🔒 阻塞点\n架构：Broadcom 独有的 ELSFP — CPO 的 1 至 32 乘法器。 2027-2032+",
@@ -1890,7 +1890,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "等等——先不要建造\n收入尚未发生变化（1 月 -43% 同比）\n单一客户风险（Broadcom）\n台积电 COUPE 转型的不确定性\n现货已售TWD 75→200\n当CPO收入出现时→升级为HC\n入场费：TWD 150-170 或收入变化\n尺寸：确认后1-2%\n台湾的定价文化✅\n可使用IBKR ✅",
             "IR Check": "❌ 需要深入研究\nBroadcom 下一代 (Davisson 102.4T) ELSFP 确认\n台积电COUPE对ELSFP需求的影响\n2026 年第一季度/第二季度收入轨迹\nELSFP量产时间表\n竞争对手出现风险\n利润率扩大至 30%",
             "Supercycle": "DB1 光子学/CPO",
-            "Change %": "+4.05%"
+            "Change %": "+3.57%"
         },
         {
             "Rank": 20,
@@ -2154,7 +2154,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "准备就绪：1% 分配\n接管=事件驱动\nEML 短缺 = 稳定的催化剂\n限时瓶颈（2-3年）",
             "IR Check": "❌ 需要审查\n战略审查更新\n光子学细分市场细分",
             "Supercycle": "III-V族外延片",
-            "Change %": "+0.37%"
+            "Change %": "-2.30%"
         },
         {
             "Rank": 32,
@@ -2297,7 +2297,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "失败 — 全球排名第一的 AI PCB。独资GB300 OAM+Rubin背板。但是：70% NVIDIA 集中度，$35B MC，完全估值。",
             "Port": "",
-            "Current Price": "CNY 330.87",
+            "Current Price": "CNY 328.86",
             "Ceiling Target": "165-285 元人民币（2027-29 财年混合，15%/年）",
             "Upside": "0.5倍-0.9倍",
             "Position Type": "⚡ 瓶颈\nTemporal：#1 AI PCB，独家来源 NVIDIA GB300/Rubin。 8+层HDI技术负责人。但PCB制造可复制。 70% NVIDIA 集中度。 1-2年窗口期。",
@@ -2308,7 +2308,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5人工智能封装",
-            "Change %": "-0.90%"
+            "Change %": "-1.50%"
         },
         {
             "Rank": 40,
@@ -2429,9 +2429,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 8,
             "Rating": "WL（强）",
             "Port": "",
-            "Current Price": "HKD 125",
+            "Current Price": "HKD 122.70",
             "Ceiling Target": "80-130港元",
-            "Upside": "0.6x-1.0x",
+            "Upside": "0.7x-1.1x",
             "Position Type": "⚡ 瓶颈\n产能：中国光模块——中国市场复合年增长率29%。竞争的。 2-3年的窗口。",
             "Revenue Explosion": "🔥 西部探索\n触发因素：800G收入可见+西方分析师\n发起报道\n时间：2026-2027 年下半年\n预期变动：随着 H/A 差距缩小 80-120%\n69% 折扣 = 螺旋弹簧",
             "Updated": "",
@@ -2440,7 +2440,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "增持：2027 年上半年\n（构建位置为 800G 斜坡可见）\nH股折让=自由安全边际\n首先需要2-3家中国经纪商确认",
             "IR Check": "✅ Annual report Apr 2\n华鑫证券 Jan 22 2026\nNeed 2-3 more brokers",
             "Supercycle": "DB1 光子学",
-            "Change %": "-2.11%"
+            "Change %": "-3.92%"
         },
         {
             "Rank": 46,
@@ -2605,9 +2605,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "新台币 132.5",
             "Port": "",
-            "Current Price": "TWD 160.50",
+            "Current Price": "TWD 154",
             "Ceiling Target": "新台币 200-350",
-            "Upside": "1.2x-2.2x",
+            "Upside": "1.3x-2.3x",
             "Position Type": "⚡ 瓶颈\n临时：意外的 NOR/eMMC 垄断——中国将在 2-3 年内复制。有效期可见。",
             "Revenue Explosion": "⏳ eMMC 垄断崛起\n四大巨头（三星/SK/美光/Kioxia）退出 eMMC\n三星 EOL MLC eMMC 2026 年 6 月\n旺宏电子成为唯一规模供应商\nCEO：‘想涨多少涨多少’（想涨价就涨价）\n客户接受200%+的涨价\nNOR闪存全球领导者（主要供应商）\nNVIDIA Rubin 卸载 HBM→NAND SSD = 新需求\n摩根士丹利：修订 TWD 28.88B → 73.8B (2027) = +155%\n净利润：-TWD 3.3B → +TWD 20B = TWD 23B 摆动\n台湾定价文化✅（极其明确）\n2026 年年初至今股价 +149% = 台湾最大的内存推动者",
             "Updated": "4月24日",
@@ -2616,7 +2616,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "尚未添加 — 等待进入\n2026 年年初至今，股价已上涨 149%\n后抛物线，历史新高 TWD 170\n产品组合中已有 SK Hynix (83 HC) 内存\n避免内存过度分配\n进入触发器：\n  • 回落至 TWD 130-140\n  • 5 月 5 日 2026 年第一季度盈利超出预期\n  • 三星 eMMC 将于 2026 年 6 月停产确认\n如果进入：仅 2-3% 初学者\nSK Hynix 仍然保持更好的内存分配（83 HC，2.2-3.1x）",
             "IR Check": "❌ 进入监控\n回调至 TWD 130-140 区间\n2026 年 5 月 5 日第一季度收益\n三星 eMMC 将于 2026 年 6 月停产\n边距拐点可见性\nQ2盈利确认",
             "Supercycle": "DB1内存",
-            "Change %": "-3.60%"
+            "Change %": "-7.51%"
         },
         {
             "Rank": "—",
@@ -2627,7 +2627,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 2,
             "Rating": "WL（上）",
             "Port": "",
-            "Current Price": "HKD 203.80",
+            "Current Price": "HKD 200.40",
             "Ceiling Target": "港币45-70元",
             "Upside": "0.2x-0.3x",
             "Position Type": "⚡ 瓶颈\n供应：#1 全球光纤 — 100% 利用率，2028 年之前没有新产能。2-3 年窗口。",
@@ -2638,7 +2638,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：1-2% 分配\n中国国内纤维垄断\n混合稳定，不爆炸",
             "IR Check": "❌ 需要审查\n光纤容量计划",
             "Supercycle": "DB1光纤",
-            "Change %": "-11.70%"
+            "Change %": "-13.17%"
         },
         {
             "Rank": "—",
@@ -2649,7 +2649,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "WL（定价权）",
             "Port": "",
-            "Current Price": "HKD 34.56",
+            "Current Price": "HKD 34.82",
             "Ceiling Target": "港币30-50元",
             "Upside": "0.9x-1.4x",
             "Position Type": "⚡ 瓶颈\n供应：PCB用覆铜板/层压板。竞争的。 1-2年窗口期。",
@@ -2660,7 +2660,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：1% 分配\n第三超级周期定价层\n关注下次涨价通知",
             "IR Check": "— 低优先级（失败）",
             "Supercycle": "DB5覆铜板/PCB",
-            "Change %": "-7.84%"
+            "Change %": "-7.15%"
         },
         {
             "Rank": "—",
@@ -2671,7 +2671,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "失败（边界）",
             "Port": "",
-            "Current Price": "CNY 83.98",
+            "Current Price": "CNY 83.74",
             "Ceiling Target": "100-200元",
             "Upside": "1.2x-2.4x",
             "Position Type": "⚡ 瓶颈\n产能：海上风电单桩制造——超大码场地稀缺。 2-3年的窗口。",
@@ -2682,7 +2682,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— 低优先级（失败）",
             "Supercycle": "DB2风",
-            "Change %": "-1.71%"
+            "Change %": "-1.99%"
         },
         {
             "Rank": "—",
@@ -2714,7 +2714,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "MONITOR — 适用于 NVIDIA 的 M9 树脂。单一来源声明未经证实。天花板压缩80-120元。",
             "Port": "",
-            "Current Price": "CNY 38.57",
+            "Current Price": "CNY 39.12",
             "Ceiling Target": "80-120 元人民币（2028-30 财年混合，15%/年）",
             "Upside": "2.3倍-3.5倍",
             "Position Type": "🔒 阻塞点\n化学成分：声称是 NVIDIA GB300 的唯一来源 M9 树脂。 0层封装材料。 2026-2030+",
@@ -2725,7 +2725,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：1-2% 分配\n中国的数据中心建设=需求驱动力\n每季度监控光纤定价数据",
             "IR Check": "❌ 需要审查\nM9/M10 容量，NVIDIA",
             "Supercycle": "DB5 ABF 套装",
-            "Change %": "-0.23%"
+            "Change %": "+1.19%"
         },
         {
             "Rank": "—",
@@ -2757,9 +2757,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "失败（边界）",
             "Port": "",
-            "Current Price": "CNY 475.90",
+            "Current Price": "CNY 482.88",
             "Ceiling Target": "600-1000元",
-            "Upside": "1.3x-2.1x",
+            "Upside": "1.2x-2.1x",
             "Position Type": "⚡ 瓶颈\n陷入困境：ficonTEC 装配 — 收购/重组。失败。",
             "Revenue Explosion": "",
             "Updated": "",
@@ -2768,7 +2768,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— 低优先级（失败）",
             "Supercycle": "DB1 CPO装备",
-            "Change %": "-2.54%"
+            "Change %": "-1.11%"
         },
         {
             "Rank": "—",
@@ -2779,7 +2779,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "失败",
             "Port": "",
-            "Current Price": "HKD 27.04",
+            "Current Price": "HKD 26.94",
             "Ceiling Target": "港币45-65元",
             "Upside": "1.7x-2.4x",
             "Position Type": "⚡ 瓶颈\n容量：智能电表/电网——竞争激烈的中国市场。 1-2年窗口期。",
@@ -2790,7 +2790,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— 低优先级（失败）",
             "Supercycle": "直流电源分配器",
-            "Change %": "+2.19%"
+            "Change %": "+1.81%"
         },
         {
             "Rank": "—",
@@ -2801,7 +2801,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "失败",
             "Port": "",
-            "Current Price": "CNY 114.60",
+            "Current Price": "CNY 115.38",
             "Ceiling Target": null,
             "Upside": null,
             "Position Type": "⚡ 瓶颈\n产能：中国供应商——数据最少。失败。",
@@ -2812,7 +2812,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "- （失败）",
             "Supercycle": "",
-            "Change %": "+2.65%"
+            "Change %": "+3.35%"
         },
         {
             "Rank": "—",
@@ -2867,7 +2867,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 30,
             "Rating": "失败（监控 — WL 人民币 65 元）",
             "Port": "",
-            "Current Price": "CNY 141.50",
+            "Current Price": "CNY 142.35",
             "Ceiling Target": "100-290元",
             "Upside": "0.7x-2.0x",
             "Position Type": "⚡ 瓶颈\n供应：力通电子—中国光学元件。竞争的。 1-2年窗口期。",
@@ -2878,7 +2878,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要追涨——等待回落至人民币 65-75 元以进入 WL",
             "IR Check": "⏳ Chinese-language only. 新浪财经, 东方财富, 上交所公告.",
             "Supercycle": "DB4 / 新云",
-            "Change %": "+7.78%"
+            "Change %": "+8.42%"
         },
         {
             "Rank": "—",
@@ -3045,7 +3045,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL (było HC – obniżenie poziomu zarządzania po Grizzly/ASIC/Goldrone)",
             "Port": "",
-            "Current Price": "AUD 9.12",
+            "Current Price": "AUD 9.06",
             "Ceiling Target": "20-50 dolarów australijskich",
             "Upside": "2,0x-5,1x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nFizyka: energia skierowana na prędkość światła + brak ITAR. Zerowy koszt krańcowy/strzał. 2026-2035+",
@@ -3056,7 +3056,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "Fosa wolna od ITAR. JEDYNA firma spoza USA, która może eksportować zintegrowaną broń o ukierunkowanej energii do krajów sojuszniczych.",
             "IR Check": "Następne zarobki: koniec kwietnia/początek maja 2026. Raport finansowy 3 czerwca.",
             "Supercycle": "Supercykl obronny DB8 — energia skierowana / przeciwdron",
-            "Change %": "-4.30%"
+            "Change %": "-4.93%"
         },
         {
             "Rank": 8,
@@ -3067,7 +3067,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL — opakowanie CPO OSAT. NVIDIA naciska = popyt na opakowania rośnie.",
             "Port": "✓",
-            "Current Price": "TWD 428",
+            "Current Price": "TWD 431",
             "Ceiling Target": "TWD 800-2240",
             "Upside": "1.9x-5.2x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nArchitektoniczne: opakowanie CPO — dostosowanie Foxconn FAU do silników optycznych. 2027-2032+",
@@ -3078,7 +3078,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "POZYCJA OTWARTA — Tom poszedł długo",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nZasada 0: Badania tajwańskich brokerów\nSprawdź% przychodów optycznych w 2027 r.\nSprawdź szacunki fwd PE\nPotwierdź ścieżkę montażu NVIDIA CPO\nPrzejdź na HC, jeśli przychody CPO zostaną potwierdzone",
             "Supercycle": "Optyczne — opakowanie CPO/nadawczo-odbiorcze",
-            "Change %": "+7.81%"
+            "Change %": "+8.56%"
         },
         {
             "Rank": 8,
@@ -3111,9 +3111,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC (na górze)",
             "Port": "",
-            "Current Price": "KRW 1,307,000",
+            "Current Price": "KRW 1,291,000",
             "Ceiling Target": "2 500 000–4 500 000 KRW",
-            "Upside": "1.9x-3.4x",
+            "Upside": "1.9x-3.5x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nArchitektoniczne: nr 1 HBM — przewód logiczny 4 nm poszerza każdą generację. Architektura pamięci trwała. 2026-2030+",
             "Revenue Explosion": "🔥 KWARTALNA KASKADA BITÓW\nCzynnik: EPS w pierwszym kwartale ≥ 37 600 KRW + podwyżka w drugim kwartale\nCzas: 29 kwietnia 2026 r. 🔥 NATYCHMIAST\nKażde uderzenie składa się z: kwietnia → lipca → października\nOczekiwany ruch: 15-25% na uderzenie\n\n📡 Kwiecień 2026 SYGNAŁ: Strategiczna inwestycja w półdynamikę (hiszpański startup RISC-V)\nWyjście poza podaż HBM → gra w architekturę AI skupioną na pamięci\nNie tylko dostawca — pozycjonowanie jako architekta ekosystemu\nWeryfikuje tezę dotyczącą wieloagentowej sztucznej inteligencji / ujednoliconej pamięci\nZarządzanie myśleniem 5–10 lat przed typową firmą pamięciową.",
             "Updated": "24 kwietnia",
@@ -3122,7 +3122,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NADWAŻA: TERAZ\n(zarobki do 29 kwietnia to 17 dni)\nUtrzymaj wyniki za II kwartał lipca\nKażde uderzenie = przytrzymaj/dodaj\nPierwsze chybienie = przycięcie do wagi rynkowej",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nTalia planu działania HBM4\nPrezentacje na forum inwestorskim\nKomentarz Mgmt do strategii półdynamiki",
             "Supercycle": "HBM nr 1 + NVIDIA",
-            "Change %": "+1.08%"
+            "Change %": "-0.15%"
         },
         {
             "Rank": 11,
@@ -3265,9 +3265,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL (domyślny zintegrowany półpartner Chin)",
             "Port": "",
-            "Current Price": "KRW 225,250",
+            "Current Price": "KRW 222,000",
             "Ceiling Target": "400 000–700 000 KRW",
-            "Upside": "1.8x-3.1x",
+            "Upside": "1.8x-3.2x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nArchitektoniczne: Tylko odlewnia spoza USA + pamięć dla Chin. Samsung = domyślny chiński partner AI. 2026-2030+",
             "Revenue Explosion": "📈 PRZYCHODY Z ZESTAWU HBM4\nCzynnik: Rentowność odlewni + przeciągnięcie HBM4\nCzas: Docelowy próg rentowności odlewni w IV kwartale 2026 r\nOczekiwany ruch: 30-50%, jeśli odlewnia wyjdzie na plus\nZakryte przez ściśnięcie CXMT od dołu",
             "Updated": "23 kwietnia",
@@ -3276,7 +3276,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NIEDWAGA vs SK Hynix\nPosiadaj za pośrednictwem DRAM ETF według wagi rynkowej\nNie przeciążaj bezpośrednio Samsunga\nSK Hynix ma więcej zalet",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nStrategia odlewni w Chinach\nPostęp HBM4 w porównaniu z SK Hynix",
             "Supercycle": "Odlewnia + pamięć + Chiny",
-            "Change %": "-0.66%"
+            "Change %": "-1.77%"
         },
         {
             "Rank": 18,
@@ -3287,9 +3287,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "WL (Związek Semi TSMC, > 50% GaAs, dodatek InP)",
             "Port": "",
-            "Current Price": "TWD 542",
+            "Current Price": "TWD 536",
             "Ceiling Target": "1000-2000 TWD",
-            "Upside": "1.8x-3.7x",
+            "Upside": "1.9x-3.7x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nCapital+Qual: Tylko odlewnia klasy III-V. SIVE kwalifikuje się do InP CW w Win Semi. 2026-2032+",
             "Revenue Explosion": "📈 PRZECIĄGANIE CPO ODLEWNICTWA GaAs\nWyzwalacz: zamówienia GaA związane z CPO\nCzas: II połowa 2026–2027\nOczekiwany ruch: 30-50% w miarę wzrostu CPO",
             "Updated": "23 kwietnia",
@@ -3298,7 +3298,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ STAŁE: 1% alokacji\nMonitoruj harmonogram CPO (ASE H2 2026)\nUaktualnij, jeśli CPO pociągnie za sobą popyt na Win Semi",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nKwalifikacja odlewnicza InP",
             "Supercycle": "Odlewnia DB1 III-V",
-            "Change %": "+7.97%"
+            "Change %": "+6.77%"
         },
         {
             "Rank": 18,
@@ -3331,7 +3331,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "WL (NISKI) — ekskluzywny system ELSFP firmy Broadcom. Anulowanie POET sprawdza ryzyko pojedynczej platformy. Broadcom ociąga się z CPO.",
             "Port": "",
-            "Current Price": "TWD 218.50",
+            "Current Price": "TWD 217.50",
             "Ceiling Target": "TWD 500-1200",
             "Upside": "2.3x-5.5x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nArchitektoniczne: ekskluzywny dla Broadcom ELSFP — mnożnik od 1 do 32 dla CPO. 2027-2032+",
@@ -3342,7 +3342,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "CZEKAJ – NIE BUDUJ JESZCZE\nPrzychody nie uległy zmianie (styczeń -43% r/r)\nRyzyko pojedynczego klienta (Broadcom)\nNiepewność przejścia TSMC COUPE\nZapas już działał TWD 75 → 200\nKiedy pojawią się przychody CPO → uaktualnij do HC\nWpis: TWD 150-170 lub przegięcie przychodów\nRozmiar: 1-2% po potwierdzeniu\nTajwańska kultura cenowa ✅\nDostępny IBKR ✅",
             "IR Check": "❌ POTRZEBUJE GŁĘBOKIEGO NURKOWANIA\nPotwierdzenie ELSFP nowej generacji Broadcom (Davisson 102.4T).\nWpływ TSMC COUPE na popyt na ELSFP\nTrajektoria przychodów w I/II kwartale 2026 r\nHarmonogram masowej produkcji ELSFP\nRyzyko pojawienia się konkurencji\nŚcieżka ekspansji marży do 30%",
             "Supercycle": "DB1 Photonics/CPO",
-            "Change %": "+4.05%"
+            "Change %": "+3.57%"
         },
         {
             "Rank": 20,
@@ -3606,7 +3606,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ GOTOWOŚĆ: 1% alokacji\nPrzejęcie = sterowane zdarzeniami\nNiedobór EML = stały katalizator\nOgraniczone w czasie wąskie gardło (2-3 lata)",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nAktualizacje przeglądu strategicznego\nPodział segmentu fotoniki",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "+0.37%"
+            "Change %": "-2.30%"
         },
         {
             "Rank": 32,
@@ -3749,7 +3749,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "FAIL — PCB nr 1 na świecie. Jedyne źródło GB300 OAM + płyta montażowa Rubin. ALE: 70% koncentracja NVIDIA, 35 miliardów dolarów MC, w pełni wyceniona.",
             "Port": "",
-            "Current Price": "CNY 330.87",
+            "Current Price": "CNY 328.86",
             "Ceiling Target": "165–285 CNY (lata mieszane 2027–29, 15%/rok)",
             "Upside": "0,5x-0,9x",
             "Position Type": "⚡ WĄSKIE gardło\nTymczasowe: PCB nr 1 AI, jedyne źródło NVIDIA GB300/Rubin. 8+-warstwowy przewód technologiczny HDI. Ale produkcja płytek PCB jest powtarzalna. 70% koncentracji NVIDIA. Okno 1-2 lata.",
@@ -3760,7 +3760,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "Opakowanie DB5 AI",
-            "Change %": "-0.90%"
+            "Change %": "-1.50%"
         },
         {
             "Rank": 40,
@@ -3881,9 +3881,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 8,
             "Rating": "WL (silny)",
             "Port": "",
-            "Current Price": "HKD 125",
+            "Current Price": "HKD 122.70",
             "Ceiling Target": "80-130 HKD",
-            "Upside": "0.6x-1.0x",
+            "Upside": "0.7x-1.1x",
             "Position Type": "⚡ WĄSKIE gardło\nPojemność: chiński transceiver optyczny — 29% CAGR rynek chiński. Konkurencyjny. Okno 2-3 letnie.",
             "Revenue Explosion": "🔥 ZACHODNIE ODKRYCIE\nPrzyczyna: widoczne przychody 800G + zachodni analityk\ninicjuje zasięg\nCzas: II połowa 2026–2027\nOczekiwany ruch: 80-120% w miarę zamykania się luki H/A\nRabat 69% = sprężyna śrubowa",
             "Updated": "",
@@ -3892,7 +3892,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NADWAGA: I połowa 2027 r\n(pozycja konstrukcyjna, gdy widoczna jest rampa 800G)\nRabat na akcje H = bezpłatny margines bezpieczeństwa\nNajpierw potrzebujesz 2-3 potwierdzeń chińskiego brokera",
             "IR Check": "✅ Raport roczny 2 kwietnia\nHuaxin Securities 22 stycznia 2026 r\nPotrzebujesz 2-3 więcej brokerów",
             "Supercycle": "Fotonika DB1",
-            "Change %": "-2.11%"
+            "Change %": "-3.92%"
         },
         {
             "Rank": 46,
@@ -4057,9 +4057,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "TWD 132,5",
             "Port": "",
-            "Current Price": "TWD 160.50",
+            "Current Price": "TWD 154",
             "Ceiling Target": "TWD 200-350",
-            "Upside": "1.2x-2.2x",
+            "Upside": "1.3x-2.3x",
             "Position Type": "⚡ WĄSKIE gardło\nTymczasowe: przypadkowy monopol NOR/eMMC – replikacja w Chinach za 2–3 lata. Widoczna data ważności.",
             "Revenue Explosion": "⏳ POWSTAJE MONOPOL eMMC\nWielka Czwórka (Samsung/SK/Micron/Kioxia) WYCHODZI z eMMC\nSamsung EOL MLC eMMC czerwiec 2026 r\nMacronix zostaje wyłącznym dostawcą wag\nDyrektor generalny: „想漲多少漲多少” (podnoś ceny, jak chcesz)\nPodwyżki cen o ponad 200% akceptowane przez klientów\nNOR flash GLOBALNY LIDER (główny dostawca)\nNVIDIA Rubin wycofuje dyski HBM → NAND SSD = nowy popyt\nMorgan Stanley: wersja TWD 28,88B → 73,8B (2027) = +155%\nZysk netto: -TWD 3,3B → +TWD 20B = TWD 23B swing\nTajwańska kultura cenowa ✅ (BARDZO wyraźna)\nAkcje +149% od początku roku 2026 = największy dostawca pamięci na Tajwanie",
             "Updated": "24 kwietnia",
@@ -4068,7 +4068,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NIE DODAWAJ JESZCZE – CZEKAJ NA WPIS\nAkcje już wzrosły o 149% od początku roku 2026\nPostparaboliczny, najwyższy w historii TWD 170\nW portfolio jest już pamięć SK Hynix (83 HC).\nUnikaj nadmiernej alokacji pamięci\nWyzwalacze wejścia:\n  • Powrót do TWD 130-140\n  • Pobicie wyników za I kwartał 2026 r. 5 maja\n  • Potwierdzenie Samsung eMMC EOL z czerwca 2026 r\nJeśli wchodzisz: 2-3% tylko starter\nSK Hynix pozostaje lepszą alokacją pamięci (83 HC, 2,2-3,1x)",
             "IR Check": "❌ MONITORING WEJŚCIA\nPowrót do zakresu TWD 130-140\nWyniki za I kwartał 5 maja 2026 r\nSamsung eMMC EOL czerwiec 2026 r\nWidoczność przegięcia marginesu\nPotwierdzenie zysków za II kwartał",
             "Supercycle": "Pamięć DB1",
-            "Change %": "-3.60%"
+            "Change %": "-7.51%"
         },
         {
             "Rank": "—",
@@ -4079,7 +4079,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 2,
             "Rating": "WL (na górze)",
             "Port": "",
-            "Current Price": "HKD 203.80",
+            "Current Price": "HKD 200.40",
             "Ceiling Target": "45-70 HKD",
             "Upside": "0.2x-0.3x",
             "Position Type": "⚡ WĄSKIE gardło\nPodaż: światłowód numer 1 na świecie — wykorzystanie 100%, brak nowych przepustowości do 2028 r. Okno 2–3 lata.",
@@ -4090,7 +4090,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ STAŁE: 1-2% alokacji\nKrajowy chiński monopolista na włókna\nStały związek, nie wybuchowy",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nPlany wydajności światłowodów",
             "Supercycle": "Światłowód DB1",
-            "Change %": "-11.70%"
+            "Change %": "-13.17%"
         },
         {
             "Rank": "—",
@@ -4101,7 +4101,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "WL (siła cenowa)",
             "Port": "",
-            "Current Price": "HKD 34.56",
+            "Current Price": "HKD 34.82",
             "Ceiling Target": "30-50 HKD",
             "Upside": "0.9x-1.4x",
             "Position Type": "⚡ WĄSKIE gardło\nDostawa: CCL/laminaty do PCB. Konkurencyjny. Okno 1-2 lata.",
@@ -4112,7 +4112,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ STAŁE: 1% alokacji\nTrzecia warstwa cenowa supercykli\nMonitoruj zawiadomienie o kolejnej podwyżce cen",
             "IR Check": "— Niski priorytet (Niepowodzenie)",
             "Supercycle": "DB5 CCL/PCB",
-            "Change %": "-7.84%"
+            "Change %": "-7.15%"
         },
         {
             "Rank": "—",
@@ -4123,7 +4123,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Niepowodzenie (granica)",
             "Port": "",
-            "Current Price": "CNY 83.98",
+            "Current Price": "CNY 83.74",
             "Ceiling Target": "100-200 juanów",
             "Upside": "1.2x-2.4x",
             "Position Type": "⚡ WĄSKIE gardło\nWydajność: Produkcja morskich monopali wiatrowych — niedobór XXL. Okno 2-3 letnie.",
@@ -4134,7 +4134,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Niski priorytet (Niepowodzenie)",
             "Supercycle": "Wiatr DB2",
-            "Change %": "-1.71%"
+            "Change %": "-1.99%"
         },
         {
             "Rank": "—",
@@ -4166,7 +4166,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "MONITOR — żywica M9 dla NVIDIA. Twierdzenie z jedynego źródła niezweryfikowane. Sufit skompresowany 80-120 RMB.",
             "Port": "",
-            "Current Price": "CNY 38.57",
+            "Current Price": "CNY 39.12",
             "Ceiling Target": "80-120 CNY (rok mieszany 2028-30, 15%/rok)",
             "Upside": "2,3x-3,5x",
             "Position Type": "🔒PUNKT dławika\nChemia: żywica M9 uznawana za jedyne źródło dla NVIDIA GB300. Materiał opakowaniowy warstwy 0. 2026-2030+",
@@ -4177,7 +4177,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ STAŁE: 1-2% alokacji\nBudowa chińskiego DC = sterownik popytu\nMonitoruj dane dotyczące cen światłowodów co kwartał",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nPojemność M9/M10, NVIDIA",
             "Supercycle": "DB5 ABF Op",
-            "Change %": "-0.23%"
+            "Change %": "+1.19%"
         },
         {
             "Rank": "—",
@@ -4209,9 +4209,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Niepowodzenie (granica)",
             "Port": "",
-            "Current Price": "CNY 475.90",
+            "Current Price": "CNY 482.88",
             "Ceiling Target": "600-1000 juanów",
-            "Upside": "1.3x-2.1x",
+            "Upside": "1.2x-2.1x",
             "Position Type": "⚡ WĄSKIE gardło\nTrudna sytuacja: montaż ficonTEC — przejęcie/restrukturyzacja. PONIEŚĆ PORAŻKĘ.",
             "Revenue Explosion": "",
             "Updated": "",
@@ -4220,7 +4220,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Niski priorytet (Niepowodzenie)",
             "Supercycle": "Wyposażenie DB1 CPO",
-            "Change %": "-2.54%"
+            "Change %": "-1.11%"
         },
         {
             "Rank": "—",
@@ -4231,7 +4231,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "Ponieść porażkę",
             "Port": "",
-            "Current Price": "HKD 27.04",
+            "Current Price": "HKD 26.94",
             "Ceiling Target": "45-65 HKD",
             "Upside": "1.7x-2.4x",
             "Position Type": "⚡ WĄSKIE gardło\nWydajność: Inteligentny licznik/sieć – konkurencyjny rynek chiński. Okno 1-2 lata.",
@@ -4242,7 +4242,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "— Niski priorytet (Niepowodzenie)",
             "Supercycle": "Zasięg zasilania DC",
-            "Change %": "+2.19%"
+            "Change %": "+1.81%"
         },
         {
             "Rank": "—",
@@ -4253,7 +4253,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "Ponieść porażkę",
             "Port": "",
-            "Current Price": "CNY 114.60",
+            "Current Price": "CNY 115.38",
             "Ceiling Target": null,
             "Upside": null,
             "Position Type": "⚡ WĄSKIE gardło\nWydajność: dostawca chiński – dane minimalne. PONIEŚĆ PORAŻKĘ.",
@@ -4264,7 +4264,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "- (Ponieść porażkę)",
             "Supercycle": "",
-            "Change %": "+2.65%"
+            "Change %": "+3.35%"
         },
         {
             "Rank": "—",
@@ -4319,7 +4319,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 30,
             "Rating": "NIEPOwodzenie (monitor — WL przy 65 RMB)",
             "Port": "",
-            "Current Price": "CNY 141.50",
+            "Current Price": "CNY 142.35",
             "Ceiling Target": "100-290 juanów",
             "Upside": "0.7x-2.0x",
             "Position Type": "⚡ WĄSKIE gardło\nDostawa: Litong Electronics — komponenty optyczne Chiny. Konkurencyjny. Okno 1-2 lata.",
@@ -4330,7 +4330,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NIE GONIJ — poczekaj na wycofanie się do 65-75 RMB i wejście do WL",
             "IR Check": "⏳ Tylko w języku chińskim. Ogłoszenie Sina Finance, Oriental Fortune i Giełdy Papierów Wartościowych w Szanghaju.",
             "Supercycle": "DB4 / Neochmura",
-            "Change %": "+7.78%"
+            "Change %": "+8.42%"
         },
         {
             "Rank": "—",
