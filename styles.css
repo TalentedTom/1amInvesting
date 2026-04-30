@@ -331,13 +331,13 @@ td {
 
 /* Make Rank, Ticker, and Name slightly sticky to the left so they are always visible */
 /* Also optimizing widths for efficiency */
-/* Sticky left columns: Rank (1), Ticker (2), Name (3). */
+/* Sticky left columns: Rank (1) and Ticker (2). Ticker now carries a logo
+   to the left of the symbol so its width budget grew slightly. */
 th:nth-child(1), td:nth-child(1) { width: 42px; max-width: 50px; min-width: 40px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
-th:nth-child(2), td:nth-child(2) { width: 78px; max-width: 88px; min-width: 72px; position: sticky; left: 42px; z-index: 20; background: var(--bg-panel); }
-th:nth-child(3), td:nth-child(3) { width: 125px; max-width: 145px; min-width: 115px; position: sticky; left: 120px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 42px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
-th:nth-child(1), th:nth-child(2), th:nth-child(3) {
+th:nth-child(1), th:nth-child(2) {
     z-index: 30;
     background: var(--sticky-bg);
 }
@@ -363,11 +363,62 @@ tr.row-expanded td {
 
 /* Ensure sticky columns maintain their background in expanded/hover states */
 /* But also get the hover/expanded background mix */
-tbody tr:hover td:nth-child(1), tbody tr:hover td:nth-child(2), tbody tr:hover td:nth-child(3) {
+tbody tr:hover td:nth-child(1), tbody tr:hover td:nth-child(2) {
     background-color: var(--sticky-bg);
 }
-tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2), tr.row-expanded td:nth-child(3) {
+tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
     background-color: var(--sticky-bg);
+}
+
+/* === Ticker cell with logo (left of symbol, à la TradingView) === */
+.ticker-cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
+    overflow: hidden;
+}
+.ticker-logo {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    /* Letter avatar shows behind the image; gradient varies by --accent
+       so the visual still pops in light/dark. */
+    background: linear-gradient(135deg, var(--accent), #1e40af);
+    overflow: hidden;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.ticker-logo::before {
+    content: attr(data-initial);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ticker-logo img {
+    /* Image sits on top of the letter avatar; if onerror hides it, the
+       letter remains visible. White background keeps logos with
+       transparent backgrounds readable on the dark theme. */
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #ffffff;
+    z-index: 1;
+}
+.ticker-symbol {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
 }
 
 
@@ -619,10 +670,11 @@ tbody tr {
         padding: 0.15rem 0.35rem;
         font-size: 0.7rem;
     }
-    /* Shrink the sticky left columns so the Rank/Ticker/Name trio doesn't eat the viewport */
+    /* Shrink the sticky left columns. Ticker now carries a small logo +
+       symbol so its width budget grew slightly. Name was removed from the
+       column list entirely; nothing's sticky beyond Ticker now. */
     th:nth-child(1), td:nth-child(1) { width: 34px; max-width: 38px; min-width: 32px; }
-    th:nth-child(2), td:nth-child(2) { width: 66px; max-width: 72px; min-width: 60px; left: 32px; }
-    th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 120px; min-width: 100px; left: 98px; }
+    th:nth-child(2), td:nth-child(2) { width: 96px; max-width: 110px; min-width: 88px; left: 32px; }
 }
 
 /* Phone-portrait optimization (iPhone 16 Pro Max ≈ 440px CSS, smaller phones
@@ -674,13 +726,17 @@ tbody tr {
         font-size: 0.68rem;
     }
 
-    /* === Table: hide Name column, kill sort icons, collapse padding === */
+    /* === Table: hide Upside column, kill sort icons, collapse padding ===
+       Name was already removed from simpleCols entirely. Upside (Target/Price
+       multiplier) is the most redundant column on mobile — Target conveys
+       essentially the same info as a price range. Hidden below 480px to make
+       room for the new Change % column. Re-appears in landscape (>480px). */
     .table-container {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the Name column (3rd) entirely on phones */
-    th:nth-child(3), td:nth-child(3) {
+    /* Hide the Upside column (9th and last) on phones */
+    th:nth-child(9), td:nth-child(9) {
         display: none;
     }
 
@@ -705,15 +761,26 @@ tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns now Rank (1) + Ticker (2) only */
+    /* Sticky columns: Rank (1) + Ticker (2). Ticker is wider on mobile to
+       accommodate the 14px logo + a few characters of symbol. */
     th:nth-child(1), td:nth-child(1) {
         width: 28px; max-width: 32px; min-width: 26px;
         padding-left: 0.2rem; padding-right: 0.1rem;
     }
     th:nth-child(2), td:nth-child(2) {
-        width: 62px; max-width: 70px; min-width: 56px;
+        width: 82px; max-width: 92px; min-width: 76px;
         left: 26px;
         padding-left: 0.15rem; padding-right: 0.2rem;
+    }
+
+    /* Smaller ticker logo on phones — 14px circle with tighter gap. */
+    .ticker-logo {
+        width: 14px;
+        height: 14px;
+        font-size: 0.5rem;
+    }
+    .ticker-cell {
+        gap: 0.25rem;
     }
 
     /* Score badges — minimum width removed so cells collapse to badge size,

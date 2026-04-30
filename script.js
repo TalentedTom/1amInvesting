@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine the columns based on requirements
     const simpleCols = [
-        "Rank", "Ticker", "Name", "Total", "Base", "Entry",
-        "Current Price", "Ceiling Target",
+        "Rank", "Ticker", "Total", "Base", "Entry",
+        "Current Price", "Change %", "Ceiling Target",
         "Upside"
     ];
 
@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
         "Current Price": "Price",
-        "Ceiling Target": "Target"
+        "Ceiling Target": "Target",
+        "Change %": "Chg%"
     };
     const labelFor = (col) => displayNames[col] || col;
 
@@ -366,8 +367,35 @@ document.addEventListener('DOMContentLoaded', () => {
             value = row._displayRank;
         }
 
+        // Ticker column: render with a logo to the left of the symbol.
+        // Tries financialmodelingprep's free image endpoint first; if it 404s
+        // (common for non-US tickers), the colored letter avatar shows
+        // through. Always-clean output even when no logo source has the
+        // ticker. Skips if value is empty/missing — falls through to the
+        // null check below.
+        if (colName === 'Ticker' && value) {
+            const sym = String(value);
+            // Strip exchange suffix and any "(PRE-IPO)" annotation for the
+            // logo lookup; FMP keys by base symbol.
+            const base = sym.split('.')[0].split('(')[0].trim().toUpperCase();
+            const initial = (base.match(/[A-Z0-9]/) || ['?'])[0];
+            const logoSrc = `https://financialmodelingprep.com/image-stock/${base}.png`;
+            // Escape the symbol for safe HTML insertion (basic — no HTML in tickers).
+            const safeSym = sym.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="ticker-symbol">${safeSym}</span></span>`;
+        }
+
         if (value === null || value === undefined || value === "") {
             return `<span style="color: #64748b;">-</span>`;
+        }
+
+        // Change %: color-code green for positive, red for negative.
+        if (colName === 'Change %') {
+            const str = String(value).trim();
+            const num = parseFloat(str.replace(/[+%\s]/g, ''));
+            if (isNaN(num)) return str;
+            const color = num > 0 ? '#10b981' : (num < 0 ? '#ef4444' : 'var(--text-secondary)');
+            return `<span style="color: ${color}; font-weight: 600;">${str}</span>`;
         }
 
         if (colName === "Ceiling Target" || colName === "Current Price") {

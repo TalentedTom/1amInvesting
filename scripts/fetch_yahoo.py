@@ -83,12 +83,12 @@ def is_sane_price(p):
 
 
 def fetch_one(yf, xlsx_ticker):
-    """Try each Yahoo candidate spelling; return (yahoo_ticker, price, currency)
-    on first hit, or (None, None, None) if all candidates fail.
+    """Try each Yahoo candidate spelling; return (yahoo_ticker, price, currency,
+    change_pct) on first hit, or (None, None, None, None) if all candidates
+    fail. change_pct is the percent move from previous close, or None if
+    Yahoo didn't expose previous_close for this ticker.
 
     Note: yfinance's FastInfo is an object with attribute accessors, not a dict.
-    Using attribute access reliably; .get() can return None even when the
-    attribute is populated.
     """
     for yh in yahoo_candidates(xlsx_ticker):
         try:
@@ -98,12 +98,21 @@ def fetch_one(yf, xlsx_ticker):
             currency = fi.currency
             if not is_sane_price(price) or not currency:
                 continue
-            return yh, float(price), str(currency)
-        except Exception as e:
-            # Network blip, "possibly delisted" for the wrong suffix, etc.
-            # Try the next candidate quietly.
+            change_pct = None
+            try:
+                prev = fi.previous_close
+                if prev and float(prev) > 0:
+                    change_pct = round(
+                        (float(price) - float(prev)) / float(prev) * 100.0, 2
+                    )
+            except Exception:
+                # Some FastInfo objects don't expose previous_close; tolerate.
+                pass
+            return yh, float(price), str(currency), change_pct
+        except Exception:
+            # Wrong suffix, network blip, "possibly delisted", etc.
             continue
-    return None, None, None
+    return None, None, None, None
 
 
 def main():
@@ -119,12 +128,20 @@ def main():
     quotes = []
     failures = []
     for xlsx_ticker in tickers:
-        yh, price, currency = fetch_one(yf, xlsx_ticker)
+        yh, price, currency, change_pct = fetch_one(yf, xlsx_ticker)
         if yh is None:
             failures.append(xlsx_ticker)
             continue
-        quotes.append({"ticker": xlsx_ticker, "price": price, "currency": currency})
-        print(f"  ok   {xlsx_ticker:<14}  ({yh})  {currency} {price}")
+        quote = {
+            "ticker": xlsx_ticker,
+            "price": price,
+            "currency": currency,
+        }
+        if change_pct is not None:
+            quote["change_pct"] = change_pct
+        quotes.append(quote)
+        chg_str = f"  {change_pct:+.2f}%" if change_pct is not None else ""
+        print(f"  ok   {xlsx_ticker:<14}  ({yh})  {currency} {price}{chg_str}")
 
     print(f"Fetched {len(quotes)} valid quotes; {len(failures)} failures.")
     if failures:

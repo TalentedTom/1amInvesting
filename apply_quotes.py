@@ -43,6 +43,13 @@ def fmt_price(price, currency):
     return f'${body}' if currency == 'USD' else f'{currency} {body}'
 
 
+def fmt_change_pct(pct):
+    """Format a percent move with sign: +1.23% / -0.45% / 0.00%."""
+    if pct is None:
+        return None
+    return f'{pct:+.2f}%'
+
+
 def ticker_candidates(yahoo_ticker):
     """Yield possible xlsx-side ticker spellings for a Yahoo ticker."""
     yield yahoo_ticker
@@ -111,6 +118,7 @@ def main():
         yh = q.get('ticker')
         px = q.get('price')
         cur = q.get('currency', 'USD')
+        change_pct = q.get('change_pct')
         if yh is None or px is None:
             continue
         idx = None
@@ -124,16 +132,20 @@ def main():
             missing.append(yh)
             continue
         formatted = fmt_price(px, cur)
+        formatted_chg = fmt_change_pct(change_pct)
         for lang in data:
             data[lang][idx]['Current Price'] = formatted
-        updated.append((yh, matched, formatted))
+            if formatted_chg is not None:
+                data[lang][idx]['Change %'] = formatted_chg
+        updated.append((yh, matched, formatted, formatted_chg))
 
     save_data_js(prefix, data)
 
     print(f'Updated {len(updated)} / {len(quotes)} tickers in data.js.')
-    for yh, xl, fp in updated:
+    for yh, xl, fp, fchg in updated:
         tag = f'({yh} -> {xl})' if xl != yh else f'({yh})'
-        print(f'  {tag}: {fp}')
+        chg_part = f'  {fchg}' if fchg else ''
+        print(f'  {tag}: {fp}{chg_part}')
     if missing:
         print(f'\nNo row found for: {missing}')
     if payload.get('retrieved_at'):
