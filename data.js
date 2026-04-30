@@ -53,7 +53,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 73,
             "Rating": "HC — E-band monopoly + V-band discounted 15%/yr. Blended 4.24x.",
             "Port": "",
-            "Current Price": "GBp 278.99",
+            "Current Price": "GBp 283",
             "Ceiling Target": "GBp 900-1,600 (2028-33 blended, V-band discounted 15%/yr)",
             "Upside": "3.4x-6.0x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: E-band GaN SSPA monopoly + V-band consumer terminal TAM (SpaceX funded R&D). Capacity lock-out blocks Amazon. Golden Dome #1 contractor link. 2026-2035+",
@@ -64,7 +64,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB3 LEO Space + DB8 Defense",
-            "Change %": "+2.19%"
+            "Change %": "+3.66%"
         },
         {
             "Rank": 4,
@@ -119,9 +119,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC — LIDE universal primitive: DB5 AI + DB3 Space + DB8 Defense. 80% qual share. €156M MC.",
             "Port": "✓",
-            "Current Price": "EUR 17.25",
+            "Current Price": "EUR 16.70",
             "Ceiling Target": "€35-€120",
-            "Upside": "2.0x-7.0x",
+            "Upside": "2.1x-7.2x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: LIDE glass TGV — organic cannot support next-gen. Triple supercycle: DB5 AI packaging + DB3 LEO Space (SpaceX) + DB8 Defense. 2027-2035+",
             "Revenue Explosion": "📈 GLASS SUBSTRATE EQUIPMENT ORDERS\nTrigger 1: Samsung SEMCO mass production (end 2026)\nTrigger 2: Intel Absolics HVM ramp\nTrigger 3: TSMC glass substrate R&D orders\nTrigger 4: Apple glass substrate via SEMCO\nTrigger 5: Tesla Terafab via Intel packaging\nEach new glass fab = LPKF equipment orders\n$170M MC = smallest HC stock in portfolio",
             "Updated": "Apr 26",
@@ -130,7 +130,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD: 1-2% (explore position)\n$170M MC = highest asymmetry in portfolio\nGlass substrates = successor to ABF\nSamsung SEMCO process designed around LPKF LIDE\nIntel + Absolics also using LPKF since 2023\nOnly competitor JWMT (Samsung dual-sourcing)\nRevenue inflection 2027-2028\nPatience required — 2-3 year thesis\nUpgrade to 2-3% on first glass production order",
             "IR Check": "❌ NEEDS DEEP DIVE\nKorean-language SEMCO supply chain verification\nJWMT competitive positioning\nGlass substrate revenue breakout in earnings\nIntel Terafab packaging confirmation\nTSMC glass substrate equipment orders\nApple SEMCO glass substrate timeline",
             "Supercycle": "Packaging — Glass Substrate Equipment",
-            "Change %": "-7.26%"
+            "Change %": "-10.22%"
         },
         {
             "Rank": 7,
@@ -295,7 +295,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — >95% Photonics-SOI. NVIDIA CPO pull-forward. Every PIC starts on SOI.",
             "Port": "✓",
-            "Current Price": "EUR 129.20",
+            "Current Price": "EUR 129.30",
             "Ceiling Target": "€200-€400",
             "Upside": "1.5x-3.1x",
             "Position Type": "🔒 CHOKEPOINT\nIP: >95% Photonics-SOI via Smart Cut 4,300 patents. Through ~2029 (patent risk post-2030).",
@@ -306,7 +306,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD POSITION 4-6%\nPrice reconciliation pending (€54 vs €78-85 across sources)\nVerify SOI.PA on IBKR before sizing\nThesis horizon 3-4 years\nUpstream of TSEM — complements, doesn't overlap\nFills SiPh substrate gap in portfolio\nBalances optical downstream concentration",
             "IR Check": "⚡ ACTIVE MONITORING\nMay 27, 2026 FY2026 full year results\nTower PH18 SiPh capacity expansion updates\nGFS Fotonix $1B run rate timeline\nSamsung SiPh entry confirmation\nMobile inventory 1.0M wafer target (end CY2026)\nNVIDIA Rubin Ultra production timeline\nMargin recovery 25%→35%+ trajectory\nPrice reconciliation: verify SOI.PA vs SLOIF",
             "Supercycle": "DB1 SiPh Substrate",
-            "Change %": "+13.83%"
+            "Change %": "+13.92%"
         },
         {
             "Rank": 13,
@@ -691,7 +691,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 53,
             "Rating": "InP epiwafer + Deutsche Bank Takeover Code + Strategic Review",
             "Port": "",
-            "Current Price": "GBp 41.85",
+            "Current Price": "GBp 42.25",
             "Ceiling Target": "70p-140p",
             "Upside": "1.4x-2.8x",
             "Position Type": "⚡ BOTTLENECK\nCatalyst: M&A strategic review — event-driven, not structural. Single trigger. 6-12mo window.",
@@ -702,7 +702,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD READY: 1% allocation\nTakeover = event-driven\nEML shortage = steady catalyst\nTime-limited bottleneck (2-3 years)",
             "IR Check": "❌ NEEDS REVIEW\nStrategic Review updates\nPhotonics segment breakdown",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "+5.02%"
+            "Change %": "+6.02%"
         },
         {
             "Rank": 32,
@@ -889,7 +889,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 45,
             "Rating": "FAIL — competitive Layer 3 systems, not a bottleneck",
             "Port": "",
-            "Current Price": "NOK 52.40",
+            "Current Price": "NOK 52",
             "Ceiling Target": "NOK 80-120",
             "Upside": "1.5x-2.3x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Optical monitoring — competitive market. 1-2yr window.",
@@ -900,7 +900,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT BUY — competitive, substitutable",
             "IR Check": "smartoptics.com/investor-relations",
             "Supercycle": "DB1 Photonics (Layer 3 — Systems)",
-            "Change %": "+2.75%"
+            "Change %": "+1.96%"
         },
         {
             "Rank": 42,
@@ -1043,7 +1043,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HVDC oligopoly 30% + 9x backlog + €900M EBITDA 2030 + portfolio diversifier",
             "Port": "",
-            "Current Price": "DKK 932",
+            "Current Price": "DKK 937.50",
             "Ceiling Target": "DKK 2,500-4,500",
             "Upside": "2.7x-4.8x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics+Capital: HVDC submarine cable — 3-player oligopoly, 5-7yr barrier to entry. 2026-2035+",
@@ -1054,7 +1054,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 2-3% allocation\nBacklog provides baseline\nContract awards = stepwise re-rate\nLong-duration, steady compounder",
             "IR Check": "❌ NEEDS REVIEW\nCMD deck, HVDC backlog",
             "Supercycle": "DB2 Wind/Energy",
-            "Change %": "+2.98%"
+            "Change %": "+3.59%"
         },
         {
             "Rank": "—",
@@ -1104,14 +1104,14 @@ window.PORTFOLIO_DATA = {
             "Rank": "—",
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
-            "Total": 76,
+            "Total": 74,
             "Base": 77,
-            "Entry": 75,
+            "Entry": 70,
             "Rating": "ASML of compound semi + 70-90% MOCVD + 3 engines",
             "Port": "",
-            "Current Price": "EUR 45.79",
+            "Current Price": "EUR 46.45",
             "Ceiling Target": "€120-€250",
-            "Upside": "2.6x-5.5x",
+            "Upside": "2.6x-5.4x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: 70-90% MOCVD share — tool of record for InP epi. Universal primitive for compound semi. 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "Apr 25",
@@ -1120,7 +1120,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 Photonics + DB4 Power",
-            "Change %": "+2.44%"
+            "Change %": "+3.91%"
         },
         {
             "Rank": "—",
@@ -1131,7 +1131,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "€1.17",
             "Port": "",
-            "Current Price": "EUR 20.90",
+            "Current Price": "EUR 20.50",
             "Ceiling Target": "FAIL",
             "Upside": "—",
             "Position Type": "⚡ BOTTLENECK\nDistressed: CoPoS tech inside dying company. Right tech, wrong vehicle. FAIL.",
@@ -1142,7 +1142,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT CHASE — wait for LayTec revenue inflection or pullback to €13",
             "IR Check": "German-language filings. NuWays AG sole analyst (€21 PT, BUY).",
             "Supercycle": "GaN MOCVD + InP SiPh metrology",
-            "Change %": "+1.46%"
+            "Change %": "-0.49%"
         },
         {
             "Rank": "—",
@@ -1437,7 +1437,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "FAIL — Hybrid bonding leader, 20 customers. But €20B MC, 15+ analysts, price above ceiling midpoint. Entry 0.89x.",
             "Port": "",
-            "Current Price": "EUR 239.50",
+            "Current Price": "EUR 243.20",
             "Ceiling Target": "€160-€280 (FY2028-30 blended, 15%/yr)",
             "Upside": "0.6x-1.1x",
             "Position Type": "🔒 CHOKEPOINT (in hybrid bonding)\nHybrid bonding leader <10nm. 20 customers. EVG competes. Non-hybrid biz (die attach, flip chip) is competitive.",
@@ -1448,7 +1448,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5 Advanced Packaging",
-            "Change %": "+0.00%"
+            "Change %": "+1.54%"
         }
     ],
     "zh-CN": [
@@ -1505,7 +1505,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 73,
             "Rating": "HC — E 频段垄断 + V 频段每年折扣 15%。混合 4.24 倍。",
             "Port": "",
-            "Current Price": "GBp 278.99",
+            "Current Price": "GBp 283",
             "Ceiling Target": "900-1,600 英镑（2028-33 年混合，V 频段每年折扣 15%）",
             "Upside": "3.4倍-6.0倍",
             "Position Type": "🔒 阻塞点\n物理：E波段GaN SSPA垄断+V波段消费终端TAM（SpaceX资助研发）。产能锁定阻碍了亚马逊。金顶 #1 承包商链接。 2026-2035+",
@@ -1516,7 +1516,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB3 LEO 太空 + DB8 防御",
-            "Change %": "+2.19%"
+            "Change %": "+3.66%"
         },
         {
             "Rank": 4,
@@ -1571,9 +1571,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC — LIDE 通用原语：DB5 AI + DB3 Space + DB8 Defense。 80% 的合格份额。 €156M MC。",
             "Port": "✓",
-            "Current Price": "EUR 17.25",
+            "Current Price": "EUR 16.70",
             "Ceiling Target": "35 欧元-120 欧元",
-            "Upside": "2.0x-7.0x",
+            "Upside": "2.1x-7.2x",
             "Position Type": "🔒 阻塞点\n物理：LIDE 玻璃 TGV — 有机玻璃无法支持下一代。三重超级循环：DB5 AI包装+DB3 LEO Space（SpaceX）+DB8 Defense。 2027-2035+",
             "Revenue Explosion": "📈 玻璃基板设备订单\n触发点1：三星SEMCO量产（2026年底）\n触发点 2：Intel Absolics HVM 提升\n触发因素三：台积电玻璃基板研发订单\n触发因素 4：SEMCO 的苹果玻璃基板\n触发器 5：通过英特尔封装的 Tesla Terafab\n每一座新玻璃厂 = LPKF 设备订单\n1.7 亿美元 MC = 投资组合中最小的 HC 股票",
             "Updated": "4月26日",
@@ -1582,7 +1582,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建：1-2%（探索位置）\n1.7 亿美元 MC = 投资组合中最高的不对称性\n玻璃基板 = ABF 的后继产品\n围绕 LPKF LIDE 设计的三星 SEMCO 工艺\nIntel + Absolics 自 2023 年起也使用 LPKF\n唯一竞争对手JWMT（三星双源）\n2027-2028 年收入拐点\n需要耐心——2-3年的论文\n第一个玻璃生产订单升级至 2-3%",
             "IR Check": "❌ 需要深入研究\n韩语SEMCO供应链验证\nJWMT竞争定位\n玻璃基板营收突破盈利\n英特尔 Terafab 包装确认\n台积电玻璃基板设备订单\nApple SEMCO 玻璃基板时间表",
             "Supercycle": "封装—玻璃基板设备",
-            "Change %": "-7.26%"
+            "Change %": "-10.22%"
         },
         {
             "Rank": 7,
@@ -1747,7 +1747,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — >95% 光子学-SOI。 NVIDIA CPO 提前。每个 PIC 都从 SOI 开始。",
             "Port": "✓",
-            "Current Price": "EUR 129.20",
+            "Current Price": "EUR 129.30",
             "Ceiling Target": "200-400欧元",
             "Upside": "1.5x-3.1x",
             "Position Type": "🔒 阻塞点\nIP：>95% 通过 Smart Cut 实现光子学-SOI 4,300 项专利。到 2029 年左右（2030 年后的专利风险）。",
@@ -1758,7 +1758,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建位置 4-6%\n价格调整待定（跨来源 54 欧元 vs 78-85 欧元）\n在调整规模之前验证 IBKR 上的 SOI.PA\n论文期限3-4年\nTSEM 的上游 — 互补，不重叠\n填补了 SiPh 基板产品组合中的空白\n平衡光学下游浓度",
             "IR Check": "⚡ 主动监控\n2026 年 5 月 27 日 2026 财年全年业绩\nTower PH18 SiPh 扩容更新\nGFS Fotonix $1B 运行率时间表\n三星 SiPh 参赛确认\n移动库存 100 万片晶圆目标（2026 年底）\nNVIDIA Rubin Ultra 生产时间表\n利润率恢复25%→35%+轨迹\n价格调节：验证 SOI.PA 与 SLOIF",
             "Supercycle": "DB1 SiPh 基板",
-            "Change %": "+13.83%"
+            "Change %": "+13.92%"
         },
         {
             "Rank": 13,
@@ -2143,7 +2143,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 53,
             "Rating": "InP外延片+德意志银行收购守则+战略审查",
             "Port": "",
-            "Current Price": "GBp 41.85",
+            "Current Price": "GBp 42.25",
             "Ceiling Target": "70p-140p",
             "Upside": "1.4倍-2.8倍",
             "Position Type": "⚡ 瓶颈\n催化剂：并购战略审查——事件驱动，而非结构性。单触发。 6-12个月窗口。",
@@ -2154,7 +2154,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "准备就绪：1% 分配\n接管=事件驱动\nEML 短缺 = 稳定的催化剂\n限时瓶颈（2-3年）",
             "IR Check": "❌ 需要审查\n战略审查更新\n光子学细分市场细分",
             "Supercycle": "III-V族外延片",
-            "Change %": "+5.02%"
+            "Change %": "+6.02%"
         },
         {
             "Rank": 32,
@@ -2341,7 +2341,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 45,
             "Rating": "失败——有竞争力的第 3 层系统，不是瓶颈",
             "Port": "",
-            "Current Price": "NOK 52.40",
+            "Current Price": "NOK 52",
             "Ceiling Target": "80-120 挪威克朗",
             "Upside": "1.5x-2.3x",
             "Position Type": "⚡ 瓶颈\n能力：光学监控——竞争激烈的市场。 1-2年窗口期。",
@@ -2352,7 +2352,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要购买——有竞争力的、可替代的",
             "IR Check": "smartoptics.com/投资者关系",
             "Supercycle": "DB1 光子学（第 3 层 — 系统）",
-            "Change %": "+2.75%"
+            "Change %": "+1.96%"
         },
         {
             "Rank": 42,
@@ -2495,7 +2495,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HVDC 寡头垄断 30% + 9 倍积压 + 2030 年 9 亿欧元 EBITDA + 投资组合多元化",
             "Port": "",
-            "Current Price": "DKK 932",
+            "Current Price": "DKK 937.50",
             "Ceiling Target": "2,500-4,500 丹麦克朗",
             "Upside": "2.7x-4.8x",
             "Position Type": "🔒 阻塞点\n物理+资本：高压直流海底电缆——三人寡头垄断，5-7年的进入壁垒。 2026-2035+",
@@ -2506,7 +2506,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：2-3% 分配\n待办事项提供基线\n合同授予=逐步重新定价\n持久、稳定的混炼机",
             "IR Check": "❌ 需要审查\nCMD 甲板、HVDC 积压",
             "Supercycle": "DB2 风能/能源",
-            "Change %": "+2.98%"
+            "Change %": "+3.59%"
         },
         {
             "Rank": "—",
@@ -2556,14 +2556,14 @@ window.PORTFOLIO_DATA = {
             "Rank": "—",
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
-            "Total": 76,
+            "Total": 74,
             "Base": 77,
-            "Entry": 75,
+            "Entry": 70,
             "Rating": "复合半导体ASML + 70-90% MOCVD + 3台发动机",
             "Port": "",
-            "Current Price": "EUR 45.79",
+            "Current Price": "EUR 46.45",
             "Ceiling Target": "120 欧元-250 欧元",
-            "Upside": "2.6x-5.5x",
+            "Upside": "2.6x-5.4x",
             "Position Type": "🔒 阻塞点\n物理：70-90% MOCVD 份额——InP 外延记录工具。复合半成品的通用原语。 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "4月25日",
@@ -2572,7 +2572,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 光子 + DB4 电源",
-            "Change %": "+2.44%"
+            "Change %": "+3.91%"
         },
         {
             "Rank": "—",
@@ -2583,7 +2583,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "1.17 欧元",
             "Port": "",
-            "Current Price": "EUR 20.90",
+            "Current Price": "EUR 20.50",
             "Ceiling Target": "失败",
             "Upside": null,
             "Position Type": "⚡ 瓶颈\n苦恼：垂死公司内部的 CoPoS 技术。正确的技术，错误的车辆。失败。",
@@ -2594,7 +2594,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要追逐 — 等待 LayTec 收入拐点或回落至 13 欧元",
             "IR Check": "德语文件。 NuWays AG 唯一分析师（PT 21 欧元，买入）。",
             "Supercycle": "GaN MOCVD + InP SiPh 计量",
-            "Change %": "+1.46%"
+            "Change %": "-0.49%"
         },
         {
             "Rank": "—",
@@ -2889,7 +2889,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "失败 — 混合键合领导者，20 名客户。但 €20B MC，15+ 分析师，价格高于上限中点。入场 0.89 倍。",
             "Port": "",
-            "Current Price": "EUR 239.50",
+            "Current Price": "EUR 243.20",
             "Ceiling Target": "€160-€280（FY2028-30 混合，15%/年）",
             "Upside": "0.6倍-1.1倍",
             "Position Type": "🔒 CHOKEPOINT（混合键合中）\n混合键合领先者<10nm。 20 名客户。 EVG 参加比赛。非混合业务（芯片贴装、倒装芯片）具有竞争力。",
@@ -2900,7 +2900,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5高级封装",
-            "Change %": "+0.00%"
+            "Change %": "+1.54%"
         }
     ],
     "pl": [
@@ -2957,7 +2957,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 73,
             "Rating": "HC — monopol na pasmo E + pasmo V z rabatem 15%/rok. Mieszane 4,24x.",
             "Port": "",
-            "Current Price": "GBp 278.99",
+            "Current Price": "GBp 283",
             "Ceiling Target": "900–1600 GBp (lata mieszane 2028–33, pasmo V z rabatem 15% rocznie)",
             "Upside": "3,4x-6,0x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nFizyka: monopol GaN SSPA w paśmie E + terminal konsumencki w paśmie V TAM (badania i rozwój finansowane przez SpaceX). Blokada wydajności blokuje Amazon. Link do wykonawcy Golden Dome nr 1. 2026-2035+",
@@ -2968,7 +2968,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB3 LEO Space + DB8 Defense",
-            "Change %": "+2.19%"
+            "Change %": "+3.66%"
         },
         {
             "Rank": 4,
@@ -3023,9 +3023,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC — uniwersalny prymityw LIDE: DB5 AI + DB3 Space + DB8 Defense. Udział równy 80%. 156 mln euro MC.",
             "Port": "✓",
-            "Current Price": "EUR 17.25",
+            "Current Price": "EUR 16.70",
             "Ceiling Target": "35-120 €",
-            "Upside": "2.0x-7.0x",
+            "Upside": "2.1x-7.2x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nFizyka: szkło LIDE TGV — organiczne nie obsługuje nowej generacji. Potrójny supercykl: opakowanie DB5 AI + DB3 LEO Space (SpaceX) + DB8 Defense. 2027-2035+",
             "Revenue Explosion": "📈 ZAMÓWIENIA WYPOSAŻENIA PODŁOŻA SZKLANEGO\nCzynnik 1: masowa produkcja Samsung SEMCO (koniec 2026 r.)\nWyzwalacz 2: rampa Intel Absolics HVM\nWyzwalacz 3: Zamówienia badawczo-rozwojowe dotyczące podłoża szklanego TSMC\nWyzwalacz 4: Podłoże ze szkła Apple za pośrednictwem SEMCO\nWyzwalacz 5: Tesla Terafab w opakowaniu Intel\nKażda nowa fabryka szkła = zamówienia na sprzęt LPKF\n170 mln dolarów MC = najmniejsza akcja HC w portfelu",
             "Updated": "26 kwietnia",
@@ -3034,7 +3034,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUDOWA: 1-2% (pozycja eksploracji)\n170 mln $ MC = najwyższa asymetria w portfelu\nPodłoża szklane = następca ABF\nProces Samsung SEMCO zaprojektowany wokół LPKF LIDE\nIntel + Absolics również używa LPKF od 2023 roku\nJedyny konkurent JWMT (podwójne zaopatrzenie Samsunga)\nPrzegięcie dochodów 2027-2028\nWymagana cierpliwość — praca dyplomowa 2-3 lata\nUaktualnij do 2-3% przy pierwszym zleceniu produkcji szkła",
             "IR Check": "❌ POTRZEBUJE GŁĘBOKIEGO NURKOWANIA\nWeryfikacja łańcucha dostaw SEMCO w języku koreańskim\nPozycjonowanie konkurencyjne JWMT\nPrzełamanie przychodów z substratów szklanych w zarobkach\nPotwierdzenie opakowania Intel Terafab\nZamówienia na sprzęt do podłoża szklanego TSMC\nOś czasu podłoża szklanego Apple SEMCO",
             "Supercycle": "Opakowania — sprzęt do podłoża szklanego",
-            "Change %": "-7.26%"
+            "Change %": "-10.22%"
         },
         {
             "Rank": 7,
@@ -3199,7 +3199,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — >95% Fotonika-SOI. Wycofanie CPO NVIDIA. Każdy PIC zaczyna się od SOI.",
             "Port": "✓",
-            "Current Price": "EUR 129.20",
+            "Current Price": "EUR 129.30",
             "Ceiling Target": "200-400 euro",
             "Upside": "1.5x-3.1x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nIP: >95% Photonics-SOI dzięki Smart Cut 4300 patentów. Do ~2029 r. (ryzyko patentowe po 2030 r.).",
@@ -3210,7 +3210,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUDOWA POZYCJI 4-6%\nOczekiwanie na uzgodnienie cen (54 EUR w porównaniu z 78–85 EUR w różnych źródłach)\nPrzed wymiarowaniem sprawdź SOI.PA na IBKR\nHoryzont pracy 3-4 lata\nPowyżej TSEM – uzupełnia, nie pokrywa się\nWypełnia lukę w ofercie substratów SiPh\nRównoważy koncentrację optyczną w dalszej części strumienia",
             "IR Check": "⚡ AKTYWNE MONITOROWANIE\nWyniki za cały rok obrotowy 2026 z 27 maja 2026 r\nAktualizacje zwiększające pojemność wieży PH18 SiPh\nKalendarium GFS Fotonix o wartości 1 miliarda dolarów\nPotwierdzenie wejścia Samsung SiPh\nZasoby mobilne – docelowa liczba płytek 1,0 mln (koniec roku budżetowego 2026)\nHarmonogram produkcji NVIDIA Rubin Ultra\nOdzysk marży 25% → 35% + trajektoria\nUzgodnienie cen: sprawdź SOI.PA vs SLOIF",
             "Supercycle": "Podłoże DB1 SiPh",
-            "Change %": "+13.83%"
+            "Change %": "+13.92%"
         },
         {
             "Rank": 13,
@@ -3595,7 +3595,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 53,
             "Rating": "InP epiwafer + Kodeks przejęcia Deutsche Bank + Przegląd strategiczny",
             "Port": "",
-            "Current Price": "GBp 41.85",
+            "Current Price": "GBp 42.25",
             "Ceiling Target": "70p-140p",
             "Upside": "1,4x-2,8x",
             "Position Type": "⚡ WĄSKIE gardło\nKatalizator: przegląd strategiczny fuzji i przejęć – oparty na wydarzeniach, a nie strukturalny. Pojedynczy spust. Okno 6-12 miesięcy.",
@@ -3606,7 +3606,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ GOTOWOŚĆ: 1% alokacji\nPrzejęcie = sterowane zdarzeniami\nNiedobór EML = stały katalizator\nOgraniczone w czasie wąskie gardło (2-3 lata)",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nAktualizacje przeglądu strategicznego\nPodział segmentu fotoniki",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "+5.02%"
+            "Change %": "+6.02%"
         },
         {
             "Rank": 32,
@@ -3793,7 +3793,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 45,
             "Rating": "FAIL — konkurencyjne systemy warstwy 3, a nie wąskie gardło",
             "Port": "",
-            "Current Price": "NOK 52.40",
+            "Current Price": "NOK 52",
             "Ceiling Target": "80-120 NOK",
             "Upside": "1.5x-2.3x",
             "Position Type": "⚡ WĄSKIE gardło\nPojemność: Monitoring optyczny – rynek konkurencyjny. Okno 1-2 lata.",
@@ -3804,7 +3804,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NIE KUPUJ — konkurencyjny, wymienny",
             "IR Check": "smartoptics.com/investor-relations",
             "Supercycle": "DB1 Photonics (warstwa 3 — systemy)",
-            "Change %": "+2.75%"
+            "Change %": "+1.96%"
         },
         {
             "Rank": 42,
@@ -3947,7 +3947,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "Oligopol HVDC 30% + 9x backlog + 900 mln € EBITDA 2030 + dywersyfikacja portfela",
             "Port": "",
-            "Current Price": "DKK 932",
+            "Current Price": "DKK 937.50",
             "Ceiling Target": "2500-4500 DKK",
             "Upside": "2.7x-4.8x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nFizyka+kapitał: podmorski kabel HVDC — oligopol dla 3 graczy, bariera wejścia na okres 5–7 lat. 2026-2035+",
@@ -3958,7 +3958,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "TRZYMAJ STAŁE: alokacja 2-3%.\nBacklog zapewnia punkt odniesienia\nPrzyznanie kontraktu = stopniowa zmiana stawki\nDługotrwały, stabilny związek",
             "IR Check": "❌ WYMAGA PRZEGLĄDU\nPłyta CMD, zaległości w HVDC",
             "Supercycle": "DB2 Wiatr/Energia",
-            "Change %": "+2.98%"
+            "Change %": "+3.59%"
         },
         {
             "Rank": "—",
@@ -4008,14 +4008,14 @@ window.PORTFOLIO_DATA = {
             "Rank": "—",
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
-            "Total": 76,
+            "Total": 74,
             "Base": 77,
-            "Entry": 75,
+            "Entry": 70,
             "Rating": "ASML złożonego półproduktu + 70-90% MOCVD + 3 silniki",
             "Port": "",
-            "Current Price": "EUR 45.79",
+            "Current Price": "EUR 46.45",
             "Ceiling Target": "120-250 euro",
-            "Upside": "2.6x-5.5x",
+            "Upside": "2.6x-5.4x",
             "Position Type": "🔒PUNKT PRZEŁAMANIA\nFizyka: 70-90% udziału MOCVD — narzędzie rekordu dla InP epi. Uniwersalny prymityw dla półproduktu złożonego. 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "25 kwietnia",
@@ -4024,7 +4024,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "Fotonika DB1 + moc DB4",
-            "Change %": "+2.44%"
+            "Change %": "+3.91%"
         },
         {
             "Rank": "—",
@@ -4035,7 +4035,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "1,17 €",
             "Port": "",
-            "Current Price": "EUR 20.90",
+            "Current Price": "EUR 20.50",
             "Ceiling Target": "PONIEŚĆ PORAŻKĘ",
             "Upside": null,
             "Position Type": "⚡ WĄSKIE gardło\nTrudna sytuacja: technologia CoPoS w umierającej firmie. Właściwa technologia, zły pojazd. PONIEŚĆ PORAŻKĘ.",
@@ -4046,7 +4046,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "NIE GONIJ — poczekaj na zmianę przychodów LayTec lub powrót do 13 EUR",
             "IR Check": "Zgłoszenia w języku niemieckim. Jedyny analityk NuWays AG (21 € PT, KUP).",
             "Supercycle": "Metrologia GaN MOCVD + InP SiPh",
-            "Change %": "+1.46%"
+            "Change %": "-0.49%"
         },
         {
             "Rank": "—",
@@ -4341,7 +4341,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 10,
             "Rating": "FAIL — Lider w zakresie klejenia hybrydowego, 20 klientów. Ale MC o wartości 20 miliardów euro, ponad 15 analityków, cena powyżej środkowego pułapu. Wejście 0,89x.",
             "Port": "",
-            "Current Price": "EUR 239.50",
+            "Current Price": "EUR 243.20",
             "Ceiling Target": "160–280 EUR (rok budżetowy 2028–30 mieszany, 15%/rok)",
             "Upside": "0,6x-1,1x",
             "Position Type": "🔒 PUNKT CHOKEPOINT (w wiązaniu hybrydowym)\nLider wiązania hybrydowego <10nm. 20 klientów. EVG konkuruje. Biznes niehybrydowy (montaż matrycy, flip chip) jest konkurencyjny.",
@@ -4352,7 +4352,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "Zaawansowane opakowanie DB5",
-            "Change %": "+0.00%"
+            "Change %": "+1.54%"
         }
     ]
 };
