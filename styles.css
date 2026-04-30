@@ -279,7 +279,7 @@ table {
 }
 
 th, td {
-    padding: 0.38rem 0.45rem;
+    padding: 0.32rem 0.25rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -307,8 +307,8 @@ th:hover {
 
 th .sort-icon {
     display: inline-block;
-    margin-left: 6px;
-    font-size: 0.75rem;
+    margin-left: 3px;
+    font-size: 0.7rem;
     opacity: 0.3;
 }
 
@@ -326,7 +326,10 @@ td {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 200px;
+    /* Cap cell width so a long Target string ('GBp 900-1,600 (FY2028-31...')
+       doesn't stretch its column past everything else. Truncates with
+       ellipsis; full text still visible on row tap-expand. */
+    max-width: 130px;
 }
 
 /* Make Rank, Ticker, and Name slightly sticky to the left so they are always visible */
@@ -424,7 +427,7 @@ tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
 
 .badge {
     display: inline-block;
-    padding: 0.14rem 0.38rem;
+    padding: 0.14rem 0.28rem;
     border-radius: 5px;
     font-size: 0.72rem;
     font-weight: 600;
