@@ -289,12 +289,13 @@ def main():
         summaries.append(s)
         # Mirror computed fields into the other languages so the rendered
         # table stays consistent regardless of the current language.
-        for lang in data:
-            if lang == "en" or i >= len(data[lang]):
+        # Skip non-list top-level keys (e.g., __lastRefresh metadata).
+        for lang, lang_data in data.items():
+            if lang == "en" or not isinstance(lang_data, list) or i >= len(lang_data):
                 continue
-            data[lang][i]["Entry"] = row["Entry"]
-            data[lang][i]["Total"] = row["Total"]
-            data[lang][i]["Upside"] = row["Upside"]
+            lang_data[i]["Entry"] = row["Entry"]
+            lang_data[i]["Total"] = row["Total"]
+            lang_data[i]["Upside"] = row["Upside"]
 
     save_data_js(prefix, data)
 

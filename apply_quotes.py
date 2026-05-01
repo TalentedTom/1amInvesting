@@ -133,10 +133,14 @@ def main():
             continue
         formatted = fmt_price(px, cur)
         formatted_chg = fmt_change_pct(change_pct)
-        for lang in data:
-            data[lang][idx]['Current Price'] = formatted
+        # Iterate only language arrays, skipping top-level metadata keys
+        # like __lastRefresh that the stamper adds.
+        for lang, lang_data in data.items():
+            if not isinstance(lang_data, list):
+                continue
+            lang_data[idx]['Current Price'] = formatted
             if formatted_chg is not None:
-                data[lang][idx]['Change %'] = formatted_chg
+                lang_data[idx]['Change %'] = formatted_chg
         updated.append((yh, matched, formatted, formatted_chg))
 
     save_data_js(prefix, data)

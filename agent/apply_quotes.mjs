@@ -92,7 +92,8 @@ export function applyQuotes(dataJsContent, quotes) {
 
     const updated = [];
     const missing = [];
-    const langs = Object.keys(data);
+    // Only iterate language arrays (skip top-level metadata like __lastRefresh).
+    const langs = Object.keys(data).filter(k => Array.isArray(data[k]));
 
     for (const q of quotes) {
         if (q == null || q.ticker == null || q.price == null) continue;
