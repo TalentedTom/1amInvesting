@@ -69,6 +69,14 @@ jobs:
         # ceiling-breach signals are surfaced as alerts in the log.
         run: python scripts/score.py
 
+      - name: Stamp __lastRefresh timestamp
+        # Writes a top-level UTC timestamp into data.js. Guarantees every
+        # cron tick produces a real diff so the commit step always fires —
+        # otherwise apply_quotes/score are no-ops when formatted values
+        # are identical, and the visible commit cadence drifts to ~90 min
+        # instead of the 10 min schedule.
+        run: python scripts/stamp_refresh.py
+
       - name: Commit and push if data.js changed
         run: |
           if git diff --quiet -- data.js; then

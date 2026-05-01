@@ -4162,5 +4162,6 @@ window.PORTFOLIO_DATA = {
             "IR Check": "",
             "Supercycle": "Zaawansowane opakowanie DB5"
         }
-    ]
+    ],
+    "__lastRefresh": "2026-05-01T04:12:15Z"
 };
