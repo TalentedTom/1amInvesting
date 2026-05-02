@@ -1,31 +1,28 @@
 name: Refresh Yahoo prices
 
-# Runs every 10 minutes Mon-Fri (UTC). Coverage by market session:
+# Trigger: manual (workflow_dispatch) only. The site's primary scheduler is
+# cron-job.org, which POSTs to GitHub's workflow_dispatch endpoint on its
+# own schedule (every 15 min, Mon-Fri, market hours UTC). Reliable timing
+# AND it's the single source of trigger truth — no double-fires from a
+# parallel GitHub-side schedule cron.
 #
-#   00:00-06:30 UTC  Asian session    Korea (KS), Japan, Australia (AX),
-#                                     Taiwan (TW/TWO), China (SS/SZ),
-#                                     Hong Kong (HK)
-#   07:00-15:30 UTC  European session Sweden (ST) ← SIVE.ST top pick,
-#                                     UK (L), Germany (DE), France (PA),
-#                                     Denmark (CO), Norway (OL)
-#                                     (CEST in summer; winter is +1h)
-#   13:30-21:00 UTC  North American   NYSE/NASDAQ, TSX (TO/V)
-#   22:00-23:59 UTC  All major closed (cron skipped to save runs)
+# The previous schedule:
+#   - cron: '7-57/10 0-21 * * 1-5'
+# was disabled because:
+#   1. It doubled the deploy count when running alongside cron-job.org,
+#      burning Netlify build minutes.
+#   2. GitHub's scheduled-workflow throttling made it drift to ~hourly
+#      cadence anyway, providing no real reliability benefit.
 #
-# Cron offset to :07/:17/:27/... avoids GitHub's :00 boundary, which has
-# higher cron-load contention and occasionally drops scheduled jobs.
-#
-# To change cadence: edit the cron expression below. Cheat sheet:
-#   '7-57/10 0-21 * * 1-5'  = every 10 min, 22h Mon-Fri UTC  (current)
-#   '*/15 13-21 * * 1-5'    = every 15 min during US market hours only
-#   '*/10 * * * *'          = every 10 min, 24/7 (incl. weekends)
-#
-# Public repos get unlimited Actions minutes, so cadence is essentially free.
+# To re-enable the GitHub schedule (e.g., as a backup if cron-job.org goes
+# down), uncomment the schedule block below and pick a cadence:
+#   '0 * * * 1-5'           = once an hour Mon-Fri (lightweight backup)
+#   '7-57/15 13-21 * * 1-5' = every 15 min during US market hours only
 
 on:
-  schedule:
-    - cron: '7-57/10 0-21 * * 1-5'
-  workflow_dispatch:   # allow manual trigger from Actions tab
+  # schedule:
+  #   - cron: '0 * * * 1-5'   # uncomment for hourly backup
+  workflow_dispatch:   # allow manual trigger from Actions tab + cron-job.org
 
 permissions:
   contents: write       # we need to push the updated data.js
