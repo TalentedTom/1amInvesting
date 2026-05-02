@@ -730,18 +730,18 @@ tbody tr {
         font-size: 0.68rem;
     }
 
-    /* === Table: hide Upside column, kill sort icons, collapse padding ===
-       Name was already removed from simpleCols entirely. Upside (Target/Price
-       multiplier) is the most redundant column on mobile — Target conveys
-       essentially the same info as a price range. Hidden below 480px to make
-       room for the new Change % column. Re-appears in landscape (>480px).
-       After Target/Upside swap, Upside lives at position 8 (Target is now 9). */
+    /* === Table: hide Target on mobile, kill sort icons, collapse padding ===
+       Name was already removed from simpleCols entirely. We hide Target
+       (the long 'GBp 900-1,600 (FY2028…)' values) and keep Upside (the
+       compact '2.4x-5.4x' multiplier) since Upside reads cleanly in the
+       narrow phone column and is the more useful at-a-glance signal.
+       Both reappear in landscape (>480px). */
     .table-container {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the Upside column (now 8th, after the swap with Target) on phones */
-    th:nth-child(8), td:nth-child(8) {
+    /* Hide the Target column (9th and last) on phones */
+    th:nth-child(9), td:nth-child(9) {
         display: none;
     }
 
