@@ -976,25 +976,57 @@ body.light-mode .modal-content pre {
     border-top: 1px solid var(--border);
     margin: 1.5em 0;
 }
+/* Tables inside the deep-dive modal need to *override* the main portfolio
+   table's td rules (white-space:nowrap, overflow:hidden, ellipsis,
+   max-width:200px). Otherwise cell contents like 'Contracted' or 'F...'
+   get truncated to a few characters. */
+.md-table-wrap {
+    overflow-x: auto;
+    margin: 0.9em 0;
+    -webkit-overflow-scrolling: touch;
+    /* Subtle border so the scroll-container is visually contained */
+    border-radius: 6px;
+}
+.md-table-wrap table {
+    margin: 0;
+}
 .modal-content table {
     border-collapse: collapse;
-    width: auto;
-    margin: 0.8em 0;
+    width: 100%;
+    table-layout: auto;
     font-size: 0.88em;
 }
-.modal-content th, .modal-content td {
+.modal-content th,
+.modal-content td {
+    /* RESET the global td/th rules from the portfolio table */
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    max-width: none;
+    vertical-align: top;
+    line-height: 1.45;
+    /* Modal-specific styling */
     border: 1px solid var(--border);
-    padding: 0.4em 0.7em;
+    padding: 0.45em 0.7em;
     text-align: left;
+    font-size: inherit;
+    color: var(--text-primary);
 }
 .modal-content th {
     background: rgba(255, 255, 255, 0.04);
+    font-family: var(--font-body);
     font-weight: 600;
     text-transform: none;
     letter-spacing: 0;
-    /* Override the table-wide th styles inherited from the main table */
+    /* Override the main table's sticky+pointer th */
     position: static;
     cursor: default;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    z-index: auto;
+}
+body.light-mode .modal-content th {
+    background: rgba(0, 0, 0, 0.04);
 }
 
 /* Make the ticker symbol look clickable. Always-on affordance: a faded

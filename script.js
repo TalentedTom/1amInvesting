@@ -175,6 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     a.target = '_blank';
                     a.rel = 'noopener noreferrer';
                 });
+                // Wrap each rendered table in a scrollable container so wide
+                // tables scroll horizontally on phones without breaking the
+                // modal layout. (CSS class .md-table-wrap handles overflow.)
+                deepDiveContent.querySelectorAll('table').forEach((table) => {
+                    if (table.parentElement.classList.contains('md-table-wrap')) return;
+                    const wrap = document.createElement('div');
+                    wrap.className = 'md-table-wrap';
+                    table.parentNode.insertBefore(wrap, table);
+                    wrap.appendChild(table);
+                });
             })
             .catch((err) => {
                 deepDiveContent.innerHTML =
