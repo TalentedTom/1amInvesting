@@ -96,6 +96,15 @@
             </div>
         </section>
 
+        <!-- First-visit discovery hint for the deep-dive feature. Auto-hides
+             after the user opens any deep-dive, or via the dismiss button.
+             Persists dismissal in localStorage so it never reappears. -->
+        <div class="hint-banner" id="deep-dive-hint" role="status">
+            <span class="hint-icon" aria-hidden="true">💡</span>
+            <span class="hint-text">Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis</span>
+            <button class="hint-dismiss" aria-label="Dismiss tip">×</button>
+        </div>
+
         <main class="table-container">
             <div class="table-wrapper">
                 <table id="portfolio-table">

@@ -125,8 +125,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const deepDiveTitle = document.getElementById('deep-dive-title');
     const deepDiveContent = document.getElementById('deep-dive-content');
 
+    // Discovery hint banner — auto-hide on first deep-dive open, persist via localStorage.
+    const HINT_STORAGE_KEY = 'deepDiveHintDismissed';
+    const hintBanner = document.getElementById('deep-dive-hint');
+    if (hintBanner) {
+        if (localStorage.getItem(HINT_STORAGE_KEY) === '1') {
+            hintBanner.classList.add('dismissed');
+        }
+        const hintDismissBtn = hintBanner.querySelector('.hint-dismiss');
+        if (hintDismissBtn) {
+            hintDismissBtn.addEventListener('click', () => dismissHint(true));
+        }
+    }
+    function dismissHint(persist) {
+        if (!hintBanner || hintBanner.classList.contains('dismissed')) return;
+        hintBanner.classList.add('dismissed');
+        if (persist) {
+            try { localStorage.setItem(HINT_STORAGE_KEY, '1'); } catch (_) {}
+        }
+    }
+
     function openDeepDive(ticker) {
         if (!ticker) return;
+        // First successful open dismisses the discovery hint permanently —
+        // the user has clearly figured the feature out.
+        dismissHint(true);
         deepDiveTitle.textContent = `${ticker} — Deep Dive`;
         deepDiveContent.innerHTML = '<p class="modal-loading">Loading…</p>';
         deepDiveModal.classList.remove('hidden');
