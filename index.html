@@ -112,6 +112,24 @@
         </main>
     </div>
 
+    <!-- Deep-Dive modal. Hidden by default. Sticky header with close button
+         stays visible as the body scrolls. ESC and backdrop click also close. -->
+    <div id="deep-dive-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="deep-dive-title">
+        <div class="modal-backdrop" data-modal-close="1"></div>
+        <div class="modal-panel">
+            <header class="modal-header">
+                <h2 id="deep-dive-title">Deep Dive</h2>
+                <button class="modal-close" data-modal-close="1" aria-label="Close deep dive">×</button>
+            </header>
+            <div class="modal-content" id="deep-dive-content">
+                <p class="modal-loading">Loading…</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Markdown renderer (small, single file, pinned). Used by the deep-dive
+         modal to render the .md files served from /deep-dives/. -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>

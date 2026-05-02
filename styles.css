@@ -803,3 +803,231 @@ tbody tr {
     }
 }
 
+/* === Deep-Dive Modal ============================================
+   Triggered by clicking a ticker. Content fetched from /deep-dives/<TICKER>.md
+   on demand and rendered with marked.js. Sticky header guarantees the close
+   button stays accessible no matter how far the user scrolls. */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 1rem;
+    /* Make the modal itself the scroll container if a tiny phone forces it. */
+    overflow: auto;
+}
+.modal.hidden {
+    display: none;
+}
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+.modal-panel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 760px;
+    max-height: 92vh;
+    background: var(--bg-panel);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.modal-header {
+    /* Sticky-ish: not strictly position:sticky because the panel is flex
+       column with the content overflow:auto below — header sits at top of
+       the flex layout, which is functionally the same. Always visible. */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-panel);
+}
+.modal-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    /* Truncate long titles instead of wrapping to keep the header compact */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.modal-close {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    margin-left: 0.75rem;
+}
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+body.light-mode .modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.modal-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1.25rem 1.5rem 1.5rem;
+    flex: 1;
+    line-height: 1.6;
+    -webkit-overflow-scrolling: touch;
+}
+.modal-loading {
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Markdown content styling — keep readable, not too dense */
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-top: 1.4em;
+    margin-bottom: 0.5em;
+}
+.modal-content h1:first-child,
+.modal-content h2:first-child,
+.modal-content h3:first-child {
+    margin-top: 0;
+}
+.modal-content h1 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+.modal-content h2 { font-size: 1.15rem; }
+.modal-content h3 { font-size: 1rem; }
+.modal-content h4 { font-size: 0.92rem; color: var(--text-secondary); }
+.modal-content p { margin: 0.75em 0; }
+.modal-content ul, .modal-content ol { padding-left: 1.4em; margin: 0.6em 0; }
+.modal-content li { margin: 0.25em 0; }
+.modal-content strong { color: var(--text-primary); font-weight: 600; }
+.modal-content em { color: var(--text-primary); }
+.modal-content code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+}
+body.light-mode .modal-content code {
+    background: rgba(0, 0, 0, 0.06);
+}
+.modal-content pre {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.9rem 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 0.8em 0;
+}
+body.light-mode .modal-content pre {
+    background: rgba(0, 0, 0, 0.06);
+}
+.modal-content pre code {
+    background: transparent;
+    padding: 0;
+    font-size: 0.83em;
+    line-height: 1.5;
+}
+.modal-content a {
+    color: var(--accent);
+    text-decoration: none;
+}
+.modal-content a:hover {
+    text-decoration: underline;
+}
+.modal-content blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 0.8em 0;
+    padding: 0.4em 1em;
+    color: var(--text-secondary);
+}
+.modal-content hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 1.5em 0;
+}
+.modal-content table {
+    border-collapse: collapse;
+    width: auto;
+    margin: 0.8em 0;
+    font-size: 0.88em;
+}
+.modal-content th, .modal-content td {
+    border: 1px solid var(--border);
+    padding: 0.4em 0.7em;
+    text-align: left;
+}
+.modal-content th {
+    background: rgba(255, 255, 255, 0.04);
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    /* Override the table-wide th styles inherited from the main table */
+    position: static;
+    cursor: default;
+}
+
+/* Make the ticker symbol look clickable */
+.ticker-symbol {
+    cursor: pointer;
+}
+.ticker-symbol:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Mobile tweaks for the modal — narrower padding, full-width feel */
+@media (max-width: 480px) {
+    .modal {
+        padding: 0;
+    }
+    .modal-panel {
+        max-width: 100%;
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+    .modal-header {
+        padding: 0.75rem 0.85rem;
+    }
+    .modal-header h2 {
+        font-size: 0.95rem;
+    }
+    .modal-content {
+        padding: 1rem 1.1rem 1.5rem;
+        font-size: 0.92rem;
+    }
+}
+

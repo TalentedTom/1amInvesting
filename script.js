@@ -117,6 +117,64 @@ document.addEventListener('DOMContentLoaded', () => {
     positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === positionFilter));
     setSliderPosition(positionFilter);
 
+    // === Deep-Dive Modal ===
+    // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
+    // Modal can always be dismissed via the close button (sticky at top of
+    // the panel), backdrop click, or Escape key.
+    const deepDiveModal = document.getElementById('deep-dive-modal');
+    const deepDiveTitle = document.getElementById('deep-dive-title');
+    const deepDiveContent = document.getElementById('deep-dive-content');
+
+    function openDeepDive(ticker) {
+        if (!ticker) return;
+        deepDiveTitle.textContent = `${ticker} — Deep Dive`;
+        deepDiveContent.innerHTML = '<p class="modal-loading">Loading…</p>';
+        deepDiveModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';   // prevent background scroll
+        // Reset scroll position when reopening (in case prior dive scrolled).
+        const scroller = deepDiveContent;
+        scroller.scrollTop = 0;
+
+        const url = `deep-dives/${encodeURIComponent(ticker)}.md`;
+        fetch(url, { cache: 'no-cache' })
+            .then((r) => {
+                if (!r.ok) throw new Error(`No deep-dive on file for ${ticker} yet (HTTP ${r.status}).`);
+                return r.text();
+            })
+            .then((md) => {
+                if (typeof marked === 'undefined') {
+                    deepDiveContent.textContent = md;   // fallback: raw text
+                    return;
+                }
+                deepDiveContent.innerHTML = marked.parse(md);
+                // Open external links in new tab
+                deepDiveContent.querySelectorAll('a[href^="http"]').forEach((a) => {
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                });
+            })
+            .catch((err) => {
+                deepDiveContent.innerHTML =
+                    `<p style="color:#ef4444">${err.message || String(err)}</p>` +
+                    `<p style="color:var(--text-secondary);font-size:0.88em">More tickers will be added soon.</p>`;
+            });
+    }
+
+    function closeDeepDive() {
+        deepDiveModal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+
+    // Close handlers: any element marked with data-modal-close, plus Escape key.
+    deepDiveModal.addEventListener('click', (e) => {
+        if (e.target.closest('[data-modal-close]')) closeDeepDive();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !deepDiveModal.classList.contains('hidden')) {
+            closeDeepDive();
+        }
+    });
+
     // Initialize Data from global JS variable
     function renderData() {
         try {
@@ -298,12 +356,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
         tbody.innerHTML = bodyHtml;
 
-        // Add Row Click Event Listener for Expansion
+        // Row click handler:
+        //   - clicking the ticker symbol opens the deep-dive modal
+        //   - clicking elsewhere on the row toggles expansion (un-truncates cells)
         tbody.addEventListener('click', (e) => {
+            const tickerEl = e.target.closest('.ticker-symbol');
+            if (tickerEl) {
+                const ticker = tickerEl.textContent.trim();
+                e.stopPropagation();
+                openDeepDive(ticker);
+                return;
+            }
             const tr = e.target.closest('tr');
             if (tr) {
-                // If aiming to strictly allow ONE row to expand, uncomment below:
-                // Array.from(tbody.querySelectorAll('tr')).forEach(r => { if(r !== tr) r.classList.remove('row-expanded'); });
                 tr.classList.toggle('row-expanded');
             }
         });
