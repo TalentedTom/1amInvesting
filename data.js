@@ -2903,5 +2903,5 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.22%"
         }
     ],
-    "__lastRefresh": "2026-05-02T11:01:13Z"
+    "__lastRefresh": "2026-05-02T11:06:02Z"
 };
