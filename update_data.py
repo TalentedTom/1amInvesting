@@ -19,10 +19,16 @@ def load_cache():
     if os.path.exists(CACHE_PATH):
         try:
             with open(CACHE_PATH, "r", encoding="utf-8") as f:
-                return json.load(f)
+                cache = json.load(f)
+                # Polish was dropped — keep the on-disk pl entries intact in
+                # case it's ever re-added, but don't initialize them for new
+                # caches.
+                if "zh-CN" not in cache:
+                    cache["zh-CN"] = {}
+                return cache
         except:
             pass
-    return {"zh-CN": {}, "pl": {}}
+    return {"zh-CN": {}}
 
 def save_cache(cache):
     with open(CACHE_PATH, "w", encoding="utf-8") as f:
@@ -52,47 +58,37 @@ def get_translation(text, target_lang, translator, cache):
 def main():
     print(f"Reading {EXCEL_PATH} ...")
     cache = load_cache()
-    
+
     translator_zh = GoogleTranslator(source='auto', target='zh-CN')
-    translator_pl = GoogleTranslator(source='auto', target='pl')
-    
+
     try:
         df = pd.read_excel(EXCEL_PATH, sheet_name="Master Portfolio")
         df = df.fillna("")
         data_en = df.to_dict(orient="records")
-        
+
         data_zh = []
-        data_pl = []
-        
+
         print("Translating data... This may take a minute if cache is empty.")
-        
+
         for idx, row in enumerate(data_en):
             row_zh = dict(row)
-            row_pl = dict(row)
-            
+
             for col in TRANSLATE_COLS:
                 if col in row:
                     val = row[col]
-                    # translate ZH
                     row_zh[col] = get_translation(val, "zh-CN", translator_zh, cache)
-                    # translate PL
-                    row_pl[col] = get_translation(val, "pl", translator_pl, cache)
-            
+
             data_zh.append(row_zh)
-            data_pl.append(row_pl)
-            
+
             if (idx + 1) % 5 == 0:
                 print(f"Processed {idx + 1}/{len(data_en)} rows...")
-                # Save cache periodically
                 save_cache(cache)
-                
-        # Final save cache
+
         save_cache(cache)
-        
+
         final_data = {
             "en": data_en,
             "zh-CN": data_zh,
-            "pl": data_pl
         }
         
         with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
