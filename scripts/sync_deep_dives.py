@@ -135,6 +135,14 @@ def main():
         for t in missing:
             print(f"  {t}")
 
+    # Write manifest of available deep-dives. The frontend reads this to
+    # decide which ticker symbols get clickable styling and which render
+    # as plain text (implicit signal that no deep-dive exists yet).
+    manifest = sorted(t for t, _ in copied)
+    manifest_path = DEEP_DIVES / "index.json"
+    manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    print(f"\nWrote manifest with {len(manifest)} tickers: {manifest_path.relative_to(REPO)}")
+
 
 if __name__ == "__main__":
     main()

@@ -1029,10 +1029,20 @@ body.light-mode .modal-content th {
     background: rgba(0, 0, 0, 0.04);
 }
 
-/* Ticker symbol is a clickable link to the deep-dive. Style as
-   unambiguously link-like: accent color + dotted underline always on,
-   solid underline on hover. Plus an always-visible ↗ chevron. */
+/* Ticker symbol — default rendering is plain text. The link styling
+   (accent color, dotted underline, ↗ chevron) is gated on the
+   .has-deep-dive class which the JS adds only for tickers present in
+   deep-dives/index.json. Tickers without a deep-dive look ordinary —
+   implicit signal to the user that there's nothing to click through to. */
 .ticker-symbol {
+    /* Plain text, no affordance. */
+    cursor: default;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* Link affordance, only when a deep-dive exists for this ticker */
+.ticker-symbol.has-deep-dive {
     cursor: pointer;
     color: var(--accent);
     text-decoration: underline;
@@ -1041,7 +1051,7 @@ body.light-mode .modal-content th {
     text-underline-offset: 3px;
     transition: text-decoration-style 0.15s ease, text-decoration-thickness 0.15s ease;
 }
-.ticker-symbol::after {
+.ticker-symbol.has-deep-dive::after {
     content: " ↗";
     font-size: 0.8em;
     color: var(--accent);
@@ -1050,11 +1060,11 @@ body.light-mode .modal-content th {
     margin-left: 2px;
     font-weight: 700;
 }
-.ticker-symbol:hover {
+.ticker-symbol.has-deep-dive:hover {
     text-decoration-style: solid;
     text-decoration-thickness: 2px;
 }
-.ticker-symbol:hover::after {
+.ticker-symbol.has-deep-dive:hover::after {
     opacity: 1;
 }
 

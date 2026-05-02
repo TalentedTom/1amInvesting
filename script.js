@@ -125,6 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const deepDiveTitle = document.getElementById('deep-dive-title');
     const deepDiveContent = document.getElementById('deep-dive-content');
 
+    // Manifest of which tickers have deep-dives on disk. Loaded once at
+    // startup; used to decide which ticker symbols get clickable link
+    // styling vs. plain text. Tickers not in this set are non-interactive
+    // (no underline, no chevron, default cursor) — implicitly signalling
+    // that no deep-dive exists for them yet.
+    let deepDiveAvailable = new Set();
+    function loadDeepDiveManifest() {
+        return fetch('deep-dives/index.json', { cache: 'no-cache' })
+            .then((r) => (r.ok ? r.json() : []))
+            .then((arr) => { deepDiveAvailable = new Set(arr); })
+            .catch(() => { /* leave set empty — no tickers will appear clickable */ });
+    }
+
     // Discovery hint banner — auto-hide on first deep-dive open, persist via localStorage.
     const HINT_STORAGE_KEY = 'deepDiveHintDismissed';
     const hintBanner = document.getElementById('deep-dive-hint');
@@ -390,10 +403,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.innerHTML = bodyHtml;
 
         // Row click handler:
-        //   - clicking the ticker symbol opens the deep-dive modal
+        //   - clicking a ticker symbol that has a deep-dive opens the modal
         //   - clicking elsewhere on the row toggles expansion (un-truncates cells)
         tbody.addEventListener('click', (e) => {
-            const tickerEl = e.target.closest('.ticker-symbol');
+            const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
             if (tickerEl) {
                 const ticker = tickerEl.textContent.trim();
                 e.stopPropagation();
@@ -469,18 +482,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Tries financialmodelingprep's free image endpoint first; if it 404s
         // (common for non-US tickers), the colored letter avatar shows
         // through. Always-clean output even when no logo source has the
-        // ticker. Skips if value is empty/missing — falls through to the
-        // null check below.
+        // ticker.
+        //
+        // Tickers WITH a deep-dive on disk get .has-deep-dive class which
+        // turns on the link styling (accent color, dotted underline, ↗).
+        // Tickers WITHOUT one render as plain text — implicit cue that
+        // there's nothing to click through to.
         if (colName === 'Ticker' && value) {
             const sym = String(value);
-            // Strip exchange suffix and any "(PRE-IPO)" annotation for the
-            // logo lookup; FMP keys by base symbol.
             const base = sym.split('.')[0].split('(')[0].trim().toUpperCase();
             const initial = (base.match(/[A-Z0-9]/) || ['?'])[0];
             const logoSrc = `https://financialmodelingprep.com/image-stock/${base}.png`;
-            // Escape the symbol for safe HTML insertion (basic — no HTML in tickers).
             const safeSym = sym.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="ticker-symbol">${safeSym}</span></span>`;
+            const tickerClass = deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
+            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}">${safeSym}</span></span>`;
         }
 
         if (value === null || value === undefined || value === "") {
@@ -527,6 +542,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return String(value);
     }
 
-    // Initial render — runs last so all const helpers (SCORE_STOPS etc) are initialized.
+    // Initial render — runs last so all const helpers (SCORE_STOPS etc)
+    // are initialized. We render once immediately for fast first paint,
+    // then re-render after the deep-dive manifest arrives so the
+    // .has-deep-dive class lands on the right tickers.
     renderData();
+    loadDeepDiveManifest().then(() => renderData());
 });
