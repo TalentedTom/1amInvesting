@@ -1029,25 +1029,30 @@ body.light-mode .modal-content th {
     background: rgba(0, 0, 0, 0.04);
 }
 
-/* Make the ticker symbol look clickable. Always-on affordance: a faded
-   chevron after the symbol that brightens on hover, signalling the click
-   target leads somewhere. */
+/* Ticker symbol is a clickable link to the deep-dive. Style as
+   unambiguously link-like: accent color + dotted underline always on,
+   solid underline on hover. Plus an always-visible ↗ chevron. */
 .ticker-symbol {
     cursor: pointer;
-    position: relative;
-}
-.ticker-symbol::after {
-    content: "  ↗";
-    font-size: 0.78em;
-    color: var(--accent);
-    opacity: 0.35;
-    transition: opacity 0.2s ease;
-    margin-left: 1px;
-}
-.ticker-symbol:hover {
     color: var(--accent);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: text-decoration-style 0.15s ease, text-decoration-thickness 0.15s ease;
+}
+.ticker-symbol::after {
+    content: " ↗";
+    font-size: 0.8em;
+    color: var(--accent);
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    margin-left: 2px;
+    font-weight: 700;
+}
+.ticker-symbol:hover {
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
 }
 .ticker-symbol:hover::after {
     opacity: 1;
@@ -1126,23 +1131,47 @@ body.light-mode .hint-dismiss:hover {
     }
 }
 
-/* Mobile tweaks for the modal — narrower padding, full-width feel */
+/* Mobile tweaks for the modal — full-screen feel, header always reachable
+   even when iOS Safari's URL bar is overlaying the top of the viewport. */
 @media (max-width: 480px) {
     .modal {
-        padding: 0;
+        /* Respect iOS safe-area insets so the modal panel sits below the
+           URL bar / dynamic island and above the home indicator. The
+           header would otherwise hide behind the URL bar with no way
+           to access the close button. The 0 fallbacks keep non-iOS
+           browsers happy. */
+        padding: env(safe-area-inset-top, 0)
+                 env(safe-area-inset-right, 0)
+                 env(safe-area-inset-bottom, 0)
+                 env(safe-area-inset-left, 0);
+        /* Anchor panel to top of the safe area instead of centering it,
+           which on iOS Safari was offsetting the panel and hiding the
+           header above the visible viewport. */
+        align-items: stretch;
     }
     .modal-panel {
         max-width: 100%;
-        max-height: 100vh;
-        height: 100vh;
+        max-height: none;
+        height: 100%;
         border-radius: 0;
         border: none;
     }
     .modal-header {
-        padding: 0.75rem 0.85rem;
+        padding: 0.7rem 0.85rem;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+        /* Subtle border-bottom + slight bg helps the header read as a
+           distinct sticky region above the scrolling content. */
     }
     .modal-header h2 {
         font-size: 0.95rem;
+    }
+    .modal-close {
+        /* Bigger tap target on phones — Apple HIG recommends ≥44px */
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
     }
     .modal-content {
         padding: 1rem 1.1rem 1.5rem;
