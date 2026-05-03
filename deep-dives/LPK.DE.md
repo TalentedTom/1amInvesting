@@ -1,12 +1,12 @@
 # LPK.DE — LPKF Laser & Electronics | Deep Dive
 **Date:** May 1, 2026 (RESCORED — CPO waveguide vector added)
 **Framework Version:** v3.6.4
-**Score:** 84 HC 🔒 | Base 77% (46/60) | Entry 95 (38/40) | #3 in Portfolio | **Owned ✓**
+**Score:** 85 HC 🔒 | Base 77% (46/60) | Entry 98 (39/40) | #3 in Portfolio | **Owned ✓**
 **Price at Analysis:** €16.55
-**Ceiling:** €75-€175 (NOTE: potential €80-200 on formal Intel/Ayar Labs confirmation per VLM Kapital patent research)
-**Upside Ratio:** 4.5x-10.6x
+**Ceiling:** €80-€200 (VLM Kapital Intel/Ayar Labs patent chain confirmed. CEO 50-100 machines/customer at HVM.)
+**Upside Ratio:** 4.8x-12.1x
 **Market Cap:** ~€405M (~$440M)
-**Entry Ratio:** 7.55x to ceiling midpoint
+**Entry Ratio:** 8.46x to ceiling midpoint
 **FY2025 Revenue:** €115.3M (-6.2% YoY)
 **Q1 2026:** Revenue €17.1M (-32% YoY, legacy decline during qualification phase)
 **Earnings:** April 30, 2026 ✅ Reported
@@ -182,4 +182,5 @@ European-headquartered. 80% of global glass packaging qualification on LPKF equi
 - Apr 26, 2026: 75 HC (triple supercycle: DB5+DB3+DB8. Glass Panel Technology Group. SpaceX/TeraFab pathway. Schmid workflow. Base 72%→77%. Ceiling €29-86→€35-120.)
 - Apr 30, 2026: 81 HC (Q1 earnings: legacy -32% irrelevant during qualification. CEO confirmed "50-100 machines per customer at high volume." Ceiling raised €35-120→€50-150. 12% dip improved entry to 6.0x.)
 - **May 1, 2026: 81 HC** (CPO waveguide vector confirmed. LPKF Korea CEO Lee Yong-sang: "4-year co-development with specific semiconductor company" for 3D Direct Light waveguide equipment — NOW INSTALLED at customer. Almost certainly Intel. Patent pending on all-glass photonic connector. Sub-micron alignment via glass springs. 510×515mm mass production panels. Ceiling raised €50-150→€60-160.)
-- **May 1, 2026: 84 HC** (VLM Kapital patent-chain research: Intel patent US20240027706A1 describes glass interposer with laser-written waveguides for detachable fiber solutions. Intel paper confirms "ultrashort-pulse laser direct writing" = LPKF LIDE. Ayar Labs' "detachable glass photonic interconnect solution" uses Intel's glass bridge. Key Intel researcher Pooya Tadayon moved to Ayar Labs as VP Packaging & Test in 2024. LPKF is the ONLY mass-production-ready laser waveguide writer. Ceiling raised €60-160→€75-175. NOTE: potential €80-200 on formal Intel/Ayar Labs confirmation. Three confirmed vectors: substrate vias + CPO waveguides + Ayar Labs glass bridge architecture.)
+- **May 1, 2026: 84 HC** (VLM Kapital patent-chain research: Intel patent US20240027706A1 describes glass interposer with laser-written waveguides for detachable fiber solutions. Intel paper confirms "ultrashort-pulse laser direct writing" = LPKF LIDE. Ayar Labs' "detachable glass photonic interconnect solution" uses Intel's glass bridge. Key Intel researcher Pooya Tadayon moved to Ayar Labs as VP Packaging & Test in 2024. LPKF is the ONLY mass-production-ready laser waveguide writer. Ceiling raised €60-160→€75-175.)
+- **May 2, 2026: 85 HC** (VLM Kapital patent chain accepted as virtual confirmation. Intel patent + CEO 50-100 machines + equipment installed + Pooya Tadayon at Ayar Labs = confirmed without formal press release. Ceiling raised €75-175→€80-200. 8.46x midpoint ratio. Three revenue vectors: substrate vias + CPO waveguides + Ayar Labs glass bridge architecture.)

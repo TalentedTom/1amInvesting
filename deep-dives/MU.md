@@ -1,11 +1,11 @@
 # MU — Micron Technology | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
+**Date:** May 2, 2026 (RESCORED — memory shortage extended to 2027)
+**Framework Version:** v3.6.5
 **Score:** 53 | Base 62% (37/60) | Entry 40 (16/40)
-**Price at Analysis:** $496.72 (Col 9)
-**Ceiling:** $700-$1,200
-**Upside Ratio:** 1.4x-2.4x
-**Market Cap:** ~$460B
+**Price at Analysis:** $542.21
+**Ceiling:** $800-$1,400 (memory shortage to 2027, DDR5 +63% QoQ, HBM expansion)
+**Upside Ratio:** 1.5x-2.6x
+**Market Cap:** ~$583B
 **Q2 FY2026 Revenue:** $23.86B (+196% YoY) | GM: 75% | EPS: $12.20
 **Q3 FY2026 Guide:** $33.5B, GM ~81%, EPS $19.15
 
@@ -73,31 +73,51 @@ This single-quarter guidance exceeds Micron's FULL-YEAR revenue through FY2024.
 | Risks | -2 | Memory cyclicality (-1). China ban — Samsung wins Chinese HBM (-1). |
 | **Base** | **37/60 (62%)** | |
 
-## Ceiling
+## Ceiling (Revised May 2 — Memory Shortage Extended to 2027)
 
 ```
-FY2026 TRAJECTORY:
-  Q1: $13.6B → Q2: $23.9B → Q3 guide: $33.5B → Q4E: ~$38B
-  FY2026 total: ~$109B (vs original $74B guide!)
+MEMORY SHORTAGE EXTENSION IMPACT ON MICRON:
+  DRAM market: 10% structural deficit (industry source, May 2026)
+  DDR5 spot: +63% QoQ while DDR4 -16% = AI memory premium widening
+  NAND prices: +70% QoQ
+  CPU DRAM: going 4x (300-400GB per AI CPU) = NEW demand layer
+  Shortage extends from 2026 → through 2027
+  
+  Micron-specific:
+  → Idaho fab + New York $100B campus ramping
+  → HBM3E qualified at all major customers
+  → #3 in HBM but gaining share (24% → targeting 30%+)
+  → China BAN = structural limitation but also = less supply competition
+  → NAND: Micron's enterprise SSD business benefits from shortage
 
-FY2027E: $130-160B (HBM4 + HBM4E + pricing)
-FY2028E: $150-200B (Idaho + New York fabs online)
+FY2026 TRAJECTORY (REVISED):
+  Q1: $13.6B → Q2: $23.9B → Q3 guide: $33.5B → Q4E: ~$38-42B
+  FY2026 total: ~$109-113B
 
-EPS TRAJECTORY:
-  FY2026E: ~$50-60 (Q2 $12.20 + Q3 $19.15 + acceleration)
-  FY2027E: $80-120
-  FY2028E: $100-150+
+FY2027-28 TRAJECTORY (REVISED — shortage extended):
+  FY2027E: $140-180B (shortage sustains + CPU DRAM 4x + HBM4 ramp)
+  FY2028E: $170-220B (Idaho + New York fabs online + full HBM4E)
+
+EPS TRAJECTORY (REVISED):
+  FY2026E: ~$55-65
+  FY2027E: $90-140 (raised from $80-120 on extended shortage)
+  FY2028E: $120-170+ (raised from $100-150)
 
 VALUATION:
-  $80 EPS × 8x = $640 → near low ceiling
-  $100 EPS × 8x = $800
-  $120 EPS × 10x = $1,200 → high ceiling
-  Bull $150 EPS × 10x = $1,500
+  $90 EPS × 8x = $720 → near low ceiling
+  $120 EPS × 8x = $960
+  $140 EPS × 10x = $1,400 → high ceiling
+  Bull $170 EPS × 10x = $1,700
 
-CEILING: $700-$1,200
+CEILING: $800-$1,400 (raised from $700-$1,200)
+  LOW: Memory shortage sustains + moderate HBM share gain
+  MID: Full cycle + CPU DRAM 4x demand + extended pricing power
+  HIGH: HBM share gains to 30%+ + Idaho/NY ramp + NAND pricing
+  
+KEY CHANGE: +12 months peak pricing = $15-30B additional cumulative revenue
 ```
 
-**Entry:** $496.72 vs midpoint $950 = 1.91x → **Entry 40**
+**Entry:** $542.21 vs midpoint $1,100 = 2.03x → **Entry 16/40**
 
 ## Total: (62 × 0.6) + (40 × 0.4) = 37 + 16 = 53
 

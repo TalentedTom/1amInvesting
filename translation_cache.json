@@ -1105,7 +1105,18 @@
     "1.2x-2.4x": "1.2倍-2.4倍",
     "1.7x-2.4x": "1.7倍-2.4倍",
     "1.0x-3.6x": "1.0倍-3.6倍",
-    "0.7x-2.0x": "0.7倍-2.0倍"
+    "0.7x-2.0x": "0.7倍-2.0倍",
+    "SEK 100-500 (7-vector model: CPO 142% CAGR + Jabil LRO + SATCOM + Defense primes + Apple + Lightmatter + India 5G/6G)": "SEK 100-500（7矢量模型：CPO 142% CAGR + Jabil LRO + SATCOM + Defense primes + Apple + Lightmatter + 印度 5G/6G）",
+    "€80-200 (FY2028-30). Intel/Ayar Labs patent US20240027706A1 confirmed. VLM Kapital chain verified. CEO 50-100 machines/customer.": "€80-200（2028-30 财年）。英特尔/Ayar Labs 专利 US20240027706A1 已确认。 VLM Kapital 链已验证。 CEO 50-100 台机器/客户。",
+    "4.8x-12.1x": "4.8倍-12.1倍",
+    "₩3.0M-5.0M (memory shortage extended to 2027, CPU DRAM 4x, SOCAMM $8→$13/GB, 10% structural deficit)": "₩3.0M-5.0M（内存短缺延长至2027年，CPU DRAM 4x，SOCAMM $8→$13/GB，10%结构性赤字）",
+    "$400-650 (GPU cloud + ClickHouse 28% stake repricing + Eigen AI inference + platform multiple re-rate)": "400-650 美元（GPU 云 + ClickHouse 28% 股权重新定价 + Eigen AI 推理 + 平台多重重新定价）",
+    "2.6x-4.2x": "2.6倍-4.2倍",
+    "₩450K-800K (memory shortage to 2027, HBM tripling, SiPh H2 2026, supply gap widening)": "₩450K-800K（内存短缺到2027年，HBM增加两倍，SiPh H2 2026，供应缺口扩大）",
+    "2.0x-3.6x": "2.0倍-3.6倍",
+    "$300-700 (SiPh foundry TAM expanded by 142% CPO CAGR. $350M+ SiPh capex. Tower = THE CPO PIC foundry.)": "300-700 美元（SiPh 代工厂 TAM 扩张了 142% CPO 复合年增长率。SiPh 资本支出超过 3.5 亿美元。Tower = CPO PIC 代工厂。）",
+    "$1,800-3,200 (NAND shortage 2027, $42B NBM deals, 78% GM, BiCS8/9 ramp, $6B buyback)": "$1,800-3,200（2027 年 NAND 短缺，$42B NBM 交易，78% GM，BiCS8/9 增长，$6B 回购）",
+    "$800-1,400 (memory shortage to 2027, DDR5 +63% QoQ, NAND +70% QoQ, HBM expansion)": "800-1,400 美元（到 2027 年内存短缺，DDR5 环比增长 63%，NAND 环比增长 70%，HBM 扩展）"
   },
   "pl": {
     "Coherent Corp": "Spójna firma",

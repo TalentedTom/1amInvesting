@@ -1,13 +1,13 @@
 # SNDK — SanDisk Corporation | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 58 | Base 65% (39/60) | Entry 48 (19/40)
-**Price at Analysis:** $989.90
-**Ceiling:** $1,500-$2,700
+**Date:** May 2, 2026 (RESCORED — NAND shortage extended, Q3 beat, $42B NBM deals)
+**Framework Version:** v3.6.5
+**Score:** 56 | Base 65% (39/60) | Entry 43 (17/40)
+**Price at Analysis:** $1,187
+**Ceiling:** $1,800-$3,200 (NAND shortage to 2027, $42B NBM deals, 78% GM, BiCS8/9, $6B buyback)
 **Upside Ratio:** 1.5x-2.7x
-**Market Cap:** ~$58B
-**Q2 FY2026 Revenue:** $3.03B (+61% YoY) | EPS: $6.20
-**Earnings:** April 30, 2026 🔥 (5 days away)
+**Market Cap:** ~$162B
+**Q3 FY2026 Revenue:** $5.95B (+251% YoY) | GM: 78.4% | EPS: $23.41 (beat $14.45 est)
+**Q4 Guide:** $7.75-8.25B, EPS $30-33
 
 ---
 
@@ -65,28 +65,52 @@ This is NET NEW demand that didn't exist before. NVIDIA literally created an ent
 | Risks | -2 | NAND is cyclical (-1). Oligopoly pricing could break (-1). |
 | **Base** | **38/60 (63%)** | |
 
-## Ceiling
+## Ceiling (Revised May 2 — Q3 Beat + NAND Shortage Extended to 2027)
 
 ```
-USER'S FIRST-PRINCIPLES EPS ESTIMATES (above street):
-  FY2027E EPS: $98 (street) → $129-$179 (user's model, 31-83% above)
-  At $989.90: P/E = 10.1x (street) / 7.7x (user low) / 5.5x (user high)
-  THIS IS CHEAP for a NAND oligopoly in a supercycle.
+Q3 FY2026 RESULTS (April 30 — MASSIVE BEAT):
+  Revenue: $5.95B (+251% YoY) — crushed $4.69B estimate
+  GAAP Net Income: $3.62B (from LOSSES a year ago)
+  Non-GAAP EPS: $23.41 (beat $14.45 estimate by 62%)
+  GAAP Gross Margin: 78.4% (from 22.5% prior year)
+  Datacenter revenue: +233% SEQUENTIAL
+  Q4 guide: $7.75-8.25B, EPS $30-33
+  Zero debt, $3.74B cash, $6B buyback authorized
+
+NEW BUSINESS MODEL AGREEMENTS:
+  5 NBM deals signed, $42B MINIMUM revenue lifetime
+  $11B+ financial guarantees (take-or-pay components)
+  Longest deal: 5 years
+  Currently negotiating with "several" additional customers
+  NBM covers >1/3 of FY27 bits
+  "Buy out the store before the storm" — Goldman Sachs
+
+NAND SHORTAGE EXTENSION:
+  NAND prices: +70% QoQ (Q1→Q2 contract pricing)
+  Q2 contract pricing: forecasted +70-75% additional
+  Industry-wide: 2026 NAND capacity SOLD OUT
+  Samsung shortening contracts (pricing power to suppliers)
+  HBF co-development with SK Hynix = new demand tier for 2028+
+
+REVISED EPS TRAJECTORY:
+  FY2026E EPS: ~$80-90 (Q3 $23 + Q4 $30-33 + H1 ~$30)
+  FY2027E EPS: $130-200 (NBM pricing locks + NAND shortage sustains)
+  FY2028E EPS: $150-220 (BiCS9 ramp + HBF optionality)
 
 VALUATION AT RE-RATE MULTIPLES:
-  $98 EPS × 15x = $1,470 | × 20x = $1,960
-  $129 EPS × 15x = $1,935 | × 20x = $2,580
-  $179 EPS × 15x = $2,685 | × 20x = $3,580
+  $150 EPS × 12x = $1,800 (floor — memory discount multiple)
+  $180 EPS × 15x = $2,700 (base — structural growth recognition)
+  $200 EPS × 16x = $3,200 (bull — NBM de-risks cyclicality premium)
 
-HBF CATALYST: If NVIDIA announces HBF-compatible GPU (GTC 2027 or earlier),
-user expects 50-80% move. $989.90 × 1.65 = $1,633 on announcement alone.
-
-CEILING: $1,500-$2,700
+CEILING: $1,800-$3,200 (raised from $1,500-$2,700)
+  LOW: NAND pricing sustains through 2027 + moderate NBM execution
+  MID: Full NBM portfolio + NAND shortage extends + BiCS9 ramp
+  HIGH: HBF NVIDIA announcement catalyst + governance re-rate
 ```
 
-**Entry:** $989.90 vs midpoint $2,100 = 2.12x → **Entry 48**
+**Entry:** $1,187 vs midpoint $2,500 = 2.11x → **Entry 17/40**
 
-## Total: (65 × 0.6) + (48 × 0.4) = 39 + 19 = 58
+## Total: (65 × 0.6) + (43 × 0.4) = 39 + 17 = 56
 
 ## Why $693 Compresses the Score
 

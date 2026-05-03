@@ -1,11 +1,11 @@
 # TSEM — Tower Semiconductor | Deep Dive
-**Date:** April 26, 2026 (RESCORED)
-**Framework Version:** v3.6.4
-**Score:** 68 WL 🔒 | Base 70% (42/60) | Entry 65 (26/40)
-**Price at Analysis:** $200.54
-**Ceiling:** $250-$600 (2028 model already priced; score requires 2030 view)
-**Upside Ratio:** 1.2x-3.0x
-**Market Cap:** ~$22B
+**Date:** May 2, 2026 (RESCORED — 142% CPO CAGR TAM expansion)
+**Framework Version:** v3.6.5
+**Score:** 62 WL 🔒 | Base 70% (42/60) | Entry 50 (20/40)
+**Price at Analysis:** $218.01
+**Ceiling:** $300-$700 (SiPh foundry TAM expanded by 142% CPO CAGR)
+**Upside Ratio:** 1.4x-3.2x
+**Market Cap:** ~$26.3B
 **FY2025 Revenue:** ~$1.57B | SiPh: $228M (+115%)
 **2028 Target:** $2.84B revenue, $750M net profit
 **Earnings:** May 13, 2026 🔥
@@ -73,28 +73,69 @@ Soitec (SOI.PA) → Photonics-SOI substrate
 | Risks | -2 | TSMC COUPE competition (-1). GM 23% needs to reach 40% (-1). |
 | **Base** | **44/60 (73%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — Forward TAM Math (Revised May 2 — 142% CPO CAGR Expansion)
 
 ```
-MANAGEMENT 2028 MODEL (already partially priced):
+MANAGEMENT 2028 MODEL (largely priced at $218):
   $2.84B revenue, 39-40% GM, $750M NP
-  At 30x NP = $22.5B → ~$208 (current price = ~$200!)
-  The 2028 model IS the current stock price.
+  At 30x NP = $22.5B → ~$208 (current price = $218, ABOVE 2028 model)
+  The 2028 model IS the current stock price. Score requires BEYOND 2028.
 
-BEYOND 2028 (required for framework-grade asymmetry):
-  $3.5B, 35% OP = $1.23B × 30x = $36.8B → ~$340
+WHY THE TAM CHANGED — 142% CPO CAGR (May 2, 2026):
+  CPO market confirmed at 142% CAGR 2026-2030 (LightCounting/industry)
+  CPO TAM: ~$50M (2026) → $6.0B (2030) = 34x in 4 years
+  Scale-up CPO (GPU-to-GPU): $3.8B by 2030 = 63% of total
+  Tower Semiconductor is THE SiPh PIC foundry for CPO (~85% share)
+  Every CPO module needs a SiPh PIC → every PIC is fabbed at Tower
+
+TOWER SiPh REVENUE TRAJECTORY (REVISED):
+  FY2025: $228M SiPh (+115% YoY) — already confirmed
+  FY2026: $350-450M SiPh (capacity expansion + 1.6T demand)
+  FY2027: $500-700M SiPh (CPO production begins at scale)
+  FY2028: $700-1,000M SiPh (CPO 142% CAGR hits Tower's fabs)
+  FY2029: $1,000-1,500M SiPh (scale-up CPO dominant)
+  FY2030: $1,200-2,000M SiPh (full CPO maturity, 85% share of foundry)
+  
+  Prior model: SiPh reaching ~$500-700M by 2028
+  New model: SiPh reaching $700-1,000M by 2028, $1.2-2.0B by 2030
+  Delta: +$200-500M by 2028, +$700-1,300M by 2030
+
+TOWER TOTAL REVENUE TRAJECTORY (SiPh + RF + Power + Analog):
+  FY2028 (mgmt model): $2.84B (SiPh ~$700-1,000M + other ~$1.84-2.14B)
+  FY2029: $3.2-4.0B (SiPh accelerating, other segments stable growth)
+  FY2030: $3.8-5.0B (SiPh $1.2-2.0B becomes majority of revenue)
+
+CAPACITY CONFIRMATION:
+  $350M+ SiPh capex committed (AP7 expansion)
+  AP7: 15K wafers/month starting H2 2027
+  >70% capacity prepaid through 2028 via customer commitments
+  GFS targeting $1B+ SiPh run rate (competition, but grows total pie)
+  Samsung entering SiPh (grows pie, Tower keeps qualification lead)
+  Soitec Photonics-SOI wafers approaching €100M (Tower's input substrate)
+
+EARNINGS MODEL — BEYOND 2028 (where score asymmetry lives):
+  $3.5B, 35% OP = $1.23B × 25x = $30.6B → ~$280
+  $4.0B, 36% OP = $1.44B × 28x = $40.3B → ~$370
   $4.5B, 38% OP = $1.71B × 30x = $51.3B → ~$475
-  Bull $6B, 40% OP = $2.4B × 30x = $72B → ~$665
+  $5.0B, 40% OP = $2.00B × 30x = $60.0B → ~$555
+  Bull $5.5B, 40% OP = $2.20B × 32x = $70.4B → ~$650
 
-CEILING: $250-$600
-  LOW: 2028 model executes, moderate growth beyond
-  HIGH: SiPh foundry becomes as essential as advanced logic foundry
+CEILING: $300-$700 (raised from $250-600)
+  LOW ($300): 2028 model executes + moderate SiPh growth beyond
+  MID ($500): SiPh reaches $1.2B by 2030, Tower maintains 80%+ share
+  HIGH ($700): SiPh foundry becomes as essential as advanced logic foundry,
+               CPO 142% CAGR fully flows through Tower's fabs
+               
+KEY CHANGE vs PRIOR MODEL:
+  Prior: CPO was a "2028+ maybe" — distant, heavily discounted
+  Now: CPO at 142% CAGR confirmed, production starting 2026-2027
+  Impact: SiPh revenue trajectory steepened, 2030 revenue $1.2-2.0B vs $500-700M
+  Entry improves because ceiling HIGH moved from $600→$700
 ```
 
-**Entry:** $200.54 vs midpoint $425 = 2.12x → Entry 48
-**With extended 2030 view, midpoint $525:** Entry 58
+**Entry:** $218.01 vs midpoint $500 = 2.29x → Entry 20/40
 
-## Total: (73 × 0.6) + (58 × 0.4) = 44 + 23 = 67 WL
+## Total: (70 × 0.6) + (50 × 0.4) = 42 + 20 = 62 WL
 
 ## The 2028 Model Is Priced — What's Beyond?
 
@@ -124,8 +165,9 @@ TSMC entering SiPh production with COUPE in H2 2026 is the biggest risk. If TSMC
 
 ## Verdict
 
-68 WL 🔒. The dominant SiPh foundry with ~85% share, $920M expansion, and >70% capacity prepaid. NVIDIA actively pushing CPO deployment = PIC wafer demand pulled forward 6-12 months. AP7 15K wafers/month starting H2 2027 confirmed. The 2028 management model ($2.84B/$750M NP) is credible and largely priced. Framework score requires looking beyond 2028 into a structural SiPh foundry monopoly. TSMC COUPE is the key competitive risk. May 13 earnings report = same day as COHR and SIVE, creating a triple confirmation event for the photonics thesis.
+62 WL 🔒. The dominant SiPh foundry with ~85% share, $350M+ expansion, and >70% capacity prepaid. CPO market at 142% CAGR 2026-2030 means Tower's SiPh revenue trajectory is steeper than prior model — potentially $1.2-2.0B SiPh revenue by 2030 vs $500-700M previously modeled. Ceiling raised $250-600→$300-700. However, stock at $218 has ALREADY priced the 2028 management model ($2.84B/$750M NP at 30x = $208). Entry constrains score — asymmetry only exists in the 2029-2030 view where 142% CPO CAGR steepens the SiPh ramp beyond what the market currently models. TSMC COUPE remains key competitive risk. May 13 earnings = CPO pipeline visibility.
 
 ## Score Change Log
 - Apr 24, 2026: 67 WL (initial deep dive)
-- **Apr 26, 2026: 68 WL** (NVIDIA CPO pull-forward. PIC demand timeline accelerated. AP7 ramp confirmed.)
+- Apr 26, 2026: 68 WL (NVIDIA CPO pull-forward. PIC demand timeline accelerated. AP7 ramp confirmed.)
+- **May 2, 2026: 62 WL** (Ceiling raised $250-600→$300-700 on 142% CPO CAGR TAM expansion. SiPh foundry revenue trajectory steepened: $1.2-2.0B by 2030. However, stock ran from $200→$218 (+9%), compressing entry. Score NET DOWN because entry compression > ceiling expansion at current price. The TAM is larger but the stock already partly prices it.)

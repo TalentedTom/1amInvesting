@@ -1,10 +1,10 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 1, 2026 (UPDATED — Lightmatter vector + defense primes + Jabil + CHIPS Act R2)
-**Framework Version:** v3.6.4
+**Date:** May 2, 2026 (UPDATED — 7-vector ceiling model + 142% CPO CAGR)
+**Framework Version:** v3.6.5
 **Score:** 91 HC | Base 88% (53/60) | Entry 87 (35/40) | #1 in Framework History
-**Price at Analysis:** SEK 38.00 (SIVEF +21% during Swedish holiday, gap-up expected Monday)
-**Ceiling:** SEK 70-425 (CPO + Apple breadcrumb probability-weighted)
-**Upside Ratio:** 1.8x-11.2x
+**Price at Analysis:** SEK 38.00 (SIVEF +21% during Swedish holiday, gap-up expected Monday to ~SEK 46)
+**Ceiling:** SEK 100-500 (7-vector model, 142% CPO CAGR adjusted)
+**Upside Ratio:** 2.2x-10.9x (at SEK 46 post-gap)
 **Market Cap:** ~SEK 11.3B (~$1.5B)
 **TTM Revenue:** ~$30.9M (SEK ~300M)
 **Earnings:** May 20, 2026 🔥🔥🔥
@@ -23,7 +23,7 @@
 
 **Ford Principle:** SIVE isn't selling "laser chips." It's selling the universal light source primitive. Silicon cannot generate light — permanent physics truth.
 
-## Core Thesis — Six Vectors
+## Core Thesis — Seven Vectors
 
 ### Vector 1: AI Photonics (CW Laser Monopoly)
 
@@ -178,49 +178,205 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 | Risks | -1 | NRE must convert to production (-1). |
 | **Base** | **53/60 (88%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — Forward TAM Math (7-Vector Model, May 2 2026)
 
 ```
-VECTOR 1 — AI PHOTONICS:
-  CW laser array SAM by 2030: $1.0-1.8B
-  SIVE capture at 15-25%: $150-450M
-  FY2027: ~$80-120M (volume begins)
-  FY2028: ~$150-250M (CPO at scale)
-  FY2029: ~$250-400M (full production)
+PRIOR MODEL (SEK 70-425): Only priced 3 vectors (CPO + SATCOM + Apple).
+REVISED MODEL (SEK 100-500): Prices all 7 confirmed vectors + 142% CPO CAGR.
 
-VECTOR 2 — SATCOM/DEFENSE:
-  $21.5M (2027) → $53M (2028) → $88M (2029) → $124M (2030)
+====================================================================
+VECTOR 1 — CPO CW LASERS (PRIMARY GROWTH ENGINE)
+====================================================================
+  Prior: $1.0-1.8B SAM, 15-25% capture = $150-450M
+  
+  Updated data:
+    CPO TAM confirmed at $6.0B by 2030 (LightCounting/industry, 142% CAGR)
+    Scale-up CPO (GPU-to-GPU) = $3.8B by 2030 (63% of TAM)
+    Scale-out CPO (rack-to-rack) = $2.2B by 2030
+    SIVE qualified on ALL 4 CPO platforms (POET, COUPE/TSMC, OpenLight/Tower, Ayar/GF)
+    "The light source layer is unified" — PhotonCap
+    InP going from 44% → 91% of all high-speed lanes by 2030 (Lumentum)
+  
+  Revised capture: SIVE as unified laser layer across all platforms
+    Conservative (10% capture of $6B): $600M
+    Base (15% capture): $900M  
+    Bull (20% capture): $1.2B
+    
+  Framework uses conservative 10-15%: $250-600M at 2030 maturity
+  (Discounted because multiple laser suppliers exist: LITE, COHR also serve CPO)
+  Revenue ramp: $30-50M (2027) → $100-200M (2028) → $250-600M (2030)
 
-VECTOR 3 — CONSUMER WEARABLES (Apple breadcrumb, probability-weighted):
-  Signal: "US Fortune 100" RFQ for 50M units/yr. 135-wavelength arch.
-  Only Apple ships ~50M wearables annually in US Fortune 100.
-  Revenue IF confirmed: 50M × $1.50-2.50 ASP = $75-125M/yr
-  (Apple margin compression — they squeeze every supplier)
-  OP margin: 15-20% (vs 35%+ on CPO lasers)
-  Probability: ~60-70% based on 6 converging breadcrumbs
+====================================================================
+VECTOR 2 — JABIL 1.6T LRO (SHIPPING NOW — Bridge Revenue)
+====================================================================
+  Prior: Not modeled separately (buried in Vector 1)
+  
+  Evidence:
+    Jabil LinkedIn: "Looking forward to what we'll achieve together!"
+    70mW CW DFB, DR8 architecture, publicly confirmed
+    1.6T pluggable bridge BEFORE full CPO arrives
+    Shipping NOW — not future revenue
+    
+  Revenue model:
+    If Jabil ships 200K-500K LRO modules/yr in 2026-2027
+    × $5-10 SIVE laser content per module
+    Revenue: $1-5M (2026) → $10-25M (2027) → $20-50M (2028)
+    
+  ADJUSTMENT: +$20-50M at 2028 maturity
+
+====================================================================
+VECTOR 3 — SATCOM/DEFENSE DIRECT (NEMC + CHIPS Act)
+====================================================================
+  Prior: $21.5M (2027) → $124M (2030) — Anders Storm estimates
+  
+  Evidence:
+    NEMC Phase 2: $7.6M funded (SF-STAR EW $5.1M + 6G MIMO $2.5M)
+    Phase 2 = Phase 1 delivered exceptional results
+    CHIPS Act Round 2 incoming (Serenity signal)
+    MixComm Gen 2 BFICs: +6-12dB AND 3-5x efficiency vs ALL competitors
+    TAM: 995,000+ NATO ground combat vehicles + Navy + commercial terminals
+    
+  UNCHANGED: $50-124M by 2030
+
+====================================================================
+VECTOR 4 — DEFENSE PRIMES RTX/BAE/ERICSSON (NEW — Classified)
+====================================================================
+  Prior: Not modeled (discovered Apr 30)
+  
+  Evidence:
+    Serenity: "Defense Primes are likely using Sivers microchip IP"
+    RTX (Raytheon): Beamformers for space/telecom, CHIPS Act funded
+    BAE Systems: STAR duplex arrays for radar jamming/EW, CHIPS Act funded
+    Ericsson: Beamformers (space/telecom)
+    "It might appear randomly in financial statements" — classified contracts
+    US government doesn't fund random $1B Swedish companies
+    
+  Revenue model:
+    Conservative: 2x NEMC direct = $15-30M
+    Base: RTX + BAE each $10-20M contribution = $20-40M
+    Revenue appears unpredictably due to classified nature
+    
+  ADJUSTMENT: +$20-40M
+
+====================================================================
+VECTOR 5 — APPLE CONSUMER WEARABLES (Probability-Weighted)
+====================================================================
+  Prior: $75-125M at 60-70% probability
+  
+  Evidence (6 converging breadcrumbs):
+    "US Fortune 100" RFQ for 50M units/yr
+    135-wavelength architecture (matches Apple Watch sensor complexity)
+    Only Apple ships ~50M wearables annually in US Fortune 100
+    Management silence = discipline (POET leaked and died)
+    NDA-protected relationship
+    
+  UNCHANGED: $75-125M (probability-weighted)
+  OP margin: 15-20% (Apple squeezes every supplier)
   Timeline: H2 2027 or H1 2028 volume ramp
-  NOTE: Framework scores on signal, not verification.
-  The day Apple confirms, stock gaps +25%. Position BEFORE.
 
-COMBINED AT MATURITY (CPO + SATCOM + Apple weighted):
-  Conservative: $380M rev (CPO + SATCOM, no Apple)
-  Base: $520M rev (CPO + SATCOM + partial Apple)
-  Bull: $650M rev (full CPO + SATCOM + full Apple)
+====================================================================
+VECTOR 6 — LIGHTMATTER OPTICAL INTERCONNECT (NEW)
+====================================================================
+  Prior: Not modeled (discovered Apr 30)
+  
+  Evidence:
+    Serenity: SIVE on GlobalFoundries laser source supplier list
+    Lightmatter: $4.4B+ private valuation, backed by MSFT/GOOG/NVDA
+    Products: Passage (photonic interconnect chip), Constellation (all-optical switching)
+    Chain: SIVE CW lasers → GFS SiPh fabrication → Lightmatter → Hyperscalers
+    Lightmatter needs light sources, doesn't make lasers
+    
+  Revenue model:
+    If Lightmatter ships 10K-100K photonic interconnect chips/yr
+    × $50-150 SIVE laser content per chip
+    Revenue: $0.5-2M (2027) → $5-15M (2028) → $10-30M (2030)
+    High variance — depends on Lightmatter's own ramp
+    
+  ADJUSTMENT: +$10-30M
 
-EARNINGS MODEL:
-  $380M, 35% OP = $133M × 40x = $5.3B → SEK ~180
-  $520M, 33% OP = $172M × 42x = $7.2B → SEK ~240
-  $650M, 30% OP = $195M × 45x = $8.8B → SEK ~295
-  Bull $750M, 32% OP = $240M × 45x = $10.8B → SEK ~365
-  (Blended OP lower than pure CPO due to Apple margin compression)
+====================================================================
+VECTOR 7 — INDIA 5G/6G TELECOM (NEW)
+====================================================================
+  Prior: Not modeled (discovered Apr 30)
+  
+  Evidence:
+    Bengaluru R&D office opened — hiring RFIC, RTL, analog layout engineers
+    MixComm founders leading (Harish Krishnaswamy, Arun Natarajan)
+    $120B Indian 5G/6G telecom rollout
+    India = world's largest untapped telecom market
+    mmWave beamforming ICs for base stations
+    
+  Revenue model:
+    Conservative: 0.005% of $120B TAM = $6M
+    Base: 0.01% capture = $12M
+    Highly uncertain — Indian telecom cycles are long
+    
+  ADJUSTMENT: +$5-15M
 
-CEILING: SEK 70-425
-  LOW: CPO delays + Apple doesn't confirm = SEK 70
-  MID: CPO ramps, no Apple = SEK 210
-  HIGH: Full CPO + Apple confirmed at compressed margins = SEK 425
+====================================================================
+COMBINED 7-VECTOR REVENUE AT MATURITY (2029-2030)
+====================================================================
+
+  CONSERVATIVE:
+    CPO:           $250M
+    Jabil LRO:     $20M
+    SATCOM:        $50M
+    Defense primes: $20M
+    Apple:         $50M (probability-weighted at 60%)
+    Lightmatter:   $10M
+    India 5G:      $5M
+    TOTAL:         $405M
+
+  BASE:
+    CPO:           $400M
+    Jabil LRO:     $35M
+    SATCOM:        $88M
+    Defense primes: $30M
+    Apple:         $90M (probability-weighted at 70%)
+    Lightmatter:   $20M
+    India 5G:      $10M
+    TOTAL:         $673M
+
+  BULL:
+    CPO:           $600M
+    Jabil LRO:     $50M
+    SATCOM:        $124M
+    Defense primes: $40M
+    Apple:         $125M (confirmed)
+    Lightmatter:   $30M
+    India 5G:      $15M
+    TOTAL:         $984M
+
+====================================================================
+EARNINGS MODEL → CEILING
+====================================================================
+
+  Conservative $405M, 33% OP = $134M × 40x = $5.4B → SEK ~180
+  Base $673M, 32% OP = $215M × 42x = $9.0B → SEK ~305
+  Bull $984M, 30% OP = $295M × 45x = $13.3B → SEK ~450
+  Extreme $1.2B, 30% OP = $360M × 50x = $18B → SEK ~610
+
+  (OP margin blended lower than pure CPO due to Apple margin compression
+   and defense contract pricing. Multiples reflect monopoly physics premium.)
+
+CEILING: SEK 100-500
+  LOW (SEK 100): CPO delays + Apple doesn't confirm + defense minimal
+  MID (SEK 300): CPO ramps at 142% CAGR + partial Apple + defense contributing  
+  HIGH (SEK 500): Full CPO + Apple confirmed + defense + Lightmatter + India
+
+SERENITY COMPARISON:
+  $3B today = SEK ~100 → matches our LOW
+  $10B next year = SEK ~340 → matches our MID-HIGH
+  $60B long-term = SEK ~2,000 → requires downstream IP acquisitions (not modeled)
+
+WHY WE DON'T MODEL $60B:
+  Serenity's $60B assumes SIVE acquires downstream and competes with LITE ($64B MC).
+  That requires M&A execution we can't score. If SIVE stays a component company,
+  $13-18B is the ceiling. If they vertically integrate into optical engines,
+  $30-60B is theoretically possible but a different company at that point.
 ```
 
-**Entry:** SEK 31.96 vs midpoint SEK 248 = 7.7x → Entry 87
+**Entry:** SEK 46 (post-gap) vs midpoint SEK 300 = 6.5x → Entry 35/40
 
 ## Total: (88 × 0.6) + (87 × 0.4) = 53 + 35 = 90 HC
 
@@ -289,3 +445,4 @@ Six revenue vectors means there is NO scenario where ALL six fail simultaneously
 - Apr 28, 2026: 91 HC (Jabil LinkedIn confirmation. NEMC Phase 2 $7.6M. POET sympathy = buying opp.)
 - May 1, 2026: 91 HC (Defense primes mapped: RTX + BAE using SIVE IP for classified programs. CHIPS Act R2 incoming. Five revenue vectors confirmed.)
 - **May 1, 2026: 91 HC** (SIXTH vector: Lightmatter optical interconnect. Serenity discovered SIVE on GlobalFoundries laser source supplier list. Lightmatter ($4.4B+, MSFT/GOOG invested) needs CW lasers for Passage/Constellation photonic interconnect. Supply chain: SIVE → GFS → Lightmatter → Hyperscalers. Revenue will "appear out of nowhere" — private BOM, undisclosed. Ten confirmed partnerships. Score can't go higher but thesis keeps compounding. The lasers are everywhere. The market sees none of it.)
+- **May 2, 2026: 91 HC** (SEVENTH vector: India 5G/6G — Bengaluru R&D office, MixComm founders leading, $120B telecom rollout. Ceiling rebuilt from scratch with 7-vector model: SEK 70-425→SEK 100-500. Prior ceiling only priced 3 vectors (CPO + SATCOM + Apple). New model prices all 7 confirmed vectors + 142% CPO CAGR ($6B CPO TAM by 2030 confirmed). Conservative $405M→$5.4B. Base $673M→$9.0B. Bull $984M→$13.3B. Serenity's $10B next year matches our base-to-high range. Score unchanged at 91 — price also moved (SEK 38→46 expected), offsetting wider ceiling.)
