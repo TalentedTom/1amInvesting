@@ -109,3 +109,4 @@ The "20-30% short" data point is the single most important supply chain confirma
 ## Score Change Log
 - Apr 22, 2026: 69 WL (initial deep dive)
 - **Apr 26, 2026: 71 WL** (OFC 2026 data: 8x still 20-30% short, 5th fab $5B capacity, multi-yr backlog, 25%→60% AI mix. Base 80%→78% on recalibrated scoring. Entry 53→60 reflecting $63B MC.)
+- **May 2, 2026: 71 WL** (142% CPO CAGR confirmed — Lumentum slides show optical AI TAM $18B→$90B+ at ~40% CAGR. InP share of AI datacenter lanes: 44% (2022)→79% (2025)→91% (2030). LITE is 20-30% short on supply after 8x expansion. LightCounting: "demand exceeding supply by 30%." But LightCounting also warns pluggable cycle correction coming — "shortages should be going away by end of 2026" and "double ordering goes away when capacity adds." LITE's pluggable dominance is Wave 2 (peaking), not Wave 3 (CPO, accelerating). Score unchanged — $64B MC with heavy analyst coverage limits asymmetry.)

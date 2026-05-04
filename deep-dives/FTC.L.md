@@ -1,11 +1,11 @@
 # FTC.L — Filtronic PLC | Deep Dive
-**Date:** April 26, 2026 (RESCORED)
-**Framework Version:** v3.6.4
-**Score:** 71 WL 🔒 | Base 78% (47/60) | Entry 60 (24/40)
-**Price at Analysis:** GBp 296 (Col 9)
-**Ceiling:** GBp 750-1,400 (2028-33 blended, V-band discounted 20%/yr per Rule 16)
-**Upside Ratio:** 2.5x-4.7x
-**Market Cap:** ~£620M
+**Date:** May 2, 2026 (RESCORED — FCC 7x satellite capacity + deep dive article)
+**Framework Version:** v3.6.5
+**Score:** 76 HC 🔒 | Base 78% (47/60) | Entry 73 (29/40) | **Owned ✓**
+**Price at Analysis:** GBp 287 (pre-FCC vote, +30% Friday, Monday gap expected)
+**Ceiling:** GBp 900-1,600 (2028-33 blended, V-band discounted 15%/yr)
+**Upside Ratio:** 3.1x-5.6x
+**Market Cap:** ~£640M
 
 ---
 
@@ -112,7 +112,8 @@ RULE 16 BLENDED CEILING:
 - Apr 26, 2026: 76 HC (V-band TAM expansion, undiscounted — ERROR)
 - Apr 26, 2026: 70 WL (Entry compressed to near-term only — OVERCORRECTION)
 - **Apr 26, 2026: 71 WL** (Rule 16 blended ceiling with 20%/yr discount. Single value. Correct.)
+- **May 2, 2026: 76 HC** (Ceiling raised GBp 750-1,400→GBp 900-1,600. FCC voted 7x increase in high-speed satellite broadband capacity = REGULATORY DEMAND CREATION for E-band amplifiers. Stock +30% Friday after London close, Monday gap expected. Full 10,000-word deep dive article confirmed: only commercial 50-100W GaN SSPA at E/V-band, physics-based thermal management moat, SpaceX ground station supply. TAM: V-band backhaul $1.32B→$8.85B by 2033 (21.4% CAGR), mmWave equipment $7.6B by 2030. Government-legislated demand floor alongside DPA and CHIPS Act positions.)
 
 ## Verdict
 
-71 WL 🔒. HC-grade thesis (Base 78%) compressed by timeline (Entry 60). E-band monopoly confirmed and shipping. V-band consumer terminal TAM is the largest optionality in the portfolio — tens of millions of units vs thousands — but 6 years out at 26% discount retention. SpaceX capacity lock-out + 15% warrant + Golden Dome = deepest customer alignment outside NVIDIA-LITE. Highest-scoring unowned position. Re-run when V-band prototype ships.
+76 HC 🔒 — Owned. The FCC 7x satellite broadband vote is a REGULATORY DEMAND CATALYST — not a forecast, a government decision. Every SpaceX ground station that wants to USE the new 7x capacity needs Filtronic's E-band amplifiers. Physics monopoly confirmed by exhaustive deep dive: only manufacturer achieving 50-100W GaN SSPA at E/V-band for commercial mega-constellations. Thermal management at 15W/mm² + space qualification = 5-7 year barrier to entry. SpaceX capacity lock-out + 15% warrant + Golden Dome = deepest customer alignment. TAM expanding to $8.85B V-band backhaul by 2033.

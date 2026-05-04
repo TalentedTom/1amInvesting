@@ -92,7 +92,7 @@ window.PORTFOLIO_DATA = {
             "Base": 78,
             "Entry": 73,
             "Rating": "HC — E-band monopoly + V-band discounted 15%/yr. Blended 4.24x.",
-            "Port": "✓",
+            "Port": "",
             "Current Price": "GBp 287",
             "Ceiling Target": "GBp 900-1,600 (2028-33 blended, V-band discounted 15%/yr)",
             "Upside": "3.1x-5.5x",
@@ -232,7 +232,28 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "HBM #1 + NVIDIA"
         },
         {
-            "Rank": 12,
+            "Rank": 10,
+            "Ticker": "4977.TW",
+            "Name": "PCL Technologies (眾達-KY)",
+            "Total": 73,
+            "Base": 72,
+            "Entry": 75,
+            "Rating": "WL — Broadcom's primary ELSFP assembly partner for CPO. Factory co-located Penang. 32 ELSFP per switch = massive multiplier. Goldman Exhibit 21 dual-listed. Serenity #3 rocket.",
+            "Port": "✓",
+            "Current Price": "TWD 217.50",
+            "Ceiling Target": "TWD 500-1,500 (CPO ELSFP volume ramp, Broadcom Bailey/Davisson platform, 32x multiplier)",
+            "Upside": "2.3x-6.9x",
+            "Position Type": "🔒 CHOKEPOINT\nArchitectural: Broadcom exclusive ELSFP — 1-to-32 multiplier for CPO. 2027-2032+",
+            "Revenue Explosion": "⏳ CPO REVENUE INFLECTION PENDING\nBroadcom EXCLUSIVE ELSFP supplier (獨家供應)\n1-to-32 multiplier: each CPO switch = 32 ELSFP\n51.2T Bailly CPO approaching mass production\nCPO saves 65% power vs pluggable\nFY2027E revenue +68% (law firm est)\nGross margin target 30% (from 24.7%)\nWait for Q1/Q2 2026 revenue turn YoY positive\nOr pullback to TWD 150-170 for better entry\nBroadcom next-gen 102.4T Davisson = more ELSFP",
+            "Updated": "May 3",
+            "Key Thesis": "DB1 CPO. BROADCOM EXCLUSIVE ELSFP SUPPLIER. 1-to-32 multiplier: each CPO system = 32 ELSFP modules. 4 years co-development with Broadcom. TH5 Bailly 51.2T CPO = world's first, entering production 2026. TH6 Davisson 102.4T next. CPO saves 65% power vs pluggable. FY2025: TWD 1.075B, EPS 4.48. Jan-Feb 2026 -26.5% (pre-CPO trough). FY2027 rev +68% anticipated (CPO full ramp). GM target 30%+. Chairman: 'exclusive supplier for multiple high-end products, direct supply.' Extreme Broadcom single-customer concentration risk. Zero English coverage. Alpha in Chinese-language sources.",
+            "Market Cap": "TWD 17.40B",
+            "Allocation Calendar": "WAIT — DO NOT BUILD YET\nRevenue hasn't inflected (Jan -43% YoY)\nSingle customer risk (Broadcom)\nTSMC COUPE transition uncertainty\nStock already ran TWD 75→200\nWhen CPO revenue appears → upgrade to HC\nEntry: TWD 150-170 or revenue inflection\nSize: 1-2% when confirmed\nTaiwanese pricing culture ✅\nIBKR accessible ✅",
+            "IR Check": "❌ NEEDS DEEP DIVE\nBroadcom next-gen (Davisson 102.4T) ELSFP confirmation\nTSMC COUPE impact on ELSFP demand\nQ1/Q2 2026 revenue trajectory\nELSFP mass production timeline\nCompetitor emergence risk\nMargin expansion path to 30%",
+            "Supercycle": "DB1 Photonics/CPO"
+        },
+        {
+            "Rank": 13,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "Total": 71,
@@ -274,7 +295,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "AI Compute"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 68,
@@ -295,7 +316,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB8 Defense Supercycle — Underwater Autonomous Systems"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "Total": 68,
@@ -316,7 +337,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 SiPh Substrate"
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "Total": 67,
@@ -337,20 +358,20 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "Foundry+Memory+China"
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
-            "Total": 66,
+            "Total": 68,
             "Base": 72,
             "Entry": 58,
             "Rating": "WL (Compound Semi TSMC, >50% GaAs, adding InP)",
             "Port": "",
             "Current Price": "TWD 536",
-            "Ceiling Target": "TWD 1,000-2,000",
-            "Upside": "1.9x-3.7x",
+            "Ceiling Target": "TWD 1,200-2,500 (EPS +30x YoY, utilization 60% = massive operating leverage, InP expanding by multiples, AI datacenter doubling)",
+            "Upside": "2.2x-4.7x",
             "Position Type": "🔒 CHOKEPOINT\nCapital+Qual: Only pure-play III-V foundry. SIVE qualifying InP CW at Win Semi. 2026-2032+",
             "Revenue Explosion": "📈 GaAs FOUNDRY CPO PULL-THROUGH\nTrigger: CPO-related GaAs orders\nTiming: H2 2026-2027\nExpected move: 30-50% as CPO ramps",
-            "Updated": "Apr 23",
+            "Updated": "May 3",
             "Key Thesis": "DB1 PHOTONICS L5 FOUNDRY. TSMC OF COMPOUND SEMICONDUCTORS. >50% global GaAs foundry market share — near-monopoly. Only turnkey compound semi foundry. SIVE's manufacturing partner — every CW laser array SIVE sells is fabricated at WIN Semi. Q4 2025: Rev TWD 4.794B (+29% YoY), GM 31.8%, EPS beat. TTM rev $534M. ADDING 6-INCH InP CAPACITY leveraging existing GaAs infrastructure. 2028 TAM MATH: Compound semi foundry $5-8B. WIN Semi capture $1.7-2.4B. At $2B rev, 27% OP, 22x = $11.9B vs $6.2B today = 1.9x. At $2.5B rev, 28% OP, 25x = $17.5B = 2.8x. Multi-material: GaAs + GaN + InP under one roof. Damnang L5 top performer. Photonics Foundry Pair with TSEM.",
             "Market Cap": "TWD 227.23B",
             "Allocation Calendar": "HOLD STEADY: 1% allocation\nMonitor CPO timeline (ASE H2 2026)\nUpgrade if CPO pulls Win Semi demand",
@@ -358,7 +379,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 III-V Foundry"
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "Total": 66,
@@ -379,28 +400,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 SiPh Equipment / Quantum"
         },
         {
-            "Rank": 19,
-            "Ticker": "4977.TW",
-            "Name": "PCL Technologies (眾達-KY)",
-            "Total": 65,
-            "Base": 68,
-            "Entry": 60,
-            "Rating": "WL (LOW) — Broadcom exclusive ELSFP. POET cancellation validates single-platform risk. Broadcom dragging feet on CPO.",
-            "Port": "",
-            "Current Price": "TWD 217.50",
-            "Ceiling Target": "TWD 500-1,200",
-            "Upside": "2.3x-5.5x",
-            "Position Type": "🔒 CHOKEPOINT\nArchitectural: Broadcom exclusive ELSFP — 1-to-32 multiplier for CPO. 2027-2032+",
-            "Revenue Explosion": "⏳ CPO REVENUE INFLECTION PENDING\nBroadcom EXCLUSIVE ELSFP supplier (獨家供應)\n1-to-32 multiplier: each CPO switch = 32 ELSFP\n51.2T Bailly CPO approaching mass production\nCPO saves 65% power vs pluggable\nFY2027E revenue +68% (law firm est)\nGross margin target 30% (from 24.7%)\nWait for Q1/Q2 2026 revenue turn YoY positive\nOr pullback to TWD 150-170 for better entry\nBroadcom next-gen 102.4T Davisson = more ELSFP",
-            "Updated": "Apr 27",
-            "Key Thesis": "DB1 CPO. BROADCOM EXCLUSIVE ELSFP SUPPLIER. 1-to-32 multiplier: each CPO system = 32 ELSFP modules. 4 years co-development with Broadcom. TH5 Bailly 51.2T CPO = world's first, entering production 2026. TH6 Davisson 102.4T next. CPO saves 65% power vs pluggable. FY2025: TWD 1.075B, EPS 4.48. Jan-Feb 2026 -26.5% (pre-CPO trough). FY2027 rev +68% anticipated (CPO full ramp). GM target 30%+. Chairman: 'exclusive supplier for multiple high-end products, direct supply.' Extreme Broadcom single-customer concentration risk. Zero English coverage. Alpha in Chinese-language sources.",
-            "Market Cap": "TWD 17.40B",
-            "Allocation Calendar": "WAIT — DO NOT BUILD YET\nRevenue hasn't inflected (Jan -43% YoY)\nSingle customer risk (Broadcom)\nTSMC COUPE transition uncertainty\nStock already ran TWD 75→200\nWhen CPO revenue appears → upgrade to HC\nEntry: TWD 150-170 or revenue inflection\nSize: 1-2% when confirmed\nTaiwanese pricing culture ✅\nIBKR accessible ✅",
-            "IR Check": "❌ NEEDS DEEP DIVE\nBroadcom next-gen (Davisson 102.4T) ELSFP confirmation\nTSMC COUPE impact on ELSFP demand\nQ1/Q2 2026 revenue trajectory\nELSFP mass production timeline\nCompetitor emergence risk\nMargin expansion path to 30%",
-            "Supercycle": "DB1 Photonics/CPO"
-        },
-        {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "Total": 65,
@@ -421,14 +421,14 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "Photonics Platform"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 65,
             "Base": 78,
             "Entry": 45,
             "Rating": "WL — Custom ASIC duopoly CHOKEPOINT. 2-player with Broadcom. 4 hyperscalers locked in.",
-            "Port": "✓",
+            "Port": "",
             "Current Price": "$164.95",
             "Ceiling Target": "$260-$370 (FY2028-31 blended, CPO discounted 15%/yr)",
             "Upside": "1.6x-2.2x",
@@ -1385,6 +1385,27 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5 Advanced Packaging"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "002428.SZSE",
+            "Name": "Yunnan Lincang Xinyuan Germanium Industry",
+            "Total": 43,
+            "Base": 63,
+            "Entry": 13,
+            "Rating": "FAIL — Germanium oligopoly (top 5 = 77%). Real chokepoint, wrong vehicle. 45x P/S. Stock above ceiling midpoint.",
+            "Port": "",
+            "Current Price": "CNY 75.24",
+            "Ceiling Target": "CNY 50-90 (germanium supercycle already priced at 45x P/S)",
+            "Upside": "0.7x-1.2x",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "May 2",
+            "Key Thesis": "",
+            "Market Cap": "CNY 49B",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": ""
         }
     ],
     "zh-CN": [
@@ -1480,7 +1501,7 @@ window.PORTFOLIO_DATA = {
             "Base": 78,
             "Entry": 73,
             "Rating": "HC — E 频段垄断 + V 频段每年折扣 15%。混合 4.24 倍。",
-            "Port": "✓",
+            "Port": "",
             "Current Price": "GBp 287",
             "Ceiling Target": "900-1,600 英镑（2028-33 年混合，V 频段每年折扣 15%）",
             "Upside": "3.1倍-5.5倍",
@@ -1620,7 +1641,28 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "HBM #1 + NVIDIA"
         },
         {
-            "Rank": 12,
+            "Rank": 10,
+            "Ticker": "4977.TW",
+            "Name": "PCL Technologies (众达-KY)",
+            "Total": 73,
+            "Base": 72,
+            "Entry": 75,
+            "Rating": "WL — Broadcom 的 CPO 主要 ELSFP 组装合作伙伴。工厂位于槟城。每个交换机 32 个 ELSFP = 巨大的乘数。高盛图表 21 双重上市。宁静#3 火箭。",
+            "Port": "✓",
+            "Current Price": "TWD 217.50",
+            "Ceiling Target": "TWD 500-1,500（CPO ELSFP 音量斜坡、Broadcom Bailey/Davisson 平台、32 倍乘数）",
+            "Upside": "2.3倍-6.9倍",
+            "Position Type": "🔒 阻塞点\n架构：Broadcom 独有的 ELSFP — CPO 的 1 至 32 乘法器。 2027-2032+",
+            "Revenue Explosion": "⏳ CPO 收入变化待定\nBroadcom EXCLUSIVE ELSFP供应商（独家供应商）\n1 至 32 乘法器：每个 CPO 开关 = 32 ELSFP\n51.2T百利CPO即将量产\n与可插拔式相比，CPO 节省 65% 的电量\n2027 财年预计收入 +68%（律师事务所预计）\n毛利率目标 30%（原为 24.7%）\n等待 2026 年第一季度/第二季度收入同比转正\n或者回调至 TWD 150-170 以获得更好的入场机会\nBroadcom 下一代 102.4T Davisson = 更多 ELSFP",
+            "Updated": "5月3日",
+            "Key Thesis": "DB1 CPO。博通独家 ELSFP 供应商。 1 至 32 乘法器：每个 CPO 系统 = 32 个 ELSFP 模块。与 Broadcom 共同开发 4 年。 TH5 Bailly 51.2T CPO = 世界第一，将于 2026 年投入生产。接下来是 TH6 Davisson 102.4T。与可插拔式相比，CPO 可节省 65% 的电量。 2025 财年：新台币 1.075B，每股收益 4.48。 2026 年 1 月至 2 月 -26.5%（原棕油前低谷）。 2027 财年预期转速+68%（毛棕榈油全面增长）。 GM目标30%+。董事长：“多种高端产品独家供应商，直供。”博通单一客户集中度极高的风险。英语覆盖率为零。 Alpha 中文源。",
+            "Market Cap": "TWD 17.40B",
+            "Allocation Calendar": "等等——先不要建造\n收入尚未发生变化（1 月 -43% 同比）\n单一客户风险（Broadcom）\n台积电 COUPE 转型的不确定性\n现货已售TWD 75→200\n当CPO收入出现时→升级为HC\n入场费：TWD 150-170 或收入变化\n尺寸：确认后1-2%\n台湾的定价文化✅\n可使用IBKR ✅",
+            "IR Check": "❌ 需要深入研究\nBroadcom 下一代 (Davisson 102.4T) ELSFP 确认\n台积电COUPE对ELSFP需求的影响\n2026 年第一季度/第二季度收入轨迹\nELSFP量产时间表\n竞争对手出现风险\n利润率扩大至 30%",
+            "Supercycle": "DB1 光子学/CPO"
+        },
+        {
+            "Rank": 13,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "Total": 71,
@@ -1662,7 +1704,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "人工智能计算"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 68,
@@ -1683,7 +1725,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB8 防御超级循环 — 水下自主系统"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "Total": 68,
@@ -1704,7 +1746,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 SiPh 基板"
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "Total": 67,
@@ -1725,20 +1767,20 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "代工+内存+中国"
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
-            "Total": 66,
+            "Total": 68,
             "Base": 72,
             "Entry": 58,
             "Rating": "WL（Compound Semi TSMC，>50% GaAs，添加 InP）",
             "Port": "",
             "Current Price": "TWD 536",
-            "Ceiling Target": "新台币 1,000-2,000",
-            "Upside": "1.9倍-3.7倍",
+            "Ceiling Target": "TWD 1,200-2,500（EPS 同比增长 30 倍，利用率 60% = 巨大的运营杠杆，InP 成倍增长，AI 数据中心翻倍）",
+            "Upside": "2.2倍-4.7倍",
             "Position Type": "🔒 阻塞点\nCapital+Qual：唯一的纯III-V代工厂。 SIVE 在 Win Semi 取得 InP CW 资格。 2026-2032+",
             "Revenue Explosion": "📈 GaAs 代工 CPO 拉通\n触发因素：CPO相关GaAs订单\n时间：2026-2027 年下半年\n预期变动：随着原棕油产量增加 30-50%",
-            "Updated": "4月23日",
+            "Updated": "5月3日",
             "Key Thesis": "DB1 光子 L5 代工厂。化合物半导体台积电。全球 GaAs 代工市场份额超过 50%——近乎垄断。唯一的交钥匙复合半铸造厂。 SIVE 的制造合作伙伴 — SIVE 销售的每个 CW 激光器阵列都是在 WIN Semi 制造的。 2025 年第四季度：Rev TWD 4.794B（同比增长 29%），GM 31.8%，EPS 超出预期。 TTM 收益为 5.34 亿美元。利用现有 GaAs 基础设施增加 6 英寸 InP 产能。 2028 TAM MATH：复合半铸造 $5-8B。 WIN Semi 捕获 $1.7-2.4B。以 $2B 回报率计算，27% OP，22x = $11.9B vs $6.2B 今天 = 1.9x。在 $2.5B rev，28% OP，25x = $17.5B = 2.8x。多材料：GaAs + GaN + InP 同一屋檐下。 Damnang L5 表现最佳。光子代工厂与 TSEM 配对。",
             "Market Cap": "TWD 227.23B",
             "Allocation Calendar": "保持稳定：1% 分配\n监控 CPO 时间表（ASE H2 2026）\n如果 CPO 拉动 Win Semi 需求，则升级",
@@ -1746,7 +1788,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 III-V代工厂"
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "Total": 66,
@@ -1767,28 +1809,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "DB1 SiPh 设备 / 量子"
         },
         {
-            "Rank": 19,
-            "Ticker": "4977.TW",
-            "Name": "PCL Technologies (众达-KY)",
-            "Total": 65,
-            "Base": 68,
-            "Entry": 60,
-            "Rating": "WL（低）— Broadcom 独家 ELSFP。 POET 取消验证了单一平台风险。博通在 CPO 上拖拖拉拉。",
-            "Port": "",
-            "Current Price": "TWD 217.50",
-            "Ceiling Target": "新台币 500-1,200",
-            "Upside": "2.3倍-5.5倍",
-            "Position Type": "🔒 阻塞点\n架构：Broadcom 独有的 ELSFP — CPO 的 1 至 32 乘法器。 2027-2032+",
-            "Revenue Explosion": "⏳ CPO 收入变化待定\nBroadcom EXCLUSIVE ELSFP供应商（独家供应商）\n1 至 32 乘法器：每个 CPO 开关 = 32 ELSFP\n51.2T百利CPO即将量产\n与可插拔式相比，CPO 节省 65% 的电量\n2027 财年预计收入 +68%（律师事务所预计）\n毛利率目标 30%（原为 24.7%）\n等待 2026 年第一季度/第二季度收入同比转正\n或者回调至 TWD 150-170 以获得更好的入场机会\nBroadcom 下一代 102.4T Davisson = 更多 ELSFP",
-            "Updated": "4月27日",
-            "Key Thesis": "DB1 CPO。博通独家 ELSFP 供应商。 1 至 32 乘法器：每个 CPO 系统 = 32 个 ELSFP 模块。与 Broadcom 共同开发 4 年。 TH5 Bailly 51.2T CPO = 世界第一，将于 2026 年投入生产。接下来是 TH6 Davisson 102.4T。与可插拔式相比，CPO 可节省 65% 的电量。 2025 财年：新台币 1.075B，每股收益 4.48。 2026 年 1 月至 2 月 -26.5%（原棕油前低谷）。 2027 财年预期转速+68%（毛棕榈油全面增长）。 GM目标30%+。董事长：“多种高端产品独家供应商，直供。”博通单一客户集中度极高的风险。英语覆盖率为零。 Alpha 中文源。",
-            "Market Cap": "TWD 17.40B",
-            "Allocation Calendar": "等等——先不要建造\n收入尚未发生变化（1 月 -43% 同比）\n单一客户风险（Broadcom）\n台积电 COUPE 转型的不确定性\n现货已售TWD 75→200\n当CPO收入出现时→升级为HC\n入场费：TWD 150-170 或收入变化\n尺寸：确认后1-2%\n台湾的定价文化✅\n可使用IBKR ✅",
-            "IR Check": "❌ 需要深入研究\nBroadcom 下一代 (Davisson 102.4T) ELSFP 确认\n台积电COUPE对ELSFP需求的影响\n2026 年第一季度/第二季度收入轨迹\nELSFP量产时间表\n竞争对手出现风险\n利润率扩大至 30%",
-            "Supercycle": "DB1 光子学/CPO"
-        },
-        {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "COHR",
             "Name": "相干公司",
             "Total": 65,
@@ -1809,14 +1830,14 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "光子学平台"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 65,
             "Base": 78,
             "Entry": 45,
             "Rating": "WL — 定制 ASIC 双寡头 CHOKEPOINT。 Broadcom 的 2 人游戏。 4 个超大规模企业已锁定。",
-            "Port": "✓",
+            "Port": "",
             "Current Price": "$164.95",
             "Ceiling Target": "$260-$370（2028-31 财年混合，CPO 折扣 15%/年）",
             "Upside": "1.6倍-2.2倍",
@@ -2773,6 +2794,27 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5高级封装"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "002428.SZSE",
+            "Name": "Yunnan Lincang Xinyuan Germanium Industry",
+            "Total": 43,
+            "Base": 63,
+            "Entry": 13,
+            "Rating": "失败 — 锗寡头垄断（前 5 名 = 77%）。真正的阻塞点，错误的车辆。 45 倍 P/S。库存高于上限中点。",
+            "Port": "",
+            "Current Price": "CNY 75.24",
+            "Ceiling Target": "50-90 元人民币（锗超级循环已定价为 45 倍市销率）",
+            "Upside": "0.7倍-1.2倍",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "5月2日",
+            "Key Thesis": "",
+            "Market Cap": "CNY 49B",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": ""
         }
     ]
 };

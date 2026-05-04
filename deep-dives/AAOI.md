@@ -122,3 +122,7 @@ When AAOI ships $1B in transceivers, every unit contains components from our Lay
 ## Verdict
 
 64 — just below WL threshold. The revenue explosion is real ($456M→$1B guided). "Buy ALL production" is the ultimate demand signal. But AAOI is Layer 1 competitive, not Layer 0 monopoly. Customer concentration (91%) and LightCounting oversupply warning create material risk. The framework owns it at Tier 3 because it's a direct demand signal for our Layer 0 positions, and trusted investors are bullish.
+
+
+## Score Change Log
+- **May 2, 2026: 64 WL** (Texas factory is THE catalyst — $20M Texas subsidy, 3x capacity. Everything AAOI makes sells out instantly, revenue is CAPPED by supply not demand. Management pumping on X = confident in Q1 numbers. Q1 revenue number is irrelevant — only Texas factory timeline matters on May 7 call. "If CEO says H1 2027 = stock to $250+. If H2 2027 or 2028 = treads water." InP substrate shortage confirmed by AXTI $100M+ backlog. 142% CPO CAGR: AAOI is the pluggable→CPO bridge play. LightCounting warns pluggable correction coming — AAOI is a TRADE not a HOLD (⚡ bottleneck classification). Hold through May 7 earnings.)

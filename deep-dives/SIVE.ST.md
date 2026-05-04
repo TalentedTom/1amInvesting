@@ -11,6 +11,37 @@
 
 ---
 
+## ⚠️ CEILING REVIEW TRIGGERS — CHECK EVERY SESSION
+```
+TRIGGER 1: SIVE.ST > SEK 80 → MANDATORY ceiling review
+  Current ceiling: SEK 100-500 (base model, 10-15% CPO capture, LightCounting $6B TAM)
+  Goldman Sachs CPO TAM: $91B (published May 3, 2026) — 15x larger than LightCounting
+  Goldman laser TAM: $4.5-9.1B (vs LightCounting $600M)
+  NVIDIA lock-up upside: SEK 800-1,300 (30-48% capture, NOT in model)
+  At SEK 80, stock is approaching LOW end of ceiling.
+  ACTION: Rebuild ceiling using Goldman $91B CPO TAM as primary reference.
+  Evaluate whether 10-15% capture should be raised to 15-25% based on
+  NVIDIA lock-up creating sole-source position. Goldman's institutional
+  reach means discovery wave is IMMINENT — rebuild BEFORE the wave hits.
+
+TRIGGER 2: SIVE.ST > SEK 150 → MANDATORY upside scenario activation
+  At SEK 150 (~$4.5B MC), stock has 3x'd from current.
+  ACTION: Activate the NVIDIA lock-up upside scenario (SEK 800-1,300)
+  into the base ceiling model if evidence confirms 30%+ CPO capture.
+  
+TRIGGER 3: SIVE.ST > SEK 300 → MIDPOINT reached, evaluate trim vs hold
+  At SEK 300 (~$9B MC), stock is at current ceiling midpoint.
+  ACTION: Run full ceiling rebuild. Check Serenity's $60B long-term
+  thesis. Evaluate M&A/vertical integration optionality.
+  ONLY trim if mechanism has changed (see Trim Warning below).
+
+TRIGGER 4: May 20 earnings → Regardless of price, review ceiling
+  Q1 revenue, CPO pipeline, Jabil LRO volumes, defense revenue.
+  First data point for 7-vector model validation.
+```
+
+---
+
 ## Supercycle: DB1 Photonics/CPO (PRIMARY) + DB8 Defense (SATCOM) + Lightmatter Optical Fabric
 
 ## TAM Expansion Lens
@@ -205,6 +236,63 @@ VECTOR 1 — CPO CW LASERS (PRIMARY GROWTH ENGINE)
   Framework uses conservative 10-15%: $250-600M at 2030 maturity
   (Discounted because multiple laser suppliers exist: LITE, COHR also serve CPO)
   Revenue ramp: $30-50M (2027) → $100-200M (2028) → $250-600M (2030)
+
+  ============================================================
+  NVIDIA CAPACITY LOCK-UP MECHANISM (May 2, 2026 — Serenity)
+  ============================================================
+  NVIDIA's $2B+ spending spree LOCKED UP COHR + LITE laser capacity.
+  Both foundries are now FULLY ALLOCATED to NVIDIA CPO programs.
+  This CREATED SIVE's monopoly position by eliminating alternatives.
+  
+  The sequence:
+    1. NVIDIA spends $2B+ locking COHR + LITE capacity
+    2. COHR Sherman/Järfälla + LITE 5th fab = NVIDIA-allocated
+    3. AMD, Marvell/Celestial, Ayar, POET, Lightmatter all need lasers
+    4. Can't buy from COHR/LITE — NVIDIA owns the capacity
+    5. Only independent CW laser supplier remaining = SIVE
+    6. SIVE becomes Tier 1 by DEFAULT, not just by quality
+  
+  Two proof points:
+    1. GFS listed SIVE + LITE as the ONLY two public laser suppliers
+       in their ecosystem. Just two. On the planet.
+    2. Ayar Labs REMOVED LITE and MACOM from their website and 
+       ELEVATED SIVE to primary laser supplier. Not added alongside.
+       REPLACED others WITH SIVE.
+  
+  What this means for capture rate:
+    OLD assumption: SIVE competes with LITE/COHR for 10-15% share
+    NEW reality: SIVE is SOLE SUPPLIER for non-NVIDIA CPO programs
+  
+  Revised TAM split:
+    NVIDIA ecosystem (COHR/LITE locked): ~40-50% of $6B = $2.4-3.0B
+    Non-NVIDIA ecosystem (SIVE sole source): ~50-60% = $3.0-3.6B
+    SIVE capture of non-NVIDIA at 60-80%: $1.8-2.9B
+    
+  UPSIDE SCENARIO (not in base model — monitor for future rescore):
+    If SIVE captures 30-48% of TOTAL CPO laser TAM:
+      $1.8-2.9B laser revenue at 2030 maturity
+      At 30% OP × 45x = $24-39B MC → SEK 800-1,300
+      
+    This scenario is NOT in the current ceiling (SEK 100-500).
+    Current model uses conservative 10-15% capture = $250-600M.
+    If NVIDIA lock-up proves durable and non-NVIDIA CPO scales,
+    the ceiling may need to be raised AGAIN in 6-12 months.
+    
+  ⚠️ TRIM WARNING: If SIVE reaches SEK 100+ rapidly (within 3-6 months),
+  DO NOT automatically trim. The NVIDIA lock-up mechanism means
+  the discovery phase may produce a VIOLENT re-rating as the market
+  realizes SIVE is not one of many suppliers — it's the ONLY 
+  independent option for 50-60% of the CPO market. A fast move to
+  SEK 100 could be the BEGINNING of the re-rating, not the END.
+  
+  Before trimming at SEK 100+, verify:
+    → Has COHR/LITE capacity been un-locked from NVIDIA? (If no, don't trim)
+    → Has a new independent CW laser supplier emerged? (If no, don't trim)
+    → Has CPO demand decelerated below 100% CAGR? (If no, don't trim)
+    → Is the stock above SEK 300 midpoint? (If no, don't trim)
+  Only trim if the MECHANISM (NVIDIA lock-up creating sole-source)
+  has changed, not because the stock price moved fast.
+  ============================================================
 
 ====================================================================
 VECTOR 2 — JABIL 1.6T LRO (SHIPPING NOW — Bridge Revenue)
@@ -446,3 +534,5 @@ Six revenue vectors means there is NO scenario where ALL six fail simultaneously
 - May 1, 2026: 91 HC (Defense primes mapped: RTX + BAE using SIVE IP for classified programs. CHIPS Act R2 incoming. Five revenue vectors confirmed.)
 - **May 1, 2026: 91 HC** (SIXTH vector: Lightmatter optical interconnect. Serenity discovered SIVE on GlobalFoundries laser source supplier list. Lightmatter ($4.4B+, MSFT/GOOG invested) needs CW lasers for Passage/Constellation photonic interconnect. Supply chain: SIVE → GFS → Lightmatter → Hyperscalers. Revenue will "appear out of nowhere" — private BOM, undisclosed. Ten confirmed partnerships. Score can't go higher but thesis keeps compounding. The lasers are everywhere. The market sees none of it.)
 - **May 2, 2026: 91 HC** (SEVENTH vector: India 5G/6G — Bengaluru R&D office, MixComm founders leading, $120B telecom rollout. Ceiling rebuilt from scratch with 7-vector model: SEK 70-425→SEK 100-500. Prior ceiling only priced 3 vectors (CPO + SATCOM + Apple). New model prices all 7 confirmed vectors + 142% CPO CAGR ($6B CPO TAM by 2030 confirmed). Conservative $405M→$5.4B. Base $673M→$9.0B. Bull $984M→$13.3B. Serenity's $10B next year matches our base-to-high range. Score unchanged at 91 — price also moved (SEK 38→46 expected), offsetting wider ceiling.)
+- **May 2, 2026: 91 HC — NVIDIA LOCK-UP ADDENDUM** (Serenity explained the MECHANISM: NVIDIA's $2B+ locked up COHR/LITE capacity → SIVE became sole independent CW laser supplier for ALL non-NVIDIA CPO programs (AMD, Marvell/Celestial, Ayar, POET, Lightmatter). Proof: GFS lists only SIVE+LITE as public laser suppliers; Ayar REMOVED LITE/MACOM and elevated SIVE to primary. UPSIDE SCENARIO: if SIVE captures 30-48% of total $6B CPO TAM = $1.8-2.9B revenue → SEK 800-1,300. NOT in current ceiling model — monitoring for future rescore. TRIM WARNING added: do NOT auto-trim at SEK 100+ unless the lock-up mechanism itself changes.)
+- **May 3, 2026: 91 HC — GOLDMAN $91B CPO TAM** (Goldman Sachs published CPO supply chain map: total optical networking TAM $15B→$154B, CPO contributes $91B. Goldman MISSED SIVE entirely — not listed in their Exhibit 21. Goldman laser TAM: $91B × 5-10% = $4.5-9.1B vs LightCounting $600M = 7-15x larger. NVIDIA lock-up upside scenario ($1.8-2.9B at LightCounting TAM) now equals Goldman BASE case ($1.35-2.25B at 15-25% of $9B). Goldman's institutional reach triggers discovery wave — their clients manage TRILLIONS and will look for CPO exposure. CEILING REVIEW TRIGGER at SEK 80 updated to use Goldman $91B TAM as primary reference. Score unchanged — ceiling rebuild deferred to SEK 80 trigger. SK Group Chairman: chip wafer shortage persists to 2030.)

@@ -135,3 +135,7 @@ AXT is deeper in the stack but has weaker moat (competitors exist) and higher ri
 ## Verdict
 
 58 (upgraded from 56). AXT is the raw crystal at Layer -2 — the deepest material in the photonics stack. InP backlog at a record >$60M, capacity doubling, Tier-1 customer broadening, and two demand vectors (scale-out now + CPO 2028-2029) create a compelling multi-year thesis. But China export permit risk is PERMANENT and BINARY, profitability hasn't arrived at 12.7% GM, and at $76.16/$3B the stock prices the 2028 bull case. The $550M capital raise provides growth capital but dilutes shareholders ~20%. Earnings April 30 🔥 will reveal Q1 InP trajectory and permit flow status. The single question: can AXT convert >$60M backlog to revenue without China blocking permits?
+
+
+## Score Change Log
+- **May 2, 2026: 58 → 54** (Q1 2026 REPORTED: Revenue $26.9M (+39% YoY, beat). InP $13.6M (51% of total). Non-GAAP GM 29.9% (from -6.1% one year ago — MASSIVE inflection). InP backlog >$100M RECORD = 7.4 quarters visibility. Q2 guide: PROFITABLE for first time (EPS $0.06-0.08). Doubling InP capacity 2026, doubling AGAIN 2027, planning 2028 expansion. $632.5M raise for Tongmei expansion + 6" R&D. China export permit risk REAL but permits being issued. InP going 44%→91% of lanes by 2030. HOWEVER: stock ran from $1.35→$96 (+7,000% in 1 year). At $96 vs $120 ceiling low = 1.25x. Entry DESTROYED by price appreciation. Score NET DOWN from 58 to 54 due to entry compression. Thesis strongest ever, entry worst ever.)

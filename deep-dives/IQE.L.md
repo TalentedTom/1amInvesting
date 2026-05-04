@@ -136,3 +136,7 @@ Compare to SIVE (90 HC): Also in photonics, also European, also small — but SI
 ## Verdict
 
 57. The largest independent compound semiconductor epiwafer foundry with genuine AI photonics tailwinds (InP for datacenter, QD lasers, 6" SiPh platform). The Deutsche Bank Takeover Code filing makes M&A more concrete than a generic "Strategic Review." At GBp 47.60/£300M MC, the stock has already recovered significantly from its lows, reflecting improved InP demand and M&A expectations. The EML shortage catalyst and InP Layer -1 positioning in the photonics stack are real. If takeout materializes at 100-140p, that's 2-3x. If it doesn't, the operating recovery needs to deliver £150M+ revenue with 15%+ margins to justify current levels.
+
+
+## Score Change Log
+- **May 2, 2026: 57 WL** (InP substrate demand confirmed across entire supply chain: AXTI backlog $100M+ record, doubling capacity 2x, $632.5M raise. Win Semi expanding 4-inch InP lines "by multiples." LightCounting: InP going 44%→91% of high-speed lanes by 2030. 142% CPO CAGR = more InP epitaxial wafers needed. IQE's 6" SiPh platform and InP epi services benefit from same demand wave. BUT: IQE competes with Episil, Win Semi, and internal foundry epi. Strategic review/M&A remains the primary catalyst — if takeout at 100-140p, 2-3x. Operating recovery needs to confirm.)

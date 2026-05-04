@@ -105,3 +105,7 @@ COHR IS the InP bottleneck Damnang's analysis describes. They own the 6-inch fab
 ## Verdict
 
 66 WL. Strongest InP fab position globally. NVIDIA validated with $2B. Industrial segment dilution and large market cap limit asymmetry. The May 13 earnings will show 6-inch InP ramp progress and CPO order conversion.
+
+
+## Score Change Log
+- **May 2, 2026: 65 WL** (Price ran $345→$330, entry compressed. 142% CPO CAGR confirmed — Coherent's Sherman/Järfälla InP fabs serve CPO transition directly. OFC 2026: $20B+ incremental TAM announced. NVIDIA $2B investment validates. LightCounting: InP going from 44%→91% of all high-speed lanes by 2030. But $60B MC + 15+ analysts = zero information edge. Score NET DOWN from 66 due to entry compression at higher price vs original analysis.)

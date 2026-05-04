@@ -4,7 +4,7 @@ import os
 import time
 from deep_translator import GoogleTranslator
 
-EXCEL_PATH = r"C:\Users\GamerTech\.gemini\antigravity\scratch\v3.2_master_portfolio.xlsx"
+EXCEL_PATH = r"C:\Users\GamerTech\.gemini\antigravity\scratch\Artifacts\v3.2_master_portfolio.xlsx"
 OUTPUT_PATH = "data.js"
 CACHE_PATH = "translation_cache.json"
 

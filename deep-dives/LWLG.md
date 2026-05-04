@@ -128,3 +128,7 @@ LWLG is SIVE 18-24 months earlier in the cycle.
 ## Verdict
 
 63 WL. Sole-source material supplier with three validated integration paths. Pre-revenue caps the score. The Marvell/Polariton acquisition created a structural dependency that the market hasn't priced.
+
+
+## Score Change Log
+- **May 2, 2026: 63 WL** (142% CPO CAGR confirmed. TFLN polymer modulators are a potential key component in CPO modules — Marvell/Polariton acquisition created structural dependency. CPO scale-up (GPU-to-GPU, $3.8B by 2030) requires high-speed modulators where LWLG's Perkinamine platform has advantages. But LWLG is still PRE-REVENUE — development stage company. Stock at $16.27 (+20% recent move) reflects speculative premium. Score unchanged — pre-revenue caps the ceiling confidence regardless of TAM expansion.)
