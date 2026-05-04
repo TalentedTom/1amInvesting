@@ -1,8 +1,14 @@
 import pandas as pd
 import json
 import os
+import re
 import time
 from deep_translator import GoogleTranslator
+
+# Fields populated by the cron pipeline (apply_quotes / score), not by xlsx.
+# Preserve them across regens by ticker so the regen doesn't blank them out
+# during off-hours/weekends when no cron run is coming to repopulate.
+PRESERVE_FROM_PRIOR = ("Change %", "Entry", "Total", "Upside")
 
 EXCEL_PATH = r"C:\Users\GamerTech\.gemini\antigravity\scratch\Artifacts\v3.2_master_portfolio.xlsx"
 OUTPUT_PATH = "data.js"
@@ -55,9 +61,44 @@ def get_translation(text, target_lang, translator, cache):
         print(f"Translation error ({target_lang}) for text '{text_str[:20]}...': {e}")
         return text
 
+def load_prior_cron_fields():
+    """Read existing data.js (if present) and return a dict mapping
+    ticker -> {field: value} for cron-populated fields. Used to preserve
+    Change %, Entry, Total, Upside across xlsx regens, since those values
+    don't exist in the xlsx and would otherwise blank out until the next
+    cron tick repopulates them."""
+    if not os.path.exists(OUTPUT_PATH):
+        return {}
+    try:
+        raw = open(OUTPUT_PATH, "r", encoding="utf-8").read()
+        m = re.match(r"^\s*window\.PORTFOLIO_DATA\s*=\s*", raw)
+        if not m:
+            return {}
+        body = raw[m.end():].rstrip()
+        if body.endswith(";"):
+            body = body[:-1].rstrip()
+        data = json.loads(body)
+        out = {}
+        for row in data.get("en", []):
+            t = row.get("Ticker")
+            if not t:
+                continue
+            out[str(t).strip()] = {
+                k: row[k] for k in PRESERVE_FROM_PRIOR if k in row
+            }
+        return out
+    except Exception as e:
+        print(f"Could not read prior data.js for preservation: {e}")
+        return {}
+
+
 def main():
     print(f"Reading {EXCEL_PATH} ...")
     cache = load_cache()
+    prior = load_prior_cron_fields()
+    if prior:
+        print(f"Will preserve cron-populated fields ({', '.join(PRESERVE_FROM_PRIOR)}) "
+              f"for {len(prior)} tickers from existing data.js.")
 
     translator_zh = GoogleTranslator(source='auto', target='zh-CN')
 
@@ -65,6 +106,16 @@ def main():
         df = pd.read_excel(EXCEL_PATH, sheet_name="Master Portfolio")
         df = df.fillna("")
         data_en = df.to_dict(orient="records")
+
+        # Re-apply preserved cron-populated fields onto the fresh xlsx rows
+        # by ticker. New tickers (no prior entry) just don't get those
+        # fields set — the next cron tick fills them in normally.
+        for row in data_en:
+            t = str(row.get("Ticker") or "").strip()
+            if t and t in prior:
+                for k, v in prior[t].items():
+                    if v not in (None, ""):
+                        row[k] = v
 
         data_zh = []
 
