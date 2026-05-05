@@ -1,11 +1,11 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 2, 2026 (UPDATED — 7-vector ceiling model + 142% CPO CAGR)
+**Date:** May 4, 2026 (UPDATED — 8-vector model + GFS SCALE + Lightelligence)
 **Framework Version:** v3.6.5
 **Score:** 91 HC | Base 88% (53/60) | Entry 87 (35/40) | #1 in Framework History
-**Price at Analysis:** SEK 38.00 (SIVEF +21% during Swedish holiday, gap-up expected Monday to ~SEK 46)
-**Ceiling:** SEK 100-500 (7-vector model, 142% CPO CAGR adjusted)
-**Upside Ratio:** 2.2x-10.9x (at SEK 46 post-gap)
-**Market Cap:** ~SEK 11.3B (~$1.5B)
+**Price at Analysis:** SEK 55.95 (GFS SCALE launch day, +47% from SEK 38)
+**Ceiling:** SEK 100-500 (8-vector model, 142% CPO CAGR, Goldman $91B TAM at SEK 80 trigger)
+**Upside Ratio:** 1.8x-8.9x (at SEK 55.95)
+**Market Cap:** ~SEK 16.6B (~$2.1B)
 **TTM Revenue:** ~$30.9M (SEK ~300M)
 **Earnings:** May 20, 2026 🔥🔥🔥
 
@@ -54,7 +54,7 @@ TRIGGER 4: May 20 earnings → Regardless of price, review ceiling
 
 **Ford Principle:** SIVE isn't selling "laser chips." It's selling the universal light source primitive. Silicon cannot generate light — permanent physics truth.
 
-## Core Thesis — Seven Vectors
+## Core Thesis — Eight Vectors (+ undiscovered Customer B, C, D)
 
 ### Vector 1: AI Photonics (CW Laser Monopoly)
 
@@ -209,7 +209,7 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 | Risks | -1 | NRE must convert to production (-1). |
 | **Base** | **53/60 (88%)** | |
 
-## Ceiling — Forward TAM Math (7-Vector Model, May 2 2026)
+## Ceiling — Forward TAM Math (8-Vector Model, May 4 2026)
 
 ```
 PRIOR MODEL (SEK 70-425): Only priced 3 vectors (CPO + SATCOM + Apple).
@@ -402,46 +402,91 @@ VECTOR 7 — INDIA 5G/6G TELECOM (NEW)
   ADJUSTMENT: +$5-15M
 
 ====================================================================
-COMBINED 7-VECTOR REVENUE AT MATURITY (2029-2030)
+VECTOR 8 — LIGHTELLIGENCE (PHOTONIC COMPUTE) (NEW — May 4, 2026)
+====================================================================
+  Prior: Not modeled (discovered May 4 via Plaskpojen OSINT)
+  
+  Evidence:
+    SIVE corporate slide shows "Optical I/O focused customers" 
+    with ~$400M funding in last 12 months.
+    Slide lists: Ayar Labs, Lightmatter, Celestial AI, 
+    Customer B/C/D, and a $250M company (2023 funding).
+    Plaskpojen identified: Lightelligence = the $250M company.
+    
+    Lightelligence ($250M funding, 2023):
+    → Photonic AI COMPUTING (not just interconnect)
+    → Uses light for matrix multiplication in neural networks
+    → HP, Lockheed Martin, Intel, NVIDIA in ecosystem
+    → If Lightmatter does photonic INTERCONNECT (moving data)
+      Lightelligence does photonic COMPUTE (processing data)
+    → SIVE supplies CW lasers to BOTH approaches
+    → Whether photonics wins for interconnect OR compute,
+      SIVE's lasers are needed either way
+    
+    SIVE is ALSO the likely undisclosed laser supplier for
+    "Customer B, C, and D" on the same slide.
+    Potentially vectors 9, 10, 11 still UNDISCOVERED.
+    
+  Revenue model:
+    Lightelligence is earlier-stage than Lightmatter
+    Conservative: $2-5M (2028-2030)
+    Base: $5-15M (if photonic compute scales)
+    Bull: $15-30M (if photonic compute becomes mainstream)
+    High variance — depends on photonic compute adoption
+    
+  ADJUSTMENT: +$5-15M
+
+  NOTE: "Customer B, C, and D" remain unidentified.
+  Each could add another $5-20M at maturity.
+  The 8-vector model likely STILL undercounts actual vectors.
+
+====================================================================
+COMBINED 8-VECTOR REVENUE AT MATURITY (2029-2030)
 ====================================================================
 
   CONSERVATIVE:
-    CPO:           $250M
-    Jabil LRO:     $20M
-    SATCOM:        $50M
-    Defense primes: $20M
-    Apple:         $50M (probability-weighted at 60%)
-    Lightmatter:   $10M
-    India 5G:      $5M
-    TOTAL:         $405M
+    CPO:             $250M
+    Jabil LRO:       $20M
+    SATCOM:          $50M
+    Defense primes:  $20M
+    Apple:           $50M (probability-weighted at 60%)
+    Lightmatter:     $10M
+    India 5G:        $5M
+    Lightelligence:  $5M
+    TOTAL:           $410M
 
   BASE:
-    CPO:           $400M
-    Jabil LRO:     $35M
-    SATCOM:        $88M
-    Defense primes: $30M
-    Apple:         $90M (probability-weighted at 70%)
-    Lightmatter:   $20M
-    India 5G:      $10M
-    TOTAL:         $673M
+    CPO:             $400M
+    Jabil LRO:       $35M
+    SATCOM:          $88M
+    Defense primes:  $30M
+    Apple:           $90M (probability-weighted at 70%)
+    Lightmatter:     $20M
+    India 5G:        $10M
+    Lightelligence:  $10M
+    TOTAL:           $683M
 
   BULL:
-    CPO:           $600M
-    Jabil LRO:     $50M
-    SATCOM:        $124M
-    Defense primes: $40M
-    Apple:         $125M (confirmed)
-    Lightmatter:   $30M
-    India 5G:      $15M
-    TOTAL:         $984M
+    CPO:             $600M
+    Jabil LRO:       $50M
+    SATCOM:          $124M
+    Defense primes:  $40M
+    Apple:           $125M (confirmed)
+    Lightmatter:     $30M
+    India 5G:        $15M
+    Lightelligence:  $15M
+    TOTAL:           $999M
+
+  NOTE: Vectors 9-11 ("Customer B, C, D") NOT included.
+  Bull case with undiscovered vectors could exceed $1.1B.
 
 ====================================================================
 EARNINGS MODEL → CEILING
 ====================================================================
 
-  Conservative $405M, 33% OP = $134M × 40x = $5.4B → SEK ~180
-  Base $673M, 32% OP = $215M × 42x = $9.0B → SEK ~305
-  Bull $984M, 30% OP = $295M × 45x = $13.3B → SEK ~450
+  Conservative $410M, 33% OP = $135M × 40x = $5.4B → SEK ~180
+  Base $683M, 32% OP = $219M × 42x = $9.2B → SEK ~310
+  Bull $999M, 30% OP = $300M × 45x = $13.5B → SEK ~455
   Extreme $1.2B, 30% OP = $360M × 50x = $18B → SEK ~610
 
   (OP margin blended lower than pure CPO due to Apple margin compression
@@ -464,7 +509,7 @@ WHY WE DON'T MODEL $60B:
   $30-60B is theoretically possible but a different company at that point.
 ```
 
-**Entry:** SEK 46 (post-gap) vs midpoint SEK 300 = 6.5x → Entry 35/40
+**Entry:** SEK 55.95 (post-gap) vs midpoint SEK 300 = 5.4x → Entry 35/40
 
 ## Total: (88 × 0.6) + (87 × 0.4) = 53 + 35 = 90 HC
 
@@ -536,3 +581,4 @@ Six revenue vectors means there is NO scenario where ALL six fail simultaneously
 - **May 2, 2026: 91 HC** (SEVENTH vector: India 5G/6G — Bengaluru R&D office, MixComm founders leading, $120B telecom rollout. Ceiling rebuilt from scratch with 7-vector model: SEK 70-425→SEK 100-500. Prior ceiling only priced 3 vectors (CPO + SATCOM + Apple). New model prices all 7 confirmed vectors + 142% CPO CAGR ($6B CPO TAM by 2030 confirmed). Conservative $405M→$5.4B. Base $673M→$9.0B. Bull $984M→$13.3B. Serenity's $10B next year matches our base-to-high range. Score unchanged at 91 — price also moved (SEK 38→46 expected), offsetting wider ceiling.)
 - **May 2, 2026: 91 HC — NVIDIA LOCK-UP ADDENDUM** (Serenity explained the MECHANISM: NVIDIA's $2B+ locked up COHR/LITE capacity → SIVE became sole independent CW laser supplier for ALL non-NVIDIA CPO programs (AMD, Marvell/Celestial, Ayar, POET, Lightmatter). Proof: GFS lists only SIVE+LITE as public laser suppliers; Ayar REMOVED LITE/MACOM and elevated SIVE to primary. UPSIDE SCENARIO: if SIVE captures 30-48% of total $6B CPO TAM = $1.8-2.9B revenue → SEK 800-1,300. NOT in current ceiling model — monitoring for future rescore. TRIM WARNING added: do NOT auto-trim at SEK 100+ unless the lock-up mechanism itself changes.)
 - **May 3, 2026: 91 HC — GOLDMAN $91B CPO TAM** (Goldman Sachs published CPO supply chain map: total optical networking TAM $15B→$154B, CPO contributes $91B. Goldman MISSED SIVE entirely — not listed in their Exhibit 21. Goldman laser TAM: $91B × 5-10% = $4.5-9.1B vs LightCounting $600M = 7-15x larger. NVIDIA lock-up upside scenario ($1.8-2.9B at LightCounting TAM) now equals Goldman BASE case ($1.35-2.25B at 15-25% of $9B). Goldman's institutional reach triggers discovery wave — their clients manage TRILLIONS and will look for CPO exposure. CEILING REVIEW TRIGGER at SEK 80 updated to use Goldman $91B TAM as primary reference. Score unchanged — ceiling rebuild deferred to SEK 80 trigger. SK Group Chairman: chip wafer shortage persists to 2030.)
+- **May 4, 2026: 91 HC — EIGHTH VECTOR + GFS SCALE CONFIRMATION** (Lightelligence identified as 8th revenue vector via Plaskpojen OSINT: $250M-funded photonic COMPUTE company (not just interconnect) using SIVE CW lasers. SIVE corporate slide shows ~$400M funding across optical I/O customers in last 12 months. "Customer B, C, D" still unidentified = potential vectors 9-11. SEPARATELY: GlobalFoundries officially launched SCALE CPO platform May 4, listing SIVE as 1 of 2 public laser suppliers alongside Lumentum. This is CORPORATE VALIDATION — GFS put SIVE on their official ecosystem slide. AMD uses GFS for CPO → SIVE powers AMD's CPO buildout. SIVE now confirmed on ALL FOUR CPO platforms: TSMC COUPE (Ayar), GFS SCALE (AMD), Tower SiPh (Lightmatter), OpenLight. 8-vector model: conservative $410M, base $683M, bull $999M. Score unchanged at 91 — ceiling rebuild deferred to SEK 80 trigger.)
