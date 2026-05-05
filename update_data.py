@@ -2,13 +2,18 @@ import pandas as pd
 import json
 import os
 import re
+import subprocess
+import sys
 import time
 from deep_translator import GoogleTranslator
 
-# Fields populated by the cron pipeline (apply_quotes / score), not by xlsx.
-# Preserve them across regens by ticker so the regen doesn't blank them out
-# during off-hours/weekends when no cron run is coming to repopulate.
-PRESERVE_FROM_PRIOR = ("Change %", "Entry", "Total", "Upside")
+# Fields populated by the cron pipeline that are NOT a function of any xlsx
+# field — preserve them across regens so they don't blank out during off-hours.
+# Critically, do NOT preserve Entry/Total/Upside: those are derived from
+# Current Price + Ceiling Target + Base, and preserving them would make the
+# regen produce mismatched values when the user updates a price in xlsx.
+# Instead, we re-run score.py at the end so those get recomputed cleanly.
+PRESERVE_FROM_PRIOR = ("Change %",)
 
 EXCEL_PATH = r"C:\Users\GamerTech\.gemini\antigravity\scratch\Artifacts\v3.2_master_portfolio.xlsx"
 OUTPUT_PATH = "data.js"
@@ -93,6 +98,13 @@ def load_prior_cron_fields():
 
 
 def main():
+    # score.py emits emoji alerts (🟢 🟠 🔴 ⚫) which crash Windows cp1252
+    # stdout when forwarded through subprocess capture. Force UTF-8 here so
+    # the forwarded output renders cleanly.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
     print(f"Reading {EXCEL_PATH} ...")
     cache = load_cache()
     prior = load_prior_cron_fields()
@@ -146,8 +158,25 @@ def main():
             f.write("window.PORTFOLIO_DATA = ")
             json.dump(final_data, f, ensure_ascii=False, indent=4)
             f.write(";")
-            
+
         print(f"Successfully exported multi-lingual data to {OUTPUT_PATH}")
+
+        # Recompute Entry/Total/Upside from the fresh xlsx Base + Ceiling
+        # Target + Current Price. score.py reads/writes data.js standalone,
+        # so we just invoke it via subprocess to keep separation clean.
+        score_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                  "scripts", "score.py")
+        if os.path.exists(score_path):
+            print("\nRunning score.py to recompute Entry/Total/Upside...")
+            proc = subprocess.run(
+                [sys.executable, score_path],
+                capture_output=True, text=True, encoding="utf-8",
+            )
+            # Forward score.py's output (alerts, bucket counts, skipped rows)
+            sys.stdout.write(proc.stdout)
+            if proc.returncode != 0:
+                sys.stderr.write(proc.stderr)
+                print(f"score.py exited {proc.returncode} (continuing).")
         
     except Exception as e:
         print(f"Error extracting data: {e}")
