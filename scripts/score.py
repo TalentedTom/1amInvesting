@@ -61,20 +61,56 @@ ENTRY_THRESHOLDS = [
     (1.0,   13),
 ]
 
-CURRENCY_CODE_RE = re.compile(r"\b[A-Z]{2,4}\b")
-CURRENCY_SYMBOL_RE = re.compile(r"[$£€¥₩₪₹]")
-# Anything containing one of these tokens is not a numeric range we can score.
-NON_NUMERIC_MARKERS = (
-    "TBD", "PRE-IPO", "IPO", "TBA", "N/A", "NA",
-    # Range strings ending in B/M (billions/millions) are usually market-cap
-    # ceilings (e.g., "$20-50B") — skip; only use price ceilings.
+# Known currency codes (enumerated rather than \b[A-Z]{2,4}\b so we don't
+# accidentally strip 2-4 letter words from analyst annotations like "DC deal").
+# Includes mixed-case "GBp" (British pence).
+KNOWN_CURRENCIES = (
+    "USD", "EUR", "GBP", "GBp", "JPY", "KRW", "CNY", "TWD", "HKD", "SEK",
+    "DKK", "NOK", "CAD", "AUD", "CHF", "INR", "BRL", "NZD", "SGD", "RMB",
+    "MXN", "ZAR", "PLN",
 )
+CURRENCY_CODE_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(c) for c in KNOWN_CURRENCIES) + r")\b"
+)
+CURRENCY_SYMBOL_RE = re.compile(r"[$£€¥₩₪₹]")
+
+# Word-boundary check for placeholder markers. Substring matching was
+# rejecting strings containing "NA" inside other words (NASDAQ, elimination)
+# and "IPO" inside ones like "deIPOsits". Word boundaries fix it.
+NON_NUMERIC_MARKER_RE = re.compile(r"\b(TBD|PRE-IPO|IPO|TBA|N/A)\b", re.IGNORECASE)
+
+# K/M suffix on numbers (e.g., "₩3.0M-5.0M" means 3,000,000-5,000,000 KRW).
+# Expanded to literal numbers before range parsing so the search regex sees
+# clean digits. B is intentionally NOT in this list — B suffixes after a
+# range usually mean market cap (billions), which we want to reject.
+SUFFIX_MULTIPLIERS = {"K": 1e3, "k": 1e3, "M": 1e6, "m": 1e6}
+_KM_SUFFIX_RE = re.compile(r"([\d,]+(?:\.\d+)?)([KkMm])\b")
 
 
 def _strip_currency(s: str) -> str:
     s = CURRENCY_CODE_RE.sub("", s)
     s = CURRENCY_SYMBOL_RE.sub("", s)
+    # British pence "p" suffix on numbers (70p-140p) → drop the "p"
+    s = re.sub(r"(\d)[pP]\b", r"\1", s)
+    # 1-2 letter currency prefixes immediately preceding a digit (or $).
+    # Catches "HK$143" → "143" (after $ stripped to "HK143"), "C500" → "500"
+    # (Canadian), "A9.81" → "9.81" (Australian). The lookahead guards
+    # against stripping descriptive 2-letter words like "DC deal".
+    s = re.sub(r"\b[A-Z]{1,2}(?=[\d])", "", s)
     return s.strip()
+
+
+def _expand_km_suffixes(s: str) -> str:
+    """Convert "3.0M" -> "3000000", "450K" -> "450000". Leaves B alone so
+    parse_range can detect and reject market-cap ceilings."""
+    def expand(m):
+        n = float(m.group(1).replace(",", "")) * SUFFIX_MULTIPLIERS[m.group(2)]
+        return str(int(n) if n.is_integer() else n)
+    return _KM_SUFFIX_RE.sub(expand, s)
+
+
+def _has_placeholder(s: str) -> bool:
+    return bool(NON_NUMERIC_MARKER_RE.search(s))
 
 
 def parse_price(value):
@@ -84,9 +120,10 @@ def parse_price(value):
     s = str(value).strip()
     if not s:
         return None
-    if any(m in s.upper() for m in NON_NUMERIC_MARKERS):
+    if _has_placeholder(s):
         return None
     s = _strip_currency(s)
+    s = _expand_km_suffixes(s)
     s = s.replace(",", "").replace(" ", "")
     try:
         n = float(s)
@@ -98,26 +135,47 @@ def parse_price(value):
 def parse_range(value):
     """Parse a Ceiling Target cell to (low, high) floats, or (None, None).
 
-    Accepts e.g. "$280-$550", "SEK 60-300", "KRW 2,500,000-3,800,000".
-    Rejects market-cap ceilings ($20-50B), pre-IPO placeholders, and any
-    string with letters after the numbers (likely a unit suffix we don't
-    want to interpret as a price).
+    Tolerates trailing annotations after the numeric range so authors can
+    add context inline. Rejects market-cap ceilings (range followed by a
+    B/M/K suffix) and pre-IPO/TBD placeholders.
+
+    Accepts:
+      "$280-$550"
+      "SEK 60-300"
+      "KRW 2,500,000-3,800,000"
+      "SEK 100-500 (8-vector model: CPO + Jabil LRO + ...)"
+      "GBp 900-1,600 (FY2028-31)"
+      "70p-140p"
+      "C500-C800"
+    Rejects:
+      "$20-50B"                (market cap)
+      "TBD at IPO"             (placeholder)
+      "PRE-IPO"                (placeholder)
     """
     if value is None:
         return None, None
     s = str(value).strip()
     if not s:
         return None, None
-    if any(m in s.upper() for m in NON_NUMERIC_MARKERS):
+    if _has_placeholder(s):
         return None, None
     cleaned = _strip_currency(s)
     cleaned = re.sub(r"[~]", "", cleaned).strip()
-    # Reject if there's a stray letter still hanging around (e.g., "20-50B"
-    # becomes "20-50B" after stripping; presence of B/M is a signal).
-    if re.search(r"[A-Za-z]", cleaned):
-        return None, None
-    m = re.match(r"^\s*([\d,]+(?:\.\d+)?)\s*[-–]\s*([\d,]+(?:\.\d+)?)\s*$", cleaned)
+    # Expand K/M suffixes IN-PLACE first (e.g., "3.0M" -> "3000000") so the
+    # search regex below sees clean digit-only numbers. B is left alone so
+    # we can detect and reject market-cap ceilings (group 3 below).
+    cleaned = _expand_km_suffixes(cleaned)
+    # Search anywhere in the string (not anchored): tolerates trailing
+    # annotations like "(FY2028-30 blend)" or "(8-vector model: ...)".
+    # Third capture group catches an optional B suffix immediately after
+    # the high value, signalling a market-cap ceiling we should reject.
+    m = re.search(
+        r"([\d,]+(?:\.\d+)?)\s*[-–]\s*([\d,]+(?:\.\d+)?)\s*([Bb]?)",
+        cleaned,
+    )
     if not m:
+        return None, None
+    if m.group(3) in ("B", "b"):
         return None, None
     try:
         low = float(m.group(1).replace(",", ""))

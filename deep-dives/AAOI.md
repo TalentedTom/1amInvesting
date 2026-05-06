@@ -103,21 +103,50 @@ The stock appreciated from ~$90 (when originally scored 68) to $162, compressing
 
 ## AAOI's Role in the Supply Chain
 
-AAOI is the CUSTOMER of our monopoly positions:
-- AAOI buys EML lasers from LITE
+AAOI is the CUSTOMER of our monopoly positions (for EML) but SELF-SUPPLIES CW:
+- AAOI buys EML lasers from LITE (still dependent)
+- AAOI makes OWN CW lasers internally (350% capacity expansion by 2027)
 - AAOI buys laser components that originated on InP from AXTI
 - Those lasers were tested by AEHR's WLBI
 - Those wafers were grown by AIXA.DE's MOCVD tools
+
+CW laser self-supply = structural advantage when LITE CEO says external CW market is sold out (May 5, 2026). AAOI can produce when competitors (Innolight, Eoptolink, CIG) are gated by CW availability.
 
 When AAOI ships $1B in transceivers, every unit contains components from our Layer 0 positions. AAOI's revenue growth IS demand for SIVE/LITE/COHR/AXTI/AEHR.
 
 ## Key Risks
 
 - **Customer concentration:** 3 customers = 91% of revenue. Microsoft reportedly ~29%. Catastrophic if one slows.
-- **LightCounting warning:** "Production capacity catching up with demand... may lead to sharper price declines by end of 2026." Non-vertically-integrated assemblers (AAOI) most exposed.
-- **Not vertically integrated:** Buys lasers from LITE/COHR. If laser supply tightens, AAOI can't manufacture its own.
+- **LightCounting warning:** "Production capacity catching up with demand... may lead to sharper price declines by end of 2026." Transceiver ASSEMBLY commoditizing — but CW laser fab provides supply chain advantage (see PENDING below).
+- ~~**Not vertically integrated:** Buys lasers from LITE/COHR.~~ **CORRECTED May 5:** AAOI HAS internal CW laser fab + 350% capacity expansion by 2027. This was previously scored as a risk — it is now an ADVANTAGE. See PENDING RESCORE below.
 - **Still unprofitable:** FY2025 EPS -$0.26. Approaching breakeven but not there yet.
 - **$500M ATM dilution:** Equity program dilutes shareholders to fund expansion.
+
+## PENDING RESCORE — POST MAY 7 EARNINGS (Tagged May 5, 2026)
+
+**DO NOT APPLY UNTIL AFTER MAY 7 EARNINGS CALL.**
+
+LITE CEO May 5 confirmed structural CW laser shortage: "tension in our own supply line, externally to get lasers from the external market, CW lasers." LITE is reallocating 20% of EML fab to CW production. External CW market is SOLD OUT.
+
+**AAOI has internal CW laser fab with 350% capacity expansion by 2027.** This creates a two-tier transceiver market:
+- Tier 1 (vertically integrated — own CW): AAOI, LITE, COHR → can produce regardless of shortage
+- Tier 2 (non-integrated — buy CW): Innolight, Eoptolink, CIG → GATED by CW availability
+
+**Potential changes to apply post-earnings:**
+- **Base: ~65% → 68-70%** (+2-3 for vertical integration reclassification. CW fab moves AAOI from "generic assembler" to "vertically integrated producer with supply chain moat." Core Thesis +1-2.)
+- **Ceiling: $400-700 → $500-750** (CW advantage lets AAOI take share from gated competitors + potential external CW laser sales at shortage premium pricing $70-170/array.)
+- **Risk deduction reduced:** "Not vertically integrated" was -1. Now flipped to +0 or +1. Net +1-2 base impact.
+- **Score impact:** Could move from 71 → 73-74 WL.
+- **Classification still ⚡ BOTTLENECK** — CW fab makes the ride BIGGER but doesn't extend past pluggable S-curve peak (2027-28). Still a trade, not a structural hold.
+
+**WATCH FOR ON MAY 7 CALL:**
+1. Texas factory timeline — THE catalyst. H1 2027 = stock to $250+.
+2. CW laser capacity commentary — are they selling externally? If YES → changes classification.
+3. 1.6T transceiver qualification status
+4. Customer pipeline beyond top 3
+5. Any CPO commentary (would change thesis entirely)
+
+**TRIM LOGIC STILL HOLDS:** If AAOI spikes on May 7 beat, trim into strength → rotate into SOI.PA (CPO pure play, structural hold). CW advantage makes AAOI a better rocket but it's still a rocket, not a compounder.
 
 ## Verdict
 

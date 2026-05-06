@@ -1,13 +1,14 @@
 # HPS-A.TO — Hammond Power Solutions | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 62 | Base 68% (41/60) | Entry 53 (21/40) | **Owned ✓**
-**Price at Analysis:** C$277.73
-**Ceiling:** C$500-C$800 (DPA-adjusted)
-**Upside Ratio:** 1.8x-2.9x
-**Market Cap:** ~C$3.3B (~$2.4B)
+**Date:** May 5, 2026 (RESCORED — Q1 2026 beat + backlog explosion)
+**Framework Version:** v3.6.6
+**Score:** 66 WL | Base 73% (44/60) | Entry 55% (22/40) | **Owned ✓**
+**Price at Analysis:** C$294
+**Ceiling:** C$550-C$800 (2028-2030, AEG + data center backlog + DPA)
+**Upside Ratio:** 1.9x-2.7x
+**Market Cap:** ~C$3.5B (~$2.5B)
 **FY2025 Revenue:** C$898.3M (record, +13.9%)
-**Backlog:** +122% YoY (record)
+**Q1 2026 Revenue:** C$264M (beat C$236M est by 12%, RECORD)
+**Backlog:** +94.6% YoY (record, 53% data center)
 
 ---
 
@@ -116,6 +117,24 @@ All four benefit from the DPA + National Emergency. HPS is the transformer pilla
 - **Industrial multiples:** Even with strong growth, industrial companies trade 15-22x earnings, capping upside vs photonics names at 30-50x.
 - **Stock already ran:** C$180→C$277 = +54%. Much of the DPA catalyst may be priced.
 
+## Q1 2026 Earnings (REPORTED May 5, 2026 — RECORD)
+
+- **Revenue: C$264M** (beat C$236M est by 12%). RECORD quarter.
+- **Backlog: +94.6% YoY** — data center driven (53% of backlog). +4.1% QoQ.
+- **Adj EPS: C$2.08** (+30% YoY). Basic EPS C$1.64 (FX drag).
+- **Gross Margin: 30.1%** (+90bps QoQ, improving).
+- Custom product surging (data center applications).
+- Monterrey IV factory online Q1 — contributing to shipments.
+- AEG C$365M acquisition closing Q2 — doubles global footprint.
+- Capacity expanding to C$1.2B by 2027.
+- Data center: ~30% of sales, **53% of backlog** (accelerating mix shift).
+- Level 3 investor validation: "very solid" + "great compounders" (May 5).
+
 ## Verdict
 
-62 — below WL threshold. North America's #1 dry-type transformer maker with DPA + National Emergency tailwinds. Record backlog +122%. AEG acquisition doubles global footprint. But competitive market (not a monopoly), industrial multiples cap upside, and stock has already appreciated significantly. Owned at Tier 3 as part of the grid infrastructure mini-ETF alongside AMSC, CLF, PLPC. The DPA demand floor provides downside protection.
+66 WL ⚡. North America's #1 dry-type transformer maker. Q1 2026 RECORD C$264M revenue (+12% beat). Backlog EXPLODED +94.6% YoY (data center 53%). AEG acquisition closing Q2 doubles global reach. DPA + Presidential National Emergency = demand floor. Monterrey IV factory online. Capacity → C$1.2B by 2027. Level 3 investor: "great compounders." Still competitive (not monopoly — Eaton, ABB, Schneider exist), industrial multiples cap upside, stock above C$240 consensus. But backlog +94.6% in a market with 18-36 month transformer lead times means multi-year revenue visibility. Bottleneck (⚡) — not a chokepoint, but the supply gap is extreme and the DPA provides a legislated demand floor.
+
+## Score Change Log
+- Apr 24, 2026: 62 FAIL (Initial deep dive. DPA + AEG + record backlog.)
+- Apr 26, 2026: 62→66 WL (DPA confirmed, AEG + HPS ceiling raised C$450-700→C$500-800.)
+- **May 5, 2026: 66 WL** (Q1 RECORD C$264M beat. Backlog +94.6% YoY (data center 53%). AEG closing Q2. Monterrey IV online. Level 3 investor: "great compounders." Base 68→73%: Cycle +1, Catalysts +1, Macro +1. Ceiling C$500-800→C$550-800. Price C$294 limits Entry. Above C$240 analyst consensus.)
