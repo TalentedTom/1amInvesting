@@ -9,9 +9,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "HC #1 (dual-vector + Amazon/Marvell/Celestial confirmed)",
             "Port": "✓",
-            "Current Price": "SEK 46.60",
+            "Current Price": "SEK 48.78",
             "Ceiling Target": "SEK 100-500 (8-vector model: CPO + Jabil LRO + SATCOM + Defense primes + Apple + Lightmatter + India 5G + Lightelligence. Goldman $91B CPO TAM at SEK 80 trigger.)",
-            "Upside": "2.1x-10.7x",
+            "Upside": "2.1x-10.3x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: CW laser — silicon cannot generate light. Every CPO gen. 2026-2035+",
             "Revenue Explosion": "Pipeline $453M (+64%). Product pipeline +90%. 3 hyperscaler paths: JBL 1.6T + Amazon/Celestial (SEC-confirmed) + Ayar Labs. SATCOM ramp 2027: $21M→$124M by 2030. Wireless BU 2x Photonics. $1B SAM.",
             "Updated": "May 5",
@@ -20,7 +20,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT NOW — highest score in framework. Dual-vector TAM gap widest in portfolio.",
             "IR Check": "⚡ ACTIVE MONITORING\nNASDAQ formal filing date\nTicker symbol confirmation\nS-1/F-1 filing with SEC\nQ2 2026 earnings (JBL revenue starts)\nAdditional customer announcements\nIndex/ETF inclusion events",
             "Supercycle": "InP CW Laser Gen2+3",
-            "Change %": "-14.81%"
+            "Change %": "-10.82%"
         },
         {
             "Rank": 2,
@@ -31,9 +31,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC #2 (WLBI sole-source + SiPh dual-purpose burn-in + PPBI via Sonoma)",
             "Port": "✓",
-            "Current Price": "$91.58",
+            "Current Price": "$92.92",
             "Ceiling Target": "$280-$550",
-            "Upside": "3.1x-6.0x",
+            "Upside": "3.0x-5.9x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: Sole-source WLBI — no competitor exists. Every compound semi. 2026-2035+",
             "Revenue Explosion": "H2 bookings >$92M. Record $41M single order Apr 16. 3rd SiPh customer won Mar 31. Sonoma AI ASIC production. Razor-blade flywheel: contactors > systems revenue.",
             "Updated": "Apr 24",
@@ -42,20 +42,20 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: Q1-Q2 FY2027\n(build position summer 2026)\nSiC backlog = baseline\nGaN = step function\nPhotonics = 3rd step function",
             "IR Check": "❌ NEEDS REVIEW\nJust reported Apr 8\nCheck IR for new deck",
             "Supercycle": "DB1 Photonics",
-            "Change %": "+0.52%"
+            "Change %": "+1.99%"
         },
         {
             "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
-            "Total": 78,
+            "Total": 81,
             "Base": 77,
-            "Entry": 80,
+            "Entry": 88,
             "Rating": "HC — LIDE glass monopoly + Intel CPO waveguide (patent-linked) + Ayar Labs glass bridge architecture. VLM Kapital patent chain confirmed.",
             "Port": "✓",
-            "Current Price": "EUR 23.60",
+            "Current Price": "EUR 22.60",
             "Ceiling Target": "€80-200 (FY2028-30). Intel/Ayar Labs patent US20240027706A1 confirmed. VLM Kapital chain verified. CEO 50-100 machines/customer.",
-            "Upside": "3.4x-8.5x",
+            "Upside": "3.5x-8.8x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: LIDE glass TGV — organic cannot support next-gen. Triple supercycle: DB5 AI packaging + DB3 LEO Space (SpaceX) + DB8 Defense. 2027-2035+",
             "Revenue Explosion": "📈 GLASS SUBSTRATE EQUIPMENT ORDERS\nTrigger 1: Samsung SEMCO mass production (end 2026)\nTrigger 2: Intel Absolics HVM ramp\nTrigger 3: TSMC glass substrate R&D orders\nTrigger 4: Apple glass substrate via SEMCO\nTrigger 5: Tesla Terafab via Intel packaging\nEach new glass fab = LPKF equipment orders\n$170M MC = smallest HC stock in portfolio",
             "Updated": "May 2",
@@ -64,7 +64,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD: 1-2% (explore position)\n$170M MC = highest asymmetry in portfolio\nGlass substrates = successor to ABF\nSamsung SEMCO process designed around LPKF LIDE\nIntel + Absolics also using LPKF since 2023\nOnly competitor JWMT (Samsung dual-sourcing)\nRevenue inflection 2027-2028\nPatience required — 2-3 year thesis\nUpgrade to 2-3% on first glass production order",
             "IR Check": "❌ NEEDS DEEP DIVE\nKorean-language SEMCO supply chain verification\nJWMT competitive positioning\nGlass substrate revenue breakout in earnings\nIntel Terafab packaging confirmation\nTSMC glass substrate equipment orders\nApple SEMCO glass substrate timeline",
             "Supercycle": "Packaging — Glass Substrate Equipment",
-            "Change %": "+3.06%"
+            "Change %": "-1.31%"
         },
         {
             "Rank": 4,
@@ -97,7 +97,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "HC — World's first native color LiDAR (REV8). ONE sensor replaces camera+LiDAR. L4 chip 2x range. Google+Volvo confirmed. Digital architecture monopoly WIDENED.",
             "Port": "✓",
-            "Current Price": "$26.71",
+            "Current Price": "$26.62",
             "Ceiling Target": "$75-280 (REV8 camera elimination TAM expansion + Google/Volvo validation)",
             "Upside": "2.8x-10.5x",
             "Position Type": "🔒 CHOKEPOINT\nPlatform: Physical AI perception — every robot/drone/AV needs vision+depth. 2026-2035+",
@@ -108,7 +108,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD — pre-retail discovery, asymmetric setup",
             "IR Check": "❌ NEEDS MONITORING\nSAFE LiDAR Act passage timeline\nDoD procurement orders post-June 2026 ban\nQ1 2026 revenue (StereoLabs contribution)\nGAAP profitability sustainability\nLuminar competitive positioning\nHesai response to bans",
             "Supercycle": "DB2 Physical AI / Sensors",
-            "Change %": "+5.74%"
+            "Change %": "+5.40%"
         },
         {
             "Rank": 6,
@@ -119,9 +119,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HC — E-band monopoly + V-band discounted 15%/yr. Blended 4.24x.",
             "Port": "",
-            "Current Price": "GBp 335",
+            "Current Price": "GBp 323.25",
             "Ceiling Target": "GBp 900-1,600 (2028-33 blended, V-band discounted 15%/yr)",
-            "Upside": "2.7x-4.8x",
+            "Upside": "2.8x-4.9x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: E-band GaN SSPA monopoly + V-band consumer terminal TAM (SpaceX funded R&D). Capacity lock-out blocks Amazon. Golden Dome #1 contractor link. 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "Apr 26",
@@ -130,7 +130,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB3 LEO Space + DB8 Defense",
-            "Change %": "-2.16%"
+            "Change %": "-5.59%"
         },
         {
             "Rank": 7,
@@ -141,9 +141,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC (NDAA battery + Physical AI)",
             "Port": "",
-            "Current Price": "$21.02",
+            "Current Price": "$21.67",
             "Ceiling Target": "$44-$146",
-            "Upside": "2.1x-6.9x",
+            "Upside": "2.0x-6.7x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics+Reg: 500 Wh/kg no competitor within 2x + NDAA regulatory moat. 2026-2035+",
             "Revenue Explosion": "🔥🔥 NDAA DEMAND ACTIVATION\nTrigger 1: NDAA Phase II enforcement 2026/2027\nTrigger 2: Pentagon drone procurement contracts\nTrigger 3: eVTOL FAA certifications (Joby, Archer)\nTrigger 4: Nanotech US manufacturing ramp\nTrigger 5: Humanoid robot battery contracts\n1M US Army drones by 2028 = mandated demand\nChinese battery suppliers BANNED by law",
             "Updated": "Apr 24",
@@ -152,7 +152,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD: 2-3% (Tier 1 candidate)\nNDAA mandate = government-mandated demand floor\n500 Wh/kg = 43% above nearest US competitor\nChinese suppliers BANNED (FEOC Section 842)\n1M drones by 2028 = $580M/yr addressable\nOnly pure Phase 2 (Physical AI) HC stock\nRegulatory moat pair with NBIS\nAdd on defense contract announcements\nEarnings ~May 7",
             "IR Check": "❌ NEEDS REVIEW\nNDAA Phase II enforcement timeline\nPentagon drone procurement schedule\nNanotech US production capacity\neVTOL battery qualification status\nDefense contract pipeline\nSolid-state competition timeline",
             "Supercycle": "DB7 Defense Battery + Physical AI",
-            "Change %": "-1.36%"
+            "Change %": "+1.66%"
         },
         {
             "Rank": 7,
@@ -207,9 +207,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — Dual moat (physics 40x + ITC). NVIDIA fills 2 fabs. Google+AMD ramping. Fab1 $1.5B. HC at ~$230.",
             "Port": "",
-            "Current Price": "$267.81",
+            "Current Price": "$278.58",
             "Ceiling Target": "$400-$900 (FY2028-30 blended, 15%/yr)",
-            "Upside": "1.5x-3.4x",
+            "Upside": "1.4x-3.2x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics+Legal: VPD required underneath CPO + ITC import ban for life of patents. 2026-2035+",
             "Revenue Explosion": "FY2025 $452.7M (+12.1%). Royalty $57.4M (+23.2%). Net income $118.6M (26.2% margin). Gen 5 VPD ramp beginning.",
             "Updated": "Apr 27",
@@ -218,7 +218,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "MONITOR for pullback. Base 73% = strong thesis. Entry improves significantly at $150-170.",
             "IR Check": "Q1 2026 earnings Apr 21. PhotonCap deep analysis published same day.",
             "Supercycle": "DB1 AI Interconnect + DB4 Datacenter Power",
-            "Change %": "-0.81%"
+            "Change %": "+3.18%"
         },
         {
             "Rank": 10,
@@ -273,9 +273,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "WL — Combination moat: microturbine + absorption chiller + 800VDC + sub-5ppm NOx. Edge AI DC BTM power. 230x gap vs Bloom. NASDAQ uplisting mandated. ZERO DC revenue yet.",
             "Port": "",
-            "Current Price": "$12.13",
+            "Current Price": "$11.99",
             "Ceiling Target": "$35-140 (first DC deal + NASDAQ uplisting + Bloom gap closure)",
-            "Upside": "2.9x-11.5x",
+            "Upside": "2.9x-11.7x",
             "Position Type": "",
             "Revenue Explosion": "",
             "Updated": "May 4",
@@ -284,7 +284,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "",
-            "Change %": "-0.57%"
+            "Change %": "-1.72%"
         },
         {
             "Rank": 14,
@@ -295,7 +295,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — EML near-monopoly. 8x prod STILL 20-30% short. 5th fab $5B capacity. Multi-yr backlog.",
             "Port": "",
-            "Current Price": "$937.42",
+            "Current Price": "$926.59",
             "Ceiling Target": "$1,500-$2,500",
             "Upside": "1.6x-2.7x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: EML laser near-monopoly — capacity sold out to 2029. 2026-2030+",
@@ -306,7 +306,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 3-4% allocation\n$28B MC = large cap, limited timing edge\nSold out into 2029 = 3yr visibility\nOCS + CPO = incremental upside\nCustom chip wave = TAM expansion\nDon't overweight at $826 post-run\nAdd on drawdowns only",
             "IR Check": "❌ NEEDS REVIEW\nOFC 2026 deck likely exists\nCould be major like COHR",
             "Supercycle": "DB1 Photonics",
-            "Change %": "-2.36%"
+            "Change %": "-3.48%"
         },
         {
             "Rank": 14,
@@ -317,9 +317,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "WL — EU sovereign compute + $46B backlog + Meta/MSFT/NVIDIA. Buildout long, execution risk.",
             "Port": "✓",
-            "Current Price": "$178.07",
+            "Current Price": "$188.02",
             "Ceiling Target": "$400-650 (GPU cloud + ClickHouse 28% stake repricing + Eigen AI inference + platform multiple re-rate)",
-            "Upside": "2.2x-3.7x",
+            "Upside": "2.1x-3.5x",
             "Position Type": "🔒 CHOKEPOINT\nRegulatory: EU sovereign compute — GDPR/AI Act prevents US hyperscaler substitution. 2026-2030+",
             "Revenue Explosion": "📈 REVENUE INFLECTION\nFY2025: $530M → FY2026 guide: $3.0-3.4B\nARR target $7-9B by end-2026\nBuildout long — $16-20B capex in 2026\nMeta/MSFT anchor but execution risk real",
             "Updated": "May 2",
@@ -328,7 +328,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: Q3 2026\n(position BEFORE Q4 2026 print)\nMeta+MSFT revenue hits in H2 2026\nMax allocation by Oct 2026\nHold through Feb 2027 earnings",
             "IR Check": "❌ NEEDS REVIEW\nQ1 2026 earnings Apr 29\nMissouri campus milestones\nToken Factory margins\nSovereign AI pipeline",
             "Supercycle": "AI Compute",
-            "Change %": "+1.18%"
+            "Change %": "+6.83%"
         },
         {
             "Rank": 16,
@@ -339,9 +339,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "FAIL — monitor for Covelya close + TSX uplisting",
             "Port": "",
-            "Current Price": "CAD 7.14",
+            "Current Price": "CAD 7.27",
             "Ceiling Target": "C$14-C$28",
-            "Upside": "2.0x-3.9x",
+            "Upside": "1.9x-3.9x",
             "Position Type": "🔒 CHOKEPOINT\nQualification: Sonardyne gold standard underwater positioning — decades of qual inertia. 2026-2032+",
             "Revenue Explosion": "Standalone C$165-175M guided (FY2026). Combined C$365M (2025). EBITDA +60-100%. C$222M Q1 combined orders.",
             "Updated": "Apr 24",
@@ -350,7 +350,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "MONITOR — Covelya integration is the binary. If executed = platform transformation. If struggles = overleveraged.",
             "IR Check": "Earnings May 28. Covelya close Q2 2026. TSX uplisting TBD.",
             "Supercycle": "DB8 Defense Supercycle — Underwater Autonomous Systems",
-            "Change %": "+0.71%"
+            "Change %": "+2.54%"
         },
         {
             "Rank": 16,
@@ -361,9 +361,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC 🔒 — CPO PURE PLAY (Level 3 investor named May 3). >95% Photonics-SOI monopoly. 55,000% CPO growth curve applies directly.",
             "Port": "✓",
-            "Current Price": "EUR 151.35",
+            "Current Price": "EUR 142.90",
             "Ceiling Target": "€250-€550 (2028-2031)",
-            "Upside": "1.7x-3.6x",
+            "Upside": "1.7x-3.8x",
             "Position Type": "🔒 CHOKEPOINT\nIP: >95% Photonics-SOI, 3,500+ Smart Cut patents\nSiN = complement (dismissed). Fungible capacity RF→Photonics.",
             "Revenue Explosion": ">95% Photonics-SOI share (BofA). 3,500+ patents.\nSERENITY MAY 3: Named SOI as CPO pure play alongside SIVE/ShunSin/MSScorps.\n55,000% CPO growth curve applied DIRECTLY to SOI substrate demand.\nGFS May 5: SiPh doubling 2026, >$1B run rate end 2028.\nGoldman $91B CPO → $2.7-4.5B substrate capture at 95% share.\n4x content step-up pluggable→CPO, 8x+ at 3.2T.\nFungible RF→Photonics capacity, zero capex (PhotonCap confirmed).\nSiN = complement not threat (PhotonCap PhD).\nMulti-vector: DC + LiDAR + quantum + defense, same wafer.\n\"Everything happens in the next two years\" — Level 3 investor.",
             "Updated": "May 5",
@@ -372,7 +372,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HC 3-5%. REBUILD position — trimming was an error. May 27 🔥.",
             "IR Check": "⚡ May 27 FY2026 results 🔥🔥\nLevel 3 investor CPO pure play classification (May 3).\nGFS SiPh doubling confirmed. TSMC COUPE H2 2026.\nPhotonics % of rev — crossing 30% confirms HC permanently.\nAAOI trim May 7 → rotate into SOI.PA on pullback.",
             "Supercycle": "DB1 SiPh Substrate",
-            "Change %": "-3.41%"
+            "Change %": "-8.81%"
         },
         {
             "Rank": 16,
@@ -427,9 +427,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "FAIL (borderline — needs Tier 1 ROSIE 2 order to upgrade)",
             "Port": "",
-            "Current Price": "EUR 14",
+            "Current Price": "EUR 13.50",
             "Ceiling Target": "€25-€45",
-            "Upside": "1.8x-3.2x",
+            "Upside": "1.9x-3.3x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: MBE equipment for QD lasers + ROSIE SiPh + quantum materials. 2027-2035+",
             "Revenue Explosion": "⏳ THREE GROWTH VECTORS SIMULTANEOUSLY\nV1: QD LASERS FOR DATACENTER (biggest thesis)\n  → Baker: 'severe laser shortage'\n  → QD lasers = solution, MBE = ONLY growth method\n  → Japan order Jan 2026: MBE 6000 for QD laser PRODUCTION scaling\n  → Not R&D — production order for datacom\n  → Riber is global MBE leader (duopoly w/ Veeco)\nV2: ROSIE FOR SiPh INTEGRATED PHOTONICS\n  → 300mm production compatible — UNIQUE to Riber\n  → Veeco has NO equivalent platform\n  → Commercial industrialization 2027\n  → ROSIE 2 dual-chamber being built 2026\n  → Tower/GFS/Samsung SiPh expansion = ROSIE demand\nV3: QUANTUM COMPUTING MBE\n  → MSFT Quantum customer (LinkedIn intel, not public)\n  → NQCP partnership: BTO/STO thin films for qubits\n  → Google/IBM/Amazon quantum programs = future pipeline\n\n12 machines/year is FLOOR not CEILING\nTPICAP analyst: 'could change dimension, transform business model'\nFY2025: Rev €40.3M, NI €5.2M (+27%), GM 38.6%\n27x forward P/E, €330M market cap = Hidden Gold Rush\nForward TAM: €95-205M revenue by 2029-2030 (2.4-5.1x current)",
             "Updated": "Apr 24",
@@ -438,7 +438,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "STARTER POSITION 2-3% DEFENSIBLE\nNo longer 'do not buy'\nBuild small, add on confirmation\nGate to HC (75+):\n  □ 3rd+ ROSIE order confirming ramp\n  □ MSFT Quantum public confirmation\n  □ 2nd QD laser production customer\n  □ Revenue inflection in quarterly reporting\n  □ ANY TWO → 73-76 HC",
             "IR Check": "⏳ ACTIVE WATCH\nROSIE 2 delivery timeline\nAdditional QD laser production orders\nMSFT Quantum public confirmation\nQ1 2026 revenue report\nOFC/industry conference ROSIE demos\nBezons capacity expansion announcements",
             "Supercycle": "DB1 SiPh Equipment / Quantum",
-            "Change %": "+3.86%"
+            "Change %": "+0.15%"
         },
         {
             "Rank": 21,
@@ -449,9 +449,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "HC (top)",
             "Port": "",
-            "Current Price": "$338.31",
+            "Current Price": "$342.56",
             "Ceiling Target": "$500-$900",
-            "Upside": "1.5x-2.7x",
+            "Upside": "1.5x-2.6x",
             "Position Type": "🔒 CHOKEPOINT\nVertical: Most advanced InP lines globally — doubling capacity TWICE still not enough. 2026-2030+",
             "Revenue Explosion": "🔥 CPO REVENUE INFLECTION\nTrigger: CPO appears as breakout line item\nTiming: Q1-Q2 2027 earnings\nExpected move: 60-100% in 8-12 weeks\n$307→$450-550 on confirmation\n\n🔥 OFC 2026 TAM EXPANSION — $20B+ INCREMENTAL BY 2030\nOCS: $4B TAM (10+ customers, liquid crystal solid-state)\nCPO scale-up: $15B TAM ('dwarf scale-out, orders of magnitude larger')\nThermal: $2B TAM (Thermadite ceramic, waste heat→electricity)\nMulti-Rail: 4x traffic same footprint, rev H1 2027\n6-inch InP at 80% target capacity — AHEAD of schedule\nBook-to-bill >4x in datacenter\nGM +470bps, targeting >42%, 'early stages'\nNVIDIA $2B equity + multi-billion purchase commitment\nApple 3D sensing partnership (H2 2026 revenue)\nMunich tools sold (margin accretive)\nJim Anderson: 'Scale-up CPO = 100% incremental TAM'",
             "Updated": "Apr 23",
@@ -460,7 +460,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: Q4 2026\n(position BEFORE Q1 2027 print)\nBuild through H2 2026 as CPO ships\nMax allocation by Dec 2026",
             "IR Check": "✅ OFC Mar 17 2026\nTech Innovation Briefing\nScore: 78→86 ELITE\nNext: Q1 post May 13 ER",
             "Supercycle": "Photonics Platform",
-            "Change %": "+1.55%"
+            "Change %": "+2.82%"
         },
         {
             "Rank": 21,
@@ -471,7 +471,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 45,
             "Rating": "WL — Custom ASIC duopoly CHOKEPOINT. 2-player with Broadcom. 4 hyperscalers locked in.",
             "Port": "",
-            "Current Price": "$169.86",
+            "Current Price": "$167.91",
             "Ceiling Target": "$260-$370 (FY2028-31 blended, CPO discounted 15%/yr)",
             "Upside": "1.5x-2.2x",
             "Position Type": "🔒 CHOKEPOINT\nDuopoly: Custom ASIC — only MRVL + Broadcom design hyperscaler AI chips. 2-3yr design cycle = lock-in. Amazon, Google, Microsoft, Meta. 2026-2035+",
@@ -482,7 +482,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "Custom ASIC monopoly + Celestial photonic fabric. Every hyperscaler locked in (Amazon, Google, Microsoft). Better expressed via SIVE at 100x more leverage.",
             "IR Check": "",
             "Supercycle": "DB1 AI Interconnect + Custom ASIC",
-            "Change %": "-0.66%"
+            "Change %": "-1.80%"
         },
         {
             "Rank": 23,
@@ -493,7 +493,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC Venture",
             "Port": "✓",
-            "Current Price": "$174.90",
+            "Current Price": "$176",
             "Ceiling Target": "$300-$600",
             "Upside": "1.7x-3.4x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Transceiver assembly — capacity expanding to 500K/mo. Competitive market. 1-2yr window.",
@@ -504,7 +504,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OVERWEIGHT: H1 2027\n(build position through 2026)\n800G ramp = gradual build\nQ3 2027 = inflection visible\nMax allocation by mid-2027",
             "IR Check": "❌ NEEDS REVIEW\n1.6T roadmap, margin",
             "Supercycle": "DB1 Photonics",
-            "Change %": "-3.48%"
+            "Change %": "-2.87%"
         },
         {
             "Rank": 24,
@@ -515,7 +515,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL (Sole EO polymer, 3 integration paths, pre-revenue)",
             "Port": "",
-            "Current Price": "$15.11",
+            "Current Price": "$15.12",
             "Ceiling Target": "$20-$50",
             "Upside": "1.3x-3.3x",
             "Position Type": "⚡ BOTTLENECK\nTech: EO polymer modulator — pre-revenue, unproven at scale. Potential Wave 4 if polymer beats SiPh. 2-4yr window.",
@@ -526,7 +526,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "REDUCE TO 0.5%\nPre-revenue, $237K FY2025\nHyperLight ahead on TFLN\n6,600x P/S = venture pricing\nWait for H2 2026 tapeout\nDon't add until tapeout confirms",
             "IR Check": "❌ NEEDS REVIEW\nMonitor Stage 3→4\nH2 2026 tapeout results",
             "Supercycle": "EO Polymer Modulator",
-            "Change %": "-8.39%"
+            "Change %": "-8.36%"
         },
         {
             "Rank": 25,
@@ -537,9 +537,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — SiPh foundry ~85%. NVIDIA CPO pull-forward. AP7 15K/mo H2 2027.",
             "Port": "",
-            "Current Price": "$224.96",
+            "Current Price": "$219.44",
             "Ceiling Target": "$300-700 (SiPh foundry TAM expanded by 142% CPO CAGR. $350M+ SiPh capex. Tower = THE CPO PIC foundry.)",
-            "Upside": "1.3x-3.1x",
+            "Upside": "1.4x-3.2x",
             "Position Type": "🔒 CHOKEPOINT\nCapital+Qual: ~85% SiPh foundry — 12-18mo requalification barrier. 2026-2030+",
             "Revenue Explosion": "📈 TIER 1 SiPh CUSTOMER WIN\nTrigger: Apple/NVIDIA/hyperscaler announces\nSiPh production at Tower\nTiming: Unpredictable, event-driven\nExpected move: 40-60% in 4-8 weeks",
             "Updated": "May 2",
@@ -548,7 +548,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 3-4% allocation\nEvent-driven catalyst = unpredictable\nStay positioned, don't try to time\nSiPh revenue doubling provides baseline",
             "IR Check": "❌ NEEDS REVIEW\nCheck SiPh/CPO roadmap",
             "Supercycle": "DB1 Photonics",
-            "Change %": "-3.66%"
+            "Change %": "-6.02%"
         },
         {
             "Rank": 25,
@@ -559,7 +559,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "Multi-sector SerDes + DustPhotonics SiPh PIC",
             "Port": "",
-            "Current Price": "$185.75",
+            "Current Price": "$186.70",
             "Ceiling Target": "$300-$500",
             "Upside": "1.6x-2.7x",
             "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
@@ -570,7 +570,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD: 1-2%\nDown 29% YTD from highs = entry window\nOnly portfolio stock spanning DC + robots + auto + edge\nSerDes IP licensing = near-100% margin recurring\nArm Total Design = ecosystem access\nUpgrade to 2-3% on robot/auto design win\nGate to HC: multi-sector revenue proof",
             "IR Check": "❌ NEEDS REVIEW\nRobot/auto SerDes pipeline\nSerDes IP licensing trajectory\nCustom chip customer wins\nPCIe Gen6 production ramp\nZeroFlap Optics customer count",
             "Supercycle": "Connectivity — DC + Robots + Auto + Edge",
-            "Change %": "-6.42%"
+            "Change %": "-5.95%"
         },
         {
             "Rank": 25,
@@ -581,9 +581,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL ⚡ — Record Q1 C$264M beat. Backlog +94.6% YoY (data center). AEG closing Q2. DPA demand floor. Serenity: great compounder.",
             "Port": "",
-            "Current Price": "CAD 301.24",
+            "Current Price": "CAD 289.30",
             "Ceiling Target": "C$550-C$800 (2028-2030)",
-            "Upside": "1.8x-2.7x",
+            "Upside": "1.9x-2.8x",
             "Position Type": "⚡ BOTTLENECK\nDemand: DPA demand floor for transformers. #1 NA but competitive market. 2-3yr window.",
             "Revenue Explosion": "📈 RECORD Q1 + BACKLOG EXPLOSION\nQ1 Rev C$264M (beat C$236M est by 12%). Record sales.\nBacklog +94.6% YoY — data center driven (53% of backlog).\nCustom product surging (data centre applications).\nAEG C$365M acquisition closing Q2 — Europe/Asia expansion.\nMonterrey IV factory online Q1 — shipping.\nCapacity expanding to C$1.2B by 2027.\nAdj EPS C$2.08 (+30% YoY). GM 30.1% (+90bps QoQ).\nDPA + Presidential National Emergency for transformers.\nData center ~30% of sales → growing toward 40%+.\nSerenity May 5: \"very solid\" + \"great compounders\".",
             "Updated": "May 5",
@@ -592,18 +592,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD 1-2%. Compounder, not rocket. Add on pullbacks.",
             "IR Check": "⚡ AEG closing Q2 — watch for integration.\nBacklog conversion rate Q2-Q3.\nData center % of sales — crossing 40%?\nMonterrey IV ramp to full capacity.\nDPA contract announcements.",
             "Supercycle": "Transformers/Switchgear",
-            "Change %": "+3.65%"
+            "Change %": "-0.46%"
         },
         {
             "Rank": 28,
             "Ticker": "PL",
             "Name": "Planet Labs",
-            "Total": 62,
+            "Total": 58,
             "Base": 63,
-            "Entry": 60,
+            "Entry": 50,
             "Rating": "WL-adjacent (defense pivot real, Path B competitive)",
             "Port": "",
-            "Current Price": "$37.58",
+            "Current Price": "$38.38",
             "Ceiling Target": "$65-$125",
             "Upside": "1.7x-3.3x",
             "Position Type": "⚡ BOTTLENECK\nRegulatory: Unclassified intelligence niche — valid moat but satellite fleet depreciates. 2-3yr window.",
@@ -614,7 +614,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "WAIT — DO NOT BUILD YET\nConditional entry only\nAt $34: 68 WL (overvalued)\nAt $25: 72 WL (fair)\nAt $20: 74 WL (near HC)\nAt $18: 75+ HC candidate\nMax position: 1% (Tier 3)\nPhase 3 diversifier only\nNot a bottleneck — constellation moat\nCapital better in AMPX/AEHR/SIVE until\nwarrant flush creates entry",
             "IR Check": "❌ NEEDS REVIEW\nWarrant dilution impact (Apr 27)\nPost-flush share count (~350M?)\nSHIELD task order conversion\nGoogle Suncatcher timeline\nJSAT model 2nd/3rd contracts\nDefense revenue trajectory\nGross margin stabilization\nPelican fleet revenue ramp",
             "Supercycle": "DB3 LEO Space + Defense",
-            "Change %": "+2.08%"
+            "Change %": "+4.27%"
         },
         {
             "Rank": 29,
@@ -625,9 +625,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "ForgeX containerized mfg + $645.7M EUCOM sole-source + $75B Pentagon drone budget",
             "Port": "",
-            "Current Price": "$24.85",
+            "Current Price": "$25.79",
             "Ceiling Target": "$80-$160",
-            "Upside": "3.2x-6.4x",
+            "Upside": "3.1x-6.2x",
             "Position Type": "⚡ BOTTLENECK\nTemporal: ForgeX first-mover in frontline mfg. Combat-proven. $645.7M sole-sourced. Replicable in 2-3yrs. PE 79% control. 3-5yr window.",
             "Revenue Explosion": "FY2025 $433M. FY2026 guide $800M+ (+85%). Funded backlog $503M (+181%). Pipeline $8.1B.",
             "Updated": "Apr 25",
@@ -636,7 +636,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "MONITOR — no structural moat, 78% single-customer, PE 79% voting control. Wait for pullback to $18-20.",
             "IR Check": "IPO Apr 16, 2026. Quiet period ends mid-May. Goldman/BofA/Jefferies underwriters.",
             "Supercycle": "DB8 Defense Supercycle — Combat Drones / UAS",
-            "Change %": "+0.15%"
+            "Change %": "+3.94%"
         },
         {
             "Rank": 30,
@@ -647,7 +647,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "SOFC behind-the-meter + Oracle 2.8GW + $20B backlog",
             "Port": "",
-            "Current Price": "$288.75",
+            "Current Price": "$286.58",
             "Ceiling Target": "$350-$600",
             "Upside": "1.2x-2.1x",
             "Position Type": "⚡ BOTTLENECK\nSpeed: 90-day SOFC deployment advantage — fades as grid connections improve. 2-4yr window.",
@@ -658,7 +658,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD: 2-3% (Tier 2)\nPower is the #1 DC bottleneck\n90-day install vs 5-10 years for grid\n$20B backlog = multi-year visibility\nOracle 2.8 GW + AEP $2.65B + Brookfield $5B\nFills LAST GAP in portfolio supply chain\nMonitor margins closely — must expand\nValuation stretched at 69x FY27E\nDon't chase after today's move",
             "IR Check": "❌ NEEDS REVIEW\nQ1 FY2026 margins (must expand)\nOracle deal revenue recognition timing\nManufacturing 2 GW ramp execution\nBacklog conversion rate\nNatural gas price sensitivity\nSMR competition timeline",
             "Supercycle": "DB7 AI DC Power",
-            "Change %": "-2.97%"
+            "Change %": "-3.69%"
         },
         {
             "Rank": 30,
@@ -669,9 +669,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Layer -2 InP substrate + >$60M backlog + China permit risk",
             "Port": "",
-            "Current Price": "$100.74",
+            "Current Price": "$93.39",
             "Ceiling Target": "$120-$200",
-            "Upside": "1.2x-2.0x",
+            "Upside": "1.3x-2.1x",
             "Position Type": "⚡ BOTTLENECK\nSupply: InP substrate capacity constraint. Clears when China permits flow + capacity doubles. 1-2yr window.",
             "Revenue Explosion": "📈 InP SUBSTRATE DEMAND\nTrigger: EML/SiPh customer qualification\nTiming: H2 2026-2027\nExpected move: 40-60% on major order",
             "Updated": "Apr 24",
@@ -680,7 +680,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 1% allocation\nUpstream material play\nEvent-driven, monitor quarterly",
             "IR Check": "❌ NEEDS REVIEW\nInP substrate expansion",
             "Supercycle": "DB1 Photonics",
-            "Change %": "-6.10%"
+            "Change %": "-12.94%"
         },
         {
             "Rank": 32,
@@ -691,9 +691,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "InP epiwafer + Deutsche Bank Takeover Code + Strategic Review",
             "Port": "",
-            "Current Price": "GBp 46.70",
+            "Current Price": "GBp 44.05",
             "Ceiling Target": "70p-140p",
-            "Upside": "1.5x-3.0x",
+            "Upside": "1.6x-3.2x",
             "Position Type": "⚡ BOTTLENECK\nCatalyst: M&A strategic review — event-driven, not structural. Single trigger. 6-12mo window.",
             "Revenue Explosion": "📈 TAKEOVER / EML CASCADE\nTrigger: Deutsche Bank Takeover Code filing\nor EML shortage driving epiwafer demand\nTiming: 2026-2027\nExpected move: 50-100% on takeover bid",
             "Updated": "Apr 24",
@@ -702,7 +702,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD READY: 1% allocation\nTakeover = event-driven\nEML shortage = steady catalyst\nTime-limited bottleneck (2-3 years)",
             "IR Check": "❌ NEEDS REVIEW\nStrategic Review updates\nPhotonics segment breakdown",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "-6.04%"
+            "Change %": "-11.37%"
         },
         {
             "Rank": 32,
@@ -713,7 +713,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Grid + Navy SPS + HTS wire. DPA beneficiary. 85% competitive.",
             "Port": "",
-            "Current Price": "$54.58",
+            "Current Price": "$55.62",
             "Ceiling Target": "$70-$120",
             "Upside": "1.3x-2.2x",
             "Position Type": "⚡ BOTTLENECK\nDemand: DPA grid + Navy SPS. Competitive in grid (85%). Near-monopoly SPS (15%). 2-3yr window.",
@@ -724,18 +724,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4b Grid + DB8 Defense",
-            "Change %": "-3.39%"
+            "Change %": "-1.54%"
         },
         {
             "Rank": 32,
             "Ticker": "VIAV",
             "Name": "VIAV Solutions",
-            "Total": 44,
+            "Total": 48,
             "Base": 60,
-            "Entry": 20,
+            "Entry": 30,
             "Rating": "FAIL — Competitive T&M market. 6+ competitors. Keysight 3x larger. Good company, not a chokepoint.",
             "Port": "",
-            "Current Price": "$54.35",
+            "Current Price": "$53.33",
             "Ceiling Target": "$50-$90",
             "Upside": "0.9x-1.7x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Optical test — competitive market, many players. Legacy position. 1-2yr window.",
@@ -746,18 +746,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT BUY\nGood company, real turnaround, not a framework fit\nAEHR is the superior test allocation\nRevisit at $20-25 pullback (30-40% below current)",
             "IR Check": "❌ NO ACTION\nRevisit at $20-25 pullback",
             "Supercycle": "DB2 Network Test",
-            "Change %": "+0.18%"
+            "Change %": "-1.70%"
         },
         {
             "Rank": 35,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
-            "Total": 57,
+            "Total": 54,
             "Base": 65,
-            "Entry": 45,
+            "Entry": 38,
             "Rating": "NAND oligopoly + HBF NVIDIA catalyst + 8.7x fwd P/E",
             "Port": "",
-            "Current Price": "$1,378.23",
+            "Current Price": "$1,405.29",
             "Ceiling Target": "$1,800-3,200 (NAND shortage 2027, $42B NBM deals, 78% GM, BiCS8/9 ramp, $6B buyback)",
             "Upside": "1.3x-2.3x",
             "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
@@ -768,7 +768,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 2-3% allocation\nEarnings revisions = baseline appreciation\nHBF announcement = bonus explosion\nDon't overweight for binary event\nLet estimate revisions do the work",
             "IR Check": "❌ NEEDS REVIEW\nQ1 earnings confirmation\nHBF prototype timeline\nNAND pricing trajectory",
             "Supercycle": "NAND Memory",
-            "Change %": "-6.05%"
+            "Change %": "-4.21%"
         },
         {
             "Rank": 35,
@@ -790,7 +790,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4+DB4b Grid/AI Power",
-            "Change %": "-11.41%"
+            "Change %": "-11.30%"
         },
         {
             "Rank": 37,
@@ -801,7 +801,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 30,
             "Rating": "Unranked — Elite connectivity (80% AI servers) but $36B MC, 15+ analysts, fully priced.",
             "Port": "",
-            "Current Price": "$206.26",
+            "Current Price": "$204.70",
             "Ceiling Target": "$250-$290 (FY2028-30 blended, 15%/yr)",
             "Upside": "1.2x-1.4x",
             "Position Type": "⚡ BOTTLENECK\nTemporal: PCIe Gen 6 first-mover. 80% AI server penetration. Standards-based = competitors catching up. Amazon $6.5B warrant. 2-3yr window.",
@@ -812,7 +812,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 Interconnect",
-            "Change %": "-7.71%"
+            "Change %": "-8.41%"
         },
         {
             "Rank": 38,
@@ -823,9 +823,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "#3 HBM + record Q2 $23.9B + China ban + OWN VIA ETF",
             "Port": "",
-            "Current Price": "$644.62",
+            "Current Price": "$652.85",
             "Ceiling Target": "$800-1,400 (memory shortage to 2027, DDR5 +63% QoQ, NAND +70% QoQ, HBM expansion)",
-            "Upside": "1.2x-2.2x",
+            "Upside": "1.2x-2.1x",
             "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
             "Revenue Explosion": "📈 3D DRAM PATENT VALUE\nTrigger: 3D DRAM industry transition\nTiming: 2028-2030 (long-term)\nOwn via DRAM ETF, not standalone",
             "Updated": "May 2",
@@ -834,7 +834,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "OWN VIA DRAM ETF\nDon't overweight directly\nETF captures rotation automatically",
             "IR Check": "❌ NEEDS REVIEW\nHBM roadmap",
             "Supercycle": "HBM Memory",
-            "Change %": "-4.61%"
+            "Change %": "-3.39%"
         },
         {
             "Rank": 39,
@@ -845,7 +845,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "SE Asia burn-in services + AI GPU order + margin recovery bet",
             "Port": "",
-            "Current Price": "$12.58",
+            "Current Price": "$12.70",
             "Ceiling Target": "$15-$30",
             "Upside": "1.2x-2.4x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: SE Asia burn-in services — competitive, margin recovery bet. Single variable. 6-12mo trade.",
@@ -856,20 +856,20 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB2 Test",
-            "Change %": "-6.28%"
+            "Change %": "-5.37%"
         },
         {
             "Rank": 40,
             "Ticker": "CLF",
             "Name": "Cleveland-Cliffs",
-            "Total": 46,
+            "Total": 49,
             "Base": 52,
-            "Entry": 38,
+            "Entry": 45,
             "Rating": "Rule 10: GOES monopoly (<5%) buried in $19B cyclical steel",
             "Port": "",
-            "Current Price": "$11.18",
+            "Current Price": "$11.07",
             "Ceiling Target": "$15-$25",
-            "Upside": "1.3x-2.2x",
+            "Upside": "1.4x-2.3x",
             "Position Type": "⚡ BOTTLENECK\nRule 10: GOES monopoly <5% of revenue inside cyclical steel. Stock trades on HRC. 1-2yr window.",
             "Revenue Explosion": "",
             "Updated": "Apr 24",
@@ -878,7 +878,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4b Grid Infra",
-            "Change %": "+4.35%"
+            "Change %": "+3.35%"
         },
         {
             "Rank": 40,
@@ -911,7 +911,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "FAIL — competitive Layer 3 systems, not a bottleneck",
             "Port": "",
-            "Current Price": "NOK 58.20",
+            "Current Price": "NOK 56.60",
             "Ceiling Target": "NOK 80-120",
             "Upside": "1.4x-2.1x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Optical monitoring — competitive market. 1-2yr window.",
@@ -922,7 +922,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT BUY — competitive, substitutable",
             "IR Check": "smartoptics.com/investor-relations",
             "Supercycle": "DB1 Photonics (Layer 3 — Systems)",
-            "Change %": "-1.69%"
+            "Change %": "-4.39%"
         },
         {
             "Rank": 43,
@@ -977,9 +977,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "FAIL — Market leader but NOT sole-source. MPI competes. PI is real chokepoint. $155 vs $130-210 ceiling. Entry 0.87x.",
             "Port": "",
-            "Current Price": "$147.15",
+            "Current Price": "$144.07",
             "Ceiling Target": "$130-$210 (FY2028-30 blended, 15%/yr)",
-            "Upside": "0.9x-1.4x",
+            "Upside": "0.9x-1.5x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Optical probing — duopoly with Advantest. Semi-specialized. 2-3yr window.",
             "Revenue Explosion": "📈 HBM TEST DEMAND\nTrigger: Probe card orders from HBM ramp\nTiming: 2027-2028\nExpected move: 30-50%",
             "Updated": "Apr 26",
@@ -988,7 +988,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD MINIMAL: 0.5-1%\nMonitor for upgrade catalysts\nLow priority vs other HC names",
             "IR Check": "❌ NEEDS REVIEW\nAnalyst Day May 11",
             "Supercycle": "DB1 + HBM",
-            "Change %": "+0.10%"
+            "Change %": "-2.00%"
         },
         {
             "Rank": 46,
@@ -1043,7 +1043,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 9,
             "Rating": "WL (ATE + robotics, not sole-source)",
             "Port": "",
-            "Current Price": "$370.91",
+            "Current Price": "$375.53",
             "Ceiling Target": "$330-$400",
             "Upside": "0.9x-1.1x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Test equipment — large, diversified. Not sole-source for anything. Ongoing.",
@@ -1054,7 +1054,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT BUILD\n$55B MC = zero asymmetry\n23 analysts, above consensus targets\nAEHR at $2B = same layer, monopoly, 27x cheaper\nRevisit if:\n□ Stock corrects 20%+ to $280-300\n□ Merchant GPU win confirmed\n□ Photon 100 material revenue",
             "IR Check": "❌ NEEDS REVIEW\nMerchant GPU qualification timeline\nPhoton 100 customer pipeline\nUR AI Trainer adoption\nMultiLane JV revenue",
             "Supercycle": "DB1/DB5 Semi Test + Phase 2 Robotics",
-            "Change %": "+2.89%"
+            "Change %": "+4.17%"
         },
         {
             "Rank": "—",
@@ -1065,9 +1065,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HVDC oligopoly 30% + 9x backlog + €900M EBITDA 2030 + portfolio diversifier",
             "Port": "",
-            "Current Price": "DKK 967.50",
+            "Current Price": "DKK 978.50",
             "Ceiling Target": "DKK 2,500-4,500",
-            "Upside": "2.6x-4.7x",
+            "Upside": "2.6x-4.6x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics+Capital: HVDC submarine cable — 3-player oligopoly, 5-7yr barrier to entry. 2026-2035+",
             "Revenue Explosion": "📈 HVDC CONTRACT AWARDS\nTrigger: Major offshore wind/DC power contract\nTiming: Rolling through 2027-2029\n9x backlog = multi-year visibility\nExpected move: 30-50% per major award",
             "Updated": "Apr 24",
@@ -1076,7 +1076,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD STEADY: 2-3% allocation\nBacklog provides baseline\nContract awards = stepwise re-rate\nLong-duration, steady compounder",
             "IR Check": "❌ NEEDS REVIEW\nCMD deck, HVDC backlog",
             "Supercycle": "DB2 Wind/Energy",
-            "Change %": "+2.22%"
+            "Change %": "+3.38%"
         },
         {
             "Rank": "—",
@@ -1087,9 +1087,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "FAIL — space + defense, not a bottleneck monopoly",
             "Port": "",
-            "Current Price": "$33.06",
+            "Current Price": "$34.67",
             "Ceiling Target": "$35-75",
-            "Upside": "1.1x-2.3x",
+            "Upside": "1.0x-2.2x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Aviation leasing. Not AI infrastructure. Legacy position.",
             "Revenue Explosion": "FY2025 $159.9M (+163%). Guide $420-450M FY2026 (+163-181%). $1.4B backlog. FORGE $372M contract.",
             "Updated": "",
@@ -1098,18 +1098,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "MONITOR — strong revenue growth but not a bottleneck monopoly. Four business lines spread thin.",
             "IR Check": "Q1 2026 earnings imminent. Alpha flights + Blue Ghost Mission 2 upcoming.",
             "Supercycle": "DB8 Defense + Space — Launch / Lunar / Defense Software",
-            "Change %": "+5.89%"
+            "Change %": "+11.05%"
         },
         {
             "Rank": "—",
             "Ticker": "MTSI",
             "Name": "MACOM Technology",
-            "Total": 34,
+            "Total": 33,
             "Base": 50,
-            "Entry": 9,
+            "Entry": 8,
             "Rating": "WL (low)",
             "Port": "",
-            "Current Price": "$305.42",
+            "Current Price": "$306.39",
             "Ceiling Target": "$200-$350",
             "Upside": "0.7x-1.1x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: RF/photonic ICs — competitive with Broadcom, Skyworks. 1-2yr window.",
@@ -1120,7 +1120,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HOLD MINIMAL: 0.5-1%\nMonitor for upgrade catalysts\nLow priority vs other HC names",
             "IR Check": "❌ NEEDS REVIEW\nCelestial CPO platform",
             "Supercycle": "DB1 Photonics",
-            "Change %": "+1.30%"
+            "Change %": "+1.62%"
         },
         {
             "Rank": "—",
@@ -1131,7 +1131,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "ASML of compound semi + 70-90% MOCVD + 3 engines",
             "Port": "",
-            "Current Price": "EUR 50.94",
+            "Current Price": "EUR 50.64",
             "Ceiling Target": "€120-€250",
             "Upside": "2.4x-4.9x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: 70-90% MOCVD share — tool of record for InP epi. Universal primitive for compound semi. 2026-2035+",
@@ -1142,7 +1142,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 Photonics + DB4 Power",
-            "Change %": "-1.09%"
+            "Change %": "-1.67%"
         },
         {
             "Rank": "—",
@@ -1153,7 +1153,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "€1.17",
             "Port": "",
-            "Current Price": "EUR 22.50",
+            "Current Price": "EUR 21",
             "Ceiling Target": "FAIL",
             "Upside": "—",
             "Position Type": "⚡ BOTTLENECK\nDistressed: CoPoS tech inside dying company. Right tech, wrong vehicle. FAIL.",
@@ -1164,7 +1164,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "DO NOT CHASE — wait for LayTec revenue inflection or pullback to €13",
             "IR Check": "German-language filings. NuWays AG sole analyst (€21 PT, BUY).",
             "Supercycle": "GaN MOCVD + InP SiPh metrology",
-            "Change %": "-8.91%"
+            "Change %": "-14.98%"
         },
         {
             "Rank": "—",
@@ -1459,7 +1459,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 8,
             "Rating": "FAIL — Hybrid bonding leader, 20 customers. But €20B MC, 15+ analysts, price above ceiling midpoint. Entry 0.89x.",
             "Port": "",
-            "Current Price": "EUR 255",
+            "Current Price": "EUR 253.70",
             "Ceiling Target": "€160-€280 (FY2028-30 blended, 15%/yr)",
             "Upside": "0.6x-1.1x",
             "Position Type": "🔒 CHOKEPOINT (in hybrid bonding)\nHybrid bonding leader <10nm. 20 customers. EVG competes. Non-hybrid biz (die attach, flip chip) is competitive.",
@@ -1470,7 +1470,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5 Advanced Packaging",
-            "Change %": "+0.47%"
+            "Change %": "-0.04%"
         },
         {
             "Rank": "—",
@@ -1505,9 +1505,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "HC #1（双矢量 + Amazon/Marvell/Celestial 已确认）",
             "Port": "✓",
-            "Current Price": "SEK 46.60",
+            "Current Price": "SEK 48.78",
             "Ceiling Target": "SEK 100-500（8矢量模型：CPO + Jabil LRO + SATCOM + Defense primes + Apple + Lightmatter + India 5G + Lightelligence。高盛 91B 美元 CPO TAM 以 SEK 80 触发。）",
-            "Upside": "2.1x-10.7x",
+            "Upside": "2.1x-10.3x",
             "Position Type": "🔒 阻塞点\n物理：连续激光——硅不能发光。每个 CPO 一代。 2026-2035+",
             "Revenue Explosion": "管道 4.53 亿美元（+64%）。产品管道+90%。 3 个超大规模路径：JBL 1.6T + Amazon/Celestial（经 SEC 确认）+ Ayar Labs。卫星通信增长 2027 年：2100 万美元→ 2030 年 1.24 亿美元。无线 BU 2x 光子学。 10亿美元萨姆。",
             "Updated": "5月5日",
@@ -1516,7 +1516,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "现在超重——框架得分最高。双向量 TAM 差距在投资组合中最大。",
             "IR Check": "⚡ 主动监控\n纳斯达克正式提交日期\n股票代码确认\n向 SEC 提交 S-1/F-1 备案\n2026 年第二季度收益（JBL 收入开始）\n其他客户公告\n指数/ETF纳入事件",
             "Supercycle": "InP 连续激光器 Gen2+3",
-            "Change %": "-14.81%"
+            "Change %": "-10.82%"
         },
         {
             "Rank": 2,
@@ -1527,9 +1527,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC #2（WLBI 独家来源 + SiPh 两用预烧 + 通过 Sonoma 的 PPBI）",
             "Port": "✓",
-            "Current Price": "$91.58",
+            "Current Price": "$92.92",
             "Ceiling Target": "$280-$550",
-            "Upside": "3.1x-6.0x",
+            "Upside": "3.0x-5.9x",
             "Position Type": "🔒 阻塞点\n物理：WLBI 唯一来源——不存在竞争对手。每个复合半。 2026-2035+",
             "Revenue Explosion": "H2 预订量 >9200 万美元。 4 月 16 日创下 4100 万美元单笔订单记录。3 月 31 日，第 3 个 SiPh 客户赢得了索诺玛 AI ASIC 生产。刀片式飞轮：接触器 > 系统收入。",
             "Updated": "4月24日",
@@ -1538,20 +1538,20 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "增持：2027 财年第一季度至第二季度\n（2026 年夏季建设位置）\nSiC 积压 = 基线\nGaN = 阶跃函数\n光子学 = 第三步函数",
             "IR Check": "❌ 需要审查\n4月8日刚刚报道\n检查新甲板的红外线",
             "Supercycle": "DB1 光子学",
-            "Change %": "+0.52%"
+            "Change %": "+1.99%"
         },
         {
             "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
-            "Total": 78,
+            "Total": 81,
             "Base": 77,
-            "Entry": 80,
+            "Entry": 88,
             "Rating": "HC — LIDE 玻璃垄断 + Intel CPO 波导（专利链接）+ Ayar Labs 玻璃桥架构。 VLM Kapital 专利链已确认。",
             "Port": "✓",
-            "Current Price": "EUR 23.60",
+            "Current Price": "EUR 22.60",
             "Ceiling Target": "€80-200（2028-30 财年）。英特尔/Ayar Labs 专利 US20240027706A1 已确认。 VLM Kapital 链已验证。 CEO 50-100 台机器/客户。",
-            "Upside": "3.4x-8.5x",
+            "Upside": "3.5x-8.8x",
             "Position Type": "🔒 阻塞点\n物理：LIDE 玻璃 TGV — 有机玻璃无法支持下一代。三重超级循环：DB5 AI包装+DB3 LEO Space（SpaceX）+DB8 Defense。 2027-2035+",
             "Revenue Explosion": "📈 玻璃基板设备订单\n触发点1：三星SEMCO量产（2026年底）\n触发点 2：Intel Absolics HVM 提升\n触发因素三：台积电玻璃基板研发订单\n触发因素 4：SEMCO 的苹果玻璃基板\n触发器 5：通过英特尔封装的 Tesla Terafab\n每一座新玻璃厂 = LPKF 设备订单\n1.7 亿美元 MC = 投资组合中最小的 HC 股票",
             "Updated": "5月2日",
@@ -1560,7 +1560,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建：1-2%（探索位置）\n1.7 亿美元 MC = 投资组合中最高的不对称性\n玻璃基板 = ABF 的后继产品\n围绕 LPKF LIDE 设计的三星 SEMCO 工艺\nIntel + Absolics 自 2023 年起也使用 LPKF\n唯一竞争对手JWMT（三星双源）\n2027-2028 年收入拐点\n需要耐心——2-3年的论文\n第一个玻璃生产订单升级至 2-3%",
             "IR Check": "❌ 需要深入研究\n韩语SEMCO供应链验证\nJWMT竞争定位\n玻璃基板营收突破盈利\n英特尔 Terafab 包装确认\n台积电玻璃基板设备订单\nApple SEMCO 玻璃基板时间表",
             "Supercycle": "封装—玻璃基板设备",
-            "Change %": "+3.06%"
+            "Change %": "-1.31%"
         },
         {
             "Rank": 4,
@@ -1593,7 +1593,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "HC — 世界上第一个原生彩色激光雷达 (REV8)。一个传感器取代相机+激光雷达。 L4 芯片 2 倍范围。谷歌+沃尔沃已确认。数字建筑垄断扩大。",
             "Port": "✓",
-            "Current Price": "$26.71",
+            "Current Price": "$26.62",
             "Ceiling Target": "75-280 美元（REV8 相机消除 TAM 扩展 + Google/Volvo 验证）",
             "Upside": "2.8x-10.5x",
             "Position Type": "🔒 阻塞点\n平台：物理人工智能感知——每个机器人/无人机/AV都需要视觉+深度。 2026-2035+",
@@ -1604,7 +1604,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "BUILD — 零售前发现、非对称设置",
             "IR Check": "❌ 需要监控\nSAFE LiDAR 法案通过时间表\n2026 年 6 月禁令后的国防部采购订单\n2026 年第一季度收入（StereoLabs 贡献）\n公认会计准则盈利能力可持续性\n光明的竞争定位\n和赛对禁令的回应",
             "Supercycle": "DB2 物理 AI/传感器",
-            "Change %": "+5.74%"
+            "Change %": "+5.40%"
         },
         {
             "Rank": 6,
@@ -1615,9 +1615,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HC — E 频段垄断 + V 频段每年折扣 15%。混合 4.24 倍。",
             "Port": "",
-            "Current Price": "GBp 335",
+            "Current Price": "GBp 323.25",
             "Ceiling Target": "900-1,600 英镑（2028-33 年混合，V 频段每年折扣 15%）",
-            "Upside": "2.7x-4.8x",
+            "Upside": "2.8x-4.9x",
             "Position Type": "🔒 阻塞点\n物理：E波段GaN SSPA垄断+V波段消费终端TAM（SpaceX资助研发）。产能锁定阻碍了亚马逊。金顶 #1 承包商链接。 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "4月26日",
@@ -1626,7 +1626,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB3 LEO 太空 + DB8 防御",
-            "Change %": "-2.16%"
+            "Change %": "-5.59%"
         },
         {
             "Rank": 7,
@@ -1637,9 +1637,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "HC（NDAA电池+物理AI）",
             "Port": "",
-            "Current Price": "$21.02",
+            "Current Price": "$21.67",
             "Ceiling Target": "$44-$146",
-            "Upside": "2.1x-6.9x",
+            "Upside": "2.0x-6.7x",
             "Position Type": "🔒 阻塞点\n物理+监管：500 Wh/kg，2x 内无竞争对手 + NDAA 监管护城河。 2026-2035+",
             "Revenue Explosion": "🔥🔥 NDAA 需求激活\n触发因素 1：2026/2027 年 NDAA 第二阶段实施\n触发点2：五角大楼无人机采购合同\n触发因素 3：eVTOL FAA 认证（Joby、Archer）\n触发因素 4：纳米技术美国制造业的增长\n触发点5：人形机器人电池合约\n到 2028 年，美国陆军无人机数量将达到 100 万架 = 强制需求\n中国电池供应商被法律禁止",
             "Updated": "4月24日",
@@ -1648,7 +1648,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建：2-3%（一级候选人）\nNDAA 授权 = 政府规定的需求下限\n500 Wh/kg = 比最接近的美国竞争对手高 43%\n禁止中国供应商（FEOC 第 842 条）\n到 2028 年 100 万架无人机 = 每年可寻址 5.8 亿美元\n仅纯第 2 阶段（物理 AI）HC 库存\n与 NBIS 的监管护城河\n添加国防合同公告\n收益 ~5 月 7 日",
             "IR Check": "❌ 需要审查\nNDAA 第二阶段执行时间表\n五角大楼无人机采购时间表\n纳米技术美国产能\neVTOL 电池资格状态\n国防合同管道\n固态竞赛时间表",
             "Supercycle": "DB7防御电池+物理AI",
-            "Change %": "-1.36%"
+            "Change %": "+1.66%"
         },
         {
             "Rank": 7,
@@ -1703,9 +1703,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — 双护城河（物理 40x + ITC）。 NVIDIA 占据了 2 座晶圆厂。谷歌+AMD 加速发展。 Fab1 $1.5B。 HC 价格约为 230 美元。",
             "Port": "",
-            "Current Price": "$267.81",
+            "Current Price": "$278.58",
             "Ceiling Target": "$400-$900（FY2028-30 混合，15%/年）",
-            "Upside": "1.5x-3.4x",
+            "Upside": "1.4x-3.2x",
             "Position Type": "🔒 阻塞点\n物理+法律：根据 CPO + ITC 专利终生进口禁令，需要 VPD。 2026-2035+",
             "Revenue Explosion": "2025 财年 4.527 亿美元（+12.1%）。特许权使用费 5740 万美元 (+23.2%)。净利润 1.186 亿美元（利润率 26.2%）。第 5 代 VPD 斜坡开始。",
             "Updated": "4月27日",
@@ -1714,7 +1714,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "监控回调。基础 73% = 强有力的论文。入场费显着提高，价格为 150-170 美元。",
             "IR Check": "2026 年第一季度收益于 4 月 21 日发布。PhotonCap 深度分析于同日发布。",
             "Supercycle": "DB1人工智能互联+DB4数据中心电源",
-            "Change %": "-0.81%"
+            "Change %": "+3.18%"
         },
         {
             "Rank": 10,
@@ -1769,9 +1769,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 88,
             "Rating": "WL — 组合护城河：微型涡轮机 + 吸收式制冷机 + 800VDC + 低于 5ppm 的氮氧化物。 Edge AI DC BTM 电源。与 Bloom 的差距为 230 倍。纳斯达克强制上市。 DC 收入还为零。",
             "Port": "",
-            "Current Price": "$12.13",
+            "Current Price": "$11.99",
             "Ceiling Target": "35-140 美元（首笔 DC 交易 + 纳斯达克上市 + Bloom 缺口闭合）",
-            "Upside": "2.9x-11.5x",
+            "Upside": "2.9x-11.7x",
             "Position Type": "",
             "Revenue Explosion": "",
             "Updated": "5月4日",
@@ -1780,7 +1780,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "",
-            "Change %": "-0.57%"
+            "Change %": "-1.72%"
         },
         {
             "Rank": 14,
@@ -1791,7 +1791,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL——EML 近乎垄断。 8x 产品仍然短缺 20-30%。第五晶圆厂产能达 50 亿美元。多年积压。",
             "Port": "",
-            "Current Price": "$937.42",
+            "Current Price": "$926.59",
             "Ceiling Target": "$1,500-$2,500",
             "Upside": "1.6x-2.7x",
             "Position Type": "🔒 阻塞点\n物理学：EML 激光器近乎垄断——产能到 2029 年就已售罄。2026-2030+",
@@ -1802,7 +1802,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：3-4% 分配\n$28B MC = 大盘，有限的时机优势\n2029 年售完 = 3 年可见度\nOCS + CPO = 增量上涨空间\n定制芯片浪潮=TAM扩展\n跑步后不要超重 826 美元\n仅添加回撤",
             "IR Check": "❌ 需要审查\nOFC 2026 套牌可能存在\n可能是像 COHR 这样的专业",
             "Supercycle": "DB1 光子学",
-            "Change %": "-2.36%"
+            "Change %": "-3.48%"
         },
         {
             "Rank": 14,
@@ -1813,9 +1813,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "WL — 欧盟主权计算 + 46B 美元积压 + Meta/MSFT/NVIDIA。建设时间长，执行风险大。",
             "Port": "✓",
-            "Current Price": "$178.07",
+            "Current Price": "$188.02",
             "Ceiling Target": "400-650 美元（GPU 云 + ClickHouse 28% 股权重新定价 + Eigen AI 推理 + 平台多重重新定价）",
-            "Upside": "2.2x-3.7x",
+            "Upside": "2.1x-3.5x",
             "Position Type": "🔒 阻塞点\n监管：欧盟主权计算——GDPR/AI 法案阻止美国超大规模计算替代。 2026-2030+",
             "Revenue Explosion": "📈 收入变化\n2025 财年：$530M → 2026 财年指南：$3.0-3.4B\n到 2026 年底，ARR 目标为 $7-9B\n建设长期 - 2026 年资本支出为 $16-20B\nMeta/MSFT 锚定但执行风险真实",
             "Updated": "5月2日",
@@ -1824,7 +1824,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "增持：2026 年第三季度\n（2026 年第四季度印刷之前的位置）\nMeta+MSFT 2026 年下半年收入将达到顶峰\n2026 年 10 月之前的最大分配量\n持有至 2027 年 2 月的收益",
             "IR Check": "❌ 需要审查\n2026 年第一季度收益 4 月 29 日\n密苏里州校园里程碑\n代币工厂利润\n主权人工智能管道",
             "Supercycle": "人工智能计算",
-            "Change %": "+1.18%"
+            "Change %": "+6.83%"
         },
         {
             "Rank": 16,
@@ -1835,9 +1835,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "失败 — 监控 Covelya 关闭 + TSX 上架",
             "Port": "",
-            "Current Price": "CAD 7.14",
+            "Current Price": "CAD 7.27",
             "Ceiling Target": "14 加元-28 加元",
-            "Upside": "2.0x-3.9x",
+            "Upside": "1.9x-3.9x",
             "Position Type": "🔒 阻塞点\n资格：Sonardyne 水下定位黄金标准 - 数十年的质量惯性。 2026-2032+",
             "Revenue Explosion": "独立指导金额为 165-1.75 亿加元（2026 财年）。合计 3.65 亿加元（2025 年）。 EBITDA +60-100%。第一季度合并订单金额为 2.22 亿加元。",
             "Updated": "4月24日",
@@ -1846,7 +1846,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "MONITOR — Covelya 集成是二进制文件。如果执行=平台改造。如果挣扎=过度杠杆化。",
             "IR Check": "5 月 28 日公布收益。Covelya 于 2026 年第二季度结束。多伦多证券交易所挂牌待定。",
             "Supercycle": "DB8 防御超级循环 — 水下自主系统",
-            "Change %": "+0.71%"
+            "Change %": "+2.54%"
         },
         {
             "Rank": 16,
@@ -1857,9 +1857,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "HC 🔒 — CPO PURE PLAY（3 级投资者，5 月 3 日命名）。 >95% 的光子学-SOI 垄断。 55,000% CPO 增长曲线直接适用。",
             "Port": "✓",
-            "Current Price": "EUR 151.35",
+            "Current Price": "EUR 142.90",
             "Ceiling Target": "250 欧元-550 欧元（2028-2031 年）",
-            "Upside": "1.7x-3.6x",
+            "Upside": "1.7x-3.8x",
             "Position Type": "🔒 阻塞点\nIP：>95% 光子学-SOI、3,500 多项智能切割专利\nSiN = 补数（忽略）。可替代容量射频→光子学。",
             "Revenue Explosion": ">95% 的光子学-SOI 份额（美国银行）。 3,500 多项专利。\nSERENITY 5 月 3 日：将 SOI 命名为 CPO，与 SIVE/ShunSin/MSScorps 并列。\n55,000% CPO 增长曲线直接应用于 SOI 衬底需求。\nGFS 5 月 5 日：SiPh 到 2026 年翻一番，到 2028 年底运行率将超过 10 亿美元。\n高盛 $91B CPO → $2.7-4.5B 基板捕获 95% 份额。\n4x 内容升压可插拔→CPO，3.2T 时 8x+。\n可替代射频→光子容量，零资本支出（PhotonCap 已确认）。\nSiN = 补充而不是威胁（PhotonCap 博士）。\n多矢量：DC+激光雷达+量子+防御，同一个晶圆。\n“未来两年一切都会发生”——三级投资者。",
             "Updated": "5月5日",
@@ -1868,7 +1868,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "HC 3-5%。重建位置 - 修剪是一个错误。 5月27日🔥。",
             "IR Check": "⚡ 2026 财年 5 月 27 日结果 🔥🔥\n3 级投资者 CPO 纯粹投资分类（5 月 3 日）。\nGFS SiPh 倍增已确认。台积电 COUPE H2 2026。\n光电转速百分比 — 超过 30% 永久确认 HC。\nAAOI 于 5 月 7 日调整 → 回调时转向 SOI.PA。",
             "Supercycle": "DB1 SiPh 基板",
-            "Change %": "-3.41%"
+            "Change %": "-8.81%"
         },
         {
             "Rank": 16,
@@ -1923,9 +1923,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "失败（临界 — 需要 1 级 ROSIE 2 订单才能升级）",
             "Port": "",
-            "Current Price": "EUR 14",
+            "Current Price": "EUR 13.50",
             "Ceiling Target": "25-45欧元",
-            "Upside": "1.8x-3.2x",
+            "Upside": "1.9x-3.3x",
             "Position Type": "🔒 阻塞点\n物理：用于QD激光器的MBE设备+ROSIE SiPh+量子材料。 2027-2035+",
             "Revenue Explosion": "⏳ 三个增长向量同时出现\nV1：数据中心的 QD 激光器（最大的论文）\n  → 贝克：“激光严重短缺”\n  → QD 激光器 = 解决方案，MBE = 唯一的生长方法\n  → 日本 2026 年 1 月订单：用于 QD 激光生产缩放的 MBE 6000\n  → 非研发 — 数据通信生产订单\n  → Riber 是全球 MBE 领导者（与 Veeco 的双寡头垄断）\nV2：用于 SiPh 集成光子学的 ROSIE\n  → 300mm 生产兼容 — Riber 独有\n  → Veeco 没有同等平台\n  → 商业工业化 2027\n  → ROSIE 2 双舱 2026 年建造\n  → Tower/GFS/Samsung SiPh 扩张 = ROSIE 需求\nV3：量子计算MBE\n  → MSFT Quantum 客户（LinkedIn intel，非公开）\n  → NQCP 合作伙伴关系：用于量子位的 BTO/STO 薄膜\n  → 谷歌/IBM/亚马逊量子计划=未来管道\n\n每年 12 台机器是地板而不是天花板\nTPICAP 分析师：“可以改变维度，转变商业模式”\n2025 财年：收入 4030 万欧元，NI 520 万欧元（+27%），总经理 38.6%\n27 倍远期市盈率、3.3 亿欧元市值 = 隐藏的淘金热\n远期 TAM：到 2029-2030 年收入将达到 95-2.05 亿欧元（当前的 2.4-5.1 倍）",
             "Updated": "4月24日",
@@ -1934,7 +1934,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "首发位置 2-3% 可防守\n不再“不买”\n构建小型，添加确认\n通往 HC 的大门（75 岁以上）：\n  □ 3rd+ ROSIE 订单确认坡道\n  □ MSFT 量子公开确认\n  □ 第二个QD激光器生产客户\n  □ 季度报告中的收入变化\n  □ 任意两个 → 73-76 HC",
             "IR Check": "⏳ 主动手表\nROSIE 2 交付时间表\n额外的 QD 激光器生产订单\nMSFT Quantum 公开确认\n2026 年第一季度收入报告\nOFC/行业会议 ROSIE 演示\nBezons产能扩张公告",
             "Supercycle": "DB1 SiPh 设备 / 量子",
-            "Change %": "+3.86%"
+            "Change %": "+0.15%"
         },
         {
             "Rank": 21,
@@ -1945,9 +1945,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "HC（上）",
             "Port": "",
-            "Current Price": "$338.31",
+            "Current Price": "$342.56",
             "Ceiling Target": "$500-$900",
-            "Upside": "1.5x-2.7x",
+            "Upside": "1.5x-2.6x",
             "Position Type": "🔒 阻塞点\n垂直：全球最先进的 InP 生产线——产能翻倍仍然不够。 2026-2030+",
             "Revenue Explosion": "🔥 原棕油收入变化\n触发器：CPO 显示为明细行项目\n时间安排：2027 年第一季度至第二季度收益\n预期变动：8-12 周内 60-100%\n$307→$450-550 确认后\n\n🔥 OFC 2026 TAM 扩张 — 到 2030 年增量将超过 20B 美元\nOCS：$4B TAM（10+客户，液晶固态）\nCPO 扩展：$15B TAM（“矮小的扩展，数量级更大”）\n热能：$2B TAM（Thermadite 陶瓷，废热→电力）\n多轨：4 倍交通相同足迹，修订版 2027 年上半年\n6 英寸 InP 达到目标产能的 80%——比计划提前\n数据中心的订单到账单 >4 倍\nGM +470bps，目标 >42%，“早期阶段”\nNVIDIA 20 亿美元股权 + 数十亿美元收购承诺\nApple 3D 传感合作伙伴关系（2026 年下半年收入）\n慕尼黑工具销售（利润增值）\nJim Anderson：“扩大 CPO = 100% 增量 TAM”",
             "Updated": "4月23日",
@@ -1956,7 +1956,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "增持：2026 年第四季度\n（2027 年第一季度印刷之前的位置）\nCPO 发货后，将在 2026 年下半年开始建设\n2026 年 12 月之前的最大分配量",
             "IR Check": "✅ OFC 2026 年 3 月 17 日\n技术创新简报\n分数：78→86 精英\n下一篇：5 月 13 日发布的第一季度 ER",
             "Supercycle": "光子学平台",
-            "Change %": "+1.55%"
+            "Change %": "+2.82%"
         },
         {
             "Rank": 21,
@@ -1967,7 +1967,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 45,
             "Rating": "WL — 定制 ASIC 双寡头 CHOKEPOINT。 Broadcom 的 2 人游戏。 4 个超大规模企业已锁定。",
             "Port": "",
-            "Current Price": "$169.86",
+            "Current Price": "$167.91",
             "Ceiling Target": "$260-$370（2028-31 财年混合，CPO 折扣 15%/年）",
             "Upside": "1.5x-2.2x",
             "Position Type": "🔒 阻塞点\n双头垄断：定制 ASIC——只有 MRVL + Broadcom 设计超大规模人工智能芯片。 2-3年设计周期=锁定。亚马逊、谷歌、微软、Meta。 2026-2035+",
@@ -1978,7 +1978,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "定制 ASIC 垄断 + 天体光子结构。每个超大规模企业都已锁定（亚马逊、谷歌、微软）。通过 SIVE 以 100 倍的杠杆更好地表达。",
             "IR Check": "",
             "Supercycle": "DB1 AI互联+定制ASIC",
-            "Change %": "-0.66%"
+            "Change %": "-1.80%"
         },
         {
             "Rank": 23,
@@ -1989,7 +1989,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 60,
             "Rating": "慧聪创业",
             "Port": "✓",
-            "Current Price": "$174.90",
+            "Current Price": "$176",
             "Ceiling Target": "$300-$600",
             "Upside": "1.7x-3.4x",
             "Position Type": "⚡ 瓶颈\n产能：收发器组装——产能扩大至500K/月。竞争市场。 1-2年窗口期。",
@@ -2000,7 +2000,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "增持：2027 年上半年\n（到 2026 年建立地位）\n800G 斜坡 = 逐步构建\n2027 年第三季度 = 拐点可见\n到 2027 年中期达到最大配额",
             "IR Check": "❌ 需要审查\n1.6T路线图、裕度",
             "Supercycle": "DB1 光子学",
-            "Change %": "-3.48%"
+            "Change %": "-2.87%"
         },
         {
             "Rank": 24,
@@ -2011,7 +2011,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL（唯一 EO 聚合物，3 条集成路径，预收益）",
             "Port": "",
-            "Current Price": "$15.11",
+            "Current Price": "$15.12",
             "Ceiling Target": "$20-$50",
             "Upside": "1.3x-3.3x",
             "Position Type": "⚡ 瓶颈\n技术：环氧乙烷聚合物调节剂——尚未盈利，尚未大规模验证。如果聚合物击败 SiPh，则可能出现第 4 波浪潮。 2-4 年窗口。",
@@ -2022,7 +2022,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "减少至 0.5%\n2025 财年预收入 23.7 万美元\nHyperLight 在 TFLN 上领先\n6,600x P/S = 风险定价\n等待 2026 年下半年流片\n在流片确认之前不要添加",
             "IR Check": "❌ 需要审查\n监听阶段 3→4\n2026 年下半年流片结果",
             "Supercycle": "环氧乙烷聚合物调制剂",
-            "Change %": "-8.39%"
+            "Change %": "-8.36%"
         },
         {
             "Rank": 25,
@@ -2033,9 +2033,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL — SiPh 代工厂 ~85%。 NVIDIA CPO 提前。 AP7 15K/月 2027 年下半年。",
             "Port": "",
-            "Current Price": "$224.96",
+            "Current Price": "$219.44",
             "Ceiling Target": "300-700 美元（SiPh 代工厂 TAM 扩张了 142% CPO 复合年增长率。SiPh 资本支出超过 3.5 亿美元。Tower = CPO PIC 代工厂。）",
-            "Upside": "1.3x-3.1x",
+            "Upside": "1.4x-3.2x",
             "Position Type": "🔒 阻塞点\n资本+质量：~85% SiPh 代工 — 12-18 个月的重新认证障碍。 2026-2030+",
             "Revenue Explosion": "📈 1 级 SiPh 客户获胜\n触发因素：Apple/NVIDIA/hyperscaler 宣布\n塔式 SiPh 生产\n时机：不可预测、事件驱动\n预期变动：4-8 周内变动 40-60%",
             "Updated": "5月2日",
@@ -2044,7 +2044,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：3-4% 分配\n事件驱动的催化剂 = 不可预测\n保持姿势，不要试图计时\nSiPh 收入翻倍提供基线",
             "IR Check": "❌ 需要审查\n查看 SiPh/CPO 路线图",
             "Supercycle": "DB1 光子学",
-            "Change %": "-3.66%"
+            "Change %": "-6.02%"
         },
         {
             "Rank": 25,
@@ -2055,7 +2055,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "多扇区 SerDes + DustPhotonics SiPh PIC",
             "Port": "",
-            "Current Price": "$185.75",
+            "Current Price": "$186.70",
             "Ceiling Target": "$300-$500",
             "Upside": "1.6x-2.7x",
             "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
@@ -2066,7 +2066,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建：1-2%\n今年迄今较高点下跌 29% = 进入窗口\n唯一涵盖 DC + 机器人 + 汽车 + 边缘的投资组合股票\nSerDes IP 许可 = 接近 100% 的经常性利润\nArm 总体设计 = 生态系统访问\n机器人/汽车设计获胜提升至 2-3%\n通往 HC 的大门：多部门收入证明",
             "IR Check": "❌ 需要审查\n机器人/汽车 SerDes 管道\nSerDes IP 许可轨迹\n定制芯片客户获胜\nPCIe Gen6 产量提升\nZeroFlap Optics 客户数量",
             "Supercycle": "连接性 — DC + 机器人 + 汽车 + 边缘",
-            "Change %": "-6.42%"
+            "Change %": "-5.95%"
         },
         {
             "Rank": 25,
@@ -2077,9 +2077,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "WL ⚡ — 第一季度创纪录的 2.64 亿加元。积压同比增长 94.6%（数据中心）。 AEG 结束第二季度。 DPA 需求下限。 Serenity：伟大的复合者。",
             "Port": "",
-            "Current Price": "CAD 301.24",
+            "Current Price": "CAD 289.30",
             "Ceiling Target": "550 加元-800 加元 (2028-2030)",
-            "Upside": "1.8x-2.7x",
+            "Upside": "1.9x-2.8x",
             "Position Type": "⚡ 瓶颈\n需求：变压器的 DPA 需求下限。 #1 不适用，但市场竞争激烈。 2-3年的窗口。",
             "Revenue Explosion": "📈 第一季度创纪录 + 积压爆炸\n第一季度收入为 2.64 亿加元（比预期的 2.36 亿加元增长 12%）。销售记录。\n待办事项同比增长 94.6% — 数据中心驱动（占待办事项的 53%）。\n定制产品风起云涌（数据中心应用）。\nAEG 3.65 亿加元的收购结束第二季度——欧洲/亚洲扩张。\n蒙特雷 IV 工厂上线第一季度 — 发货。\n到 2027 年，产能将扩大至 1.2B 加元。\n调整后每股收益 2.08 加元（同比增长 30%）。毛利率 30.1%（环比增长 90 个基点）。\nDPA + 总统国家变压器紧急状态。\n数据中心约占销售额的 30% → 增长至 40% 以上。\nSerenity 5 月 5 日：“非常扎实”+“伟大的复合者”。",
             "Updated": "5月5日",
@@ -2088,18 +2088,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "持有1-2%。复合器，而不是火箭。添加回调。",
             "IR Check": "⚡ AEG 第二季度结束——关注整合。\nQ2-Q3 积压订单转化率。\n数据中心占销售额的百分比 — 超过 40%？\n蒙特雷四号产能已达到满负荷。\nDPA 合同公告。",
             "Supercycle": "变压器/开关设备",
-            "Change %": "+3.65%"
+            "Change %": "-0.46%"
         },
         {
             "Rank": 28,
             "Ticker": "PL",
             "Name": "星球实验室",
-            "Total": 62,
+            "Total": 58,
             "Base": 63,
-            "Entry": 60,
+            "Entry": 50,
             "Rating": "WL-相邻（防守支点真实，路径 B 竞争）",
             "Port": "",
-            "Current Price": "$37.58",
+            "Current Price": "$38.38",
             "Ceiling Target": "$65-$125",
             "Upside": "1.7x-3.3x",
             "Position Type": "⚡ 瓶颈\n监管：非机密情报领域——有效的护城河，但卫星舰队会贬值。 2-3年的窗口。",
@@ -2110,7 +2110,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "等等——先不要建造\n仅限有条件入境\n34 美元：68 WL（估价过高）\n25 美元：72 WL（公平）\n20 美元：74 WL（靠近 HC）\n18 美元：75+ HC 候选人\n最大持仓：1%（第 3 级）\n仅限第三阶段多元化投资\n不是瓶颈——星座护城河\nAMPX/AEHR/SIVE 的资本更好，直到\n凭单同花创建条目",
             "IR Check": "❌ 需要审查\n认股权证稀释影响（4 月 27 日）\n刷新后共享数量（~350M？）\nSHIELD任务顺序转换\n谷歌阳光捕手时间表\nJSAT 模型第二/第三合同\n国防收入轨迹\n毛利率稳定\n鹈鹕船队收入增长",
             "Supercycle": "DB3 LEO 太空 + 国防",
-            "Change %": "+2.08%"
+            "Change %": "+4.27%"
         },
         {
             "Rank": 29,
@@ -2121,9 +2121,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 75,
             "Rating": "ForgeX 集装箱制造 + 6.457 亿美元 EUCOM 独家来源 + 75B 美元五角大楼无人机预算",
             "Port": "",
-            "Current Price": "$24.85",
+            "Current Price": "$25.79",
             "Ceiling Target": "$80-$160",
-            "Upside": "3.2x-6.4x",
+            "Upside": "3.1x-6.2x",
             "Position Type": "⚡ 瓶颈\nTemporal：ForgeX 是一线制造商的先行者。经过实战验证。独家采购 6.457 亿美元。 2-3年内可复制。 PE 79%控制。 3-5年的窗口。",
             "Revenue Explosion": "2025 财年 4.33 亿美元。 2026 财年指导金额超过 8 亿美元（+85%）。已为积压订单提供资金 5.03 亿美元（+181%）。管道 $8.1B。",
             "Updated": "4月25日",
@@ -2132,7 +2132,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "监控——没有结构性护城河，78%单一客户，PE 79%投票控制。等待回调至 18-20 美元。",
             "IR Check": "IPO 2026 年 4 月 16 日。静默期于 5 月中旬结束。高盛/美国银行/杰富瑞承销商。",
             "Supercycle": "DB8 国防超级循环 — 战斗无人机/UAS",
-            "Change %": "+0.15%"
+            "Change %": "+3.94%"
         },
         {
             "Rank": 30,
@@ -2143,7 +2143,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "SOFC 用户侧 + Oracle 2.8GW + 20B 美元积压",
             "Port": "",
-            "Current Price": "$288.75",
+            "Current Price": "$286.58",
             "Ceiling Target": "$350-$600",
             "Upside": "1.2x-2.1x",
             "Position Type": "⚡ 瓶颈\n速度：90 天 SOFC 部署优势 - 随着电网连接的改善而逐渐消失。 2-4 年窗口。",
@@ -2154,7 +2154,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "构建：2-3%（第 2 层）\n功率是第一大直流瓶颈\n90 天安装 vs 电网 5-10 年安装\n$20B 积压 = 多年可见性\n甲骨文 2.8 GW + AEP $2.65B + Brookfield $5B\n填补了产品组合供应链中的最后一个空白\n密切监控利润——必须扩大\n估值达 FY27E 的 69 倍\n今日走势勿追",
             "IR Check": "❌ 需要审查\n2026 财年第一季度利润率（必须扩大）\nOracle交易收入确认时间\n制造 2 GW 产能提升执行\n积压转化率\n天然气价格敏感性\nSMR竞赛时间表",
             "Supercycle": "DB7人工智能直流电源",
-            "Change %": "-2.97%"
+            "Change %": "-3.69%"
         },
         {
             "Rank": 30,
@@ -2165,9 +2165,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "Layer-2 InP 衬底 + > 6000 万美元积压订单 + 中国许可风险",
             "Port": "",
-            "Current Price": "$100.74",
+            "Current Price": "$93.39",
             "Ceiling Target": "$120-$200",
-            "Upside": "1.2x-2.0x",
+            "Upside": "1.3x-2.1x",
             "Position Type": "⚡ 瓶颈\n供应：InP衬底产能限制。当中国允许流量+运力翻倍时清除。 1-2年窗口期。",
             "Revenue Explosion": "📈 InP 衬底需求\n触发因素：EML/SiPh 客户资格\n时间：2026-2027 年下半年\n预计变动：主要订单的 40-60%",
             "Updated": "4月24日",
@@ -2176,7 +2176,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：1% 分配\n上游素材玩法\n事件驱动，每季度监控",
             "IR Check": "❌ 需要审查\nInP 衬底扩展",
             "Supercycle": "DB1 光子学",
-            "Change %": "-6.10%"
+            "Change %": "-12.94%"
         },
         {
             "Rank": 32,
@@ -2187,9 +2187,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "InP外延片+德意志银行收购守则+战略审查",
             "Port": "",
-            "Current Price": "GBp 46.70",
+            "Current Price": "GBp 44.05",
             "Ceiling Target": "70p-140p",
-            "Upside": "1.5x-3.0x",
+            "Upside": "1.6x-3.2x",
             "Position Type": "⚡ 瓶颈\n催化剂：并购战略审查——事件驱动，而非结构性。单触发。 6-12个月窗口。",
             "Revenue Explosion": "📈 接管/EML 级联\n触发因素：德意志银行收购守则备案\n或 EML 短缺推动外延片需求\n时间：2026-2027\n预期变动：收购出价的 50-100%",
             "Updated": "4月24日",
@@ -2198,7 +2198,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "准备就绪：1% 分配\n接管=事件驱动\nEML 短缺 = 稳定的催化剂\n限时瓶颈（2-3年）",
             "IR Check": "❌ 需要审查\n战略审查更新\n光子学细分市场细分",
             "Supercycle": "III-V族外延片",
-            "Change %": "-6.04%"
+            "Change %": "-11.37%"
         },
         {
             "Rank": 32,
@@ -2209,7 +2209,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "网格+海军蓝SPS+HTS线。 DPA 受益人。 85%的竞争力。",
             "Port": "",
-            "Current Price": "$54.58",
+            "Current Price": "$55.62",
             "Ceiling Target": "$70-$120",
             "Upside": "1.3x-2.2x",
             "Position Type": "⚡ 瓶颈\n需求：DPA网格+海军SPS。在电网中具有竞争力（85%）。近乎垄断的 SPS (15%)。 2-3年的窗口。",
@@ -2220,18 +2220,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4b 网格 + DB8 防御",
-            "Change %": "-3.39%"
+            "Change %": "-1.54%"
         },
         {
             "Rank": 32,
             "Ticker": "VIAV",
             "Name": "维亚夫解决方案",
-            "Total": 44,
+            "Total": 48,
             "Base": 60,
-            "Entry": 20,
+            "Entry": 30,
             "Rating": "失败——竞争性测试与测量市场。 6+ 竞争对手。是德科技 3 倍大。很好的公司，不是一个瓶颈。",
             "Port": "",
-            "Current Price": "$54.35",
+            "Current Price": "$53.33",
             "Ceiling Target": "$50-$90",
             "Upside": "0.9x-1.7x",
             "Position Type": "⚡ 瓶颈\n能力：光学测试——市场竞争激烈，参与者众多。传统地位。 1-2年窗口期。",
@@ -2242,18 +2242,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要购买\n好公司，真正的转变，而不是框架适合\nAEHR 是优越的测试分配\n再次回调 20-25 美元（比当前水平低 30-40%）",
             "IR Check": "❌ 不采取任何行动\n在 20-25 美元回调时重新审视",
             "Supercycle": "DB2 网络测试",
-            "Change %": "+0.18%"
+            "Change %": "-1.70%"
         },
         {
             "Rank": 35,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
-            "Total": 57,
+            "Total": 54,
             "Base": 65,
-            "Entry": 45,
+            "Entry": 38,
             "Rating": "NAND 寡头垄断 + HBF NVIDIA 催化剂 + 8.7 倍正向市盈率",
             "Port": "",
-            "Current Price": "$1,378.23",
+            "Current Price": "$1,405.29",
             "Ceiling Target": "$1,800-3,200（2027 年 NAND 短缺，$42B NBM 交易，78% GM，BiCS8/9 增长，$6B 回购）",
             "Upside": "1.3x-2.3x",
             "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
@@ -2264,7 +2264,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：2-3% 分配\n盈利修正 = 基线升值\nHBF公告=奖金爆炸\n二元事件不要超重\n让估算修订发挥作用",
             "IR Check": "❌ 需要审查\n第一季度盈利确认\nHBF 原型时间表\nNAND 定价轨迹",
             "Supercycle": "与非存储器",
-            "Change %": "-6.05%"
+            "Change %": "-4.21%"
         },
         {
             "Rank": 35,
@@ -2286,7 +2286,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4+DB4b 电网/人工智能电源",
-            "Change %": "-11.41%"
+            "Change %": "-11.30%"
         },
         {
             "Rank": 37,
@@ -2297,7 +2297,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 30,
             "Rating": "未排名 - 精英连接（80% AI 服务器），但 36B 美元 MC，15 名以上分析师，完全定价。",
             "Port": "",
-            "Current Price": "$206.26",
+            "Current Price": "$204.70",
             "Ceiling Target": "$250-$290（FY2028-30 混合，15%/年）",
             "Upside": "1.2x-1.4x",
             "Position Type": "⚡ 瓶颈\n时间：PCIe Gen 6 先行者。 80%的AI服务器渗透率。基于标准=竞争对手迎头赶上。亚马逊$6.5B 认股权证。 2-3年的窗口。",
@@ -2308,7 +2308,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 互连",
-            "Change %": "-7.71%"
+            "Change %": "-8.41%"
         },
         {
             "Rank": 38,
@@ -2319,9 +2319,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "#3 HBM + 第二季度创纪录的 $23.9B + 中国禁令 + 自己的 VIA ETF",
             "Port": "",
-            "Current Price": "$644.62",
+            "Current Price": "$652.85",
             "Ceiling Target": "800-1,400 美元（到 2027 年内存短缺，DDR5 环比增长 63%，NAND 环比增长 70%，HBM 扩展）",
-            "Upside": "1.2x-2.2x",
+            "Upside": "1.2x-2.1x",
             "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
             "Revenue Explosion": "📈 3D DRAM 专利价值\n触发因素：3D DRAM 行业转型\n时间安排：2028-2030（长期）\n通过 DRAM ETF 拥有，而非独立",
             "Updated": "5月2日",
@@ -2330,7 +2330,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "拥有威盛 DRAM ETF\n不要直接超重\nETF自动捕获轮换",
             "IR Check": "❌ 需要审查\nHBM 路线图",
             "Supercycle": "HBM内存",
-            "Change %": "-4.61%"
+            "Change %": "-3.39%"
         },
         {
             "Rank": 39,
@@ -2341,7 +2341,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "东南亚烧机服务+AI GPU订单+利润回收押注",
             "Port": "",
-            "Current Price": "$12.58",
+            "Current Price": "$12.70",
             "Ceiling Target": "$15-$30",
             "Upside": "1.2x-2.4x",
             "Position Type": "⚡ 瓶颈\n容量：东南亚老化服务 — 竞争激烈、利润恢复的赌注。单变量。 6-12个月的贸易。",
@@ -2352,20 +2352,20 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB2测试",
-            "Change %": "-6.28%"
+            "Change %": "-5.37%"
         },
         {
             "Rank": 40,
             "Ticker": "CLF",
             "Name": "克利夫兰悬崖",
-            "Total": 46,
+            "Total": 49,
             "Base": 52,
-            "Entry": 38,
+            "Entry": 45,
             "Rating": "规则 10：GOES 垄断（<5%）埋藏在 $19B 周期性钢铁中",
             "Port": "",
-            "Current Price": "$11.18",
+            "Current Price": "$11.07",
             "Ceiling Target": "$15-$25",
-            "Upside": "1.3x-2.2x",
+            "Upside": "1.4x-2.3x",
             "Position Type": "⚡ 瓶颈\n规则 10：GOES 垄断<循环钢铁收入的 5%。股票在 HRC 上交易。 1-2年窗口期。",
             "Revenue Explosion": "",
             "Updated": "4月24日",
@@ -2374,7 +2374,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB4b 网格基础设施",
-            "Change %": "+4.35%"
+            "Change %": "+3.35%"
         },
         {
             "Rank": 40,
@@ -2407,7 +2407,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "失败——有竞争力的第 3 层系统，不是瓶颈",
             "Port": "",
-            "Current Price": "NOK 58.20",
+            "Current Price": "NOK 56.60",
             "Ceiling Target": "80-120 挪威克朗",
             "Upside": "1.4x-2.1x",
             "Position Type": "⚡ 瓶颈\n能力：光学监控——竞争激烈的市场。 1-2年窗口期。",
@@ -2418,7 +2418,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要购买——有竞争力的、可替代的",
             "IR Check": "smartoptics.com/投资者关系",
             "Supercycle": "DB1 光子学（第 3 层 — 系统）",
-            "Change %": "-1.69%"
+            "Change %": "-4.39%"
         },
         {
             "Rank": 43,
@@ -2473,9 +2473,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 20,
             "Rating": "失败——市场领导者，但不是唯一来源。 MPI 参与竞争。 PI 是真正的瓶颈。 155 美元 vs 上限 130-210 美元。入场 0.87 倍。",
             "Port": "",
-            "Current Price": "$147.15",
+            "Current Price": "$144.07",
             "Ceiling Target": "$130-$210（FY2028-30 混合，15%/年）",
-            "Upside": "0.9x-1.4x",
+            "Upside": "0.9x-1.5x",
             "Position Type": "⚡ 瓶颈\n能力：光学探测——与 Advantest 的双头垄断。半专业化。 2-3年的窗口。",
             "Revenue Explosion": "📈 HBM 测试需求\n触发：来自 HBM 斜坡的探针卡订单\n时间：2027-2028\n预期变动：30-50%",
             "Updated": "4月26日",
@@ -2484,7 +2484,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "持有最低限度：0.5-1%\n监控升级催化剂\n与其他 HC 名称相比优先级较低",
             "IR Check": "❌ 需要审查\n5 月 11 日分析师日",
             "Supercycle": "DB1+HBM",
-            "Change %": "+0.10%"
+            "Change %": "-2.00%"
         },
         {
             "Rank": 46,
@@ -2539,7 +2539,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 9,
             "Rating": "WL（ATE + 机器人技术，非唯一来源）",
             "Port": "",
-            "Current Price": "$370.91",
+            "Current Price": "$375.53",
             "Ceiling Target": "$330-$400",
             "Upside": "0.9x-1.1x",
             "Position Type": "⚡ 瓶颈\n能力：测试设备——大型、多样化。不是任何东西的唯一来源。正在进行中。",
@@ -2550,7 +2550,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要建造\n$55B MC = 零不对称\n23 名分析师，高于共识目标\nAEHR $2B = 同层，垄断，便宜 27 倍\n如果出现以下情况，请重新访问：\n□ 股价调整 20%+ 至 280-300 美元\n□ 商户GPU获胜确认\n□ 光子100素材收益",
             "IR Check": "❌ 需要审查\n商户 GPU 资格时间表\nPhoton 100 客户管道\n采用 UR AI 培训师\nMultiLane 合资公司收入",
             "Supercycle": "DB1/DB5 半测试 + 第 2 阶段机器人",
-            "Change %": "+2.89%"
+            "Change %": "+4.17%"
         },
         {
             "Rank": "—",
@@ -2561,9 +2561,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "HVDC 寡头垄断 30% + 9 倍积压 + 2030 年 9 亿欧元 EBITDA + 投资组合多元化",
             "Port": "",
-            "Current Price": "DKK 967.50",
+            "Current Price": "DKK 978.50",
             "Ceiling Target": "2,500-4,500 丹麦克朗",
-            "Upside": "2.6x-4.7x",
+            "Upside": "2.6x-4.6x",
             "Position Type": "🔒 阻塞点\n物理+资本：高压直流海底电缆——三人寡头垄断，5-7年的进入壁垒。 2026-2035+",
             "Revenue Explosion": "📈 高压直流输电合同授予\n触发因素：主要海上风电/直流电合同\n时间安排：2027-2029 年持续\n9 倍积压 = 多年可见性\n预期变动：每个主要奖项 30-50%",
             "Updated": "4月24日",
@@ -2572,7 +2572,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "保持稳定：2-3% 分配\n待办事项提供基线\n合同授予=逐步重新定价\n持久、稳定的混炼机",
             "IR Check": "❌ 需要审查\nCMD 甲板、HVDC 积压",
             "Supercycle": "DB2 风能/能源",
-            "Change %": "+2.22%"
+            "Change %": "+3.38%"
         },
         {
             "Rank": "—",
@@ -2583,9 +2583,9 @@ window.PORTFOLIO_DATA = {
             "Entry": 38,
             "Rating": "失败——空间+防御，不是瓶颈垄断",
             "Port": "",
-            "Current Price": "$33.06",
+            "Current Price": "$34.67",
             "Ceiling Target": "$35-75",
-            "Upside": "1.1x-2.3x",
+            "Upside": "1.0x-2.2x",
             "Position Type": "⚡ 瓶颈\n能力：航空租赁。不是人工智能基础设施。传统地位。",
             "Revenue Explosion": "2025 财年 1.599 亿美元 (+163%)。 2026 财年预计为 4.20-4.5 亿美元（+163-181%）。 $1.4B 积压。铸造价值 3.72 亿美元的合同。",
             "Updated": "",
@@ -2594,18 +2594,18 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "监控——收入增长强劲，但不构成瓶颈垄断。四大业务线分散。",
             "IR Check": "2026 年第一季度收益即将公布。阿尔法航班 + 蓝色幽灵任务 2 即将推出。",
             "Supercycle": "DB8 Defense + Space — 发射/登月/防御软件",
-            "Change %": "+5.89%"
+            "Change %": "+11.05%"
         },
         {
             "Rank": "—",
             "Ticker": "MTSI",
             "Name": "迈康科技",
-            "Total": 34,
+            "Total": 33,
             "Base": 50,
-            "Entry": 9,
+            "Entry": 8,
             "Rating": "WL（低）",
             "Port": "",
-            "Current Price": "$305.42",
+            "Current Price": "$306.39",
             "Ceiling Target": "$200-$350",
             "Upside": "0.7x-1.1x",
             "Position Type": "⚡ 瓶颈\n产能：射频/光子 IC——与 Broadcom、Skyworks 竞争。 1-2年窗口期。",
@@ -2616,7 +2616,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "持有最低限度：0.5-1%\n监控升级催化剂\n与其他 HC 名称相比优先级较低",
             "IR Check": "❌ 需要审查\n星天CPO平台",
             "Supercycle": "DB1 光子学",
-            "Change %": "+1.30%"
+            "Change %": "+1.62%"
         },
         {
             "Rank": "—",
@@ -2627,7 +2627,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 70,
             "Rating": "复合半导体ASML + 70-90% MOCVD + 3台发动机",
             "Port": "",
-            "Current Price": "EUR 50.94",
+            "Current Price": "EUR 50.64",
             "Ceiling Target": "120 欧元-250 欧元",
             "Upside": "2.4x-4.9x",
             "Position Type": "🔒 阻塞点\n物理：70-90% MOCVD 份额——InP 外延记录工具。复合半成品的通用原语。 2026-2035+",
@@ -2638,7 +2638,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB1 光子 + DB4 电源",
-            "Change %": "-1.09%"
+            "Change %": "-1.67%"
         },
         {
             "Rank": "—",
@@ -2649,7 +2649,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "1.17 欧元",
             "Port": "",
-            "Current Price": "EUR 22.50",
+            "Current Price": "EUR 21",
             "Ceiling Target": "失败",
             "Upside": null,
             "Position Type": "⚡ 瓶颈\n苦恼：垂死公司内部的 CoPoS 技术。正确的技术，错误的车辆。失败。",
@@ -2660,7 +2660,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "不要追逐 — 等待 LayTec 收入拐点或回落至 13 欧元",
             "IR Check": "德语文件。 NuWays AG 唯一分析师（PT 21 欧元，买入）。",
             "Supercycle": "GaN MOCVD + InP SiPh 计量",
-            "Change %": "-8.91%"
+            "Change %": "-14.98%"
         },
         {
             "Rank": "—",
@@ -2955,7 +2955,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 8,
             "Rating": "失败 — 混合键合领导者，20 名客户。但 €20B MC，15+ 分析师，价格高于上限中点。入场 0.89 倍。",
             "Port": "",
-            "Current Price": "EUR 255",
+            "Current Price": "EUR 253.70",
             "Ceiling Target": "€160-€280（FY2028-30 混合，15%/年）",
             "Upside": "0.6x-1.1x",
             "Position Type": "🔒 CHOKEPOINT（混合键合中）\n混合键合领先者<10nm。 20 名客户。 EVG 参加比赛。非混合业务（芯片贴装、倒装芯片）具有竞争力。",
@@ -2966,7 +2966,7 @@ window.PORTFOLIO_DATA = {
             "Allocation Calendar": "",
             "IR Check": "",
             "Supercycle": "DB5高级封装",
-            "Change %": "+0.47%"
+            "Change %": "-0.04%"
         },
         {
             "Rank": "—",
