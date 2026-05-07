@@ -68,28 +68,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 4,
-            "Ticker": "CGEH",
-            "Name": "Capstone Power+ (Capstone Green Energy)",
-            "Total": 79,
-            "Base": 73,
-            "Entry": 88,
-            "Rating": "WL — Combination moat: microturbine + absorption chiller + 800VDC + sub-5ppm NOx. Edge AI DC BTM power. 230x gap vs Bloom. NASDAQ uplisting mandated. ZERO DC revenue yet.",
-            "Port": "",
-            "Current Price": "$10.54",
-            "Ceiling Target": "$35-100",
-            "Upside": "3.3x-9.5x",
-            "Position Type": "",
-            "Revenue Explosion": "",
-            "Updated": "May 6",
-            "Key Thesis": "",
-            "Market Cap": "$357M",
-            "Allocation Calendar": "",
-            "IR Check": "",
-            "Supercycle": "",
-            "Change %": "-7.62%"
-        },
-        {
-            "Rank": 5,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
             "Total": 75,
@@ -111,7 +89,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.70%"
         },
         {
-            "Rank": 6,
+            "Rank": 5,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "Total": 73,
@@ -133,7 +111,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+10.08%"
         },
         {
-            "Rank": 7,
+            "Rank": 6,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (汎銓科技)",
             "Total": 76,
@@ -155,7 +133,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.30%"
         },
         {
-            "Rank": 8,
+            "Rank": 7,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "Total": 71,
@@ -177,7 +155,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.36%"
         },
         {
-            "Rank": 9,
+            "Rank": 8,
             "Ticker": "6451.TW",
             "Name": "ShunSin Technology",
             "Total": 71,
@@ -199,29 +177,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.35%"
         },
         {
-            "Rank": 10,
-            "Ticker": "NRGV",
-            "Name": "Energy Vault Holdings",
-            "Total": 64,
-            "Base": 57,
-            "Entry": 75,
-            "Rating": "No-moat BESS deployer + $1.3B backlog + first EBITDA+ Q4",
-            "Port": "",
-            "Current Price": "$4.21",
-            "Ceiling Target": "$15-22",
-            "Upside": "3.6x-5.2x",
-            "Position Type": "⚡ BOTTLENECK\nCapacity: BESS deployer — no moat, competitive. Asset Vault recurring model unproven. 2-3yr window.",
-            "Revenue Explosion": "",
-            "Updated": "May 6",
-            "Key Thesis": "DB4+DB4b AI POWER + GRID STORAGE. Path B platform (no moat). FY2025 rev $203.7M (+340% YoY). First positive EBITDA Q4. Backlog $1.3B (+300%). 540 MW contracted/in-construction (from 65 MW). CRUSOE AI PARTNERSHIP: 25 MW modular AI data centers at Snyder TX, 10-20x EBITDA/MW vs storage. Asset Vault own-and-operate model targeting $60M recurring EBITDA → $100-150M by 2029. Sodium-ion: 1.5 GWh Peak Energy supply agreement. FY2026 guided $225-300M. $300M preferred equity fund with OIC. RISK: Still losing ~$100M/yr. Competitive (Tesla/Fluence/BYD). Capital intensive. Dilution risk.",
-            "Market Cap": "$773M",
-            "Allocation Calendar": "",
-            "IR Check": "",
-            "Supercycle": "DB4+DB4b Grid/AI Power",
-            "Change %": "-8.89%"
-        },
-        {
-            "Rank": 11,
+            "Rank": 9,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "Total": 69,
@@ -243,7 +199,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.46%"
         },
         {
-            "Rank": 12,
+            "Rank": 10,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "Total": 65,
@@ -265,7 +221,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.82%"
         },
         {
-            "Rank": 13,
+            "Rank": 11,
             "Ticker": "EOS.AX",
             "Name": "Electro Optic Systems",
             "Total": 70,
@@ -287,7 +243,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.40%"
         },
         {
-            "Rank": 14,
+            "Rank": 12,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "Total": 71,
@@ -309,7 +265,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.29%"
         },
         {
-            "Rank": 15,
+            "Rank": 13,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "Total": 67,
@@ -331,7 +287,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-10.07%"
         },
         {
-            "Rank": 16,
+            "Rank": 14,
             "Ticker": "000660.KS",
             "Name": "SK Hynix",
             "Total": 68,
@@ -353,7 +309,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+10.64%"
         },
         {
-            "Rank": 17,
+            "Rank": 15,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 64,
@@ -375,7 +331,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.40%"
         },
         {
-            "Rank": 18,
+            "Rank": 16,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "Total": 67,
@@ -397,7 +353,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.22%"
         },
         {
-            "Rank": 19,
+            "Rank": 17,
             "Ticker": "NBIS",
             "Name": "Nebius Group",
             "Total": 64,
@@ -419,7 +375,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+8.82%"
         },
         {
-            "Rank": 20,
+            "Rank": 18,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "Total": 62,
@@ -441,7 +397,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.45%"
         },
         {
-            "Rank": 21,
+            "Rank": 19,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 65,
@@ -463,7 +419,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.94%"
         },
         {
-            "Rank": 22,
+            "Rank": 20,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "Total": 62,
@@ -485,7 +441,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+14.41%"
         },
         {
-            "Rank": 23,
+            "Rank": 21,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "Total": 63,
@@ -507,7 +463,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.99%"
         },
         {
-            "Rank": 24,
+            "Rank": 22,
             "Ticker": "AAOI",
             "Name": "Applied Optoelectronics",
             "Total": 61,
@@ -529,7 +485,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.46%"
         },
         {
-            "Rank": 25,
+            "Rank": 23,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "Total": 62,
@@ -551,7 +507,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.80%"
         },
         {
-            "Rank": 26,
+            "Rank": 24,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "Total": 62,
@@ -573,7 +529,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.71%"
         },
         {
-            "Rank": 27,
+            "Rank": 25,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "Total": 61,
@@ -595,7 +551,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.82%"
         },
         {
-            "Rank": 28,
+            "Rank": 26,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "Total": 56,
@@ -617,7 +573,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.81%"
         },
         {
-            "Rank": 29,
+            "Rank": 27,
             "Ticker": "CRDO",
             "Name": "Credo Technology",
             "Total": 58,
@@ -639,7 +595,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.27%"
         },
         {
-            "Rank": 30,
+            "Rank": 28,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "Total": 54,
@@ -661,7 +617,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-10.36%"
         },
         {
-            "Rank": 31,
+            "Rank": 29,
             "Ticker": "LWLG",
             "Name": "Lightwave Logic",
             "Total": 55,
@@ -683,7 +639,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.73%"
         },
         {
-            "Rank": 32,
+            "Rank": 30,
             "Ticker": "ARM",
             "Name": "Arm Holdings PLC",
             "Total": 53,
@@ -704,7 +660,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "ALL — Universal Compute Architecture"
         },
         {
-            "Rank": 33,
+            "Rank": 31,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
             "Total": 51,
@@ -726,7 +682,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.57%"
         },
         {
-            "Rank": 34,
+            "Rank": 32,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "Total": 50,
@@ -748,7 +704,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.52%"
         },
         {
-            "Rank": 35,
+            "Rank": 33,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "Total": 51,
@@ -770,7 +726,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.68%"
         },
         {
-            "Rank": 36,
+            "Rank": 34,
             "Ticker": "3081.TWO",
             "Name": "LandMark Optoelectronics",
             "Total": 44,
@@ -792,7 +748,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.52%"
         },
         {
-            "Rank": 37,
+            "Rank": 35,
             "Ticker": "AXTI",
             "Name": "AXT Inc",
             "Total": 47,
@@ -814,7 +770,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.45%"
         },
         {
-            "Rank": 38,
+            "Rank": 36,
             "Ticker": "AMSC",
             "Name": "American Superconductor",
             "Total": 49,
@@ -836,7 +792,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.20%"
         },
         {
-            "Rank": 39,
+            "Rank": 37,
             "Ticker": "MU",
             "Name": "Micron Technology",
             "Total": 49,
@@ -858,7 +814,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.39%"
         },
         {
-            "Rank": 40,
+            "Rank": 38,
             "Ticker": "300476.SZSE",
             "Name": "Victory Giant (胜宏科技)",
             "Total": 43,
@@ -880,7 +836,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.77%"
         },
         {
-            "Rank": 41,
+            "Rank": 39,
             "Ticker": "TRT",
             "Name": "Trio-Tech International",
             "Total": 45,
@@ -902,7 +858,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.80%"
         },
         {
-            "Rank": 42,
+            "Rank": 40,
             "Ticker": "3037.TW",
             "Name": "Unimicron",
             "Total": 44,
@@ -924,7 +880,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.98%"
         },
         {
-            "Rank": 43,
+            "Rank": 41,
             "Ticker": "FORM",
             "Name": "FormFactor",
             "Total": 46,
@@ -946,7 +902,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.27%"
         },
         {
-            "Rank": 44,
+            "Rank": 42,
             "Ticker": "CLF",
             "Name": "Cleveland-Cliffs",
             "Total": 43,
@@ -968,7 +924,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.17%"
         },
         {
-            "Rank": 45,
+            "Rank": 43,
             "Ticker": "VIAV",
             "Name": "VIAV Solutions",
             "Total": 41,
@@ -990,7 +946,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.62%"
         },
         {
-            "Rank": 46,
+            "Rank": 44,
             "Ticker": "SMOP.OL",
             "Name": "Smartoptics Group",
             "Total": 41,
@@ -1010,6 +966,50 @@ window.PORTFOLIO_DATA = {
             "IR Check": "smartoptics.com/investor-relations",
             "Supercycle": "DB1 Photonics (Layer 3 — Systems)",
             "Change %": "-4.39%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "CGEH",
+            "Name": "Capstone Power+ (Capstone Green Energy)",
+            "Total": 79,
+            "Base": 73,
+            "Entry": 88,
+            "Rating": "WL — Combination moat: microturbine + absorption chiller + 800VDC + sub-5ppm NOx. Edge AI DC BTM power. 230x gap vs Bloom. NASDAQ uplisting mandated. ZERO DC revenue yet.",
+            "Port": "",
+            "Current Price": "$10.54",
+            "Ceiling Target": "$35-100",
+            "Upside": "3.3x-9.5x",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "May 6",
+            "Key Thesis": "",
+            "Market Cap": "$357M",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": "",
+            "Change %": "-7.62%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "NRGV",
+            "Name": "Energy Vault Holdings",
+            "Total": 64,
+            "Base": 57,
+            "Entry": 75,
+            "Rating": "No-moat BESS deployer + $1.3B backlog + first EBITDA+ Q4",
+            "Port": "",
+            "Current Price": "$4.21",
+            "Ceiling Target": "$15-22",
+            "Upside": "3.6x-5.2x",
+            "Position Type": "⚡ BOTTLENECK\nCapacity: BESS deployer — no moat, competitive. Asset Vault recurring model unproven. 2-3yr window.",
+            "Revenue Explosion": "",
+            "Updated": "May 6",
+            "Key Thesis": "DB4+DB4b AI POWER + GRID STORAGE. Path B platform (no moat). FY2025 rev $203.7M (+340% YoY). First positive EBITDA Q4. Backlog $1.3B (+300%). 540 MW contracted/in-construction (from 65 MW). CRUSOE AI PARTNERSHIP: 25 MW modular AI data centers at Snyder TX, 10-20x EBITDA/MW vs storage. Asset Vault own-and-operate model targeting $60M recurring EBITDA → $100-150M by 2029. Sodium-ion: 1.5 GWh Peak Energy supply agreement. FY2026 guided $225-300M. $300M preferred equity fund with OIC. RISK: Still losing ~$100M/yr. Competitive (Tesla/Fluence/BYD). Capital intensive. Dilution risk.",
+            "Market Cap": "$773M",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": "DB4+DB4b Grid/AI Power",
+            "Change %": "-8.89%"
         },
         {
             "Rank": "—",
@@ -1585,28 +1585,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 4,
-            "Ticker": "CGEH",
-            "Name": "Capstone Power+（Capstone 绿色能源）",
-            "Total": 79,
-            "Base": 73,
-            "Entry": 88,
-            "Rating": "WL — 组合护城河：微型涡轮机 + 吸收式制冷机 + 800VDC + 低于 5ppm 的氮氧化物。 Edge AI DC BTM 电源。与 Bloom 的差距为 230 倍。纳斯达克强制上市。 DC 收入还为零。",
-            "Port": "",
-            "Current Price": "$10.54",
-            "Ceiling Target": "$35-100",
-            "Upside": "3.3x-9.5x",
-            "Position Type": "",
-            "Revenue Explosion": "",
-            "Updated": "5月6日",
-            "Key Thesis": "",
-            "Market Cap": "$357M",
-            "Allocation Calendar": "",
-            "IR Check": "",
-            "Supercycle": "",
-            "Change %": "-7.62%"
-        },
-        {
-            "Rank": 5,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
             "Total": 75,
@@ -1628,7 +1606,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.70%"
         },
         {
-            "Rank": 6,
+            "Rank": 5,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "Total": 73,
@@ -1650,7 +1628,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+10.08%"
         },
         {
-            "Rank": 7,
+            "Rank": 6,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (泛铨科技)",
             "Total": 76,
@@ -1672,7 +1650,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.30%"
         },
         {
-            "Rank": 8,
+            "Rank": 7,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "Total": 71,
@@ -1694,7 +1672,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.36%"
         },
         {
-            "Rank": 9,
+            "Rank": 8,
             "Ticker": "6451.TW",
             "Name": "顺欣科技",
             "Total": 71,
@@ -1716,29 +1694,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.35%"
         },
         {
-            "Rank": 10,
-            "Ticker": "NRGV",
-            "Name": "能源库控股",
-            "Total": 64,
-            "Base": 57,
-            "Entry": 75,
-            "Rating": "无护城河 BESS 部署者 + $1.3B 积压 + 第一个 EBITDA+ 第四季度",
-            "Port": "",
-            "Current Price": "$4.21",
-            "Ceiling Target": "$15-22 美元",
-            "Upside": "3.6x-5.2x",
-            "Position Type": "⚡ 瓶颈\n能力：BESS部署者——没有护城河，有竞争力。 Asset Vault 循环模型未经验证。 2-3年的窗口。",
-            "Revenue Explosion": "",
-            "Updated": "5月6日",
-            "Key Thesis": "DB4+DB4b 人工智能电源+网格存储。 B路平台（无护城河）。 2025 财年营收为 2.037 亿美元（同比增长 340%）。第四季度 EBITDA 首次实现正值。积压 $1.3B (+300%)。已签约/在建 540 兆瓦（原 65 兆瓦）。 CRUSOE AI 合作伙伴：位于德克萨斯州斯奈德的 25 MW 模块化 AI 数据中心，与存储相比，EBITDA/MW 为 10-20 倍。 Asset Vault 拥有和运营模式的目标是到 2029 年实现 6000 万美元的经常性 EBITDA → 100-1.5 亿美元。钠离子：1.5 GWh 峰值能源供应协议。 2026 财年指导金额为 2.25-3 亿美元。与 OIC 合作的 3 亿美元优先股基金。风险：每年仍损失约 1 亿美元。有竞争力（特斯拉/Fluence/比亚迪）。资本密集型。稀释风险。",
-            "Market Cap": "$773M",
-            "Allocation Calendar": "",
-            "IR Check": "",
-            "Supercycle": "DB4+DB4b 电网/人工智能电源",
-            "Change %": "-8.89%"
-        },
-        {
-            "Rank": 11,
+            "Rank": 9,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "Total": 69,
@@ -1760,7 +1716,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.46%"
         },
         {
-            "Rank": 12,
+            "Rank": 10,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "Total": 65,
@@ -1782,7 +1738,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.82%"
         },
         {
-            "Rank": 13,
+            "Rank": 11,
             "Ticker": "EOS.AX",
             "Name": "光电系统",
             "Total": 70,
@@ -1804,7 +1760,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.40%"
         },
         {
-            "Rank": 14,
+            "Rank": 12,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "Total": 71,
@@ -1826,7 +1782,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.29%"
         },
         {
-            "Rank": 15,
+            "Rank": 13,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "Total": 67,
@@ -1848,7 +1804,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-10.07%"
         },
         {
-            "Rank": 16,
+            "Rank": 14,
             "Ticker": "000660.KS",
             "Name": "SK海力士",
             "Total": 68,
@@ -1870,7 +1826,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+10.64%"
         },
         {
-            "Rank": 17,
+            "Rank": 15,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 64,
@@ -1892,7 +1848,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.40%"
         },
         {
-            "Rank": 18,
+            "Rank": 16,
             "Ticker": "VICR",
             "Name": "维科公司",
             "Total": 67,
@@ -1914,7 +1870,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.22%"
         },
         {
-            "Rank": 19,
+            "Rank": 17,
             "Ticker": "NBIS",
             "Name": "尼比斯集团",
             "Total": 64,
@@ -1936,7 +1892,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+8.82%"
         },
         {
-            "Rank": 20,
+            "Rank": 18,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "Total": 62,
@@ -1958,7 +1914,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.45%"
         },
         {
-            "Rank": 21,
+            "Rank": 19,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 65,
@@ -1980,7 +1936,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.94%"
         },
         {
-            "Rank": 22,
+            "Rank": 20,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "Total": 62,
@@ -2002,7 +1958,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+14.41%"
         },
         {
-            "Rank": 23,
+            "Rank": 21,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "Total": 63,
@@ -2024,7 +1980,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.99%"
         },
         {
-            "Rank": 24,
+            "Rank": 22,
             "Ticker": "AAOI",
             "Name": "应用光电",
             "Total": 61,
@@ -2046,7 +2002,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.46%"
         },
         {
-            "Rank": 25,
+            "Rank": 23,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "Total": 62,
@@ -2068,7 +2024,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.80%"
         },
         {
-            "Rank": 26,
+            "Rank": 24,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "Total": 62,
@@ -2090,7 +2046,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.71%"
         },
         {
-            "Rank": 27,
+            "Rank": 25,
             "Ticker": "COHR",
             "Name": "相干公司",
             "Total": 61,
@@ -2112,7 +2068,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.82%"
         },
         {
-            "Rank": 28,
+            "Rank": 26,
             "Ticker": "PL",
             "Name": "星球实验室",
             "Total": 56,
@@ -2134,7 +2090,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.81%"
         },
         {
-            "Rank": 29,
+            "Rank": 27,
             "Ticker": "CRDO",
             "Name": "信条科技",
             "Total": 58,
@@ -2156,7 +2112,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.27%"
         },
         {
-            "Rank": 30,
+            "Rank": 28,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "Total": 54,
@@ -2178,7 +2134,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-10.36%"
         },
         {
-            "Rank": 31,
+            "Rank": 29,
             "Ticker": "LWLG",
             "Name": "光波逻辑",
             "Total": 55,
@@ -2200,7 +2156,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.73%"
         },
         {
-            "Rank": 32,
+            "Rank": 30,
             "Ticker": "ARM",
             "Name": "Arm 控股公司",
             "Total": 53,
@@ -2221,7 +2177,7 @@ window.PORTFOLIO_DATA = {
             "Supercycle": "ALL — 通用计算架构"
         },
         {
-            "Rank": 33,
+            "Rank": 31,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
             "Total": 51,
@@ -2243,7 +2199,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.57%"
         },
         {
-            "Rank": 34,
+            "Rank": 32,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "Total": 50,
@@ -2265,7 +2221,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.52%"
         },
         {
-            "Rank": 35,
+            "Rank": 33,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "Total": 51,
@@ -2287,7 +2243,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.68%"
         },
         {
-            "Rank": 36,
+            "Rank": 34,
             "Ticker": "3081.TWO",
             "Name": "地标光电",
             "Total": 44,
@@ -2309,7 +2265,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.52%"
         },
         {
-            "Rank": 37,
+            "Rank": 35,
             "Ticker": "AXTI",
             "Name": "AXT公司",
             "Total": 47,
@@ -2331,7 +2287,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.45%"
         },
         {
-            "Rank": 38,
+            "Rank": 36,
             "Ticker": "AMSC",
             "Name": "美国超导公司",
             "Total": 49,
@@ -2353,7 +2309,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.20%"
         },
         {
-            "Rank": 39,
+            "Rank": 37,
             "Ticker": "MU",
             "Name": "美光科技",
             "Total": 49,
@@ -2375,7 +2331,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.39%"
         },
         {
-            "Rank": 40,
+            "Rank": 38,
             "Ticker": "300476.SZSE",
             "Name": "Victory Giant (胜宏科技)",
             "Total": 43,
@@ -2397,7 +2353,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.77%"
         },
         {
-            "Rank": 41,
+            "Rank": 39,
             "Ticker": "TRT",
             "Name": "三重科技国际",
             "Total": 45,
@@ -2419,7 +2375,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.80%"
         },
         {
-            "Rank": 42,
+            "Rank": 40,
             "Ticker": "3037.TW",
             "Name": "欣兴微光",
             "Total": 44,
@@ -2441,7 +2397,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-4.98%"
         },
         {
-            "Rank": 43,
+            "Rank": 41,
             "Ticker": "FORM",
             "Name": "外形尺寸",
             "Total": 46,
@@ -2463,7 +2419,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.27%"
         },
         {
-            "Rank": 44,
+            "Rank": 42,
             "Ticker": "CLF",
             "Name": "克利夫兰悬崖",
             "Total": 43,
@@ -2485,7 +2441,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.17%"
         },
         {
-            "Rank": 45,
+            "Rank": 43,
             "Ticker": "VIAV",
             "Name": "维亚夫解决方案",
             "Total": 41,
@@ -2507,7 +2463,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.62%"
         },
         {
-            "Rank": 46,
+            "Rank": 44,
             "Ticker": "SMOP.OL",
             "Name": "智能光学集团",
             "Total": 41,
@@ -2527,6 +2483,50 @@ window.PORTFOLIO_DATA = {
             "IR Check": "smartoptics.com/投资者关系",
             "Supercycle": "DB1 光子学（第 3 层 — 系统）",
             "Change %": "-4.39%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "CGEH",
+            "Name": "Capstone Power+（Capstone 绿色能源）",
+            "Total": 79,
+            "Base": 73,
+            "Entry": 88,
+            "Rating": "WL — 组合护城河：微型涡轮机 + 吸收式制冷机 + 800VDC + 低于 5ppm 的氮氧化物。 Edge AI DC BTM 电源。与 Bloom 的差距为 230 倍。纳斯达克强制上市。 DC 收入还为零。",
+            "Port": "",
+            "Current Price": "$10.54",
+            "Ceiling Target": "$35-100",
+            "Upside": "3.3x-9.5x",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "5月6日",
+            "Key Thesis": "",
+            "Market Cap": "$357M",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": "",
+            "Change %": "-7.62%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "NRGV",
+            "Name": "能源库控股",
+            "Total": 64,
+            "Base": 57,
+            "Entry": 75,
+            "Rating": "无护城河 BESS 部署者 + $1.3B 积压 + 第一个 EBITDA+ 第四季度",
+            "Port": "",
+            "Current Price": "$4.21",
+            "Ceiling Target": "$15-22 美元",
+            "Upside": "3.6x-5.2x",
+            "Position Type": "⚡ 瓶颈\n能力：BESS部署者——没有护城河，有竞争力。 Asset Vault 循环模型未经验证。 2-3年的窗口。",
+            "Revenue Explosion": "",
+            "Updated": "5月6日",
+            "Key Thesis": "DB4+DB4b 人工智能电源+网格存储。 B路平台（无护城河）。 2025 财年营收为 2.037 亿美元（同比增长 340%）。第四季度 EBITDA 首次实现正值。积压 $1.3B (+300%)。已签约/在建 540 兆瓦（原 65 兆瓦）。 CRUSOE AI 合作伙伴：位于德克萨斯州斯奈德的 25 MW 模块化 AI 数据中心，与存储相比，EBITDA/MW 为 10-20 倍。 Asset Vault 拥有和运营模式的目标是到 2029 年实现 6000 万美元的经常性 EBITDA → 100-1.5 亿美元。钠离子：1.5 GWh 峰值能源供应协议。 2026 财年指导金额为 2.25-3 亿美元。与 OIC 合作的 3 亿美元优先股基金。风险：每年仍损失约 1 亿美元。有竞争力（特斯拉/Fluence/比亚迪）。资本密集型。稀释风险。",
+            "Market Cap": "$773M",
+            "Allocation Calendar": "",
+            "IR Check": "",
+            "Supercycle": "DB4+DB4b 电网/人工智能电源",
+            "Change %": "-8.89%"
         },
         {
             "Rank": "—",
