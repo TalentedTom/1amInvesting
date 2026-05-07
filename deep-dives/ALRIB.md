@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 66 WL | Base 70% (42/60) | Entry 58 (23/40)
 **Price at Analysis:** €13.84
-**Ceiling:** €25-€45
+**Ceiling:** €25-€32 (2027-2028)
 **Upside Ratio:** 1.8x-3.3x
 **Market Cap:** ~€93M (~$100M)
 **FY2025 Revenue:** €40.3M | Net Income: €5.2M (+27%)

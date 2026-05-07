@@ -204,4 +204,4 @@ Every megawatt NBIS deploys = demand for every Layer -1 through Layer 2 position
 ## Score Change Log
 - Apr 24, 2026: 74 WL (initial deep dive, $350-700 ceiling)
 - Apr 26, 2026: 70 WL (Rule 16 ceiling compression $350-600. ARR≠revenue distinction.)
-- **May 2, 2026: 71 WL** (ClickHouse 28% stake validated: OpenAI defects from Datadog to ClickHouse at hyperscale. JPMorgan confirms AI drives observability volume while making SaaS pricing unsustainable. Eigen AI acquisition adds inference optimization = more $/MW. UBS downgrades ServiceNow PT -41%, SaaS budgets shifting to AI infra. Ceiling raised $350-600→$400-650. Platform thesis: GPU cloud + ClickHouse + Eigen + Toloka.)
+- **May 2, 2026: 71 WL** (ClickHouse 28% stake validated: OpenAI defects from Datadog to ClickHouse at hyperscale. JPMorgan confirms AI drives observability volume while making SaaS pricing unsustainable. Eigen AI acquisition adds inference optimization = more $/MW. UBS downgrades ServiceNow PT -41%, SaaS budgets shifting to AI infra. Ceiling raised $350-600→$400-470 (2027-2028). Platform thesis: GPU cloud + ClickHouse + Eigen + Toloka.)

@@ -98,8 +98,9 @@ OUST is the SIVE of autonomy: Only digital + native color LiDAR. Everyone else c
 
 ## Verdict
 
-77 HC 🔒 — REV8 changes the thesis. World's first native color LiDAR eliminates camera fusion — ONE sensor replacing TWO is architectural disruption. L4 chip doubles performance. Google (Waymo) and Volvo confirmed adoption. Digital architecture moat WIDENED — every analog competitor is an entire generation behind. Ceiling raised $65-240→$75-280. Score +2 from 75 on REV8 base improvement. May 5 earnings TOMORROW.
+77 HC 🔒 — REV8 changes the thesis. World's first native color LiDAR eliminates camera fusion — ONE sensor replacing TWO is architectural disruption. L4 chip doubles performance. Google (Waymo) and Volvo confirmed adoption. Digital architecture moat WIDENED — every analog competitor is an entire generation behind. Ceiling raised $65-240→$75-137 (2027-2028). Score +2 from 75 on REV8 base improvement. May 5 earnings TOMORROW.
 
 ## Score Change Log
 - Apr 24, 2026: 75 HC (initial deep dive, Physical AI perception, Stereolabs)
 - **May 4, 2026: 77 HC** (REV8 native color LiDAR — world's first. L4 chip doubles range/resolution. Google + Volvo confirmed. ONE sensor replaces camera + LiDAR. Camera elimination expands TAM $25-35B→$30-45B. Ceiling $65-240→$75-280. Core +2, Cycle +1, Catalysts +1, Risks -1. Base 70→75. Score 75→77.)
+- **May 6, 2026: 74 WL ⚠️ DROPS FROM HC** (Ceiling standardized to 2027-2028. $75-280→$75-137. Undiscounted $190 (2030) × 0.72 = $137. Physical AI TAM is mostly 2029-2030+ so discounting hits hardest. Score -3. Thesis unchanged — REV8, Stereolabs, defense, Safe LIDAR Act. HC recovers if: price drops to $22 (ratio improves), Safe LIDAR Act passes (Base upgrade + ceiling expansion), or Physical AI revenue accelerates faster than 2030 timeline.)

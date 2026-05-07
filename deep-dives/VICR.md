@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 73 WL 🔒 | Base 82% (49/60) | Entry 60 (24/40) | **HC at ~$230**
 **Price at Analysis:** $273.53
-**Ceiling:** $400-$900 (FY2028-30 blended, 15%/yr discount per Rule 16)
+**Ceiling:** $400-$650 (2027-2028) (FY2028-30 blended, 15%/yr discount per Rule 16)
 **Upside Ratio:** 1.5x-3.3x
 **Market Cap:** ~$12.4B
 **Q1 2026 Revenue:** $113.0M (+20.2% YoY)

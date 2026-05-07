@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 52 | Base 55% (33/60) | Entry 48 (19/40)
 **Price at Analysis:** $9.36 (AH Apr 24)
-**Ceiling:** $15-$30
+**Ceiling:** $15-$22 (2027-2028)
 **Upside Ratio:** 1.6x-3.2x
 **Market Cap:** ~$90M
 **Q2 FY2026 Revenue:** $15.6M (+82% YoY)

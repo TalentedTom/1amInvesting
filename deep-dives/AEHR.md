@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 86 HC | Base 90% (54/60) | Entry 75 (30/40) | #2 in Framework History
 **Price at Analysis:** $95.91
-**Ceiling:** $280-$550
+**Ceiling:** $280-$405 (2027-2028)
 **Upside Ratio:** 2.9x-5.7x
 **Market Cap:** ~$2.7B
 **H2 FY2026 Bookings:** >$92M (record, blew through $60-80M guidance)
@@ -143,3 +143,4 @@ In Damnang's 7-Layer Value Chain, AEHR is the top performer at Layer 7 (Test & Q
 ## Verdict
 
 86 HC — #2 in framework history. The only 20/20 Core Thesis. Sole-source WLBI monopoly with no competitor on earth. Record $41M order validates. Bookings explosion from $6.2M to >$92M in two quarters. Revenue inflection FY2027. Three growth vectors (SiPh + AI ASIC + SiC) ensure TAM expands with every new compound semiconductor material.
+- **May 6, 2026: 85 HC** (Ceiling standardized to 2027-2028. $280-550→$280-405. Bull $560 (2030) discounted 2yr × 15% = $405. Score -1 from standardization. COHR 6-inch validates InP test demand.)

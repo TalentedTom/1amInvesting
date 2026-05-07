@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 65 WL 🔒 | Base 78% (47/60) | Entry 45 (18/40) | **Owned ✓**
 **Price at Analysis:** $164.31
-**Ceiling:** $260-$370 (FY2028-31 blended, CPO discounted 15%/yr per Rule 16)
+**Ceiling:** $260-$370 (2027-2028) (FY2028-31 blended, CPO discounted 15%/yr per Rule 16)
 **Upside Ratio:** 1.6x-2.3x
 **Market Cap:** ~$142B
 **Position Type:** 🔒 CHOKEPOINT — Custom ASIC duopoly (MRVL + Broadcom only)

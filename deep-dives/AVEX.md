@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 48 | Base 52% (31/60) | Entry 42 (17/40)
 **Price at Analysis:** ~$36
-**Ceiling:** $50-$85
+**Ceiling:** $80-$115 (2027-2028)
 **Market Cap:** ~$3.7B
 **FY2025 Revenue:** $433M | Net Loss: -$16.78M
 **IPO:** April 17, 2026 at $20/share (7 days ago)

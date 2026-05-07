@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 71 WL 🔒 | Base 78% (47/60) | Entry 60 (24/40)
 **Price at Analysis:** $865 (updated to $846.89 on Apr 23)
-**Ceiling:** $1,500-$2,500 (FY2028-30)
+**Ceiling:** $1,500-$1,800 (2027-2028) (FY2028-30)
 **Upside Ratio:** 1.8x-3.0x
 **Market Cap:** $62.9B
 

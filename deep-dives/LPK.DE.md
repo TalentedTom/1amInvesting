@@ -1,9 +1,9 @@
 # LPK.DE — LPKF Laser & Electronics | Deep Dive
 **Date:** May 5, 2026 (UPDATED — PhotonCap PhD glass substrate analysis validates thesis)
 **Framework Version:** v3.6.6
-**Score:** 85 HC 🔒 | Base 77% (46/60) | Entry 98 (39/40) | #3 in Portfolio | **Owned ✓**
+**Score:** 88 HC 🔒 | Base 80% (48/60) | Entry 100% (40/40) | #3 in Portfolio | **Owned ✓**
 **Price at Analysis:** €16.55
-**Ceiling:** €80-€200 (VLM Kapital Intel/Ayar Labs patent chain confirmed. CEO 50-100 machines/customer at HVM.)
+**Ceiling:** €85-€225 (3D waveguide CONFIRMED SHIPPING. TGV + waveguide + RDL + welding = 4 process steps. CPO preparations completed.)
 **Upside Ratio:** 4.8x-12.1x
 **Market Cap:** ~€405M (~$440M)
 **Entry Ratio:** 8.46x to ceiling midpoint
@@ -222,3 +222,5 @@ European-headquartered. 80% of global glass packaging qualification on LPKF equi
 - **May 1, 2026: 84 HC** (VLM Kapital patent-chain research: Intel patent US20240027706A1 describes glass interposer with laser-written waveguides for detachable fiber solutions. Intel paper confirms "ultrashort-pulse laser direct writing" = LPKF LIDE. Ayar Labs' "detachable glass photonic interconnect solution" uses Intel's glass bridge. Key Intel researcher Pooya Tadayon moved to Ayar Labs as VP Packaging & Test in 2024. LPKF is the ONLY mass-production-ready laser waveguide writer. Ceiling raised €60-160→€75-175.)
 - **May 2, 2026: 85 HC** (VLM Kapital patent chain accepted as virtual confirmation. Intel patent + CEO 50-100 machines + equipment installed + Pooya Tadayon at Ayar Labs = confirmed without formal press release. Ceiling raised €75-175→€80-200. 8.46x midpoint ratio. Three revenue vectors: substrate vias + CPO waveguides + Ayar Labs glass bridge architecture.)
 - **May 5, 2026: 85 HC** (PhotonCap PhD glass substrate analysis validates thesis independently. "Most advanced production-grade TGV process." Glass market $244M→$460-586M by 2030 (Yole/QY Research). NEW: 3D waveguide expansion identified — LPKF patent coverage extends beyond TGV into waveguide formation, could penetrate Corning's integrated platform territory. Under development, not confirmed — monitor as ceiling expansion trigger. EIC→CPO→EPIC progression framework: glass advantage COMPOUNDS with each generation. SOI.PA confirmed as vertical complement. Mass production 2027-2029 confirmed across Samsung EM, Absolics, DNP, LG Innotek. No score change — validation, not new thesis. Waveguide confirmation would trigger ceiling expansion to €100-250.)
+- **May 6, 2026: 83 HC** (Ceiling standardized to 2027-2028. €80-200→€80-217. Undiscounted €300 (2030) × 0.72 = €217. Midpoint €140→€148. Score -2 from Entry recalculation on Fund Curve. PhotonCap validated same session.)
+- **May 6, 2026: 88 HC ⭐ WAVEGUIDE CONFIRMED** (3D waveguide equipment NOT "under development" — ALREADY SHIPPED TO CUSTOMERS. LPKF corporate: "completed preparations for co-packaged optics technologies" + "already supplied equipment capable of forming 3D optical waveguides inside glass substrates." Level 3 investor Apr 28: "critical monopoly chokepoint" + "potential 10x" + "customer has already installed LPKF's equipment." Four sources confirmed: LPKF corporate, Level 3 investor, PhotonCap PhD, VLM Kapital patent chain. Base 77→80%: Core Thesis +1 (waveguide confirmed shipping, 4 process steps), TAM +1 (Layer A→Layer B, doubles capture per customer), Alpha +1 (Level 3 "10x" call). Ceiling €80-217→€85-225. At €23.40: midpoint €155, ratio 6.6x → Entry 100%. #2 in framework behind SIVE.)

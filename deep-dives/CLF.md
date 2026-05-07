@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 50 | Base 52% (31/60) | Entry 48 (19/40)
 **Price at Analysis:** $9.76
-**Ceiling:** $15-$25
+**Ceiling:** $15-$18 (2027-2028)
 **Market Cap:** ~$5.5B
 **Q1 2026 Revenue:** $4.9B | EPS: -$0.40 | Net Loss: -$229M
 

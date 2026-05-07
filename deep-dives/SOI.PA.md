@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.6
 **Score:** 75 HC 🔒 | Base 85% (51/60) | Entry 60% (24/40) | **Owned ✓ — REBUILD POSITION**
 **Price at Analysis:** €153.50
-**Ceiling:** €250-€550 (2028-2031, Goldman $91B CPO TAM + Level 3 investor 55,000% growth curve)
+**Ceiling:** €250-€338 (2027-2028) (2028-2031, Goldman $91B CPO TAM + Level 3 investor 55,000% growth curve)
 **Upside Ratio:** 1.6x-3.6x
 **Market Cap:** ~€4.5B (~$4.9B) | EV: ~€1.8B
 **FY2026E Revenue:** ~€550M | Photonics-SOI: ~€100M

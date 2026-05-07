@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 57 FAIL | Base 60% (36/60) | Entry 53 (21/40)
 **Price at Analysis:** $52.40
-**Ceiling:** $50-90
+**Ceiling:** $50-65 (2027-2028)
 **Upside Ratio:** 1.0x-1.7x (midpoint 1.34x)
 **Market Cap:** ~$10B
 **Q3 FY2026 Revenue:** $406.8M (+42.8% YoY) — beat $400M guide high end
@@ -93,7 +93,7 @@ Top 5 competitors share 33.7% of wireless network test market. Fragmented, not m
 ```
 Near-term (FY2027): $1.9-2.0B rev, 22-23% OP, 20-22x = $8-10B → $36-44/share
 Long-term (FY2029): $2.5-2.8B rev, 24-25% OP, 20-22x = $12-15B → $52-67 (discounted)
-CEILING: $50-90
+CEILING: $50-65 (2027-2028)
 ```
 
 **Entry:** $52.40 / $70 midpoint = 1.34x → Entry 21/40

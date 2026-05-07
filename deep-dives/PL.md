@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 61 | Base 63% | Entry 58
 **Price at Analysis:** $35.44
-**Ceiling:** $65-$125
+**Ceiling:** $65-$90 (2027-2028)
 **Upside Ratio:** 1.8x-3.5x
 
 ---

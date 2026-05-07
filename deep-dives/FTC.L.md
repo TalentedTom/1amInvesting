@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.5
 **Score:** 76 HC 🔒 | Base 78% (47/60) | Entry 73 (29/40) | **Owned ✓**
 **Price at Analysis:** GBp 287 (pre-FCC vote, +30% Friday, Monday gap expected)
-**Ceiling:** GBp 900-1,600 (2028-33 blended, V-band discounted 15%/yr)
+**Ceiling:** GBp 900-1,600 (2027-2028)
 **Upside Ratio:** 3.1x-5.6x
 **Market Cap:** ~£640M
 

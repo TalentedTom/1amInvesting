@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 70 WL | Base 70% (42/60) | Entry 75 (30/40)
 **Price at Analysis:** DKK 902.50 (Col 9)
-**Ceiling:** DKK 2,500-4,500
+**Ceiling:** DKK 2,500-3,250 (2027-2028)
 **Upside Ratio:** 2.8x-5.0x
 **Market Cap:** ~€5.7B (~DKK 42.5B)
 **Order Backlog:** €10.8B+ (9x revenue, record)

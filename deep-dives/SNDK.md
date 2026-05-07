@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.5
 **Score:** 56 | Base 65% (39/60) | Entry 43 (17/40)
 **Price at Analysis:** $1,187
-**Ceiling:** $1,800-$3,200 (NAND shortage to 2027, $42B NBM deals, 78% GM, BiCS8/9, $6B buyback)
+**Ceiling:** $1,800-$2,300 (2027-2028) (NAND shortage to 2027, $42B NBM deals, 78% GM, BiCS8/9, $6B buyback)
 **Upside Ratio:** 1.5x-2.7x
 **Market Cap:** ~$162B
 **Q3 FY2026 Revenue:** $5.95B (+251% YoY) | GM: 78.4% | EPS: $23.41 (beat $14.45 est)

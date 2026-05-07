@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.5
 **Score:** 53 | Base 62% (37/60) | Entry 40 (16/40)
 **Price at Analysis:** $542.21
-**Ceiling:** $800-$1,400 (memory shortage to 2027, DDR5 +63% QoQ, HBM expansion)
+**Ceiling:** $800-$1,000 (2027-2028) (memory shortage to 2027, DDR5 +63% QoQ, HBM expansion)
 **Upside Ratio:** 1.5x-2.6x
 **Market Cap:** ~$583B
 **Q2 FY2026 Revenue:** $23.86B (+196% YoY) | GM: 75% | EPS: $12.20

@@ -1,14 +1,14 @@
 # TSEM — Tower Semiconductor | Deep Dive
-**Date:** May 2, 2026 (RESCORED — 142% CPO CAGR TAM expansion)
-**Framework Version:** v3.6.5
-**Score:** 62 WL 🔒 | Base 70% (42/60) | Entry 50 (20/40)
-**Price at Analysis:** $218.01
-**Ceiling:** $300-$700 (SiPh foundry TAM expanded by 142% CPO CAGR)
+**Date:** May 6, 2026 (RESCORED — LITE/COHR/GFS confirmation cascade + Level 3 signal)
+**Framework Version:** v3.6.6
+**Score:** 67 WL 🔒 | Base 75% (45/60) | Entry 55% (22/40)
+**Price at Analysis:** $218
+**Ceiling:** $300-$500 (2027-2028, SiPh foundry TAM validated by LITE CEO "massive CPO imbalance" + COHR 6-inch + GFS doubling)
 **Upside Ratio:** 1.4x-3.2x
-**Market Cap:** ~$26.3B
+**Market Cap:** ~$25.6B
 **FY2025 Revenue:** ~$1.57B | SiPh: $228M (+115%)
 **2028 Target:** $2.84B revenue, $750M net profit
-**Earnings:** May 13, 2026 🔥
+**Earnings:** May 13, 2026 🔥🔥
 
 ---
 
@@ -165,9 +165,10 @@ TSMC entering SiPh production with COUPE in H2 2026 is the biggest risk. If TSMC
 
 ## Verdict
 
-62 WL 🔒. The dominant SiPh foundry with ~85% share, $350M+ expansion, and >70% capacity prepaid. CPO market at 142% CAGR 2026-2030 means Tower's SiPh revenue trajectory is steeper than prior model — potentially $1.2-2.0B SiPh revenue by 2030 vs $500-700M previously modeled. Ceiling raised $250-600→$300-700. However, stock at $218 has ALREADY priced the 2028 management model ($2.84B/$750M NP at 30x = $208). Entry constrains score — asymmetry only exists in the 2029-2030 view where 142% CPO CAGR steepens the SiPh ramp beyond what the market currently models. TSMC COUPE remains key competitive risk. May 13 earnings = CPO pipeline visibility.
+67 WL 🔒. The dominant SiPh foundry with ~85% share, $920M expansion (Convequity, up from $350M+), >5x SiPh wafer starts by end 2026. LITE CEO confirmed "massive supply demand imbalance on CPO" — every CPO PIC runs at TSEM or GFS. COHR 6-inch InP yields > 3-inch validates chip demand acceleration. GFS confirmed SiPh doubling 2026 with >$1B run rate by 2028 — validates TAM but also competitive pressure. Patent suit vs GFS on SiPh = offensive IP defense. Level 3 investor holds TSEM alongside SIVE/MSScorps/ShunSin/SOI. Production partnerships: Coherent (400Gbps/lane silicon modulator), Xanadu (quantum photonics), Scintil (DWDM CPO lasers), Salience (optical switches), Axiro (defense radar). Base upgraded to 75% on supply chain confirmation cascade from last 48 hours. Entry at $218 constrains score — stock 30% above $169 consensus. HC at $130 pullback or SiPh >30% of revenue + patent suit won.
 
 ## Score Change Log
 - Apr 24, 2026: 67 WL (initial deep dive)
 - Apr 26, 2026: 68 WL (NVIDIA CPO pull-forward. PIC demand timeline accelerated. AP7 ramp confirmed.)
-- **May 2, 2026: 62 WL** (Ceiling raised $250-600→$300-700 on 142% CPO CAGR TAM expansion. SiPh foundry revenue trajectory steepened: $1.2-2.0B by 2030. However, stock ran from $200→$218 (+9%), compressing entry. Score NET DOWN because entry compression > ceiling expansion at current price. The TAM is larger but the stock already partly prices it.)
+- May 2, 2026: 62 WL (Ceiling raised $250-600→$300-700 on 142% CPO CAGR. Stock ran $200→$218, compressing entry. Score NET DOWN because entry compression > ceiling expansion.)
+- **May 6, 2026: 67 WL** (MAJOR CONFIRMATION CASCADE. Base 70→75%: Core Thesis +1 (patent suit vs GFS = offensive IP, $920M capex 3x prior estimate, Coherent/Xanadu/Scintil/Salience production partnerships), Cycle +1 (LITE CEO "massive CPO imbalance" + COHR 6-inch validates chip demand + >5x SiPh starts), TAM +1 (Goldman $91B confirmed by Layer 1 CEO + Convequity bottom-up $305M wafer TAM), Catalysts +1 (May 13 🔥🔥 with LITE+COHR read-throughs), Macro +1 ($710B capex + LITE "infancy"). Alpha -1 (stock 30%+ above consensus). Risks +1 (patent suit offensive). Entry 55% at $218 — stock above consensus limits score. HC at $130 or SiPh >30% revenue + patent won.)

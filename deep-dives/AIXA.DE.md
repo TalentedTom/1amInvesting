@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.3
 **Score:** 73 WL | Base 77% (46/60) | Entry 68 (27/40)
 **Price at Analysis:** €46.57 (Col 9)
-**Ceiling:** €120-€250
+**Ceiling:** €120-€180 (2027-2028)
 **Upside Ratio:** 2.6x-5.4x
 **Market Cap:** ~€5B
 **FY2026 Guidance:** €560M ±€30M (raised Apr 14). EBIT 17-20%. GM ~42%.

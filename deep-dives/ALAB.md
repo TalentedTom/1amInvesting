@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 54 (Unranked) | Base 70% (42/60) | Entry 30 (12/40)
 **Price at Analysis:** ~$200 (estimated)
-**Ceiling:** $250-$290 (FY2028-30 blended, 15%/yr discount per Rule 16)
+**Ceiling:** $250-$290 (2027-2028) (FY2028-30 blended, 15%/yr discount per Rule 16)
 **Upside Ratio:** 1.3x-1.5x
 **Market Cap:** ~$36B
 **Position Type:** ⚡ BOTTLENECK — PCIe Gen 6 first-mover, standards-based = competitors catching up

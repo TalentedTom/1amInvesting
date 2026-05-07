@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 62 | Base 72% (43/60) | Entry 48 (19/40)
 **Price at Analysis:** $195.04
-**Ceiling:** $300-$500
+**Ceiling:** $300-$360 (2027-2028)
 **Market Cap:** ~$34B
 **Q3 FY2026 Revenue:** $407M (+4x YoY) | 9-Month: $898M
 **Non-GAAP GM:** 67.6%

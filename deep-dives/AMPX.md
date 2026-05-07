@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 75 HC | Base 75% (45/60) | Entry 75 (30/40) | #4 in Portfolio
 **Price at Analysis:** $20.66
-**Ceiling:** $44-$146
+**Ceiling:** $44-$110 (2027-2028)
 **Upside Ratio:** 2.1x-7.1x
 **Market Cap:** ~$1.5B
 **FY2025 Revenue:** $73.0M (+202% YoY)

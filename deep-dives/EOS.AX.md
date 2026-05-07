@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 74 WL | Base 77% (46/60) | Entry 70 (28/40)
 **Price at Analysis:** A$10.01
-**Ceiling:** A$20-A$50
+**Ceiling:** A$20-A$31 (2027-2028)
 **Upside Ratio:** 2.0x-5.0x
 **Market Cap:** ~A$600M (~$400M)
 **Backlog:** A$459M (+238% YoY)

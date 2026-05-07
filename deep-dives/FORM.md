@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 43 FAIL | Base 63% (38/60) | Entry 10 (4/40)
 **Price at Analysis:** $155.08
-**Ceiling:** $130-$210 (FY2028-30 blended, 15%/yr discount per Rule 16)
+**Ceiling:** $130-$210 (2027-2028) (FY2028-30 blended, 15%/yr discount per Rule 16)
 **Upside Ratio:** 0.8x-1.4x (Entry BELOW 1x at midpoint)
 **Market Cap:** $12.089B
 **FY2025 Revenue:** $785M (record, +2.8% YoY)

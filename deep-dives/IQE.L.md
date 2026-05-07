@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 57 | Base 60% (36/60) | Entry 53 (21/40)
 **Price at Analysis:** GBp 47.60
-**Ceiling:** 70p-140p (operating + M&A)
+**Ceiling:** 70p-100p (2027-2028) (operating + M&A)
 **Upside Ratio:** 1.5x-2.9x
 **Market Cap:** ~£300M (~$385M)
 **FY2025 Revenue:** ~£97M | Adjusted EBITDA: ~£2M

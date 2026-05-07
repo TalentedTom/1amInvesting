@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 56 | Base 57% (34/60) | Entry 55 (22/40)
 **Price at Analysis:** $4.46 (Col 9)
-**Ceiling:** $15-$30
+**Ceiling:** $15-$22 (2027-2028)
 **Upside Ratio:** 3.4x-6.7x
 **Market Cap:** ~$770M
 **FY2025 Revenue:** $203.67M (+340%). Net Loss: -$103.61M.

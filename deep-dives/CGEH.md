@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.5
 **Score:** 72 WL | Base 73% (44/60) | Entry 70 (28/40)
 **Price at Analysis:** $11.68
-**Ceiling:** $35-140
+**Ceiling:** $35-100 (2027-2028)
 **Upside Ratio:** 3.0x-12.0x (midpoint 7.5x)
 **Market Cap:** ~$357M (basic 30.6M shares) / ~$585M (fully diluted 50M post-Monarch)
 **TTM Revenue:** ~$110M (+42% YoY)

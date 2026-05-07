@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.2
 **Score:** 68 WL | Base 73% (44/60) | Entry 58 (23/40)
 **Price at Analysis:** C$8.05
-**Ceiling:** C$14-C$28
+**Ceiling:** C$14-C$20 (2027-2028)
 **Upside Ratio:** 1.7x-3.5x
 **Market Cap:** ~C$2B (~$1.4B)
 **FY2025 Revenue:** C$102.2M (record). Combined w/ Covelya: C$365M.

@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.4
 **Score:** 46 FAIL | Base 70% (42/60) | Entry 10 (4/40)
 **Price at Analysis:** €248
-**Ceiling:** €160-€280 (FY2028-30 blended, 15%/yr discount per Rule 16)
+**Ceiling:** €160-€280 (2027-2028) (FY2028-30 blended, 15%/yr discount per Rule 16)
 **Upside Ratio:** 0.6x-1.1x (ABOVE ceiling midpoint — no asymmetry)
 **Market Cap:** ~€20B (~$22B)
 **Q1 2026 Revenue:** €184.9M (+28.3% YoY)

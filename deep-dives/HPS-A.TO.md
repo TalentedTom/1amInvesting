@@ -3,7 +3,7 @@
 **Framework Version:** v3.6.6
 **Score:** 66 WL | Base 73% (44/60) | Entry 55% (22/40) | **Owned ✓**
 **Price at Analysis:** C$294
-**Ceiling:** C$550-C$800 (2028-2030, AEG + data center backlog + DPA)
+**Ceiling:** C$550-C$580 (2027-2028)
 **Upside Ratio:** 1.9x-2.7x
 **Market Cap:** ~C$3.5B (~$2.5B)
 **FY2025 Revenue:** C$898.3M (record, +13.9%)
