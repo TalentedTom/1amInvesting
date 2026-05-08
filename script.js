@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine the columns based on requirements
     const simpleCols = [
-        "Rank", "Ticker", "Total", "Base", "Entry",
+        "SuperCycle", "Ticker", "Total", "Base", "Entry",
         "Current Price", "Change %", "Upside",
         "Ceiling Target"
     ];
@@ -11,8 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayNames = {
         "Current Price": "Price",
         "Ceiling Target": "Target",
-        "Change %": "Chg%"
+        "Change %": "Chg%",
+        "SuperCycle": "Cycle"
     };
+
+    // Canonical order for SuperCycle tag rendering — keeps rows scannable.
+    const SUPERCYCLE_ORDER = ["AI", "CPO", "800G", "1.6T", "Other"];
     const labelFor = (col) => displayNames[col] || col;
 
     let currentLang = 'en';
@@ -540,6 +544,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // doesn't pass `row` (defensive — current code always passes it).
         if (colName === 'Rank' && row && row._displayRank !== undefined) {
             value = row._displayRank;
+        }
+
+        // SuperCycle column: render up to 4 tiny colored boxes in a 2-column
+        // grid. Tags drawn in canonical order regardless of how they're listed
+        // in the source string. Empty / dash values render as a hollow cell.
+        if (colName === 'SuperCycle') {
+            const raw = String(value || '').trim();
+            if (!raw || raw === '—' || raw === '-') return '';
+            const tags = raw.split(',').map(s => s.trim()).filter(Boolean);
+            const sorted = SUPERCYCLE_ORDER.filter(c => tags.includes(c));
+            if (!sorted.length) return '';
+            const cls = `cycle-cell cycle-n${sorted.length}`;
+            const boxes = sorted.map(t =>
+                `<span class="cycle-box" data-cycle="${t}">${t}</span>`
+            ).join('');
+            return `<span class="${cls}">${boxes}</span>`;
         }
 
         // Ticker column: render with a logo to the left of the symbol.

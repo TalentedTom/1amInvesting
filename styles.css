@@ -333,12 +333,10 @@ td {
     max-width: 200px;
 }
 
-/* Make Rank, Ticker, and Name slightly sticky to the left so they are always visible */
-/* Also optimizing widths for efficiency */
-/* Sticky left columns: Rank (1) and Ticker (2). Ticker now carries a logo
-   to the left of the symbol so its width budget grew slightly. */
-th:nth-child(1), td:nth-child(1) { width: 42px; max-width: 50px; min-width: 40px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
-th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 42px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+/* Sticky left columns: SuperCycle (1) and Ticker (2). SuperCycle holds up
+   to 4 tiny colored boxes in a 2-col grid; Ticker carries a logo + symbol. */
+th:nth-child(1), td:nth-child(1) { width: 70px; max-width: 78px; min-width: 64px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
+th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 70px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
 th:nth-child(1), th:nth-child(2) {
@@ -372,6 +370,52 @@ tbody tr:hover td:nth-child(1), tbody tr:hover td:nth-child(2) {
 }
 tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
     background-color: var(--sticky-bg);
+}
+
+/* === SuperCycle column: tiny colored boxes in a 2-col grid =====
+   Up to 4 tags per row (AI, CPO, 800G, 1.6T, Other), rendered as
+   tiny pills so the column stays narrow. Color-coded for visual
+   scanning. Single-tag rows get a full-width box so they don't
+   look orphaned. */
+.cycle-cell {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(0, 1fr);
+    gap: 2px;
+    width: 100%;
+    line-height: 1;
+}
+.cycle-cell.cycle-n1 {
+    grid-template-columns: 1fr;
+}
+.cycle-box {
+    font-size: 0.58rem;
+    font-weight: 700;
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cycle-box[data-cycle="AI"]     { background: #3b82f6; }
+.cycle-box[data-cycle="CPO"]    { background: #8b5cf6; }
+.cycle-box[data-cycle="800G"]   { background: #10b981; }
+.cycle-box[data-cycle="1.6T"]   { background: #06b6d4; }
+.cycle-box[data-cycle="Other"]  { background: #6b7280; }
+
+/* Mobile: tighter padding + smaller font, narrower sticky col */
+@media (max-width: 480px) {
+    .cycle-box {
+        font-size: 0.5rem;
+        padding: 1px 3px;
+        border-radius: 2px;
+    }
+    .cycle-cell {
+        gap: 1px;
+    }
 }
 
 /* === Ticker cell with logo (left of symbol, à la TradingView) === */
@@ -766,15 +810,15 @@ tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns: Rank (1) + Ticker (2). Ticker is wider on mobile to
-       accommodate the 14px logo + a few characters of symbol. */
+    /* Sticky columns: SuperCycle (1) + Ticker (2). SuperCycle holds the
+       2x2 mini-pill grid so it needs more width than the old Rank column. */
     th:nth-child(1), td:nth-child(1) {
-        width: 28px; max-width: 32px; min-width: 26px;
-        padding-left: 0.2rem; padding-right: 0.1rem;
+        width: 58px; max-width: 64px; min-width: 54px;
+        padding-left: 0.15rem; padding-right: 0.15rem;
     }
     th:nth-child(2), td:nth-child(2) {
-        width: 82px; max-width: 92px; min-width: 76px;
-        left: 26px;
+        width: 78px; max-width: 88px; min-width: 72px;
+        left: 54px;
         padding-left: 0.15rem; padding-right: 0.2rem;
     }
 
