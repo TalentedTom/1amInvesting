@@ -333,10 +333,12 @@ td {
     max-width: 200px;
 }
 
-/* Sticky left columns: SuperCycle (1) and Ticker (2). SuperCycle holds up
-   to 4 tiny colored boxes in a 2-col grid; Ticker carries a logo + symbol. */
-th:nth-child(1), td:nth-child(1) { width: 70px; max-width: 78px; min-width: 64px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
-th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 70px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+/* Sticky left columns: SuperCycle (1) and Ticker (2). SuperCycle now uses
+   content-sized boxes that wrap (instead of forced 50/50 grid), so the
+   widest 4-tag row (e.g. AI + CPO on top, 800G + 1.6T below) needs ~92px
+   of inner space. Ticker carries a logo + symbol. */
+th:nth-child(1), td:nth-child(1) { width: 95px; max-width: 105px; min-width: 88px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
+th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 95px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
 th:nth-child(1), th:nth-child(2) {
@@ -372,33 +374,32 @@ tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
     background-color: var(--sticky-bg);
 }
 
-/* === SuperCycle column: tiny colored boxes in a 2-col grid =====
-   Up to 4 tags per row (AI, CPO, 800G, 1.6T, Other), rendered as
-   tiny pills so the column stays narrow. Color-coded for visual
-   scanning. Single-tag rows get a full-width box so they don't
-   look orphaned. */
+/* === SuperCycle column: tiny color-coded pills =====
+   Each box is content-sized (not forced to 50% column width), so labels
+   like "800G" and "Other" never get truncated. flex-wrap lets boxes flow
+   onto a second row when needed. Up to 4 tags per row in the data; with
+   typical character widths, AI+CPO fits one row and 800G+1.6T fits the
+   next, giving a natural 2x2 layout for the maximum case without forcing
+   it visually. */
 .cycle-cell {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(0, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 2px;
     width: 100%;
     line-height: 1;
 }
-.cycle-cell.cycle-n1 {
-    grid-template-columns: 1fr;
-}
 .cycle-box {
-    font-size: 0.58rem;
+    flex: 0 0 auto;
+    font-size: 0.6rem;
     font-weight: 700;
-    padding: 2px 4px;
+    padding: 2px 5px;
     border-radius: 3px;
     text-align: center;
     color: #ffffff;
     letter-spacing: 0;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 .cycle-box[data-cycle="AI"]     { background: #3b82f6; }
 .cycle-box[data-cycle="CPO"]    { background: #8b5cf6; }
@@ -406,7 +407,7 @@ tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
 .cycle-box[data-cycle="1.6T"]   { background: #06b6d4; }
 .cycle-box[data-cycle="Other"]  { background: #6b7280; }
 
-/* Mobile: tighter padding + smaller font, narrower sticky col */
+/* Mobile: tighter padding + smaller font */
 @media (max-width: 480px) {
     .cycle-box {
         font-size: 0.5rem;
@@ -810,15 +811,16 @@ tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns: SuperCycle (1) + Ticker (2). SuperCycle holds the
-       2x2 mini-pill grid so it needs more width than the old Rank column. */
+    /* Sticky columns: SuperCycle (1) + Ticker (2). SuperCycle now uses
+       content-sized wrapping boxes — needs more width than before to fit
+       800G + 1.6T side by side. */
     th:nth-child(1), td:nth-child(1) {
-        width: 58px; max-width: 64px; min-width: 54px;
-        padding-left: 0.15rem; padding-right: 0.15rem;
+        width: 72px; max-width: 80px; min-width: 68px;
+        padding-left: 0.1rem; padding-right: 0.1rem;
     }
     th:nth-child(2), td:nth-child(2) {
-        width: 78px; max-width: 88px; min-width: 72px;
-        left: 54px;
+        width: 76px; max-width: 86px; min-width: 70px;
+        left: 68px;
         padding-left: 0.15rem; padding-right: 0.2rem;
     }
 
