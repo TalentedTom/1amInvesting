@@ -96,6 +96,19 @@
             </div>
         </section>
 
+        <!-- SuperCycle multi-select filter. Independent of (and composed with)
+             the All/Chokepoint/Bottleneck slider above. Row matches if at
+             least one of its SuperCycle tags is currently active. Default:
+             all 5 pills active = no filtering. -->
+        <section class="supercycle-bar" id="supercycle-bar">
+            <span class="filter-label">SuperCycle</span>
+            <button class="sc-pill active" data-sc="AI">AI</button>
+            <button class="sc-pill active" data-sc="CPO">CPO</button>
+            <button class="sc-pill active" data-sc="800G">800G</button>
+            <button class="sc-pill active" data-sc="1.6T">1.6T</button>
+            <button class="sc-pill active" data-sc="Other">Other</button>
+        </section>
+
         <!-- First-visit discovery hint for the deep-dive feature. Auto-hides
              after the user opens any deep-dive, or via the dismiss button.
              Persists dismissal in localStorage so it never reappears. -->

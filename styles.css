@@ -1068,6 +1068,72 @@ body.light-mode .modal-content th {
     opacity: 1;
 }
 
+/* === SuperCycle multi-select filter ============================
+   Composes with the position-toggle (All/Chokepoint/Bottleneck) above.
+   Each pill is independently toggleable. Active pill = filled accent,
+   inactive = outlined. */
+.supercycle-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0 1.25rem 0.5rem;
+}
+.supercycle-bar .filter-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-right: 0.4rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.sc-pill {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.32rem 0.8rem;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    user-select: none;
+}
+.sc-pill:hover:not(.active) {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+.sc-pill.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+}
+.sc-pill.active:hover {
+    /* keep the active state visually stable on hover */
+    background: var(--accent);
+}
+
+/* Mobile: tighter pills, smaller font */
+@media (max-width: 480px) {
+    .supercycle-bar {
+        gap: 0.3rem;
+        padding: 0 0.5rem 0.4rem;
+    }
+    .supercycle-bar .filter-label {
+        font-size: 0.68rem;
+        margin-right: 0.2rem;
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 0.1rem;
+    }
+    .sc-pill {
+        padding: 0.25rem 0.55rem;
+        font-size: 0.72rem;
+    }
+}
+
 /* === Deep-dive discovery banner ================================ */
 .hint-banner {
     display: flex;

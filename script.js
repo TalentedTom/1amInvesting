@@ -28,6 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
 
+    // SuperCycle multi-select filter. Default: all 5 categories active
+    // (no filtering). Persisted as JSON array in localStorage. Composes
+    // with the position-type filter — both filters must accept a row.
+    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v1';
+    const ALL_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];
+    let activeSupercycles = (() => {
+        try {
+            const raw = localStorage.getItem(SUPERCYCLE_STORAGE_KEY);
+            if (raw) {
+                const arr = JSON.parse(raw);
+                if (Array.isArray(arr) && arr.length > 0 &&
+                    arr.every(x => ALL_SUPERCYCLES.includes(x))) {
+                    return new Set(arr);
+                }
+            }
+        } catch (_) {}
+        return new Set(ALL_SUPERCYCLES);
+    })();
+
     // Columns Dropdown Logic
     const columnsBtn = document.getElementById('columns-btn');
     const columnsDropdown = document.getElementById('columns-dropdown');
@@ -116,6 +135,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reflect the loaded filter on the buttons + slider (no re-render — initial render handles it).
     positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === positionFilter));
     setSliderPosition(positionFilter);
+
+    // SuperCycle pill toggle. Click to flip a pill's active state. Refuse
+    // to deactivate the last active pill (degenerate empty filter would
+    // hide every row).
+    const scPills = document.querySelectorAll('.sc-pill');
+    function syncSupercyclePillsUI() {
+        scPills.forEach(p => {
+            p.classList.toggle('active', activeSupercycles.has(p.getAttribute('data-sc')));
+        });
+    }
+    function toggleSupercycle(sc) {
+        if (activeSupercycles.has(sc)) {
+            if (activeSupercycles.size === 1) return;   // keep at least one active
+            activeSupercycles.delete(sc);
+        } else {
+            activeSupercycles.add(sc);
+        }
+        try { localStorage.setItem(SUPERCYCLE_STORAGE_KEY, JSON.stringify([...activeSupercycles])); } catch (_) {}
+        syncSupercyclePillsUI();
+        renderData();
+    }
+    scPills.forEach(p => {
+        p.addEventListener('click', () => toggleSupercycle(p.getAttribute('data-sc')));
+    });
+    syncSupercyclePillsUI();
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
@@ -229,15 +273,35 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = fullData[currentLang];
             const enData = fullData['en'] || data;
 
-            // Filter out empty rows AND apply the position-type filter (if any).
-            // Filter is keyed off the English Position Type so language switches don't break it.
-            // 'all' bypasses the type check entirely.
+            // Filter out empty rows AND apply both filters (position-type + SuperCycle).
+            // Both keyed off English columns so language switches don't break the
+            // filter logic. SuperCycle = comma-separated tags; row matches if at
+            // least one of its tags is in the active set. Rows with empty/dash
+            // SuperCycle are treated as 'Other'.
             const wanted = positionFilter.toUpperCase();   // "ALL" / "CHOKEPOINT" / "BOTTLENECK"
+            const allSCActive = activeSupercycles.size === ALL_SUPERCYCLES.length;
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
-                if (positionFilter === 'all') return true;
-                const ptEn = String((enData[i] && enData[i]['Position Type']) || '').toUpperCase();
-                return ptEn.includes(wanted);
+
+                // Position-type filter
+                if (positionFilter !== 'all') {
+                    const ptEn = String((enData[i] && enData[i]['Position Type']) || '').toUpperCase();
+                    if (!ptEn.includes(wanted)) return false;
+                }
+
+                // SuperCycle filter — skip work if every category is active
+                if (!allSCActive) {
+                    const scRaw = String((enData[i] && enData[i]['SuperCycle']) || '').trim();
+                    let tags;
+                    if (!scRaw || scRaw === '—') {
+                        tags = ['Other'];   // unspecified/dash treated as Other
+                    } else {
+                        tags = scRaw.split(',').map(s => s.trim()).filter(Boolean);
+                    }
+                    if (!tags.some(t => activeSupercycles.has(t))) return false;
+                }
+
+                return true;
             });
 
             // === Compute live ranks based on current Total ===
