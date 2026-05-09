@@ -48,17 +48,17 @@ window.PORTFOLIO_DATA = {
             "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
-            "Total": 80,
+            "Total": 83,
             "Base": 80,
-            "Entry": 80,
+            "Entry": 88,
             "Rating": "HC — LIDE glass monopoly + Intel CPO waveguide (patent-linked) + Ayar Labs glass bridge architecture. VLM Kapital patent chain confirmed.",
             "Port": "✓",
             "Current Price": "€26.80",
-            "Ceiling Target": "€85-225",
-            "Upside": "3.2x-8.4x",
+            "Ceiling Target": "€85-310",
+            "Upside": "3.2x-11.6x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: LIDE glass TGV — organic cannot support next-gen. Triple supercycle: DB5 AI packaging + DB3 LEO Space (SpaceX) + DB8 Defense. 2027-2035+",
             "Revenue Explosion": "📈 GLASS SUBSTRATE EQUIPMENT ORDERS\nTrigger 1: Samsung SEMCO mass production (end 2026)\nTrigger 2: Intel Absolics HVM ramp\nTrigger 3: TSMC glass substrate R&D orders\nTrigger 4: Apple glass substrate via SEMCO\nTrigger 5: Tesla Terafab via Intel packaging\nEach new glass fab = LPKF equipment orders\n$170M MC = smallest HC stock in portfolio",
-            "Updated": "May 8",
+            "Updated": "May 9",
             "SuperCycle": "AI, CPO",
             "Market Cap": "€656.5M",
             "Key Thesis": "DB5 ADVANCED PACKAGING — LIDE TGV NEAR-MONOPOLY FOR GLASS SUBSTRATES. ~80% QUALIFICATION SHARE across glass substrate manufacturers. TECHNICAL DOMINANCE CONFIRMED (Gen Z Investor deep dive Apr 21): Φ5µm via diameter (best). 1:50 aspect ratio in production (best). Ra <0.1µm sidewall roughness = 10x smoother than E&R (≤1µm). ≥5,000 vias/sec for ANY layout (best for random). Cp >1.33 + <5ppm NG rate = ONLY company publishing HVM process capability data. 11+ glass types from all major suppliers (AGC, Corning, SCHOTT, NEG). COMPETITION WEAKER THAN ASSUMED: Philoptics: won't publish specs, direct laser ablation removes material = micro-cracks + stress at scale. E&R: 10x rougher sidewalls, 1:10 max aspect ratio, SELLS A SECOND MACHINE to fix the first. Trumpf/Schmid: R&D demos only on easiest glass (BF33), can't fill Cu at 1:70, years from production. CPO INTEGRATION: LPKF exploring glass substrates for co-packaged optics = new demand vector. Onto Innovation Firefly metrology partnership for automated TGV inspection. Vitrion foundry operational for prototyping + small-series. FY2025 €115.3M (-6.2%). FY2026 guide €105-120M, EBIT -3% to +4.5%. 'High-volume orders NOT included in forecast' = any LIDE order is PURE upside. North Star program: double-digit EBIT by 2028. Loan extended through 2028. Intel confirmed glass substrates. Samsung SEMCO qualifying. TSMC exploring. RISK: Solar segment collapsing, transformation costs in 2026, timing depends on downstream qualification.",
@@ -244,6 +244,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 12,
+            "Ticker": "000660.KS",
+            "Name": "SK Hynix",
+            "Total": 71,
+            "Base": 85,
+            "Entry": 50,
+            "Rating": "WL 🔒 — HBM4 monopoly 70%+. 2026 SOLD OUT. Hyperscalers funding fabs. 81% GM industry. Memory shortage past 2028. HC at ₩1.2M.",
+            "Port": "",
+            "Current Price": "₩1,686,000",
+            "Ceiling Target": "₩3.0M-4.0M",
+            "Upside": "1.8x-2.4x",
+            "Position Type": "🔒 CHOKEPOINT\nArchitectural: #1 HBM — 4nm logic base die lead widens each gen. Memory architecture permanent. 2026-2030+",
+            "Revenue Explosion": "📈 MEMORY SUPERCYCLE — UNPRECEDENTED\n2026 output FULLY SOLD OUT. Hyperscalers (Google/Meta/MSFT)\noffering to BANKROLL SK Hynix Yongin fab for guaranteed supply.\nHBM 70%+ market share. HBM takes 23% of DRAM wafers.\nDDR4: $1.35→$16 (12x in 1 year). DDR5: $6.84→$27.20 (4x/quarter).\nMicron guided 81% GM. Samsung DS 66% OP margin.\nIDC: \"potentially permanent strategic reallocation.\"\nMemory shortage projected to extend PAST 2028.\nTrump personally asked SK Hynix to expand (Pax Silica).\nM15X Cheongju: pilot production, mass Nov 2026.\nYongin cluster: May 2027, 350K wafers/month at full capacity.",
+            "Updated": "May 9",
+            "SuperCycle": "AI",
+            "Market Cap": "₩1,196.82T",
+            "Key Thesis": "DB6 MEMORY STRUCTURAL. HBM MONOPOLY LEADER — 57% share, clear #1. Q1 2026: Rev KRW 52.58T ($37.9B, +198% YoY). OP KRW 37.61T ($27.1B, +405% YoY). 72% OP MARGIN — most profitable quarter by any memory company in history. Net profit KRW 40.35T beat estimate by 37%. EBITDA margin 79%. DRAM ASP +mid-60% QoQ. NAND ASP +mid-70% QoQ. 'Customer demand for HBM over next 3 years far exceeds production capacity.' SK Group Chairman: wafer shortage persists until 2030, >20% shortfall. 3-5yr LTAs with Microsoft, Google. Apple accepting 3x pricing. $57K/kg DRAM. HBM4 shipping. HBM4E samples H2 2026, mass production 2027. US ADR filing submitted to SEC. New plant KRW 19T. Net cash KRW 35T. FnGuide FY2026 OP: >KRW 210T ($141.7B). Memory is STRUCTURAL, not cyclical.",
+            "IR Check": "❌ NEEDS REVIEW\nHBM4 roadmap deck\nInvestor forum presentations\nMgmt commentary on Semidynamics strategy",
+            "Supercycle": "HBM #1 + NVIDIA",
+            "Change %": "+1.93%"
+        },
+        {
+            "Rank": 13,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "Total": 67,
@@ -265,7 +287,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.30%"
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "Total": 69,
@@ -287,7 +309,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.67%"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AAOI",
             "Name": "Applied Optoelectronics",
             "Total": 68,
@@ -309,7 +331,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.81%"
         },
         {
-            "Rank": 15,
+            "Rank": 16,
+            "Ticker": "005930.KS",
+            "Name": "Samsung Electronics",
+            "Total": 70,
+            "Base": 83,
+            "Entry": 50,
+            "Rating": "WL — DS 66% OP margin. P5 pulled forward. AMD 2nm + Tesla foundry. #2 HBM. HC at ₩200K.",
+            "Port": "",
+            "Current Price": "₩268,500",
+            "Ceiling Target": "₩450K-650K",
+            "Upside": "1.7x-2.4x",
+            "Position Type": "🔒 CHOKEPOINT\nArchitectural: Only non-US foundry+memory for China. Samsung = default Chinese AI partner. 2026-2030+",
+            "Revenue Explosion": "📈 MEMORY SUPERCYCLE + FOUNDRY RENAISSANCE\nDS division Q1 2026: ₩81.7T rev, ₩53.7T OP (66% margin).\nP5 Fab 2 pulled forward 6 months. ₩120T investment.\n600K wafers/month combined (= current total DRAM output).\nDDR4: $1.35→$16 (12x). DDR5: $6.84→$27.20 (4x).\nFoundry: AMD 2nm + Tesla AI5/AI6. Trump backing.\nUnion strike risk: 7-12% OP impact if demands met (JPM).\nStill #2 HBM behind SK Hynix but gap narrowing.\nIDC: \"permanent strategic reallocation\" of wafer capacity.",
+            "Updated": "May 9",
+            "SuperCycle": "AI",
+            "Market Cap": "₩1,763.12T",
+            "Key Thesis": "DB6 MEMORY STRUCTURAL. Memory oligopoly (3 players globally). Q1 2026 OP: $37.9B (+755% YoY) — strongest quarter in Korean corporate history. 95% of profits from semiconductors. Memory prices doubling QoQ. CHINA MUST BUY: Micron banned, no domestic HBM. Samsung = DEFAULT China AI partner. ByteDance $22B procurement + SeedChip 100K→350K. ByteDance $55B/yr AI spend → Samsung. ONE-STOP SHOP: Memory + Foundry + Packaging. No other company offers all three. HBM4 shipping (11.7Gbps). Narrowing gap with SK Hynix. Capex $73B in 2026 (+22%). 2nm foundry mass production started. Memory is STRUCTURAL: 3-5yr LTAs, quarterly pricing. DRAM $57K/kg. RISK: Conglomerate dilution. Korean governance discount. HBM #2.",
+            "IR Check": "❌ NEEDS REVIEW\nChina foundry strategy\nHBM4 progress vs SK Hynix",
+            "Supercycle": "Foundry+Memory+China",
+            "Change %": "-1.10%"
+        },
+        {
+            "Rank": 17,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 64,
@@ -331,7 +375,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.26%"
         },
         {
-            "Rank": 16,
+            "Rank": 18,
             "Ticker": "NBIS",
             "Name": "Nebius Group",
             "Total": 64,
@@ -353,29 +397,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.95%"
         },
         {
-            "Rank": 17,
-            "Ticker": "000660.KS",
-            "Name": "SK Hynix",
-            "Total": 66,
-            "Base": 80,
-            "Entry": 45,
-            "Rating": "HC (top)",
-            "Port": "",
-            "Current Price": "₩1,686,000",
-            "Ceiling Target": "₩3.0M-3.6M",
-            "Upside": "1.8x-2.1x",
-            "Position Type": "🔒 CHOKEPOINT\nArchitectural: #1 HBM — 4nm logic base die lead widens each gen. Memory architecture permanent. 2026-2030+",
-            "Revenue Explosion": "🔥 QUARTERLY BEAT CASCADE\nTrigger: Q1 EPS ≥ KRW 37,600 + Q2 raise\nTiming: Apr 29 2026 🔥 IMMINENT\nEach beat compounds: Apr→Jul→Oct\nExpected move: 15-25% per beat\n\n📡 Apr 2026 SIGNAL: Strategic investment in Semidynamics (Spanish RISC-V startup)\nMoving beyond HBM supply → memory-centric AI architecture play\nNot just supplier — positioning as ecosystem architect\nValidates multi-agent AI / unified memory thesis\nManagement thinking 5-10 years ahead of typical memory co.",
-            "Updated": "May 8",
-            "SuperCycle": "AI",
-            "Market Cap": "₩1,196.82T",
-            "Key Thesis": "DB6 MEMORY STRUCTURAL. HBM MONOPOLY LEADER — 57% share, clear #1. Q1 2026: Rev KRW 52.58T ($37.9B, +198% YoY). OP KRW 37.61T ($27.1B, +405% YoY). 72% OP MARGIN — most profitable quarter by any memory company in history. Net profit KRW 40.35T beat estimate by 37%. EBITDA margin 79%. DRAM ASP +mid-60% QoQ. NAND ASP +mid-70% QoQ. 'Customer demand for HBM over next 3 years far exceeds production capacity.' SK Group Chairman: wafer shortage persists until 2030, >20% shortfall. 3-5yr LTAs with Microsoft, Google. Apple accepting 3x pricing. $57K/kg DRAM. HBM4 shipping. HBM4E samples H2 2026, mass production 2027. US ADR filing submitted to SEC. New plant KRW 19T. Net cash KRW 35T. FnGuide FY2026 OP: >KRW 210T ($141.7B). Memory is STRUCTURAL, not cyclical.",
-            "IR Check": "❌ NEEDS REVIEW\nHBM4 roadmap deck\nInvestor forum presentations\nMgmt commentary on Semidynamics strategy",
-            "Supercycle": "HBM #1 + NVIDIA",
-            "Change %": "+1.93%"
-        },
-        {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "Total": 66,
@@ -397,7 +419,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+11.81%"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "Total": 62,
@@ -419,7 +441,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.66%"
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 65,
@@ -441,7 +463,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.86%"
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "Total": 65,
@@ -463,7 +485,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.64%"
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "Total": 63,
@@ -483,28 +505,6 @@ window.PORTFOLIO_DATA = {
             "IR Check": "🔥🔥 May 13 Q1 2026 earnings\nLITE + COHR confirmed demand — TSEM completes trifecta.\nSiPh % of revenue — crossing 20%?\nPatent suit vs GFS status.\nCPO customer pipeline.\n$920M capex deployment timeline.",
             "Supercycle": "DB1 Photonics",
             "Change %": "+0.55%"
-        },
-        {
-            "Rank": 23,
-            "Ticker": "005930.KS",
-            "Name": "Samsung Electronics",
-            "Total": 62,
-            "Base": 73,
-            "Entry": 45,
-            "Rating": "WL (China's default integrated semi partner)",
-            "Port": "",
-            "Current Price": "₩268,500",
-            "Ceiling Target": "₩450K-575K",
-            "Upside": "1.7x-2.1x",
-            "Position Type": "🔒 CHOKEPOINT\nArchitectural: Only non-US foundry+memory for China. Samsung = default Chinese AI partner. 2026-2030+",
-            "Revenue Explosion": "📈 HBM4 BUNDLING REVENUE\nTrigger: Foundry profitability + HBM4 pull-through\nTiming: Q4 2026 foundry breakeven target\nExpected move: 30-50% if foundry turns positive\nCapped by CXMT squeeze from below",
-            "Updated": "May 8",
-            "SuperCycle": "AI",
-            "Market Cap": "₩1,763.12T",
-            "Key Thesis": "DB6 MEMORY STRUCTURAL. Memory oligopoly (3 players globally). Q1 2026 OP: $37.9B (+755% YoY) — strongest quarter in Korean corporate history. 95% of profits from semiconductors. Memory prices doubling QoQ. CHINA MUST BUY: Micron banned, no domestic HBM. Samsung = DEFAULT China AI partner. ByteDance $22B procurement + SeedChip 100K→350K. ByteDance $55B/yr AI spend → Samsung. ONE-STOP SHOP: Memory + Foundry + Packaging. No other company offers all three. HBM4 shipping (11.7Gbps). Narrowing gap with SK Hynix. Capex $73B in 2026 (+22%). 2nm foundry mass production started. Memory is STRUCTURAL: 3-5yr LTAs, quarterly pricing. DRAM $57K/kg. RISK: Conglomerate dilution. Korean governance discount. HBM #2.",
-            "IR Check": "❌ NEEDS REVIEW\nChina foundry strategy\nHBM4 progress vs SK Hynix",
-            "Supercycle": "Foundry+Memory+China",
-            "Change %": "-1.10%"
         },
         {
             "Rank": 24,
@@ -596,6 +596,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 28,
+            "Ticker": "MU",
+            "Name": "Micron Technology",
+            "Total": 60,
+            "Base": 80,
+            "Entry": 30,
+            "Rating": "FAIL — 81% GM, $842B MC. Thesis excellent but stock AT ceiling ($746 vs $800 low). Same as ARM: great company, zero asymmetry. HC at $400.",
+            "Port": "",
+            "Current Price": "$746.81",
+            "Ceiling Target": "$800-1,200",
+            "Upside": "1.1x-1.6x",
+            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
+            "Revenue Explosion": "📈 MEMORY SUPERCYCLE — US CHAMPION\n81% GM guided for May quarter (highest in MU history).\nMC crossed $853B, top 10 US tech.\n+124% YTD, +700% trailing 12 months.\nFull order books, all 2026 output sold out.\nCHIPS Act: New York + Iowa fabs under construction.\nUS-manufactured HBM + DRAM + NAND.\nDDR4: $1.35→$16 (12x). DDR5: $6.84→$27.20 (4x).\nIDC: \"permanent strategic reallocation.\"\nPax Silica: US memory champion.\nMemory shortage projected past 2028.",
+            "Updated": "May 9",
+            "SuperCycle": "AI",
+            "Market Cap": "$842.20B",
+            "Key Thesis": "#3 memory; 3.5x CY27E EPS $100+; mgmt says 'secular and durable'; multi-year upcycle; BUT banned in China (Samsung wins), #3 at NVIDIA (SK Hynix wins); no unique strategic position; DRAM ETF gives 24% exposure already; don't need separate position",
+            "IR Check": "❌ NEEDS REVIEW\nHBM roadmap",
+            "Supercycle": "HBM Memory",
+            "Change %": "+12.67%"
+        },
+        {
+            "Rank": 29,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "Total": 54,
@@ -617,7 +639,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.29%"
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "LWLG",
             "Name": "Lightwave Logic",
             "Total": 55,
@@ -639,7 +661,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.23%"
         },
         {
-            "Rank": 30,
+            "Rank": 31,
+            "Ticker": "SNDK",
+            "Name": "SanDisk Corp",
+            "Total": 57,
+            "Base": 75,
+            "Entry": 30,
+            "Rating": "FAIL — NAND supercycle confirmed but stock at $1,562 is 87% of ceiling LOW ($1,800). Same as MU: great thesis, no Entry. HC at $900.",
+            "Port": "",
+            "Current Price": "$1,562.34",
+            "Ceiling Target": "$1,800-2,500",
+            "Upside": "1.2x-1.6x",
+            "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
+            "Revenue Explosion": "📈 NAND SUPERCYCLE\nNAND wafer starts nearing capacity limits.\nNAND shortage extending past 2028.\nYMTC (China) expansion limited short-term, wafer-out 2027.\n$42B NBM deals. BiCS8/9 ramp. $6B buyback.\nDDR4 $1.35→$16 spillover into NAND pricing.\nAI servers need massive NAND for KV cache + checkpointing.\nIDC: \"permanent reallocation\" affects ALL memory.",
+            "Updated": "May 9",
+            "SuperCycle": "AI",
+            "Market Cap": "$231.37B",
+            "Key Thesis": "NAND oligopoly (4 players). FY2027E EPS $98.07 = 8.7x fwd P/E, but OUR first-principles estimate: $129-179 (31-83% above consensus). NAND 128Gb MLC pricing +713% in 14 months ($2.18→$17.73). LTAs extending to 2029 (Kioxia 3yr). Sold out 2026, shortages into 2027. SanDisk paying $1.165B ADVANCE to Kioxia for supply. DOUBLE TAILWIND: DRAM shortage drives Flash substitution demand (inverse) + NAND shortage drives Flash pricing power (direct). Inference shift 1/3→2/3 = secular NAND demand. HBF inventor = free call option on $10B+ new market (2028+). SK Hynix MOU. Patterson + Koduri advisory.",
+            "IR Check": "❌ NEEDS REVIEW\nQ1 earnings confirmation\nHBF prototype timeline\nNAND pricing trajectory",
+            "Supercycle": "NAND Memory",
+            "Change %": "+13.34%"
+        },
+        {
+            "Rank": 32,
             "Ticker": "ARM",
             "Name": "Arm Holdings PLC",
             "Total": 56,
@@ -661,7 +705,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.28%"
         },
         {
-            "Rank": 31,
+            "Rank": 33,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "Total": 54,
@@ -683,7 +727,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.79%"
         },
         {
-            "Rank": 32,
+            "Rank": 34,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "Total": 51,
@@ -705,29 +749,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.06%"
         },
         {
-            "Rank": 33,
-            "Ticker": "SNDK",
-            "Name": "SanDisk Corp",
-            "Total": 51,
-            "Base": 65,
-            "Entry": 30,
-            "Rating": "NAND oligopoly + HBF NVIDIA catalyst + 8.7x fwd P/E",
-            "Port": "",
-            "Current Price": "$1,562.34",
-            "Ceiling Target": "$1,800-2,300",
-            "Upside": "1.2x-1.5x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
-            "Revenue Explosion": "🔥 HBF NVIDIA ANNOUNCEMENT\nTrigger: NVIDIA announces HBF-compatible GPU\nTiming: GTC 2027 or earlier\nExpected move: 50-80% in 4 weeks\nBINARY: NVIDIA says yes or no\nMeanwhile: earnings revisions = steady re-rate",
-            "Updated": "May 8",
-            "SuperCycle": "AI",
-            "Market Cap": "$231.37B",
-            "Key Thesis": "NAND oligopoly (4 players). FY2027E EPS $98.07 = 8.7x fwd P/E, but OUR first-principles estimate: $129-179 (31-83% above consensus). NAND 128Gb MLC pricing +713% in 14 months ($2.18→$17.73). LTAs extending to 2029 (Kioxia 3yr). Sold out 2026, shortages into 2027. SanDisk paying $1.165B ADVANCE to Kioxia for supply. DOUBLE TAILWIND: DRAM shortage drives Flash substitution demand (inverse) + NAND shortage drives Flash pricing power (direct). Inference shift 1/3→2/3 = secular NAND demand. HBF inventor = free call option on $10B+ new market (2028+). SK Hynix MOU. Patterson + Koduri advisory.",
-            "IR Check": "❌ NEEDS REVIEW\nQ1 earnings confirmation\nHBF prototype timeline\nNAND pricing trajectory",
-            "Supercycle": "NAND Memory",
-            "Change %": "+13.34%"
-        },
-        {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMSC",
             "Name": "American Superconductor",
             "Total": 49,
@@ -749,7 +771,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.26%"
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "SMOP.OL",
             "Name": "Smartoptics Group",
             "Total": 44,
@@ -771,7 +793,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.92%"
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "TRT",
             "Name": "Trio-Tech International",
             "Total": 48,
@@ -793,7 +815,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.21%"
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "3081.TWO",
             "Name": "LandMark Optoelectronics",
             "Total": 44,
@@ -815,7 +837,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.87%"
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "300476.SZSE",
             "Name": "Victory Giant (胜宏科技)",
             "Total": 43,
@@ -837,7 +859,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.10%"
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "AXTI",
             "Name": "AXT Inc",
             "Total": 47,
@@ -859,7 +881,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.98%"
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "CLF",
             "Name": "Cleveland-Cliffs",
             "Total": 43,
@@ -881,7 +903,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.83%"
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "3037.TW",
             "Name": "Unimicron",
             "Total": 47,
@@ -903,7 +925,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.71%"
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "FORM",
             "Name": "FormFactor",
             "Total": 46,
@@ -923,28 +945,6 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ NEEDS REVIEW\nAnalyst Day May 11",
             "Supercycle": "DB1 + HBM",
             "Change %": "+2.64%"
-        },
-        {
-            "Rank": 43,
-            "Ticker": "MU",
-            "Name": "Micron Technology",
-            "Total": 45,
-            "Base": 62,
-            "Entry": 20,
-            "Rating": "#3 HBM + record Q2 $23.9B + China ban + OWN VIA ETF",
-            "Port": "",
-            "Current Price": "$746.81",
-            "Ceiling Target": "$800-1,000",
-            "Upside": "1.1x-1.3x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
-            "Revenue Explosion": "📈 3D DRAM PATENT VALUE\nTrigger: 3D DRAM industry transition\nTiming: 2028-2030 (long-term)\nOwn via DRAM ETF, not standalone",
-            "Updated": "May 8",
-            "SuperCycle": "AI",
-            "Market Cap": "$842.20B",
-            "Key Thesis": "#3 memory; 3.5x CY27E EPS $100+; mgmt says 'secular and durable'; multi-year upcycle; BUT banned in China (Samsung wins), #3 at NVIDIA (SK Hynix wins); no unique strategic position; DRAM ETF gives 24% exposure already; don't need separate position",
-            "IR Check": "❌ NEEDS REVIEW\nHBM roadmap",
-            "Supercycle": "HBM Memory",
-            "Change %": "+12.67%"
         },
         {
             "Rank": 44,
@@ -1566,17 +1566,17 @@ window.PORTFOLIO_DATA = {
             "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
-            "Total": 80,
+            "Total": 83,
             "Base": 80,
-            "Entry": 80,
+            "Entry": 88,
             "Rating": "HC — LIDE 玻璃垄断 + Intel CPO 波导（专利链接）+ Ayar Labs 玻璃桥架构。 VLM Kapital 专利链已确认。",
             "Port": "✓",
             "Current Price": "€26.80",
-            "Ceiling Target": "€85-225",
-            "Upside": "3.2x-8.4x",
+            "Ceiling Target": "€85-310",
+            "Upside": "3.2x-11.6x",
             "Position Type": "🔒 阻塞点\n物理：LIDE 玻璃 TGV — 有机玻璃无法支持下一代。三重超级循环：DB5 AI包装+DB3 LEO Space（SpaceX）+DB8 Defense。 2027-2035+",
             "Revenue Explosion": "📈 玻璃基板设备订单\n触发点1：三星SEMCO量产（2026年底）\n触发点 2：Intel Absolics HVM 提升\n触发因素三：台积电玻璃基板研发订单\n触发因素 4：SEMCO 的苹果玻璃基板\n触发器 5：通过英特尔封装的 Tesla Terafab\n每一座新玻璃厂 = LPKF 设备订单\n1.7 亿美元 MC = 投资组合中最小的 HC 股票",
-            "Updated": "5月8日",
+            "Updated": "5月9日",
             "SuperCycle": "AI, CPO",
             "Market Cap": "€656.5M",
             "Key Thesis": "DB5 高级封装 — LIDE TGV 近乎垄断玻璃基板。玻璃基板制造商的资质份额约为 80%。技术优势已确认（4 月 21 日 Z 代投资者深入探讨）：Φ5μm 过孔直径（最佳）。制作时的纵横比为 1:50（最佳）。 Ra <0.1μm 侧壁粗糙度 = 比 E&R (≤1μm) 光滑 10 倍。对于任何布局，≥5,000 个通孔/秒（最适合随机）。 Cp >1.33 + <5ppm NG 率 = 唯一一家发布 HVM 工艺能力数据的公司。来自所有主要供应商（AGC、康宁、肖特、NEG）的 11 多种玻璃类型。竞争比想象的要弱：Philoptics：不会发布规格，直接激光烧蚀去除材料=微裂纹+大规模应力。 E&R：侧壁粗糙 10 倍，最大纵横比 1:10，出售第二台机器来修复第一台机器。 Trumpf/Schmid：仅在最简单的玻璃 (BF33) 上进行研发演示，无法以 1:70 填充铜，距生产数年时间。 CPO 集成：LPKF 探索用于共封装光学器件的玻璃基板 = 新的需求向量。 Onto Innovation Firefly 计量合作伙伴，用于自动 TGV 检测。 Vitrion 铸造厂可进行原型设计和小批量生产。 2025 财年 1.153 亿欧元 (-6.2%)。 2026 财年指导 1.05-1.2 亿欧元，息税前利润 -3% 至 +4.5%。 “大批量订单不包含在预测中”=任何 LIDE 订单都是纯粹的上涨空间。北极星计划：到 2028 年实现两位数的息税前利润。贷款延长至 2028 年。英特尔确认了玻璃基板。三星SEMCO排位赛。台积电探索。风险：太阳能行业崩溃，2026 年转型成本上升，时间取决于下游资质。",
@@ -1762,6 +1762,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 12,
+            "Ticker": "000660.KS",
+            "Name": "SK海力士",
+            "Total": 71,
+            "Base": 85,
+            "Entry": 50,
+            "Rating": "WL 🔒 — HBM4 垄断 70%+。 2026 年已售完。超大规模企业为晶圆厂提供资金。 81% 转基因产业。 2028 年之后内存短缺。HC 为 ₩1.2M。",
+            "Port": "",
+            "Current Price": "₩1,686,000",
+            "Ceiling Target": "₩3.0M-4.0M",
+            "Upside": "1.8x-2.4x",
+            "Position Type": "🔒 阻塞点\n架构：#1 HBM — 4nm 逻辑基芯片引线加宽了每一代。内存架构永久。 2026-2030+",
+            "Revenue Explosion": "📈 内存超级循环——前所未有\n2026 年输出已全部售完。超大规模（Google/Meta/MSFT）\n提供给 BANKROLL SK Hynix Yongin 工厂以保证供应。\nHBM 70%以上市场份额。 HBM 占据 DRAM 晶圆的 23%。\nDDR4：1.35 美元→16 美元（1 年内 12 倍）。 DDR5：6.84 美元→27.20 美元（4 倍/季度）。\n美光指导 81% GM。三星 DS 运营利润率为 66%。\nIDC：“可能是永久性的战略重新分配。”\n内存短缺预计将持续到 2028 年以后。\n特朗普亲自要求SK海力士扩张（Pax Silica）。\nM15X清州：试生产，2026年11月量产。\n龙仁集群：2027 年 5 月，满负荷生产 35 万片/月。",
+            "Updated": "5月9日",
+            "SuperCycle": "AI",
+            "Market Cap": "₩1,196.82T",
+            "Key Thesis": "DB6 内存结构。 HBM 垄断领导者 — 57% 份额，明显第一。 2026 年第一季度：Rev KRW 52.58T（$37.9B，同比增长 198%）。 OP 37.61T 韩元（$27.1B，同比增长 405%）。 72% 的营业利润——历史上所有存储器公司中利润最高的季度。净利润 40.35 吨，超出预期 37%。 EBITDA 利润率为 79%。 DRAM ASP 环比增长 60% 左右。 NAND ASP 环比增长 70%。 “未来三年客户对 HBM 的需求将远远超过生产能力。” SK集团董事长：晶圆短缺将持续到2030年，缺口>20%。与 Microsoft、Google 签订 3-5 年长期协议。 Apple 接受 3 倍定价。 5.7 万美元/千克 DRAM。 HBM4 运输。 HBM4E 将于 2026 年下半年出样，2027 年量产。向 SEC 提交美国 ADR 备案。新工厂19T韩元。净现金35T韩元。 FnGuide FY2026 OP：>KRW 210T ($141.7B)。记忆是结构性的，而不是周期性的。",
+            "IR Check": "❌ 需要审查\nHBM4 路线图平台\n投资者论坛演讲\n管理层对 Semidynamics 战略的评论",
+            "Supercycle": "HBM #1 + NVIDIA",
+            "Change %": "+1.93%"
+        },
+        {
+            "Rank": 13,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "Total": 67,
@@ -1783,7 +1805,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.30%"
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "VICR",
             "Name": "维科公司",
             "Total": 69,
@@ -1805,7 +1827,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.67%"
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AAOI",
             "Name": "应用光电",
             "Total": 68,
@@ -1827,7 +1849,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.81%"
         },
         {
-            "Rank": 15,
+            "Rank": 16,
+            "Ticker": "005930.KS",
+            "Name": "三星电子",
+            "Total": 70,
+            "Base": 83,
+            "Entry": 50,
+            "Rating": "WL — DS 66% OP 利润。 P5向前拉。 AMD 2nm+特斯拉代工。 #2 HBM。 HC ₩200K。",
+            "Port": "",
+            "Current Price": "₩268,500",
+            "Ceiling Target": "₩45万-65万",
+            "Upside": "1.7x-2.4x",
+            "Position Type": "🔒 阻塞点\n建筑：中国唯一的非美国代工厂+存储器。三星=默认的中国人工智能合作伙伴。 2026-2030+",
+            "Revenue Explosion": "📈 内存超级循环 + 代工厂复兴\nDS 部门 2026 年第一季度：₩81.7T rev，₩53.7T OP（利润率 66%）。\nP5 Fab 2 提前 6 个月。 ₩120T投资。\n每月合计 60 万片晶圆（= 当前 DRAM 总产量）。\nDDR4：1.35 美元→16 美元（12 倍）。 DDR5：6.84 美元→27.20 美元（4 倍）。\n代工：AMD 2nm + Tesla AI5/AI6。特朗普支持。\n工会罢工风险：如果要求得到满足，OP 会受到 7-12% 的影响 (JPM)。\nHBM 仍落后于 SK 海力士排名第二，但差距正在缩小。\nIDC：晶圆产能“永久性战略重新分配”。",
+            "Updated": "5月9日",
+            "SuperCycle": "AI",
+            "Market Cap": "₩1,763.12T",
+            "Key Thesis": "DB6 内存结构。内存寡头垄断（全球 3 个玩家）。 2026 年第一季度运营：$37.9B（同比增长 755%）——韩国企业历史上最强劲的季度。 95%的利润来自半导体。内存价格环比翻倍。中国必须购买：美光被禁止，没有国产 HBM。三星=默认中国人工智能合作伙伴。字节跳动$22B采购+SeedChip 100K→350K。字节跳动每年 55B 美元的人工智能支出 → 三星。一站式商店：内存+代工+包装。没有其他公司能够同时提供这三项服务。 HBM4 传输 (11.7Gbps)。缩小与SK海力士的差距。 2026 年资本支出 $73B (+22%)。 2nm代工厂开始量产。内存是结构性的：3-5 年长期协议，按季度定价。 DRAM 5.7 万美元/公斤。风险：企业集团稀释。韩治折扣。 HBM #2。",
+            "IR Check": "❌ 需要审查\n中国代工战略\nHBM4 对阵 SK 海力士的进展",
+            "Supercycle": "代工+内存+中国",
+            "Change %": "-1.10%"
+        },
+        {
+            "Rank": 17,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 64,
@@ -1849,7 +1893,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.26%"
         },
         {
-            "Rank": 16,
+            "Rank": 18,
             "Ticker": "NBIS",
             "Name": "尼比斯集团",
             "Total": 64,
@@ -1871,29 +1915,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.95%"
         },
         {
-            "Rank": 17,
-            "Ticker": "000660.KS",
-            "Name": "SK海力士",
-            "Total": 66,
-            "Base": 80,
-            "Entry": 45,
-            "Rating": "HC（上）",
-            "Port": "",
-            "Current Price": "₩1,686,000",
-            "Ceiling Target": "₩3.0M-3.6M",
-            "Upside": "1.8x-2.1x",
-            "Position Type": "🔒 阻塞点\n架构：#1 HBM — 4nm 逻辑基芯片引线加宽了每一代。内存架构永久。 2026-2030+",
-            "Revenue Explosion": "🔥 每季节拍级联\n触发条件：第一季度 EPS ≥ 37,600 韩元 + 第二季度上涨\n时间：2026 年 4 月 29 日 🔥 即将到来\n每个节拍复合：四月→七月→十月\n预期移动：每节拍 15-25%\n\n📡 2026 年 4 月 SIGNAL：对 Semidynamics（西班牙 RISC-V 初创公司）的战略投资\n超越 HBM 供应 → 以内存为中心的 AI 架构玩法\n不仅仅是供应商——定位为生态系统架构师\n验证多智能体人工智能/统一记忆理论\n管理思维比典型存储器公司领先 5-10 年。",
-            "Updated": "5月8日",
-            "SuperCycle": "AI",
-            "Market Cap": "₩1,196.82T",
-            "Key Thesis": "DB6 内存结构。 HBM 垄断领导者 — 57% 份额，明显第一。 2026 年第一季度：Rev KRW 52.58T（$37.9B，同比增长 198%）。 OP 37.61T 韩元（$27.1B，同比增长 405%）。 72% 的营业利润——历史上所有存储器公司中利润最高的季度。净利润 40.35 吨，超出预期 37%。 EBITDA 利润率为 79%。 DRAM ASP 环比增长 60% 左右。 NAND ASP 环比增长 70%。 “未来三年客户对 HBM 的需求将远远超过生产能力。” SK集团董事长：晶圆短缺将持续到2030年，缺口>20%。与 Microsoft、Google 签订 3-5 年长期协议。 Apple 接受 3 倍定价。 5.7 万美元/千克 DRAM。 HBM4 运输。 HBM4E 将于 2026 年下半年出样，2027 年量产。向 SEC 提交美国 ADR 备案。新工厂19T韩元。净现金35T韩元。 FnGuide FY2026 OP：>KRW 210T ($141.7B)。记忆是结构性的，而不是周期性的。",
-            "IR Check": "❌ 需要审查\nHBM4 路线图平台\n投资者论坛演讲\n管理层对 Semidynamics 战略的评论",
-            "Supercycle": "HBM #1 + NVIDIA",
-            "Change %": "+1.93%"
-        },
-        {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "Total": 66,
@@ -1915,7 +1937,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+11.81%"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "Total": 62,
@@ -1937,7 +1959,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.66%"
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 65,
@@ -1959,7 +1981,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.86%"
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "Total": 65,
@@ -1981,7 +2003,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.64%"
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "Total": 63,
@@ -2001,28 +2023,6 @@ window.PORTFOLIO_DATA = {
             "IR Check": "🔥🔥 5 月 13 日 2026 年第一季度收益\nLITE + COHR 确认需求 — TSEM 完成三连胜。\nSiPh 占收入的百分比——超过 20%？\n专利诉讼与 GFS 状态。\nCPO 客户渠道。\n9.2 亿美元的资本支出部署时间表。",
             "Supercycle": "DB1 光子学",
             "Change %": "+0.55%"
-        },
-        {
-            "Rank": 23,
-            "Ticker": "005930.KS",
-            "Name": "三星电子",
-            "Total": 62,
-            "Base": 73,
-            "Entry": 45,
-            "Rating": "WL（中国默认集成半合作伙伴）",
-            "Port": "",
-            "Current Price": "₩268,500",
-            "Ceiling Target": "₩450K-575K",
-            "Upside": "1.7x-2.1x",
-            "Position Type": "🔒 阻塞点\n建筑：中国唯一的非美国代工厂+存储器。三星=默认的中国人工智能合作伙伴。 2026-2030+",
-            "Revenue Explosion": "📈 HBM4 捆绑收入\n触发点：代工厂盈利+HBM4拉动\n时间安排：2026 年第四季度代工厂盈亏平衡目标\n预期变动：如果代工转正，则上涨 30-50%\n受长鑫存储自下方挤压的限制",
-            "Updated": "5月8日",
-            "SuperCycle": "AI",
-            "Market Cap": "₩1,763.12T",
-            "Key Thesis": "DB6 内存结构。内存寡头垄断（全球 3 个玩家）。 2026 年第一季度运营：$37.9B（同比增长 755%）——韩国企业历史上最强劲的季度。 95%的利润来自半导体。内存价格环比翻倍。中国必须购买：美光被禁止，没有国产 HBM。三星=默认中国人工智能合作伙伴。字节跳动$22B采购+SeedChip 100K→350K。字节跳动每年 55B 美元的人工智能支出 → 三星。一站式商店：内存+代工+包装。没有其他公司能够同时提供这三项服务。 HBM4 传输 (11.7Gbps)。缩小与SK海力士的差距。 2026 年资本支出 $73B (+22%)。 2nm代工厂开始量产。内存是结构性的：3-5 年长期协议，按季度定价。 DRAM 5.7 万美元/公斤。风险：企业集团稀释。韩治折扣。 HBM #2。",
-            "IR Check": "❌ 需要审查\n中国代工战略\nHBM4 对阵 SK 海力士的进展",
-            "Supercycle": "代工+内存+中国",
-            "Change %": "-1.10%"
         },
         {
             "Rank": 24,
@@ -2114,6 +2114,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 28,
+            "Ticker": "MU",
+            "Name": "美光科技",
+            "Total": 60,
+            "Base": 80,
+            "Entry": 30,
+            "Rating": "失败——81% GM，$842B MC。论文优秀，但股票 AT 上限（746 美元 vs 最低 800 美元）。与 ARM 一样：伟大的公司，零不对称。 HC 价格为 400 美元。",
+            "Port": "",
+            "Current Price": "$746.81",
+            "Ceiling Target": "$800-1,200",
+            "Upside": "1.1x-1.6x",
+            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
+            "Revenue Explosion": "📈 记忆超级循环 — 美国冠军\n通用汽车对 5 月份季度的指导率为 81%（MU 历史上最高）。\nMC 突破 $853B，成为美国十大科技公司。\n年初至今 +124%，过去 12 个月 +700%。\n订单已满，2026 年产量全部售罄。\nCHIPS 法案：纽约+爱荷华州晶圆厂正在建设中。\n美国制造的HBM + DRAM + NAND。\nDDR4：1.35 美元→16 美元（12 倍）。 DDR5：6.84 美元→27.20 美元（4 倍）。\nIDC：“永久性的战略重新分配。”\nPax Silica：美国记忆冠军。\n预计 2028 年之后内存将出现短缺。",
+            "Updated": "5月9日",
+            "SuperCycle": "AI",
+            "Market Cap": "$842.20B",
+            "Key Thesis": "#3 记忆； 3.5 倍 CY27E EPS 100 美元以上； mgmt 说“世俗且持久”；多年升级循环；但在中国被禁止（三星获胜），NVIDIA 排名第三（SK 海力士获胜）；没有独特的战略地位； DRAM ETF 已提供 24% 的敞口；不需要单独的位置",
+            "IR Check": "❌ 需要审查\nHBM 路线图",
+            "Supercycle": "HBM内存",
+            "Change %": "+12.67%"
+        },
+        {
+            "Rank": 29,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "Total": 54,
@@ -2135,7 +2157,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.29%"
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "LWLG",
             "Name": "光波逻辑",
             "Total": 55,
@@ -2157,7 +2179,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.23%"
         },
         {
-            "Rank": 30,
+            "Rank": 31,
+            "Ticker": "SNDK",
+            "Name": "闪迪公司",
+            "Total": 57,
+            "Base": 75,
+            "Entry": 30,
+            "Rating": "失败——NAND 超级周期已确认，但股价 1,562 美元是最低上限（1,800 美元）的 87%。与 MU 相同：伟大的论文，没有条目。 HC 售价 900 美元。",
+            "Port": "",
+            "Current Price": "$1,562.34",
+            "Ceiling Target": "1,800-2,500 美元",
+            "Upside": "1.2x-1.6x",
+            "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
+            "Revenue Explosion": "📈 NAND 超级循环\nNAND 晶圆开始接近产能极限。\nNAND 短缺将持续到 2028 年之后。\n长江存储（中国）短期扩张有限，2027 年晶圆出片。\n$42B NBM 交易。 BiCS8/9 斜坡。 $6B 回购。\nDDR4 1.35 美元→16 美元溢出到 NAND 定价中。\nAI 服务器需要大量 NAND 来实现 KV 缓存 + 检查点。\nIDC：“永久重新分配”影响所有内存。",
+            "Updated": "5月9日",
+            "SuperCycle": "AI",
+            "Market Cap": "$231.37B",
+            "Key Thesis": "NAND 寡头垄断（4 个玩家）。 2027 财年每股收益 98.07 美元 = 8.7 倍预期市盈率，但我们的第一原则估计：129-179 美元（比共识高出 31-83%）。 NAND 128Gb MLC 定价在 14 个月内增长了 713%（2.18 美元→17.73 美元）。长期协议延长至 2029 年（Kioxia 3 年）。 2026 年售罄，2027 年短缺。SanDisk 向 Kioxia 支付 1.165B 美元预付款以获取供应。双顺风：DRAM 短缺推动闪存替代需求（反向）+ NAND 短缺推动闪存定价能力（直接）。推理转变 1/3→2/3 = 长期 NAND 需求。 HBF 发明人 = $10B+ 新市场（2028+）的免费看涨期权。 SK海力士谅解备忘录。帕特森 + Koduri 咨询。",
+            "IR Check": "❌ 需要审查\n第一季度盈利确认\nHBF 原型时间表\nNAND 定价轨迹",
+            "Supercycle": "与非存储器",
+            "Change %": "+13.34%"
+        },
+        {
+            "Rank": 32,
             "Ticker": "ARM",
             "Name": "Arm 控股公司",
             "Total": 56,
@@ -2179,7 +2223,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.28%"
         },
         {
-            "Rank": 31,
+            "Rank": 33,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "Total": 54,
@@ -2201,7 +2245,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.79%"
         },
         {
-            "Rank": 32,
+            "Rank": 34,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "Total": 51,
@@ -2223,29 +2267,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.06%"
         },
         {
-            "Rank": 33,
-            "Ticker": "SNDK",
-            "Name": "闪迪公司",
-            "Total": 51,
-            "Base": 65,
-            "Entry": 30,
-            "Rating": "NAND 寡头垄断 + HBF NVIDIA 催化剂 + 8.7 倍正向市盈率",
-            "Port": "",
-            "Current Price": "$1,562.34",
-            "Ceiling Target": "1,800-2,300 美元",
-            "Upside": "1.2x-1.5x",
-            "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
-            "Revenue Explosion": "🔥 HBF NVIDIA 公告\n触发因素：NVIDIA 宣布推出兼容 HBF 的 GPU\n时间：GTC 2027 或更早\n预期变动：4 周内 50-80%\n二元：NVIDIA 表示是或否\n与此同时：盈利修正=稳定重新定价",
-            "Updated": "5月8日",
-            "SuperCycle": "AI",
-            "Market Cap": "$231.37B",
-            "Key Thesis": "NAND 寡头垄断（4 个玩家）。 2027 财年每股收益 98.07 美元 = 8.7 倍预期市盈率，但我们的第一原则估计：129-179 美元（比共识高出 31-83%）。 NAND 128Gb MLC 定价在 14 个月内增长了 713%（2.18 美元→17.73 美元）。长期协议延长至 2029 年（Kioxia 3 年）。 2026 年售罄，2027 年短缺。SanDisk 向 Kioxia 支付 1.165B 美元预付款以获取供应。双顺风：DRAM 短缺推动闪存替代需求（反向）+ NAND 短缺推动闪存定价能力（直接）。推理转变 1/3→2/3 = 长期 NAND 需求。 HBF 发明人 = $10B+ 新市场（2028+）的免费看涨期权。 SK海力士谅解备忘录。帕特森 + Koduri 咨询。",
-            "IR Check": "❌ 需要审查\n第一季度盈利确认\nHBF 原型时间表\nNAND 定价轨迹",
-            "Supercycle": "与非存储器",
-            "Change %": "+13.34%"
-        },
-        {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMSC",
             "Name": "美国超导公司",
             "Total": 49,
@@ -2267,7 +2289,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.26%"
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "SMOP.OL",
             "Name": "智能光学集团",
             "Total": 44,
@@ -2289,7 +2311,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.92%"
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "TRT",
             "Name": "三重科技国际",
             "Total": 48,
@@ -2311,7 +2333,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.21%"
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "3081.TWO",
             "Name": "地标光电",
             "Total": 44,
@@ -2333,7 +2355,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.87%"
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "300476.SZSE",
             "Name": "Victory Giant (胜宏科技)",
             "Total": 43,
@@ -2355,7 +2377,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.10%"
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "AXTI",
             "Name": "AXT公司",
             "Total": 47,
@@ -2377,7 +2399,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+6.98%"
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "CLF",
             "Name": "克利夫兰悬崖",
             "Total": 43,
@@ -2399,7 +2421,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.83%"
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "3037.TW",
             "Name": "欣兴微光",
             "Total": 47,
@@ -2421,7 +2443,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.71%"
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "FORM",
             "Name": "外形尺寸",
             "Total": 46,
@@ -2441,28 +2463,6 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ 需要审查\n5 月 11 日分析师日",
             "Supercycle": "DB1+HBM",
             "Change %": "+2.64%"
-        },
-        {
-            "Rank": 43,
-            "Ticker": "MU",
-            "Name": "美光科技",
-            "Total": 45,
-            "Base": 62,
-            "Entry": 20,
-            "Rating": "#3 HBM + 第二季度创纪录的 $23.9B + 中国禁令 + 自己的 VIA ETF",
-            "Port": "",
-            "Current Price": "$746.81",
-            "Ceiling Target": "$800-1,000",
-            "Upside": "1.1x-1.3x",
-            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
-            "Revenue Explosion": "📈 3D DRAM 专利价值\n触发因素：3D DRAM 行业转型\n时间安排：2028-2030（长期）\n通过 DRAM ETF 拥有，而非独立",
-            "Updated": "5月8日",
-            "SuperCycle": "AI",
-            "Market Cap": "$842.20B",
-            "Key Thesis": "#3 记忆； 3.5 倍 CY27E EPS 100 美元以上； mgmt 说“世俗且持久”；多年升级循环；但在中国被禁止（三星获胜），NVIDIA 排名第三（SK 海力士获胜）；没有独特的战略地位； DRAM ETF 已提供 24% 的敞口；不需要单独的位置",
-            "IR Check": "❌ 需要审查\nHBM 路线图",
-            "Supercycle": "HBM内存",
-            "Change %": "+12.67%"
         },
         {
             "Rank": 44,
