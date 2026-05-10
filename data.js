@@ -24,28 +24,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 2,
-            "Ticker": "AEHR",
-            "Name": "Aehr Test Systems",
-            "Total": 91,
-            "Base": 93,
-            "Entry": 88,
-            "Rating": "HC #2 (WLBI sole-source + SiPh dual-purpose burn-in + PPBI via Sonoma)",
-            "Port": "✓",
-            "Current Price": "$97.23",
-            "Ceiling Target": "$280-405",
-            "Upside": "2.9x-4.2x",
-            "Position Type": "🔒 CHOKEPOINT\nPhysics: Sole-source WLBI — no competitor exists. Every compound semi. 2026-2035+",
-            "Revenue Explosion": "H2 bookings >$92M. Record $41M single order Apr 16. 3rd SiPh customer won Mar 31. Sonoma AI ASIC production. Razor-blade flywheel: contactors > systems revenue.",
-            "Updated": "May 8",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Market Cap": "$3.06B",
-            "Key Thesis": "SOLE-SOURCE WLBI BURN-IN MONOPOLY — NOW DUAL-PLATFORM (SiPh + AI ASIC). 3 confirmed SiPh customers (3rd won Mar 31, 2026 — hyperscale DC optical interconnect). Record $41M single production order from lead hyperscale AI customer (Apr 16). H2 FY2026 bookings >$92M. Sonoma platform now in AI ASIC production burn-in (Feb 11). ATE duopoly (TER/KLAC) chose NOT to compete in WLBI. SiPh burn-in is DUAL PURPOSE: screening + stabilization = physics-required, no alternative. Razor-blade model PROVEN: FY2024 contactors $37.6M > systems $24.2M. WLBI + PPBI dual platform. SoIC 5x expansion = hybrid bonding = WLBI demand multiplier. Capacity: Fremont 50K+ sqft, 400 wafer blades + 20 PPBI systems/month. DFT engineer analysis: burn-in is the ONLY process that simultaneously screens defects AND stabilizes photonic device performance. No substitute exists.",
-            "IR Check": "❌ NEEDS REVIEW\nJust reported Apr 8\nCheck IR for new deck",
-            "Supercycle": "DB1 Photonics",
-            "Change %": "+3.07%"
-        },
-        {
-            "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
             "Total": 102,
@@ -67,29 +45,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+9.39%"
         },
         {
-            "Rank": 4,
-            "Ticker": "OUST",
-            "Name": "Ouster Inc",
-            "Total": 85,
-            "Base": 75,
-            "Entry": 100,
-            "Rating": "HC — World's first native color LiDAR (REV8). ONE sensor replaces camera+LiDAR. L4 chip 2x range. Google+Volvo confirmed. Digital architecture monopoly WIDENED.",
-            "Port": "",
-            "Current Price": "$25.20",
-            "Ceiling Target": "$75-137",
-            "Upside": "3.0x-5.4x",
-            "Position Type": "🔒 CHOKEPOINT\nPlatform: Physical AI perception — every robot/drone/AV needs vision+depth. 2026-2035+",
-            "Revenue Explosion": "Stereolabs acq (Feb 2026): 90K cameras + 10K customers overnight. Full stack: LiDAR + cameras + AI compute + sensor fusion + perception software. Hardware → platform transition. Software = recurring revenue.",
+            "Rank": 3,
+            "Ticker": "AEHR",
+            "Name": "Aehr Test Systems",
+            "Total": 91,
+            "Base": 93,
+            "Entry": 88,
+            "Rating": "HC #2 (WLBI sole-source + SiPh dual-purpose burn-in + PPBI via Sonoma)",
+            "Port": "✓",
+            "Current Price": "$97.23",
+            "Ceiling Target": "$280-405",
+            "Upside": "2.9x-4.2x",
+            "Position Type": "🔒 CHOKEPOINT\nPhysics: Sole-source WLBI — no competitor exists. Every compound semi. 2026-2035+",
+            "Revenue Explosion": "H2 bookings >$92M. Record $41M single order Apr 16. 3rd SiPh customer won Mar 31. Sonoma AI ASIC production. Razor-blade flywheel: contactors > systems revenue.",
             "Updated": "May 8",
-            "SuperCycle": "Other",
-            "Market Cap": "$1.61B",
-            "Key Thesis": "THESIS UPGRADED: LiDAR hardware → full-stack Physical AI perception platform. Stereolabs acquisition (Feb 2026) added 90,000 deployed cameras + 10,000 customers. Now combines LiDAR + cameras + AI compute + sensor fusion + perception software. NDAA Chinese LiDAR ban (Path C3) = Hesai/Chinese competitors blocked from US gov + defense. Platform play: better margins, switching costs, recurring software revenue potential. Every robot, autonomous vehicle, drone, and industrial system needs perception. OUST building the perception OS for Physical AI. $1.5B market cap = pre-discovery. Asymmetric: downside = flat (LiDAR co), upside = 6x+ (perception platform). Market still prices as LiDAR hardware. Retail discovery catalyst pending.",
-            "IR Check": "❌ NEEDS MONITORING\nSAFE LiDAR Act passage timeline\nDoD procurement orders post-June 2026 ban\nQ1 2026 revenue (StereoLabs contribution)\nGAAP profitability sustainability\nLuminar competitive positioning\nHesai response to bans",
-            "Supercycle": "DB2 Physical AI / Sensors",
-            "Change %": "-0.01%"
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "Market Cap": "$3.06B",
+            "Key Thesis": "SOLE-SOURCE WLBI BURN-IN MONOPOLY — NOW DUAL-PLATFORM (SiPh + AI ASIC). 3 confirmed SiPh customers (3rd won Mar 31, 2026 — hyperscale DC optical interconnect). Record $41M single production order from lead hyperscale AI customer (Apr 16). H2 FY2026 bookings >$92M. Sonoma platform now in AI ASIC production burn-in (Feb 11). ATE duopoly (TER/KLAC) chose NOT to compete in WLBI. SiPh burn-in is DUAL PURPOSE: screening + stabilization = physics-required, no alternative. Razor-blade model PROVEN: FY2024 contactors $37.6M > systems $24.2M. WLBI + PPBI dual platform. SoIC 5x expansion = hybrid bonding = WLBI demand multiplier. Capacity: Fremont 50K+ sqft, 400 wafer blades + 20 PPBI systems/month. DFT engineer analysis: burn-in is the ONLY process that simultaneously screens defects AND stabilizes photonic device performance. No substitute exists.",
+            "IR Check": "❌ NEEDS REVIEW\nJust reported Apr 8\nCheck IR for new deck",
+            "Supercycle": "DB1 Photonics",
+            "Change %": "+3.07%"
         },
         {
-            "Rank": 5,
+            "Rank": 4,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "Total": 85,
@@ -109,6 +87,28 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ NEEDS REVIEW\nNDAA Phase II enforcement timeline\nPentagon drone procurement schedule\nNanotech US production capacity\neVTOL battery qualification status\nDefense contract pipeline\nSolid-state competition timeline",
             "Supercycle": "DB7 Defense Battery + Physical AI",
             "Change %": "-0.95%"
+        },
+        {
+            "Rank": 5,
+            "Ticker": "OUST",
+            "Name": "Ouster Inc",
+            "Total": 85,
+            "Base": 75,
+            "Entry": 100,
+            "Rating": "HC — World's first native color LiDAR (REV8). ONE sensor replaces camera+LiDAR. L4 chip 2x range. Google+Volvo confirmed. Digital architecture monopoly WIDENED.",
+            "Port": "",
+            "Current Price": "$25.20",
+            "Ceiling Target": "$75-137",
+            "Upside": "3.0x-5.4x",
+            "Position Type": "🔒 CHOKEPOINT\nPlatform: Physical AI perception — every robot/drone/AV needs vision+depth. 2026-2035+",
+            "Revenue Explosion": "Stereolabs acq (Feb 2026): 90K cameras + 10K customers overnight. Full stack: LiDAR + cameras + AI compute + sensor fusion + perception software. Hardware → platform transition. Software = recurring revenue.",
+            "Updated": "May 8",
+            "SuperCycle": "Other",
+            "Market Cap": "$1.61B",
+            "Key Thesis": "THESIS UPGRADED: LiDAR hardware → full-stack Physical AI perception platform. Stereolabs acquisition (Feb 2026) added 90,000 deployed cameras + 10,000 customers. Now combines LiDAR + cameras + AI compute + sensor fusion + perception software. NDAA Chinese LiDAR ban (Path C3) = Hesai/Chinese competitors blocked from US gov + defense. Platform play: better margins, switching costs, recurring software revenue potential. Every robot, autonomous vehicle, drone, and industrial system needs perception. OUST building the perception OS for Physical AI. $1.5B market cap = pre-discovery. Asymmetric: downside = flat (LiDAR co), upside = 6x+ (perception platform). Market still prices as LiDAR hardware. Retail discovery catalyst pending.",
+            "IR Check": "❌ NEEDS MONITORING\nSAFE LiDAR Act passage timeline\nDoD procurement orders post-June 2026 ban\nQ1 2026 revenue (StereoLabs contribution)\nGAAP profitability sustainability\nLuminar competitive positioning\nHesai response to bans",
+            "Supercycle": "DB2 Physical AI / Sensors",
+            "Change %": "-0.01%"
         },
         {
             "Rank": 6,
@@ -134,28 +134,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 7,
-            "Ticker": "6830.TWO",
-            "Name": "MSScorps (汎銓科技)",
-            "Total": 84,
-            "Base": 88,
-            "Entry": 78,
-            "Rating": "HC — CPO PIC inspection patent monopoly. Night Gecko equipment pivot. 142% CPO CAGR = 34x market in 4 years.",
-            "Port": "✓",
-            "Current Price": "TWD 787",
-            "Ceiling Target": "TWD 1,200-3,685",
-            "Upside": "1.5x-4.7x",
-            "Position Type": "🔒 CHOKEPOINT\nCPO PIC light leakage inspection. Patented in TW/JP/US. Suing Enli, refusing to license. 6yr co-development with customers. VICR-pattern dual moat (physics + legal).",
-            "Revenue Explosion": "📈 CPO INSPECTION EQUIPMENT\nLaunch: end 2026\nProduction ramp: 2027\n90% market share target (chairman)\nEvery PIC needs waveguide inspection",
-            "Updated": "May 10",
-            "SuperCycle": "AI, CPO",
-            "Market Cap": "TWD 40.75B",
-            "Key Thesis": "CPO PIC inspection monopoly. IR camera waveguide defect detection. Patents TW/JP/US. Suing Enli. TSMC, NVIDIA, Apple, ASML, Intel, AMAT, Lam customers. 6yr co-dev. Chairman: 90% CPO inspection market share goal.",
-            "IR Check": "",
-            "Supercycle": "DB1 CPO Photonics",
-            "Change %": "-9.95%"
-        },
-        {
-            "Rank": 8,
             "Ticker": "CGEH",
             "Name": "Capstone Power+ (Capstone Green Energy)",
             "Total": 84,
@@ -175,6 +153,28 @@ window.PORTFOLIO_DATA = {
             "IR Check": "",
             "Supercycle": "",
             "Change %": "-4.41%"
+        },
+        {
+            "Rank": 8,
+            "Ticker": "6830.TWO",
+            "Name": "MSScorps (汎銓科技)",
+            "Total": 84,
+            "Base": 88,
+            "Entry": 78,
+            "Rating": "HC — CPO PIC inspection patent monopoly. Night Gecko equipment pivot. 142% CPO CAGR = 34x market in 4 years.",
+            "Port": "✓",
+            "Current Price": "TWD 787",
+            "Ceiling Target": "TWD 1,200-3,685",
+            "Upside": "1.5x-4.7x",
+            "Position Type": "🔒 CHOKEPOINT\nCPO PIC light leakage inspection. Patented in TW/JP/US. Suing Enli, refusing to license. 6yr co-development with customers. VICR-pattern dual moat (physics + legal).",
+            "Revenue Explosion": "📈 CPO INSPECTION EQUIPMENT\nLaunch: end 2026\nProduction ramp: 2027\n90% market share target (chairman)\nEvery PIC needs waveguide inspection",
+            "Updated": "May 10",
+            "SuperCycle": "AI, CPO",
+            "Market Cap": "TWD 40.75B",
+            "Key Thesis": "CPO PIC inspection monopoly. IR camera waveguide defect detection. Patents TW/JP/US. Suing Enli. TSMC, NVIDIA, Apple, ASML, Intel, AMAT, Lam customers. 6yr co-dev. Chairman: 90% CPO inspection market share goal.",
+            "IR Check": "",
+            "Supercycle": "DB1 CPO Photonics",
+            "Change %": "-9.95%"
         },
         {
             "Rank": 9,
@@ -288,27 +288,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 14,
-            "Ticker": "UNITREE (PRE-IPO)",
-            "Name": "Unitree Robotics 宇树科技",
-            "Total": 75,
-            "Base": "—",
-            "Entry": "—",
-            "Rating": "HC (pre-IPO monitor)",
-            "Port": "",
-            "Current Price": "PRE-IPO",
-            "Ceiling Target": "$20-50B",
-            "Upside": "IPO 2026",
-            "Position Type": "🔒 CHOKEPOINT\nPlatform: Humanoid robot leader — Phase 2 Physical AI hardware platform. Pre-IPO. 2027-2035+",
-            "Revenue Explosion": "🔥🔥 IPO EVENT\nTrigger: 688 STAR Market listing\nTiming: May-Jun 2026 (rumored)\nExpected move: Massive ($7B vs Figure AI $39B)\n70% quadruped share, >$140M revenue",
-            "Updated": "",
-            "SuperCycle": "Other",
-            "Market Cap": "$7B rumored IPO",
-            "Key Thesis": "World's #1 quadruped robotics. 70% global market share by volume. 10x shipments vs Boston Dynamics. >$140M revenue, HIGH margins (SemiAnalysis confirmed). ~200 Go2/day peak production. Both quadrupeds AND humanoids. IPO rumored $7B = massively undervalued vs Figure AI ($39B with zero revenue). Vector #1: Soft Robotics. China manufacturing supremacy cracked. Likely 688 STAR Market = need Moomoo. WATCH: IPO filing for revenue/margins, listing exchange, valuation.",
-            "IR Check": "❌ PRE-IPO\nMonitor IPO filing\nGet Moomoo access\n688 STAR Market likely\nCompare to Figure AI $39B",
-            "Supercycle": "Quadruped + Humanoid Robotics"
-        },
-        {
-            "Rank": 15,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "Total": 74,
@@ -330,7 +309,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.14%"
         },
         {
-            "Rank": 16,
+            "Rank": 15,
             "Ticker": "000660.KS",
             "Name": "SK Hynix",
             "Total": 72,
@@ -352,28 +331,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.93%"
         },
         {
-            "Rank": 17,
-            "Ticker": "CXMT (PRE-IPO)",
-            "Name": "ChangXin Memory Technologies",
-            "Total": 72,
-            "Base": "—",
-            "Entry": "—",
-            "Rating": "WL (pre-IPO monitor)",
-            "Port": "",
-            "Current Price": "PRE-IPO",
-            "Ceiling Target": "~$42B target",
-            "Upside": "IPO 2026",
-            "Position Type": "🔒 CHOKEPOINT\nRegulatory: Only Chinese DRAM at scale — China bifurcation = captive domestic demand. Pre-IPO. 2026-2030+",
-            "Revenue Explosion": "🔥 IPO EVENT\nTrigger: 688 STAR Market listing\nTiming: 2026-2027\nExpected move: IPO pricing + first day pop\nNeed Moomoo access READY",
-            "Updated": "",
-            "SuperCycle": "AI",
-            "Market Cap": "~$42B target",
-            "Key Thesis": "China's #1 DRAM. World's #4 by capacity. 720K wafers/quarter. G4 node (16nm) without EUV. DDR5 shipping in Lenovo. LPDDR5X 30% Chinese smartphone market. Qualcomm qualified. HBM3 target 2026 (trails Big 3 by 4yr). 3D DRAM: SK Hynix Americas head says 'China is ahead.' YMTC hybrid bonding patents. IPO filing: ~$42B valuation, still loss-making (~RMB 2.3B H1 2025 loss). Shanghai fab 2-3x existing size under construction. $6-7B capex 2023-2024. WATCH: IPO prospectus for yield/revenue data. Likely 688 series = need Moomoo access.",
-            "IR Check": "❌ PRE-IPO\nMonitor IPO filing\nGet Moomoo access ready\n688 series likely",
-            "Supercycle": "DRAM — China #1"
-        },
-        {
-            "Rank": 18,
+            "Rank": 16,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "Total": 71,
@@ -395,7 +353,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.30%"
         },
         {
-            "Rank": 19,
+            "Rank": 17,
             "Ticker": "NKT",
             "Name": "NKT A/S",
             "Total": 71,
@@ -417,7 +375,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.46%"
         },
         {
-            "Rank": 20,
+            "Rank": 18,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "Total": 70,
@@ -439,7 +397,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.67%"
         },
         {
-            "Rank": 21,
+            "Rank": 19,
             "Ticker": "AAOI",
             "Name": "Applied Optoelectronics",
             "Total": 70,
@@ -461,7 +419,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.81%"
         },
         {
-            "Rank": 22,
+            "Rank": 20,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "Total": 70,
@@ -483,7 +441,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.10%"
         },
         {
-            "Rank": 23,
+            "Rank": 21,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 68,
@@ -505,7 +463,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.26%"
         },
         {
-            "Rank": 24,
+            "Rank": 22,
             "Ticker": "NBIS",
             "Name": "Nebius Group",
             "Total": 68,
@@ -527,7 +485,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.95%"
         },
         {
-            "Rank": 25,
+            "Rank": 23,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "Total": 64,
@@ -549,7 +507,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+11.81%"
         },
         {
-            "Rank": 26,
+            "Rank": 24,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "Total": 64,
@@ -571,7 +529,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.66%"
         },
         {
-            "Rank": 27,
+            "Rank": 25,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 63,
@@ -593,7 +551,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.86%"
         },
         {
-            "Rank": 28,
+            "Rank": 26,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "Total": 62,
@@ -615,7 +573,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.64%"
         },
         {
-            "Rank": 29,
+            "Rank": 27,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "Total": 62,
@@ -637,7 +595,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.55%"
         },
         {
-            "Rank": 30,
+            "Rank": 28,
             "Ticker": "601208.SSE",
             "Name": "Dongcai Tech",
             "Total": 62,
@@ -659,7 +617,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.08%"
         },
         {
-            "Rank": 31,
+            "Rank": 29,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 60,
@@ -681,7 +639,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.27%"
         },
         {
-            "Rank": 32,
+            "Rank": 30,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "Total": 59,
@@ -703,7 +661,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.74%"
         },
         {
-            "Rank": 33,
+            "Rank": 31,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "Total": 59,
@@ -725,7 +683,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.62%"
         },
         {
-            "Rank": 34,
+            "Rank": 32,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "Total": 57,
@@ -747,7 +705,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.77%"
         },
         {
-            "Rank": 35,
+            "Rank": 33,
             "Ticker": "CRDO",
             "Name": "Credo Technology",
             "Total": 57,
@@ -769,7 +727,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.76%"
         },
         {
-            "Rank": 36,
+            "Rank": 34,
             "Ticker": "MU",
             "Name": "Micron Technology",
             "Total": 52,
@@ -791,7 +749,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+12.67%"
         },
         {
-            "Rank": 37,
+            "Rank": 35,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "Total": 51,
@@ -811,6 +769,48 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ NEEDS REVIEW\nStrategic Review updates\nPhotonics segment breakdown",
             "Supercycle": "III-V Epiwafer",
             "Change %": "+3.29%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "UNITREE (PRE-IPO)",
+            "Name": "Unitree Robotics 宇树科技",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "HC (pre-IPO monitor)",
+            "Port": "",
+            "Current Price": "PRE-IPO",
+            "Ceiling Target": "$20-50B",
+            "Upside": "IPO 2026",
+            "Position Type": "🔒 CHOKEPOINT\nPlatform: Humanoid robot leader — Phase 2 Physical AI hardware platform. Pre-IPO. 2027-2035+",
+            "Revenue Explosion": "🔥🔥 IPO EVENT\nTrigger: 688 STAR Market listing\nTiming: May-Jun 2026 (rumored)\nExpected move: Massive ($7B vs Figure AI $39B)\n70% quadruped share, >$140M revenue",
+            "Updated": "",
+            "SuperCycle": "Other",
+            "Market Cap": "$7B rumored IPO",
+            "Key Thesis": "World's #1 quadruped robotics. 70% global market share by volume. 10x shipments vs Boston Dynamics. >$140M revenue, HIGH margins (SemiAnalysis confirmed). ~200 Go2/day peak production. Both quadrupeds AND humanoids. IPO rumored $7B = massively undervalued vs Figure AI ($39B with zero revenue). Vector #1: Soft Robotics. China manufacturing supremacy cracked. Likely 688 STAR Market = need Moomoo. WATCH: IPO filing for revenue/margins, listing exchange, valuation.",
+            "IR Check": "❌ PRE-IPO\nMonitor IPO filing\nGet Moomoo access\n688 STAR Market likely\nCompare to Figure AI $39B",
+            "Supercycle": "Quadruped + Humanoid Robotics"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "CXMT (PRE-IPO)",
+            "Name": "ChangXin Memory Technologies",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "WL (pre-IPO monitor)",
+            "Port": "",
+            "Current Price": "PRE-IPO",
+            "Ceiling Target": "~$42B target",
+            "Upside": "IPO 2026",
+            "Position Type": "🔒 CHOKEPOINT\nRegulatory: Only Chinese DRAM at scale — China bifurcation = captive domestic demand. Pre-IPO. 2026-2030+",
+            "Revenue Explosion": "🔥 IPO EVENT\nTrigger: 688 STAR Market listing\nTiming: 2026-2027\nExpected move: IPO pricing + first day pop\nNeed Moomoo access READY",
+            "Updated": "",
+            "SuperCycle": "AI",
+            "Market Cap": "~$42B target",
+            "Key Thesis": "China's #1 DRAM. World's #4 by capacity. 720K wafers/quarter. G4 node (16nm) without EUV. DDR5 shipping in Lenovo. LPDDR5X 30% Chinese smartphone market. Qualcomm qualified. HBM3 target 2026 (trails Big 3 by 4yr). 3D DRAM: SK Hynix Americas head says 'China is ahead.' YMTC hybrid bonding patents. IPO filing: ~$42B valuation, still loss-making (~RMB 2.3B H1 2025 loss). Shanghai fab 2-3x existing size under construction. $6-7B capex 2023-2024. WATCH: IPO prospectus for yield/revenue data. Likely 688 series = need Moomoo access.",
+            "IR Check": "❌ PRE-IPO\nMonitor IPO filing\nGet Moomoo access ready\n688 series likely",
+            "Supercycle": "DRAM — China #1"
         },
         {
             "Rank": "—",
@@ -1536,6 +1536,27 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "—",
             "IR Check": "",
             "Supercycle": ""
+        },
+        {
+            "Rank": "—",
+            "Ticker": "5289.TWO",
+            "Name": "Innodisk (宜鼎)",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "UNRANKED — Memory supercycle beneficiary. #1 industrial SSD. Exclusive DDR4 supply. CXL expansion. SK Hynix preferred (stronger moat, similar ratio).",
+            "Port": "",
+            "Current Price": "TWD 1,600",
+            "Ceiling Target": "TWD 2,300-4,000",
+            "Upside": "1.4x-2.5x",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "May 10",
+            "SuperCycle": "AI",
+            "Market Cap": "NT$153.6B",
+            "Key Thesis": "",
+            "IR Check": "",
+            "Supercycle": ""
         }
     ],
     "zh-CN": [
@@ -1563,28 +1584,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 2,
-            "Ticker": "AEHR",
-            "Name": "空气测试系统",
-            "Total": 91,
-            "Base": 93,
-            "Entry": 88,
-            "Rating": "HC #2（WLBI 独家来源 + SiPh 两用预烧 + 通过 Sonoma 的 PPBI）",
-            "Port": "✓",
-            "Current Price": "$97.23",
-            "Ceiling Target": "$280-405 美元",
-            "Upside": "2.9x-4.2x",
-            "Position Type": "🔒 阻塞点\n物理：WLBI 唯一来源——不存在竞争对手。每个复合半。 2026-2035+",
-            "Revenue Explosion": "H2 预订量 >9200 万美元。 4 月 16 日创下 4100 万美元单笔订单记录。3 月 31 日，第 3 个 SiPh 客户赢得了索诺玛 AI ASIC 生产。刀片式飞轮：接触器 > 系统收入。",
-            "Updated": "5月8日",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Market Cap": "$3.06B",
-            "Key Thesis": "单一来源 WLBI 老化垄断 — 现在为双平台（SiPh + AI ASIC）。 3 个确认的 SiPh 客户（第 3 个于 2026 年 3 月 31 日获胜 — 超大规模 DC 光学互连）。来自领先的超大规模 AI 客户的单笔生产订单创下了 4100 万美元的记录（4 月 16 日）。 2026 财年下半年预订量 >9200 万美元。 Sonoma 平台现已进行 AI ASIC 生产预烧（2 月 11 日）。 ATE 双寡头（TER/KLAC）选择不参加 WLBI。 SiPh 老化具有双重目的：筛选 + 稳定 = 物理要求，别无选择。剃须刀型号经过验证：2024 财年接触器 3760 万美元 > 系统 2420 万美元。 WLBI+PPBI双平台。 SoIC 5 倍扩展 = 混合键合 = WLBI 需求倍增。产能：弗里蒙特 50K+ 平方英尺，400 个晶圆刀片 + 20 个 PPBI 系统/月。 DFT工程师分析：老化是唯一能够同时筛选缺陷并稳定光子器件性能的工艺。不存在替代品。",
-            "IR Check": "❌ 需要审查\n4月8日刚刚报道\n检查新甲板的红外线",
-            "Supercycle": "DB1 光子学",
-            "Change %": "+3.07%"
-        },
-        {
-            "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
             "Total": 102,
@@ -1606,29 +1605,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "+9.39%"
         },
         {
-            "Rank": 4,
-            "Ticker": "OUST",
-            "Name": "驱逐者公司",
-            "Total": 85,
-            "Base": 75,
-            "Entry": 100,
-            "Rating": "HC — 世界上第一个原生彩色激光雷达 (REV8)。一个传感器取代相机+激光雷达。 L4 芯片 2 倍范围。谷歌+沃尔沃已确认。数字建筑垄断扩大。",
-            "Port": "",
-            "Current Price": "$25.20",
-            "Ceiling Target": "$75-137 美元",
-            "Upside": "3.0x-5.4x",
-            "Position Type": "🔒 阻塞点\n平台：物理人工智能感知——每个机器人/无人机/AV都需要视觉+深度。 2026-2035+",
-            "Revenue Explosion": "Stereolabs acq（2026 年 2 月）：90K 摄像机 + 10K 客户过夜。全栈：LiDAR + 摄像头 + AI 计算 + 传感器融合 + 感知软件。硬件→平台过渡。软件=经常性收入。",
+            "Rank": 3,
+            "Ticker": "AEHR",
+            "Name": "空气测试系统",
+            "Total": 91,
+            "Base": 93,
+            "Entry": 88,
+            "Rating": "HC #2（WLBI 独家来源 + SiPh 两用预烧 + 通过 Sonoma 的 PPBI）",
+            "Port": "✓",
+            "Current Price": "$97.23",
+            "Ceiling Target": "$280-405 美元",
+            "Upside": "2.9x-4.2x",
+            "Position Type": "🔒 阻塞点\n物理：WLBI 唯一来源——不存在竞争对手。每个复合半。 2026-2035+",
+            "Revenue Explosion": "H2 预订量 >9200 万美元。 4 月 16 日创下 4100 万美元单笔订单记录。3 月 31 日，第 3 个 SiPh 客户赢得了索诺玛 AI ASIC 生产。刀片式飞轮：接触器 > 系统收入。",
             "Updated": "5月8日",
-            "SuperCycle": "Other",
-            "Market Cap": "$1.61B",
-            "Key Thesis": "论文升级：激光雷达硬件→全栈物理AI感知平台。 Stereolabs 收购（2026 年 2 月）增加了 90,000 个部署的摄像头 + 10,000 个客户。现在结合了激光雷达+摄像头+人工智能计算+传感器融合+感知软件。 NDAA 中国激光雷达禁令（路径 C3）= 禾赛/中国竞争对手被美国政府阻止 + 国防。平台发挥：更好的利润、转换成本、经常性软件收入潜力。每个机器人、自动驾驶汽车、无人机和工业系统都需要感知。 OUST 为物理人工智能构建感知操作系统。 $1.5B 市值 = 发现前。不对称：下行=平坦（LiDAR co），上行= 6x+（感知平台）。市场价格仍与激光雷达硬件相同。零售发现催化剂悬而未决。",
-            "IR Check": "❌ 需要监控\nSAFE LiDAR 法案通过时间表\n2026 年 6 月禁令后的国防部采购订单\n2026 年第一季度收入（StereoLabs 贡献）\n公认会计准则盈利能力可持续性\n光明的竞争定位\n和赛对禁令的回应",
-            "Supercycle": "DB2 物理 AI/传感器",
-            "Change %": "-0.01%"
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "Market Cap": "$3.06B",
+            "Key Thesis": "单一来源 WLBI 老化垄断 — 现在为双平台（SiPh + AI ASIC）。 3 个确认的 SiPh 客户（第 3 个于 2026 年 3 月 31 日获胜 — 超大规模 DC 光学互连）。来自领先的超大规模 AI 客户的单笔生产订单创下了 4100 万美元的记录（4 月 16 日）。 2026 财年下半年预订量 >9200 万美元。 Sonoma 平台现已进行 AI ASIC 生产预烧（2 月 11 日）。 ATE 双寡头（TER/KLAC）选择不参加 WLBI。 SiPh 老化具有双重目的：筛选 + 稳定 = 物理要求，别无选择。剃须刀型号经过验证：2024 财年接触器 3760 万美元 > 系统 2420 万美元。 WLBI+PPBI双平台。 SoIC 5 倍扩展 = 混合键合 = WLBI 需求倍增。产能：弗里蒙特 50K+ 平方英尺，400 个晶圆刀片 + 20 个 PPBI 系统/月。 DFT工程师分析：老化是唯一能够同时筛选缺陷并稳定光子器件性能的工艺。不存在替代品。",
+            "IR Check": "❌ 需要审查\n4月8日刚刚报道\n检查新甲板的红外线",
+            "Supercycle": "DB1 光子学",
+            "Change %": "+3.07%"
         },
         {
-            "Rank": 5,
+            "Rank": 4,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "Total": 85,
@@ -1648,6 +1647,28 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ 需要审查\nNDAA 第二阶段执行时间表\n五角大楼无人机采购时间表\n纳米技术美国产能\neVTOL 电池资格状态\n国防合同管道\n固态竞赛时间表",
             "Supercycle": "DB7防御电池+物理AI",
             "Change %": "-0.95%"
+        },
+        {
+            "Rank": 5,
+            "Ticker": "OUST",
+            "Name": "驱逐者公司",
+            "Total": 85,
+            "Base": 75,
+            "Entry": 100,
+            "Rating": "HC — 世界上第一个原生彩色激光雷达 (REV8)。一个传感器取代相机+激光雷达。 L4 芯片 2 倍范围。谷歌+沃尔沃已确认。数字建筑垄断扩大。",
+            "Port": "",
+            "Current Price": "$25.20",
+            "Ceiling Target": "$75-137 美元",
+            "Upside": "3.0x-5.4x",
+            "Position Type": "🔒 阻塞点\n平台：物理人工智能感知——每个机器人/无人机/AV都需要视觉+深度。 2026-2035+",
+            "Revenue Explosion": "Stereolabs acq（2026 年 2 月）：90K 摄像机 + 10K 客户过夜。全栈：LiDAR + 摄像头 + AI 计算 + 传感器融合 + 感知软件。硬件→平台过渡。软件=经常性收入。",
+            "Updated": "5月8日",
+            "SuperCycle": "Other",
+            "Market Cap": "$1.61B",
+            "Key Thesis": "论文升级：激光雷达硬件→全栈物理AI感知平台。 Stereolabs 收购（2026 年 2 月）增加了 90,000 个部署的摄像头 + 10,000 个客户。现在结合了激光雷达+摄像头+人工智能计算+传感器融合+感知软件。 NDAA 中国激光雷达禁令（路径 C3）= 禾赛/中国竞争对手被美国政府阻止 + 国防。平台发挥：更好的利润、转换成本、经常性软件收入潜力。每个机器人、自动驾驶汽车、无人机和工业系统都需要感知。 OUST 为物理人工智能构建感知操作系统。 $1.5B 市值 = 发现前。不对称：下行=平坦（LiDAR co），上行= 6x+（感知平台）。市场价格仍与激光雷达硬件相同。零售发现催化剂悬而未决。",
+            "IR Check": "❌ 需要监控\nSAFE LiDAR 法案通过时间表\n2026 年 6 月禁令后的国防部采购订单\n2026 年第一季度收入（StereoLabs 贡献）\n公认会计准则盈利能力可持续性\n光明的竞争定位\n和赛对禁令的回应",
+            "Supercycle": "DB2 物理 AI/传感器",
+            "Change %": "-0.01%"
         },
         {
             "Rank": 6,
@@ -1673,28 +1694,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 7,
-            "Ticker": "6830.TWO",
-            "Name": "MSScorps (泛铨科技)",
-            "Total": 84,
-            "Base": 88,
-            "Entry": 78,
-            "Rating": "HC——CPO PIC检查专利垄断。夜壁虎装备枢轴。 142% CPO 复合年增长率 = 4 年内市场规模的 34 倍。",
-            "Port": "✓",
-            "Current Price": "TWD 787",
-            "Ceiling Target": "新台币 1,200-3,685",
-            "Upside": "1.5x-4.7x",
-            "Position Type": "🔒 阻塞点\nCPO PIC漏光检查。在台湾/日本/美国获得专利。起诉恩利，拒绝许可。与客户共同开发 6 年。 VICR 模式双护城河（物理+法律）。",
-            "Revenue Explosion": "📈 CPO检测设备\n推出时间：2026 年底\n产量提升：2027 年\n90%市场份额目标（董事长）\n每个 PIC 都需要波导检查",
-            "Updated": "5月10日",
-            "SuperCycle": "AI, CPO",
-            "Market Cap": "TWD 40.75B",
-            "Key Thesis": "CPO PIC 检验垄断。红外相机波导缺陷检测。台湾/日本/美国专利。起诉恩利。台积电、NVIDIA、Apple、ASML、Intel、AMAT、Lam 客户。 6 年联合开发。董事长：90%CPO检验市场份额的目标。",
-            "IR Check": "",
-            "Supercycle": "DB1 CPO 光子学",
-            "Change %": "-9.95%"
-        },
-        {
-            "Rank": 8,
             "Ticker": "CGEH",
             "Name": "Capstone Power+（Capstone 绿色能源）",
             "Total": 84,
@@ -1714,6 +1713,28 @@ window.PORTFOLIO_DATA = {
             "IR Check": "",
             "Supercycle": "",
             "Change %": "-4.41%"
+        },
+        {
+            "Rank": 8,
+            "Ticker": "6830.TWO",
+            "Name": "MSScorps (泛铨科技)",
+            "Total": 84,
+            "Base": 88,
+            "Entry": 78,
+            "Rating": "HC——CPO PIC检查专利垄断。夜壁虎装备枢轴。 142% CPO 复合年增长率 = 4 年内市场规模的 34 倍。",
+            "Port": "✓",
+            "Current Price": "TWD 787",
+            "Ceiling Target": "新台币 1,200-3,685",
+            "Upside": "1.5x-4.7x",
+            "Position Type": "🔒 阻塞点\nCPO PIC漏光检查。在台湾/日本/美国获得专利。起诉恩利，拒绝许可。与客户共同开发 6 年。 VICR 模式双护城河（物理+法律）。",
+            "Revenue Explosion": "📈 CPO检测设备\n推出时间：2026 年底\n产量提升：2027 年\n90%市场份额目标（董事长）\n每个 PIC 都需要波导检查",
+            "Updated": "5月10日",
+            "SuperCycle": "AI, CPO",
+            "Market Cap": "TWD 40.75B",
+            "Key Thesis": "CPO PIC 检验垄断。红外相机波导缺陷检测。台湾/日本/美国专利。起诉恩利。台积电、NVIDIA、Apple、ASML、Intel、AMAT、Lam 客户。 6 年联合开发。董事长：90%CPO检验市场份额的目标。",
+            "IR Check": "",
+            "Supercycle": "DB1 CPO 光子学",
+            "Change %": "-9.95%"
         },
         {
             "Rank": 9,
@@ -1827,27 +1848,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 14,
-            "Ticker": "UNITREE (PRE-IPO)",
-            "Name": "Unitree Robotics 宇树科技",
-            "Total": 75,
-            "Base": "—",
-            "Entry": "—",
-            "Rating": "HC（首次公开募股前监察员）",
-            "Port": "",
-            "Current Price": "PRE-IPO",
-            "Ceiling Target": "$20-50B",
-            "Upside": "2026 年首次公开募股",
-            "Position Type": "🔒 阻塞点\n平台：人形机器人领导者——第二阶段物理人工智能硬件平台。首次公开募股前。 2027-2035+",
-            "Revenue Explosion": "🔥🔥 首次公开募股活动\n触发点：688科创板上市\n时间：2026年5月至6月（传闻）\n预期变动：大规模（$7B vs Figure AI $39B）\n70% 四足动物份额，>1.4 亿美元收入",
-            "Updated": "",
-            "SuperCycle": "Other",
-            "Market Cap": "$7B rumored IPO",
-            "Key Thesis": "世界排名第一的四足机器人。按销量计算，全球市场份额为 70%。出货量是波士顿动力公司的 10 倍。 > 1.4 亿美元收入，高利润（SemiAnalysis 证实）。 ~200 Go2/天的峰值产量。既是四足动物又是类人动物。传言 IPO 7B 美元 = 与Figure AI 相比被严重低估（39B 美元，收入为零）。矢量#1：软机器人。中国制造霸主地位破裂。可能 688 个 STAR 市场 = 需要 Moomoo。观看：IPO 申请的收入/利润、上市交易所、估值。",
-            "IR Check": "❌ 首次公开募股前\n监控IPO申请\n获取 Moomoo 访问权限\n688 星市场可能\n与图AI比较 $39B",
-            "Supercycle": "四足+人形机器人"
-        },
-        {
-            "Rank": 15,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "Total": 74,
@@ -1869,7 +1869,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.14%"
         },
         {
-            "Rank": 16,
+            "Rank": 15,
             "Ticker": "000660.KS",
             "Name": "SK海力士",
             "Total": 72,
@@ -1891,28 +1891,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.93%"
         },
         {
-            "Rank": 17,
-            "Ticker": "CXMT (PRE-IPO)",
-            "Name": "长鑫存储科技",
-            "Total": 72,
-            "Base": "—",
-            "Entry": "—",
-            "Rating": "WL（首次公开募股前监控）",
-            "Port": "",
-            "Current Price": "PRE-IPO",
-            "Ceiling Target": "~$42B 目标",
-            "Upside": "2026 年首次公开募股",
-            "Position Type": "🔒 阻塞点\n监管：只有中国 DRAM 规模化——中国分歧 = 垄断内需。首次公开募股前。 2026-2030+",
-            "Revenue Explosion": "🔥 首次公开募股活动\n触发点：688科创板上市\n时间：2026-2027\n预期走势：IPO定价+首日流行\n需要 Moomoo 访问 READY",
-            "Updated": "",
-            "SuperCycle": "AI",
-            "Market Cap": "~$42B target",
-            "Key Thesis": "中国排名第一的 DRAM。按容量计算世界排名第四。 720K 晶圆/季度。无 EUV 的 G4 节点（16 纳米）。联想 DDR5 发货。 LPDDR5X 30%中国智能手机市场。高通合格。 HBM3 的目标是 2026 年（落后 Big 3 4 年）。 3D DRAM：SK 海力士美洲负责人表示“中国处于领先地位”。长江存储混合键合专利。 IPO申请：估值约42B美元，仍处于亏损状态（2025年上半年亏损约2.3B人民币）。上海晶圆厂是现有规模的 2-3 倍，正在建设中。 2023-2024 年资本支出为 6-7B 美元。观看：IPO 招股说明书中的收益率/收入数据。可能 688 系列 = 需要 Moomoo 访问权限。",
-            "IR Check": "❌ 首次公开募股前\n监控IPO申请\n准备好 Moomoo 访问权限\n688系列可能",
-            "Supercycle": "DRAM——中国#1"
-        },
-        {
-            "Rank": 18,
+            "Rank": 16,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "Total": 71,
@@ -1934,7 +1913,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.30%"
         },
         {
-            "Rank": 19,
+            "Rank": 17,
             "Ticker": "NKT",
             "Name": "NKT A/S",
             "Total": 71,
@@ -1956,7 +1935,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.46%"
         },
         {
-            "Rank": 20,
+            "Rank": 18,
             "Ticker": "VICR",
             "Name": "维科公司",
             "Total": 70,
@@ -1978,7 +1957,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.67%"
         },
         {
-            "Rank": 21,
+            "Rank": 19,
             "Ticker": "AAOI",
             "Name": "应用光电",
             "Total": 70,
@@ -2000,7 +1979,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.81%"
         },
         {
-            "Rank": 22,
+            "Rank": 20,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "Total": 70,
@@ -2022,7 +2001,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.10%"
         },
         {
-            "Rank": 23,
+            "Rank": 21,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 68,
@@ -2044,7 +2023,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.26%"
         },
         {
-            "Rank": 24,
+            "Rank": 22,
             "Ticker": "NBIS",
             "Name": "尼比斯集团",
             "Total": 68,
@@ -2066,7 +2045,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.95%"
         },
         {
-            "Rank": 25,
+            "Rank": 23,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "Total": 64,
@@ -2088,7 +2067,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+11.81%"
         },
         {
-            "Rank": 26,
+            "Rank": 24,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "Total": 64,
@@ -2110,7 +2089,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.66%"
         },
         {
-            "Rank": 27,
+            "Rank": 25,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 63,
@@ -2132,7 +2111,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.86%"
         },
         {
-            "Rank": 28,
+            "Rank": 26,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "Total": 62,
@@ -2154,7 +2133,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-0.64%"
         },
         {
-            "Rank": 29,
+            "Rank": 27,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "Total": 62,
@@ -2176,7 +2155,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.55%"
         },
         {
-            "Rank": 30,
+            "Rank": 28,
             "Ticker": "601208.SSE",
             "Name": "东材科技",
             "Total": 62,
@@ -2198,7 +2177,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+2.08%"
         },
         {
-            "Rank": 31,
+            "Rank": 29,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 60,
@@ -2220,7 +2199,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.27%"
         },
         {
-            "Rank": 32,
+            "Rank": 30,
             "Ticker": "COHR",
             "Name": "相干公司",
             "Total": 59,
@@ -2242,7 +2221,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.74%"
         },
         {
-            "Rank": 33,
+            "Rank": 31,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "Total": 59,
@@ -2264,7 +2243,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.62%"
         },
         {
-            "Rank": 34,
+            "Rank": 32,
             "Ticker": "PL",
             "Name": "星球实验室",
             "Total": 57,
@@ -2286,7 +2265,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.77%"
         },
         {
-            "Rank": 35,
+            "Rank": 33,
             "Ticker": "CRDO",
             "Name": "信条科技",
             "Total": 57,
@@ -2308,7 +2287,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.76%"
         },
         {
-            "Rank": 36,
+            "Rank": 34,
             "Ticker": "MU",
             "Name": "美光科技",
             "Total": 52,
@@ -2330,7 +2309,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+12.67%"
         },
         {
-            "Rank": 37,
+            "Rank": 35,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "Total": 51,
@@ -2350,6 +2329,48 @@ window.PORTFOLIO_DATA = {
             "IR Check": "❌ 需要审查\n战略审查更新\n光子学细分市场细分",
             "Supercycle": "III-V族外延片",
             "Change %": "+3.29%"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "UNITREE (PRE-IPO)",
+            "Name": "Unitree Robotics 宇树科技",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "HC（首次公开募股前监察员）",
+            "Port": "",
+            "Current Price": "PRE-IPO",
+            "Ceiling Target": "$20-50B",
+            "Upside": "2026 年首次公开募股",
+            "Position Type": "🔒 阻塞点\n平台：人形机器人领导者——第二阶段物理人工智能硬件平台。首次公开募股前。 2027-2035+",
+            "Revenue Explosion": "🔥🔥 首次公开募股活动\n触发点：688科创板上市\n时间：2026年5月至6月（传闻）\n预期变动：大规模（$7B vs Figure AI $39B）\n70% 四足动物份额，>1.4 亿美元收入",
+            "Updated": "",
+            "SuperCycle": "Other",
+            "Market Cap": "$7B rumored IPO",
+            "Key Thesis": "世界排名第一的四足机器人。按销量计算，全球市场份额为 70%。出货量是波士顿动力公司的 10 倍。 > 1.4 亿美元收入，高利润（SemiAnalysis 证实）。 ~200 Go2/天的峰值产量。既是四足动物又是类人动物。传言 IPO 7B 美元 = 与Figure AI 相比被严重低估（39B 美元，收入为零）。矢量#1：软机器人。中国制造霸主地位破裂。可能 688 个 STAR 市场 = 需要 Moomoo。观看：IPO 申请的收入/利润、上市交易所、估值。",
+            "IR Check": "❌ 首次公开募股前\n监控IPO申请\n获取 Moomoo 访问权限\n688 星市场可能\n与图AI比较 $39B",
+            "Supercycle": "四足+人形机器人"
+        },
+        {
+            "Rank": "—",
+            "Ticker": "CXMT (PRE-IPO)",
+            "Name": "长鑫存储科技",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "WL（首次公开募股前监控）",
+            "Port": "",
+            "Current Price": "PRE-IPO",
+            "Ceiling Target": "~$42B 目标",
+            "Upside": "2026 年首次公开募股",
+            "Position Type": "🔒 阻塞点\n监管：只有中国 DRAM 规模化——中国分歧 = 垄断内需。首次公开募股前。 2026-2030+",
+            "Revenue Explosion": "🔥 首次公开募股活动\n触发点：688科创板上市\n时间：2026-2027\n预期走势：IPO定价+首日流行\n需要 Moomoo 访问 READY",
+            "Updated": "",
+            "SuperCycle": "AI",
+            "Market Cap": "~$42B target",
+            "Key Thesis": "中国排名第一的 DRAM。按容量计算世界排名第四。 720K 晶圆/季度。无 EUV 的 G4 节点（16 纳米）。联想 DDR5 发货。 LPDDR5X 30%中国智能手机市场。高通合格。 HBM3 的目标是 2026 年（落后 Big 3 4 年）。 3D DRAM：SK 海力士美洲负责人表示“中国处于领先地位”。长江存储混合键合专利。 IPO申请：估值约42B美元，仍处于亏损状态（2025年上半年亏损约2.3B人民币）。上海晶圆厂是现有规模的 2-3 倍，正在建设中。 2023-2024 年资本支出为 6-7B 美元。观看：IPO 招股说明书中的收益率/收入数据。可能 688 系列 = 需要 Moomoo 访问权限。",
+            "IR Check": "❌ 首次公开募股前\n监控IPO申请\n准备好 Moomoo 访问权限\n688系列可能",
+            "Supercycle": "DRAM——中国#1"
         },
         {
             "Rank": "—",
@@ -3073,6 +3094,27 @@ window.PORTFOLIO_DATA = {
             "SuperCycle": "AI, CPO",
             "Market Cap": "TWD 6.99B",
             "Key Thesis": null,
+            "IR Check": "",
+            "Supercycle": ""
+        },
+        {
+            "Rank": "—",
+            "Ticker": "5289.TWO",
+            "Name": "Innodisk (宜鼎)",
+            "Total": "—",
+            "Base": "—",
+            "Entry": "—",
+            "Rating": "UNRANKED — 内存超级周期受益者。 #1 工业 SSD。独家 DDR4 供应。 CXL 扩展。首选SK海力士（护城河更强，比例相似）。",
+            "Port": "",
+            "Current Price": "TWD 1,600",
+            "Ceiling Target": "新台币 2,300-4,000",
+            "Upside": "1.4倍-2.5倍",
+            "Position Type": "",
+            "Revenue Explosion": "",
+            "Updated": "5月10日",
+            "SuperCycle": "AI",
+            "Market Cap": "NT$153.6B",
+            "Key Thesis": "",
             "IR Check": "",
             "Supercycle": ""
         }

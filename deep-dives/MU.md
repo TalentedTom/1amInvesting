@@ -1,11 +1,11 @@
 # MU — Micron Technology | Deep Dive
-**Date:** May 2, 2026 (RESCORED — memory shortage extended to 2027)
-**Framework Version:** v3.6.5
-**Score:** 53 | Base 62% (37/60) | Entry 40 (16/40)
-**Price at Analysis:** $542.21
-**Ceiling:** $800-$1,000 (2027-2028) (memory shortage to 2027, DDR5 +63% QoQ, HBM expansion)
-**Upside Ratio:** 1.5x-2.6x
-**Market Cap:** ~$583B
+**Date:** May 9, 2026 (RESCORED — Memory supercycle, 81% GM, US champion)
+**Framework Version:** v3.7.0
+**Score:** 52 FAIL | Base 80% (48/60) | Entry 9% (4/40)
+**Price at Analysis:** $746.81
+**Ceiling:** $800-$1,200 (2027-2028)
+**Upside Ratio:** 1.1x-1.6x
+**Market Cap:** ~$842B
 **Q2 FY2026 Revenue:** $23.86B (+196% YoY) | GM: 75% | EPS: $12.20
 **Q3 FY2026 Guide:** $33.5B, GM ~81%, EPS $19.15
 
@@ -155,3 +155,4 @@ From your notes: **"OWN VIA DRAM ETF."** This is the correct framework call. Mic
 ## Verdict
 
 53 (upgraded from 46 on extraordinary Q2 results). Micron just posted the best quarter in memory industry history — revenue nearly tripled, GM 75%, and Q3 guides to $33.5B at 81% GM. Memory has become a "strategic asset" with structural supply constraints. But at $460B/#3 in HBM/banned in China/30+ analysts, the framework sees no edge in direct ownership. Your own assessment is correct: **"OWN VIA DRAM ETF."** The supercycle is real. Micron benefits. But SK Hynix (72 WL) benefits MORE from the same cycle with better positioning.
+- **May 9, 2026: 52 FAIL ⚠️ GREAT THESIS, NO ENTRY** (Base 62→80% (+18 — largest Base upgrade in portfolio history). 81% GM guided for May quarter = highest ever. MC crossed $842B = top 10 US tech. +700% trailing 12 months. Full order books, all 2026 sold out. CHIPS Act fabs in New York + Iowa = US memory champion. Pax Silica member. DDR4 12x, DDR5 4x. IDC "permanent reallocation." Memory shortage past 2028. Ceiling $800-1,000→$800-1,200. BUT: stock at $746 is 93% of ceiling LOW ($800). Ratio 1.34x → Entry 9% → Score 52 FAIL. The framework's verdict: MU is the ARM of memory — incredible thesis, zero asymmetry at current price. The +700% move already happened. HC at $400 pullback. The portfolio benefits from MU's thesis through SK Hynix (72 WL, HBM monopoly at better ratio) and AEHR (91 HC, tests all memory wafers).)

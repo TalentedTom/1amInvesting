@@ -1,11 +1,11 @@
 # SNDK — SanDisk Corporation | Deep Dive
-**Date:** May 2, 2026 (RESCORED — NAND shortage extended, Q3 beat, $42B NBM deals)
-**Framework Version:** v3.6.5
-**Score:** 56 | Base 65% (39/60) | Entry 43 (17/40)
-**Price at Analysis:** $1,187
-**Ceiling:** $1,800-$2,300 (2027-2028) (NAND shortage to 2027, $42B NBM deals, 78% GM, BiCS8/9, $6B buyback)
-**Upside Ratio:** 1.5x-2.7x
-**Market Cap:** ~$162B
+**Date:** May 9, 2026 (RESCORED — NAND supercycle, memory shortage past 2028)
+**Framework Version:** v3.7.0
+**Score:** 49 FAIL | Base 75% (45/60) | Entry 11% (4/40)
+**Price at Analysis:** $1,562.34
+**Ceiling:** $1,800-$2,500 (2027-2028)
+**Upside Ratio:** 1.2x-1.6x
+**Market Cap:** ~$231B
 **Q3 FY2026 Revenue:** $5.95B (+251% YoY) | GM: 78.4% | EPS: $23.41 (beat $14.45 est)
 **Q4 Guide:** $7.75-8.25B, EPS $30-33
 
@@ -147,3 +147,4 @@ SanDisk is one of THREE companies that can supply enterprise SSDs at this scale.
 ## Verdict
 
 58. SanDisk is a genuine beneficiary of the AI storage revolution — G3.5 inference tier, NAND shortage, HBF catalyst pending. At $989.90 the stock looks expensive on trailing metrics but trades at only 10.1x FY2027E EPS (street) or 7.7x on your first-principles estimate of $129 EPS — which is actually CHEAP for a NAND oligopolist in a structural supercycle. The HBF NVIDIA announcement catalyst (50-80% expected move) provides event-driven upside. Base upgraded to 65% for HBF optionality. Your 2-3% Tier 2 allocation is appropriately sized. Q3 earnings April 30 is the next proof point.
+- **May 9, 2026: 49 FAIL** (Base 65→75% (+10). NAND supercycle confirmed: wafer starts at capacity limits, shortage past 2028, YMTC limited impact through 2027. AI KV cache + checkpointing driving structural NAND demand. DDR4 $1.35→$16 spillover. IDC "permanent reallocation" across ALL memory types. Ceiling $1,800-2,300→$1,800-2,500. BUT: stock ran $1,187→$1,562 (+32% since last score). At $1,562: ratio 1.38x → Entry 11% → 49 FAIL. Same pattern as MU — Base upgraded significantly but stock ran faster than ceiling expanded. SNDK at $1,562 is 87% of ceiling LOW. The +31% move ate all the asymmetry. HC at $900.)

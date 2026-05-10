@@ -1,14 +1,14 @@
 # AAOI — Applied Optoelectronics | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 64 | Base 68% (41/60) | Entry 58 (23/40) | **Owned ✓**
-**Price at Analysis:** $162.17
-**Ceiling:** $300-$430 (2027-2028)
-**Upside Ratio:** 1.9x-3.7x
-**Market Cap:** ~$10B
-**FY2025 Revenue:** $455.7M (+83% YoY)
-**FY2026 Guidance:** >$1B revenue, >$120M non-GAAP OP
-**Earnings:** ~May 7, 2026 🔥
+**Date:** May 7, 2026 (RESCORED — Q1 2026 Earnings + CPO/Laser Negotiations)
+**Framework Version:** v3.7.0
+**Score:** 70 WL | Base 74% (44/60) | Entry 63% (25/40)
+**Price at Analysis:** $149
+**Ceiling:** $300-$450 (2027-2028)
+**Upside Ratio:** 2.0x-3.0x
+**Market Cap:** ~$12.2B
+**FY2025 Revenue:** $507M (+83% YoY)
+**FY2026 Guidance:** >$1.1B revenue, >$140M non-GAAP OP (RAISED from $1B/$120M)
+**Earnings:** Q1 May 7, 2026 ✅ REPORTED
 
 ---
 
@@ -150,8 +150,11 @@ LITE CEO May 5 confirmed structural CW laser shortage: "tension in our own suppl
 
 ## Verdict
 
-64 — just below WL threshold. The revenue explosion is real ($456M→$1B guided). "Buy ALL production" is the ultimate demand signal. But AAOI is Layer 1 competitive, not Layer 0 monopoly. Customer concentration (91%) and LightCounting oversupply warning create material risk. The framework owns it at Tier 3 because it's a direct demand signal for our Layer 0 positions, and trusted investors are bullish.
+68 WL. Q1 2026 confirmed the thesis is executing: $151.1M revenue (4th consecutive record), 100K units/month 800G capacity hit, Houston doubled, FY26 raised to $1.1B+ / $140M+ OP income (internal target $1.2B). Customer demand at $1.4-1.5B = 30%+ above capacity = sold out through mid-2027. CEO Thompson: 1.6T is a "$2B+ business" in 2027. Three multi-year CPO/laser agreements IN NEGOTIATION — the CW laser vertical integration thesis is converting to real pipeline. Three 10%+ customers already in Q1. Mid-2027 monthly run rate raised from $378M to $471M (annualized $5.65B). Q3 guided +60-80% sequential = the hockey stick. Q4 gross margin target 40%+. Still Layer 1 competitive (not monopoly), but the CPO/laser negotiations could reclassify AAOI from pure transceiver assembler to dual-revenue laser + transceiver company. HC at ~$100 pullback or if CPO/laser agreements convert to signed deals.
 
 
 ## Score Change Log
 - **May 2, 2026: 64 WL** (Texas factory is THE catalyst — $20M Texas subsidy, 3x capacity. Everything AAOI makes sells out instantly, revenue is CAPPED by supply not demand. Management pumping on X = confident in Q1 numbers. Q1 revenue number is irrelevant — only Texas factory timeline matters on May 7 call. "If CEO says H1 2027 = stock to $250+. If H2 2027 or 2028 = treads water." InP substrate shortage confirmed by AXTI $100M+ backlog. 142% CPO CAGR: AAOI is the pluggable→CPO bridge play. LightCounting warns pluggable correction coming — AAOI is a TRADE not a HOLD (⚡ bottleneck classification). Hold through May 7 earnings.)
+- May 6, 2026: 65 WL (Ceiling standardized to 2027-2028. $300-600→$300-430. Entry recalculated under new v3.7.0 curve.)
+- **May 7, 2026: 68 WL ⭐ Q1 2026 EARNINGS RESCORE** (Revenue $151.1M, 4th consecutive record. FY26 RAISED: $1B→$1.1B+ revenue, $120M→$140M+ OP. Internal target $1.2B. Customer demand $1.4-1.5B = 30%+ above capacity = SOLD OUT through mid-2027. 100K units/month 800G capacity hit. Houston doubled. Q3 guided +60-80% sequential = hockey stick begins. CEO: 1.6T = "$2B+ business" in 2027. THREE multi-year CPO/laser agreements IN NEGOTIATION. Mid-2027 monthly run rate $378M→$471M. Three 10%+ customers in Q1. Base 68→72%: Core Thesis +1 (CPO/laser negotiations = CW vertical integration thesis converting), Cycle +1 (FY26 raised, Q3-Q4 hockey stick), TAM +1 (1.6T = $2B+, mid-2027 $5.65B annualized), Catalysts +1 (three 10%+ customers, sold out mid-2027). Ceiling $300-430→$300-450. At $149: ratio 2.52x → Entry 63%. HC at ~$100 or CPO/laser deals signed.)
+- **May 8, 2026: 70 WL** (US Geo Advantage +2 Base. Houston TX genuine US manufacturing, doubled footprint. $20M Texas state subsidy. CHIPS Act eligible. "Premier high-volume US producer of AI-focused DC transceivers." Pax Silica / "buy American" pressure from White House gives US-manufactured transceiver companies structural procurement advantage with US hyperscalers. Once at scale ($1.1B+ FY2026), AAOI becomes the default US-sourced option. Intel-like treatment plausible when capacity proves out. Base 72→74%. Score 68→70.)

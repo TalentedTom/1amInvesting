@@ -117,4 +117,30 @@ The defense overlap amplifies: NATO 5% GDP + NDAA = government-guaranteed demand
 
 ## Verdict
 
-75 HC — #4 in portfolio. Physics-required energy density monopoly with NDAA regulatory moat. Revenue tripling. First EBITDA achieved. Dubai eVTOL validates Phase 2 TAM. The power layer for the autonomous future — paired with OUST (perception) to form the Physical AI stack.
+85 HC — Score driven primarily by ENTRY (100% at $16.08, 4.8x ratio) not Base (75%). Physics-required energy density monopoly with NDAA regulatory moat. Revenue +153% YoY. GM flipped from -21% to +20%. EBITDA breakeven guided FY2026. China LEV order validates tech globally. Warrant exchange May 18 removes dilution overhang.
+
+## ⚠️ MONITORING FLAG — GM MOAT TEST (Added May 9, 2026)
+
+KaizenInvestor raised legitimate concerns after Q1 2026 call:
+
+1. **GM at 20% despite "best in class" tech.** If AMPX has a true moat, GM should expand with revenue. 20% GM is the WEAKEST in HC positions (SIVE 40-50%, LPK.DE 67.6%, AEHR 50%+). Low GM suggests competitive pricing, not monopoly pricing.
+
+2. **Can't raise prices on existing customers.** Management didn't give clear path to margin expansion beyond "scale will help." If you have the best product in a booming market and can't charge more, the moat may be narrower than scored.
+
+3. **No new US drone customers.** Presentation focused on existing 3 customers + China + future markets (robotics, space, eVTOL). "When you have best in class product for a growing industry, you should find new customers every week." Valid concern.
+
+4. **Ukraine = 35% of revenue.** Geopolitical risk concentrated in one conflict.
+
+5. **China focus instead of US expansion.** Feels like management views US drone market as saturated. If true, ceiling of $44-110 may be optimistic.
+
+**DECISION RULE:** If GM stays at 20% or below for Q2 AND Q3, Base drops 75→70%, score drops to ~82 HC or lower. The moat needs to show up in MARGINS, not just revenue growth. Revenue growth without margin expansion = competitive market, not monopoly. Revisit after Q2 earnings.
+
+**The honest comparison:**
+```
+SIVE at 96 HC:  93% Base + 100% Entry (strong moat + cheap stock)
+AMPX at 85 HC:  75% Base + 100% Entry (weak moat? + cheap stock)
+
+AMPX's score is held up by the stock being cheap.
+If the stock recovers to $25+ AND margins don't expand,
+the score collapses because Entry drops AND Base stays weak.
+```
