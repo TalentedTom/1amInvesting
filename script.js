@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine the columns based on requirements
     const simpleCols = [
-        "SuperCycle", "Ticker", "Total", "Base", "Entry",
+        "SuperCycle", "_chart", "Ticker", "Total", "Base", "Entry",
         "Current Price", "Change %", "Upside",
         "Ceiling Target"
     ];
@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: 'Close deep dive',
             hint_dismiss_label: 'Dismiss tip',
             sc_label: 'SuperCycle',
+            modal_chart_suffix: '— Chart',
+            modal_chart_close_label: 'Close chart',
+            chart_btn_label: 'Open chart',
+            chart_no_symbol: 'No TradingView mapping available for {ticker}.',
+            chart_open_in_tv: 'Open in TradingView ↗',
         },
         'zh-CN': {
             title_html: '1am<span>Investing</span>',  // brand, not translated
@@ -79,6 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: '关闭深度分析',
             hint_dismiss_label: '关闭提示',
             sc_label: '超级周期',
+            modal_chart_suffix: '— 行情',
+            modal_chart_close_label: '关闭行情',
+            chart_btn_label: '打开行情',
+            chart_no_symbol: '暂无 {ticker} 的 TradingView 映射。',
+            chart_open_in_tv: '在 TradingView 打开 ↗',
         },
     };
     function tr(key, vars) {
@@ -105,7 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Header label for a column. Looks up the English display name first
     // (handles 'Current Price' -> 'Price', etc.) then runs that through the
     // I18N dict to get the user's currently-selected language.
+    //
+    // The `_chart` pseudo-column has no header text — it's a narrow strip of
+    // chart-icon buttons, header would only add visual noise.
     const labelFor = (col) => {
+        if (col === '_chart') return '';
         const eng = displayNames[col] || col;
         return tr(`col_${eng}`);
     };
@@ -166,6 +180,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function initColumnsDropdown() {
         let html = '';
         simpleCols.forEach(col => {
+            // Skip pseudo-columns that aren't real data fields (e.g. _chart
+            // is just a button strip — toggling it off would be confusing).
+            if (col.startsWith('_')) return;
             html += `
                 <label class="dropdown-item">
                     <input type="checkbox" value="${col}" checked>
@@ -307,12 +324,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Shared reference — modal is used for both deep-dive and chart modes,
+    // and we swap the close button's aria-label between the two so screen
+    // readers describe the right surface.
+    const modalCloseBtn = deepDiveModal.querySelector('.modal-close');
+
     function openDeepDive(ticker) {
         if (!ticker) return;
         // First successful open dismisses the discovery hint permanently —
         // the user has clearly figured the feature out.
         dismissHint(true);
         deepDiveTitle.textContent = `${ticker} ${tr('modal_dive_suffix')}`;
+        if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_close_label'));
         deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
         deepDiveModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';   // prevent background scroll
@@ -356,9 +379,165 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    // Closes the modal regardless of which mode (deep-dive markdown or
+    // TradingView chart) was active. Same close routine for both — single
+    // modal element, single set of dismiss handlers.
     function closeDeepDive() {
         deepDiveModal.classList.add('hidden');
         document.body.style.overflow = '';
+        // Wipe any TradingView iframe so it stops fetching market data in
+        // the background; clear the chart-mode class so the next deep-dive
+        // open gets normal padding back.
+        deepDiveContent.innerHTML = '';
+        deepDiveContent.classList.remove('modal-chart');
+    }
+
+    // === TradingView Chart Modal ===
+    // Same modal element as the deep-dive (#deep-dive-modal) but rendered
+    // with TradingView's free Advanced Chart Widget instead of markdown.
+    //
+    // We embed via a direct <iframe> against tradingview.com's widgetembed
+    // endpoint — same iframe the official tv.js constructor produces under
+    // the hood, but no external script load required. This avoids:
+    //   * adblock heuristics that occasionally nuke `s3.tradingview.com/tv.js`
+    //   * silent constructor failures when global `TradingView` is shadowed
+    //   * cold-start latency from a CDN script fetch on first chart open
+    // The iframe loads on demand and is torn down on modal close.
+
+    // Map a Yahoo-style ticker (the format we store in data.js) to the
+    // TradingView "EXCHANGE:SYMBOL" syntax their widget expects. Yahoo uses
+    // dot-suffixes for non-US listings (.KS, .TW, .HK, etc.); TradingView
+    // uses an explicit exchange prefix. For US tickers (no dot suffix), we
+    // omit the prefix and let TradingView auto-resolve.
+    //
+    // Returns null when we don't know how to map the ticker — caller shows
+    // a graceful "no chart available" message instead of a broken widget.
+    function toTradingViewSymbol(yahooTicker) {
+        if (!yahooTicker) return null;
+        // Strip any annotation in parens like "AVGO (Broadcom)" → "AVGO".
+        const raw = String(yahooTicker).split('(')[0].trim();
+        if (!raw) return null;
+        // Split base + Yahoo suffix
+        const parts = raw.split('.');
+        const base = parts[0].trim().toUpperCase();
+        const suffix = (parts[1] || '').trim().toUpperCase();
+        if (!base) return null;
+        // Yahoo suffix → TradingView exchange prefix. The mapping covers
+        // every market currently present in the portfolio; add new entries
+        // here if a future row introduces an unmapped exchange.
+        const SUFFIX_TO_TV = {
+            '':    null,        // US — let TradingView auto-resolve
+            'KS':  'KRX',       // Korea (KOSPI)
+            'KQ':  'KOSDAQ',    // Korea KOSDAQ
+            'TW':  'TWSE',      // Taiwan main board
+            'TWO': 'TPEX',      // Taiwan over-the-counter
+            'HK':  'HKEX',      // Hong Kong
+            'SS':  'SSE',       // Shanghai
+            'SZ':  'SZSE',      // Shenzhen
+            'T':   'TSE',       // Tokyo
+            'ST':  'OMXSTO',    // Stockholm
+            'CO':  'OMXCOP',    // Copenhagen
+            'HE':  'OMXHEX',    // Helsinki
+            'OL':  'OSL',       // Oslo
+            'L':   'LSE',       // London
+            'PA':  'EURONEXT',  // Paris
+            'AS':  'EURONEXT',  // Amsterdam
+            'BR':  'EURONEXT',  // Brussels
+            'LS':  'EURONEXT',  // Lisbon
+            'MI':  'MIL',       // Milan
+            'DE':  'XETR',      // Xetra
+            'F':   'FWB',       // Frankfurt
+            'SW':  'SIX',       // Swiss SIX
+            'VX':  'SIX',       // Swiss (legacy)
+            'TO':  'TSX',       // Toronto
+            'V':   'TSXV',      // TSX Venture
+            'AX':  'ASX',       // Australia
+            'NZ':  'NZX',       // New Zealand
+            'BO':  'BSE',       // Bombay
+            'NS':  'NSE',       // National Stock Exchange of India
+            'SI':  'SGX',       // Singapore
+            'MX':  'BMV',       // Mexico
+            'SA':  'BMFBOVESPA',// Brazil B3
+        };
+        if (!(suffix in SUFFIX_TO_TV)) {
+            // Unknown suffix — best-effort: let TV auto-resolve. Logged so
+            // an unmapped exchange can be added to the table above.
+            console.warn('No TradingView prefix mapping for Yahoo suffix:', suffix, 'in', yahooTicker);
+            return base;
+        }
+        const prefix = SUFFIX_TO_TV[suffix];
+        return prefix ? `${prefix}:${base}` : base;
+    }
+
+    function openChart(ticker) {
+        if (!ticker) return;
+        const tvSymbol = toTradingViewSymbol(ticker);
+        deepDiveTitle.textContent = `${ticker} ${tr('modal_chart_suffix')}`;
+        if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_chart_close_label'));
+        deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
+        deepDiveModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        deepDiveContent.scrollTop = 0;
+
+        if (!tvSymbol) {
+            deepDiveContent.innerHTML =
+                `<p style="color:#ef4444">${tr('chart_no_symbol', {ticker})}</p>`;
+            return;
+        }
+
+        // Build the TradingView widgetembed URL. Mirrors the URL the
+        // official tv.js constructor produces, just assembled by us so we
+        // don't need to load their script.
+        const isLight = document.body.classList.contains('light-mode');
+        const params = new URLSearchParams({
+            symbol: tvSymbol,
+            interval: 'D',
+            theme: isLight ? 'light' : 'dark',
+            style: '1',                 // candles
+            timezone: 'Etc/UTC',
+            locale: currentLang === 'zh-CN' ? 'zh_CN' : 'en',
+            toolbarbg: isLight ? 'F1F3F6' : '131722',
+            hidesidetoolbar: '0',
+            withdateranges: '1',
+            allow_symbol_change: '1',
+            save_image: '0',
+            studies: 'MASimple@tv-basicstudies',
+            hideideas: '1',
+        });
+        const iframeSrc = `https://www.tradingview.com/widgetembed/?${params.toString()}`;
+        // Direct link to TradingView's own chart page — persistent escape
+        // hatch in the top-right of the modal. Always visible, so even if
+        // the iframe is blocked by an adblocker the visitor has a way to
+        // reach the chart in a new tab.
+        const tvFullUrl = `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvSymbol)}`;
+        // .modal-chart on the modal-content swaps the padded markdown layout
+        // for an edge-to-edge chart layout (CSS class-based, works in every
+        // browser — :has() fallback wasn't reliable in older Safari).
+        deepDiveContent.classList.add('modal-chart');
+        // Build the chart container with createElement so we can attach the
+        // iframe load handler BEFORE the request kicks off — innerHTML +
+        // querySelector races the iframe's own load event on fast networks
+        // and we miss it, which leaves the blocked-state overlay covering a
+        // working chart. The toolbar is rendered as static HTML.
+        const wrap = document.createElement('div');
+        wrap.className = 'tv-chart-container';
+        wrap.innerHTML =
+            `<div class="tv-chart-toolbar">` +
+                `<a class="tv-open-link" href="${tvFullUrl}" target="_blank" rel="noopener noreferrer">${tr('chart_open_in_tv')}</a>` +
+            `</div>` +
+            `<div class="tv-chart-frame-wrap"></div>`;
+        const frameWrap = wrap.querySelector('.tv-chart-frame-wrap');
+        const iframe = document.createElement('iframe');
+        iframe.className = 'tv-chart-iframe';
+        iframe.setAttribute('allowtransparency', 'true');
+        iframe.setAttribute('scrolling', 'no');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.title = `${ticker} chart`;
+        iframe.src = iframeSrc;
+        frameWrap.appendChild(iframe);
+
+        deepDiveContent.innerHTML = '';
+        deepDiveContent.appendChild(wrap);
     }
 
     // Close handlers: any element marked with data-modal-close, plus Escape key.
@@ -573,9 +752,20 @@ document.addEventListener('DOMContentLoaded', () => {
         tbody.innerHTML = bodyHtml;
 
         // Row click handler:
-        //   - clicking a ticker symbol that has a deep-dive opens the modal
+        //   - clicking the chart-icon button opens TradingView modal
+        //   - clicking a ticker symbol that has a deep-dive opens the deep-dive
         //   - clicking elsewhere on the row toggles expansion (un-truncates cells)
+        // Chart button is checked first because it lives in a sibling sticky
+        // column to the ticker — without explicit ordering, the row-expand
+        // fallback could win on near-misses.
         tbody.addEventListener('click', (e) => {
+            const chartBtn = e.target.closest('.chart-btn');
+            if (chartBtn) {
+                const ticker = chartBtn.getAttribute('data-chart-ticker');
+                e.stopPropagation();
+                openChart(ticker);
+                return;
+            }
             const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
             if (tickerEl) {
                 const ticker = tickerEl.textContent.trim();
@@ -646,6 +836,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // doesn't pass `row` (defensive — current code always passes it).
         if (colName === 'Rank' && row && row._displayRank !== undefined) {
             value = row._displayRank;
+        }
+
+        // _chart pseudo-column: a tiny chart-icon button that opens the
+        // TradingView Advanced Chart modal for this row's ticker. Sits between
+        // Cycle and Ticker so it's always reachable on phones (all three are
+        // sticky-left). Skips placeholder rows with no ticker.
+        if (colName === '_chart') {
+            const sym = row && row['Ticker'];
+            if (!sym) return '';
+            const safeSym = String(sym).replace(/"/g, '&quot;');
+            const label = tr('chart_btn_label');
+            // Inline SVG — small uptrending line chart icon. currentColor so
+            // CSS controls the stroke (active state, hover, light/dark mode).
+            return `<button class="chart-btn" type="button" data-chart-ticker="${safeSym}" aria-label="${label}" title="${label}">` +
+                `<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">` +
+                `<polyline points="3,17 9,11 13,15 21,7"/>` +
+                `<polyline points="15,7 21,7 21,13"/>` +
+                `</svg>` +
+                `</button>`;
         }
 
         // SuperCycle column: render up to 4 tiny colored boxes in a 2-column

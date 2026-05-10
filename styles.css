@@ -333,15 +333,17 @@ td {
     max-width: 200px;
 }
 
-/* Sticky left columns: SuperCycle (1) and Ticker (2). SuperCycle now uses
-   content-sized boxes that wrap (instead of forced 50/50 grid), so the
-   widest 4-tag row (e.g. AI + CPO on top, 800G + 1.6T below) needs ~92px
-   of inner space. Ticker carries a logo + symbol. */
+/* Sticky left columns: SuperCycle (1), Chart button (2), and Ticker (3).
+   SuperCycle uses content-sized wrapping boxes (widest 4-tag layout needs
+   ~92px). Chart column is a narrow strip for the icon button. Ticker
+   carries a logo + symbol. All three stay pinned during horizontal scroll
+   so the chart icon and symbol are always reachable on phones. */
 th:nth-child(1), td:nth-child(1) { width: 95px; max-width: 105px; min-width: 88px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
-th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 95px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+th:nth-child(2), td:nth-child(2) { width: 36px; max-width: 36px; min-width: 32px; text-align: center; position: sticky; left: 95px; z-index: 20; background: var(--bg-panel); padding-left: 2px; padding-right: 2px; }
+th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 131px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
-th:nth-child(1), th:nth-child(2) {
+th:nth-child(1), th:nth-child(2), th:nth-child(3) {
     z-index: 30;
     background: var(--sticky-bg);
 }
@@ -367,10 +369,14 @@ tr.row-expanded td {
 
 /* Ensure sticky columns maintain their background in expanded/hover states */
 /* But also get the hover/expanded background mix */
-tbody tr:hover td:nth-child(1), tbody tr:hover td:nth-child(2) {
+tbody tr:hover td:nth-child(1),
+tbody tr:hover td:nth-child(2),
+tbody tr:hover td:nth-child(3) {
     background-color: var(--sticky-bg);
 }
-tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
+tr.row-expanded td:nth-child(1),
+tr.row-expanded td:nth-child(2),
+tr.row-expanded td:nth-child(3) {
     background-color: var(--sticky-bg);
 }
 
@@ -416,6 +422,119 @@ tr.row-expanded td:nth-child(1), tr.row-expanded td:nth-child(2) {
     }
     .cycle-cell {
         gap: 1px;
+    }
+}
+
+/* === Chart-icon button (between Cycle and Ticker) ===
+   Small icon-only affordance that opens the TradingView modal. Sits in its
+   own narrow sticky-left column so it's always reachable on phones, no
+   matter how far the user has horizontally scrolled the table. */
+.chart-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.chart-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(59, 130, 246, 0.1);
+}
+.chart-btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+}
+.chart-btn svg {
+    display: block;
+}
+
+/* === TradingView chart container inside the modal ===
+   The iframe needs an explicit-height parent. JS adds .modal-chart to the
+   modal-content when entering chart mode so we can strip the padded
+   markdown layout in favor of edge-to-edge. Two selectors so the rule
+   works in every browser (the :has() form is the future, the .modal-chart
+   class is the reliable one today). */
+.modal-content.modal-chart,
+.modal-content:has(.tv-chart-container) {
+    padding: 0;
+    /* Override modal-content's overflow-y so the chart iframe can fill the
+       container without an unwanted outer scrollbar. */
+    overflow: hidden;
+}
+.tv-chart-container {
+    width: 100%;
+    /* Use 100% of the available modal-content height so the chart fills
+       whatever space the modal panel gives it. Fallback fixed height for
+       legacy flex implementations. */
+    height: 100%;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    /* Light/dark backdrop while the iframe loads — prevents a flash of the
+       modal background showing through during TradingView's boot. */
+    background: var(--bg-panel);
+}
+/* Top-right toolbar — always-visible "Open in TradingView" link gives
+   adblocker users a way out even before the blocked-state overlay fires. */
+.tv-chart-toolbar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.4rem 0.65rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-panel);
+}
+.tv-open-link {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.25rem 0.55rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: background 0.18s ease, border-color 0.18s ease;
+}
+.tv-open-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+.tv-chart-frame-wrap {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+}
+.tv-chart-container iframe.tv-chart-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    /* Absolute fill so the iframe stretches to the frame-wrap regardless of
+       browser flex-layout quirks (some Safari versions don't honor 100% on
+       iframe inside a flex:1 parent without this). */
+    position: absolute;
+    inset: 0;
+}
+
+/* Mobile: tighten toolbar, reduce min-height so the chart fits short
+   landscape viewports. */
+@media (max-width: 480px) {
+    .tv-chart-container {
+        min-height: 360px;
+    }
+    .tv-chart-toolbar {
+        padding: 0.35rem 0.5rem;
+    }
+    .tv-open-link {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.45rem;
     }
 }
 
@@ -782,11 +901,13 @@ tbody tr {
         padding: 0.15rem 0.35rem;
         font-size: 0.7rem;
     }
-    /* Shrink the sticky left columns. Ticker now carries a small logo +
-       symbol so its width budget grew slightly. Name was removed from the
-       column list entirely; nothing's sticky beyond Ticker now. */
-    th:nth-child(1), td:nth-child(1) { width: 34px; max-width: 38px; min-width: 32px; }
-    th:nth-child(2), td:nth-child(2) { width: 96px; max-width: 110px; min-width: 88px; left: 32px; }
+    /* Shrink the sticky left columns. Three sticky cols now: Cycle (1),
+       Chart button (2), Ticker (3). Each col's `left:` matches the cumulative
+       `width:` of the preceding sticky cols, so they tile flush during
+       horizontal scroll without overlap. */
+    th:nth-child(1), td:nth-child(1) { width: 80px; max-width: 90px; min-width: 76px; }
+    th:nth-child(2), td:nth-child(2) { width: 30px; max-width: 30px; min-width: 28px; left: 80px; }
+    th:nth-child(3), td:nth-child(3) { width: 96px; max-width: 110px; min-width: 88px; left: 110px; }
 }
 
 /* Phone-portrait optimization (iPhone 16 Pro Max ≈ 440px CSS, smaller phones
@@ -848,8 +969,11 @@ tbody tr {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the Target column (9th and last) on phones */
-    th:nth-child(9), td:nth-child(9) {
+    /* Hide the Target column (now 10th — Chart column was inserted at #2,
+       shifting Target's index by one) on phones. Keeps the row scannable
+       on iPhone vertical with Cycle / Chart / Ticker / Total / Base /
+       Entry / Price / Chg% / Upside all visible. */
+    th:nth-child(10), td:nth-child(10) {
         display: none;
     }
 
@@ -874,17 +998,36 @@ tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns: SuperCycle (1) + Ticker (2). SuperCycle now uses
-       content-sized wrapping boxes — needs more width than before to fit
-       800G + 1.6T side by side. */
+    /* Sticky columns on phone: SuperCycle (1) + Chart (2) + Ticker (3).
+       Tight budget — iPhone 15 Pro Max vertical is ~430px CSS pixels.
+       3 sticky cols claim ~152px, leaving ~278px for the 6 remaining
+       data cols (Total/Base/Entry/Price/Chg%/Upside) at ~46px each.
+       Cumulative left offsets are critical: each col's left = sum of
+       preceding cols' width, so they tile flush during scroll. */
     th:nth-child(1), td:nth-child(1) {
-        width: 72px; max-width: 80px; min-width: 68px;
+        width: 64px; max-width: 72px; min-width: 60px;
         padding-left: 0.1rem; padding-right: 0.1rem;
     }
     th:nth-child(2), td:nth-child(2) {
-        width: 76px; max-width: 86px; min-width: 70px;
-        left: 68px;
-        padding-left: 0.15rem; padding-right: 0.2rem;
+        width: 24px; max-width: 24px; min-width: 22px;
+        left: 64px;
+        padding-left: 1px; padding-right: 1px;
+    }
+    th:nth-child(3), td:nth-child(3) {
+        width: 64px; max-width: 76px; min-width: 60px;
+        left: 88px;
+        padding-left: 0.1rem; padding-right: 0.15rem;
+    }
+
+    /* Smaller chart button on phones to fit the narrow sticky column. */
+    .chart-btn {
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+    }
+    .chart-btn svg {
+        width: 12px;
+        height: 12px;
     }
 
     /* Smaller ticker logo on phones — 14px circle with tighter gap. */
