@@ -613,12 +613,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Score Badge Styling (Total, Base, Entry) — continuous red → yellow → green gradient
-        // so every integer score 0–100 has its own blended color.
+        // so every integer score 0–100 has its own blended color. Scores >100 get the
+        // EXTREME treatment (gold border + animated glow, defined in CSS) on top of the
+        // max-green gradient.
         if (colName === "Total" || colName === "Base" || colName === "Entry") {
             const scoreNum = parseFloat(value);
             if (!isNaN(scoreNum)) {
                 const c = scoreColor(scoreNum);
-                return `<span class="badge score-gradient" style="background:${c.bg};color:${c.text};border-color:${c.bg};">${value}</span>`;
+                const extreme = scoreNum > 100;
+                const cls = extreme ? "badge score-gradient score-extreme" : "badge score-gradient";
+                // For extreme, omit the inline border-color so the CSS gold border wins.
+                const style = extreme
+                    ? `background:${c.bg};color:${c.text};`
+                    : `background:${c.bg};color:${c.text};border-color:${c.bg};`;
+                return `<span class="${cls}" style="${style}">${value}</span>`;
             }
             return `<span style="font-weight: 600;">${value}</span>`;
         }
