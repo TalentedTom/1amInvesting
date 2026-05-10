@@ -3,19 +3,33 @@ Recalculate Entry / Total / Upside for every position in data.js based on
 the latest Current Price (set by fetch_yahoo.py + apply_quotes.py) and the
 Base score + Ceiling Target range (set by the human analyst in the xlsx).
 
-Scoring framework
------------------
-Both Base and Entry live on a 0-100 scale. Total is a fixed weighted average:
+Scoring framework v3.8.0 (continuous, scale-breaking)
+-----------------------------------------------------
+    midpoint = (CeilingLow + CeilingHigh) / 2
+    ratio    = midpoint / CurrentPrice
 
-    Upside Ratio = (CeilingLow + CeilingHigh) / 2 / CurrentPrice
-    Entry        = lookup(Upside Ratio)        # 0-100
-    Total        = round(0.6 * Base + 0.4 * Entry)
-    Bucket       = HC (>=75) / WL (>=65) / FAIL (<65)
+    Entry (0-100, can exceed 100 in scale-breaking case):
+        ratio < 1.2:           Entry = 0
+        1.2 <= ratio <= 2.0:   Entry = (ratio - 1.2) / 0.8 * 50      (0 -> 50)
+        2.0 <  ratio <= 4.0:   Entry = 50 + (ratio - 2.0) / 2.0 * 50 (50 -> 100)
+        ratio > 4.0:
+            if Base >= 80:     Entry = 100 + (ratio - 4.0) * 10      (SCALE-BREAKING)
+            else:              Entry = 100                            (CAPPED — cheap
+                                                                       bad company can't
+                                                                       compound past 100)
 
-This matches the Portfolio Live Scoring Agent prompt v1.0 (which expressed
-the same weighting as "out of 60 + out of 40 = sum"). The lookup table is
-the prompt's 0-40 ladder rescaled by 2.5 to land on the 0-100 scale the
-xlsx and data.js already use.
+    Total = round(0.6 * Base + 0.4 * Entry)
+
+    Bucket:
+        Total >  100:  EXTREME (extreme asymmetry — overweight)
+        75 <= Total:   HC      (high conviction — buy, hold)
+        50 <= Total:   WL      (watchlist — monitor, buy on dip)
+        Total <  50:   FAIL    (do not buy)
+
+Scale-breaking notes:
+- Total > 100 is valid and intentional — happens only when ratio > 4x AND
+  Base >= 80 (analyst conviction must be high enough to "earn" the bonus).
+- A cheap bad company (low Base, high ratio) caps Entry at 100 by design.
 
 What this script does NOT touch:
   - Base (set by analyst, never changes with price)
@@ -42,24 +56,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA_JS = ROOT / "data.js"
 
-# Entry-score lookup on a 0-100 scale, ordered high-to-low. First match wins.
-# Values mirror the prompt's 0-40 ladder × 2.5 (e.g. 35/40 -> 88/100).
-ENTRY_THRESHOLDS = [
-    (10.0, 100),
-    (8.0,   95),
-    (6.0,   88),
-    (5.0,   80),
-    (4.0,   75),
-    (3.5,   70),
-    (3.0,   65),
-    (2.5,   60),
-    (2.0,   50),
-    (1.8,   45),
-    (1.5,   38),
-    (1.3,   30),
-    (1.1,   20),
-    (1.0,   13),
-]
+# Bucket thresholds (v3.8.0) — see module docstring for full framework.
+BUCKET_HC = 75       # 75-100  → HC
+BUCKET_WL = 50       # 50-74   → WL    (widened from old 65)
+BUCKET_EXTREME = 100  # >100   → EXTREME ASYMMETRY (scale-breaking)
+SCALE_BREAK_RATIO = 4.0
+SCALE_BREAK_MIN_BASE = 80
 
 # Known currency codes (enumerated rather than \b[A-Z]{2,4}\b so we don't
 # accidentally strip 2-4 letter words from analyst annotations like "DC deal").
@@ -204,28 +206,44 @@ def parse_int(value):
         return None
 
 
-def entry_score(ratio: float) -> int:
-    """Map an Upside Ratio to a 0-100 Entry score using the framework's ladder."""
-    if ratio is None or ratio <= 0:
+def entry_score(ratio: float, base: int) -> int:
+    """Map an Upside Ratio + Base to an Entry score using the v3.8.0 formula.
+
+    Returns 0..100 normally; can exceed 100 when ratio > 4x AND base >= 80
+    (scale-breaking). Result is rounded to nearest int.
+    """
+    if ratio is None or ratio < 1.2:
         return 0
-    for threshold, score in ENTRY_THRESHOLDS:
-        if ratio >= threshold:
-            return score
-    # Below 1.0x (price near or above ceiling): shrink linearly so a 0.5x
-    # ratio still produces a small Entry rather than dropping straight to 0.
-    return max(0, int(ratio * 10))
+    if ratio <= 2.0:
+        # Linear 0 -> 50 across [1.2, 2.0]
+        return int(round((ratio - 1.2) / 0.8 * 50))
+    if ratio <= 4.0:
+        # Linear 50 -> 100 across (2.0, 4.0]
+        return int(round(50 + (ratio - 2.0) / 2.0 * 50))
+    # ratio > 4.0
+    if base is not None and base >= SCALE_BREAK_MIN_BASE:
+        # Scale-breaking: every 1x past 4x adds 10 points to Entry.
+        return int(round(100 + (ratio - SCALE_BREAK_RATIO) * 10))
+    # Cheap bad company — Entry capped at 100.
+    return 100
 
 
 def total_score(base: int, entry: int) -> int:
-    """0.6 * Base + 0.4 * Entry, rounded. Both inputs on 0-100 scale."""
+    """0.6 * Base + 0.4 * Entry, rounded. Both inputs nominally 0-100; Entry
+    can exceed 100 in the scale-breaking case, so Total can exceed 100."""
     return int(round(0.6 * base + 0.4 * entry))
 
 
-def bucket_for(total: int) -> str:
-    """HC / WL / FAIL bucket for alert purposes. Not written back to data.js."""
-    if total >= 75:
+def bucket_for(total) -> str:
+    """EXTREME / HC / WL / FAIL bucket for alert purposes. Not written back
+    to data.js (Rating column carries free-form analyst text)."""
+    if not isinstance(total, (int, float)):
+        return "FAIL"
+    if total > BUCKET_EXTREME:
+        return "EXTREME"
+    if total >= BUCKET_HC:
         return "HC"
-    if total >= 65:
+    if total >= BUCKET_WL:
         return "WL"
     return "FAIL"
 
@@ -248,7 +266,7 @@ def score_row(row):
 
     midpoint = (low + high) / 2
     ratio = midpoint / price
-    entry = entry_score(ratio)
+    entry = entry_score(ratio, base)
     total = total_score(base, entry)
     upside = upside_display(low, high, price)
 
@@ -273,10 +291,14 @@ def score_row(row):
     }
 
 
+_BUCKET_RANK = {"FAIL": 0, "WL": 1, "HC": 2, "EXTREME": 3}
+
+
 def alerts_for(summary):
-    """Bucket-crossing alerts based on Total deltas, plus ceiling-breach signals.
-    Emojis are used per the prompt; main() configures stdout to UTF-8 so the
-    log stays readable on Windows + Linux runners."""
+    """Bucket-crossing alerts based on Total deltas, plus ceiling-breach
+    signals. Now aware of the EXTREME bucket (Total > 100, scale-breaking).
+    Emojis are used per the prompt; main() configures stdout to UTF-8 so
+    the log stays readable on Windows + Linux runners."""
     out = []
     t = summary["ticker"]
     nt = summary["new_total"]
@@ -285,22 +307,34 @@ def alerts_for(summary):
     ob = summary["old_bucket"]
     ratio = summary["ratio"]
 
-    # Bucket transitions
+    # Bucket transitions — only fires when buckets actually differ.
     if ob is not None and ob != nb:
-        if ob != "HC" and nb == "HC":
-            out.append(f"🟢 {t} UPGRADED TO HC — Total {nt} (was {ot})")
-        elif ob == "HC" and nb != "HC":
-            out.append(f"🟠 {t} DOWNGRADED FROM HC — Total {nt} (was {ot})")
-        if ob == "FAIL" and nb == "WL":
-            out.append(f"🟡 {t} UPGRADED TO WL — Total {nt} (was {ot})")
-        elif ob == "WL" and nb == "FAIL":
-            out.append(f"🔴 {t} DOWNGRADED TO FAIL — Total {nt} (was {ot})")
+        old_rank = _BUCKET_RANK.get(ob, 0)
+        new_rank = _BUCKET_RANK.get(nb, 0)
+        if new_rank > old_rank:
+            # Promotion
+            if nb == "EXTREME":
+                out.append(f"⚡ {t} EXTREME ASYMMETRY — Total {nt} (was {ot})")
+            elif nb == "HC":
+                out.append(f"🟢 {t} UPGRADED TO HC — Total {nt} (was {ot})")
+            elif nb == "WL":
+                out.append(f"🟡 {t} UPGRADED TO WL — Total {nt} (was {ot})")
+        else:
+            # Demotion
+            if ob == "EXTREME":
+                out.append(f"🟠 {t} EXITED EXTREME — Total {nt} (was {ot})")
+            elif ob == "HC":
+                out.append(f"🟠 {t} DOWNGRADED FROM HC — Total {nt} (was {ot})")
+            elif ob == "WL" and nb == "FAIL":
+                out.append(f"🔴 {t} DOWNGRADED TO FAIL — Total {nt} (was {ot})")
 
-    # Ceiling-breach signals (independent of bucket changes)
+    # Ceiling-breach signals (independent of bucket changes).
+    # Ratio < 1.0  → price above ceiling midpoint → trim.
+    # 1.0 ≤ ratio < 1.2 → enters the zero-entry zone (Entry collapses to 0).
     if ratio < 1.0:
         out.append(f"⚫ {t} ABOVE CEILING — Ratio {ratio:.2f}x — TRIM SIGNAL")
-    elif ratio < 1.05 and nb == "HC":
-        out.append(f"⚠️  {t} approaching ceiling — Ratio {ratio:.2f}x")
+    elif ratio < 1.2 and nb in ("HC", "EXTREME"):
+        out.append(f"⚠️  {t} approaching ceiling — Ratio {ratio:.2f}x (Entry = 0 zone)")
 
     return out
 
@@ -364,15 +398,18 @@ def main():
         print(f"  skipped (no parseable price/ceiling): {head}{more}")
 
     # Bucket distribution (computed; not written to data.js).
-    bucket_counts = {"HC": 0, "WL": 0, "FAIL": 0}
+    bucket_counts = {"EXTREME": 0, "HC": 0, "WL": 0, "FAIL": 0}
     all_alerts = []
     for s in summaries:
         bucket_counts[s["new_bucket"]] = bucket_counts.get(s["new_bucket"], 0) + 1
         all_alerts.extend(alerts_for(s))
 
     print(
-        f"\nBucket distribution: HC={bucket_counts['HC']}  "
-        f"WL={bucket_counts['WL']}  FAIL={bucket_counts['FAIL']}"
+        f"\nBucket distribution: "
+        f"EXTREME={bucket_counts['EXTREME']}  "
+        f"HC={bucket_counts['HC']}  "
+        f"WL={bucket_counts['WL']}  "
+        f"FAIL={bucket_counts['FAIL']}"
     )
 
     if all_alerts:
