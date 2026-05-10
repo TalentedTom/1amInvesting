@@ -15,8 +15,8 @@
         <header class="glass-header">
             <div class="header-content">
                 <div class="logo-area">
-                    <h1>1am<span>Investing</span></h1>
-                    <p class="subtitle">Finding Asymmetrical Bets</p>
+                    <h1 data-i18n="title_html">1am<span>Investing</span></h1>
+                    <p class="subtitle" data-i18n="subtitle">Finding Asymmetrical Bets</p>
                 </div>
                 <div class="controls-area">
                     <div class="lang-selector">
@@ -74,7 +74,7 @@
                         </button>
                     </div>
                     <div class="dropdown-container">
-                        <button id="columns-btn" class="lang-btn dropdown-btn">Columns ▼</button>
+                        <button id="columns-btn" class="lang-btn dropdown-btn" data-i18n="columns_btn">Columns ▼</button>
                         <div id="columns-dropdown" class="dropdown-content hidden">
                             <!-- Populated by JS -->
                         </div>
@@ -85,14 +85,14 @@
 
         <section class="position-filter-bar">
             <div class="position-toggle" id="position-toggle" role="group" aria-label="Position type filter">
-                <button class="position-btn active" data-position="all">All</button>
-                <button class="position-btn" data-position="chokepoint">Chokepoint</button>
-                <button class="position-btn" data-position="bottleneck">Bottleneck</button>
+                <button class="position-btn active" data-position="all" data-i18n="pos_all">All</button>
+                <button class="position-btn" data-position="chokepoint" data-i18n="pos_chokepoint">Chokepoint</button>
+                <button class="position-btn" data-position="bottleneck" data-i18n="pos_bottleneck">Bottleneck</button>
                 <span class="position-toggle-thumb" aria-hidden="true"></span>
             </div>
             <div class="position-explainer">
-                <span><strong>Chokepoint</strong> — long-term holding, always buy dips.</span>
-                <span><strong>Bottleneck</strong> — middle-duration trade, double-check why there's a dip.</span>
+                <span data-i18n="explainer_chokepoint"><strong>Chokepoint</strong> — long-term holding, always buy dips.</span>
+                <span data-i18n="explainer_bottleneck"><strong>Bottleneck</strong> — middle-duration trade, double-check why there's a dip.</span>
             </div>
         </section>
 
@@ -101,12 +101,12 @@
              least one of its SuperCycle tags is currently active. Default:
              all 5 pills active = no filtering. -->
         <section class="supercycle-bar" id="supercycle-bar">
-            <span class="filter-label">SuperCycle</span>
+            <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
             <button class="sc-pill active" data-sc="AI">AI</button>
             <button class="sc-pill active" data-sc="CPO">CPO</button>
             <button class="sc-pill active" data-sc="800G">800G</button>
             <button class="sc-pill active" data-sc="1.6T">1.6T</button>
-            <button class="sc-pill active" data-sc="Other">Other</button>
+            <button class="sc-pill active" data-sc="Other" data-i18n="cycle_Other">Other</button>
         </section>
 
         <!-- First-visit discovery hint for the deep-dive feature. Auto-hides
@@ -114,8 +114,8 @@
              Persists dismissal in localStorage so it never reappears. -->
         <div class="hint-banner" id="deep-dive-hint" role="status">
             <span class="hint-icon" aria-hidden="true">💡</span>
-            <span class="hint-text">Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis</span>
-            <button class="hint-dismiss" aria-label="Dismiss tip">×</button>
+            <span class="hint-text" data-i18n="hint_text">Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis</span>
+            <button class="hint-dismiss" data-i18n-attr="aria-label:hint_dismiss_label" aria-label="Dismiss tip">×</button>
         </div>
 
         <main class="table-container">
@@ -141,7 +141,7 @@
         <div class="modal-panel">
             <header class="modal-header">
                 <h2 id="deep-dive-title">Deep Dive</h2>
-                <button class="modal-close" data-modal-close="1" aria-label="Close deep dive">×</button>
+                <button class="modal-close" data-modal-close="1" data-i18n-attr="aria-label:modal_close_label" aria-label="Close deep dive">×</button>
             </header>
             <div class="modal-content" id="deep-dive-content">
                 <p class="modal-loading">Loading…</p>

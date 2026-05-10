@@ -17,9 +17,105 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Canonical order for SuperCycle tag rendering — keeps rows scannable.
     const SUPERCYCLE_ORDER = ["AI", "CPO", "800G", "1.6T", "Other"];
-    const labelFor = (col) => displayNames[col] || col;
 
-    let currentLang = 'en';
+    // === I18N ============================================================
+    // Translates the UI chrome (titles, buttons, headers, modal copy, etc.)
+    // when the user picks a non-English flag. The data-block contents
+    // (Name, Key Thesis, etc.) are translated upstream by update_data.py
+    // and live under fullData['zh-CN'] etc. — those don't go through here.
+    const I18N = {
+        'en': {
+            title_html: '1am<span>Investing</span>',
+            subtitle: 'Finding Asymmetrical Bets',
+            columns_btn: 'Columns ▼',
+            pos_all: 'All',
+            pos_chokepoint: 'Chokepoint',
+            pos_bottleneck: 'Bottleneck',
+            explainer_chokepoint: '<strong>Chokepoint</strong> — long-term holding, always buy dips.',
+            explainer_bottleneck: '<strong>Bottleneck</strong> — middle-duration trade, double-check why there\'s a dip.',
+            hint_text: 'Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis',
+            col_Cycle: 'Cycle',
+            col_Ticker: 'Ticker',
+            col_Total: 'Total',
+            col_Base: 'Base',
+            col_Entry: 'Entry',
+            col_Price: 'Price',
+            'col_Chg%': 'Chg%',
+            col_Upside: 'Upside',
+            col_Target: 'Target',
+            modal_loading: 'Loading…',
+            modal_dive_suffix: '— Deep Dive',
+            modal_no_dive: 'No deep-dive on file for {ticker} yet.',
+            modal_more_coming: 'More tickers will be added soon.',
+            cycle_Other: 'Other',
+            modal_close_label: 'Close deep dive',
+            hint_dismiss_label: 'Dismiss tip',
+            sc_label: 'SuperCycle',
+        },
+        'zh-CN': {
+            title_html: '1am<span>Investing</span>',  // brand, not translated
+            subtitle: '寻找非对称投资机会',
+            columns_btn: '列 ▼',
+            pos_all: '全部',
+            pos_chokepoint: '关键节点',
+            pos_bottleneck: '瓶颈',
+            explainer_chokepoint: '<strong>关键节点</strong> — 长期持有,逢低买入。',
+            explainer_bottleneck: '<strong>瓶颈</strong> — 中期交易,下跌时核查原因。',
+            hint_text: '点击股票代码 <span class="hint-arrow">↗</span> 查看深度分析',
+            col_Cycle: '周期',
+            col_Ticker: '代码',
+            col_Total: '总分',
+            col_Base: '基础',
+            col_Entry: '入场',
+            col_Price: '价格',
+            'col_Chg%': '涨跌%',
+            col_Upside: '上涨',
+            col_Target: '目标',
+            modal_loading: '加载中…',
+            modal_dive_suffix: '— 深度分析',
+            modal_no_dive: '尚未提供 {ticker} 的深度分析。',
+            modal_more_coming: '更多代码即将添加。',
+            cycle_Other: '其他',
+            modal_close_label: '关闭深度分析',
+            hint_dismiss_label: '关闭提示',
+            sc_label: '超级周期',
+        },
+    };
+    function tr(key, vars) {
+        const dict = I18N[currentLang] || I18N.en;
+        let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
+        if (vars) {
+            for (const k in vars) s = s.replace(`{${k}}`, vars[k]);
+        }
+        return s;
+    }
+    function applyChromeTranslations() {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            el.innerHTML = tr(el.getAttribute('data-i18n'));
+        });
+        document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+            // format: "attr:key,attr:key" — e.g. "title:hint_text,aria-label:hint_dismiss_label"
+            el.getAttribute('data-i18n-attr').split(',').forEach(pair => {
+                const [attr, key] = pair.split(':').map(s => s.trim());
+                if (attr && key) el.setAttribute(attr, tr(key));
+            });
+        });
+        document.documentElement.lang = currentLang === 'zh-CN' ? 'zh-CN' : 'en';
+    }
+    // Header label for a column. Looks up the English display name first
+    // (handles 'Current Price' -> 'Price', etc.) then runs that through the
+    // I18N dict to get the user's currently-selected language.
+    const labelFor = (col) => {
+        const eng = displayNames[col] || col;
+        return tr(`col_${eng}`);
+    };
+
+    // Language preference persists across reloads.
+    const LANG_STORAGE_KEY = 'currentLang';
+    let currentLang = (() => {
+        const stored = localStorage.getItem(LANG_STORAGE_KEY);
+        return (stored === 'en' || stored === 'zh-CN') ? stored : 'en';
+    })();
     let sortState = { col: null, asc: true };
     let hiddenCols = new Set();
     // Default to 'all'. Storage key is intentionally bumped to v2 so any old
@@ -101,9 +197,14 @@ document.addEventListener('DOMContentLoaded', () => {
             langBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentLang = btn.getAttribute('data-lang');
+            try { localStorage.setItem(LANG_STORAGE_KEY, currentLang); } catch (_) {}
+            applyChromeTranslations();
             renderData();
         });
     });
+    // Reflect persisted language on the active flag at startup.
+    langBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-lang') === currentLang));
+    applyChromeTranslations();
 
     // Theme Toggle Listener — persists choice in localStorage.
     const themeBtns = document.querySelectorAll('.theme-btn');
@@ -211,8 +312,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // First successful open dismisses the discovery hint permanently —
         // the user has clearly figured the feature out.
         dismissHint(true);
-        deepDiveTitle.textContent = `${ticker} — Deep Dive`;
-        deepDiveContent.innerHTML = '<p class="modal-loading">Loading…</p>';
+        deepDiveTitle.textContent = `${ticker} ${tr('modal_dive_suffix')}`;
+        deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
         deepDiveModal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';   // prevent background scroll
         // Reset scroll position when reopening (in case prior dive scrolled).
@@ -247,10 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     wrap.appendChild(table);
                 });
             })
-            .catch((err) => {
+            .catch(() => {
+                // Generic friendly fallback (don't surface raw HTTP message).
                 deepDiveContent.innerHTML =
-                    `<p style="color:#ef4444">${err.message || String(err)}</p>` +
-                    `<p style="color:var(--text-secondary);font-size:0.88em">More tickers will be added soon.</p>`;
+                    `<p style="color:#ef4444">${tr('modal_no_dive', {ticker})}</p>` +
+                    `<p style="color:var(--text-secondary);font-size:0.88em">${tr('modal_more_coming')}</p>`;
             });
     }
 
@@ -556,9 +658,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const sorted = SUPERCYCLE_ORDER.filter(c => tags.includes(c));
             if (!sorted.length) return '';
             const cls = `cycle-cell cycle-n${sorted.length}`;
-            const boxes = sorted.map(t =>
-                `<span class="cycle-box" data-cycle="${t}">${t}</span>`
-            ).join('');
+            // The English tag name stays in data-cycle for CSS color targeting,
+            // but the visible label runs through the I18N dict. Currently only
+            // 'Other' has a non-trivial translation; the rest (AI/CPO/800G/1.6T)
+            // are universal technical terms that read the same in either language.
+            const boxes = sorted.map(tag => {
+                const label = tag === 'Other' ? tr('cycle_Other') : tag;
+                return `<span class="cycle-box" data-cycle="${tag}">${label}</span>`;
+            }).join('');
             return `<span class="${cls}">${boxes}</span>`;
         }
 
