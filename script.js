@@ -142,11 +142,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
 
-    // SuperCycle multi-select filter. Default: all 5 categories active
-    // (no filtering). Persisted as JSON array in localStorage. Composes
-    // with the position-type filter — both filters must accept a row.
-    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v1';
+    // SuperCycle multi-select filter. Default: every category except
+    // 'Other' (which catches uncategorized / off-thesis tickers — the
+    // user wants those hidden until explicitly opted into). Persisted as
+    // JSON array in localStorage. Composes with the position-type filter
+    // — both filters must accept a row.
+    //
+    // Storage key bumped to v2 because the default changed: visitors with
+    // a v1 entry would inherit a stale "all 5 active" state otherwise.
+    // Anyone who had explicitly toggled pills on v1 loses that state on
+    // upgrade — acceptable trade-off for a clean rollout.
+    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v2';
     const ALL_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];
+    const DEFAULT_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T'];   // 'Other' off by default
     let activeSupercycles = (() => {
         try {
             const raw = localStorage.getItem(SUPERCYCLE_STORAGE_KEY);
@@ -158,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         } catch (_) {}
-        return new Set(ALL_SUPERCYCLES);
+        return new Set(DEFAULT_SUPERCYCLES);
     })();
 
     // Columns Dropdown Logic
@@ -491,7 +499,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLight = document.body.classList.contains('light-mode');
         const params = new URLSearchParams({
             symbol: tvSymbol,
-            interval: 'D',
+            // Default to Weekly — coarser candles read better at a glance
+            // for the long-term / supercycle thesis this dashboard is
+            // built around. User can still flip to 1m / 30m / 1h / 1D /
+            // 1M from the chart's own interval picker.
+            interval: 'W',
             theme: isLight ? 'light' : 'dark',
             style: '1',                 // candles
             timezone: 'Etc/UTC',

@@ -106,7 +106,11 @@
             <button class="sc-pill active" data-sc="CPO">CPO</button>
             <button class="sc-pill active" data-sc="800G">800G</button>
             <button class="sc-pill active" data-sc="1.6T">1.6T</button>
-            <button class="sc-pill active" data-sc="Other" data-i18n="cycle_Other">Other</button>
+            <!-- 'Other' starts off by default (catches uncategorized rows
+                 that aren't part of the four core supercycles). JS reads
+                 the active state from localStorage / DEFAULT_SUPERCYCLES,
+                 so this initial class is only the pre-JS paint state. -->
+            <button class="sc-pill" data-sc="Other" data-i18n="cycle_Other">Other</button>
         </section>
 
         <!-- First-visit discovery hint for the deep-dive feature. Auto-hides
