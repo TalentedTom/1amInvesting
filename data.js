@@ -4,14 +4,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "SIVE.ST",
             "Name": "Sivers Semiconductors",
-            "Total": 108,
+            "Total": 109,
             "Base": 93,
-            "Entry": 131,
+            "Entry": 132,
             "Rating": "HC #1 (dual-vector + Amazon/Marvell/Celestial confirmed)",
             "Port": "✓",
-            "Current Price": "SEK 46.98",
+            "Current Price": "SEK 46.02",
             "Ceiling Target": "SEK 120-545",
-            "Upside": "2.6x-11.6x",
+            "Upside": "2.6x-11.8x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: CW laser — silicon cannot generate light. Every CPO gen. 2026-2035+",
             "Revenue Explosion": "Pipeline $453M (+64%). Product pipeline +90%. 3 hyperscaler paths: JBL 1.6T + Amazon/Celestial (SEC-confirmed) + Ayar Labs. SATCOM ramp 2027: $21M→$124M by 2030. Wireless BU 2x Photonics. $1B SAM.",
             "Updated": "May 11",
@@ -20,7 +20,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "CW/ELS LASER MONOPOLY — 6 INDEPENDENT DEMAND PATHS, DUAL-GPU CPO COVERAGE. Path 1: JBL 1.6T pluggable transceivers → hyperscalers (Apr 15 PR). Path 2: Ayar Labs SuperNova → OpenAI/AMD ($125M/yr potential). Path 3: Amazon → Marvell/Celestial AI photonic fabric (SEC-filed warrant: 1,045,171 MRVL shares at $87, vesting on photonic fabric purchases through Dec 2030). Path 4: SATCOM/Defense → Raytheon/Ericsson/US Army (stages 1-3 COMPLETE). NDAA FY2026 SATCOM = $2.8B+ authorized. Path 5: Google → Marvell → Celestial photonic fabric (Reuters Apr 19). Path 6: AMD MI500 CPO → GlobalFoundries (Apr 20). SIVE is 1 of only 2 public laser suppliers in GF CPO ecosystem. CONFIRMED IN BOTH CPO FOUNDRY ECOSYSTEMS: NVIDIA/TSMC + AMD/GlobalFoundries. CPO confirmed as permanent architecture through Feynman Ultra (scale-out fully CPO). Wireless BU 2x Photonics ($23M). $1B management SAM. Pipeline $453M (+64% YoY). 84% NRE converting to product revenue. Storm publishing systematic thesis via Substack. NASDAQ dual-listing evaluation in progress (~125 MSEK directed share issue Apr 15). Only independent CW laser supplier outside LITE (68x larger). Physics-required: silicon cannot generate light, every SiPh PIC needs external laser. *CAPTURE RATE BREADCRUMB (Apr 21): Wayback Machine + HTML inspection shows Lumentum and MACOM silently REMOVED from Ayar Labs Supply Chain Partners page. SIVE demonstrated 16-wavelength WDM laser at ECOC 2024 with Ayar. Ayar raised $500M for VOLUME PRODUCTION where SIVE is designed in. If SIVE is PRIMARY (not just one-of-many) for Ayar SuperNova, capture rate of $1.0-1.4B InP laser SAM moves from 15-25% to 25-40%. NOT CONFIRMED — breadcrumb only. Ceiling widened modestly from SEK 60-300 to SEK 70-350 to reflect this signal.",
             "IR Check": "⚡ ACTIVE MONITORING\nNASDAQ formal filing date\nTicker symbol confirmation\nS-1/F-1 filing with SEC\nQ2 2026 earnings (JBL revenue starts)\nAdditional customer announcements\nIndex/ETF inclusion events",
             "Supercycle": "InP CW Laser Gen2+3",
-            "Change %": "-5.09%"
+            "Change %": "-7.03%"
         },
         {
             "Rank": 2,
@@ -28,12 +28,12 @@ window.PORTFOLIO_DATA = {
             "Name": "LPKF Laser & Electronics",
             "Total": 103,
             "Base": 80,
-            "Entry": 137,
+            "Entry": 138,
             "Rating": "HC — LIDE glass monopoly + Intel CPO waveguide (patent-linked) + Ayar Labs glass bridge architecture. VLM Kapital patent chain confirmed.",
             "Port": "✓",
-            "Current Price": "EUR 25.90",
+            "Current Price": "EUR 25.70",
             "Ceiling Target": "€90-310",
-            "Upside": "3.5x-12.0x",
+            "Upside": "3.5x-12.1x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: LIDE glass TGV — organic cannot support next-gen. Triple supercycle: DB5 AI packaging + DB3 LEO Space (SpaceX) + DB8 Defense. 2027-2035+",
             "Revenue Explosion": "📈 GLASS SUBSTRATE EQUIPMENT ORDERS\nTrigger 1: Samsung SEMCO mass production (end 2026)\nTrigger 2: Intel Absolics HVM ramp\nTrigger 3: TSMC glass substrate R&D orders\nTrigger 4: Apple glass substrate via SEMCO\nTrigger 5: Tesla Terafab via Intel packaging\nEach new glass fab = LPKF equipment orders\n$170M MC = smallest HC stock in portfolio",
             "Updated": "May 11",
@@ -42,7 +42,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB5 ADVANCED PACKAGING — LIDE TGV NEAR-MONOPOLY FOR GLASS SUBSTRATES. ~80% QUALIFICATION SHARE across glass substrate manufacturers. TECHNICAL DOMINANCE CONFIRMED (Gen Z Investor deep dive Apr 21): Φ5µm via diameter (best). 1:50 aspect ratio in production (best). Ra <0.1µm sidewall roughness = 10x smoother than E&R (≤1µm). ≥5,000 vias/sec for ANY layout (best for random). Cp >1.33 + <5ppm NG rate = ONLY company publishing HVM process capability data. 11+ glass types from all major suppliers (AGC, Corning, SCHOTT, NEG). COMPETITION WEAKER THAN ASSUMED: Philoptics: won't publish specs, direct laser ablation removes material = micro-cracks + stress at scale. E&R: 10x rougher sidewalls, 1:10 max aspect ratio, SELLS A SECOND MACHINE to fix the first. Trumpf/Schmid: R&D demos only on easiest glass (BF33), can't fill Cu at 1:70, years from production. CPO INTEGRATION: LPKF exploring glass substrates for co-packaged optics = new demand vector. Onto Innovation Firefly metrology partnership for automated TGV inspection. Vitrion foundry operational for prototyping + small-series. FY2025 €115.3M (-6.2%). FY2026 guide €105-120M, EBIT -3% to +4.5%. 'High-volume orders NOT included in forecast' = any LIDE order is PURE upside. North Star program: double-digit EBIT by 2028. Loan extended through 2028. Intel confirmed glass substrates. Samsung SEMCO qualifying. TSMC exploring. RISK: Solar segment collapsing, transformation costs in 2026, timing depends on downstream qualification.",
             "IR Check": "❌ NEEDS DEEP DIVE\nKorean-language SEMCO supply chain verification\nJWMT competitive positioning\nGlass substrate revenue breakout in earnings\nIntel Terafab packaging confirmation\nTSMC glass substrate equipment orders\nApple SEMCO glass substrate timeline",
             "Supercycle": "Packaging — Glass Substrate Equipment",
-            "Change %": "-8.16%"
+            "Change %": "-8.87%"
         },
         {
             "Rank": 3,
@@ -114,14 +114,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 6,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
-            "Total": 80,
+            "Total": 81,
             "Base": 78,
-            "Entry": 83,
+            "Entry": 85,
             "Rating": "HC — E-band monopoly + V-band discounted 15%/yr. Blended 4.24x.",
             "Port": "",
-            "Current Price": "GBp 374.50",
+            "Current Price": "GBp 365.68",
             "Ceiling Target": "GBp 900-1,600",
-            "Upside": "2.4x-4.3x",
+            "Upside": "2.5x-4.4x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: E-band GaN SSPA monopoly + V-band consumer terminal TAM (SpaceX funded R&D). Capacity lock-out blocks Amazon. Golden Dome #1 contractor link. 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "May 11",
@@ -130,7 +130,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB3 LEO SPACE + DB8 DEFENSE. COMMERCIAL MONOPOLY: E-band GaN SSPAs for satellite ground stations. SPACEX VALIDATED: £47.3M ($62.5M) GaN order — largest ever. SpaceX warrants for 15% equity. SpaceX VP: 'Filtronic is a valuable partner... important contributor to Starlink.' By occupying production, SpaceX boxes out Amazon/Kuiper from accessing same technology. GaN at E-band = physics barrier (thermal + mmWave). No named competitor. V-BAND TAM EXPANSION: If V-band GaN succeeds, TAM explodes from thousands of ground stations to tens of millions of consumer/enterprise terminals. SpaceX funding the R&D. European defense: £7M+ contracts with major European defense prime. Zero debt. Profitable. £620M market cap. UK AIM-listed. 186 employees. SIVE parallel: European micro-cap with commercial monopoly validated by dominant customer.",
             "IR Check": "",
             "Supercycle": "DB3 LEO Space + DB8 Defense",
-            "Change %": "-0.13%"
+            "Change %": "-2.49%"
         },
         {
             "Rank": 7,
@@ -158,14 +158,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 8,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
-            "Total": 79,
+            "Total": 78,
             "Base": 77,
-            "Entry": 81,
+            "Entry": 80,
             "Rating": "ASML of compound semi + 70-90% MOCVD + 3 engines",
             "Port": "",
-            "Current Price": "EUR 46.57",
+            "Current Price": "EUR 47.02",
             "Ceiling Target": "€120-180",
-            "Upside": "2.6x-3.9x",
+            "Upside": "2.6x-3.8x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: 70-90% MOCVD share — tool of record for InP epi. Universal primitive for compound semi. 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "May 11",
@@ -174,7 +174,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB1 LAYER -1 MOCVD EQUIPMENT. 70-90% global MOCVD market share (Kerrisdale). G10-AsP = tool of record for InP laser production. Near-monopoly duopoly with Veeco. Every InP capacity expansion = Aixtron order. Customer-agnostic. Q1 2026: Orders €171M (+30% YoY), >65% optoelectronics. FY2026 guidance RAISED to €560M (from €520M), EBIT 17-20%. Multi-vector: InP (photonics/AI) + SiC (power/EV) + GaN (power/RF). Damnang Tier S (8.30/10). Upstream insurance for entire DB1 photonics thesis. RISK: Duopoly not monopoly. Cyclical equipment. Stock at 52-wk high above consensus PT.",
             "IR Check": "",
             "Supercycle": "DB1 Photonics + DB4 Power",
-            "Change %": "-2.51%"
+            "Change %": "-1.57%"
         },
         {
             "Rank": 9,
@@ -402,10 +402,10 @@ window.PORTFOLIO_DATA = {
             "Name": "Soitec SA",
             "Total": 68,
             "Base": 85,
-            "Entry": 43,
+            "Entry": 42,
             "Rating": "HC 🔒 — CPO PURE PLAY (Level 3 investor named May 3). >95% Photonics-SOI monopoly. 55,000% CPO growth curve applies directly.",
             "Port": "✓",
-            "Current Price": "EUR 155.25",
+            "Current Price": "EUR 157.05",
             "Ceiling Target": "€250-338",
             "Upside": "1.6x-2.2x",
             "Position Type": "🔒 CHOKEPOINT\nIP: >95% Photonics-SOI, 3,500+ Smart Cut patents\nSiN = complement (dismissed). Fungible capacity RF→Photonics.",
@@ -416,7 +416,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "CPO PURE PLAY — Level 3 investor named May 3 alongside SIVE/ShunSin/MSScorps. >95% Photonics-SOI monopoly (BofA). 3,500+ Smart Cut patents. All 5 SiPh foundries use Soitec. 55,000% CPO growth curve applies directly — every CPO PIC on Soitec wafer. Goldman $91B CPO → $2.7-4.5B substrate TAM. Content 4x→8x+ per device. Fungible capacity, zero capex. SiN eliminated (PhotonCap PhD). Layer -1 deepest in stack. Mobile drag clearing, Photonics IS the company.",
             "IR Check": "⚡ May 27 FY2026 results 🔥🔥\nLevel 3 investor CPO pure play classification (May 3).\nGFS SiPh doubling confirmed. TSMC COUPE H2 2026.\nPhotonics % of rev — crossing 30% confirms HC permanently.\nAAOI trim May 7 → rotate into SOI.PA on pullback.",
             "Supercycle": "DB1 SiPh Substrate",
-            "Change %": "-4.43%"
+            "Change %": "-3.32%"
         },
         {
             "Rank": 20,
@@ -779,7 +779,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 73,
             "Rating": "HVDC oligopoly 30% + 9x backlog + €900M EBITDA 2030 + portfolio diversifier",
             "Port": "",
-            "Current Price": "DKK 985.50",
+            "Current Price": "DKK 984",
             "Ceiling Target": "DKK 2,500-3,250",
             "Upside": "2.5x-3.3x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics+Capital: HVDC submarine cable — 3-player oligopoly, 5-7yr barrier to entry. 2026-2035+",
@@ -790,18 +790,18 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "Quintuple Path C; 9x revenue backlog; HVDC 30% share; own vessels; €900M EBITDA 2030; uncorrelated to photonics",
             "IR Check": "❌ NEEDS REVIEW\nCMD deck, HVDC backlog",
             "Supercycle": "DB2 Wind/Energy",
-            "Change %": "-0.35%"
+            "Change %": "-0.51%"
         },
         {
             "Rank": "—",
             "Ticker": "IQE.L",
             "Name": "IQE plc",
-            "Total": 49,
+            "Total": 48,
             "Base": 60,
-            "Entry": 32,
+            "Entry": 31,
             "Rating": "InP epiwafer + Deutsche Bank Takeover Code + Strategic Review",
             "Port": "",
-            "Current Price": "GBp 49.85",
+            "Current Price": "GBp 50.30",
             "Ceiling Target": "70p-100p",
             "Upside": "1.4x-2.0x",
             "Position Type": "⚡ BOTTLENECK\nCatalyst: M&A strategic review — event-driven, not structural. Single trigger. 6-12mo window.",
@@ -812,7 +812,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB1 PHOTONICS InP LAYER -1. Global III-V epi supplier (InP+GaAs+GaN). 6-inch InP laser epi platform. Multi-site: Cardiff UK, Taunton/Greensboro/Spokane US, Taiwan. FY2025 rev ~£97M, EBITDA turned positive. Strong Q1 2026 order book. STRATEGIC REVIEW: Lazard advising, non-binding offers for whole group + asset bids. CHIPS ACT: $305M Greensboro NC expansion plan for defense compound semi. InP shortage structural — Damnang Tier A (7.35/10). RISK: M&A may not complete. Accumulated losses. 13x stock run compresses entry.",
             "IR Check": "❌ NEEDS REVIEW\nStrategic Review updates\nPhotonics segment breakdown",
             "Supercycle": "III-V Epiwafer",
-            "Change %": "-4.50%"
+            "Change %": "-3.64%"
         },
         {
             "Rank": "—",
@@ -970,12 +970,12 @@ window.PORTFOLIO_DATA = {
             "Rank": "—",
             "Ticker": "SMOP.OL",
             "Name": "Smartoptics Group",
-            "Total": 38,
+            "Total": 37,
             "Base": 48,
-            "Entry": 23,
+            "Entry": 20,
             "Rating": "FAIL — competitive Layer 3 systems, not a bottleneck",
             "Port": "",
-            "Current Price": "NOK 53",
+            "Current Price": "NOK 54.60",
             "Ceiling Target": "NOK 80-86",
             "Upside": "1.5x-1.6x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Optical monitoring — competitive market. 1-2yr window.",
@@ -986,7 +986,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "Open optical networking (DWDM line systems, muxponders, transceivers, software). Agile mid-size challenger gaining share from Ciena/Nokia in sub-hyperscale DCI. DE-CIX, Pilot Fiber, neoscaler wins. BUT: Layer 3 systems = shallowest moat. Ciena 51% NA share, Huawei 31% global, Nokia/Infinera 20%. NOT sole-source. NOT physics-required. \"Competitive companies go up in supercycles. Monopolies go up MORE.\" DNB Carnegie: \"clear AI winner\" — but framework requires monopoly, not just tailwind.",
             "IR Check": "smartoptics.com/investor-relations",
             "Supercycle": "DB1 Photonics (Layer 3 — Systems)",
-            "Change %": "+0.00%"
+            "Change %": "+3.02%"
         },
         {
             "Rank": "—",
@@ -1437,7 +1437,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Rating": "FAIL — Hybrid bonding leader, 20 customers. But €20B MC, 15+ analysts, price above ceiling midpoint. Entry 0.89x.",
             "Port": "",
-            "Current Price": "EUR 257.50",
+            "Current Price": "EUR 257.90",
             "Ceiling Target": "€160-280",
             "Upside": "0.6x-1.1x",
             "Position Type": "🔒 CHOKEPOINT (in hybrid bonding)\nHybrid bonding leader <10nm. 20 customers. EVG competes. Non-hybrid biz (die attach, flip chip) is competitive.",
@@ -1448,7 +1448,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "#1 hybrid bonding globally. <10nm precision. 20 customers (TSMC, Intel, Samsung, SK Hynix, AMD, Apple, Broadcom). AMAT 9% stake. Orders doubled YoY. But €20B MC near ATH.",
             "IR Check": "",
             "Supercycle": "DB5 Advanced Packaging",
-            "Change %": "-1.42%"
+            "Change %": "-1.26%"
         },
         {
             "Rank": "—",
@@ -1481,7 +1481,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "€1.17",
             "Port": "",
-            "Current Price": "EUR 19.40",
+            "Current Price": "EUR 19.95",
             "Ceiling Target": "FAIL",
             "Upside": "",
             "Position Type": "⚡ BOTTLENECK\nDistressed: CoPoS tech inside dying company. Right tech, wrong vehicle. FAIL.",
@@ -1492,7 +1492,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "Hidden Gold Rush. LayTec subsidiary = near-monopoly in-situ metrology for MOCVD. ~100% InP attach rate (SiPh critical). 70-85% GaN attach rate (rising). OEM integrated into Aixtron reactors. Exclusive Oxford Instruments etch partnership. Dual supercycle: GaN power (datacenter 800V, robotics) + InP (SiPh transceivers). BUT: buried inside diversified holding. LayTec = ~15-20% of group revenue. Rest (Life Sci, Green Tech, Clean Tech) declining. Extremely illiquid (6.57M shares). Scores 67 WL at €13 pullback. LayTec spinoff = instant re-rate.",
             "IR Check": "German-language filings. NuWays AG sole analyst (€21 PT, BUY).",
             "Supercycle": "GaN MOCVD + InP SiPh metrology",
-            "Change %": "-6.73%"
+            "Change %": "-4.09%"
         },
         {
             "Rank": "—",
@@ -1588,14 +1588,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "SIVE.ST",
             "Name": "西弗斯半导体公司",
-            "Total": 108,
+            "Total": 109,
             "Base": 93,
-            "Entry": 131,
+            "Entry": 132,
             "Rating": "HC #1（双矢量 + Amazon/Marvell/Celestial 已确认）",
             "Port": "✓",
-            "Current Price": "SEK 46.98",
+            "Current Price": "SEK 46.02",
             "Ceiling Target": "瑞典克朗 120-545",
-            "Upside": "2.6x-11.6x",
+            "Upside": "2.6x-11.8x",
             "Position Type": "🔒 阻塞点\n物理：连续激光——硅不能发光。每个 CPO 一代。 2026-2035+",
             "Revenue Explosion": "管道 4.53 亿美元（+64%）。产品管道+90%。 3 个超大规模路径：JBL 1.6T + Amazon/Celestial（经 SEC 确认）+ Ayar Labs。卫星通信增长 2027 年：2100 万美元→ 2030 年 1.24 亿美元。无线 BU 2x 光子学。 10亿美元萨姆。",
             "Updated": "5月11日",
@@ -1604,7 +1604,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "CW/ELS 激光垄断 — 6 个独立的需求路径，双 GPU CPO 覆盖。路径 1：JBL 1.6T 可插拔收发器 → 超大规模器（4 月 15 日 PR）。路径 2：Ayar Labs SuperNova → OpenAI/AMD（潜力为 1.25 亿美元/年）。路径 3：亚马逊 → Marvell/Celestial AI 光子结构（SEC 提交的认股权证：1,045,171 股 MRVL 股票，价格为 87 美元，归属于 2030 年 12 月之前购买的光子结构）。路径 4：卫星通信/国防 → 雷神公司/爱立信/美国陆军（第 1-3 阶段已完成）。 NDAA 2026 财年卫星通信 = $2.8B+ 授权。路径 5：Google → Marvell → 天体光子结构（路透社 4 月 19 日）。路径 6：AMD MI500 CPO → GlobalFoundries（4 月 20 日）。 SIVE 是 GF CPO 生态系统中仅有的 2 家公共激光器供应商之一。在两个 CPO 代工厂生态系统中得到确认：NVIDIA/TSMC + AMD/GlobalFoundries。通过 Feynman Ultra（横向扩展完全 CPO）确认 CPO 为永久架构。无线 BU 2x 光子学（2300 万美元）。 10 亿美元管理 SAM。管道 4.53 亿美元（同比增长 64%）。 84% 的 NRE 转化为产品收入。 Storm通过Substack发表系统论文。纳斯达克双重上市评估正在进行中（4 月 15 日约 125 股 MSEK 定向股票发行）。 LITE（大 68 倍）之外唯一的独立 CW 激光器供应商。物理要求：硅不能发光，每个 SiPh PIC 都需要外部激光器。 *捕获率面包屑（4 月 21 日）：Wayback Machine + HTML 检查显示 Lumentum 和 MACOM 已从 Ayar Labs 供应链合作伙伴页面中默默删除。 SIVE 与 Ayar 在 ECOC 2024 上展示了 16 波长 WDM 激光器。 Ayar 筹集了 5 亿美元用于设计 SIVE 的批量生产。如果 SIVE 是 Ayar SuperNova 的主要（不仅仅是众多之一），则 1.0-1.4B 美元的 InP 激光 SAM 的捕获率将从 15-25% 提高到 25-40%。未确认 - 仅面包屑。上限从 60-300 瑞典克朗适度扩大到 70-350 瑞典克朗，以反映这一信号。",
             "IR Check": "⚡ 主动监控\n纳斯达克正式提交日期\n股票代码确认\n向 SEC 提交 S-1/F-1 备案\n2026 年第二季度收益（JBL 收入开始）\n其他客户公告\n指数/ETF纳入事件",
             "Supercycle": "InP 连续激光器 Gen2+3",
-            "Change %": "-5.09%"
+            "Change %": "-7.03%"
         },
         {
             "Rank": 2,
@@ -1612,12 +1612,12 @@ window.PORTFOLIO_DATA = {
             "Name": "LPKF 激光与电子",
             "Total": 103,
             "Base": 80,
-            "Entry": 137,
+            "Entry": 138,
             "Rating": "HC — LIDE 玻璃垄断 + Intel CPO 波导（专利链接）+ Ayar Labs 玻璃桥架构。 VLM Kapital 专利链已确认。",
             "Port": "✓",
-            "Current Price": "EUR 25.90",
+            "Current Price": "EUR 25.70",
             "Ceiling Target": "90-310 欧元",
-            "Upside": "3.5x-12.0x",
+            "Upside": "3.5x-12.1x",
             "Position Type": "🔒 阻塞点\n物理：LIDE 玻璃 TGV — 有机玻璃无法支持下一代。三重超级循环：DB5 AI包装+DB3 LEO Space（SpaceX）+DB8 Defense。 2027-2035+",
             "Revenue Explosion": "📈 玻璃基板设备订单\n触发点1：三星SEMCO量产（2026年底）\n触发点 2：Intel Absolics HVM 提升\n触发因素三：台积电玻璃基板研发订单\n触发因素 4：SEMCO 的苹果玻璃基板\n触发器 5：通过英特尔封装的 Tesla Terafab\n每一座新玻璃厂 = LPKF 设备订单\n1.7 亿美元 MC = 投资组合中最小的 HC 股票",
             "Updated": "5月11日",
@@ -1626,7 +1626,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB5 高级封装 — LIDE TGV 近乎垄断玻璃基板。玻璃基板制造商的资质份额约为 80%。技术优势已确认（4 月 21 日 Z 代投资者深入探讨）：Φ5μm 过孔直径（最佳）。制作时的纵横比为 1:50（最佳）。 Ra <0.1μm 侧壁粗糙度 = 比 E&R (≤1μm) 光滑 10 倍。对于任何布局，≥5,000 个通孔/秒（最适合随机）。 Cp >1.33 + <5ppm NG 率 = 唯一一家发布 HVM 工艺能力数据的公司。来自所有主要供应商（AGC、康宁、肖特、NEG）的 11 多种玻璃类型。竞争比想象的要弱：Philoptics：不会发布规格，直接激光烧蚀去除材料=微裂纹+大规模应力。 E&R：侧壁粗糙 10 倍，最大纵横比 1:10，出售第二台机器来修复第一台机器。 Trumpf/Schmid：仅在最简单的玻璃 (BF33) 上进行研发演示，无法以 1:70 填充铜，距生产数年时间。 CPO 集成：LPKF 探索用于共封装光学器件的玻璃基板 = 新的需求向量。 Onto Innovation Firefly 计量合作伙伴，用于自动 TGV 检测。 Vitrion 铸造厂可进行原型设计和小批量生产。 2025 财年 1.153 亿欧元 (-6.2%)。 2026 财年指导 1.05-1.2 亿欧元，息税前利润 -3% 至 +4.5%。 “大批量订单不包含在预测中”=任何 LIDE 订单都是纯粹的上涨空间。北极星计划：到 2028 年实现两位数的息税前利润。贷款延长至 2028 年。英特尔确认了玻璃基板。三星SEMCO排位赛。台积电探索。风险：太阳能行业崩溃，2026 年转型成本上升，时间取决于下游资质。",
             "IR Check": "❌ 需要深入研究\n韩语SEMCO供应链验证\nJWMT竞争定位\n玻璃基板营收突破盈利\n英特尔 Terafab 包装确认\n台积电玻璃基板设备订单\nApple SEMCO 玻璃基板时间表",
             "Supercycle": "封装—玻璃基板设备",
-            "Change %": "-8.16%"
+            "Change %": "-8.87%"
         },
         {
             "Rank": 3,
@@ -1698,14 +1698,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 6,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
-            "Total": 80,
+            "Total": 81,
             "Base": 78,
-            "Entry": 83,
+            "Entry": 85,
             "Rating": "HC — E 频段垄断 + V 频段每年折扣 15%。混合 4.24 倍。",
             "Port": "",
-            "Current Price": "GBp 374.50",
+            "Current Price": "GBp 365.68",
             "Ceiling Target": "900-1,600 英镑",
-            "Upside": "2.4x-4.3x",
+            "Upside": "2.5x-4.4x",
             "Position Type": "🔒 阻塞点\n物理：E波段GaN SSPA垄断+V波段消费终端TAM（SpaceX资助研发）。产能锁定阻碍了亚马逊。金顶 #1 承包商链接。 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "5月11日",
@@ -1714,7 +1714,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB3 LEO 太空 + DB8 防御。商业垄断：用于卫星地面站的 E 波段 GaN SSPA。 SPACEX 验证：4730 万英镑（6250 万美元）的 GaN 订单——有史以来最大的订单。 SpaceX 认购 15% 的股权。 SpaceX 副总裁：“Filtronic 是一个有价值的合作伙伴......Starlink 的重要贡献者。”通过占领生产，SpaceX 阻止了亚马逊/Kuiper 获得相同的技术。 E 波段的 GaN = 物理势垒（热 + 毫米波）。没有指定的竞争对手。 V-BAND TAM 扩展：如果 V-band GaN 成功，TAM 将从数千个地面站扩展到数千万个消费者/企业终端。 SpaceX 资助研发。欧洲防务：与欧洲主要防务公司签订价值超过 700 万英镑的合同。零债务。有利可图。市值 6.2 亿英镑。英国AIM上市。员工186人。 SIVE平行：欧洲微型市值，具有经主导客户验证的商业垄断。",
             "IR Check": "",
             "Supercycle": "DB3 LEO 太空 + DB8 防御",
-            "Change %": "-0.13%"
+            "Change %": "-2.49%"
         },
         {
             "Rank": 7,
@@ -1742,14 +1742,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 8,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
-            "Total": 79,
+            "Total": 78,
             "Base": 77,
-            "Entry": 81,
+            "Entry": 80,
             "Rating": "复合半导体ASML + 70-90% MOCVD + 3台发动机",
             "Port": "",
-            "Current Price": "EUR 46.57",
+            "Current Price": "EUR 47.02",
             "Ceiling Target": "120-180欧元",
-            "Upside": "2.6x-3.9x",
+            "Upside": "2.6x-3.8x",
             "Position Type": "🔒 阻塞点\n物理：70-90% MOCVD 份额——InP 外延记录工具。复合半成品的通用原语。 2026-2035+",
             "Revenue Explosion": "",
             "Updated": "5月11日",
@@ -1758,7 +1758,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB1层-1 MOCVD设备。 70-90% 全球 MOCVD 市场份额 (Kerrisdale)。 G10-AsP = InP 激光器生产的记录工具。与 Veeco 近乎垄断的双寡头垄断。每一次 InP 产能扩张 = Aixtron 订单。与客户无关。 2026 年第一季度：订单额 1.71 亿欧元（同比增长 30%），其中光电产品占比超过 65%。 2026 财年指引提高至 5.6 亿欧元（原为 5.2 亿欧元），息税前利润 17-20%。多向量：InP（光子/人工智能）+ SiC（功率/电动汽车）+ GaN（功率/射频）。 Damnang S 级（8.30/10）。整个 DB1 光子学论文的上游保险。风险：双头垄断而非垄断。循环设备。股价处于 52 周高点，高于共识 PT。",
             "IR Check": "",
             "Supercycle": "DB1 光子 + DB4 电源",
-            "Change %": "-2.51%"
+            "Change %": "-1.57%"
         },
         {
             "Rank": 9,
@@ -1986,10 +1986,10 @@ window.PORTFOLIO_DATA = {
             "Name": "索伊泰克公司",
             "Total": 68,
             "Base": 85,
-            "Entry": 43,
+            "Entry": 42,
             "Rating": "HC 🔒 — CPO PURE PLAY（3 级投资者，5 月 3 日命名）。 >95% 的光子学-SOI 垄断。 55,000% CPO 增长曲线直接适用。",
             "Port": "✓",
-            "Current Price": "EUR 155.25",
+            "Current Price": "EUR 157.05",
             "Ceiling Target": "250-338欧元",
             "Upside": "1.6x-2.2x",
             "Position Type": "🔒 阻塞点\nIP：>95% 光子学-SOI、3,500 多项智能切割专利\nSiN = 补数（忽略）。可替代容量射频→光子学。",
@@ -2000,7 +2000,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "CPO PURE PLAY — 5 月 3 日与 SIVE/ShunSin/MSScorps 一起被任命为 3 级投资者。 >95% 的光子学-SOI 垄断（美国银行）。 3,500 多项 Smart Cut 专利。所有 5 家 SiPh 代工厂均使用 Soitec。 55,000% CPO 增长曲线直接适用 — Soitec 晶圆上的每个 CPO PIC。高盛 $91B CPO → $2.7-4.5B 基材 TAM。每个设备的内容 4x→8x+。可替代容量，零资本支出。 SiN 被消除（PhotonCap 博士）。堆栈最深的层 -1。移动拖曳清理，Photonics IS 公司。",
             "IR Check": "⚡ 2026 财年 5 月 27 日结果 🔥🔥\n3 级投资者 CPO 纯粹投资分类（5 月 3 日）。\nGFS SiPh 倍增已确认。台积电 COUPE H2 2026。\n光电转速百分比 — 超过 30% 永久确认 HC。\nAAOI 于 5 月 7 日调整 → 回调时转向 SOI.PA。",
             "Supercycle": "DB1 SiPh 基板",
-            "Change %": "-4.43%"
+            "Change %": "-3.32%"
         },
         {
             "Rank": 20,
@@ -2363,7 +2363,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 73,
             "Rating": "HVDC 寡头垄断 30% + 9 倍积压 + 2030 年 9 亿欧元 EBITDA + 投资组合多元化",
             "Port": "",
-            "Current Price": "DKK 985.50",
+            "Current Price": "DKK 984",
             "Ceiling Target": "丹麦克朗 2,500-3,250",
             "Upside": "2.5x-3.3x",
             "Position Type": "🔒 阻塞点\n物理+资本：高压直流海底电缆——三人寡头垄断，5-7年的进入壁垒。 2026-2035+",
@@ -2374,18 +2374,18 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "五重路径C；积压收入增加 9 倍；高压直流输电占30%；自有船只； 2030 年 EBITDA 为 9 亿欧元；与光子学不相关",
             "IR Check": "❌ 需要审查\nCMD 甲板、HVDC 积压",
             "Supercycle": "DB2 风能/能源",
-            "Change %": "-0.35%"
+            "Change %": "-0.51%"
         },
         {
             "Rank": "—",
             "Ticker": "IQE.L",
             "Name": "IQE公司",
-            "Total": 49,
+            "Total": 48,
             "Base": 60,
-            "Entry": 32,
+            "Entry": 31,
             "Rating": "InP外延片+德意志银行收购守则+战略审查",
             "Port": "",
-            "Current Price": "GBp 49.85",
+            "Current Price": "GBp 50.30",
             "Ceiling Target": "70p-100p",
             "Upside": "1.4x-2.0x",
             "Position Type": "⚡ 瓶颈\n催化剂：并购战略审查——事件驱动，而非结构性。单触发。 6-12个月窗口。",
@@ -2396,7 +2396,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "DB1 光子学 InP 层 -1。全球III-V外延供应商（InP+GaAs+GaN）。 6英寸InP激光外延平台。多站点：英国卡迪夫、美国汤顿/格林斯博罗/斯波坎、台湾。 2025 财年收入约为 9700 万英镑，EBITDA 转正。 2026 年第一季度订单强劲。战略审查：Lazard 为整个集团提供建议、不具约束力的要约+资产出价。 CHIPS ACT：3.05 亿美元北卡罗来纳州格林斯博罗国防复合半成品扩建计划。 InP 结构性短缺 — Damnang A 级 (7.35/10)。风险：并购可能无法完成。累计损失。 13 倍的库存运行压缩了入场量。",
             "IR Check": "❌ 需要审查\n战略审查更新\n光子学细分市场细分",
             "Supercycle": "III-V族外延片",
-            "Change %": "-4.50%"
+            "Change %": "-3.64%"
         },
         {
             "Rank": "—",
@@ -2554,12 +2554,12 @@ window.PORTFOLIO_DATA = {
             "Rank": "—",
             "Ticker": "SMOP.OL",
             "Name": "智能光学集团",
-            "Total": 38,
+            "Total": 37,
             "Base": 48,
-            "Entry": 23,
+            "Entry": 20,
             "Rating": "失败——有竞争力的第 3 层系统，不是瓶颈",
             "Port": "",
-            "Current Price": "NOK 53",
+            "Current Price": "NOK 54.60",
             "Ceiling Target": "80-86 挪威克朗",
             "Upside": "1.5x-1.6x",
             "Position Type": "⚡ 瓶颈\n能力：光学监控——竞争激烈的市场。 1-2年窗口期。",
@@ -2570,7 +2570,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "开放光网络（DWDM 线路系统、复用转发器、收发器、软件）。敏捷的中型挑战者在次超大规模 DCI 领域从 Ciena/诺基亚手中夺取了份额。 DE-CIX、Pilot Fiber、neoscaler 获胜。但是：第 3 层系统 = 最浅的护城河。 Ciena 北美市场份额为 51%，华为全球份额为 31%，诺基亚/英飞朗为 20%。非独家来源。不需要物理。 “有竞争力的公司在超级周期中上升。垄断企业上升得更多。” DNB 卡内基：“明显的人工智能赢家”——但框架需要垄断，而不仅仅是顺风。",
             "IR Check": "smartoptics.com/投资者关系",
             "Supercycle": "DB1 光子学（第 3 层 — 系统）",
-            "Change %": "+0.00%"
+            "Change %": "+3.02%"
         },
         {
             "Rank": "—",
@@ -3021,7 +3021,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Rating": "失败 — 混合键合领导者，20 名客户。但 €20B MC，15+ 分析师，价格高于上限中点。入场 0.89 倍。",
             "Port": "",
-            "Current Price": "EUR 257.50",
+            "Current Price": "EUR 257.90",
             "Ceiling Target": "160-280欧元",
             "Upside": "0.6x-1.1x",
             "Position Type": "🔒 CHOKEPOINT（混合键合中）\n混合键合领先者<10nm。 20 名客户。 EVG 参加比赛。非混合业务（芯片贴装、倒装芯片）具有竞争力。",
@@ -3032,7 +3032,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "全球排名第一的混合绑定。 <10nm 精度。 20家客户（台积电、英特尔、三星、SK海力士、AMD、苹果、博通）。阿马特9%的股份。订单同比翻倍。但 ATH 附近的 MC 价格为 €20B。",
             "IR Check": "",
             "Supercycle": "DB5高级封装",
-            "Change %": "-1.42%"
+            "Change %": "-1.26%"
         },
         {
             "Rank": "—",
@@ -3065,7 +3065,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 50,
             "Rating": "1.17 欧元",
             "Port": "",
-            "Current Price": "EUR 19.40",
+            "Current Price": "EUR 19.95",
             "Ceiling Target": "失败",
             "Upside": "",
             "Position Type": "⚡ 瓶颈\n苦恼：垂死公司内部的 CoPoS 技术。正确的技术，错误的车辆。失败。",
@@ -3076,7 +3076,7 @@ window.PORTFOLIO_DATA = {
             "Key Thesis": "隐藏的淘金热。 LayTec 子公司 = 近乎垄断的 MOCVD 原位计量技术。 ~100% InP 附着率（SiPh 关键）。 70-85% GaN 附着率（上升）。 OEM 集成到 Aixtron 反应器中。牛津仪器 (Oxford Instruments) 独家蚀刻合作伙伴关系。双超级循环：GaN 电源（数据中心 800V、机器人）+ InP（SiPh 收发器）。但是：埋藏在多元化控股中。 LayTec = 集团收入的约 15-20%。其余（生命科学、绿色科技、清洁科技）正在下降。流动性极差（657 万股）。在 13 欧元回调时获得 67 WL。 LayTec 衍生产品 = 即时重新定价。",
             "IR Check": "德语文件。 NuWays AG 唯一分析师（PT 21 欧元，买入）。",
             "Supercycle": "GaN MOCVD + InP SiPh 计量",
-            "Change %": "-6.73%"
+            "Change %": "-4.09%"
         },
         {
             "Rank": "—",
