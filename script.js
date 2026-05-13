@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const I18N = {
         'en': {
             title_html: '1am<span>Investing</span>',
-            subtitle: 'Finding Asymmetrical Bets',
+            subtitle: 'Investing in the generational AI buildout',
             columns_btn: 'Columns ▼',
             pos_all: 'All',
             pos_chokepoint: 'Chokepoint',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'zh-CN': {
             title_html: '1am<span>Investing</span>',  // brand, not translated
-            subtitle: '寻找非对称投资机会',
+            subtitle: '投资于代际级 AI 基建周期',
             columns_btn: '列 ▼',
             pos_all: '全部',
             pos_chokepoint: '关键节点',
