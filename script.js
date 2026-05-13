@@ -919,15 +919,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         thead.innerHTML = headHtml;
 
+        // Cycle/P-E swap button — attach the click handler DIRECTLY to the
+        // button (not via th delegation) and stop the event from ever
+        // reaching the th's sort handler. Belt-and-suspenders: pointerdown
+        // is also caught so iOS Safari doesn't fire a synthesised click on
+        // the th after the button's own click resolves. Without this, on
+        // some touch devices the th's sort handler still fires alongside
+        // the toggle, leaving the user with an unwanted sort change.
+        Array.from(thead.querySelectorAll('.col-mode-toggle')).forEach(btn => {
+            const swallow = (e) => {
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                e.preventDefault();
+            };
+            btn.addEventListener('pointerdown', swallow);
+            btn.addEventListener('mousedown', swallow);
+            btn.addEventListener('click', (e) => {
+                swallow(e);
+                toggleMobileCycleMode();
+            });
+        });
+
         // Attach Header Events for Sorting
         Array.from(thead.querySelectorAll('th')).forEach(th => {
             th.addEventListener('click', (e) => {
-                // Cycle/P-E swap button — intercept before the sort handler.
-                if (e.target.closest('.col-mode-toggle')) {
-                    e.stopPropagation();
-                    toggleMobileCycleMode();
-                    return;
-                }
+                // Safety net: if any future code path lets a toggle click
+                // reach the th anyway, refuse to treat it as a sort. The
+                // direct button listener above is the primary defence —
+                // this catches anything that slips past it.
+                if (e.target.closest('.col-mode-toggle')) return;
                 const col = th.getAttribute('data-col');
                 if (sortState.col === col) {
                     sortState.asc = !sortState.asc;
