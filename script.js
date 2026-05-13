@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
             chart_btn_label: 'Open chart',
             chart_no_symbol: 'No TradingView mapping available for {ticker}.',
             chart_open_in_tv: 'Open in TradingView ↗',
+            search_placeholder: 'Search deep-dives…',
+            search_no_results: 'No matching deep-dive.',
         },
         'zh-CN': {
             title_html: '1am<span>Investing</span>',  // brand, not translated
@@ -89,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
             chart_btn_label: '打开行情',
             chart_no_symbol: '暂无 {ticker} 的 TradingView 映射。',
             chart_open_in_tv: '在 TradingView 打开 ↗',
+            search_placeholder: '搜索深度分析…',
+            search_no_results: '未找到深度分析。',
         },
     };
     function tr(key, vars) {
@@ -310,6 +314,135 @@ document.addEventListener('DOMContentLoaded', () => {
             .then((r) => (r.ok ? r.json() : []))
             .then((arr) => { deepDiveAvailable = new Set(arr); })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
+    }
+
+    // === Deep-Dive Search ===
+    // Input on the right side of the SuperCycle bar. Filters tickers that
+    // have a deep-dive on file (manifest-gated) and matches against ticker
+    // symbol OR company Name (case-insensitive substring). Selecting a
+    // result opens the deep-dive modal directly.
+    const searchInput = document.getElementById('sc-search-input');
+    const searchResults = document.getElementById('sc-search-results');
+    const SEARCH_MAX_RESULTS = 8;
+
+    // Walk the loaded data once on demand to build the searchable index.
+    // Recomputed each input event since deepDiveAvailable can update after
+    // the manifest fetch resolves and data.js can be hot-swapped on cron.
+    function buildSearchIndex() {
+        const full = window.PORTFOLIO_DATA;
+        if (!full || !full.en) return [];
+        const enData = full.en;
+        const langData = (full[currentLang] && full[currentLang].length === enData.length) ? full[currentLang] : enData;
+        const out = [];
+        for (let i = 0; i < enData.length; i++) {
+            const row = enData[i] || {};
+            const ticker = (row.Ticker || '').trim();
+            if (!ticker || !deepDiveAvailable.has(ticker)) continue;
+            // Show the localized Name in the dropdown when the user has
+            // Mandarin selected — but always match the English name too so
+            // users can find tickers by either language.
+            const enName = (row.Name || '').trim();
+            const localName = ((langData[i] && langData[i].Name) || enName).trim();
+            out.push({ ticker, displayName: localName, enName });
+        }
+        return out;
+    }
+
+    // Score a row against a query. Higher = better match.
+    // Priority: exact ticker > ticker startswith > name startswith > anywhere.
+    function searchScore(row, qLower) {
+        const t = row.ticker.toLowerCase();
+        const n = row.displayName.toLowerCase();
+        const e = row.enName.toLowerCase();
+        if (t === qLower) return 1000;
+        if (t.startsWith(qLower)) return 500 - t.length;   // shorter ticker wins ties
+        if (n.startsWith(qLower) || e.startsWith(qLower)) return 300;
+        if (t.includes(qLower)) return 200;
+        if (n.includes(qLower) || e.includes(qLower)) return 100;
+        return 0;
+    }
+
+    function renderSearchResults(query) {
+        const q = query.trim();
+        if (!q) {
+            searchResults.classList.add('hidden');
+            searchResults.innerHTML = '';
+            return;
+        }
+        const qLower = q.toLowerCase();
+        const index = buildSearchIndex();
+        const matches = index
+            .map(row => ({ row, score: searchScore(row, qLower) }))
+            .filter(x => x.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, SEARCH_MAX_RESULTS);
+
+        if (!matches.length) {
+            searchResults.innerHTML = `<div class="sc-search-empty">${tr('search_no_results')}</div>`;
+            searchResults.classList.remove('hidden');
+            return;
+        }
+
+        searchResults.innerHTML = matches.map(({ row }) => {
+            const safeTicker = row.ticker.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+            const safeName = (row.displayName || '').replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+            return `<div class="sc-search-result" role="option" data-ticker="${safeTicker}">` +
+                       `<span class="sc-search-result-ticker">${safeTicker}</span>` +
+                       (safeName ? `<span class="sc-search-result-name">${safeName}</span>` : '') +
+                   `</div>`;
+        }).join('');
+        searchResults.classList.remove('hidden');
+    }
+
+    function clearSearch() {
+        if (searchInput) searchInput.value = '';
+        searchResults.classList.add('hidden');
+        searchResults.innerHTML = '';
+    }
+
+    if (searchInput && searchResults) {
+        searchInput.addEventListener('input', (e) => {
+            renderSearchResults(e.target.value);
+        });
+        // Re-open dropdown if the user clicks back into a non-empty input.
+        searchInput.addEventListener('focus', (e) => {
+            if (e.target.value.trim()) renderSearchResults(e.target.value);
+        });
+        // Click a result -> open deep-dive, clear the input.
+        searchResults.addEventListener('click', (e) => {
+            const row = e.target.closest('.sc-search-result');
+            if (!row) return;
+            const ticker = row.getAttribute('data-ticker');
+            if (ticker) {
+                openDeepDive(ticker);
+                clearSearch();
+            }
+        });
+        // Escape clears + closes; Enter activates the first result if any.
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                clearSearch();
+                searchInput.blur();
+            } else if (e.key === 'Enter') {
+                const first = searchResults.querySelector('.sc-search-result');
+                if (first) {
+                    e.preventDefault();
+                    const ticker = first.getAttribute('data-ticker');
+                    if (ticker) {
+                        openDeepDive(ticker);
+                        clearSearch();
+                    }
+                }
+            }
+        });
+        // Click outside the search container closes the dropdown (keeps the
+        // query so the user can re-focus to continue refining).
+        document.addEventListener('click', (e) => {
+            const container = document.getElementById('sc-search');
+            if (container && !container.contains(e.target)) {
+                searchResults.classList.add('hidden');
+            }
+        });
     }
 
     // Discovery hint banner — auto-hide on first deep-dive open, persist via localStorage.

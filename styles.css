@@ -1320,17 +1320,30 @@ body.light-mode .modal-content th {
     opacity: 1;
 }
 
-/* === SuperCycle multi-select filter ============================
-   Composes with the position-toggle (All/Chokepoint/Bottleneck) above.
-   Each pill is independently toggleable. Active pill = filled accent,
-   inactive = outlined. */
+/* === SuperCycle multi-select filter + deep-dive search ==========
+   3-column grid keeps the pill group visually centered while the
+   search input pins to the far right. Spacer column on the left
+   mirrors the search column's width so the pills stay optically
+   centered. Composes with the position-toggle (All/Chokepoint/
+   Bottleneck) above. Each pill is independently toggleable. Active
+   pill = filled accent, inactive = outlined. */
 .supercycle-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1.25rem 0.5rem;
+}
+.sc-controls {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 0.4rem;
-    padding: 0 1.25rem 0.5rem;
+}
+.sc-spacer {
+    /* empty mirror of the search column — keeps the pill group optically
+       centered between equal-width side columns */
 }
 .supercycle-bar .filter-label {
     font-size: 0.78rem;
@@ -1367,11 +1380,119 @@ body.light-mode .modal-content th {
     background: var(--accent);
 }
 
+/* === Deep-dive search input + result dropdown ==================
+   Lives in the right column of the supercycle-bar grid. Dropdown
+   floats absolutely below the input so its height doesn't bump the
+   filter row. */
+.sc-search {
+    position: relative;
+    justify-self: end;
+    width: 220px;
+    max-width: 100%;
+}
+.sc-search-input {
+    width: 100%;
+    padding: 0.4rem 0.6rem 0.4rem 1.9rem;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.82rem;
+    transition: border-color 0.18s ease, background 0.18s ease;
+    /* Override default search-input clear button (×) which doesn't match our theme */
+    -webkit-appearance: none;
+    appearance: none;
+}
+body.light-mode .sc-search-input {
+    background: rgba(0, 0, 0, 0.04);
+}
+.sc-search-input::placeholder {
+    color: var(--text-secondary);
+}
+.sc-search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(0, 0, 0, 0.35);
+}
+body.light-mode .sc-search-input:focus {
+    background: rgba(0, 0, 0, 0.02);
+}
+.sc-search-icon {
+    position: absolute;
+    left: 0.55rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+}
+.sc-search-results {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--sticky-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    max-height: 320px;
+    overflow-y: auto;
+}
+.sc-search-results.hidden {
+    display: none;
+}
+.sc-search-result {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    padding: 0.45rem 0.7rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.12s ease;
+}
+.sc-search-result:last-child {
+    border-bottom: none;
+}
+.sc-search-result:hover,
+.sc-search-result.active {
+    background: rgba(59, 130, 246, 0.12);
+}
+.sc-search-result-ticker {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.85rem;
+}
+.sc-search-result-name {
+    font-size: 0.74rem;
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sc-search-empty {
+    padding: 0.7rem 0.9rem;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
 /* Mobile: tighter pills, smaller font */
 @media (max-width: 480px) {
     .supercycle-bar {
+        /* Collapse to single column: pills row above, search row below */
+        grid-template-columns: 1fr;
         gap: 0.3rem;
         padding: 0 0.5rem 0.4rem;
+    }
+    .sc-spacer {
+        display: none;   /* not needed when stacked */
+    }
+    .sc-search {
+        width: 100%;
+        justify-self: stretch;
     }
     .supercycle-bar .filter-label {
         font-size: 0.68rem;

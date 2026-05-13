@@ -54,7 +54,22 @@ def candidate_prefixes(ticker):
     # 4. Just the base before first dash (HPS-A.TO -> HPS)
     if "-" in ticker:
         yield from add(ticker.split("-", 1)[0])
-    # 5. Yahoo-concat form for xlsx tickers that drop the exchange suffix
+    # 5. Suffix synonyms — Yahoo and the analyst's filenames sometimes
+    #    disagree on Mainland-China exchange codes. Yahoo uses .SZ and
+    #    .SS (compact), but artifacts often write SZSE / SSE (full).
+    #    Mirror both directions so either filename style matches.
+    if "." in ticker:
+        base, suffix = ticker.split(".", 1)
+        suffix_synonyms = {
+            "SZ": ["SZSE"],     # Shenzhen short -> full
+            "SZSE": ["SZ"],     # Shenzhen full -> short
+            "SS": ["SSE"],      # Shanghai short -> full
+            "SSE": ["SS"],      # Shanghai full -> short
+        }
+        for alt in suffix_synonyms.get(suffix.upper(), []):
+            yield from add(f"{base}.{alt}")
+            yield from add(f"{base}{alt}")     # dot-stripped form too
+    # 6. Yahoo-concat form for xlsx tickers that drop the exchange suffix
     #    (ALRIB -> ALRIBPA on Paris Euronext, NKT -> NKTCO on Copenhagen)
     if "." not in ticker and "-" not in ticker:
         for suffix in ("PA", "CO", "AS", "OL", "AX", "KS", "L", "DE", "TO"):

@@ -96,21 +96,47 @@
             </div>
         </section>
 
-        <!-- SuperCycle multi-select filter. Independent of (and composed with)
-             the All/Chokepoint/Bottleneck slider above. Row matches if at
-             least one of its SuperCycle tags is currently active. Default:
-             all 5 pills active = no filtering. -->
+        <!-- SuperCycle multi-select filter + deep-dive search.
+             3-column grid: empty spacer | centered pill group | right-aligned search.
+             On phones the grid collapses to one column and the search drops
+             to its own full-width row below the pills.
+
+             SuperCycle pills are independent of (and composed with) the
+             All/Chokepoint/Bottleneck slider above. A row matches if at
+             least one of its SuperCycle tags is currently active.
+
+             Search input matches against ticker symbol AND company name
+             (case-insensitive substring), but only over tickers that have
+             a deep-dive on file — selecting a result opens its deep-dive
+             modal directly. -->
         <section class="supercycle-bar" id="supercycle-bar">
-            <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
-            <button class="sc-pill active" data-sc="AI">AI</button>
-            <button class="sc-pill active" data-sc="CPO">CPO</button>
-            <button class="sc-pill active" data-sc="800G">800G</button>
-            <button class="sc-pill active" data-sc="1.6T">1.6T</button>
-            <!-- 'Other' starts off by default (catches uncategorized rows
-                 that aren't part of the four core supercycles). JS reads
-                 the active state from localStorage / DEFAULT_SUPERCYCLES,
-                 so this initial class is only the pre-JS paint state. -->
-            <button class="sc-pill" data-sc="Other" data-i18n="cycle_Other">Other</button>
+            <div class="sc-spacer" aria-hidden="true"></div>
+            <div class="sc-controls">
+                <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
+                <button class="sc-pill active" data-sc="AI">AI</button>
+                <button class="sc-pill active" data-sc="CPO">CPO</button>
+                <button class="sc-pill active" data-sc="800G">800G</button>
+                <button class="sc-pill active" data-sc="1.6T">1.6T</button>
+                <!-- 'Other' starts off by default (catches uncategorized rows
+                     that aren't part of the four core supercycles). JS reads
+                     the active state from localStorage / DEFAULT_SUPERCYCLES,
+                     so this initial class is only the pre-JS paint state. -->
+                <button class="sc-pill" data-sc="Other" data-i18n="cycle_Other">Other</button>
+            </div>
+            <div class="sc-search" id="sc-search">
+                <span class="sc-search-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                </span>
+                <input type="search" id="sc-search-input"
+                       class="sc-search-input"
+                       autocomplete="off" spellcheck="false"
+                       data-i18n-attr="placeholder:search_placeholder"
+                       placeholder="Search deep-dives…">
+                <div id="sc-search-results" class="sc-search-results hidden" role="listbox"></div>
+            </div>
         </section>
 
         <!-- First-visit discovery hint for the deep-dive feature. Auto-hides
