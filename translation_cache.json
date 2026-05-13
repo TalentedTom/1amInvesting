@@ -1417,7 +1417,17 @@
     "GBp 60-120": "60-120 英镑",
     "1.6x-1.7x": "1.6倍-1.7倍",
     "1.2x-1.3x": "1.2倍-1.3倍",
-    "1.9x-1.9x": "1.9倍-1.9倍"
+    "1.9x-1.9x": "1.9倍-1.9倍",
+    "TWD 1,100-2,500": "新台币 1,100-2,500",
+    "2.4x-5.5x": "2.4倍-5.5倍",
+    "Han's Laser (大族激光)": "Han's Laser (大族激光)",
+    "FAIL — No asymmetry at CNY 134 (59x 2026E PE). AI PCB thesis priced in after 2 limit-up days. Conglomerate with 7% margins. Reconsider at CNY 70-80.": "失败——134元人民币（59x 2026E PE）没有不对称。 AI PCB论文在2个涨停日后定价。利润率为 7% 的综合企业。重新考虑70-80元。",
+    "CNY 100-200": "100-200元",
+    "0.7x-1.5x": "0.7倍-1.5倍",
+    "InnoLas (英诺激光)": "InnoLas (英诺激光)",
+    "FAIL — No monopoly (competes w/ 大族数控 10x larger). No asymmetry at ~CNY 62-80. Fragmented market (top 5 = 24%). Reconsider at CNY 30-40.": "失败——没有垄断（与大族数控竞争10倍）。 〜CNY 62-80 没有不对称。市场分散（前 5 名 = 24%）。再考虑一下30-40元。",
+    "CNY 50-120": "50-120元",
+    "0.7x-1.7x": "0.7倍-1.7倍"
   },
   "pl": {
     "Coherent Corp": "Spójna firma",
