@@ -442,16 +442,13 @@ tr.row-expanded td:nth-child(3) {
 }
 
 /* === 2027-28 P/E rendering =====================================
-   Range portion (e.g., '20-28x') is the primary signal — bold-emphasised.
-   Parenthetical annotation is de-emphasised but visible on desktop.
-   Compact form (mobile cycle column in P/E mode) shows just the range. */
+   We show only the multiplier range (e.g. '20-28x') on both desktop
+   and mobile. The narrative annotation that lives in parens in the
+   xlsx is dropped at render — deep-dive markdown carries the
+   commentary if/when a deeper read is wanted. */
 .pe-range {
     font-weight: 600;
     color: var(--text-primary);
-}
-.pe-annot {
-    color: var(--text-secondary);
-    font-size: 0.86em;
 }
 .pe-compact {
     display: inline-block;

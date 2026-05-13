@@ -1151,20 +1151,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return out || `<span style="color: #64748b;">-</span>`;
         }
 
-        // 2027-28 P/E: emphasise the multiplier range (the "20-28x" part)
-        // and de-emphasise the narrative annotation in parens. On desktop
-        // both are visible; the cell's max-width + ellipsis truncates long
-        // annotations and tap-expand on the row shows the full string.
+        // 2027-28 P/E: show ONLY the multiplier range (e.g. "20-28x"). The
+        // source string in xlsx carries a narrative annotation in parens
+        // (e.g. "20-28x (equipment, glass substrate monopoly)"); we drop
+        // that here so the column stays a compact valuation read. The
+        // annotation is still preserved in the deep-dive markdown for any
+        // ticker that has one.
         if (colName === "2027-28 P/E") {
             const s = String(value).trim();
             const open = s.indexOf('(');
-            if (open < 0) {
-                return `<span class="pe-range">${s}</span>`;
-            }
-            const range = s.slice(0, open).trim();
-            const annot = s.slice(open).trim();
-            const safeAnnot = annot.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-            return `<span class="pe-range">${range}</span> <span class="pe-annot">${safeAnnot}</span>`;
+            const range = (open < 0 ? s : s.slice(0, open)).trim();
+            return `<span class="pe-range">${range || '-'}</span>`;
         }
 
         // Ratings Badge Styling
