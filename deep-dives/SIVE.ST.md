@@ -591,3 +591,18 @@ Six revenue vectors means there is NO scenario where ALL six fail simultaneously
 - **May 12, 2026: 111🔥 (unchanged) — CONVEQUITY ARCHITECTURAL ADVANTAGE CONFIRMED + imec PDK LOCK-IN.** Convequity (independent, PhD-level) explained WHY SIVE wins over LITE/COHR in GPU-level CPO: LITE/COHR make single high-power CW lasers (300-500mW) that get SPLIT into channels — works for today ELS (External Light Source) designs. SIVE makes native 8λ-16λ CW DFB ARRAYS (~50-100mW per λ) — NO splitting needed. Lower loss, less heat, higher bandwidth density. PURPOSE-BUILT for sitting next to a 1000W GPU die where space and thermal budget are constrained. You CANNOT put a 500mW single laser + splitter next to a GPU. You CAN put a SIVE multi-wavelength array. This is the architectural shift from ELS (2025-2026) to GPU-level CPO (2027-2028). NEW MOAT DIMENSION: "Flip-chip + imec PDK lock-in." SIVE lasers designed into imec Process Design Kit — the standard foundries (TSMC, GF, Tower) use for SiPh chip design. Once in the PDK, every chip designer using that PDK designs around SIVE laser specs. Switching costs become MASSIVE. Same moat as ARM instruction set or TSMC standard cells. PDK lock-in was NOT previously in artifact. This is the mechanism behind "sole independent supplier" — its not just that SIVE is the only option, its that the design ecosystem is BUILT AROUND SIVE specs. No Base change (already 93%) but conviction behind 93% significantly strengthened. Convequity arriving independently at same conclusion as Serenity = another independent thesis confirmation.
 
 - **May 13, 2026: 105🔥 (+2) — GOLDMAN SACHS CPO TAM CONFIRMATION.** Goldman published CPO TAM 2026-2028: $96.7B total. ELS (External Light Source) segment = $10.83B. SIVE is the CW laser monopoly for CPO ELS. At 5-10% capture of $10.83B ELS TAM = $540M-$1.08B revenue — EXCEEDS old ceiling HIGH of $600M revenue. Ceiling raised SEK 545→600 on HIGH end. Goldman Exhibit 34: Light source supply "VERY TIGHT" through all of 2026, "TIGHT" through Q3 2028. Supply doesn't balance until H2 2028. = 14 consecutive quarters of supply constraint = 3.5 years of pricing power confirmed. Reasons: (1) Strong AI server ramp demand, (2) InP supply constraints, (3) Capacity expansion delays. "Drives huge margin expansion for photonics names." At SEK 56.65: midpoint SEK 360, ratio 6.36x, Entry 124%. Score 103→105🔥.
+
+## ⚠️ MONITORING: MicroLED CPO as Long-Term Alternative (added May 13, 2026)
+
+Goldman Sachs highlights MicroLED as a growing alternative to SiPh CW lasers for power-constrained AI rack optical links. ams-OSRAM developing MicroLED arrays with unnamed hyperscaler partner, launch target 2027, meaningful ramp H2 2028. TrendForce projects MicroLED CPO transceiver market reaching ~$900M by 2030.
+
+**Threat assessment: 5-10% probability through 2030.**
+
+Why LOW threat:
+- $900M MicroLED TAM vs $10,830M CW laser ELS TAM = <10% of market even at maturity
+- MicroLED is COMPLEMENTARY to SiPh, not replacing it (low-power edge cases)
+- SiPh CW lasers remain STANDARD for high-bandwidth CPO backbone
+- Goldman: CW laser supply "very tight" through 2028 = SiPh IS the market
+- By the time MicroLED reaches volume, SIVE has captured 3+ years of monopoly revenue at $3-10B+ MC
+
+**Re-evaluation trigger:** If MicroLED wins a SECOND hyperscaler deal OR demonstrates datacenter-scale reliability, increase threat probability to 15-20% and reassess SIVE Base deduction (-1 to -2).
