@@ -160,13 +160,21 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
 
     // Mobile-only Cycle/P-E toggle. On phones, column 1 doubles as either
-    // the SuperCycle pills (default) or the 2027-28 P/E value. Desktop
-    // ignores this state — both surfaces are visible as separate columns
-    // there. Persisted across reloads.
-    const CYCLE_PE_MODE_STORAGE_KEY = 'cycleMobileMode_v1';
+    // the SuperCycle pills or the 2027-28 P/E value. Desktop ignores
+    // this state — both surfaces are visible as separate columns there.
+    //
+    // Default: P/E. Phones already show cycle tags implicitly via the
+    // SuperCycle filter pills at the top; the P/E read is the more
+    // valuable inline signal for the limited column-1 space.
+    //
+    // Storage key bumped to v2 to apply the new default to anyone who
+    // last toggled under v1 (their old 'cycle' or 'pe' value is reset
+    // on this load — they re-pick if they want something other than
+    // the new default).
+    const CYCLE_PE_MODE_STORAGE_KEY = 'cycleMobileMode_v2';
     let mobileCycleMode = (() => {
         const v = localStorage.getItem(CYCLE_PE_MODE_STORAGE_KEY);
-        return v === 'pe' ? 'pe' : 'cycle';
+        return v === 'cycle' ? 'cycle' : 'pe';
     })();
     // Live check rather than cached value — the user can resize their
     // browser, and we don't want a stale flag to drive the rendering path.
