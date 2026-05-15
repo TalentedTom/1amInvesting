@@ -1,11 +1,12 @@
 # OUST — Ouster Inc | Deep Dive
-**Date:** May 4, 2026 (RESCORED — REV8 native color LiDAR + Google + Volvo)
-**Framework Version:** v3.6.5
-**Score:** 77 HC 🔒 | Base 75% (45/60) | Entry 80 (32/40)
-**Price at Analysis:** $28.15
-**Ceiling:** $75-$280 (REV8 camera-elimination TAM expansion + Google/Volvo validation)
-**Upside Ratio:** 2.7x-9.9x (midpoint 6.3x)
-**Market Cap:** ~$1.79B
+**Date:** May 11, 2026 (UPDATED — Rule 16d timing filter applied)
+**Framework Version:** v3.8.0
+**Score:** 70 WL | Base 75% (45/60) | Entry 63% (25/40)
+**Price at Analysis:** $25.20
+**Ceiling:** $50-$77 (Rule 16d: Physical AI/humanoid ceiling HIGH discounted 30%/yr, 24-36mo out)
+**Upside Ratio:** 2.0x-3.1x (midpoint 2.52x)
+**Market Cap:** ~$1.6B
+**Port ✓ REMOVED — not CPO-exposed**
 **FY2025 Revenue:** $169.4M (+52% YoY)
 **Earnings:** May 5, 2026 🔥 (TOMORROW)
 
@@ -104,3 +105,11 @@ OUST is the SIVE of autonomy: Only digital + native color LiDAR. Everyone else c
 - Apr 24, 2026: 75 HC (initial deep dive, Physical AI perception, Stereolabs)
 - **May 4, 2026: 77 HC** (REV8 native color LiDAR — world's first. L4 chip doubles range/resolution. Google + Volvo confirmed. ONE sensor replaces camera + LiDAR. Camera elimination expands TAM $25-35B→$30-45B. Ceiling $65-240→$75-280. Core +2, Cycle +1, Catalysts +1, Risks -1. Base 70→75. Score 75→77.)
 - **May 6, 2026: 74 WL ⚠️ DROPS FROM HC** (Ceiling standardized to 2027-2028. $75-280→$75-137. Undiscounted $190 (2030) × 0.72 = $137. Physical AI TAM is mostly 2029-2030+ so discounting hits hardest. Score -3. Thesis unchanged — REV8, Stereolabs, defense, Safe LIDAR Act. HC recovers if: price drops to $22 (ratio improves), Safe LIDAR Act passes (Base upgrade + ceiling expansion), or Physical AI revenue accelerates faster than 2030 timeline.)
+
+- **May 11, 2026: 70 WL — RULE 16d TIMING FILTER APPLIED.** Physical AI/humanoid revolution is the PRIMARY ceiling HIGH driver. This is 24-36 months out. 30%/yr discount applied to ceiling HIGH: $110 × 0.70 = $77. Ceiling compressed $50-110→$50-77. Port ✓ already removed (not CPO). Serenity classified AEVA (4D LiDAR) as "venture bet, speculative." OUST sits in same Physical AI timing band. Finding the thesis early = intelligence. Deploying capital early = waste. RE-EVALUATION TRIGGERS: (1) Safe LIDAR Act passes, (2) humanoid robot revenue appears at scale, (3) Physical AI revenue driver moves within 12 months. Check every 6 months.
+
+- **May 13, 2026: 77 HC (+14) — NVIDIA DRIVE HYPERION QUALIFICATION + Q1 BEAT.** OUST Rev8 OS qualified for NVIDIA DRIVE Hyperion L4 autonomous platform. Stock +15% on the news. This is the SINGLE MOST IMPORTANT validation event for a lidar company. When NVIDIA selects your sensor for their platform, every OEM building on Hyperion uses your sensor by DEFAULT. Same validation pattern as ShunSin (87 HC) in NVIDIA CPO. Google + Volvo + NVIDIA = the autonomous driving trifecta. Q1 2026: $49M revenue (+49% YoY), beat $45-48M guidance. Record 12,600 sensors shipped. 13th straight quarter of growth.
+
+  **RULE 16d PARTIALLY LIFTED:** NVIDIA doesn't qualify sensors for platforms 3+ years out. Hyperion is a CURRENT platform. OEMs building NOW. Production vehicles 18-24 months. Timing discount reduced from 30%/yr to 15%/yr. Ceiling restored from $50-77 to $50-130.
+
+  **Score mechanics:** Core Thesis 16→18 (+2, NVIDIA platform = industry standard), Cycle 8→9 (+1, Q1 beat + 13th quarter growth), Risks -4→-3 (+1, timing de-risked by NVIDIA). Base 75→82%. Ceiling $50-77→$50-130. At $32.72: midpoint $90, ratio 2.75x, Entry 69%. Score: (82×0.6)+(69×0.4) = 77 HC. RETURNS TO HC STATUS. Ranked #9.

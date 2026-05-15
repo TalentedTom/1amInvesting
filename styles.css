@@ -413,6 +413,23 @@ tr.row-expanded td:nth-child(3) {
 .cycle-box[data-cycle="1.6T"]   { background: #06b6d4; }
 .cycle-box[data-cycle="Other"]  { background: #6b7280; }
 
+/* === Mobile P/E year-tag ===
+   Tiny '27-28 label stacked above the 'P/E' header text on phones, so
+   the time window of the multiplier is unambiguous. Block-display
+   creates the two-line stack within the table cell. Hidden by default
+   so it doesn't appear in Cycle mode — labelFor only renders this
+   span in mobile P/E mode. */
+.pe-year-tag {
+    display: block;
+    font-size: 0.48rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1;
+    letter-spacing: 0;
+    margin-bottom: 1px;
+    text-transform: none;
+}
+
 /* === Cycle/P-E swap button (mobile-only) ===
    Appears in the SuperCycle column header on phones, lets the user flip
    the column's contents between cycle pills and the 2027-28 P/E value.

@@ -132,11 +132,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // The `_chart` pseudo-column has no header text — it's a narrow strip of
     // chart-icon buttons, header would only add visual noise.
     //
-    // On mobile in P/E mode, the SuperCycle column header reads 'P/E' since
-    // its cells will render P/E values rather than cycle pills.
+    // On mobile in P/E mode, the SuperCycle column header shows a tiny
+    // '27-28 year-tag stacked above 'P/E' so the time window of the
+    // multiplier is unambiguous — without it the bare numbers (e.g.
+    // 20-28x) could be read as trailing P/E or current-year P/E.
     const labelFor = (col) => {
         if (col === '_chart') return '';
-        if (col === 'SuperCycle' && inMobilePEMode()) return tr('col_PE_short');
+        if (col === 'SuperCycle' && inMobilePEMode()) {
+            return `<span class="pe-year-tag">'27-28</span>${tr('col_PE_short')}`;
+        }
         const eng = displayNames[col] || col;
         return tr(`col_${eng}`);
     };
