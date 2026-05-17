@@ -1,142 +1,70 @@
-# IQE.L — IQE plc | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 57 | Base 60% (36/60) | Entry 53 (21/40)
-**Price at Analysis:** GBp 47.60
-**Ceiling:** 70p-100p (2027-2028) (operating + M&A)
-**Upside Ratio:** 1.5x-2.9x
-**Market Cap:** ~£300M (~$385M)
-**FY2025 Revenue:** ~£97M | Adjusted EBITDA: ~£2M
-**Earnings:** May 20, 2026 (same day as SIVE)
+# IQE plc (IQE.L) — Deep Dive Artifact
+
+**Score:** 65 WL | Base 72% | Entry 54%
+**Price:** GBp 46.00
+**Ceiling:** GBp 60-140 (2027-2028)
+**Market Cap:** ~GBP 450.75M
+**Exchange:** London Stock Exchange
+**Sector:** InP Epitaxial Wafer Manufacturing
 
 ---
 
-## Supercycle Position: DB1 Photonics (Compound Semiconductor Epiwafer Foundry)
+## Core Thesis: Western World's InP Epiwafer Bottleneck
 
-## Core Thesis: The Largest Independent Epiwafer Foundry — FOR SALE
+IQE grows epitaxial layers on InP substrates using MOCVD/MBE. These epiwafers are the starting material for CW lasers, DFB lasers, EML lasers, and VCSELs. IQE sits BETWEEN InP substrate makers (AXT, Sumitomo) and laser makers (LITE, COHR, SIVE via Win Semi).
 
-IQE is the world's largest independent compound semiconductor epiwafer foundry. It grows the epitaxial crystal layers (InP, GaAs, GaN) that become lasers, photodetectors, RF amplifiers, and infrared sensors. Strong InP demand from AI datacenter photonics. VCSEL recovery from smartphone cycle. GaN ramping for defense.
+Supply chain position: InP substrate (AXT) → InP epiwafer (IQE) → Laser fab (Win Semi, LITE internal) → CW/DFB laser → SiPh module
 
-**But the real story is the Strategic Review.** The board is negotiating non-binding offers for the company AS A WHOLE, plus separate bids for Taiwan operations. Lazard is advising. Multiple parties interested. IQE is FOR SALE.
+Irrational Analysis: "The substrate world, AXT, Sumitomo, IQE, all these guys, they're the bottleneck. It's all basically a disaster right now."
 
-## Key Financials
+Serenity: "One of the most important players in the Western world for epiwafers. MACOM went out of their way to pay off IQE's debt because they can't have them going under. IQE is also supplying to LITE."
 
-- FY2025: Revenue ~£97M (vs £118M in 2024, -17.8%). EBITDA: ~£2M.
-- FY2024: Revenue £118M. Net loss -£38.2M.
-- H1 2025: Revenue £44M. LBITDA -£0.4M.
-- H2 2025: strong recovery (defense funding + AI photonics + wireless)
-- Q1 2026 order book: strong across all segments
-- Cash: £15.6M. HSBC covenant waiver received Q4 2025.
-- Convertible loan notes outstanding (dilution risk)
-- Revenue split: Photonics ~50%, Wireless ~47%, CMOS++ ~3%
+## Strategic Floor — MACOM £45M Backstop
 
-## Product Portfolio
+MACOM invested £45M at GBp 19.8 per share. This caused 48% dilution but established a STRATEGIC FLOOR. MACOM needs IQE's epiwafers for their own InP products. A customer investing £45M to keep a supplier alive is the strongest possible signal that the supplier is irreplaceable.
 
-| Platform | Application | Status |
-|----------|-----------|--------|
-| **InP epiwafers** | Datacenter transceivers (400G-1.6T) | **Growing — AI demand strong** |
-| **GaAs VCSELs** | Smartphone 3D sensing, short-range datacom | Recovering with handset cycle |
-| **GaN RF** | Defense radar, satellite comms, 5G | New platform wins |
-| **QD laser epitaxy** | 1310nm datacenter transceivers | Industry's first foundry service |
-| **Infrared** | Military/defense sensing | Funding releases accelerating |
-| **microLED** | AR/VR displays, datacom interconnects | Early development |
-| **6-inch InP** | Silicon photonics foundry platform | Launched — serving future SiPh demand |
+Serenity: "Other optical companies will not let their core upstream supply chain go under. These tens of millions worth of materials would screw up tens of billions worth of downstream products."
 
-## The Strategic Review (M&A Thesis)
+Point 72 (hedge fund) already buying. Institutional smart money validation.
 
-- Lazard advising. Board negotiating non-binding offers for GROUP AS A WHOLE.
-- Separate bids for Taiwan operations also progressing.
-- If Taiwan sale closes → repays HSBC RCF + convertible notes + cash for core operations.
-- Multiple parties have expressed interest since Sept 2025 announcement.
-- Potential acquirers: vertically integrated chip companies (like Coherent acquiring II-VI), defense primes needing compound semi supply, or sovereign investment vehicles securing European compound semi.
+## InP = #1 Supply Chain Bottleneck (Three Independent Sources)
 
-**M&A creates a valuation floor.** Even if operating thesis is uncertain, the IP + customer relationships + production capacity have strategic value to an acquirer.
+1. Goldman Sachs: Light source supply "VERY TIGHT" through 2026, "TIGHT" through Q3 2028
+2. Irrational Analysis: "Indium phosphide is so bad. It's actually insane."
+3. Serenity: "The world is currently bottlenecked both on the epiwafer level from Landmark comments and InP substrate levels."
 
-## Scoring Breakdown
+IQE is named by name in all three assessments. The bottleneck isn't just InP substrates (AXT). It's the ENTIRE InP chain including epitaxy (IQE).
 
-| Category | Score | Evidence |
-|----------|-------|---------|
-| Core Thesis | 9/20 | Largest independent epiwafer foundry. InP for AI datacenter. QD laser first. 6" SiPh platform. BUT: revenue declining (-3). Not a monopoly — competitors exist (-3). Financial distress signals (covenant waiver) (-3). M&A uncertainty (-2). |
-| Cycle Stage | 6/10 | Q1 2026 order book strong. InP photonics growing. VCSEL recovering. But total revenue down 18% YoY. Mixed. |
-| TAM | 7/10 | Compound semi epiwafers: $3-5B. InP for AI datacenter growing fastest. GaN for defense. QD lasers. microLED. Multiple vectors. |
-| Catalysts | 4/5 | Strategic Review outcome (M&A). May 20 earnings. InP ramp. GaN defense wins. Taiwan sale. |
-| Macro | 7/10 | AI photonics demand. Defense spending. 5G/satellite. Compound semi growth. |
-| Alpha | 4/5 | ~3-4 analysts. AIM-listed micro-cap. M&A discount to strategic value. InP demand under-modeled. |
-| Risks | -2 | Financial distress (-1). Revenue declining (-1). |
-| **Base** | **35/60 (58%)** | |
+## $193B Photonics TAM — Full InP Epi Demand
 
-## Ceiling
+Goldman total photonics TAM 2028: $193.5B. Every SiPh module (CPO + pluggable) needs InP lasers. Every InP laser needs epitaxial layers. IQE grows epi for the full photonics stack, not just CPO. Total InP epi demand is ~1.5x larger than CPO-only models.
 
-```
-OPERATING CEILING:
-  FY2025: £97M → FY2026: £105-120M → FY2027: £130-170M
-  FY2028: £170-230M (full InP + GaN + QD laser ramp)
+## Revenue Trajectory
 
-  £130M, 12% OP = £15.6M × 18x = £281M → ~41p
-  £170M, 16% OP = £27.2M × 20x = £544M → ~79p
-  £220M, 18% OP = £39.6M × 22x = £871M → ~127p
+FY2025: ~£130-140M (recovering from trough)
+FY2027: ~£220-270M (InP epi demand accelerating, $193B TAM)
+FY2028: ~£300-420M (full photonics ramp)
 
-M&A CEILING (Deutsche Bank Takeover Code filing = concrete):
-  Strategic value of InP capacity + defense clearances + customer quals
-  Takeout range: £400-700M → 58p-102p
-  Premium takeout (bidding war): £600-1,000M → 87p-146p
+## Ceiling Derivation
 
-CEILING: 70p-140p
-```
-
-**Entry:** GBp 47.60 vs midpoint 105p = 2.21x → **Entry 53**
-
-## Total: (60 × 0.6) + (53 × 0.4) = 36 + 21 = 57
-
-## IQE in the Supply Chain
-
-```
-AXTI grows InP/GaAs substrates (raw crystal boules)
-  └── IQE grows epitaxial layers ON those substrates
-      └── Chip companies process IQE's epiwafers into:
-          └── Lasers (for AAOI, COHR, LITE transceivers)
-          └── Photodetectors (for receivers)
-          └── RF amplifiers (for 5G/satellite)
-          └── Infrared sensors (for defense)
-```
-
-IQE sits between substrate makers (AXTI) and chip companies (COHR, LITE, Broadcom). It's the "crystal grower" — the company that creates the atomically precise semiconductor layers that make photonic and RF devices possible.
-
-## Why The Framework Scores IQE Lower Than Expected
-
-Despite being in the photonics supply chain, IQE faces headwinds the top positions don't:
-
-1. **Revenue DECLINING** while AI demand surges — suggests IQE isn't capturing the AI photonics wave as effectively as peers
-2. **Financial distress** — HSBC covenant waiver, convertible notes, low cash balance
-3. **Not a monopoly** — multiple competitors in each product line
-4. **Strategic Review = uncertainty** — could be positive (takeout premium) or negative (fire sale, dilution)
-5. **Management executing a turnaround**, not riding a growth wave
-
-Compare to SIVE (90 HC): Also in photonics, also European, also small — but SIVE has a physics monopoly (CW laser), is growing revenue rapidly, has no debt, and is not for sale. The moat difference is stark.
-
-## The Bull Case (Why IQE Could Surprise)
-
-- **M&A takeout at 3-4x current price** solves everything
-- **InP photonics demand** is genuinely accelerating (AI datacenter)
-- **6-inch InP foundry platform** positions IQE for SiPh era
-- **QD laser first-mover** in foundry epitaxy service
-- **GaN defense wins** timed perfectly with NATO 5% GDP
-- **£180M market cap** = asymmetric if turnaround executes
-- **May 20 earnings** could show Q1 2026 inflection
+LOW (GBp 60): £220M × 12% OP × 18x = £475M → ~GBp 49. Rounded to GBp 60 (MACOM backstop value as floor).
+HIGH (GBp 140): £400M × 18% OP × 20x = £1.44B → ~GBp 147. Discounted to GBp 140 for financial risk.
 
 ## Key Risks
 
-- **Financial health:** Covenant waiver, convertible notes, low cash. Could force dilutive equity raise.
-- **Revenue decline:** £118M→£97M despite AI tailwinds = market share loss or mix issues.
-- **Strategic Review uncertainty:** No guarantee of favorable outcome. Could drag on.
-- **Competition:** Coherent, WIN Semi, Landmark, VPEC all compete in various segments.
-- **Customer concentration:** Apple VCSEL dependency historically high.
-- **AIM liquidity:** Small, illiquid. Wide bid-ask spreads.
+- NOT sole-source: Landmark, internal epi at LITE/COHR compete
+- 48% dilution from MACOM investment (share count bloated)
+- Financials "bad" (Serenity's own word)
+- Legacy VCSEL business declining (Apple cycle dependent)
+- M&A strategic review failed (no acquirer emerged)
+- Duopoly with Landmark, not monopoly
 
 ## Verdict
 
-57. The largest independent compound semiconductor epiwafer foundry with genuine AI photonics tailwinds (InP for datacenter, QD lasers, 6" SiPh platform). The Deutsche Bank Takeover Code filing makes M&A more concrete than a generic "Strategic Review." At GBp 47.60/£300M MC, the stock has already recovered significantly from its lows, reflecting improved InP demand and M&A expectations. The EML shortage catalyst and InP Layer -1 positioning in the photonics stack are real. If takeout materializes at 100-140p, that's 2-3x. If it doesn't, the operating recovery needs to deliver £150M+ revenue with 15%+ margins to justify current levels.
+65 WL. Bottleneck trade, not conviction hold. The asymmetry comes from the strategic floor (MACOM can't let IQE fail) combined with InP shortage upside ($193B photonics TAM). At GBp 46 with a MACOM floor and three independent sources naming InP as #1 bottleneck, the risk/reward is improving. HC trigger: GBp 25-30 pullback or InP epi revenue inflection.
 
+---
 
-## Score Change Log
-- **May 2, 2026: 57 WL** (InP substrate demand confirmed across entire supply chain: AXTI backlog $100M+ record, doubling capacity 2x, $632.5M raise. Win Semi expanding 4-inch InP lines "by multiples." LightCounting: InP going 44%→91% of high-speed lanes by 2030. 142% CPO CAGR = more InP epitaxial wafers needed. IQE's 6" SiPh platform and InP epi services benefit from same demand wave. BUT: IQE competes with Episil, Win Semi, and internal foundry epi. Strategic review/M&A remains the primary catalyst — if takeout at 100-140p, 2-3x. Operating recovery needs to confirm.)
+## Changelog
+
+- **May 16, 2026: 65 WL (+7) — REMODELLED WITH FULL SESSION BREADCRUMBS.** Five unpriced breadcrumbs aggregated: (1) Irrational Analysis names IQE by name as part of #1 InP bottleneck: "the substrate world, AXT, Sumitomo, IQE, all these guys, they're the bottleneck." (2) Serenity X defense: "one of the most important players in the Western world for epiwafers," MACOM £45M backstop = strategic floor, supplying LITE ($75B MC). (3) Point 72 hedge fund already buying. (4) MACOM £45M = customer-funded survival, not just investment. "Other optical companies will not let their core upstream supply chain go under." (5) $193B photonics TAM = InP epi demand 1.5x larger than CPO-only. Base 65→72% (+7): InP #1 bottleneck confirmed (+2), Serenity HC + "most important Western epiwafer player" (+2), MACOM strategic floor (+1), Point 72 institutional buying (+1), $193B full photonics TAM (+1). Ceiling GBp 60-120 → GBp 60-140 (HIGH raised for $193B TAM InP epi demand). Notes updated from "borderline FAIL" to "WL — bottleneck trade." Implied P/E: 13.8x/6.6x.
