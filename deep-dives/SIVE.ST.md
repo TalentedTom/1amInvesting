@@ -610,3 +610,39 @@ Why LOW threat:
 - **May 13, 2026: NASDAQ DUAL LISTING IN PROGRESS — CONFIRMED CATALYST.** SIVE published 2025 Annual Report with PCAOB-standard restatements for "potential dual listing on Nasdaq New York." FY2025 revenue slightly HIGHER at SEK 306.6M (from 304.1M). EBIT wider at -177.8M (from -141.3M) due to accounting reclassifications: revenue reallocation to 2026+, development expenditure impairment, inventory revaluations, stock comp adjustments. FY2024 also restated. All standard IFRS→US GAAP cleanup. NOT business deterioration — this is the paperwork filed when a US listing is REAL. Q1 2026 earnings DELAYED from May 20 → May 29 due to "ongoing audit uplift" for Nasdaq listing. Impact of dual listing: US institutional access, analyst coverage begins, index inclusion possible, liquidity 5-10x improvement, dollar-denominated trading, options chain. European photonics companies that dual-list typically see 30-50% multiple expansion within 12 months. SIVE at 105🔥 scored on STOCKHOLM ONLY multiples — US growth multiples would expand ceiling further. Revenue reallocation to 2026+ means Q1 2026 numbers may show HIGHER revenue from moved recognition. Monitor May 29 earnings for: (1) laser volume production, (2) Win Semi capacity lock, (3) Ayar/Jabil customer volume, (4) hyperscaler mentions, (5) Nasdaq listing timeline, (6) PCAOB-standard quarterly filing.
 
 - **May 14, 2026: 106🔥 (+1) — POET LUMILENS $50M PO = CONFIRMED SIVE REVENUE VECTOR.** POET received $50M initial PO from Lumilens, scaling to $500M over 5 years. Serenity: "It's actually more beneficial to SIVE than POET, since Sivers gets a large percent of that $500M POET BOM of laser orders." CW laser content ~25-35% of optical engine BOM = $15M initial, $150M cumulative to SIVE. POET ramping H2 2026 with SIVE confirmed in SIVE's own 2025 Annual Report. POET is ONE of NINE+ confirmed SIVE demand vectors now mapped: (1) POET/Lumilens, (2) COUPE/TSMC, (3) Ayar Labs/GF/Jabil, (4) OpenLight/Tower, (5) Marvell/Celestial Starlight ELS, (6) Lightelligence, (7) Lightmatter, (8) Apple adjacent SiPh, (9) O-Net/Enablence Asian hyperscaler ELS. Nine customers competing for Goldman-confirmed "very tight" laser supply. Base 93→94%: customer diversification beyond 4→9+ platforms increases probability of ELS TAM capture. Score 105→106🔥.
+
+- **May 14, 2026: 110🔥 (+4) — 2025 ANNUAL REPORT: TAM EXPANSION TO PLUGGABLE + WIN SEMI CAPACITY LOCK + VOLUME H2.** Serenity's analysis of SIVE 2025 Annual Report delivers all four checklist items: (1) TAM EXPANSION: "Serviceable markets now expanded to include PLUGGABLE optical interconnects as well as scale-up and scale-out for CPO." TAM expands from CPO ELS $10.83B to CPO+pluggable $60B+ addressable. Multiple hyperscaler suppliers testing/qualifying DFB lasers for pluggable transceivers beyond Jabil. (2) WIN SEMI CAPACITY LOCKED: "Partnership with Win Semiconductor gives us strong position to meet growing demand." Fab capacity secured during Goldman-confirmed "very tight" supply. (3) VOLUME PRODUCTION H2 2026: POET prototypes H1, production scaling H2. AEVA LIDAR volume Q4 2026. Revenue floor from LIDAR while CPO scales. (4) LIGHTIUM TFLN PARTNERSHIP: CW lasers integrated onto TFLN wafers. Future-proofed for 3.2T+ cycle. Technology-agnostic — SIVE wins regardless of SiPh vs TFLN outcome.
+
+  **Score mechanics:** Base 94→96% (+2): Win Semi capacity lock reduces execution risk (+1), pluggable TAM expansion confirmed by management increases capture probability (+1). Ceiling SEK 120-600 → SEK 120-700: pluggable transceiver market ($50B+) adds ceiling optionality even at low capture rates (1-2% = $500M-$1B additional). At SEK 56.65: midpoint SEK 410, ratio 7.24x, Entry 132%. Score: (96×0.6)+(132×0.4) = 110🔥. Serenity: "Extremely Bullish. No decent investor cares about last year's financials. You're forward looking for the 2027-2028 CPO supercycle."
+
+- **May 14, 2026: 106🔥 — CEILING REBUILT FROM FIRST PRINCIPLES.** Full 10-vector model rebuilt with Goldman $10.83B ELS TAM replacing LightCounting $6B. Ceiling SEK 120-700 (vibes-based) → SEK 135-550 (math-derived, Tom-approved).
+
+  **10-VECTOR REVENUE MODEL (2027 base / 2028 base):**
+  V1 CPO CW: $197M / $791M (Goldman ELS TAM, 7% capture 2027, 10% capture 2028)
+  V2 Pluggable DFB: $25M / $75M (expanded from Jabil-only, annual report confirms TAM expansion)
+  V3 SATCOM: $60M / $88M (unchanged)
+  V4 Defense: $20M / $30M (unchanged)
+  V5 Apple: $30M / $90M (probability-weighted, unchanged)
+  V6 Lightmatter: $5M / $20M (unchanged)
+  V7 India 5G: $3M / $10M (unchanged)
+  V8 Lightelligence: $3M / $10M (unchanged)
+  V9 POET/Lumilens: $10M / $25M (NEW — $500M over 5yr, 30% laser BOM)
+  V10 LIDAR/AEVA: $15M / $20M (NEW — volume Q4 2026)
+  TOTAL: $368M (2027) / $1,159M (2028)
+
+  **MARGIN BUILD (revenue-weighted blended 2028):**
+  CPO/SATCOM/Defense/POET: 40-45% OP (monopoly + military bloated budgets)
+  Pluggable/Lightmatter/Lightelligence/LIDAR: 35-40% OP (fab-lite, constrained)
+  Apple: 20-25% OP (only margin drag, but only 7.8% of revenue)
+  Blended: ~40% OP
+
+  **EARNINGS → CEILING:**
+  2027 base: $368M × 35% OP = $129M × 35x = $4.5B = SEK 135/share (12.1x P/S)
+  2028 base: $1,159M × 40% OP = $464M × 38x = $17.6B = SEK 535/share (15.2x P/S)
+  Approved ceiling: SEK 135-550.
+
+  At SEK 56.65: midpoint SEK 342.50, ratio 6.05x, Entry 120%. Score: (96×0.6)+(120×0.4) = 106🔥. Properly derived. #1 in portfolio.
+
+- **May 15, 2026: Ceiling SEK 135-550 → SEK 135-570. AMAZON/ALCHIP/AYAR LABS SUPPLY CHAIN CONFIRMED.** Amazon conducted NT$2.36B private placement into AlChipLink. AlChip is Ayar Labs' lead customer. Ayar Labs uses SIVE CW lasers (confirmed, logo on Ayar website). Supply chain: Amazon → AlChip (Trainium ASIC) → Ayar Labs (CPO optical engines) → SIVE (CW lasers). Amazon is the THIRD hyperscaler making direct capital commitments to companies in SIVE's downstream chain (after NVIDIA investing in Ayar and Meta's NBIS deal). V1 CPO capture rate raised 10%→11% to reflect Amazon-backed Ayar demand becoming a confirmed, hyperscaler-funded stream. 2028 revenue: $1,159M→$1,238M. At 40% OP × 38x = $18.8B → SEK 570. Additionally, Serenity flagged MSCI rebalancing in ~2 weeks = "tens of millions of passive inflow." Combined with Nasdaq listing prep = dual liquidity wave arriving H2 2026. Hyperscaler map now complete: $NVDA (COUPE), $AVGO (COUPE/ShunSin), $AMZN (AlChip/Ayar), $META (indirect via NBIS), $MSFT (Lightelligence/Lightmatter), $GOOGL (Ayar early investor). Six hyperscalers, all roads lead to SIVE lasers. Score unchanged at 106🔥 (rounding). 10-vector model now confirmed with 10 named demand vectors + hyperscaler capital backing on 3 of them.
+
+- **May 15, 2026: MICROLED THREAT REDUCED 5-10% → 2-5%.** Third independent source dismisses MicroLED for CPO. Irrational Analysis (hardware analyst): "MicroLED, I think it's a hoax. There are seven alternatives and they're all objectively better." Combined with Serenity (May 14): "Anything MicroLED is a waste of capital for CPO exposure." And framework's own assessment (May 13): 27 FAIL, $900M niche TAM, 2028+ timeline. Three independent analysts with different methodologies all dismissive. Threat probability reduced from 5-10% to 2-5% through 2030. Re-evaluation trigger unchanged: 2nd hyperscaler deal or datacenter-scale reliability demo. Additionally from same interview: "The same people who make EMLs also make CW lasers and they're REALLOCATING capacity to CW because it's higher margin and more demand. CPO demand is MURDERING EML supply." This virtuous cycle (InP shortage → EML shortage → SiPh demand → CW demand → more InP reallocation) is the MECHANISM behind Goldman's "very tight" supply through 2028. SIVE's CW lasers are the beneficiary of this cycle.
