@@ -756,17 +756,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === Live price polling ===
-    // Fetches live.json from jsdelivr's CDN every 60 seconds and patches
-    // Price / Change % / Entry / Total / Upside into the in-memory dataset
-    // before re-rendering. The CDN serves the file from the `live-prices`
-    // branch of this repo, which is updated every ~2 minutes by a GitHub
-    // Action (refresh-live-prices.yml). Netlify ignores that branch, so
-    // the entire price-refresh loop costs zero Netlify build credits.
+    // Fetches live.json from statically.io's CDN every 60 seconds and
+    // patches Price / Change % / Entry / Total / Upside into the in-memory
+    // dataset before re-rendering. The CDN serves the file from the
+    // `live-prices` branch of this repo, which is updated every ~2 minutes
+    // by a GitHub Action (refresh-live-prices.yml). Netlify ignores that
+    // branch, so the entire price-refresh loop costs zero Netlify build
+    // credits.
+    //
+    // Why statically.io and not jsdelivr: jsdelivr's metadata layer cached
+    // a "branch not found" response from when this repo was briefly private
+    // during initial setup, and their cache TTL is ~12 hours. statically.io
+    // is a Cloudflare-backed equivalent that serves GitHub raw content with
+    // a shorter, file-level cache and didn't see the private-era response.
+    // If statically.io ever has an outage, raw.githubusercontent.com works
+    // as a same-shape fallback URL.
     //
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    const LIVE_JSON_URL = 'https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@live-prices/live.json';
+    const LIVE_JSON_URL = 'https://cdn.statically.io/gh/TalentedTom/1amInvesting/live-prices/live.json';
     const LIVE_POLL_INTERVAL_MS = 60 * 1000;   // 60 s — balances freshness vs. CDN load
     let lastLiveTs = null;   // de-dupe: skip re-render if the file hasn't changed
 
