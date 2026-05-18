@@ -59,36 +59,31 @@ jobs:
           python scripts/fetch_live.py --output /tmp/live-out/live.json
           ls -l /tmp/live-out/live.json
 
-      - name: Push live.json to live-prices branch (orphan, force-pushed)
+      - name: Push live.json to live-prices branch (single-commit, force-pushed)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name 'github-actions[bot]'
+          # Build the live-prices branch in a fresh tempdir, completely
+          # isolated from main's worktree. The branch always has exactly
+          # one commit (force-pushed each run) — history would be
+          # meaningless for a 2-minute price tick anyway.
+          set -e
+          LIVE_DIR=$(mktemp -d)
+          cd "$LIVE_DIR"
+
+          git init --quiet --initial-branch=live-prices
+          git config user.name  'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 
-          # Build a fresh orphan commit containing nothing but live.json.
-          # Force-push to live-prices so the branch always has exactly
-          # one commit — no history bloat from 2-minute price ticks.
-          #
-          # We use a tempdir + low-level plumbing rather than checking
-          # out live-prices, to avoid the cost of touching the
-          # filesystem with thousands of unrelated files.
-          tmp_index=$(mktemp)
-          export GIT_INDEX_FILE="$tmp_index"
-
-          # Copy live.json into the worktree just long enough to hash it.
           cp /tmp/live-out/live.json live.json
-          git add -- live.json
-          tree_sha=$(git write-tree)
-          # Restore the worktree so subsequent steps see a clean main.
-          rm -f live.json
+          git add live.json
+          git commit -m "live prices $(date -u +'%Y-%m-%d %H:%M:%S') UTC" --quiet
 
-          commit_msg="live prices $(date -u +'%Y-%m-%d %H:%M:%S') UTC"
-          commit_sha=$(echo "$commit_msg" | git commit-tree "$tree_sha")
-          echo "Built orphan commit $commit_sha for tree $tree_sha"
+          # Push using x-access-token auth — the workflow's GITHUB_TOKEN
+          # has 'contents: write' permission (set on this workflow above).
+          # Force-push because we replace the entire branch every run.
+          REMOTE_URL="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push "$REMOTE_URL" HEAD:refs/heads/live-prices --force --quiet
 
-          # Force-push the new commit as the entire history of
-          # live-prices. Safe because this branch is single-purpose;
-          # no human or other workflow ever pushes to it.
-          git push origin "$commit_sha":refs/heads/live-prices --force
-
-          echo "Pushed to live-prices. CDN URL:"
-          echo "  https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@live-prices/live.json"
+          echo "Pushed to live-prices. CDN URL (statically.io):"
+          echo "  https://cdn.statically.io/gh/${GITHUB_REPOSITORY}@live-prices/live.json"
