@@ -756,30 +756,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === Live price polling ===
-    // Fetches live.json from statically.io's CDN every 60 seconds and
-    // patches Price / Change % / Entry / Total / Upside into the in-memory
-    // dataset before re-rendering. The CDN serves the file from the
-    // `live-prices` branch of this repo, which is updated every ~2 minutes
-    // by a GitHub Action (refresh-live-prices.yml). Netlify ignores that
-    // branch, so the entire price-refresh loop costs zero Netlify build
-    // credits.
+    // Fetches live.json from GitHub's raw content endpoint every 60
+    // seconds and patches Price / Change % / Entry / Total / Upside
+    // into the in-memory dataset before re-rendering. The file is updated
+    // every ~2 minutes by a GitHub Action (refresh-live-prices.yml) that
+    // commits to the `live-prices` branch. Netlify ignores that branch,
+    // so the entire price-refresh loop costs zero Netlify build credits.
     //
-    // Why statically.io and not jsdelivr: jsdelivr's metadata layer cached
-    // a "branch not found" response from when this repo was briefly private
-    // during initial setup, and their cache TTL is ~12 hours. statically.io
-    // is a Cloudflare-backed equivalent that serves GitHub raw content with
-    // a shorter, file-level cache and didn't see the private-era response.
-    // If statically.io ever has an outage, raw.githubusercontent.com works
-    // as a same-shape fallback URL.
+    // Why raw.githubusercontent.com:
+    //   - Predictable 5-min CDN cache (`max-age=300`) — content is at
+    //     most 5 min stale, matching our 2-min cron cadence well.
+    //   - CORS-friendly (`Access-Control-Allow-Origin: *`).
+    //   - No metadata-cache quirks. We tried statically.io (broken HTTP
+    //     redirect chain that browsers block as mixed content) and
+    //     jsdelivr (their @branch metadata can cache for hours after a
+    //     branch update). raw is simpler and more reliable.
+    //   - Trade-off: query-string cache-busting is ignored by Fastly here
+    //     (same response served for any `?t=...` value), so the
+    //     effective refresh rate is 5 min worst case, regardless of how
+    //     often we poll. That's fine for portfolio tracking.
     //
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    // IMPORTANT: use the @branch URL form, not /branch/. The slash form
-    // 301-redirects through an http:// intermediate which modern browsers
-    // block as mixed content when the host page is https. The @-form goes
-    // straight to 200 with the file contents — confirmed via curl headers.
-    const LIVE_JSON_URL = 'https://cdn.statically.io/gh/TalentedTom/1amInvesting@live-prices/live.json';
+    const LIVE_JSON_URL = 'https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json';
     const LIVE_POLL_INTERVAL_MS = 60 * 1000;   // 60 s — balances freshness vs. CDN load
     let lastLiveTs = null;   // de-dupe: skip re-render if the file hasn't changed
 
