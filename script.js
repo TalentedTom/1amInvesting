@@ -775,7 +775,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    const LIVE_JSON_URL = 'https://cdn.statically.io/gh/TalentedTom/1amInvesting/live-prices/live.json';
+    // IMPORTANT: use the @branch URL form, not /branch/. The slash form
+    // 301-redirects through an http:// intermediate which modern browsers
+    // block as mixed content when the host page is https. The @-form goes
+    // straight to 200 with the file contents — confirmed via curl headers.
+    const LIVE_JSON_URL = 'https://cdn.statically.io/gh/TalentedTom/1amInvesting@live-prices/live.json';
     const LIVE_POLL_INTERVAL_MS = 60 * 1000;   // 60 s — balances freshness vs. CDN load
     let lastLiveTs = null;   // de-dupe: skip re-render if the file hasn't changed
 
