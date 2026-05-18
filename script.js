@@ -755,6 +755,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // === Live price polling ===
+    // Fetches live.json from jsdelivr's CDN every 60 seconds and patches
+    // Price / Change % / Entry / Total / Upside into the in-memory dataset
+    // before re-rendering. The CDN serves the file from the `live-prices`
+    // branch of this repo, which is updated every ~2 minutes by a GitHub
+    // Action (refresh-live-prices.yml). Netlify ignores that branch, so
+    // the entire price-refresh loop costs zero Netlify build credits.
+    //
+    // Graceful failure model: if the fetch fails (network blip, CDN
+    // hiccup, GHA hasn't run yet), we silently leave whatever data.js
+    // currently has in place. The site never looks broken.
+    const LIVE_JSON_URL = 'https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@live-prices/live.json';
+    const LIVE_POLL_INTERVAL_MS = 60 * 1000;   // 60 s — balances freshness vs. CDN load
+    let lastLiveTs = null;   // de-dupe: skip re-render if the file hasn't changed
+
+    async function fetchLiveData() {
+        // Cache-bust with a 30-second-bucketed timestamp so we don't fight
+        // jsdelivr's own caching but still get fresh data within the poll
+        // window. (Bucketing avoids each user hitting a unique URL, which
+        // would push jsdelivr toward origin every time.)
+        const bucket = Math.floor(Date.now() / 30000);
+        const url = `${LIVE_JSON_URL}?t=${bucket}`;
+        try {
+            const r = await fetch(url, { cache: 'no-cache' });
+            if (!r.ok) return null;
+            const j = await r.json();
+            // Schema sanity: require ts + tickers fields. Bail on anything else.
+            if (!j || !j.tickers || typeof j.tickers !== 'object') return null;
+            return j;
+        } catch (_) {
+            return null;
+        }
+    }
+
+    // Merge live values into the in-memory dataset across all language
+    // arrays so the table reflects fresh prices regardless of the current
+    // language selection.
+    function applyLiveData(live) {
+        const full = window.PORTFOLIO_DATA;
+        if (!full || !full.en || !live || !live.tickers) return false;
+        let touched = false;
+        for (let i = 0; i < full.en.length; i++) {
+            const ticker = (full.en[i] && full.en[i].Ticker || '').trim();
+            if (!ticker) continue;
+            const live_t = live.tickers[ticker];
+            if (!live_t) continue;
+            // Patch each defined field across every language array
+            for (const lang in full) {
+                const arr = full[lang];
+                if (!Array.isArray(arr) || i >= arr.length) continue;
+                if (live_t.price !== undefined) arr[i]['Current Price'] = live_t.price;
+                if (live_t.change_pct !== undefined) arr[i]['Change %'] = live_t.change_pct;
+                if (live_t.entry !== undefined) arr[i]['Entry'] = live_t.entry;
+                if (live_t.total !== undefined) arr[i]['Total'] = live_t.total;
+                if (live_t.upside !== undefined) arr[i]['Upside'] = live_t.upside;
+            }
+            touched = true;
+        }
+        return touched;
+    }
+
+    async function pollLiveData(initial = false) {
+        const live = await fetchLiveData();
+        if (!live) return;
+        // Skip work if the file hasn't been re-stamped since our last poll.
+        if (live.ts && live.ts === lastLiveTs) return;
+        lastLiveTs = live.ts || null;
+        const patched = applyLiveData(live);
+        if (patched && !initial) {
+            // Re-render only when there's actually new data AND we already
+            // rendered once. On the initial poll, the main render loop will
+            // pick up the patched data without us needing to re-trigger.
+            renderData();
+        }
+    }
+
     // Initialize Data from global JS variable
     function renderData() {
         try {
@@ -1229,4 +1305,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // .has-deep-dive class lands on the right tickers.
     renderData();
     loadDeepDiveManifest().then(() => renderData());
+
+    // Live-price polling. Fire the first fetch immediately (so the
+    // initial paint upgrades to fresh prices within ~500 ms), then on
+    // a 60-second interval thereafter. Initial poll patches data
+    // before the next render; subsequent polls trigger their own
+    // re-render only if values actually changed (de-duped via ts).
+    pollLiveData(true).then(() => renderData());
+    setInterval(pollLiveData, LIVE_POLL_INTERVAL_MS);
 });
