@@ -54,7 +54,7 @@ TRIGGER 4: May 20 earnings → Regardless of price, review ceiling
 
 **Ford Principle:** SIVE isn't selling "laser chips." It's selling the universal light source primitive. Silicon cannot generate light — permanent physics truth.
 
-## Core Thesis — Eight Vectors (+ undiscovered Customer B, C, D)
+## Core Thesis — Twelve Vectors (Customer B=Lightmatter, C=Celestial, D=Lightelligence IDENTIFIED)
 
 ### Vector 1: AI Photonics (CW Laser Monopoly)
 
@@ -70,10 +70,13 @@ TRIGGER 4: May 20 earnings → Regardless of price, review ceiling
 - **Chain:** SIVE (CW laser) → Intel (SiPh PIC) → Jabil (assembly) → Hyperscalers
 - **Bridge revenue:** Generates revenue NOW while CPO ramps H2 2026+
 
-### Vector 3: Consumer Wearables (Apple breadcrumb)
+### Vector 3: Consumer Wearables (Apple HIGH CONFIDENCE — $130M RfQ)
 
-- **50M unit RFQ** from "US Fortune 100." 135-wavelength architecture.
-- Management SILENT — POET NDA breach proves the value of discretion.
+- **50M unit RFQ** from "US Fortune 100." 135-wavelength architecture. **$130M/year quantified.**
+- Blood-glucose monitoring hyper-customized lasers. Timeline H2 2027/2028.
+- DigiTimes confirms Apple Watch next health cycle = blood-glucose post H2 2026 blood-pressure.
+- Serenity: "SIVE is next refresh of Apple Watches"
+- Management SILENT — discipline confirmed (POET NDA breach proves value).
 
 ### Vector 4+5: US Defense (Direct + Primes)
 
@@ -133,8 +136,9 @@ Vector 2: Jabil 1.6T LRO (pluggable transceivers)  — SHIPPING NOW
   Intel SiPh PIC + SIVE CW laser + Jabil assembly = complete LRO module
   Platform-agnostic: works for pluggable AND CPO — SIVE wins either way
   
-Vector 3: Consumer wearables (Apple breadcrumb)     — 50M units/yr, H2 2027+
-  "US Fortune 100" RFQ for 50M units. 135-wavelength architecture.
+Vector 3: Consumer wearables (Apple HIGH CONFIDENCE) — $130M/yr RfQ, H2 2027+
+  "US Fortune 100" RFQ for 50M units. $130M annual revenue quantified.
+  Blood-glucose monitoring hyper-customized lasers. DigiTimes + Serenity confirm timeline.
   Only Apple ships ~50M wearables annually in US Fortune 100.
   SIVE management SILENT on Apple — POET NDA breach proves why silence is golden
   
@@ -181,7 +185,7 @@ H2 2026:   CPO volume begins (Vector 1)
 8. **BAE Systems** → STAR duplex arrays using SIVE chip IP (CHIPS Act funded)
 9. **GlobalFoundries** → SIVE on GFS laser source supplier list (Lightmatter chain)
 10. **Lightmatter** → CW lasers for photonic interconnect (Serenity discovery, $4.4B+ private)
-Plus: Amazon (8-K warrant), Apple (breadcrumb), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain)
+Plus: Amazon (8-K warrant), Apple (high confidence, $130M RfQ), Nokia (confirmed, Finland revenue), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain), AMD (GFS CPO ecosystem)
 
 **Zero failed partnerships. Zero cancelled contracts. Zero NDA breaches.**
 Management discipline on confidentiality (Apple silence) = hyperscaler trust.
@@ -436,9 +440,10 @@ VECTOR 8 — LIGHTELLIGENCE (PHOTONIC COMPUTE) (NEW — May 4, 2026)
     
   ADJUSTMENT: +$5-15M
 
-  NOTE: "Customer B, C, and D" remain unidentified.
-  Each could add another $5-20M at maturity.
-  The 8-vector model likely STILL undercounts actual vectors.
+  NOTE: "Customer B, C, and D" NOW IDENTIFIED (May 19, Serenity forensics):
+  B = Lightmatter ($154M Series C matches), C = Celestial AI ($100M Series B matches),
+  D = Lightelligence ($250M matches). All three CONFIRMED via funding-round matching
+  against Sivers' "$400M in last 12 months" corporate slide. See 12-vector model below.
 
 ====================================================================
 COMBINED 8-VECTOR REVENUE AT MATURITY (2029-2030)
@@ -477,8 +482,8 @@ COMBINED 8-VECTOR REVENUE AT MATURITY (2029-2030)
     Lightelligence:  $15M
     TOTAL:           $999M
 
-  NOTE: Vectors 9-11 ("Customer B, C, D") NOT included.
-  Bull case with undiscovered vectors could exceed $1.1B.
+  NOTE: Vectors 9-12 (Nokia, LIGHTIUM, AMD/GFS, YSS/Defense) NOW INCLUDED
+  in revised 12-vector model below. See May 19 update.
 
 ====================================================================
 EARNINGS MODEL → CEILING
@@ -666,3 +671,99 @@ Why LOW threat:
   **V2 revised:** $75M → $210M (7% capture of $2.98B pluggable SiPh ELS TAM). SIVE is participant (not monopoly) in pluggable, but "multiple hyperscaler suppliers testing/qualifying DFB lasers" (annual report) and Jabil already confirmed.
 
   **Revised 10-vector 2028 total:** V1 $870M + V2 $210M + V3-V10 $293M = $1,373M base + $138M vertical integration (25%) = $1,511M. At 40% OP × 35x = $21.2B → SEK 641. Ceiling SEK 135-635 → SEK 160-640 (LOW also raised: 2027 pluggable SiPh adds ~$60M to 2027 total). Base 96→97% (+1): full photonics TAM confirms total laser addressable 37% larger than CPO-only. At SEK 55.70: midpoint SEK 400, ratio 7.18x, Entry 132%. Score: (97×0.6)+(132×0.4) = 111🔥. Implied P/E: 12.2x/3.0x.
+
+- **May 18, 2026: 115 (unchanged individually, see May 19 for cumulative +1) — APPLE BLOOD-GLUCOSE VECTOR QUANTIFIED + PROBABILITY ESCALATED.** Three converging signals on Vector 5 (Apple consumer wearables): (1) Serenity confirms SIVE is "next refresh of Apple Watches" for blood-glucose monitoring, specifically naming hyper-customized lasers. H2 2027 or 2028 timeline (next cycle after H2 2026 blood-pressure redesign using TASC photodiodes). (2) SIVE Q1 report: F100 customer ordered 30,000 chips for qualification and system testing. Customer submitted RfQ with indicative volumes of 50M units/year translating to **$130M annual revenue**. (3) DigiTimes (May 18): Apple Watch major redesign H2 2026 for blood pressure, "next health monitoring capabilities expected to focus on noninvasive blood-glucose monitoring" pending government approval. Apple Watch shipments expected +20-30% from 2025.
+
+  **Vector 5 revision:** Revenue $75-125M → $75-130M (bull raised to match RfQ). Probability 60-70% → 70-80% (three independent signals converging: Serenity + SIVE Q1 report + DigiTimes timeline). Combined revenue impact: Base Apple $90M → $104M (+$14M). Conservative Apple $50M → $78M (+$28M).
+
+  **Probability escalation triggers for Apple vector:**
+  - Current: 70-80% (RfQ + 30K qualification + DigiTimes timeline)
+  - 85%: SIVE management mentions "consumer wearable" on earnings call
+  - 90%: Apple Watch teardown shows InP laser component
+  - 95%: Second RfQ or volume order beyond qualification
+
+  **Ceiling impact:** Marginal. $14M base case delta at 32% OP × 42x = ~SEK 6/share. Ceiling remains SEK 160-640. Score unchanged at 115 because Entry% at 143% is insensitive to small ceiling movements at 8.3x ratio. The value of this update is PROBABILITY CONFIDENCE, not score change. If Apple confirms at 95%+ probability, the $130M becomes locked revenue and the base case revision becomes ~$25M larger, which at that point may warrant ceiling HIGH expansion to SEK 670-680.
+
+  **Key Serenity framing:** H2 2026 = TASC photodiodes for blood pressure (different supplier, not SIVE). H2 2027/2028 = SIVE hyper-customized lasers for blood-glucose (SIVE's cycle). "If timeline/implications are intact, markets might appreciate multi-year revenue visibility with Apple." Apple vector provides floor under SIVE revenue independent of CPO timing.
+
+- **May 19, 2026: 116 (+1) — JABIL CEO CONFIRMS LRO "DRAMATIC MOAT" AT JP MORGAN CONFERENCE + APPLE BLOOD-GLUCOSE CUMULATIVE.** Jabil CEO Michael Dastoor at JPM 54th Annual Global TMC Conference: (1) 1.6T LRO "pulls 11 kilowatts," described as having "potential for a relatively dramatic moat." (2) Entering hyperscaler qualifications in 1-4 months, quals take 2-6 months. LRO qualified at hyperscalers by Q4 2026/Q1 2027. (3) Ottawa CPO pilot line built for advanced packaging process development. (4) Scale deployment at Penang. (5) "Being able to deliver a co-packaged optic switch is going to put us in a great position." Anders Storm (former SIVE CEO) highlighted transcript publicly.
+
+  **Vector 2 (Jabil LRO) revenue revised:**
+  - 2026: $1-5M → $3-7M (quals completing Q4 2026)
+  - 2027: $10-25M → $15-35M (hyperscaler quals confirmed, "dramatic moat" = less competition, plural quals = multiple customers)
+  - 2028: $20-50M → $30-70M (Penang at scale, 11kW differentiated product)
+
+  **New sub-vector: Jabil CPO assembly channel.** Ottawa pilot line explicitly for CPO process development. If Jabil becomes CPO module assembler (alongside ShunSin/Fabrinet), additional SIVE CW laser channel into CPO. 15% probability, +$5-10M weighted by 2028.
+
+  Combined delta: +$27M base case at maturity. Ceiling HIGH: SEK 640 → SEK 649. Ceiling LOW: unchanged SEK 160. Midpoint: SEK 400 → SEK 405. Combined with Apple blood-glucose update (May 18): total ceiling shift SEK +15 to midpoint. At SEK 48.10: ratio 8.32x → 8.41x, Entry% 143 → 144, Total 115 → 116. Score +1 from cumulative marginal updates proving nothing is too small to track.
+
+====================================================================
+REVISED 12-VECTOR MODEL (May 19, 2026 — Serenity Supply Chain Mapping)
+====================================================================
+
+Serenity published comprehensive supply chain mapping with archive.org
+verification, funding-round matching, annual report geographic revenue
+analysis, and GFS ecosystem slide evidence. Upgrades 8-vector model
+to 12-vector model. Key confirmations:
+
+CONFIRMED (upgraded from "likely/maybe"):
+  - Ayar Labs: PRIMARY supplier (LITE/MACOM removed from Ayar website)
+  - Celestial AI/Marvell: DIRECT customer (not through POET)
+  - Lightmatter: CONFIRMED via funding mapping ($154M matches Customer B)
+  - Lightelligence: CONFIRMED via funding mapping ($250M matches Customer D)
+    88.3% share China independent optical interconnect (Frost & Sullivan)
+  - Nokia: CONFIRMED hidden customer (Finland revenue TSEK 182→48,716, 268x YoY)
+
+NEW VECTORS ADDED:
+  - Vector 9: Nokia telecom (confirmed via geographic revenue)
+  - Vector 10: LIGHTIUM AG (CW lasers onto TFLN wafers, 1.6T/3.2T)
+  - Vector 11: AMD MI500 via GFS CPO (GFS slide shows SIVE as ecosystem laser)
+  - Vector 12: YSS/Golden Dome (ALLSPACE acquired by York → DoD/Space Force)
+
+CAPTURE RATE REVISION:
+  Old: 10-15% of CPO laser TAM (assumed SIVE competes with LITE/COHR)
+  New: 12-18% (SIVE is PRIMARY independent for non-NVIDIA ecosystem)
+  Evidence: Ayar removed competitors. GFS lists only SIVE + LITE.
+  NVIDIA lock-up partially moved from "upside scenario" to base model.
+
+12-VECTOR BASE CASE REVENUE (2027-2030):
+
+  Vector                 2027     2028     2029     2030
+  CPO + Pluggable        $75M    $250M    $500M    $750M
+  Jabil LRO              $25M     $50M     $75M    $100M
+  SATCOM/Defense         $25M     $50M     $75M    $100M
+  Defense Primes         $15M     $30M     $40M     $50M
+  Apple                  $10M     $78M    $110M    $130M
+  Lightmatter             $5M     $12M     $25M     $40M
+  India 5G                $3M      $7M     $12M     $18M
+  Lightelligence           $5M     $15M     $30M     $45M
+  Nokia                  $10M     $15M     $20M     $25M
+  LIGHTIUM                $2M      $5M     $10M     $15M
+  AMD/GFS                 $3M     $15M     $30M     $50M
+  YSS/Defense             $3M      $8M     $12M     $18M
+  TOTAL                 $181M    $535M    $939M  $1,341M
+
+  Growth rates: 2027-28: +196%. 2028-29: +75%. 2029-30: +43%.
+  Decelerating but steep. CPO at 142% CAGR = 2028-2029 is steepest ramp.
+
+CEILING AT 40% OP (laser margins):
+
+  2027 base: $181M x 40% = $72M x 40x = $2.9B  -> SEK  97
+  2028 base: $535M x 40% = $214M x 35x = $7.5B -> SEK 252
+  2029 base: $939M x 40% = $376M x 35x = $13.2B -> SEK 443
+  2030 base: $1,341M x 40% = $536M x 35x = $18.8B -> SEK 633
+
+  Ceiling LOW = 2027 base rounded = SEK 100
+  Ceiling HIGH = 2028 base + discounted 2029 (x0.85) + discounted 2030 (x0.72)
+    = 252 + (443-252)*0.85 + (633-443)*0.72
+    = 252 + 162 + 137 = SEK 551 -> rounded SEK 550
+
+CEILING: SEK 100-550 (2027 base to 2028 base + discounted 2029-2030)
+
+- **May 19, 2026: 110 (+4 from 106 pre-Serenity, -6 from 116 pre-remodel) — 12-VECTOR MODEL REBUILD ON SERENITY COMPREHENSIVE SUPPLY CHAIN MAPPING.** Ceiling remodeled from undiscounted 2029-2030 maturity to proper 2027-2028 base case + discounted out-years at 40% laser OP margins. 12-vector base: $181M (2027), $535M (2028), $939M (2029), $1,341M (2030). Ceiling SEK 100-550 (2027 base LOW, 2028 base + discounted 2029-2030 HIGH). Base 97→98% (+1, Ayar primary confirmation). Serenity published full CPO laser chokepoint report with archive.org verification, funding-round forensics, and geographic revenue analysis. KEY CONFIRMATIONS: (1) Ayar Labs: SIVE is PRIMARY supplier — LITE and MACOM silently removed from Ayar website. SIVE is the ONLY listed laser supplier to Ayar. (2) Celestial AI/Marvell: DIRECT customer, not through POET. Investor deck mapping + funding match confirms. (3) Lightmatter: CONFIRMED via $154M Series C matching Customer B placeholder. (4) Lightelligence: CONFIRMED, 88.3% share China independent optical interconnect (Frost & Sullivan). Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE. (5) Nokia: CONFIRMED hidden customer — Finland revenue TSEK 182→48,716 (268x YoY). Only major telecom company headquartered in Finland. (6) AMD MI500: GFS ecosystem slide shows SIVE + LITE as ONLY two laser providers. AMD using GFS for MI500 CPO. (7) LIGHTIUM AG: CW lasers onto TFLN wafers for 1.6T/3.2T (2025 annual report). (8) YSS/Golden Dome: ALLSPACE (SIVE lead customer) acquired by York → embedded in Space Force/SDA/DoD.
+
+  Model expanded from 8 vectors to 12 vectors. CPO capture raised 10-15% → 12-18% (Ayar primary + NVIDIA lock-up partially validated). Four new revenue vectors added (Nokia $5-15M, LIGHTIUM $3-10M, AMD/GFS $8-40M probability-weighted, YSS $5-15M). Previously confirmed vectors raised (Lightmatter, Lightelligence). Apple raised to $130M RfQ at 70-80% probability.
+
+  Combined revenue: Base $181M (2027), $535M (2028), $939M (2029), $1,341M (2030). Ceiling SEK 160-649 → SEK 100-550. Base 97→98% (+1, Ayar primary confirmation). At SEK 48.10: midpoint SEK 325, ratio 6.76x, Entry% 128%, Total 110.
+
+  Serenity: "I strongly believe markets underestimate the TAM expansion downstream, revenue scale from customer mapping, and the overall CPO TAM ramp. That can grow Sivers from a small $1B company to a $10B+ one, just like $LITE."
