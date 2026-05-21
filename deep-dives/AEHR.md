@@ -146,3 +146,19 @@ In Damnang's 7-Layer Value Chain, AEHR is the top performer at Layer 7 (Test & Q
 - **May 6, 2026: 85 HC** (Ceiling standardized to 2027-2028. $280-550→$280-405. Bull $560 (2030) discounted 2yr × 15% = $405. Score -1 from standardization. COHR 6-inch validates InP test demand.)
 
 - **May 16, 2026: 90 (unchanged) — REMODELLED WITH FULL $193B PHOTONICS TAM + MULTIPLE CORRECTED TO 40x.** Total SiPh PIC production at $193B photonics TAM is ~1.5-1.9x higher than CPO-only models. Every SiPh PIC needs WLBI burn-in regardless of CPO or pluggable destination. "New SiPh customer" (March 2026) described as "global leader in networking, major supplier to datacenter optical transceiver market" = pluggable transceiver maker, confirming AEHR already tests pluggable SiPh. SiPh WLBI vector FY2028: $130-180M → $195-270M (+50%). But equipment sales are not linear with volume (1 FOX-XP serves millions of wafers). And SiPh is one of THREE vectors (SiPh + Sonoma ASIC + SiC), comprising ~35-40% of FY2028 revenue. Total FY2028: $300-430M → $365-520M midpoint $440M. Multiple corrected from 45x to 40x (ASML 35-40x, KLA 30-35x, monopoly premium justified but 45x was aggressive). Base 93→94% (+1): SiPh WLBI confirmed across full photonics TAM. Ceiling $280-405 → $280-400 ($193B uplift roughly offset by 45x→40x correction). Net score unchanged at 90. P/E: 16.0x/10.0x (2027/2028). AEHR's thesis is physics-monopoly based (20/20 Core Thesis), not TAM-dependent. The $193B TAM adds volume but doesn't change the structural position.
+
+- **May 20, 2026: 85 (-12) — CEILING REMODELED WITH HONEST MATH. 30x multiple, 40% OP margins, proper 2027-2030 year-by-year derivation.** Old ceiling $280-400 was built on fabricated LOW ($280 had no derivation) and inflated 45-55x multiples from pre-correction model. Corrected to 30x (ASML 35-40x minus small-cap discount) and 40% OP (test equipment at scale).
+
+  **Revised year-by-year (base case, 40% OP, 30x):**
+  FY2027: $200M x 40% = $80M x 30x = $2.4B -> $80/share
+  FY2028: $440M x 40% = $176M x 30x = $5.28B -> $177/share
+  FY2029: $650M x 40% = $260M x 30x = $7.8B -> $261/share
+  FY2030: $800M x 40% = $320M x 30x = $9.6B -> $322/share
+
+  **Ceiling: $180-290**
+  LOW ($180): FY2027-2028 inflection. CPO hockey stick begins mid-FY2027 (H2 2027). LOW raised from $80 to $180 to capture the ramp, not the trough.
+  HIGH ($290): FY2028 base ($177) + discounted FY2029 (+$71 x 0.85) + discounted FY2030 (+$44 x 0.72) = $292 -> rounded $290.
+
+  At $81.14: midpoint $235, ratio 2.90x, Entry% 72%. Score: (94 x 0.6) + (72 x 0.4) = 56.4 + 28.8 = 85.
+
+  20/20 Core Thesis unchanged. Sole-source WLBI monopoly. The -12 point correction is purely Entry math from honest ceiling construction. Base quality (94%) is the 2nd highest in the portfolio after SIVE (98%).
