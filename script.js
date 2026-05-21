@@ -758,28 +758,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === Live price polling ===
-    // Fetches live.json from jsdelivr's CDN every 30 seconds and patches
-    // Price / Change % / Entry / Total / Upside into the in-memory
-    // dataset before re-rendering. The file is updated every ~2 minutes
-    // by a GitHub Action (refresh-live-prices.yml) that force-pushes a
-    // single-commit orphan branch `live-prices`. Netlify ignores that
-    // branch, so the entire price-refresh loop costs zero Netlify build
-    // credits.
+    // Fetches live.json from GitHub's raw content endpoint every 30
+    // seconds and patches Price / Change % / Entry / Total / Upside
+    // into the in-memory dataset before re-rendering. The file is updated
+    // every ~2 minutes by a GitHub Action (refresh-live-prices.yml) that
+    // force-pushes a single-commit orphan branch `live-prices`. Netlify
+    // ignores that branch, so the entire price-refresh loop costs zero
+    // Netlify build credits.
     //
-    // Why jsdelivr (and not raw.githubusercontent.com):
-    //   - jsdelivr's CDN respects per-URL caching, so our `?t=<bucket>`
-    //     cache-bust produces a fresh fetch every poll interval.
-    //   - raw.githubusercontent.com's Fastly layer ignores query strings
-    //     for cache-keying, capping effective refresh at the 5-min
-    //     `max-age=300` TTL — too slow for a 2-min cron cadence.
-    //   - Now that the repo is public, jsdelivr's @branch metadata
-    //     resolution refreshes correctly (verified end-to-end).
+    // Why raw.githubusercontent.com — and NOT jsdelivr:
+    //   - We tried jsdelivr first because its CDN respects per-URL caching.
+    //     But jsdelivr resolves `@branch-name` to a commit SHA and caches
+    //     that resolution for hours. When our cron force-pushes a new
+    //     commit (replacing the branch tip), jsdelivr keeps serving the
+    //     OLD resolved SHA — we observed 8+ hours of stale content this way.
+    //   - raw.githubusercontent.com proxies GitHub directly with NO SHA
+    //     resolution layer. It always reflects the current branch HEAD.
+    //   - The trade-off: raw's Fastly edge has a 5-min `max-age=300` TTL
+    //     and ignores query strings for cache-keying. So worst-case
+    //     staleness is ~5 min, not the 30-s poll interval. Still way
+    //     better than the 8-hour jsdelivr failure mode.
     //
     // Aggressive freshness strategy:
     //   1. `cache: 'reload'` forces a network request every poll,
     //      bypassing the browser's HTTP cache entirely.
     //   2. The `?t=<bucket>` query string changes every 15 seconds so
-    //      jsdelivr's edge caches treat each as a unique URL.
+    //      the URL appears unique — doesn't help with raw's Fastly cache
+    //      (it ignores query strings) but harmless and protects against
+    //      any browser-side cache shenanigans.
     //   3. The Page Visibility API triggers an immediate refresh when
     //      the user switches back to the tab, eliminating the
     //      "came back to stale data" feeling that browser background
@@ -791,7 +797,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    const LIVE_JSON_URL = 'https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@live-prices/live.json';
+    const LIVE_JSON_URL = 'https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json';
     const LIVE_POLL_INTERVAL_MS = 30 * 1000;   // 30 s — matches cache-bust bucket; tight enough to feel live
     let lastLiveTs = null;       // de-dupe: skip re-render if the file hasn't changed
     let lastLiveFetchAt = null;  // wall-clock ms when the most recent successful fetch landed
