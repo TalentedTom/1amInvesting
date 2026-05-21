@@ -123,6 +123,65 @@ body {
     font-weight: 500;
 }
 
+/* Live-status pill under the subtitle — green pulsing dot + "Live · 5s ago"
+   text. Visual heartbeat for the live-price polling loop. If the "Xs ago"
+   counter stops advancing, polling is wedged (network blip, browser
+   throttling, cron broken, etc.) and the user has an immediate cue. */
+.live-status-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+    animation: live-pulse 2s ease-in-out infinite;
+}
+@keyframes live-pulse {
+    0%, 100% { opacity: 1;   transform: scale(1); }
+    50%      { opacity: 0.4; transform: scale(0.8); }
+}
+.live-label {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.live-status {
+    color: var(--text-secondary);
+}
+/* When stale (>90 s since last successful fetch), grey out the dot so the
+   user can see at a glance that the polling has fallen behind. */
+.live-status:not(.live-fresh) ~ .live-dot,
+.live-status-wrap:has(.live-status:not(.live-fresh)) .live-dot {
+    background: var(--text-secondary);
+    box-shadow: none;
+    animation: none;
+    opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+    .live-status-wrap {
+        font-size: 0.62rem;
+        padding: 0.12rem 0.4rem;
+        margin-top: 0.25rem;
+    }
+    .live-dot {
+        width: 5px;
+        height: 5px;
+    }
+}
+
 /* Toggle Switch and Language Selectors */
 .controls-area {
     display: flex;

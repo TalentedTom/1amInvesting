@@ -17,6 +17,15 @@
                 <div class="logo-area">
                     <h1 data-i18n="title_html">1am<span>Investing</span></h1>
                     <p class="subtitle" data-i18n="subtitle">Investing in the generational AI buildout</p>
+                    <!-- Live-status pill: green dot + "Live · Xs ago" — updates
+                         on every successful poll AND every 5 s via heartbeat,
+                         so the visible counter ticks. If the counter stops
+                         moving the polling is wedged. -->
+                    <div class="live-status-wrap">
+                        <span class="live-dot" aria-hidden="true"></span>
+                        <span class="live-label" data-i18n="live_label">Live</span>
+                        <span id="live-status" class="live-status">· —</span>
+                    </div>
                 </div>
                 <div class="controls-area">
                     <div class="lang-selector">

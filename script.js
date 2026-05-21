@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart_open_in_tv: 'Open in TradingView ↗',
             search_placeholder: 'Search deep-dives…',
             search_no_results: 'No matching deep-dive.',
+            live_label: 'Live',
         },
         'zh-CN': {
             title_html: '1am<span>Investing</span>',  // brand, not translated
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chart_open_in_tv: '在 TradingView 打开 ↗',
             search_placeholder: '搜索深度分析…',
             search_no_results: '未找到深度分析。',
+            live_label: '实时',
         },
     };
     function tr(key, vars) {
@@ -756,42 +758,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // === Live price polling ===
-    // Fetches live.json from GitHub's raw content endpoint every 60
-    // seconds and patches Price / Change % / Entry / Total / Upside
-    // into the in-memory dataset before re-rendering. The file is updated
-    // every ~2 minutes by a GitHub Action (refresh-live-prices.yml) that
-    // commits to the `live-prices` branch. Netlify ignores that branch,
-    // so the entire price-refresh loop costs zero Netlify build credits.
+    // Fetches live.json from jsdelivr's CDN every 30 seconds and patches
+    // Price / Change % / Entry / Total / Upside into the in-memory
+    // dataset before re-rendering. The file is updated every ~2 minutes
+    // by a GitHub Action (refresh-live-prices.yml) that force-pushes a
+    // single-commit orphan branch `live-prices`. Netlify ignores that
+    // branch, so the entire price-refresh loop costs zero Netlify build
+    // credits.
     //
-    // Why raw.githubusercontent.com:
-    //   - Predictable 5-min CDN cache (`max-age=300`) — content is at
-    //     most 5 min stale, matching our 2-min cron cadence well.
-    //   - CORS-friendly (`Access-Control-Allow-Origin: *`).
-    //   - No metadata-cache quirks. We tried statically.io (broken HTTP
-    //     redirect chain that browsers block as mixed content) and
-    //     jsdelivr (their @branch metadata can cache for hours after a
-    //     branch update). raw is simpler and more reliable.
-    //   - Trade-off: query-string cache-busting is ignored by Fastly here
-    //     (same response served for any `?t=...` value), so the
-    //     effective refresh rate is 5 min worst case, regardless of how
-    //     often we poll. That's fine for portfolio tracking.
+    // Why jsdelivr (and not raw.githubusercontent.com):
+    //   - jsdelivr's CDN respects per-URL caching, so our `?t=<bucket>`
+    //     cache-bust produces a fresh fetch every poll interval.
+    //   - raw.githubusercontent.com's Fastly layer ignores query strings
+    //     for cache-keying, capping effective refresh at the 5-min
+    //     `max-age=300` TTL — too slow for a 2-min cron cadence.
+    //   - Now that the repo is public, jsdelivr's @branch metadata
+    //     resolution refreshes correctly (verified end-to-end).
+    //
+    // Aggressive freshness strategy:
+    //   1. `cache: 'reload'` forces a network request every poll,
+    //      bypassing the browser's HTTP cache entirely.
+    //   2. The `?t=<bucket>` query string changes every 15 seconds so
+    //      jsdelivr's edge caches treat each as a unique URL.
+    //   3. The Page Visibility API triggers an immediate refresh when
+    //      the user switches back to the tab, eliminating the
+    //      "came back to stale data" feeling that browser background
+    //      throttling otherwise creates.
+    //   4. A visible "Last updated Xs ago" indicator in the header lets
+    //      you SEE the polling working — if the timestamp stops
+    //      ticking, something's wrong.
     //
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    const LIVE_JSON_URL = 'https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json';
-    const LIVE_POLL_INTERVAL_MS = 60 * 1000;   // 60 s — balances freshness vs. CDN load
-    let lastLiveTs = null;   // de-dupe: skip re-render if the file hasn't changed
+    const LIVE_JSON_URL = 'https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@live-prices/live.json';
+    const LIVE_POLL_INTERVAL_MS = 30 * 1000;   // 30 s — matches cache-bust bucket; tight enough to feel live
+    let lastLiveTs = null;       // de-dupe: skip re-render if the file hasn't changed
+    let lastLiveFetchAt = null;  // wall-clock ms when the most recent successful fetch landed
 
     async function fetchLiveData() {
-        // Cache-bust with a 30-second-bucketed timestamp so we don't fight
-        // jsdelivr's own caching but still get fresh data within the poll
-        // window. (Bucketing avoids each user hitting a unique URL, which
-        // would push jsdelivr toward origin every time.)
-        const bucket = Math.floor(Date.now() / 30000);
+        // Cache-bust with a 15-second-bucketed query string. Bucketing
+        // (rather than a unique per-request timestamp) lets the CDN edge
+        // cache the response once per bucket — many users hit the same
+        // URL within a 15-second window, sparing the origin.
+        const bucket = Math.floor(Date.now() / 15000);
         const url = `${LIVE_JSON_URL}?t=${bucket}`;
         try {
-            const r = await fetch(url, { cache: 'no-cache' });
+            // `cache: 'reload'` skips the browser's HTTP cache entirely
+            // and forces a network request. Combined with the bucketed
+            // query string, every poll either hits a same-bucket CDN
+            // cache (fast) or fetches origin (fresh).
+            const r = await fetch(url, { cache: 'reload' });
             if (!r.ok) return null;
             const j = await r.json();
             // Schema sanity: require ts + tickers fields. Bail on anything else.
@@ -832,7 +849,14 @@ document.addEventListener('DOMContentLoaded', () => {
     async function pollLiveData(initial = false) {
         const live = await fetchLiveData();
         if (!live) return;
-        // Skip work if the file hasn't been re-stamped since our last poll.
+        // Record successful-fetch wall clock so the "Last updated" UI can
+        // age-stamp the most recent data, even when the payload hasn't
+        // changed since the previous poll.
+        lastLiveFetchAt = Date.now();
+        updateLiveStatus();
+        // Skip the data-patch work if the file hasn't been re-stamped
+        // since our last poll — but we still updated the timestamp above
+        // so the user sees the polling heartbeat.
         if (live.ts && live.ts === lastLiveTs) return;
         lastLiveTs = live.ts || null;
         const patched = applyLiveData(live);
@@ -843,6 +867,44 @@ document.addEventListener('DOMContentLoaded', () => {
             renderData();
         }
     }
+
+    // === Live-status indicator ===
+    // Small element in the header (".live-status") shows "Live · 5s ago"
+    // when the polling is healthy and "Live · — " when no fetch has
+    // succeeded yet. Updated on every successful poll and every 5s by
+    // the heartbeat timer so the "Xs ago" counter keeps ticking visibly.
+    function formatAgo(ms) {
+        const sec = Math.max(0, Math.floor(ms / 1000));
+        if (sec < 60) return `${sec}s ago`;
+        const min = Math.floor(sec / 60);
+        if (min < 60) return `${min}m ago`;
+        const hr = Math.floor(min / 60);
+        return `${hr}h ago`;
+    }
+    function updateLiveStatus() {
+        const el = document.getElementById('live-status');
+        if (!el) return;
+        if (lastLiveFetchAt == null) {
+            el.textContent = '· —';
+            el.classList.remove('live-fresh');
+            return;
+        }
+        const ageMs = Date.now() - lastLiveFetchAt;
+        el.textContent = `· ${formatAgo(ageMs)}`;
+        // Fresh = updated within the last 90 s (3× poll interval). Anything
+        // older suggests the network or cron is wedged.
+        el.classList.toggle('live-fresh', ageMs < 90 * 1000);
+    }
+    // Heartbeat that keeps the "Xs ago" counter moving between actual fetches.
+    setInterval(updateLiveStatus, 5 * 1000);
+
+    // Page Visibility — kick a fresh poll the moment the tab regains focus.
+    // Browsers throttle setInterval in background tabs (Chrome: max 1/min),
+    // so coming back to the tab after a few minutes would otherwise show
+    // stale data until the next throttled fire. This eliminates that gap.
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) pollLiveData(false);
+    });
 
     // Initialize Data from global JS variable
     function renderData() {
