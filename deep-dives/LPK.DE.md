@@ -1,15 +1,5 @@
 # LPK.DE — LPKF Laser & Electronics | Deep Dive
-**Date:** May 5, 2026 (UPDATED — PhotonCap PhD glass substrate analysis validates thesis)
-**Framework Version:** v3.6.6
-**Score:** 88 HC 🔒 | Base 80% (48/60) | Entry 100% (40/40) | #3 in Portfolio | **Owned ✓**
-**Price at Analysis:** €16.55
-**Ceiling:** €90-€310 (Bear case de-risked: SKC accelerating glass mass production to end 2026. Feynman at 30%. Waveguide confirmed shipping. 6+ independent sources.)
-**Upside Ratio:** 4.8x-12.1x
-**Market Cap:** ~€405M (~$440M)
-**Entry Ratio:** 8.46x to ceiling midpoint
-**FY2025 Revenue:** €115.3M (-6.2% YoY)
-**Q1 2026:** Revenue €17.1M (-32% YoY, legacy decline during qualification phase)
-**Earnings:** April 30, 2026 ✅ Reported
+**Date:** May 5, 2026 
 
 ---
 
@@ -142,49 +132,28 @@ Samsung Electro-Mechanics, Absolics ($600M Georgia fab), DNP, LG Innotek all tar
 | Risks | -2 | Weak core business (-1). Not sole-source (-1). |
 | **Base** | **46/60 (77%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — Forward TAM Math (v4.0 Base Case, 35% OP, 20x)
 
-```
-GLASS SUBSTRATE EQUIPMENT + PROCESS TAM (TRIPLE SUPERCYCLE):
+BASE CASE REVENUE (2027-2030):
 
-DB5 AI PACKAGING (Intel, Samsung SEMCO, TSMC):
-  Equipment: ~$500M → $2-4B by 2030
-  Services: ~$100M → $500M-1B
-  Adjacent tools: +50-100%
+  FY2027: €200M (glass begins, first LIDE production orders + €100M legacy)
+  FY2028: €400M (LIDE ramp, multi-tool per customer, waveguide early)
+  FY2029: €700M (full suite + CPO waveguide + SpaceX ramp)
+  FY2030: €1,000M (maturity, 40-60% of €3.5B TAM captured)
 
-DB3 LEO SPACE (SpaceX Starlink antenna packaging):
-  ~6,000 satellites/yr × glass panel antennas
-  LIDE processing for antenna panels: €20-50M additional by 2029
+CEILING DERIVATION (AH-1 chain):
 
-DB8 DEFENSE (Space & Defense glass packaging):
-  Military satellite + radar antenna packaging: €10-30M by 2029
+  FY2027: €200M × 35% OP = €70M × 20x = €1.4B / 24.5M shares = €57/share
+  FY2028: €400M × 35% OP = €140M × 20x = €2.8B / 24.5M shares = €114/share
+  FY2029: €700M × 35% OP = €245M × 20x = €4.9B / 24.5M shares = €200/share
+  FY2030: €1,000M × 35% OP = €350M × 20x = €7.0B / 24.5M shares = €286/share
 
-COMBINED TAM: ~$600M → $3.5-7B by 2030
+  LOW = FY2027 base = €57
+  HIGH = FY2028 base + discounted FY2029 + discounted FY2030
+       = €114 + (€200-€114) × 0.85 + (€286-€200) × 0.72
+       = €114 + €73 + €62 = €249
 
-LPKF CAPTURE (80% qual → 40-60% production):
-  Equipment: 40-60% of $3.5B = $1.4-2.1B
-  Services: €50-200M additional
-  Space+Defense: €30-80M additional
-  Total at maturity: €1.2-2.5B
-
-REVENUE PATH:
-  FY2025: €115M → FY2026: €105-120M (excl. LIDE)
-  FY2027: €150-250M (glass begins)
-  FY2028: €300-500M (ramp + margins + space early)
-  FY2029: €500-900M (full suite + CPO early + SpaceX ramp)
-
-EARNINGS:
-  €250M, 15% OP = €37.5M × 30x = €1.13B → ~€46
-  €450M, 20% OP = €90M × 35x = €3.15B → ~€128
-  €700M, 24% OP = €168M × 40x = €6.72B → ~€274
-  €1B (bull), 27% OP = €270M × 40x = €10.8B → ~€440
-
-CEILING: €35-€120 (conservative — discounts SpaceX as unconfirmed)
-```
-
-**Entry:** €15.65 vs midpoint €77.50 = 4.95x → Entry 75 (per Fund Curve: 3-5x range, high end)
-
-## Total: (77 × 0.6) + (75 × 0.4) = 46 + 30 = 75 HC
+CEILING: €57-249
 
 ## The ASML Parallel
 
@@ -210,19 +179,3 @@ European-headquartered. 80% of global glass packaging qualification on LPKF equi
 - Timing: Glass transition could delay. Management excluded LIDE from 2026 guidance.
 - Scale: 727 employees, €115M rev. Can they handle $1B+ order flow?
 
-## Verdict
-
-75 HC 🔒 — Owned. UPGRADED from 72 WL on triple supercycle discovery. LIDE is a universal primitive for panel-level packaging across AI chips (DB5), space antennas (DB3), and defense systems (DB8). The 80% qualification share is the moat. The Glass Panel Technology Group founding membership (2/15 companies with Schmid) confirms institutional validation. The LPKF→Schmid workflow (LIDE creates TGV, Schmid finishes wet-process) paired with Intel TeraFab + SpaceX 700mm format creates a dual-customer anchor at the two most important advanced packaging programs on earth. At €156M MC — smaller than a single quarter of AAOI's revenue — the entire triple-supercycle optionality costs less than most Series B funding rounds. The smallest market cap in the HC tier. 4.95x Entry ratio. Physics-required chokepoint.
-
-## Score Change Log
-- Apr 24, 2026: 72 WL (deep dive, DB5 only)
-- Apr 26, 2026: 75 HC (triple supercycle: DB5+DB3+DB8. Glass Panel Technology Group. SpaceX/TeraFab pathway. Schmid workflow. Base 72%→77%. Ceiling €29-86→€35-120.)
-- Apr 30, 2026: 81 HC (Q1 earnings: legacy -32% irrelevant during qualification. CEO confirmed "50-100 machines per customer at high volume." Ceiling raised €35-120→€50-150. 12% dip improved entry to 6.0x.)
-- **May 1, 2026: 81 HC** (CPO waveguide vector confirmed. LPKF Korea CEO Lee Yong-sang: "4-year co-development with specific semiconductor company" for 3D Direct Light waveguide equipment — NOW INSTALLED at customer. Almost certainly Intel. Patent pending on all-glass photonic connector. Sub-micron alignment via glass springs. 510×515mm mass production panels. Ceiling raised €50-150→€60-160.)
-- **May 1, 2026: 84 HC** (VLM Kapital patent-chain research: Intel patent US20240027706A1 describes glass interposer with laser-written waveguides for detachable fiber solutions. Intel paper confirms "ultrashort-pulse laser direct writing" = LPKF LIDE. Ayar Labs' "detachable glass photonic interconnect solution" uses Intel's glass bridge. Key Intel researcher Pooya Tadayon moved to Ayar Labs as VP Packaging & Test in 2024. LPKF is the ONLY mass-production-ready laser waveguide writer. Ceiling raised €60-160→€75-175.)
-- **May 2, 2026: 85 HC** (VLM Kapital patent chain accepted as virtual confirmation. Intel patent + CEO 50-100 machines + equipment installed + Pooya Tadayon at Ayar Labs = confirmed without formal press release. Ceiling raised €75-175→€80-200. 8.46x midpoint ratio. Three revenue vectors: substrate vias + CPO waveguides + Ayar Labs glass bridge architecture.)
-- **May 5, 2026: 85 HC** (PhotonCap PhD glass substrate analysis validates thesis independently. "Most advanced production-grade TGV process." Glass market $244M→$460-586M by 2030 (Yole/QY Research). NEW: 3D waveguide expansion identified — LPKF patent coverage extends beyond TGV into waveguide formation, could penetrate Corning's integrated platform territory. Under development, not confirmed — monitor as ceiling expansion trigger. EIC→CPO→EPIC progression framework: glass advantage COMPOUNDS with each generation. SOI.PA confirmed as vertical complement. Mass production 2027-2029 confirmed across Samsung EM, Absolics, DNP, LG Innotek. No score change — validation, not new thesis. Waveguide confirmation would trigger ceiling expansion to €100-250.)
-- **May 6, 2026: 83 HC** (Ceiling standardized to 2027-2028. €80-200→€80-217. Undiscounted €300 (2030) × 0.72 = €217. Midpoint €140→€148. Score -2 from Entry recalculation on Fund Curve. PhotonCap validated same session.)
-- **May 6, 2026: 88 HC ⭐ WAVEGUIDE CONFIRMED** (3D waveguide equipment NOT "under development" — ALREADY SHIPPED TO CUSTOMERS. LPKF corporate: "completed preparations for co-packaged optics technologies" + "already supplied equipment capable of forming 3D optical waveguides inside glass substrates." Level 3 investor Apr 28: "critical monopoly chokepoint" + "potential 10x" + "customer has already installed LPKF's equipment." Four sources confirmed: LPKF corporate, Level 3 investor, PhotonCap PhD, VLM Kapital patent chain. Base 77→80%: Core Thesis +1 (waveguide confirmed shipping, 4 process steps), TAM +1 (Layer A→Layer B, doubles capture per customer), Alpha +1 (Level 3 "10x" call). Ceiling €80-217→€85-225. At €23.40: midpoint €155, ratio 6.6x → Entry 100%. #2 in framework behind SIVE.)
-- **May 9, 2026: 88 HC — CEILING EXPANDED (Feynman Breadcrumb Pricing)** (Convequity identifies NVIDIA Feynman architecture (2028) as GPU-level CPO: optics integrated directly inside every GPU package, not just switches. "Multiplies glass substrate volume by orders of magnitude." Ceiling €85-225→€85-310. Feynman priced at 30% probability (single source, 2028 timeline). Probability escalation table: NVIDIA mentions publicly→50%→€85-360, NVIDIA confirms glass for GPU→70%→€85-420, prototype shown→90%→€85-470. Score unchanged at 88 HC because Entry already maxed at 100%. But rotation trigger extended from €225→€310. Convequity: "most asymmetric opportunity in entire AI optics chain" at 7.8x EV/GP. Six independent sources now confirmed: LPKF corporate, Serenity, PhotonCap, VLM Kapital, 펭귄, Convequity.)
-- **May 10, 2026: 88 HC — FLOOR RAISED (SKC timeline acceleration)** (Ceiling LOW €85→€90. Serenity reports: "SKC to accelerate mass production of glass substrates for US clients by end of year, ahead of original plan." SKC (Absolics) is one of LPK.DE's 5 major customers. Production timeline moved from 2027 → Q4 2026 = 2-3 quarters earlier than modeled. Earlier production = earlier LPKF equipment orders = earlier revenue. Bear case further de-risked: customers are ACCELERATING, not delaying. Combined with IntelliEPI InP shortage confirmation + Ren reporting initial production system orders + Broadcom CPO ramp, the entire glass substrate timeline is compressing. Score unchanged at 88 HC — Entry already maxed.)

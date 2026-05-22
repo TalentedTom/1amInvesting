@@ -1,13 +1,5 @@
 # SOI.PA — Soitec | Deep Dive
-**Date:** May 5, 2026 (UPGRADED TO HC — Level 3 investor CPO pure play classification)
-**Framework Version:** v3.6.6
-**Score:** 75 HC 🔒 | Base 85% (51/60) | Entry 60% (24/40) | **Owned ✓ — REBUILD POSITION**
-**Price at Analysis:** €153.50
-**Ceiling:** €250-€338 (2027-2028) (2028-2031, Goldman $91B CPO TAM + Level 3 investor 55,000% growth curve)
-**Upside Ratio:** 1.6x-3.6x
-**Market Cap:** ~€4.5B (~$4.9B) | EV: ~€1.8B
-**FY2026E Revenue:** ~€550M | Photonics-SOI: ~€100M
-**Earnings:** May 27, 2026 🔥
+**Date:** May 5, 2026 (
 
 ---
 
@@ -227,49 +219,30 @@ TOTAL SOITEC REVENUE    €700-900M  €1.1-1.5B   €2.0-3.5B   €3.8-5.5B+
 | Risks | 0 | SiN ELIMINATED. Mobile drag is NOT a risk — temporary cyclical headwind on structural CPO company (deliberately clearing, capacity fungible). CEO transition monitored. Patent portfolio provides rolling coverage. |
 | **Base** | **51/60 (85%)** | **↑ from 47/60 (78%). Core Thesis +1 (Level 3 CPO classification), TAM +1 (55,000% curve applied), Alpha +1 (Level 3 signal), Risks +1 (mobile reclassified as temporary, not structural risk).** |
 
-## Ceiling — Forward TAM Math (UPDATED with Multi-Vector TAM)
+## Ceiling — v4.0 AH-1 Derivation (Graduated OP, 25x, single-number FY2029 discounted 30%)
 
-```
-PHOTONICS-SOI (with 4x CPO content step-up + multi-vector expansion):
-  FY2026: €100M (pluggable era, 50mm²/device)
-  FY2027: €250-350M (pluggable growth + early CPO + LiDAR start)
-  FY2028: €500-700M (CPO ramp at 200mm²/device, LiDAR scaling, quantum pilots)
-  FY2029: €800M-1.5B (CPO hockey stick, multiple phases contributing)
-  FY2030: €1.5-3.0B (CPO at scale, LiDAR volume, quantum beginning)
+REVENUE TRAJECTORY (base case):
 
-TOTAL SOITEC:
-  FY2026: €550M → FY2027: €800-1.0B → FY2028: €1.2-1.7B
-  FY2029: €1.7-2.5B → FY2030: €2.5-4.0B
+  FY2027: €1.05B (pluggable SiPh accelerating + RF-SOI base)
+  FY2028: €1.63B (pluggable SiPh + CPO ramping together)
+  FY2029: €2.8B (CPO 4x content + pluggable base growing)
+  FY2030: €4.75B (content doubles to 8x + volume doubles = 4x rev in 2 years)
 
-EARNINGS:
-  €900M (FY2027), 30% OP = €270M × 25x = €6.75B → ~€190/share
-  €1.4B (FY2028), 35% OP = €490M × 28x = €13.7B → ~€390/share
-  €2.0B (FY2029), 38% OP = €760M × 30x = €22.8B → ~€650/share
-  €3.5B (FY2030, 4x content + multi-vector), 40% OP = €1.4B × 30x = €42B → ~€1,200/share
+GRADUATED MARGINS (mobile drag shrinks as Photonics-SOI mix rises):
 
-CEILING: €250-€550 (FY2028-2031)
-  Near-term (2028-29): €250-€450
-  Long-term (2030-31): €500-€800 (discounted per Rule 16)
-  BLENDED CEILING: €250-€550
-  NOTE: Level 3 investor applies 55,000% CPO growth curve directly to SOI.
-  If Goldman $91B materializes at speed Level 3 investor implies, ceiling could be conservative.
-```
+  FY2027: 20% OP (mobile still ~50% of mix)
+  FY2028: 25% OP (Photonics-SOI crossing 30%+)
+  FY2029: 33% OP (Photonics-SOI dominant)
+  FY2030: 40% OP (Smart Cut licensing at scale)
 
-**Entry at €153.50:** vs midpoint €400 = 2.60x → Entry 60% → Fund 24/40
+CEILING DERIVATION:
+
+  FY2029: €2.8B × 33% OP = €924M × 25x = €23.1B / 35.4M shares = €653
+  Discounted 30%: €653 × 0.70 = €457
+
+CEILING: €457 (single number, discounted FY2029 base case)
 
 ## Total: (85% × 60) + (60% × 40) = 51 + 24 = 75 HC
-
-**HC TRIGGER TABLE (price-dependent):**
-```
-€153 (current) → ratio 2.60x → Entry 60% → Score 75 HC ← CURRENT
-€130           → ratio 3.08x → Entry 67% → Score 78 HC
-€110           → ratio 3.64x → Entry 73% → Score 80 HC
-€100           → ratio 4.00x → Entry 77% → Score 81 HC
-€85            → ratio 4.71x → Entry 83% → Score 84 HC
-€70            → ratio 5.71x → Entry 88% → Score 86 HC (ELITE RANGE)
-```
-
-**HC also triggers at ANY price when Photonics-SOI crosses 30% of total revenue** — Base rises to 80%+ as mobile drag shrinks and monopoly dominates. Estimated: FY2027-28.
 
 ## Rule 10 Analysis: Path A Inside Path B?
 
@@ -316,32 +289,3 @@ Soitec is Layer -1 — UNDERNEATH the foundries. The deepest layer in the stack.
 - Smart Cut patent expiration timeline — 3,500+ portfolio provides rolling extensions
 - Stock ran +567% from Dec low — Entry compressed, vulnerable to pullback
 - TSEM patent suit vs GFS on SiPh — monitor for foundry landscape shifts
-
-## Verdict
-
-75 HC 🔒 — **UPGRADED.** Level 3 investor (verified 15,000% returns) named SOI.PA as one of four CPO pure plays (alongside SIVE, ShunSin, MSScorps) on May 3, 2026. The 55,000% CPO growth curve applies DIRECTLY to Soitec substrate demand — every CPO PIC is fabricated on a Soitec wafer at >95% monopoly share. Goldman $91B CPO TAM → $2.7-4.5B substrate capture. 3,500+ Smart Cut patents. SiN eliminated as threat. Capacity fungible RF→Photonics, zero capex. Content 4x→8x+ per device generation. Layer -1 deepest in the stack. Four independent sources converging (BofA, PhotonCap PhD, KawzInvests, Level 3 investor). Trimming was an error — REBUILD position to 3-5% at HC weight. AAOI trim on May 7 spike → rotate into SOI.PA. On any pullback to €100-130, score rises to 78-81 = aggressive add.
-
-## Score Change Log
-- Apr 24, 2026: 67 WL (initial deep dive)
-- Apr 26, 2026: 68 WL (NVIDIA CPO pull-forward. 4x CPO content step-up.)
-- May 2, 2026: 68 WL (142% CPO CAGR. PhotonCap SiN dismissal. Entry compressed at €127.)
-- May 5, 2026: 69 WL (Base 73%→78%: GFS SiPh doubling, TAM expansion, SiN eliminated.)
-- **May 5, 2026: 75 HC ⭐ UPGRADED.** Level 3 investor named SOI as CPO pure play alongside SIVE/ShunSin/MSScorps (May 3). 55,000% CPO growth curve applied directly. Base 78%→85%: Core Thesis +1, TAM +1 (maximum), Alpha +1 (Level 3), Risks +1 (mobile reclassified). Ceiling €200-500→€250-550. REBUILD to 3-5%. AAOI trim May 7 → rotate into SOI.PA.
-
-- **May 13, 2026: 75 HC (+7) — TOWER Q1 EARNINGS RESCORE. BASE 85→90%.** Tower reported $1.3B CONTRACTED SiPh revenue for 2027 + $290M prepayments from SiPh customers in Q1 ALONE. This proves "every SiPh chip Tower ships maps to a Soitec wafer order" with FINANCIAL DATA, not qualitative statements. Two foundries (Tower + GFS) now BOTH have confirmed expansion commitments with contracted numbers. Demand is not speculative — it is PREPAID and LOCKED. Cycle Stage 7→9 (+2): Tower $1.3B contracted + GFS SiPh doubling + TSMC COUPE H2 2026 + Samsung entering = ALL confirming simultaneously. Catalysts 4→5 (+1): Tower Q1 confirmation + all catalysts firing + May 27 earnings in 14 days. Ceiling €250-338→€250-400 (HIGH raised: confirmed SiPh demand trajectory supports €1.3B+ FY2028 revenue). At €155.85: midpoint €325, ratio 2.09x, Entry 52%. Score 68→75 HC. CROSSES HC THRESHOLD. European macro dip creating buying opportunity: at €140 → 77 HC, at €120 → 81 HC. Base 90% = 2nd highest in portfolio after SIVE (93%). Score limited by Entry (price), not thesis quality (90% Base = near-maximum). Serenity: "I expect SOI to keep delivering record growth. European media wrong." May 27 earnings in 14 days.
-
-- **May 15, 2026: 76 (+1) — GOOGLE TPU v9 VALIDATES CONTENT MULTIPLIER ACROSS BOTH ARCHITECTURES.** FundaAI research: Google TPU v9 targeting 4x ICI bandwidth increase vs v8, with potential coherent-lite technology doubling dollar content per optical module. Combined: potentially 8x optical value per Google TPU rack. FundaAI explicitly names upstream beneficiaries: "lasers, modulators, PICs, DSPs, connectors, advanced packaging" and names $TSEM directly. Also mentions "thin-film lithium niobate or other higher-end PIC platforms" for coherent modulation. SOI.PA's 4x content multiplier (50mm²→200mm² per device) was previously modelled primarily for NVIDIA CPO. Google TPU v9 going the same direction means the multiplier applies across BOTH major AI chip architectures. This reduces platform concentration risk. If both NVIDIA and Google racks consume 4-8x more Photonics-SOI per device, total wafer demand exceeds Goldman's NVIDIA-centric $97B TAM. Base 90→91% (+1): content multiplier confirmed across dual architectures reduces single-customer dependency.
-
-- **May 16, 2026: 83 (+6) — CEILING REBUILT WITH FULL $193B PHOTONICS TAM + 2030 HOCKEY STICK.** Serenity: "Photonics TAM goes from $14B→$154B in two years." Goldman Exhibit 10 confirms total photonics TAM 2028 at $193.5B (scale-up $82.8B + scale-out $39.8B + CPO $70.9B). Previous model used CPO-only ($97B). SOI.PA serves ALL SiPh (CPO + pluggable), not just CPO. "1.6T is the first generation where SiPh is dominant almost out of the gate" (Irrational Analysis) = pluggable SiPh volume EXPLODING now, every module on a Soitec wafer.
-
-  **Revised revenue trajectory (pluggable SiPh corrected):**
-  FY2027: €900M → €1.0-1.1B (pluggable SiPh accelerating ahead of CPO ramp)
-  FY2028: €1.4B → €1.55-1.7B (pluggable SiPh + CPO ramping together)
-  FY2029: €2.0B → €2.8B (CPO 4x content + pluggable base growing)
-  FY2030: €3.5B → €4.5-5.0B (content doubles to 8x + volume doubles = 4x revenue in 2 years)
-
-  **The multiplicative hockey stick:** Content per device going UP (50mm²→200mm²→400mm²) while unit volumes ALSO going UP. 2x content × 2x volume = 4x revenue (FY2028→FY2030). Pluggable SiPh doesn't die when CPO arrives. They COEXIST. Enterprise/edge stays pluggable. Hyperscaler core goes CPO. Soitec serves BOTH. Same wafer. Same factory. Same 95% monopoly.
-
-  **2030 discounted valuation (conservative):** €4.75B midpoint × 40% OP = €1.9B × 30% discount = €1.33B × 20x conservative multiple = €26.6B → €745/share. Even with every conservative assumption (30% discount, 20x multiple, midpoint revenue), stock at €148 against €745 = 5.0x. Current 2028 ceiling of €445 is the HALFWAY POINT, not the destination.
-
-  **Ceiling €250-400 → €225-600.** LOW adjusted to 2027 base math (€1.05B × 30% OP × 25x = €7.9B → €223). HIGH raised to capture 2030 trajectory partially (splitting between pure 2028 €445 and 2030 discounted €745). At €148.05: midpoint €412.50, ratio 2.79x, Entry 70%. Score: (91×0.6)+(70×0.4) = 83. Implied P/E: 11.8x (2028 base) / 5.0x (2030 discounted conservative). SOI.PA jumps from #9 to #7. All 9 portfolio positions remain in top 15.
