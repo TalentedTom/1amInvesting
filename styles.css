@@ -925,21 +925,17 @@ body.light-mode .flag-icon {
 }
 
 /* === Unranked-row visual differentiation =====================
-   Left-border accent on the first sticky column tells the user at a
-   glance why a row is unranked. Three categories:
-     - PRE-IPO        : blue   (awaiting market)
-     - Rejected (FAIL): red    (analyzed, not investment-grade)
-     - Other unranked : grey   (incomplete data, mojibake, '?', etc.)
-   Border-only treatment avoids fighting the sticky-column background
-   override on hover/expanded states. */
-tr.row-pre-ipo > td:first-child {
-    border-left: 3px solid rgba(99, 102, 241, 0.7);
-}
-tr.row-rejected > td:first-child {
-    border-left: 3px solid rgba(239, 68, 68, 0.7);
-}
+   Left-border accent on the first sticky column flags any unranked
+   row — PRE-IPO, FAIL-marked rejection, or incomplete data — as
+   non-investment-grade. All three categories share the same red
+   accent (user pref): the distinction "investment-grade vs not" is
+   what matters at a glance; the *why* lives in the cells themselves.
+   Three CSS class names retained in case differentiated coloring is
+   wanted later — single colour change reverts the unification. */
+tr.row-pre-ipo > td:first-child,
+tr.row-rejected > td:first-child,
 tr.row-unranked > td:first-child {
-    border-left: 3px solid rgba(148, 163, 184, 0.5);
+    border-left: 3px solid rgba(239, 68, 68, 0.7);
 }
 /* Slight text de-emphasis on unranked rows so they read as 'reference,
    not investment'. Faint enough to keep the ticker readable for the
