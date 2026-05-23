@@ -143,8 +143,9 @@ SKC accelerating glass mass production to end 2026.
 Source: CEO guidance, LPKF Korea disclosure (April 2026), VLM Kapital patent research, PhotonCap PhD analysis.
 AH-7 confidence: HIGH — equipment installed at customer, 80% qualification share confirmed.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | €100M | €250M | €500M | €750M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €100M | €250M | €500M | €750M |
 
   Unit math: 2027 ~25 machines x €4M ASP to 2-3 customers. 2030 ~150 machines x €5M ASP to 5-6 customers.
 
@@ -156,8 +157,9 @@ Three revenue streams from glass: (1) substrate vias, (2) optical waveguides, (3
 Source: Intel patent, Ayar Labs architecture, VLM Kapital research.
 AH-7 confidence: MEDIUM — patent confirmed, production timeline 2028+.
 
-  | 2027 | 2028 | 2029  | 2030  |
-  | €20M | €60M | €100M | €150M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €20M | €60M | €100M | €150M |
 
 ### Vector 3: Space & Defense Glass Packaging
 SpaceX linked to Schmid's 700mm format "Space & Defense" order.
@@ -167,8 +169,9 @@ Intel + SpaceX = TeraFab partners, both use LPKF-adjacent technology.
 Source: Schmid order disclosure, Fraunhofer IZM membership, community research.
 AH-7 confidence: MEDIUM — SpaceX connection inferred from Schmid order, not directly confirmed.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | €15M | €30M | €50M | €50M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €15M | €30M | €50M | €50M |
 
 ### Vector 4: Legacy Business (PCB, Stencil, Solar)
 Existing non-glass business. Declining as company pivots to glass.
@@ -176,28 +179,31 @@ FY2025 revenue €115.3M was primarily legacy.
 Source: Annual reports.
 AH-7 confidence: HIGH — decline trajectory observable.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | €65M | €60M | €50M | €50M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €65M | €60M | €50M | €50M |
 
 ### Combined Revenue:
 
-  | Vector              | 2027  | 2028  | 2029  | 2030    |
-  | 1. LIDE Equipment   | €100M | €250M | €500M | €750M   |
-  | 2. CPO Waveguide    | €20M  | €60M  | €100M | €150M   |
-  | 3. Space & Defense  | €15M  | €30M  | €50M  | €50M    |
-  | 4. Legacy           | €65M  | €60M  | €50M  | €50M    |
-  | **TOTAL**           | **€200M** | **€400M** | **€700M** | **€1,000M** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. LIDE Equipment | €100M | €250M | €500M | €750M |
+| 2. CPO Waveguide | €20M | €60M | €100M | €150M |
+| 3. Space & Defense | €15M | €30M | €50M | €50M |
+| 4. Legacy | €65M | €60M | €50M | €50M |
+| **TOTAL** | **€200M** | **€400M** | **€700M** | **€1,000M** |
 
   Revenue ramps €200M -> €1,000M in 4 years (5x). V1 LIDE equipment drives 75% of growth.
   Strong long-term compounder as glass replaces organic substrates.
 
 ### Full Valuation Table (35% OP, 20x, 24.5M shares):
 
-  | Year | Revenue  | OP (35%) | x 20x  | Per Share |
-  | 2027 | €200M    | €70M     | €1.4B  | €57       |
-  | 2028 | €400M    | €140M    | €2.8B  | €114      |
-  | 2029 | €700M    | €245M    | €4.9B  | €200      |
-  | 2030 | €1,000M  | €350M    | €7.0B  | €286      |
+| Year | Revenue | OP (35%) | × 20x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | €200M | €70M | €1.4B | €57 |
+| 2028 | €400M | €140M | €2.8B | €114 |
+| 2029 | €700M | €245M | €4.9B | €200 |
+| 2030 | €1,000M | €350M | €7.0B | €286 |
 
   €57 -> €286 in 4 years. Strong long-term compounder.
 

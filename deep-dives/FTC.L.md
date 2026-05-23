@@ -66,8 +66,9 @@ Starlink ~7,000 satellites scaling to 42,000. Each ground station cluster needs 
 Source: SpaceX order book, FCC ruling (May 2026), KaizenInvestor #1 SpaceX supplier.
 AH-7 confidence: HIGH — £47M order confirmed, shipping, sole qualified supplier.
 
-  | 2027 | 2028  | 2029  | 2030  |
-  | £65M | £100M | £140M | £180M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| £65M | £100M | £140M | £180M |
 
 ### Vector 2: V/Ka/Q-Band Expansion (TAM multiplier)
 Research collaboration expanding beyond E-band to V-band, Ka-band, Q-band.
@@ -76,8 +77,9 @@ Each new band is separate product line using same GaN SSPA core competence.
 Source: Filtronic R&D disclosure (May 2026).
 AH-7 confidence: MEDIUM — R&D confirmed, production timeline 2028-2029 for V-band.
 
-  | 2027 | 2028 | 2029 | 2030  |
-  | £5M  | £25M | £60M | £120M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| £5M | £25M | £60M | £120M |
 
 ### Vector 3: Defense (DPA, Military SATCOM, Radar)
 Government-legislated demand floor via DPA and CHIPS Act positioning.
@@ -86,8 +88,9 @@ UK/NATO defense budgets expanding to 5% GDP target.
 Source: DPA positioning, NATO defense spending trajectory.
 AH-7 confidence: MEDIUM — confirmed but contract timing uncertain.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | £10M | £20M | £35M | £50M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| £10M | £20M | £35M | £50M |
 
 ### Vector 4: Non-SpaceX Commercial (Other LEO, Telecom Backhaul)
 OneWeb, Amazon Kuiper, Telesat all building LEO constellations needing ground station backhaul.
@@ -95,29 +98,32 @@ mmWave equipment TAM: $7.6B by 2030.
 Source: Industry TAM reports, LEO constellation plans.
 AH-7 confidence: LOW-MEDIUM — no confirmed non-SpaceX orders yet, technology transferable.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | £5M  | £15M | £30M | £50M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| £5M | £15M | £30M | £50M |
 
 ### Vector 5: Base Business (legacy RF products)
 Stable existing revenue: £10M/year.
 
 ### Combined Revenue:
 
-  | Vector             | 2027  | 2028  | 2029  | 2030  |
-  | 1. SpaceX E-band   | £65M  | £100M | £140M | £180M |
-  | 2. V/Ka/Q-band     | £5M   | £25M  | £60M  | £120M |
-  | 3. Defense         | £10M  | £20M  | £35M  | £50M  |
-  | 4. Non-SpaceX      | £5M   | £15M  | £30M  | £50M  |
-  | 5. Base            | £10M  | £10M  | £10M  | £10M  |
-  | **TOTAL**          | **£95M** | **£170M** | **£275M** | **£410M** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. SpaceX E-band | £65M | £100M | £140M | £180M |
+| 2. V/Ka/Q-band | £5M | £25M | £60M | £120M |
+| 3. Defense | £10M | £20M | £35M | £50M |
+| 4. Non-SpaceX | £5M | £15M | £30M | £50M |
+| 5. Base | £10M | £10M | £10M | £10M |
+| **TOTAL** | **£95M** | **£170M** | **£275M** | **£410M** |
 
 ### Full Valuation Table (Graduated OP, 25x, ~223M shares):
 
-  | Year | Revenue | OP Margin | OP    | × 25x   | Per Share  |
-  | 2027 | £95M    | 20%       | £19M  | £475M   | GBp 213    |
-  | 2028 | £170M   | 25%       | £42.5M| £1.06B  | GBp 477    |
-  | 2029 | £275M   | 28%       | £77M  | £1.93B  | GBp 864    |
-  | 2030 | £410M   | 30%       | £123M | £3.08B  | GBp 1,379  |
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | £95M | 20% | £19M | £475M | GBp 213 |
+| 2028 | £170M | 25% | £42.5M | £1.06B | GBp 477 |
+| 2029 | £275M | 28% | £77M | £1.93B | GBp 864 |
+| 2030 | £410M | 30% | £123M | £3.08B | GBp 1,379 |
 
   Revenue ramps £95M → £410M in 4 years (4.3x). GBp 213 → GBp 1,379.
   Strong long-term compounder as V/Ka/Q-band adds revenue layers on top of SpaceX E-band base.

@@ -77,8 +77,9 @@ May 2026: New customer win confirmed pluggable SiPh also needs WLBI (not just CP
 Source: Goldman $193B photonics TAM, new customer win (May 2026), Damnang S-Tier ranking.
 AH-7 confidence: HIGH — sole-source monopoly, shipping, customer base expanding.
 
-  | 2027 | 2028  | 2029  | 2030  |
-  | $70M | $195M | $300M | $400M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $70M | $195M | $300M | $400M |
 
 ### Vector 2: Sonoma ASIC PLBI — Package-Level Burn-In for Custom AI ASICs
 Record $41M single order (April 16, 2026). Next-gen higher-power ASIC already ordered.
@@ -88,8 +89,9 @@ Every custom AI ASIC (Google TPU, Amazon Trainium, Meta MTIA, Microsoft Maia) ne
 Source: Company earnings, $41M order disclosure, contract manufacturing ramp.
 AH-7 confidence: HIGH — record order confirmed, backlog visible, >20 systems/month production.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $100M | $195M | $280M | $330M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $100M | $195M | $280M | $330M |
 
 ### Vector 3: SiC/GaN Power Semiconductor Test
 Silicon carbide for EVs and power electronics. Original AEHR thesis before AI pivot.
@@ -97,16 +99,18 @@ EV adoption slower than expected but industrial/grid SiC demand growing.
 Source: Company guidance, EV/industrial SiC TAM.
 AH-7 confidence: MEDIUM — cyclical, EV-dependent. Recovery timeline uncertain.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | $30M | $50M | $70M | $70M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $30M | $50M | $70M | $70M |
 
 ### Combined Revenue:
 
-  | Vector              | 2027   | 2028   | 2029   | 2030   |
-  | 1. SiPh WLBI        | $70M   | $195M  | $300M  | $400M  |
-  | 2. Sonoma ASIC       | $100M  | $195M  | $280M  | $330M  |
-  | 3. SiC/GaN Power     | $30M   | $50M   | $70M   | $70M   |
-  | **TOTAL**            | **$200M** | **$440M** | **$650M** | **$800M** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. SiPh WLBI | $70M | $195M | $300M | $400M |
+| 2. Sonoma ASIC | $100M | $195M | $280M | $330M |
+| 3. SiC/GaN Power | $30M | $50M | $70M | $70M |
+| **TOTAL** | **$200M** | **$440M** | **$650M** | **$800M** |
 
   Revenue ramps $200M -> $800M in 4 years (4x).
   V1 and V2 contribute roughly equally by 2028.
@@ -114,11 +118,12 @@ AH-7 confidence: MEDIUM — cyclical, EV-dependent. Recovery timeline uncertain.
 
 ### Full Valuation Table (40% OP monopoly equipment, 30x, ~29.9M shares):
 
-  | Year | Revenue | OP (40%) | x 30x   | Per Share |
-  | 2027 | $200M   | $80M     | $2.4B   | $80       |
-  | 2028 | $440M   | $176M    | $5.28B  | $177      |
-  | 2029 | $650M   | $260M    | $7.8B   | $261      |
-  | 2030 | $800M   | $320M    | $9.6B   | $321      |
+| Year | Revenue | OP (40%) | × 30x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | $200M | $80M | $2.4B | $80 |
+| 2028 | $440M | $176M | $5.28B | $177 |
+| 2029 | $650M | $260M | $7.8B | $261 |
+| 2030 | $800M | $320M | $9.6B | $321 |
 
   $80 -> $321 in 4 years. Monopoly pricing power sustains 40% OP at scale.
 

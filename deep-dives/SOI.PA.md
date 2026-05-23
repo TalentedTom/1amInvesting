@@ -237,11 +237,12 @@ GRADUATED MARGINS (mobile drag shrinks as Photonics-SOI mix rises):
 
 FULL VALUATION TABLE (25x, graduated margins):
 
-  | Year   | Revenue | OP Margin | OP     | × 25x   | Per Share |
-  | FY2027 | €1.05B  | 20%       | €210M  | €5.25B  | €148      |
-  | FY2028 | €1.63B  | 25%       | €408M  | €10.19B | €288      |
-  | FY2029 | €2.8B   | 33%       | €924M  | €23.1B  | €653      |
-  | FY2030 | €4.75B  | 40%       | €1.9B  | €47.5B  | €1,342    |
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------|
+| FY2027 | €1.05B | 20% | €210M | €5.25B | €148 |
+| FY2028 | €1.63B | 25% | €408M | €10.19B | €288 |
+| FY2029 | €2.8B | 33% | €924M | €23.1B | €653 |
+| FY2030 | €4.75B | 40% | €1.9B | €47.5B | €1,342 |
 
   Revenue AND margins both expanding simultaneously = powerful compounding.
   €148 → €1,342 in 4 years. SOI.PA is a strong long-term compounder.

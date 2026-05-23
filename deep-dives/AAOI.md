@@ -98,61 +98,68 @@ Currently 100K units/month. Sold out through mid-2027. Peaks 2027 then declines 
 Source: Q1 2026 earnings call, management guidance.
 AH-7 confidence: HIGH — shipping, capacity constrained.
 
-  | 2027   | 2028   | 2029   | 2030   |
-  | $2.5B  | $2.0B  | $1.5B  | $1.0B  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $2.5B | $2.0B | $1.5B | $1.0B |
 
 ### Vector 2: 1.6T Pluggable Transceivers (RAMPING)
 CEO: "$2B+ business" in 2027. Replaces 800G as primary growth driver.
 Source: CEO commentary Q1 call.
 AH-7 confidence: HIGH — management $2B target stated.
 
-  | 2027   | 2028   | 2029   | 2030   |
-  | $1.5B  | $2.5B  | $3.0B  | $2.5B  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $1.5B | $2.5B | $3.0B | $2.5B |
 
 ### Vector 3: CATV/DOCSIS (FLOOR)
 Mediacom DOCSIS 4.0 multi-year rollout. Consensus $300-350M for 2026.
 Source: Mediacom partnership, analyst consensus.
 AH-7 confidence: HIGH — contracted.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $400M | $450M | $400M | $350M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $400M | $450M | $400M | $350M |
 
 ### Vector 4: CW Laser External Sales (POTENTIAL)
 Three CPO/laser agreements in negotiation. If signed, AAOI becomes external CW laser supplier.
 Source: Q1 earnings call, Serenity analysis.
 AH-7 confidence: LOW-MEDIUM — in negotiation, not signed.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $100M | $300M | $500M | $700M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $100M | $300M | $500M | $700M |
 
 ### Vector 5: CPO Modules (FUTURE)
 If CW laser negotiations convert, AAOI could assemble CPO modules using internal lasers.
 Source: Three agreements in negotiation.
 AH-7 confidence: LOW — dependent on V4 closing.
 
-  | 2027 | 2028  | 2029  | 2030  |
-  | $0   | $100M | $300M | $500M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $0 | $100M | $300M | $500M |
 
 ### Combined Revenue:
 
-  | Vector              | 2027    | 2028    | 2029    | 2030    |
-  | 1. 800G Pluggable   | $2.5B   | $2.0B   | $1.5B   | $1.0B   |
-  | 2. 1.6T Pluggable   | $1.5B   | $2.5B   | $3.0B   | $2.5B   |
-  | 3. CATV             | $400M   | $450M   | $400M   | $350M   |
-  | 4. CW Laser Sales   | $100M   | $300M   | $500M   | $700M   |
-  | 5. CPO Modules      | $0      | $100M   | $300M   | $500M   |
-  | **TOTAL**           | **$4.5B** | **$5.35B** | **$5.7B** | **$5.05B** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. 800G Pluggable | $2.5B | $2.0B | $1.5B | $1.0B |
+| 2. 1.6T Pluggable | $1.5B | $2.5B | $3.0B | $2.5B |
+| 3. CATV | $400M | $450M | $400M | $350M |
+| 4. CW Laser Sales | $100M | $300M | $500M | $700M |
+| 5. CPO Modules | $0 | $100M | $300M | $500M |
+| **TOTAL** | **$4.5B** | **$5.35B** | **$5.7B** | **$5.05B** |
 
   Revenue PEAKS 2029 then declines — pluggable fades faster than CPO/laser ramps.
   This is why AAOI is ⚡ BOTTLENECK (trade) not a compounder. The S-curve is visible.
 
 ### Full Valuation Table (38% OP per management target, 25x, 85M shares post-ATM dilution):
 
-  | Year | Revenue  | OP (38%)  | × 25x    | Per Share |
-  | 2027 | $4.5B    | $1.71B    | $42.75B  | $503      |
-  | 2028 | $5.35B   | $2.03B    | $50.83B  | $598      |
-  | 2029 | $5.7B    | $2.17B    | $54.15B  | $637      |
-  | 2030 | $5.05B   | $1.92B    | $47.95B  | $564      |
+| Year | Revenue | OP (38%) | × 25x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | $4.5B | $1.71B | $42.75B | $503 |
+| 2028 | $5.35B | $2.03B | $50.83B | $598 |
+| 2029 | $5.7B | $2.17B | $54.15B | $637 |
+| 2030 | $5.05B | $1.92B | $47.95B | $564 |
 
   Peaks 2029 at $637 then DECLINES. Pluggable S-curve visible in the numbers.
   $600M ATM dilution (82M→85M shares) reduces per-share values ~3.5%.

@@ -69,8 +69,9 @@ NDAA Section 164 bans Chinese battery components = regulatory moat for US defens
 Source: L3Harris confirmation, company disclosures, Q1 2026 earnings.
 AH-7 confidence: HIGH — shipping, contracted, NDAA-protected.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $100M | $200M | $350M | $500M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $100M | $200M | $350M | $500M |
 
 ### Vector 2: eVTOL / Urban Air Mobility
 Dubai commercial operations year-end 2026. Physics-required: 450+ Wh/kg for profitable flight.
@@ -78,60 +79,67 @@ Without 500 Wh/kg, eVTOL doesn't fly profitably. AMPX SiMaxx is the only battery
 Source: Dubai station built, eVTOL OEM partnerships.
 AH-7 confidence: MEDIUM — certification timelines uncertain, Dubai confirmed.
 
-  | 2027 | 2028 | 2029  | 2030  |
-  | $30M | $80M | $150M | $250M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $30M | $80M | $150M | $250M |
 
 ### Vector 3: Electric Mobility (China + Global)
 $21M China order confirmed (scooters, three-wheelers, motorcycles). SiCore platform.
 Source: Order confirmed Q4 2025.
 AH-7 confidence: MEDIUM — China order confirmed, global expansion unproven.
 
-  | 2027 | 2028  | 2029  | 2030  |
-  | $50M | $100M | $150M | $200M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $50M | $100M | $150M | $200M |
 
 ### Vector 4: Humanoid Robots / Autonomous Systems
 Every autonomous robot needs max energy/weight ratio. Tesla Optimus, Figure, Unitree.
 Source: TAM analysis, Physical AI thesis.
 AH-7 confidence: LOW-MEDIUM — market pre-production scale.
 
-  | 2027 | 2028 | 2029 | 2030  |
-  | $10M | $30M | $60M | $100M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $30M | $60M | $100M |
 
 ### Vector 5: HAPS + Space + Soldier Power + Other
 High-altitude pseudo-satellites, space applications, soldier power, premium niche.
 Source: HAPS operators confirmed, military interest.
 AH-7 confidence: LOW-MEDIUM — niche markets, smaller scale.
 
-  | 2027 | 2028 | 2029 | 2030 |
-  | $10M | $20M | $40M | $50M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $20M | $40M | $50M |
 
 ### Vector 6: Existing/Legacy
 Stable base business from current customers and applications.
 
-  | 2027 | 2028 | 2029 | 2030  |
-  | $50M | $70M | $50M | $100M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $50M | $70M | $50M | $100M |
 
 ### Combined Revenue:
 
-  | Vector              | 2027   | 2028   | 2029   | 2030     |
-  | 1. Defense UAS      | $100M  | $200M  | $350M  | $500M    |
-  | 2. eVTOL            | $30M   | $80M   | $150M  | $250M    |
-  | 3. Electric Mobility| $50M   | $100M  | $150M  | $200M    |
-  | 4. Humanoid Robots  | $10M   | $30M   | $60M   | $100M    |
-  | 5. HAPS/Space/Other | $10M   | $20M   | $40M   | $50M     |
-  | 6. Legacy           | $50M   | $70M   | $50M   | $100M    |
-  | **TOTAL**           | **$250M** | **$500M** | **$800M** | **$1,200M** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. Defense UAS | $100M | $200M | $350M | $500M |
+| 2. eVTOL | $30M | $80M | $150M | $250M |
+| 3. Electric Mobility | $50M | $100M | $150M | $200M |
+| 4. Humanoid Robots | $10M | $30M | $60M | $100M |
+| 5. HAPS/Space/Other | $10M | $20M | $40M | $50M |
+| 6. Legacy | $50M | $70M | $50M | $100M |
+| **TOTAL** | **$250M** | **$500M** | **$800M** | **$1,200M** |
 
   Revenue ramps $250M -> $1,200M in 4 years (4.8x).
   Defense UAS drives 42% of 2030 revenue. eVTOL becomes material from 2028.
 
 ### Full Valuation Table (25% OP, 25x, 74M shares):
 
-  | Year | Revenue   | OP (25%)  | x 25x   | Per Share |
-  | 2027 | $250M     | $62.5M    | $1.56B  | $21       |
-  | 2028 | $500M     | $125M     | $3.13B  | $42       |
-  | 2029 | $800M     | $200M     | $5.0B   | $68       |
-  | 2030 | $1,200M   | $300M     | $7.5B   | $101      |
+| Year | Revenue | OP (25%) | × 25x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | $250M | $62.5M | $1.56B | $21 |
+| 2028 | $500M | $125M | $3.13B | $42 |
+| 2029 | $800M | $200M | $5.0B | $68 |
+| 2030 | $1,200M | $300M | $7.5B | $101 |
 
   $21 -> $101 in 4 years. Revenue growth strong but margins must expand (currently 20% GM).
 
