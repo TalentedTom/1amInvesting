@@ -27,47 +27,57 @@ document.addEventListener('DOMContentLoaded', () => {
     // FMP's /image-stock/ endpoint that we use by default for ticker logos
     // only carries US listings. Everything else falls through to the
     // colored letter avatar — fine as a fallback, but bland for
-    // recognizable global companies like Samsung, TSMC, BE Semiconductor,
-    // Aixtron, etc.
+    // recognizable global companies like Samsung, TSMC, BE Semiconductor.
     //
-    // This map plugs the gap: ticker -> direct logo URL. Clearbit's free
-    // logo CDN (no auth required, 200×200 PNG output) resolves
-    // `https://logo.clearbit.com/<domain>` for any domain its index has.
+    // Two logo sources, in priority order per ticker:
+    //   1. TradingView's symbol-logo CDN: `https://s3-symbol-logo.tradingview.com/<slug>--big.svg`
+    //      - SVG, scales perfectly at our 22 px / 14 px avatar sizes
+    //      - CORS open (`Access-Control-Allow-Origin: *`)
+    //      - Slug must match TradingView's internal logoid for the company;
+    //        ranges from `apple` to `lpkf-laser-and-electronics`. There's no
+    //        public way to compute the slug from a ticker — verify by hitting
+    //        `https://s3-symbol-logo.tradingview.com/<guess>--big.svg` (200
+    //        means found, 403 means wrong slug).
+    //   2. Clearbit's free logo CDN: `https://logo.clearbit.com/<domain>`
+    //      - PNG, 200×200, requires the company's official web domain
+    //      - Fallback for tickers whose TradingView slug I couldn't find
     //
-    // To add a new entry: identify the company's official domain (their
-    // own homepage URL minus `https://www.` and any path) and paste a
-    // new line. If Clearbit doesn't have a logo for that domain, the
-    // letter avatar falls through automatically — no extra error handling
-    // required.
+    // To add a new entry: try TradingView first (use the URL test above),
+    // fall back to Clearbit with the official domain. If neither works,
+    // the colored letter avatar shows through and the site still looks fine.
     const LOGO_OVERRIDES = {
+        // === TradingView (preferred — vector logos, scale perfectly) ===
         // Korea
-        '005930.KS': 'https://logo.clearbit.com/samsung.com',
-        '000660.KS': 'https://logo.clearbit.com/skhynix.com',
+        '005930.KS': 'https://s3-symbol-logo.tradingview.com/samsung--big.svg',
         // Sweden
-        'SIVE.ST':   'https://logo.clearbit.com/sivers-semiconductors.com',
+        'SIVE.ST':   'https://s3-symbol-logo.tradingview.com/sivers-semiconductors-ab--big.svg',
         // Germany
-        'LPK.DE':    'https://logo.clearbit.com/lpkf.com',
-        'AIXA.DE':   'https://logo.clearbit.com/aixtron.com',
-        'M7U.DE':    'https://logo.clearbit.com/manz.com',
+        'LPK.DE':    'https://s3-symbol-logo.tradingview.com/lpkf-laser-and-electronics--big.svg',
+        'AIXA.DE':   'https://s3-symbol-logo.tradingview.com/aixtron--big.svg',
+        'M7U.DE':    'https://s3-symbol-logo.tradingview.com/manz-ag--big.svg',
         // France
-        'SOI.PA':    'https://logo.clearbit.com/soitec.com',
-        'ALRIB':     'https://logo.clearbit.com/riber.com',
+        'SOI.PA':    'https://s3-symbol-logo.tradingview.com/soitec--big.svg',
+        'ALRIB':     'https://s3-symbol-logo.tradingview.com/riber-sa--big.svg',
         // Netherlands
-        'BESI.AS':   'https://logo.clearbit.com/besi.com',
+        'BESI.AS':   'https://s3-symbol-logo.tradingview.com/be-semiconductor-industries--big.svg',
         // UK
-        'FTC.L':     'https://logo.clearbit.com/filtronic.com',
-        'IQE.L':     'https://logo.clearbit.com/iqep.com',
+        'IQE.L':     'https://s3-symbol-logo.tradingview.com/iqe-plc--big.svg',
         // Switzerland
-        'AMS.SW':    'https://logo.clearbit.com/ams-osram.com',
+        'AMS.SW':    'https://s3-symbol-logo.tradingview.com/ams-osram--big.svg',
         // Denmark
-        'NKT':       'https://logo.clearbit.com/nkt.com',
+        'NKT':       'https://s3-symbol-logo.tradingview.com/nkt-a-s--big.svg',
         // Australia
-        'EOS.AX':    'https://logo.clearbit.com/eos.global',
+        'EOS.AX':    'https://s3-symbol-logo.tradingview.com/eos--big.svg',
         // Taiwan
-        '2330.TW':   'https://logo.clearbit.com/tsmc.com',
-        '2337.TW':   'https://logo.clearbit.com/macronix.com',
-        // Hong Kong
+        '2330.TW':   'https://s3-symbol-logo.tradingview.com/taiwan-semiconductor--big.svg',
+        '2337.TW':   'https://s3-symbol-logo.tradingview.com/macronix-international--big.svg',
+        '6830.TWO':  'https://s3-symbol-logo.tradingview.com/msscorps-co-ltd--big.svg',  // MSScorps
+
+        // === Clearbit (fallback — couldn't find TradingView slug) ===
+        '000660.KS': 'https://logo.clearbit.com/skhynix.com',
+        'FTC.L':     'https://logo.clearbit.com/filtronic.com',
         '1888.HK':   'https://logo.clearbit.com/kingboard.com',
+        '6451.TW':   'https://logo.clearbit.com/shunsin.com',                              // ShunSin Technology
     };
 
     // === I18N ============================================================
