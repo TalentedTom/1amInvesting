@@ -1132,8 +1132,30 @@ document.addEventListener('DOMContentLoaded', () => {
         let bodyHtml = '';
         data.forEach((row, index) => {
             // Apply a staggered animation delay
-            const delay = Math.min(index * 0.05, 0.5); 
-            bodyHtml += `<tr style="animation-delay: ${delay}s">`;
+            const delay = Math.min(index * 0.05, 0.5);
+
+            // Unranked-row classification for the left-border accent strip.
+            // - PRE-IPO       : ticker contains 'PRE-IPO' (awaiting market)
+            // - Rejected      : Ceiling Target literally == 'FAIL' (analyzed,
+            //                   not investment-grade — analyst's deliberate
+            //                   exclusion marker)
+            // - Other unranked: anything else with no rank (empty cells,
+            //                   '?', mojibake, market-cap-as-price, etc.)
+            // Ranked rows get no extra class — fast path, no border accent.
+            let rowClass = '';
+            if (row._displayRank === '—') {
+                const ticker = String(row.Ticker || '');
+                const ceiling = String(row['Ceiling Target'] || '').trim().toUpperCase();
+                if (ticker.includes('PRE-IPO')) {
+                    rowClass = ' row-pre-ipo';
+                } else if (ceiling === 'FAIL') {
+                    rowClass = ' row-rejected';
+                } else {
+                    rowClass = ' row-unranked';
+                }
+            }
+
+            bodyHtml += `<tr class="${rowClass.trim()}" style="animation-delay: ${delay}s">`;
             
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
