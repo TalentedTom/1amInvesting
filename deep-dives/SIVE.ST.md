@@ -180,8 +180,9 @@ Ayar Labs ($500M fundraise, NVIDIA/AMD/Intel backed) elevated SIVE to PRIMARY la
 Source: Serenity supply chain mapping (April-May 2026), PhotonCap 4-platform confirmation, GFS ecosystem slide.
 AH-7 confidence: HIGH — confirmed shipping, multiple platform qualifications.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $75M  | $200M | $350M | $500M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $75M | $200M | $350M | $500M |
 
 ### Vector 2: Jabil 1.6T LRO (PULLED FORWARD 9 MONTHS)
 Jabil EVP Crowley at JPM: quals 1-4 months, production as early as August 2026 (was H2 2027).
@@ -191,8 +192,9 @@ Demand uncapped: "It's not about share. It's about keeping up with organic growt
 Source: Jabil JPM Fireside Chat (May 2026), Serenity sole-source analysis.
 AH-7 confidence: HIGH — Jabil executive public statements, quals timeline confirmed.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $50M  | $75M  | $100M | $120M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $50M | $75M | $100M | $120M |
 
 ### Vector 3: Apple Blood-Glucose Consumer Wearable
 50M unit RfQ from "US Fortune 100." 135-wavelength hyper-customized laser architecture.
@@ -202,8 +204,9 @@ Consumer wearable TAM optionality beyond Apple: Samsung 15M + Huawei 10M + Fitbi
 Source: DigiTimes (April 2026), Serenity confirmation, RfQ analysis.
 AH-7 confidence: MEDIUM-HIGH — 70-80% probability. RfQ confirmed, timeline uncertain.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $0    | $65M  | $100M | $130M |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $0 | $65M | $100M | $130M |
 
 ### Golden Dome Supply Chain (May 2026 — Anders Storm / York Space Systems)
 
@@ -230,9 +233,10 @@ Source: Anders Storm Substack (May 23, 2026), CBO report, York Q1 2026 earnings 
 AH-7 confidence: HIGH for lock-in, MEDIUM for terminal volume (program still early).
 
   Hydra terminal production estimates:
-  | 2027    | 2028    | 2029    | 2030    |
-  | ~500    | ~2,000  | ~4,000  | ~6,000  |
-  | $4.5M   | $20M    | $40M    | $60M    |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| ~500 units | ~2,000 units | ~4,000 units | ~6,000 units |
+| $4.5M | $20M | $40M | $60M |
 
 ### Vector 4: Defense NEMC (US DoD CHIPS Act)
 $6.6M BAE Year 2 CHIPS Act funded. SF-STAR electronic warfare + 6G MIMO hardware.
@@ -240,8 +244,9 @@ Phase 2 = Phase 1 delivered exceptional results. DoD doesn't fund random $1B Swe
 Source: CHIPS Act public awards database, BAE Systems confirmation.
 AH-7 confidence: HIGH — government-funded, contracted.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $5M   | $10M  | $15M  | $20M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $5M | $10M | $15M | $20M |
 
 ### Vector 5: Defense Primes (RTX, BAE, Ericsson)
 Raytheon beamformers for space/telecom. BAE STAR duplex arrays for radar jamming/EW.
@@ -250,8 +255,9 @@ Gen 2 BFICs: +6 to 12dB power AND 3-5x efficiency vs ALL competitors.
 Source: Serenity defense prime mapping, CHIPS Act context.
 AH-7 confidence: MEDIUM — confirmed customers, revenue timing uncertain due to classified programs.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $10M  | $20M  | $30M  | $40M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $20M | $30M | $40M |
 
 ### Vector 6: Lightmatter (Photonic Interconnect)
 $4.4B private, backed by MSFT/GOOG/NVDA. Uses SIVE CW lasers via GFS fabrication.
@@ -259,8 +265,9 @@ Chain: SIVE → GFS → Lightmatter → Hyperscalers. Distinct from Lightelligen
 Source: GFS ecosystem slide, Serenity discovery (April 2026).
 AH-7 confidence: MEDIUM — GFS confirmed, Lightmatter-specific volume uncertain.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $18M  | $42M  | $65M  | $90M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $18M | $42M | $65M | $90M |
 
 ### Vector 7: Celestial AI / O-Net (Chinese Hyperscaler Demand)
 Celestial: acquired by Marvell, became their CPO growth vector. Would be $10B+ standalone.
@@ -270,8 +277,9 @@ China 3nm breakthrough (if real) accelerates Chinese datacenter buildout = upsid
 Source: Serenity customer mapping, O-Net/Enablence confirmed.
 AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncertain.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $15M  | $45M  | $70M  | $95M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $15M | $45M | $70M | $95M |
 
 ### Vector 8: Lightelligence (Photonic COMPUTE)
 88.3% share of China's independent optical interconnect. Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE.
@@ -280,8 +288,9 @@ $250M funded. SIVE supplies lasers to BOTH approaches (interconnect + compute).
 Source: Serenity 12-vector mapping, Lightelligence confirmed.
 AH-7 confidence: MEDIUM — confirmed customer, China regulatory risk.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $10M  | $30M  | $50M  | $65M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $30M | $50M | $65M |
 
 ### Vector 9: Nokia (Telecom Infrastructure)
 Finland revenue 268x YoY growth confirmed. Nokia is a direct customer.
@@ -289,16 +298,18 @@ Telecom infrastructure modernization (5G/6G) driving demand.
 Source: SIVE financial reports (Finland geographic revenue), Serenity confirmation.
 AH-7 confidence: MEDIUM-HIGH — revenue already flowing, growth trajectory confirmed.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $8M   | $20M  | $30M  | $35M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $8M | $20M | $30M | $35M |
 
 ### Vector 10: LIGHTIUM / TFLN (Thin-Film Lithium Niobate)
 TFLN modulators on Chinese supply chains. Emerging technology with SIVE as laser source.
 Source: Serenity 12-vector mapping.
 AH-7 confidence: LOW-MEDIUM — early stage, technology pathway confirmed but commercial scale uncertain.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $5M   | $15M  | $25M  | $35M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $5M | $15M | $25M | $35M |
 
 ### Vector 11: AMD / GlobalFoundries CPO
 AMD MI500 uses GFS Fotonix for CPO. GFS ecosystem slide shows SIVE and LITE as ONLY two laser providers.
@@ -307,16 +318,18 @@ Source: GFS ecosystem slide, Jefferies Taiwan channel checks (May 2026).
 AH-7 confidence: MEDIUM — GFS confirmed, MI500 CPO timeline 2027. SIVE selection not individually confirmed.
 Probability: 25%
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $5M   | $25M  | $40M  | $55M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $5M | $25M | $40M | $55M |
 
 ### Vector 12: YSS / Defense Miscellaneous
 Smaller defense and specialty photonics contracts.
 Source: SIVE financial reports, misc. defense revenue.
 AH-7 confidence: LOW — catch-all for smaller revenue streams.
 
-  | 2027  | 2028  | 2029  | 2030  |
-  | $5M   | $13M  | $25M  | $15M  |
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $5M | $13M | $25M | $15M |
 
 ### Additional Optionality (NOT in base revenue):
 - Vertical integration (30% probability): Board M&A nominations signal structural preparation. Capture rate 13-19% vs current 5-8%.
@@ -345,11 +358,12 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
-  | Year | Revenue   | OP (40%)  | × 35x    | MC       | Per Share |
-  | 2027 | $211M     | $84M      | $2.95B   | SEK 28.0B | SEK 100 |
-  | 2028 | $580M     | $232M     | $8.12B   | SEK 77.1B | SEK 273 |
-  | 2029 | $940M     | $376M     | $13.16B  | SEK 125.0B| SEK 443 |
-  | 2030 | $1,260M   | $504M     | $17.64B  | SEK 167.6B| SEK 594 |
+| Year | Revenue | OP (40%) | × 35x | MC | Per Share |
+|------|---------|----------|-------|----|-----------|
+| 2027 | $211M | $84M | $2.95B | SEK 28.0B | SEK 100 |
+| 2028 | $580M | $232M | $8.12B | SEK 77.1B | SEK 273 |
+| 2029 | $940M | $376M | $13.16B | SEK 125.0B | SEK 443 |
+| 2030 | $1,260M | $504M | $17.64B | SEK 167.6B | SEK 594 |
 
   Revenue ramps from $206M to $1,200M in 4 years (5.8x).
   SEK 97 → SEK 566 per share. Strong long-term compounder at 40% OP margins.
