@@ -1187,7 +1187,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
             if (tickerEl) {
-                const ticker = tickerEl.textContent.trim();
+                // Use data-ticker (the canonical symbol) rather than the
+                // visible text — for Taiwanese/Korean rows the visible
+                // text is the company Name, not the ticker. Fall back to
+                // textContent for rows where the attribute isn't set.
+                const ticker = tickerEl.getAttribute('data-ticker') || tickerEl.textContent.trim();
                 e.stopPropagation();
                 openDeepDive(ticker);
                 return;
@@ -1319,9 +1323,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const base = sym.split('.')[0].split('(')[0].trim().toUpperCase();
             const initial = (base.match(/[A-Z0-9]/) || ['?'])[0];
             const logoSrc = `https://financialmodelingprep.com/image-stock/${base}.png`;
-            const safeSym = sym.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+            // For exchanges whose tickers are purely numeric (Taiwan main
+            // board .TW, Taiwan OTC .TWO, Korea KOSPI .KS, Korea KOSDAQ .KQ),
+            // show the company Name instead — '6830.TWO' tells you nothing
+            // visually, 'Hiwin' tells you everything. The underlying ticker
+            // stays in a data-ticker attribute so deep-dive routing, the
+            // live.json merge, and the chart button all continue to key
+            // off the canonical symbol.
+            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ)$/i;
+            let displayText = sym;
+            if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
+                const name = String(row.Name).trim();
+                if (name) displayText = name;
+            }
+            const safeDisplay = displayText.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+            const safeSym = sym.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             const tickerClass = deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
-            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}">${safeSym}</span></span>`;
+            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span></span>`;
         }
 
         if (value === null || value === undefined || value === "") {
