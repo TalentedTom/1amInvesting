@@ -205,6 +205,35 @@ AH-7 confidence: MEDIUM-HIGH — 70-80% probability. RfQ confirmed, timeline unc
   | 2027  | 2028  | 2029  | 2030  |
   | $0    | $65M  | $100M | $130M |
 
+### Golden Dome Supply Chain (May 2026 — Anders Storm / York Space Systems)
+
+**$1.2 TRILLION program over 20 years (CBO estimate, May 12, 2026).**
+York Space Systems (Golden Dome contractor, $237M+ IDIQs) acquired All.Space ($355M) for Hydra tactical SATCOM terminal. SIVE is SINGLE-SOURCE BFIC supplier inside Hydra.
+
+Supply chain: York (prime) → All.Space (terminal) → SIVE (beamforming RFICs) → GFS (trusted US foundry)
+
+Unit economics (from SIVE investor presentations):
+  - ~$5 per Ka-band chip × 1,800 chips per Hydra terminal = $9,000 SIVE content per terminal
+  - Dual-band Ka/Ku chip raises ASP above $5 (expands addressable to legacy Ku-band constellations)
+  - Re-qualification cost $5-20M, 18-36 months. SIVE locked in for 15-20 year production lifecycle.
+  - MIL-STD-810, MIL-STD-461, MIL-STD-704 certified through Hydra.
+
+Two independent paths into Golden Dome:
+  Path A: Single-source supplier to All.Space/York for Layer 5 tactical SATCOM terminals
+  Path B: CHIPS Act validated component supplier (BAE, Raytheon, MIT Lincoln Lab, Ericsson partners)
+
+Sweden-USA MoU (signed May 22, 2026): Covers AI, defense innovation, space, quantum technology.
+Eliminates "foreign supplier" objection permanently. SIVE chips US-manufactured at GFS Vermont/NY (DoD trusted foundry).
+
+Counter-cyclical value: Defense revenue is independent of commercial AI cycle. If AI capex slows, Golden Dome spending continues. 15-20 year production lifecycle = structural recurring revenue.
+Source: Anders Storm Substack (May 23, 2026), CBO report, York Q1 2026 earnings call, Sweden-USA MoU.
+AH-7 confidence: HIGH for lock-in, MEDIUM for terminal volume (program still early).
+
+  Hydra terminal production estimates:
+  | 2027    | 2028    | 2029    | 2030    |
+  | ~500    | ~2,000  | ~4,000  | ~6,000  |
+  | $4.5M   | $20M    | $40M    | $60M    |
+
 ### Vector 4: Defense NEMC (US DoD CHIPS Act)
 $6.6M BAE Year 2 CHIPS Act funded. SF-STAR electronic warfare + 6G MIMO hardware.
 Phase 2 = Phase 1 delivered exceptional results. DoD doesn't fund random $1B Swedish companies.
@@ -316,10 +345,10 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
   | Year | Revenue   | OP (40%)  | × 35x    | MC       | Per Share |
-  | 2027 | $206M     | $82M      | $2.88B   | SEK 27.4B | SEK 97  |
-  | 2028 | $560M     | $224M     | $7.84B   | SEK 74.5B | SEK 264 |
-  | 2029 | $900M     | $360M     | $12.6B   | SEK 119.7B| SEK 424 |
-  | 2030 | $1,200M   | $480M     | $16.8B   | SEK 159.6B| SEK 566 |
+  | 2027 | $211M     | $84M      | $2.95B   | SEK 28.0B | SEK 100 |
+  | 2028 | $580M     | $232M     | $8.12B   | SEK 77.1B | SEK 273 |
+  | 2029 | $940M     | $376M     | $13.16B  | SEK 125.0B| SEK 443 |
+  | 2030 | $1,260M   | $504M     | $17.64B  | SEK 167.6B| SEK 594 |
 
   Revenue ramps from $206M to $1,200M in 4 years (5.8x).
   SEK 97 → SEK 566 per share. Strong long-term compounder at 40% OP margins.
@@ -327,12 +356,12 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 
 ### Ceiling Derivation:
 
-  LOW = FY2027 base: SEK 97 → rounded SEK 100
+  LOW = FY2027 base: $211M × 40% × 35x / 297M = SEK 100
   HIGH = FY2028 + discounted FY2029 + discounted FY2030
-       = 264 + (424-264) × 0.85 + (566-424) × 0.72
-       = 264 + 136 + 102 = SEK 502 → rounded SEK 500
+       = 273 + (443-273) × 0.85 + (594-443) × 0.72
+       = 273 + 145 + 109 = SEK 527 → rounded SEK 525
 
-CEILING: SEK 100-500
+CEILING: SEK 100-525 (includes Golden Dome Hydra terminal increment)
 
 SERENITY COMPARISON:
   $3B today = SEK ~100 → matches our LOW
