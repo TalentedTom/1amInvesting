@@ -1323,14 +1323,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const base = sym.split('.')[0].split('(')[0].trim().toUpperCase();
             const initial = (base.match(/[A-Z0-9]/) || ['?'])[0];
             const logoSrc = `https://financialmodelingprep.com/image-stock/${base}.png`;
-            // For exchanges whose tickers are purely numeric (Taiwan main
-            // board .TW, Taiwan OTC .TWO, Korea KOSPI .KS, Korea KOSDAQ .KQ),
-            // show the company Name instead — '6830.TWO' tells you nothing
-            // visually, 'Hiwin' tells you everything. The underlying ticker
-            // stays in a data-ticker attribute so deep-dive routing, the
-            // live.json merge, and the chart button all continue to key
-            // off the canonical symbol.
-            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ)$/i;
+            // For exchanges whose tickers are purely numeric, show the
+            // company Name instead — '6830.TWO' tells you nothing visually,
+            // 'Hiwin' tells you everything. Covers:
+            //   Taiwan:  .TW (main board), .TWO (OTC)
+            //   Korea:   .KS (KOSPI),      .KQ (KOSDAQ)
+            //   China:   .SS / .SSE (Shanghai), .SZ / .SZSE (Shenzhen)
+            //   HK:      .HK
+            // The underlying ticker stays in a data-ticker attribute so
+            // deep-dive routing, the live.json merge, and the chart button
+            // all continue to key off the canonical symbol.
+            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SZ|SZSE|HK)$/i;
             let displayText = sym;
             if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
                 const name = String(row.Name).trim();
