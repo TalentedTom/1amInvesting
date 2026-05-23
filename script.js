@@ -69,15 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
         // Australia
         'EOS.AX':    'https://s3-symbol-logo.tradingview.com/eos--big.svg',
         // Taiwan
-        '2330.TW':   'https://s3-symbol-logo.tradingview.com/taiwan-semiconductor--big.svg',
+        '2330.TW':   'https://s3-symbol-logo.tradingview.com/taiwan-semiconductor--big.svg',  // TSMC
         '2337.TW':   'https://s3-symbol-logo.tradingview.com/macronix-international--big.svg',
-        '6830.TWO':  'https://s3-symbol-logo.tradingview.com/msscorps-co-ltd--big.svg',  // MSScorps
+        '3037.TW':   'https://s3-symbol-logo.tradingview.com/unimicron-technology--big.svg',
+        '3105.TW':   'https://s3-symbol-logo.tradingview.com/win-semiconductors--big.svg',
+        '4977.TW':   'https://s3-symbol-logo.tradingview.com/pcl--big.svg',                   // PCL Technologies (PCL-KY)
+        '3163.TWO':  'https://s3-symbol-logo.tradingview.com/browave--big.svg',
+        '3363.TWO':  'https://s3-symbol-logo.tradingview.com/foci-fiber-optic-communications--big.svg',
+        '5289.TWO':  'https://s3-symbol-logo.tradingview.com/innodisk--big.svg',
+        '6830.TWO':  'https://s3-symbol-logo.tradingview.com/msscorps-co-ltd--big.svg',       // MSScorps
+        '8147.TWO':  'https://s3-symbol-logo.tradingview.com/nextronics-engineering--big.svg',
 
         // === Clearbit (fallback — couldn't find TradingView slug) ===
         '000660.KS': 'https://logo.clearbit.com/skhynix.com',
         'FTC.L':     'https://logo.clearbit.com/filtronic.com',
         '1888.HK':   'https://logo.clearbit.com/kingboard.com',
-        '6451.TW':   'https://logo.clearbit.com/shunsin.com',                              // ShunSin Technology
+        '6451.TW':   'https://logo.clearbit.com/shunsin.com',                                  // ShunSin Technology
+
+        // === No logo found — letter avatar falls through ===
+        //   3081.TWO  LandMark Optoelectronics — no TradingView slug or known web domain
+        //   8027.TWO  E&R Engineering          — same
     };
 
     // === I18N ============================================================
