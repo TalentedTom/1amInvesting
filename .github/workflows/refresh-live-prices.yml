@@ -1,21 +1,45 @@
 name: Refresh live prices (no-Netlify)
 
-# Trigger: manual (workflow_dispatch) only. Designed to be fired by
-# cron-job.org every 2-3 minutes during market hours.
+# Triggers:
+#   1. workflow_dispatch — fired by cron-job.org every 2-3 minutes during
+#      US market hours, Mon-Fri. Primary heartbeat for live prices.
+#   2. push to main, narrowed to files that affect live.json content.
+#      Closes the gap between an xlsx regen committing structural changes
+#      and the next cron tick picking them up. Without this trigger, any
+#      change made outside market hours (e.g. weekend xlsx edits) would
+#      sit stale in live.json until Monday's first cron fire — the
+#      frontend would overwrite the freshly-regenerated data.js values
+#      with stale live.json values for hours.
+#
+#      Files listed under `paths:` cover everything fetch_live.py reads
+#      from or runs through:
+#        data.js                — source of truth for tickers + ceilings
+#        scripts/fetch_live.py  — the live-json generator itself
+#        scripts/fetch_yahoo.py — fetch helper imported by fetch_live.py
+#        scripts/score.py       — scoring formula (parse_range, etc.)
+#        scripts/requirements.txt — dep pin changes
 #
 # Critical property: this workflow ONLY pushes to the `live-prices`
 # branch, which Netlify is NOT configured to build. That makes price
 # refreshes free of Netlify credit cost. The frontend polls
-# `live.json` directly from jsdelivr's CDN:
-#   https://cdn.jsdelivr.net/gh/TalentedTom/1amInvesting@live-prices/live.json
+# `live.json` directly from raw.githubusercontent.com:
+#   https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json
 # and patches Price / Change % / Entry / Total / Upside cells in place
-# every 60 seconds.
+# every 30 seconds.
 #
 # Structural changes (new tickers, deep-dives, scoring formula) still
 # go through `main` -> Netlify -> rebuild flow, exactly as before.
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data.js'
+      - 'scripts/fetch_live.py'
+      - 'scripts/fetch_yahoo.py'
+      - 'scripts/score.py'
+      - 'scripts/requirements.txt'
 
 permissions:
   contents: write       # we push live.json to the live-prices branch
