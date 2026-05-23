@@ -23,6 +23,53 @@ document.addEventListener('DOMContentLoaded', () => {
     // Canonical order for SuperCycle tag rendering — keeps rows scannable.
     const SUPERCYCLE_ORDER = ["AI", "CPO", "800G", "1.6T", "Other"];
 
+    // === Logo URL overrides for non-US tickers ===
+    // FMP's /image-stock/ endpoint that we use by default for ticker logos
+    // only carries US listings. Everything else falls through to the
+    // colored letter avatar — fine as a fallback, but bland for
+    // recognizable global companies like Samsung, TSMC, BE Semiconductor,
+    // Aixtron, etc.
+    //
+    // This map plugs the gap: ticker -> direct logo URL. Clearbit's free
+    // logo CDN (no auth required, 200×200 PNG output) resolves
+    // `https://logo.clearbit.com/<domain>` for any domain its index has.
+    //
+    // To add a new entry: identify the company's official domain (their
+    // own homepage URL minus `https://www.` and any path) and paste a
+    // new line. If Clearbit doesn't have a logo for that domain, the
+    // letter avatar falls through automatically — no extra error handling
+    // required.
+    const LOGO_OVERRIDES = {
+        // Korea
+        '005930.KS': 'https://logo.clearbit.com/samsung.com',
+        '000660.KS': 'https://logo.clearbit.com/skhynix.com',
+        // Sweden
+        'SIVE.ST':   'https://logo.clearbit.com/sivers-semiconductors.com',
+        // Germany
+        'LPK.DE':    'https://logo.clearbit.com/lpkf.com',
+        'AIXA.DE':   'https://logo.clearbit.com/aixtron.com',
+        'M7U.DE':    'https://logo.clearbit.com/manz.com',
+        // France
+        'SOI.PA':    'https://logo.clearbit.com/soitec.com',
+        'ALRIB':     'https://logo.clearbit.com/riber.com',
+        // Netherlands
+        'BESI.AS':   'https://logo.clearbit.com/besi.com',
+        // UK
+        'FTC.L':     'https://logo.clearbit.com/filtronic.com',
+        'IQE.L':     'https://logo.clearbit.com/iqep.com',
+        // Switzerland
+        'AMS.SW':    'https://logo.clearbit.com/ams-osram.com',
+        // Denmark
+        'NKT':       'https://logo.clearbit.com/nkt.com',
+        // Australia
+        'EOS.AX':    'https://logo.clearbit.com/eos.global',
+        // Taiwan
+        '2330.TW':   'https://logo.clearbit.com/tsmc.com',
+        '2337.TW':   'https://logo.clearbit.com/macronix.com',
+        // Hong Kong
+        '1888.HK':   'https://logo.clearbit.com/kingboard.com',
+    };
+
     // === I18N ============================================================
     // Translates the UI chrome (titles, buttons, headers, modal copy, etc.)
     // when the user picks a non-English flag. The data-block contents
@@ -1322,7 +1369,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const sym = String(value);
             const base = sym.split('.')[0].split('(')[0].trim().toUpperCase();
             const initial = (base.match(/[A-Z0-9]/) || ['?'])[0];
-            const logoSrc = `https://financialmodelingprep.com/image-stock/${base}.png`;
+            // FMP's /image-stock/ endpoint only carries US listings, so
+            // every international ticker would otherwise fall back to the
+            // letter avatar. The override map below points specific
+            // non-US tickers at Clearbit's free logo endpoint (no auth,
+            // 200×200 PNGs). Pattern: `https://logo.clearbit.com/<domain>`.
+            // Add new entries as you spot a missing logo — just paste
+            // ticker + the company's official domain.
+            const logoSrc = LOGO_OVERRIDES[sym] || `https://financialmodelingprep.com/image-stock/${base}.png`;
             // For exchanges whose tickers are purely numeric, show the
             // company Name instead — '6830.TWO' tells you nothing visually,
             // 'Hiwin' tells you everything. Covers:
