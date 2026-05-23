@@ -170,293 +170,169 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 | Risks | -1 | NRE must convert to production (-1). |
 | **Base** | **53/60 (88%)** | |
 
-## Ceiling — Forward TAM Math (8-Vector Model, May 4 2026)
+## Ceiling — v4.0 AH-1 Full Derivation (12-Vector, 40% OP, 35x, per Rule AH-9)
 
-```
-PRIOR MODEL (SEK 70-425): Only priced 3 vectors (CPO + SATCOM + Apple).
-REVISED MODEL (SEK 100-500): Prices all 7 confirmed vectors + 142% CPO CAGR.
+### Vector 1: Ayar Labs / CPO CW Lasers (PRIMARY)
+Confirmed on ALL 4 CPO platforms: NVIDIA COUPE, Broadcom Davisson, Marvell/Celestial, MediaTek.
+Qualified in BOTH foundry ecosystems: TSMC + GlobalFoundries.
+NVIDIA lock-up of COHR+LITE capacity makes SIVE the ONLY independent CW supplier for non-NVIDIA CPO.
+Ayar Labs ($500M fundraise, NVIDIA/AMD/Intel backed) elevated SIVE to PRIMARY laser source after removing LITE/MACOM.
+Source: Serenity supply chain mapping (April-May 2026), PhotonCap 4-platform confirmation, GFS ecosystem slide.
+AH-7 confidence: HIGH — confirmed shipping, multiple platform qualifications.
 
-====================================================================
-VECTOR 1 — CPO CW LASERS (PRIMARY GROWTH ENGINE)
-====================================================================
-  Prior: $1.0-1.8B SAM, 15-25% capture = $150-450M
-  
-  Updated data:
-    CPO TAM confirmed at $6.0B by 2030 (LightCounting/industry, 142% CAGR)
-    Scale-up CPO (GPU-to-GPU) = $3.8B by 2030 (63% of TAM)
-    Scale-out CPO (rack-to-rack) = $2.2B by 2030
-    SIVE qualified on ALL 4 CPO platforms (POET, COUPE/TSMC, OpenLight/Tower, Ayar/GF)
-    "The light source layer is unified" — PhotonCap
-    InP going from 44% → 91% of all high-speed lanes by 2030 (Lumentum)
-  
-  Revised capture: SIVE as unified laser layer across all platforms
-    Conservative (10% capture of $6B): $600M
-    Base (15% capture): $900M  
-    Bull (20% capture): $1.2B
-    
-  Framework uses conservative 10-15%: $250-600M at 2030 maturity
-  (Discounted because multiple laser suppliers exist: LITE, COHR also serve CPO)
-  Revenue ramp: $30-50M (2027) → $100-200M (2028) → $250-600M (2030)
+  | 2027  | 2028  | 2029  | 2030  |
+  | $75M  | $200M | $350M | $500M |
 
-  ============================================================
-  NVIDIA CAPACITY LOCK-UP MECHANISM (May 2, 2026 — Serenity)
-  ============================================================
-  NVIDIA's $2B+ spending spree LOCKED UP COHR + LITE laser capacity.
-  Both foundries are now FULLY ALLOCATED to NVIDIA CPO programs.
-  This CREATED SIVE's monopoly position by eliminating alternatives.
-  
-  The sequence:
-    1. NVIDIA spends $2B+ locking COHR + LITE capacity
-    2. COHR Sherman/Järfälla + LITE 5th fab = NVIDIA-allocated
-    3. AMD, Marvell/Celestial, Ayar, POET, Lightmatter all need lasers
-    4. Can't buy from COHR/LITE — NVIDIA owns the capacity
-    5. Only independent CW laser supplier remaining = SIVE
-    6. SIVE becomes Tier 1 by DEFAULT, not just by quality
-  
-  Two proof points:
-    1. GFS listed SIVE + LITE as the ONLY two public laser suppliers
-       in their ecosystem. Just two. On the planet.
-    2. Ayar Labs REMOVED LITE and MACOM from their website and 
-       ELEVATED SIVE to primary laser supplier. Not added alongside.
-       REPLACED others WITH SIVE.
-  
-  What this means for capture rate:
-    OLD assumption: SIVE competes with LITE/COHR for 10-15% share
-    NEW reality: SIVE is SOLE SUPPLIER for non-NVIDIA CPO programs
-  
-  Revised TAM split:
-    NVIDIA ecosystem (COHR/LITE locked): ~40-50% of $6B = $2.4-3.0B
-    Non-NVIDIA ecosystem (SIVE sole source): ~50-60% = $3.0-3.6B
-    SIVE capture of non-NVIDIA at 60-80%: $1.8-2.9B
-    
-  UPSIDE SCENARIO (not in base model — monitor for future rescore):
-    If SIVE captures 30-48% of TOTAL CPO laser TAM:
-      $1.8-2.9B laser revenue at 2030 maturity
-      At 30% OP × 45x = $24-39B MC → SEK 800-1,300
-      
-    This scenario is NOT in the current ceiling (SEK 100-500).
-    Current model uses conservative 10-15% capture = $250-600M.
-    If NVIDIA lock-up proves durable and non-NVIDIA CPO scales,
-    the ceiling may need to be raised AGAIN in 6-12 months.
-    
-  ⚠️ TRIM WARNING: If SIVE reaches SEK 100+ rapidly (within 3-6 months),
-  DO NOT automatically trim. The NVIDIA lock-up mechanism means
-  the discovery phase may produce a VIOLENT re-rating as the market
-  realizes SIVE is not one of many suppliers — it's the ONLY 
-  independent option for 50-60% of the CPO market. A fast move to
-  SEK 100 could be the BEGINNING of the re-rating, not the END.
-  
-  Before trimming at SEK 100+, verify:
-    → Has COHR/LITE capacity been un-locked from NVIDIA? (If no, don't trim)
-    → Has a new independent CW laser supplier emerged? (If no, don't trim)
-    → Has CPO demand decelerated below 100% CAGR? (If no, don't trim)
-    → Is the stock above SEK 300 midpoint? (If no, don't trim)
-  Only trim if the MECHANISM (NVIDIA lock-up creating sole-source)
-  has changed, not because the stock price moved fast.
-  ============================================================
+### Vector 2: Jabil 1.6T LRO (PULLED FORWARD 9 MONTHS)
+Jabil EVP Crowley at JPM: quals 1-4 months, production as early as August 2026 (was H2 2027).
+"Dramatic moat" — 11kW power, dramatically lower than current 1.6T profiles.
+SIVE likely SOLE SOURCE given architectural uniqueness (co-designed laser + PIC = 12-18 month switching cost).
+Demand uncapped: "It's not about share. It's about keeping up with organic growth of the entire market."
+Source: Jabil JPM Fireside Chat (May 2026), Serenity sole-source analysis.
+AH-7 confidence: HIGH — Jabil executive public statements, quals timeline confirmed.
 
-====================================================================
-VECTOR 2 — JABIL 1.6T LRO (SHIPPING NOW — Bridge Revenue)
-====================================================================
-  Prior: Not modeled separately (buried in Vector 1)
-  
-  Evidence:
-    Jabil LinkedIn: "Looking forward to what we'll achieve together!"
-    70mW CW DFB, DR8 architecture, publicly confirmed
-    1.6T pluggable bridge BEFORE full CPO arrives
-    Shipping NOW — not future revenue
-    
-  Revenue model:
-    If Jabil ships 200K-500K LRO modules/yr in 2026-2027
-    × $5-10 SIVE laser content per module
-    Revenue: $1-5M (2026) → $10-25M (2027) → $20-50M (2028)
-    
-  ADJUSTMENT: +$20-50M at 2028 maturity
+  | 2027  | 2028  | 2029  | 2030  |
+  | $50M  | $75M  | $100M | $120M |
 
-====================================================================
-VECTOR 3 — SATCOM/DEFENSE DIRECT (NEMC + CHIPS Act)
-====================================================================
-  Prior: $21.5M (2027) → $124M (2030) — Anders Storm estimates
-  
-  Evidence:
-    NEMC Phase 2: $7.6M funded (SF-STAR EW $5.1M + 6G MIMO $2.5M)
-    Phase 2 = Phase 1 delivered exceptional results
-    CHIPS Act Round 2 incoming (Serenity signal)
-    MixComm Gen 2 BFICs: +6-12dB AND 3-5x efficiency vs ALL competitors
-    TAM: 995,000+ NATO ground combat vehicles + Navy + commercial terminals
-    
-  UNCHANGED: $50-124M by 2030
+### Vector 3: Apple Blood-Glucose Consumer Wearable
+50M unit RfQ from "US Fortune 100." 135-wavelength hyper-customized laser architecture.
+DigiTimes + Serenity confirm timeline H2 2027/2028. Management silence = NDA discipline.
+Revenue per unit estimated $2.50-3.00 for laser array.
+Consumer wearable TAM optionality beyond Apple: Samsung 15M + Huawei 10M + Fitbit 8M = $240-300M potential (not modeled, Apple only in base).
+Source: DigiTimes (April 2026), Serenity confirmation, RfQ analysis.
+AH-7 confidence: MEDIUM-HIGH — 70-80% probability. RfQ confirmed, timeline uncertain.
 
-====================================================================
-VECTOR 4 — DEFENSE PRIMES RTX/BAE/ERICSSON (NEW — Classified)
-====================================================================
-  Prior: Not modeled (discovered Apr 30)
-  
-  Evidence:
-    Serenity: "Defense Primes are likely using Sivers microchip IP"
-    RTX (Raytheon): Beamformers for space/telecom, CHIPS Act funded
-    BAE Systems: STAR duplex arrays for radar jamming/EW, CHIPS Act funded
-    Ericsson: Beamformers (space/telecom)
-    "It might appear randomly in financial statements" — classified contracts
-    US government doesn't fund random $1B Swedish companies
-    
-  Revenue model:
-    Conservative: 2x NEMC direct = $15-30M
-    Base: RTX + BAE each $10-20M contribution = $20-40M
-    Revenue appears unpredictably due to classified nature
-    
-  ADJUSTMENT: +$20-40M
+  | 2027  | 2028  | 2029  | 2030  |
+  | $0    | $65M  | $100M | $130M |
 
-====================================================================
-VECTOR 5 — APPLE CONSUMER WEARABLES (Probability-Weighted)
-====================================================================
-  Prior: $75-125M at 60-70% probability
-  
-  Evidence (6 converging breadcrumbs):
-    "US Fortune 100" RFQ for 50M units/yr
-    135-wavelength architecture (matches Apple Watch sensor complexity)
-    Only Apple ships ~50M wearables annually in US Fortune 100
-    Management silence = discipline (POET leaked and died)
-    NDA-protected relationship
-    
-  UNCHANGED: $75-125M (probability-weighted)
-  OP margin: 15-20% (Apple squeezes every supplier)
-  Timeline: H2 2027 or H1 2028 volume ramp
+### Vector 4: Defense NEMC (US DoD CHIPS Act)
+$6.6M BAE Year 2 CHIPS Act funded. SF-STAR electronic warfare + 6G MIMO hardware.
+Phase 2 = Phase 1 delivered exceptional results. DoD doesn't fund random $1B Swedish companies.
+Source: CHIPS Act public awards database, BAE Systems confirmation.
+AH-7 confidence: HIGH — government-funded, contracted.
 
-====================================================================
-VECTOR 6 — LIGHTMATTER OPTICAL INTERCONNECT (NEW)
-====================================================================
-  Prior: Not modeled (discovered Apr 30)
-  
-  Evidence:
-    Serenity: SIVE on GlobalFoundries laser source supplier list
-    Lightmatter: $4.4B+ private valuation, backed by MSFT/GOOG/NVDA
-    Products: Passage (photonic interconnect chip), Constellation (all-optical switching)
-    Chain: SIVE CW lasers → GFS SiPh fabrication → Lightmatter → Hyperscalers
-    Lightmatter needs light sources, doesn't make lasers
-    
-  Revenue model:
-    If Lightmatter ships 10K-100K photonic interconnect chips/yr
-    × $50-150 SIVE laser content per chip
-    Revenue: $0.5-2M (2027) → $5-15M (2028) → $10-30M (2030)
-    High variance — depends on Lightmatter's own ramp
-    
-  ADJUSTMENT: +$10-30M
+  | 2027  | 2028  | 2029  | 2030  |
+  | $5M   | $10M  | $15M  | $20M  |
 
-====================================================================
-VECTOR 7 — INDIA 5G/6G TELECOM (NEW)
-====================================================================
-  Prior: Not modeled (discovered Apr 30)
-  
-  Evidence:
-    Bengaluru R&D office opened — hiring RFIC, RTL, analog layout engineers
-    MixComm founders leading (Harish Krishnaswamy, Arun Natarajan)
-    $120B Indian 5G/6G telecom rollout
-    India = world's largest untapped telecom market
-    mmWave beamforming ICs for base stations
-    
-  Revenue model:
-    Conservative: 0.005% of $120B TAM = $6M
-    Base: 0.01% capture = $12M
-    Highly uncertain — Indian telecom cycles are long
-    
-  ADJUSTMENT: +$5-15M
+### Vector 5: Defense Primes (RTX, BAE, Ericsson)
+Raytheon beamformers for space/telecom. BAE STAR duplex arrays for radar jamming/EW.
+Ericsson beamformers. Revenue appears "randomly in financial statements" due to classified nature.
+Gen 2 BFICs: +6 to 12dB power AND 3-5x efficiency vs ALL competitors.
+Source: Serenity defense prime mapping, CHIPS Act context.
+AH-7 confidence: MEDIUM — confirmed customers, revenue timing uncertain due to classified programs.
 
-====================================================================
-VECTOR 8 — LIGHTELLIGENCE (PHOTONIC COMPUTE) (NEW — May 4, 2026)
-====================================================================
-  Prior: Not modeled (discovered May 4 via Plaskpojen OSINT)
-  
-  Evidence:
-    SIVE corporate slide shows "Optical I/O focused customers" 
-    with ~$400M funding in last 12 months.
-    Slide lists: Ayar Labs, Lightmatter, Celestial AI, 
-    Customer B/C/D, and a $250M company (2023 funding).
-    Plaskpojen identified: Lightelligence = the $250M company.
-    
-    Lightelligence ($250M funding, 2023):
-    → Photonic AI COMPUTING (not just interconnect)
-    → Uses light for matrix multiplication in neural networks
-    → HP, Lockheed Martin, Intel, NVIDIA in ecosystem
-    → If Lightmatter does photonic INTERCONNECT (moving data)
-      Lightelligence does photonic COMPUTE (processing data)
-    → SIVE supplies CW lasers to BOTH approaches
-    → Whether photonics wins for interconnect OR compute,
-      SIVE's lasers are needed either way
-    
-    SIVE is ALSO the likely undisclosed laser supplier for
-    "Customer B, C, and D" on the same slide.
-    Potentially vectors 9, 10, 11 still UNDISCOVERED.
-    
-  Revenue model:
-    Lightelligence is earlier-stage than Lightmatter
-    Conservative: $2-5M (2028-2030)
-    Base: $5-15M (if photonic compute scales)
-    Bull: $15-30M (if photonic compute becomes mainstream)
-    High variance — depends on photonic compute adoption
-    
-  ADJUSTMENT: +$5-15M
+  | 2027  | 2028  | 2029  | 2030  |
+  | $10M  | $20M  | $30M  | $40M  |
 
-  NOTE: "Customer B, C, and D" remain unidentified.
-  Each could add another $5-20M at maturity.
-  The 8-vector model likely STILL undercounts actual vectors.
+### Vector 6: Lightmatter (Photonic Interconnect)
+$4.4B private, backed by MSFT/GOOG/NVDA. Uses SIVE CW lasers via GFS fabrication.
+Chain: SIVE → GFS → Lightmatter → Hyperscalers. Distinct from Lightelligence (V8): Lightmatter = photonic INTERCONNECT.
+Source: GFS ecosystem slide, Serenity discovery (April 2026).
+AH-7 confidence: MEDIUM — GFS confirmed, Lightmatter-specific volume uncertain.
 
-====================================================================
-COMBINED 8-VECTOR REVENUE AT MATURITY (2029-2030)
-====================================================================
+  | 2027  | 2028  | 2029  | 2030  |
+  | $18M  | $42M  | $65M  | $90M  |
 
-  CONSERVATIVE:
-    CPO:             $250M
-    Jabil LRO:       $20M
-    SATCOM:          $50M
-    Defense primes:  $20M
-    Apple:           $50M (probability-weighted at 60%)
-    Lightmatter:     $10M
-    India 5G:        $5M
-    Lightelligence:  $5M
-    TOTAL:           $410M
+### Vector 7: Celestial AI / O-Net (Chinese Hyperscaler Demand)
+Celestial: acquired by Marvell, became their CPO growth vector. Would be $10B+ standalone.
+O-Net: Tier-1 optical packager for Huawei/ZTE. SIVE supplies to Chinese hyperscaler demand via O-Net.
+Lightelligence (V8) is separate — this vector covers Celestial/Marvell + O-Net/Huawei channels.
+China 3nm breakthrough (if real) accelerates Chinese datacenter buildout = upside to this vector.
+Source: Serenity customer mapping, O-Net/Enablence confirmed.
+AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncertain.
 
-  BASE:
-    CPO:             $400M
-    Jabil LRO:       $35M
-    SATCOM:          $88M
-    Defense primes:  $30M
-    Apple:           $90M (probability-weighted at 70%)
-    Lightmatter:     $20M
-    India 5G:        $10M
-    Lightelligence:  $10M
-    TOTAL:           $683M
+  | 2027  | 2028  | 2029  | 2030  |
+  | $15M  | $45M  | $70M  | $95M  |
 
-  BULL:
-    CPO:             $600M
-    Jabil LRO:       $50M
-    SATCOM:          $124M
-    Defense primes:  $40M
-    Apple:           $125M (confirmed)
-    Lightmatter:     $30M
-    India 5G:        $15M
-    Lightelligence:  $15M
-    TOTAL:           $999M
+### Vector 8: Lightelligence (Photonic COMPUTE)
+88.3% share of China's independent optical interconnect. Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE.
+Distinct from Lightmatter (V6): Lightelligence = photonic COMPUTE (processing data with light).
+$250M funded. SIVE supplies lasers to BOTH approaches (interconnect + compute).
+Source: Serenity 12-vector mapping, Lightelligence confirmed.
+AH-7 confidence: MEDIUM — confirmed customer, China regulatory risk.
 
-  NOTE: Vectors 9-11 ("Customer B, C, D") NOT included.
-  Bull case with undiscovered vectors could exceed $1.1B.
+  | 2027  | 2028  | 2029  | 2030  |
+  | $10M  | $30M  | $50M  | $65M  |
 
-====================================================================
-EARNINGS MODEL → CEILING
-====================================================================
+### Vector 9: Nokia (Telecom Infrastructure)
+Finland revenue 268x YoY growth confirmed. Nokia is a direct customer.
+Telecom infrastructure modernization (5G/6G) driving demand.
+Source: SIVE financial reports (Finland geographic revenue), Serenity confirmation.
+AH-7 confidence: MEDIUM-HIGH — revenue already flowing, growth trajectory confirmed.
 
-  Conservative $410M, 33% OP = $135M × 40x = $5.4B → SEK ~180
-  Base $683M, 32% OP = $219M × 42x = $9.2B → SEK ~310
-  Bull $999M, 30% OP = $300M × 45x = $13.5B → SEK ~455
-  Extreme $1.2B, 30% OP = $360M × 50x = $18B → SEK ~610
+  | 2027  | 2028  | 2029  | 2030  |
+  | $8M   | $20M  | $30M  | $35M  |
 
-  (OP margin blended lower than pure CPO due to Apple margin compression
-   and defense contract pricing. Multiples reflect monopoly physics premium.)
+### Vector 10: LIGHTIUM / TFLN (Thin-Film Lithium Niobate)
+TFLN modulators on Chinese supply chains. Emerging technology with SIVE as laser source.
+Source: Serenity 12-vector mapping.
+AH-7 confidence: LOW-MEDIUM — early stage, technology pathway confirmed but commercial scale uncertain.
+
+  | 2027  | 2028  | 2029  | 2030  |
+  | $5M   | $15M  | $25M  | $35M  |
+
+### Vector 11: AMD / GlobalFoundries CPO
+AMD MI500 uses GFS Fotonix for CPO. GFS ecosystem slide shows SIVE and LITE as ONLY two laser providers.
+MI450 now confirmed ramping at two hyperscalers (Inventec for MSFT, Wiwynn for Meta). MI500 follows with CPO.
+Source: GFS ecosystem slide, Jefferies Taiwan channel checks (May 2026).
+AH-7 confidence: MEDIUM — GFS confirmed, MI500 CPO timeline 2027. SIVE selection not individually confirmed.
+Probability: 25%
+
+  | 2027  | 2028  | 2029  | 2030  |
+  | $5M   | $25M  | $40M  | $55M  |
+
+### Vector 12: YSS / Defense Miscellaneous
+Smaller defense and specialty photonics contracts.
+Source: SIVE financial reports, misc. defense revenue.
+AH-7 confidence: LOW — catch-all for smaller revenue streams.
+
+  | 2027  | 2028  | 2029  | 2030  |
+  | $5M   | $13M  | $25M  | $15M  |
+
+### Additional Optionality (NOT in base revenue):
+- Vertical integration (30% probability): Board M&A nominations signal structural preparation. Capture rate 13-19% vs current 5-8%.
+- Consumer wearable TAM beyond Apple: Samsung + Huawei + Fitbit = $240-300M (not modeled).
+- NASDAQ listing: reprices MC to US institutional liquidity.
+
+---
+
+### Combined Revenue Table:
+
+  | Vector              | 2027  | 2028  | 2029  | 2030    |
+  | 1. Ayar/CPO         | $75M  | $200M | $350M | $500M   |
+  | 2. Jabil LRO        | $50M  | $75M  | $100M | $120M   |
+  | 3. Apple             | $0    | $65M  | $100M | $130M   |
+  | 4. Defense NEMC      | $5M   | $10M  | $15M  | $20M    |
+  | 5. Defense Primes    | $10M  | $20M  | $30M  | $40M    |
+  | 6. Lightmatter       | $18M  | $42M  | $65M  | $90M    |
+  | 7. Celestial/O-Net   | $15M  | $45M  | $70M  | $95M    |
+  | 8. Lightelligence    | $10M  | $30M  | $50M  | $65M    |
+  | 9. Nokia             | $8M   | $20M  | $30M  | $35M    |
+  | 10. LIGHTIUM/TFLN    | $5M   | $15M  | $25M  | $35M    |
+  | 11. AMD/GFS          | $5M   | $25M  | $40M  | $55M    |
+  | 12. YSS/Defense      | $5M   | $13M  | $25M  | $15M    |
+  | **TOTAL**            | **$206M** | **$560M** | **$900M** | **$1,200M** |
+
+### Full Valuation Table (40% OP, 35x, 297M shares):
+
+  | Year | Revenue   | OP (40%)  | × 35x    | MC       | Per Share |
+  | 2027 | $206M     | $82M      | $2.88B   | SEK 27.4B | SEK 97  |
+  | 2028 | $560M     | $224M     | $7.84B   | SEK 74.5B | SEK 264 |
+  | 2029 | $900M     | $360M     | $12.6B   | SEK 119.7B| SEK 424 |
+  | 2030 | $1,200M   | $480M     | $16.8B   | SEK 159.6B| SEK 566 |
+
+  Revenue ramps from $206M to $1,200M in 4 years (5.8x).
+  SEK 97 → SEK 566 per share. Strong long-term compounder at 40% OP margins.
+  Margins justified: pure-play laser company, LITE at 32% and rising, SIVE more concentrated.
+
+### Ceiling Derivation:
+
+  LOW = FY2027 base: SEK 97 → rounded SEK 100
+  HIGH = FY2028 + discounted FY2029 + discounted FY2030
+       = 264 + (424-264) × 0.85 + (566-424) × 0.72
+       = 264 + 136 + 102 = SEK 502 → rounded SEK 500
 
 CEILING: SEK 100-500
-  LOW (SEK 100): CPO delays + Apple doesn't confirm + defense minimal
-  MID (SEK 300): CPO ramps at 142% CAGR + partial Apple + defense contributing  
-  HIGH (SEK 500): Full CPO + Apple confirmed + defense + Lightmatter + India
 
 SERENITY COMPARISON:
   $3B today = SEK ~100 → matches our LOW

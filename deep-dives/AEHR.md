@@ -1,13 +1,4 @@
 # AEHR — Aehr Test Systems | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 86 HC | Base 90% (54/60) | Entry 75 (30/40) | #2 in Framework History
-**Price at Analysis:** $95.91
-**Ceiling:** $280-$405 (2027-2028)
-**Upside Ratio:** 2.9x-5.7x
-**Market Cap:** ~$2.7B
-**H2 FY2026 Bookings:** >$92M (record, blew through $60-80M guidance)
-**Earnings:** Q4 FY2026 ~July 2026
 
 ---
 
@@ -74,45 +65,71 @@ A hyperscaler doesn't place a record $41M order with a $2.7B company unless ther
 | Macro | 9/10 | 120-150 GW compute. CPO pulled forward. AI ASIC proliferation. SiC for EV/grid. |
 | Alpha | 4/5 | 9 analysts. Bookings-to-revenue lag confuses sell-side. WLBI monopoly not fully understood by generalists. |
 | Risks | -1 | Customer concentration (-0.5). Revenue timing lag creates volatility (-0.5). |
-| **Base** | **54/60 (90%)** | |
+| **Base** | **56/60 (94%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — v4.0 AH-1 Full Derivation (40% OP, 30x, per Rule AH-9)
 
-```
-REVENUE TRAJECTORY:
-  FY2026 (ending May 2026): ~$48-50M (guided high end)
-  FY2027: ~$150-220M ($92M+ bookings converting + new SiPh + Sonoma ramp)
-  FY2028: ~$300-500M (Sonoma scale + SiPh expanding + SiC recovery + next-gen ASIC)
-  FY2029: ~$500-800M (multiple hyperscalers + SiPh standard + global SiC)
+### Vector 1: SiPh WLBI — Wafer-Level Burn-In for Silicon Photonics (PRIMARY)
+Sole-source WLBI monopoly. 20/20 Core Thesis. No competitor on earth.
+Every SiPh PIC (CPO + pluggable) needs reliability screening before deployment.
+Goldman $193B total photonics TAM = all SiPh PICs flow through AEHR.
+May 2026: New customer win confirmed pluggable SiPh also needs WLBI (not just CPO).
+Source: Goldman $193B photonics TAM, new customer win (May 2026), Damnang S-Tier ranking.
+AH-7 confidence: HIGH — sole-source monopoly, shipping, customer base expanding.
 
-EARNINGS MODEL:
-  FY2027: $200M rev, 25% OP = $50M × 45x = $2.25B → ~$75
-  FY2028: $350M rev, 30% OP = $105M × 45x = $4.7B → ~$160
-  FY2028: $500M rev, 32% OP = $160M × 50x = $8.0B → ~$270
-  FY2029: $600M rev, 35% OP = $210M × 50x = $10.5B → ~$355
-  Bull: $800M, 35% OP = $280M × 55x = $15.4B → ~$520
+  | 2027 | 2028  | 2029  | 2030  |
+  | $70M | $195M | $300M | $400M |
 
-CEILING: $280-$550
-  LOW: Sonoma + SiPh moderate ramp, SiC recovery
-  HIGH: Multiple hyperscale ASIC customers + SiPh industry standard + full SiC
-```
+### Vector 2: Sonoma ASIC PLBI — Package-Level Burn-In for Custom AI ASICs
+Record $41M single order (April 16, 2026). Next-gen higher-power ASIC already ordered.
+Contract manufacturing adding >20 Sonoma systems/month.
+$92M+ H2 FY2026 bookings converting to FY2027 revenue.
+Every custom AI ASIC (Google TPU, Amazon Trainium, Meta MTIA, Microsoft Maia) needs burn-in.
+Source: Company earnings, $41M order disclosure, contract manufacturing ramp.
+AH-7 confidence: HIGH — record order confirmed, backlog visible, >20 systems/month production.
 
-**Entry:** $95.91 vs midpoint $415 = 4.33x → Entry 75
+  | 2027  | 2028  | 2029  | 2030  |
+  | $100M | $195M | $280M | $330M |
 
-## Total: (90 × 0.6) + (75 × 0.4) = 54 + 30 = 86 HC
+### Vector 3: SiC/GaN Power Semiconductor Test
+Silicon carbide for EVs and power electronics. Original AEHR thesis before AI pivot.
+EV adoption slower than expected but industrial/grid SiC demand growing.
+Source: Company guidance, EV/industrial SiC TAM.
+AH-7 confidence: MEDIUM — cyclical, EV-dependent. Recovery timeline uncertain.
 
-## SIVE vs AEHR — The #1 and #2
+  | 2027 | 2028 | 2029 | 2030 |
+  | $30M | $50M | $70M | $70M |
 
-| | SIVE (90) | AEHR (86) |
-|---|---|---|
-| Monopoly | Sole independent CW laser | Sole WLBI provider |
-| Base quality | 88% | 90% (higher!) |
-| Entry | 87 (6.57x to ceiling) | 75 (4.33x to ceiling) |
-| Market cap | ~$1B | ~$2.7B |
-| Revenue | ~$31M | ~$48M |
-| Why gap? | Smaller MC = wider TAM gap | Larger MC = narrower gap |
+### Combined Revenue:
 
-AEHR has the HIGHER base quality (90% vs 88%). SIVE wins on total because ~$1B vs ~$2.7B creates wider Entry asymmetry. Both are HC. Both are Tier 1.
+  | Vector              | 2027   | 2028   | 2029   | 2030   |
+  | 1. SiPh WLBI        | $70M   | $195M  | $300M  | $400M  |
+  | 2. Sonoma ASIC       | $100M  | $195M  | $280M  | $330M  |
+  | 3. SiC/GaN Power     | $30M   | $50M   | $70M   | $70M   |
+  | **TOTAL**            | **$200M** | **$440M** | **$650M** | **$800M** |
+
+  Revenue ramps $200M -> $800M in 4 years (4x).
+  V1 and V2 contribute roughly equally by 2028.
+  Sole-source monopoly in V1 is the moat. V2 has competition (Advantest, Teradyne) but AEHR leads in ASIC burn-in.
+
+### Full Valuation Table (40% OP monopoly equipment, 30x, ~29.9M shares):
+
+  | Year | Revenue | OP (40%) | x 30x   | Per Share |
+  | 2027 | $200M   | $80M     | $2.4B   | $80       |
+  | 2028 | $440M   | $176M    | $5.28B  | $177      |
+  | 2029 | $650M   | $260M    | $7.8B   | $261      |
+  | 2030 | $800M   | $320M    | $9.6B   | $321      |
+
+  $80 -> $321 in 4 years. Monopoly pricing power sustains 40% OP at scale.
+
+### Ceiling Derivation:
+
+  LOW = $180 (FY2027 base $80 raised to capture hockey stick inflection, not the trough)
+  HIGH = FY2028 + discounted FY2029 + discounted FY2030
+       = $177 + ($261-$177) x 0.85 + ($321-$261) x 0.72
+       = $177 + $71 + $43 = $291 -> rounded $290
+
+CEILING: $180-290
 
 ## Read-Through Map
 
@@ -130,35 +147,9 @@ AEHR bookings explode
 
 Every SiPh wafer burn-in tested at AEHR eventually becomes a transceiver needing a laser from SIVE, on InP substrate from AXTI, fabricated at TSEM.
 
-## Damnang L7 — Top Performer
-
-In Damnang's 7-Layer Value Chain, AEHR is the top performer at Layer 7 (Test & Qualification) with +954% 52-week return. The test layer outperformed every other layer in the stack.
-
 ## Key Risks
 
 - Revenue timing lag: Bookings convert 1-2 quarters later. Creates volatility.
 - Customer concentration: Lead hyperscale customer dominant. New SiPh win helps diversify.
 - SiC recovery timing: EV slowdown delayed. Structural thesis intact.
 
-## Verdict
-
-86 HC — #2 in framework history. The only 20/20 Core Thesis. Sole-source WLBI monopoly with no competitor on earth. Record $41M order validates. Bookings explosion from $6.2M to >$92M in two quarters. Revenue inflection FY2027. Three growth vectors (SiPh + AI ASIC + SiC) ensure TAM expands with every new compound semiconductor material.
-- **May 6, 2026: 85 HC** (Ceiling standardized to 2027-2028. $280-550→$280-405. Bull $560 (2030) discounted 2yr × 15% = $405. Score -1 from standardization. COHR 6-inch validates InP test demand.)
-
-- **May 16, 2026: 90 (unchanged) — REMODELLED WITH FULL $193B PHOTONICS TAM + MULTIPLE CORRECTED TO 40x.** Total SiPh PIC production at $193B photonics TAM is ~1.5-1.9x higher than CPO-only models. Every SiPh PIC needs WLBI burn-in regardless of CPO or pluggable destination. "New SiPh customer" (March 2026) described as "global leader in networking, major supplier to datacenter optical transceiver market" = pluggable transceiver maker, confirming AEHR already tests pluggable SiPh. SiPh WLBI vector FY2028: $130-180M → $195-270M (+50%). But equipment sales are not linear with volume (1 FOX-XP serves millions of wafers). And SiPh is one of THREE vectors (SiPh + Sonoma ASIC + SiC), comprising ~35-40% of FY2028 revenue. Total FY2028: $300-430M → $365-520M midpoint $440M. Multiple corrected from 45x to 40x (ASML 35-40x, KLA 30-35x, monopoly premium justified but 45x was aggressive). Base 93→94% (+1): SiPh WLBI confirmed across full photonics TAM. Ceiling $280-405 → $280-400 ($193B uplift roughly offset by 45x→40x correction). Net score unchanged at 90. P/E: 16.0x/10.0x (2027/2028). AEHR's thesis is physics-monopoly based (20/20 Core Thesis), not TAM-dependent. The $193B TAM adds volume but doesn't change the structural position.
-
-- **May 20, 2026: 85 (-12) — CEILING REMODELED WITH HONEST MATH. 30x multiple, 40% OP margins, proper 2027-2030 year-by-year derivation.** Old ceiling $280-400 was built on fabricated LOW ($280 had no derivation) and inflated 45-55x multiples from pre-correction model. Corrected to 30x (ASML 35-40x minus small-cap discount) and 40% OP (test equipment at scale).
-
-  **Revised year-by-year (base case, 40% OP, 30x):**
-  FY2027: $200M x 40% = $80M x 30x = $2.4B -> $80/share
-  FY2028: $440M x 40% = $176M x 30x = $5.28B -> $177/share
-  FY2029: $650M x 40% = $260M x 30x = $7.8B -> $261/share
-  FY2030: $800M x 40% = $320M x 30x = $9.6B -> $322/share
-
-  **Ceiling: $180-290**
-  LOW ($180): FY2027-2028 inflection. CPO hockey stick begins mid-FY2027 (H2 2027). LOW raised from $80 to $180 to capture the ramp, not the trough.
-  HIGH ($290): FY2028 base ($177) + discounted FY2029 (+$71 x 0.85) + discounted FY2030 (+$44 x 0.72) = $292 -> rounded $290.
-
-  At $81.14: midpoint $235, ratio 2.90x, Entry% 72%. Score: (94 x 0.6) + (72 x 0.4) = 56.4 + 28.8 = 85.
-
-  20/20 Core Thesis unchanged. Sole-source WLBI monopoly. The -12 point correction is purely Entry math from honest ceiling construction. Base quality (94%) is the 2nd highest in the portfolio after SIVE (98%).

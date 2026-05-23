@@ -132,25 +132,80 @@ Samsung Electro-Mechanics, Absolics ($600M Georgia fab), DNP, LG Innotek all tar
 | Risks | -2 | Weak core business (-1). Not sole-source (-1). |
 | **Base** | **46/60 (77%)** | |
 
-## Ceiling — Forward TAM Math (v4.0 Base Case, 35% OP, 20x)
+## Ceiling — v4.0 AH-1 Full Derivation (35% OP, 20x, per Rule AH-9)
 
-BASE CASE REVENUE (2027-2030):
+### Vector 1: LIDE Glass Substrate Equipment (PRIMARY)
+Patented ultrashort-pulse laser drilling for glass substrate vias. Only mass-production-ready technology.
+CEO confirmed 50-100 machines per customer at HVM. 5-6 customers expected by 2029-30.
+LPKF Korea CEO: "4-year co-development with specific semiconductor company" — equipment NOW INSTALLED.
+510x515mm mass production panels. VLM Kapital patent chain confirmed as virtual formal confirmation.
+SKC accelerating glass mass production to end 2026.
+Source: CEO guidance, LPKF Korea disclosure (April 2026), VLM Kapital patent research, PhotonCap PhD analysis.
+AH-7 confidence: HIGH — equipment installed at customer, 80% qualification share confirmed.
 
-  FY2027: €200M (glass begins, first LIDE production orders + €100M legacy)
-  FY2028: €400M (LIDE ramp, multi-tool per customer, waveguide early)
-  FY2029: €700M (full suite + CPO waveguide + SpaceX ramp)
-  FY2030: €1,000M (maturity, 40-60% of €3.5B TAM captured)
+  | 2027  | 2028  | 2029  | 2030  |
+  | €100M | €250M | €500M | €750M |
 
-CEILING DERIVATION (AH-1 chain):
+  Unit math: 2027 ~25 machines x €4M ASP to 2-3 customers. 2030 ~150 machines x €5M ASP to 5-6 customers.
 
-  FY2027: €200M × 35% OP = €70M × 20x = €1.4B / 24.5M shares = €57/share
-  FY2028: €400M × 35% OP = €140M × 20x = €2.8B / 24.5M shares = €114/share
-  FY2029: €700M × 35% OP = €245M × 20x = €4.9B / 24.5M shares = €200/share
-  FY2030: €1,000M × 35% OP = €350M × 20x = €7.0B / 24.5M shares = €286/share
+### Vector 2: CPO Optical Waveguide Writing
+Intel patent US20240027706A1: "glass interposer with waveguides" using "ultrashort-pulse laser direct writing" = LPKF LIDE.
+Ayar Labs "detachable glass photonic interconnect solution" uses Intel's glass bridge architecture.
+Key Intel researcher Pooya Tadayon co-authored glass bridge paper at Intel, joined Ayar Labs as VP Packaging & Test.
+Three revenue streams from glass: (1) substrate vias, (2) optical waveguides, (3) Ayar glass bridge.
+Source: Intel patent, Ayar Labs architecture, VLM Kapital research.
+AH-7 confidence: MEDIUM — patent confirmed, production timeline 2028+.
 
-  LOW = FY2027 base = €57
+  | 2027 | 2028 | 2029  | 2030  |
+  | €20M | €60M | €100M | €150M |
+
+### Vector 3: Space & Defense Glass Packaging
+SpaceX linked to Schmid's 700mm format "Space & Defense" order.
+LPKF + Schmid are 2/15 founding members of Glass Panel Technology Group (Fraunhofer IZM).
+LPKF LIDE -> Schmid InfinityLine wet-process = paired manufacturing workflow.
+Intel + SpaceX = TeraFab partners, both use LPKF-adjacent technology.
+Source: Schmid order disclosure, Fraunhofer IZM membership, community research.
+AH-7 confidence: MEDIUM — SpaceX connection inferred from Schmid order, not directly confirmed.
+
+  | 2027 | 2028 | 2029 | 2030 |
+  | €15M | €30M | €50M | €50M |
+
+### Vector 4: Legacy Business (PCB, Stencil, Solar)
+Existing non-glass business. Declining as company pivots to glass.
+FY2025 revenue €115.3M was primarily legacy.
+Source: Annual reports.
+AH-7 confidence: HIGH — decline trajectory observable.
+
+  | 2027 | 2028 | 2029 | 2030 |
+  | €65M | €60M | €50M | €50M |
+
+### Combined Revenue:
+
+  | Vector              | 2027  | 2028  | 2029  | 2030    |
+  | 1. LIDE Equipment   | €100M | €250M | €500M | €750M   |
+  | 2. CPO Waveguide    | €20M  | €60M  | €100M | €150M   |
+  | 3. Space & Defense  | €15M  | €30M  | €50M  | €50M    |
+  | 4. Legacy           | €65M  | €60M  | €50M  | €50M    |
+  | **TOTAL**           | **€200M** | **€400M** | **€700M** | **€1,000M** |
+
+  Revenue ramps €200M -> €1,000M in 4 years (5x). V1 LIDE equipment drives 75% of growth.
+  Strong long-term compounder as glass replaces organic substrates.
+
+### Full Valuation Table (35% OP, 20x, 24.5M shares):
+
+  | Year | Revenue  | OP (35%) | x 20x  | Per Share |
+  | 2027 | €200M    | €70M     | €1.4B  | €57       |
+  | 2028 | €400M    | €140M    | €2.8B  | €114      |
+  | 2029 | €700M    | €245M    | €4.9B  | €200      |
+  | 2030 | €1,000M  | €350M    | €7.0B  | €286      |
+
+  €57 -> €286 in 4 years. Strong long-term compounder.
+
+### Ceiling Derivation:
+
+  LOW = FY2027 base: €200M x 35% OP = €70M x 20x = €1.4B / 24.5M shares = €57
   HIGH = FY2028 base + discounted FY2029 + discounted FY2030
-       = €114 + (€200-€114) × 0.85 + (€286-€200) × 0.72
+       = €114 + (€200-€114) x 0.85 + (€286-€200) x 0.72
        = €114 + €73 + €62 = €249
 
 CEILING: €57-249

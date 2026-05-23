@@ -1,14 +1,5 @@
 # AMPX — Amprius Technologies | Deep Dive
 **Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 75 HC | Base 75% (45/60) | Entry 75 (30/40) | #4 in Portfolio
-**Price at Analysis:** $20.66
-**Ceiling:** $44-$110 (2027-2028)
-**Upside Ratio:** 2.1x-7.1x
-**Market Cap:** ~$1.5B
-**FY2025 Revenue:** $73.0M (+202% YoY)
-**FY2026 Guidance:** $125-135M (~75% growth)
-**Earnings:** Q1 2026 upcoming
 
 ---
 
@@ -70,43 +61,87 @@
 | Risks | -3 | Margins 11% (-1). Solid-state competition (-1). Customer concentration (-1). |
 | **Base** | **45/60 (75%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — v4.0 AH-1 Full Derivation (25% OP, 25x, FY2030 discounted 30%, per Rule AH-9)
 
-```
-DEFENSE + PHYSICAL AI BATTERY TAM (DB7):
-  Total addressable: ~$3.7B → $38B+ by 2030
-  AMPX capture: 3-5% = $1.1-1.9B at maturity
+### Vector 1: Defense UAS/Drones (L3Harris, Ukraine) (PRIMARY)
+L3Harris named customer. SA128 (320 Wh/kg) shipping. Ukraine ~35% of current revenue.
+NDAA Section 164 bans Chinese battery components = regulatory moat for US defense.
+Source: L3Harris confirmation, company disclosures, Q1 2026 earnings.
+AH-7 confidence: HIGH — shipping, contracted, NDAA-protected.
 
-REVENUE TRAJECTORY:
-  FY2025: $73M → FY2026: $125-135M → FY2027: $200-300M
-  FY2028: $400-600M → FY2029: $600-1,000M
+  | 2027  | 2028  | 2029  | 2030  |
+  | $100M | $200M | $350M | $500M |
 
-EARNINGS MODEL:
-  $250M, 20% OP = $50M × 40x = $2.0B → ~$27
-  $400M, 25% OP = $100M × 40x = $4.0B → ~$54
-  $600M, 28% OP = $168M × 45x = $7.6B → ~$102
-  $800M, 30% OP = $240M × 50x = $12.0B → ~$162
-  Bull $1B, 32% OP = $320M × 50x = $16.0B → ~$216
+### Vector 2: eVTOL / Urban Air Mobility
+Dubai commercial operations year-end 2026. Physics-required: 450+ Wh/kg for profitable flight.
+Without 500 Wh/kg, eVTOL doesn't fly profitably. AMPX SiMaxx is the only battery that enables it.
+Source: Dubai station built, eVTOL OEM partnerships.
+AH-7 confidence: MEDIUM — certification timelines uncertain, Dubai confirmed.
 
-CEILING: $44-$146
-```
+  | 2027 | 2028 | 2029  | 2030  |
+  | $30M | $80M | $150M | $250M |
 
-**Entry:** $20.66 vs midpoint $95 = 4.60x → Entry 75
+### Vector 3: Electric Mobility (China + Global)
+$21M China order confirmed (scooters, three-wheelers, motorcycles). SiCore platform.
+Source: Order confirmed Q4 2025.
+AH-7 confidence: MEDIUM — China order confirmed, global expansion unproven.
 
-## Total: (75 × 0.6) + (75 × 0.4) = 45 + 30 = 75 HC
+  | 2027 | 2028  | 2029  | 2030  |
+  | $50M | $100M | $150M | $200M |
 
-## Why #4 — The Defense + Physical AI Battery Bet
+### Vector 4: Humanoid Robots / Autonomous Systems
+Every autonomous robot needs max energy/weight ratio. Tesla Optimus, Figure, Unitree.
+Source: TAM analysis, Physical AI thesis.
+AH-7 confidence: LOW-MEDIUM — market pre-production scale.
 
-SIVE (#1) and AEHR (#2) own the photonics supply chain. OUST (#3) owns Physical AI perception. AMPX owns Physical AI power. Together they form the autonomous system stack:
+  | 2027 | 2028 | 2029 | 2030  |
+  | $10M | $30M | $60M | $100M |
 
-```
-Autonomous drone/robot/eVTOL needs:
-  PERCEPTION: OUST (LiDAR + cameras + AI) — sees the world
-  COMPUTE: datacenter AI (SIVE/AEHR supply chain) — thinks
-  POWER: AMPX (silicon anode batteries) — moves
-```
+### Vector 5: HAPS + Space + Soldier Power + Other
+High-altitude pseudo-satellites, space applications, soldier power, premium niche.
+Source: HAPS operators confirmed, military interest.
+AH-7 confidence: LOW-MEDIUM — niche markets, smaller scale.
 
-The defense overlap amplifies: NATO 5% GDP + NDAA = government-guaranteed demand for both OUST perception AND AMPX power in autonomous military systems.
+  | 2027 | 2028 | 2029 | 2030 |
+  | $10M | $20M | $40M | $50M |
+
+### Vector 6: Existing/Legacy
+Stable base business from current customers and applications.
+
+  | 2027 | 2028 | 2029 | 2030  |
+  | $50M | $70M | $50M | $100M |
+
+### Combined Revenue:
+
+  | Vector              | 2027   | 2028   | 2029   | 2030     |
+  | 1. Defense UAS      | $100M  | $200M  | $350M  | $500M    |
+  | 2. eVTOL            | $30M   | $80M   | $150M  | $250M    |
+  | 3. Electric Mobility| $50M   | $100M  | $150M  | $200M    |
+  | 4. Humanoid Robots  | $10M   | $30M   | $60M   | $100M    |
+  | 5. HAPS/Space/Other | $10M   | $20M   | $40M   | $50M     |
+  | 6. Legacy           | $50M   | $70M   | $50M   | $100M    |
+  | **TOTAL**           | **$250M** | **$500M** | **$800M** | **$1,200M** |
+
+  Revenue ramps $250M -> $1,200M in 4 years (4.8x).
+  Defense UAS drives 42% of 2030 revenue. eVTOL becomes material from 2028.
+
+### Full Valuation Table (25% OP, 25x, 74M shares):
+
+  | Year | Revenue   | OP (25%)  | x 25x   | Per Share |
+  | 2027 | $250M     | $62.5M    | $1.56B  | $21       |
+  | 2028 | $500M     | $125M     | $3.13B  | $42       |
+  | 2029 | $800M     | $200M     | $5.0B   | $68       |
+  | 2030 | $1,200M   | $300M     | $7.5B   | $101      |
+
+  $21 -> $101 in 4 years. Revenue growth strong but margins must expand (currently 20% GM).
+
+### Ceiling Derivation:
+
+  LOW = FY2027 base: $250M x 25% OP = $62.5M x 25x = $1.56B / 74M shares = $21
+  HIGH = FY2030: $1,200M x 25% OP = $300M x 25x = $7.5B / 74M shares = $101
+  FY2030 discounted 30%: $101 x 0.70 = $71
+
+CEILING: $21-71
 
 ## Key Risks
 
@@ -115,32 +150,6 @@ The defense overlap amplifies: NATO 5% GDP + NDAA = government-guaranteed demand
 - Customer concentration — diversifying but still narrow
 - Cash runway ~18-24 months at current burn — manufacturing-light helps but may need funding
 
-## Verdict
-
-85 HC — Score driven primarily by ENTRY (100% at $16.08, 4.8x ratio) not Base (75%). Physics-required energy density monopoly with NDAA regulatory moat. Revenue +153% YoY. GM flipped from -21% to +20%. EBITDA breakeven guided FY2026. China LEV order validates tech globally. Warrant exchange May 18 removes dilution overhang.
-
-## ⚠️ MONITORING FLAG — GM MOAT TEST (Added May 9, 2026)
-
-KaizenInvestor raised legitimate concerns after Q1 2026 call:
-
-1. **GM at 20% despite "best in class" tech.** If AMPX has a true moat, GM should expand with revenue. 20% GM is the WEAKEST in HC positions (SIVE 40-50%, LPK.DE 67.6%, AEHR 50%+). Low GM suggests competitive pricing, not monopoly pricing.
-
-2. **Can't raise prices on existing customers.** Management didn't give clear path to margin expansion beyond "scale will help." If you have the best product in a booming market and can't charge more, the moat may be narrower than scored.
-
-3. **No new US drone customers.** Presentation focused on existing 3 customers + China + future markets (robotics, space, eVTOL). "When you have best in class product for a growing industry, you should find new customers every week." Valid concern.
-
-4. **Ukraine = 35% of revenue.** Geopolitical risk concentrated in one conflict.
-
-5. **China focus instead of US expansion.** Feels like management views US drone market as saturated. If true, ceiling of $44-110 may be optimistic.
-
-**DECISION RULE:** If GM stays at 20% or below for Q2 AND Q3, Base drops 75→70%, score drops to ~82 HC or lower. The moat needs to show up in MARGINS, not just revenue growth. Revenue growth without margin expansion = competitive market, not monopoly. Revisit after Q2 earnings.
-
-**The honest comparison:**
-```
-SIVE at 96 HC:  93% Base + 100% Entry (strong moat + cheap stock)
-AMPX at 85 HC:  75% Base + 100% Entry (weak moat? + cheap stock)
-
-AMPX's score is held up by the stock being cheap.
-If the stock recovers to $25+ AND margins don't expand,
-the score collapses because Entry drops AND Base stays weak.
-```
+- **GM moat test (May 2026):** GM at 20% despite "best in class" tech — weakest in HC positions. If AMPX has true moat, GM should expand. Management didn't give clear path to margin expansion beyond "scale will help." If GM stays ≤20% for Q2 AND Q3, Base drops 75→70%. Revenue growth without margin expansion = competitive market, not monopoly.
+- **No new US drone customers post Q1.** Presentation focused on existing 3 customers + China + future markets. Concern: US drone market may be saturated.
+- **Ukraine ~35% of revenue.** Geopolitical concentration risk in one conflict.

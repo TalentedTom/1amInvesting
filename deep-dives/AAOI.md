@@ -18,6 +18,24 @@
 
 A hyperscaler told AAOI management they would buy ALL production. The inference from Rule 7: if ONE hyperscaler is capacity-constrained on transceivers, the others are too. CFO: "Revenue limited by production capacity and supply chain, not market demand, which we believe is much larger."
 
+### CW Laser Vertical Integration (May 2026 — Q1 Earnings)
+AAOI now internally fabricates CW lasers. This changes classification from "generic assembler" to "vertically integrated producer with supply chain moat." THREE multi-year CPO/laser agreements IN NEGOTIATION. If any convert to signed deals, AAOI transitions from pluggable-only to pluggable+CPO.
+Serenity: "literally Intel but for America + Photonics. Building the largest Made in America supply chain for CW laser fab and 800G, 1.6T assembly."
+
+### US Manufacturing Advantage (May 2026)
+Houston TX genuine US manufacturing, doubled footprint. $20M Texas state subsidy. CHIPS Act eligible.
+"Premier high-volume US producer of AI-focused DC transceivers."
+Pax Silica / "buy American" pressure from White House gives US-manufactured transceiver companies structural procurement advantage with US hyperscalers. $600M ATM to fund Houston expansion.
+
+### Management Revenue Trajectory (Q1 2026 Earnings Call)
+Q1 2026: $151.1M revenue (4th consecutive record). FY2026 guidance RAISED: $1B→$1.1B+ revenue, $120M→$140M+ OP. Internal target $1.2B.
+Customer demand $1.4-1.5B = 30%+ above capacity = SOLD OUT through mid-2027.
+100K units/month 800G capacity hit. Houston doubled.
+$400M+/month revenue target H2 2026 = $4.8B annualized.
+Mid-2027 monthly run rate $471M = $5.65B annualized.
+Management Q4 2026 gross margin target: 40%+.
+Three 10%+ customers in Q1. CEO: 1.6T = "$2B+ business" in 2027.
+
 ## The Revenue Explosion
 
 | Period | Revenue | Key Driver |
@@ -73,33 +91,80 @@ AAOI competes against Innolight ($1.87B Q4 revenue — 14x AAOI's DC revenue), E
 | Risks | -3 | Concentration 91% (-1). LightCounting oversupply (-1). Not vertically integrated (-1). |
 | **Base** | **41/60 (68%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — v4.0 AH-1 Full Derivation (38% OP per management, 25x, single-number FY2029 discounted 30%)
 
-```
-FY2025: $456M → FY2026: $1B+ → FY2027: $2-3B → FY2028: $3-5B
+### Vector 1: 800G Pluggable Transceivers (PEAKING)
+Currently 100K units/month. Sold out through mid-2027. Peaks 2027 then declines as CPO takes switch-level optics.
+Source: Q1 2026 earnings call, management guidance.
+AH-7 confidence: HIGH — shipping, capacity constrained.
 
-Mid-2027 projection breakdown (management):
-  100G/400G: $90M/month
-  800G: $217M/month
-  1.6T: $71M/month
-  Total: $378M/month = $4.5B annualized
+  | 2027   | 2028   | 2029   | 2030   |
+  | $2.5B  | $2.0B  | $1.5B  | $1.0B  |
 
-EARNINGS:
-  $1B, 15% OP = $150M × 25x = $3.75B → ~$60
-  $2B, 20% OP = $400M × 28x = $11.2B → ~$180
-  $3B, 22% OP = $660M × 30x = $19.8B → ~$320
-  $4.5B (mid-2027 run rate), 23% OP = $1.04B × 30x = $31B → ~$500
+### Vector 2: 1.6T Pluggable Transceivers (RAMPING)
+CEO: "$2B+ business" in 2027. Replaces 800G as primary growth driver.
+Source: CEO commentary Q1 call.
+AH-7 confidence: HIGH — management $2B target stated.
 
-CEILING: $300-$600
-```
+  | 2027   | 2028   | 2029   | 2030   |
+  | $1.5B  | $2.5B  | $3.0B  | $2.5B  |
 
-**Entry:** $162.17 vs midpoint $450 = 2.78x → Entry 58
+### Vector 3: CATV/DOCSIS (FLOOR)
+Mediacom DOCSIS 4.0 multi-year rollout. Consensus $300-350M for 2026.
+Source: Mediacom partnership, analyst consensus.
+AH-7 confidence: HIGH — contracted.
+
+  | 2027  | 2028  | 2029  | 2030  |
+  | $400M | $450M | $400M | $350M |
+
+### Vector 4: CW Laser External Sales (POTENTIAL)
+Three CPO/laser agreements in negotiation. If signed, AAOI becomes external CW laser supplier.
+Source: Q1 earnings call, Serenity analysis.
+AH-7 confidence: LOW-MEDIUM — in negotiation, not signed.
+
+  | 2027  | 2028  | 2029  | 2030  |
+  | $100M | $300M | $500M | $700M |
+
+### Vector 5: CPO Modules (FUTURE)
+If CW laser negotiations convert, AAOI could assemble CPO modules using internal lasers.
+Source: Three agreements in negotiation.
+AH-7 confidence: LOW — dependent on V4 closing.
+
+  | 2027 | 2028  | 2029  | 2030  |
+  | $0   | $100M | $300M | $500M |
+
+### Combined Revenue:
+
+  | Vector              | 2027    | 2028    | 2029    | 2030    |
+  | 1. 800G Pluggable   | $2.5B   | $2.0B   | $1.5B   | $1.0B   |
+  | 2. 1.6T Pluggable   | $1.5B   | $2.5B   | $3.0B   | $2.5B   |
+  | 3. CATV             | $400M   | $450M   | $400M   | $350M   |
+  | 4. CW Laser Sales   | $100M   | $300M   | $500M   | $700M   |
+  | 5. CPO Modules      | $0      | $100M   | $300M   | $500M   |
+  | **TOTAL**           | **$4.5B** | **$5.35B** | **$5.7B** | **$5.05B** |
+
+  Revenue PEAKS 2029 then declines — pluggable fades faster than CPO/laser ramps.
+  This is why AAOI is ⚡ BOTTLENECK (trade) not a compounder. The S-curve is visible.
+
+### Full Valuation Table (38% OP per management target, 25x, 85M shares post-ATM dilution):
+
+  | Year | Revenue  | OP (38%)  | × 25x    | Per Share |
+  | 2027 | $4.5B    | $1.71B    | $42.75B  | $503      |
+  | 2028 | $5.35B   | $2.03B    | $50.83B  | $598      |
+  | 2029 | $5.7B    | $2.17B    | $54.15B  | $637      |
+  | 2030 | $5.05B   | $1.92B    | $47.95B  | $564      |
+
+  Peaks 2029 at $637 then DECLINES. Pluggable S-curve visible in the numbers.
+  $600M ATM dilution (82M→85M shares) reduces per-share values ~3.5%.
+
+### Ceiling Derivation:
+
+  FY2029 (peak): $5.7B × 38% OP = $2.17B × 25x = $54.15B / 85M shares = $637
+  Discounted 30%: $637 × 0.70 = $446
+
+CEILING: $446 (single number, discounted FY2029 peak base case)
 
 ## Total: (68 × 0.6) + (58 × 0.4) = 41 + 23 = 64
-
-## Score Change: 68 → 64
-
-The stock appreciated from ~$90 (when originally scored 68) to $162, compressing the Entry. The base stays at 68% — fresh data ($200M+ 1.6T order, $378M/month projection) RAISES the ceiling, but the price moved faster. Dynamic scoring working correctly.
 
 ## AAOI's Role in the Supply Chain
 
@@ -132,36 +197,6 @@ LITE CEO May 5 confirmed structural CW laser shortage: "tension in our own suppl
 - Tier 1 (vertically integrated — own CW): AAOI, LITE, COHR → can produce regardless of shortage
 - Tier 2 (non-integrated — buy CW): Innolight, Eoptolink, CIG → GATED by CW availability
 
-**Potential changes to apply post-earnings:**
-- **Base: ~65% → 68-70%** (+2-3 for vertical integration reclassification. CW fab moves AAOI from "generic assembler" to "vertically integrated producer with supply chain moat." Core Thesis +1-2.)
-- **Ceiling: $400-700 → $500-750** (CW advantage lets AAOI take share from gated competitors + potential external CW laser sales at shortage premium pricing $70-170/array.)
-- **Risk deduction reduced:** "Not vertically integrated" was -1. Now flipped to +0 or +1. Net +1-2 base impact.
-- **Score impact:** Could move from 71 → 73-74 WL.
-- **Classification still ⚡ BOTTLENECK** — CW fab makes the ride BIGGER but doesn't extend past pluggable S-curve peak (2027-28). Still a trade, not a structural hold.
-
-**WATCH FOR ON MAY 7 CALL:**
-1. Texas factory timeline — THE catalyst. H1 2027 = stock to $250+.
-2. CW laser capacity commentary — are they selling externally? If YES → changes classification.
-3. 1.6T transceiver qualification status
-4. Customer pipeline beyond top 3
-5. Any CPO commentary (would change thesis entirely)
-
-**TRIM LOGIC STILL HOLDS:** If AAOI spikes on May 7 beat, trim into strength → rotate into SOI.PA (CPO pure play, structural hold). CW advantage makes AAOI a better rocket but it's still a rocket, not a compounder.
-
 ## Verdict
 
 68 WL. Q1 2026 confirmed the thesis is executing: $151.1M revenue (4th consecutive record), 100K units/month 800G capacity hit, Houston doubled, FY26 raised to $1.1B+ / $140M+ OP income (internal target $1.2B). Customer demand at $1.4-1.5B = 30%+ above capacity = sold out through mid-2027. CEO Thompson: 1.6T is a "$2B+ business" in 2027. Three multi-year CPO/laser agreements IN NEGOTIATION — the CW laser vertical integration thesis is converting to real pipeline. Three 10%+ customers already in Q1. Mid-2027 monthly run rate raised from $378M to $471M (annualized $5.65B). Q3 guided +60-80% sequential = the hockey stick. Q4 gross margin target 40%+. Still Layer 1 competitive (not monopoly), but the CPO/laser negotiations could reclassify AAOI from pure transceiver assembler to dual-revenue laser + transceiver company. HC at ~$100 pullback or if CPO/laser agreements convert to signed deals.
-
-
-## Score Change Log
-- **May 2, 2026: 64 WL** (Texas factory is THE catalyst — $20M Texas subsidy, 3x capacity. Everything AAOI makes sells out instantly, revenue is CAPPED by supply not demand. Management pumping on X = confident in Q1 numbers. Q1 revenue number is irrelevant — only Texas factory timeline matters on May 7 call. "If CEO says H1 2027 = stock to $250+. If H2 2027 or 2028 = treads water." InP substrate shortage confirmed by AXTI $100M+ backlog. 142% CPO CAGR: AAOI is the pluggable→CPO bridge play. LightCounting warns pluggable correction coming — AAOI is a TRADE not a HOLD (⚡ bottleneck classification). Hold through May 7 earnings.)
-- May 6, 2026: 65 WL (Ceiling standardized to 2027-2028. $300-600→$300-430. Entry recalculated under new v3.7.0 curve.)
-- **May 7, 2026: 68 WL ⭐ Q1 2026 EARNINGS RESCORE** (Revenue $151.1M, 4th consecutive record. FY26 RAISED: $1B→$1.1B+ revenue, $120M→$140M+ OP. Internal target $1.2B. Customer demand $1.4-1.5B = 30%+ above capacity = SOLD OUT through mid-2027. 100K units/month 800G capacity hit. Houston doubled. Q3 guided +60-80% sequential = hockey stick begins. CEO: 1.6T = "$2B+ business" in 2027. THREE multi-year CPO/laser agreements IN NEGOTIATION. Mid-2027 monthly run rate $378M→$471M. Three 10%+ customers in Q1. Base 68→72%: Core Thesis +1 (CPO/laser negotiations = CW vertical integration thesis converting), Cycle +1 (FY26 raised, Q3-Q4 hockey stick), TAM +1 (1.6T = $2B+, mid-2027 $5.65B annualized), Catalysts +1 (three 10%+ customers, sold out mid-2027). Ceiling $300-430→$300-450. At $149: ratio 2.52x → Entry 63%. HC at ~$100 or CPO/laser deals signed.)
-- **May 8, 2026: 70 WL** (US Geo Advantage +2 Base. Houston TX genuine US manufacturing, doubled footprint. $20M Texas state subsidy. CHIPS Act eligible. "Premier high-volume US producer of AI-focused DC transceivers." Pax Silica / "buy American" pressure from White House gives US-manufactured transceiver companies structural procurement advantage with US hyperscalers. Once at scale ($1.1B+ FY2026), AAOI becomes the default US-sourced option. Intel-like treatment plausible when capacity proves out. Base 72→74%. Score 68→70.)
-
-- **May 16, 2026: 73 WL (+9) — CEILING REBUILT WITH MANAGEMENT RUN RATE + 40% GM TARGET.** Serenity + management confirm $400M+/month revenue target H2 2026 = $4.8B annualized. Mid-2027 monthly run rate $471M = $5.65B annualized (from Q1 earnings call). Management Q4 2026 GM target: 40%+. Previous model used FY2027 $2-3B midpoint $2.5B, which is 50-55% BELOW management's own run rate numbers. Ceiling rebuilt:
-
-  **2027 base (management run rate):** $4.8B revenue × 40% GM = $1.92B gross profit. OP ~25% (40% GM minus ~15% OpEx at scale) = $1.2B OP × 25x = $30B MC → ~$484/share.
-  **2028 base (continued ramp):** $5.65B revenue × 40% GM. OP ~27% (OpEx leverage) = $1.53B OP × 25x = $38.2B MC → ~$616/share.
-
-  Ceiling $300-450 → $480-620. At $190.36: midpoint $550, ratio 2.89x, Entry 72%. Score: (74×0.6)+(72×0.4) = 73. Implied 2027/2028 P/E at today's price: 6.2x/4.3x (was 17.0x/12.7x on old model). AAOI transforms from "expensive pluggable" to "cheap at 6x forward earnings" on management's own numbers. Serenity: "literally Intel but for America + Photonics. Building the largest Made in America supply chain for CW laser fab and 800G, 1.6T assembly." Three CPO/laser agreements still in negotiation. If any convert to signed deals, Base increases toward 80+ and pluggable→CPO transition thesis activates. AAOI jumps from #26 to #15.

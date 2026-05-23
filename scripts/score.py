@@ -175,18 +175,35 @@ def parse_range(value):
         r"([\d,]+(?:\.\d+)?)\s*[-–]\s*([\d,]+(?:\.\d+)?)\s*([Bb]?)",
         cleaned,
     )
-    if not m:
+    if m:
+        if m.group(3) in ("B", "b"):
+            return None, None
+        try:
+            low = float(m.group(1).replace(",", ""))
+            high = float(m.group(2).replace(",", ""))
+        except ValueError:
+            return None, None
+        if low <= 0 or high <= 0 or high < low:
+            return None, None
+        return low, high
+
+    # Fallback: single-value ceiling (no range). Lets analysts write
+    # 'TWD 2,890' or '$446' as a point target instead of 'TWD 716-2,890'.
+    # We return (n, n) so the rest of the v3.8.0 framework works unchanged
+    # — midpoint = n, ratio = n / price, upside is a single multiplier.
+    # Same B-suffix guard rejects market-cap strings like '$2.23B'.
+    m_single = re.search(r"([\d,]+(?:\.\d+)?)\s*([Bb]?)", cleaned)
+    if not m_single:
         return None, None
-    if m.group(3) in ("B", "b"):
+    if m_single.group(2) in ("B", "b"):
         return None, None
     try:
-        low = float(m.group(1).replace(",", ""))
-        high = float(m.group(2).replace(",", ""))
+        n = float(m_single.group(1).replace(",", ""))
     except ValueError:
         return None, None
-    if low <= 0 or high <= 0 or high < low:
+    if n <= 0:
         return None, None
-    return low, high
+    return n, n
 
 
 def parse_int(value):
@@ -249,6 +266,11 @@ def bucket_for(total) -> str:
 
 
 def upside_display(low: float, high: float, price: float) -> str:
+    # When the Ceiling Target is a single value (low == high), collapse
+    # the display to one multiplier instead of '4.0x-4.0x'. Analysts who
+    # use point targets see clean output; range-based targets unchanged.
+    if low == high:
+        return f"{low/price:.1f}x"
     return f"{low/price:.1f}x-{high/price:.1f}x"
 
 
