@@ -327,20 +327,21 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 
 ### Combined Revenue Table:
 
-  | Vector              | 2027  | 2028  | 2029  | 2030    |
-  | 1. Ayar/CPO         | $75M  | $200M | $350M | $500M   |
-  | 2. Jabil LRO        | $50M  | $75M  | $100M | $120M   |
-  | 3. Apple             | $0    | $65M  | $100M | $130M   |
-  | 4. Defense NEMC      | $5M   | $10M  | $15M  | $20M    |
-  | 5. Defense Primes    | $10M  | $20M  | $30M  | $40M    |
-  | 6. Lightmatter       | $18M  | $42M  | $65M  | $90M    |
-  | 7. Celestial/O-Net   | $15M  | $45M  | $70M  | $95M    |
-  | 8. Lightelligence    | $10M  | $30M  | $50M  | $65M    |
-  | 9. Nokia             | $8M   | $20M  | $30M  | $35M    |
-  | 10. LIGHTIUM/TFLN    | $5M   | $15M  | $25M  | $35M    |
-  | 11. AMD/GFS          | $5M   | $25M  | $40M  | $55M    |
-  | 12. YSS/Defense      | $5M   | $13M  | $25M  | $15M    |
-  | **TOTAL**            | **$206M** | **$560M** | **$900M** | **$1,200M** |
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. Ayar/CPO | $75M | $200M | $350M | $500M |
+| 2. Jabil LRO | $50M | $75M | $100M | $120M |
+| 3. Apple | $0 | $65M | $100M | $130M |
+| 4. Defense NEMC | $5M | $10M | $15M | $20M |
+| 5. Defense Primes | $10M | $20M | $30M | $40M |
+| 6. Lightmatter | $18M | $42M | $65M | $90M |
+| 7. Celestial/O-Net | $15M | $45M | $70M | $95M |
+| 8. Lightelligence | $10M | $30M | $50M | $65M |
+| 9. Nokia | $8M | $20M | $30M | $35M |
+| 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
+| 11. AMD/GFS | $5M | $25M | $40M | $55M |
+| 12. YSS/Defense | $5M | $13M | $25M | $15M |
+| **TOTAL** | **$206M** | **$560M** | **$900M** | **$1,200M** |
 
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
