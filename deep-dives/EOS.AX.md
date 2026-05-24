@@ -1,14 +1,4 @@
 # EOS.AX — Electro Optic Systems | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 74 WL | Base 77% (46/60) | Entry 70 (28/40)
-**Price at Analysis:** A$10.01
-**Ceiling:** A$20-A$31 (2027-2028)
-**Upside Ratio:** 2.0x-5.0x
-**Market Cap:** ~A$600M (~$400M)
-**Backlog:** A$459M (+238% YoY)
-**FY2026 Revenue Target:** A$180-230M (breakeven ~A$200M)
-**Quarterly Report:** Late April / Early May 🔥
 
 ---
 
@@ -88,31 +78,81 @@ European NATO members spending €800B+ annually WANT non-US defense systems. EO
 | Risks | -3 | ASIC governance history (-1). Goldrone + Grizzly (-1). Execution risk (-1). |
 | **Base** | **46/60 (77%)** | |
 
-## Ceiling — Forward TAM Math
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP capped 20%, 20x, single-number FY2028)
 
-```
-DIRECTED ENERGY + COUNTER-DRONE + RWS TAM: ~$9B → $25-40B by 2030
+### Vector 1: HEL Weapons (Apollo 100kW)
+ITAR-free monopoly for European NATO. Netherlands €3B HEL budget over 6 years.
+Customer ahead of schedule. 10 additional European governments in active talks.
+World's only serial production HEL facility.
+Source: Netherlands €71M contract (signed, ahead of schedule), CEO commentary.
+AH-7 confidence: MEDIUM-HIGH — Netherlands confirmed, European pipeline uncontracted.
 
-EOS CAPTURE (ITAR-free non-US HEL monopoly):
-  HEL: $200M-900M
-  RWS: $250-800M
-  C2/MARSS: $100-300M
-  Total at maturity: A$800M-2.5B
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| A$80M | A$150M | A$250M | A$350M |
 
-REVENUE PATH:
-  FY2025: A$128.5M → FY2026: A$180-230M → FY2027: A$300-450M
-  FY2028: A$500-800M → FY2029: A$800M-1.2B
+### Vector 2: Remote Weapon Stations (R400, Slinger, ABRAMS)
+US Army ABRAMS 2,500+ vehicles. Australia LAND 400. South America LAV. NATO Slinger.
+Source: Signed contracts totaling ~A$193M.
+AH-7 confidence: HIGH — contracted, shipping.
 
-EARNINGS:
-  A$230M, 30% OP = A$69M × 20x = A$1.38B → A$~23
-  A$400M, 25% OP = A$100M × 25x = A$2.5B → A$~42
-  A$700M, 28% OP = A$196M × 28x = A$5.5B → A$~92
-  A$1B bull, 30% OP = A$300M × 30x = A$9.0B → A$~150
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| A$120M | A$140M | A$160M | A$170M |
 
-CEILING: A$20-A$50
-```
+### Vector 3: MARSS C2 / Counter-Drone Systems
+AI-powered NiDAR C2. Full kill chain: Detection → Tracking → ID → Defeat. 60+ deployments.
+Source: Acquisition pending, $36M + €100M earn-out.
+AH-7 confidence: MEDIUM — acquisition pending, integration risk.
 
-**Entry:** A$10.01 vs midpoint A$35 = 3.50x → Entry 70
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| A$40M | A$70M | A$100M | A$130M |
+
+### Vector 4: Space / Other
+Space debris tracking, counter-missile, critical infrastructure.
+Source: Company product roadmap.
+AH-7 confidence: LOW — early stage.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| A$10M | A$15M | A$25M | A$35M |
+
+### Combined Revenue:
+
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. HEL Weapons | A$80M | A$150M | A$250M | A$350M |
+| 2. RWS | A$120M | A$140M | A$160M | A$170M |
+| 3. MARSS C2 | A$40M | A$70M | A$100M | A$130M |
+| 4. Space/Other | A$10M | A$15M | A$25M | A$35M |
+| **TOTAL** | **A$250M** | **A$375M** | **A$535M** | **A$685M** |
+
+A$128M → A$685M in 5 years (~40% CAGR). Netherlands €3B pipeline + A$459M backlog support trajectory.
+
+### Full Valuation Table (Graduated OP capped 20%, 20x, ~60M shares):
+
+63% GM currently but EBITDA negative. Defense companies 10-15% OP at scale. OP capped at 20% — EOS has monopoly HEL pricing but still scaling production.
+
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | A$250M | 15% | A$37.5M | A$750M | A$12.50 |
+| 2028 | A$375M | 18% | A$67.5M | A$1.35B | A$22.50 |
+| 2029 | A$535M | 20% | A$107M | A$2.14B | A$35.67 |
+| 2030 | A$685M | 20% | A$137M | A$2.74B | A$45.67 |
+
+A$12.50 → A$45.67 in 4 years. HEL adoption across European NATO drives the ramp.
+FY2027 at A$12.50 vs current A$8.88 — market pricing ~12 months forward at 71% of FY2027.
+
+### Why FY2028 as Ceiling:
+
+FY2028 (A$22.50) captures the point where HEL transitions from single-customer (Netherlands) to multi-customer (2-3 European NATO). This is the inflection the market hasn't priced. FY2029-2030 depend on NATO-wide adoption which is higher confidence but further out.
+
+### Ceiling Derivation:
+
+  FY2028: A$375M × 18% OP = A$67.5M × 20x = A$1.35B / 60M shares = A$22.50
+
+CEILING: A$22.50 (single number, FY2028 forward)
 
 ## Total: (77 × 0.6) + (70 × 0.4) = 46 + 28 = 74 WL
 
@@ -141,6 +181,3 @@ EOS sits at the intersection of defense and AI supercycles:
 - Competition: US HEL programs (ITAR-restricted but well-funded)
 - Single-point risks: Apollo production ramp, MARSS integration
 
-## Verdict
-
-74 WL. ITAR-free directed energy monopoly with the strongest defense thesis in the portfolio. Netherlands €3B HEL budget is the game-changer catalyst. A$459M backlog provides visibility but execution risk remains. Quarterly report (late April) = first backlog conversion data. If 2nd European HEL award materializes + backlog converts → rescore to HC.

@@ -1,14 +1,4 @@
 # NRGV — Energy Vault Holdings | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 56 | Base 57% (34/60) | Entry 55 (22/40)
-**Price at Analysis:** $4.46 (Col 9)
-**Ceiling:** $15-$22 (2027-2028)
-**Upside Ratio:** 3.4x-6.7x
-**Market Cap:** ~$770M
-**FY2025 Revenue:** $203.67M (+340%). Net Loss: -$103.61M.
-**FY2026 Guidance:** $225-300M + $75-100M Asset Vault builds
-**Earnings:** May 5, 2026
 
 ---
 
@@ -67,27 +57,68 @@ Energy Vault started as a gravity-based energy storage company (G-Vault — the 
 | Risks | -3 | -50% profit margin (-1). Competitive market (-1). G-Vault pivot = original thesis failed (-1). |
 | **Base** | **33/60 (55%)** | |
 
-## Ceiling
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 15x, single-number FY2029)
 
-```
-REVENUE (including Asset Vault):
-  FY2025: $204M → FY2026: $225-300M + $75-100M builds
-  FY2027: $400-600M (Japan + US ramp + AI DC)
-  FY2028: $600-1.0B (full Asset Vault recurring + global BESS)
+### Vector 1: B-Vault BESS (Standard Battery Storage)
+Standard lithium-ion BESS. No technology moat — competing with Tesla Megapack, Fluence, BYD.
+$1.3B backlog (+300%). Japan 850MW expansion. Global deployments.
+Source: Company guidance, backlog data.
+AH-7 confidence: MEDIUM — backlog confirmed, competitive market compresses margins.
 
-EARNINGS:
-  $300M total, 10% OP = $30M × 15x = $450M → ~$2.50
-  $500M, 15% OP = $75M × 18x = $1.35B → ~$7.50
-  $700M, 18% OP = $126M × 20x = $2.52B → ~$14
-  $1B, 20% OP = $200M × 22x = $4.4B → ~$24
-  Bull $1.5B, 22% OP = $330M × 22x = $7.26B → ~$40
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $300M | $400M | $500M | $550M |
 
-CEILING: $15-$30
-```
+### Vector 2: Asset Vault (Own-and-Operate Recurring)
+Transition from selling BESS to owning and operating. $150M EBITDA target.
+Higher margin recurring revenue if execution succeeds. 1GW+ portfolio target.
+Source: Company strategy, FY2026 guidance $75-100M builds.
+AH-7 confidence: LOW-MEDIUM — model announced, execution 18-36 months out.
 
-**Entry:** $4.46 vs midpoint $22.50 = 5.05x raw → **Entry 55** (adjusted for no-moat + execution risk)
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $100M | $175M | $250M | $350M |
 
-## Total: (57 × 0.6) + (55 × 0.4) = 34 + 22 = 56
+### Vector 3: AI Datacenter Power / Crusoe Spark + Peak Energy Sodium-Ion
+Behind-the-meter power for AI datacenters. Peak Energy sodium-ion (US-made, IRA benefits).
+Source: Crusoe partnership, Peak Energy acquisition.
+AH-7 confidence: LOW — early stage, speculative.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $30M | $75M | $150M | $250M |
+
+### Combined Revenue:
+
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. B-Vault BESS | $300M | $400M | $500M | $550M |
+| 2. Asset Vault | $100M | $175M | $250M | $350M |
+| 3. AI DC / Sodium | $30M | $75M | $150M | $250M |
+| **TOTAL** | **$430M** | **$650M** | **$900M** | **$1,150M** |
+
+### Full Valuation Table (Graduated OP, 15x, ~180M shares):
+
+Currently -50% profit margin. Path to profitability requires Asset Vault recurring + scale.
+No moat limits pricing power — 15x generous for competitive energy company.
+
+| Year | Revenue | OP Margin | OP | × 15x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $430M | 5% | $21.5M | $323M | $1.79 |
+| 2028 | $650M | 10% | $65M | $975M | $5.42 |
+| 2029 | $900M | 14% | $126M | $1.89B | $10.50 |
+| 2030 | $1,150M | 17% | $196M | $2.93B | $16.28 |
+
+### Why FY2029 as Ceiling:
+
+FY2028 ($5.42) is roughly today's price ($5.22) — market already pricing ~18 months forward.
+FY2029 allows Asset Vault recurring revenue to become material. FY2030 × 0.70 ($11.40) is similar but FY2029 direct is cleaner for a company that needs to prove profitability.
+
+### Ceiling Derivation:
+
+  FY2029: $900M × 14% OP = $126M × 15x = $1.89B / 180M shares = $10.50
+
+CEILING: $10.50 (single number, FY2029 forward)
 
 ## Why The Framework Scores NRGV Low
 
@@ -125,6 +156,3 @@ $204M revenue with -$103M net loss = -50% profit margin. This isn't early-stage 
 - **Dilution** — preferred equity, potential equity raises to fund projects
 - **Project timing** — EPC revenue is inherently lumpy
 
-## Verdict
-
-56. At $4.46/$770M, the asymmetry equation changes significantly. The $1.3B backlog (+300%), first positive EBITDA in Q4, Japan 850 MW expansion, and Crusoe AI datacenter pivot are real catalysts on a $770M market cap — much more attractive than at $1.5B. The raw Entry ratio of 5.05x is strong enough to offset the no-moat penalty. Still no technology monopoly in a competitive BESS market (Tesla, Fluence, BYD), but at this valuation the Asset Vault recurring EBITDA thesis ($150M+ target) doesn't need to fully materialize for the stock to re-rate. The G-Vault pivot failure and competitive positioning keep the Base at 57%, but the price provides the margin of safety the framework requires. May 5 earnings will be key.

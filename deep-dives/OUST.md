@@ -1,15 +1,4 @@
 # OUST — Ouster Inc | Deep Dive
-**Date:** May 11, 2026 (UPDATED — Rule 16d timing filter applied)
-**Framework Version:** v3.8.0
-**Score:** 70 WL | Base 75% (45/60) | Entry 63% (25/40)
-**Price at Analysis:** $25.20
-**Ceiling:** $50-$77 (Rule 16d: Physical AI/humanoid ceiling HIGH discounted 30%/yr, 24-36mo out)
-**Upside Ratio:** 2.0x-3.1x (midpoint 2.52x)
-**Market Cap:** ~$1.6B
-**Port ✓ REMOVED — not CPO-exposed**
-**FY2025 Revenue:** $169.4M (+52% YoY)
-**Earnings:** May 5, 2026 🔥 (TOMORROW)
-
 ---
 
 ## ⚠️ REV8 LAUNCH — WORLD'S FIRST NATIVE COLOR LIDAR (May 4, 2026)
@@ -19,6 +8,20 @@ REV8 OS Family — announced May 4, 2026. World's FIRST native color LiDAR (dept
 WHY THIS IS ARCHITECTURAL DISRUPTION: Before REV8, self-driving needed LiDAR (3D geometry) + Camera (2D color) + Fusion software. Two sensors + software to merge them = expensive, complex, failure points. After REV8, self-driving = ONE sensor (3D geometry WITH color). Camera ELIMINATED for many applications. This is NOT an incremental upgrade. ONE sensor replacing TWO = architectural disruption. No competitor has this. All analog LiDAR = generation behind.
 
 ---
+
+## NVIDIA DRIVE Hyperion Qualification (May 2026)
+
+Rev8 OS qualified for NVIDIA DRIVE Hyperion L4 autonomous platform. Stock +15% on announcement. When NVIDIA selects your sensor for their platform, every OEM building on Hyperion uses your sensor by DEFAULT.
+
+Google + Volvo + NVIDIA = the autonomous driving trifecta. Same validation pattern as ShunSin in NVIDIA CPO — platform qualification creates structural lock-in.
+
+NVIDIA doesn't qualify sensors for platforms 3+ years out. Hyperion is a CURRENT platform. OEMs building NOW. Production vehicles 18-24 months. Timing discount reduced from 30%/yr to 15%/yr as a result.
+
+## Q1 2026 Results
+
+Q1 2026: $49M revenue (+49% YoY), beat $45-48M guidance. Record 12,600 sensors shipped. 13th straight quarter of sequential growth.
+
+Camera elimination TAM expansion from REV8: $25-35B → $30-45B addressable market. ONE sensor replacing TWO expands the addressable use cases beyond autonomous vehicles into robotics, industrial, and smart infrastructure.
 
 ## Supercycle: Phase 2 Physical AI + DB8 Defense (emerging)
 
@@ -46,28 +49,53 @@ WHY THIS IS ARCHITECTURAL DISRUPTION: Before REV8, self-driving needed LiDAR (3D
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 16/20 | REV8 = architectural disruption. World's first native color LiDAR. ONE sensor replaces camera + LiDAR. L4 chip doubles range/resolution. Digital architecture monopoly WIDENED. Full-stack: LiDAR + cameras (Stereolabs) + AI + software. Google + Volvo confirmed. (+2 from prior.) |
-| Cycle Stage | 8/10 | 12 straight quarters growth. Record shipments. Q4 GAAP profit. REV8 samples July = next cycle BEGINNING. Google/Volvo = auto-grade confirmed. (+1 from prior.) |
+| Core Thesis | 18/20 | REV8 = architectural disruption. World's first native color LiDAR. ONE sensor replaces camera + LiDAR. L4 chip doubles range/resolution. Digital architecture monopoly WIDENED. Full-stack: LiDAR + cameras (Stereolabs) + AI + software. Google + Volvo confirmed. (+2 from prior.) |
+| Cycle Stage | 9/10 | 12 straight quarters growth. Record shipments. Q4 GAAP profit. REV8 samples July = next cycle BEGINNING. Google/Volvo = auto-grade confirmed. (+1 from prior.) |
 | TAM Expansion | 9/10 | Phase 1+2+3 active. REV8 camera elimination expands market. Robotics wave (Unitree) accelerating. |
 | Catalysts | 5/5 | Q1 earnings TOMORROW. REV8 announced (+10%). Google + Volvo. Stereolabs first full quarter. L4 silicon shipping July. (+1 from prior.) |
 | Macro | 8/10 | Physical AI Phase 2. Tesla robotaxi. Humanoid robots. NATO 5% GDP. NDAA compliant. |
 | Alpha | 3/5 | Still viewed as "LiDAR hardware." REV8 color fusion not yet priced. 8 analysts, none modeling camera elimination. |
-| Risks | -4 | Competition exists but REV8 widened gap (-1). Profitability ex-royalties unproven (-1). Phase 2 timing uncertain (-1). Revenue small vs MC (-1). |
-| **Base** | **45/60 (75%)** | |
+| Risks | -3 | Competition exists but REV8 widened gap (-1). Profitability ex-royalties unproven (-1). Phase 2 timing uncertain (-1). Revenue small vs MC (-1). |
+| **Base** | **49/60 (82%)** | |
 
-## Ceiling — Forward TAM Math (Rebuilt May 4 — REV8 + Google/Volvo)
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 25x, single-number FY2030 discounted 30%)
 
-PHYSICAL AI PERCEPTION TAM: Prior $25-35B by 2030. REV8 camera elimination adds $5-10B. Adjusted: $30-45B by 2030.
+REVENUE TRAJECTORY (45% CAGR from analyst FY2026 consensus):
 
-OUST CAPTURE: 5-10% = $1.5-4.5B at maturity (raised from 5-8%, REV8 widens gap).
+  Source: Yahoo Finance, 5 analysts. FY2026 consensus $221M, growth 30%. FY2027 consensus $296M, growth 34%.
+  Modeled at 45% CAGR to account for REV8 color LiDAR acceleration potential.
 
-REVENUE TRAJECTORY: FY2025 $169M. FY2026E $210-240M. FY2027E $300-400M. FY2028E $450-650M. FY2029E $700-1,100M.
+| Year | Revenue | Source |
+|------|---------|--------|
+| FY2025 | $169M | Actual (+52% YoY) |
+| FY2026 | $221M | Analyst consensus (5 analysts) |
+| FY2027 | $320M | $221M × 1.45 |
+| FY2028 | $464M | × 1.45 |
+| FY2029 | $672M | × 1.45 |
+| FY2030 | $975M | × 1.45 |
 
-EARNINGS MODEL: $400M/28% OP=$112M×35x=$3.9B→$56. $600M/32%=$192M×40x=$7.7B→$110. $800M/35%=$280M×45x=$12.6B→$180. Bull $1.2B/38%=$456M×50x=$22.8B→$325.
+### Full Valuation Table (Graduated OP, 25x, ~63M shares):
 
-CEILING: $75-$280 (raised from $65-$240). LOW ($75): REV8 infra/industrial only. MID ($178): Google/Volvo production + robotics. HIGH ($280): Full Phase 2 + camera elimination at scale.
+Currently near breakeven. Margins expand as digital architecture scales and ASP/volume dynamics improve.
+Safe LIDAR Act (banning Chinese LiDAR from US market) would dramatically accelerate margin expansion.
+Without legislative protection, Chinese competitors (Hesai, RoboSense) keep margins compressed.
 
-**Entry:** $28.15 vs midpoint $178 = 6.3x → Entry 32/40
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $320M | 10% | $32M | $800M | $13 |
+| 2028 | $464M | 15% | $70M | $1.74B | $28 |
+| 2029 | $672M | 20% | $134M | $3.36B | $53 |
+| 2030 | $975M | 25% | $244M | $6.09B | $97 |
+
+$13 → $97 in 4 years. Margin expansion + revenue growth compound together.
+Key dependency: margin trajectory partially dependent on Safe LIDAR Act passage.
+
+### Ceiling Derivation:
+
+  FY2030: $975M × 25% OP = $244M × 25x = $6.09B / 63M shares = $97
+  Discounted 30%: $97 × 0.70 = $68
+
+CEILING: $68 (single number, discounted FY2030 base case)
 
 ## Total: (75 × 0.6) + (80 × 0.4) = 45 + 32 = 77 HC
 
@@ -96,20 +124,3 @@ OUST is the SIVE of autonomy: Only digital + native color LiDAR. Everyone else c
 - Phase 2 timing uncertain — production volumes 2028+
 - Revenue small vs MC ($169M at $1.79B = 10.6x P/S)
 - REV8 announced but not shipping yet (July samples)
-
-## Verdict
-
-77 HC 🔒 — REV8 changes the thesis. World's first native color LiDAR eliminates camera fusion — ONE sensor replacing TWO is architectural disruption. L4 chip doubles performance. Google (Waymo) and Volvo confirmed adoption. Digital architecture moat WIDENED — every analog competitor is an entire generation behind. Ceiling raised $65-240→$75-137 (2027-2028). Score +2 from 75 on REV8 base improvement. May 5 earnings TOMORROW.
-
-## Score Change Log
-- Apr 24, 2026: 75 HC (initial deep dive, Physical AI perception, Stereolabs)
-- **May 4, 2026: 77 HC** (REV8 native color LiDAR — world's first. L4 chip doubles range/resolution. Google + Volvo confirmed. ONE sensor replaces camera + LiDAR. Camera elimination expands TAM $25-35B→$30-45B. Ceiling $65-240→$75-280. Core +2, Cycle +1, Catalysts +1, Risks -1. Base 70→75. Score 75→77.)
-- **May 6, 2026: 74 WL ⚠️ DROPS FROM HC** (Ceiling standardized to 2027-2028. $75-280→$75-137. Undiscounted $190 (2030) × 0.72 = $137. Physical AI TAM is mostly 2029-2030+ so discounting hits hardest. Score -3. Thesis unchanged — REV8, Stereolabs, defense, Safe LIDAR Act. HC recovers if: price drops to $22 (ratio improves), Safe LIDAR Act passes (Base upgrade + ceiling expansion), or Physical AI revenue accelerates faster than 2030 timeline.)
-
-- **May 11, 2026: 70 WL — RULE 16d TIMING FILTER APPLIED.** Physical AI/humanoid revolution is the PRIMARY ceiling HIGH driver. This is 24-36 months out. 30%/yr discount applied to ceiling HIGH: $110 × 0.70 = $77. Ceiling compressed $50-110→$50-77. Port ✓ already removed (not CPO). Serenity classified AEVA (4D LiDAR) as "venture bet, speculative." OUST sits in same Physical AI timing band. Finding the thesis early = intelligence. Deploying capital early = waste. RE-EVALUATION TRIGGERS: (1) Safe LIDAR Act passes, (2) humanoid robot revenue appears at scale, (3) Physical AI revenue driver moves within 12 months. Check every 6 months.
-
-- **May 13, 2026: 77 HC (+14) — NVIDIA DRIVE HYPERION QUALIFICATION + Q1 BEAT.** OUST Rev8 OS qualified for NVIDIA DRIVE Hyperion L4 autonomous platform. Stock +15% on the news. This is the SINGLE MOST IMPORTANT validation event for a lidar company. When NVIDIA selects your sensor for their platform, every OEM building on Hyperion uses your sensor by DEFAULT. Same validation pattern as ShunSin (87 HC) in NVIDIA CPO. Google + Volvo + NVIDIA = the autonomous driving trifecta. Q1 2026: $49M revenue (+49% YoY), beat $45-48M guidance. Record 12,600 sensors shipped. 13th straight quarter of growth.
-
-  **RULE 16d PARTIALLY LIFTED:** NVIDIA doesn't qualify sensors for platforms 3+ years out. Hyperion is a CURRENT platform. OEMs building NOW. Production vehicles 18-24 months. Timing discount reduced from 30%/yr to 15%/yr. Ceiling restored from $50-77 to $50-130.
-
-  **Score mechanics:** Core Thesis 16→18 (+2, NVIDIA platform = industry standard), Cycle 8→9 (+1, Q1 beat + 13th quarter growth), Risks -4→-3 (+1, timing de-risked by NVIDIA). Base 75→82%. Ceiling $50-77→$50-130. At $32.72: midpoint $90, ratio 2.75x, Entry 69%. Score: (82×0.6)+(69×0.4) = 77 HC. RETURNS TO HC STATUS. Ranked #9.
