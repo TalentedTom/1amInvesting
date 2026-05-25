@@ -1,19 +1,4 @@
 # NBIS — Nebius Group | Deep Dive
-**Date:** May 12, 2026 (RESCORED — Q1 2026 earnings: 841% YoY, compute delivery bottleneck reclassification)
-**Framework Version:** v3.8.0
-**Score:** 73 WL | Base 82% (49/60) | Entry 59% (24/40)
-**Price at Analysis:** $179.11
-**Ceiling:** $300-$550 (2027-2028. Cloud NI at 25-35x + ClickHouse stake + platform premium)
-**Upside Ratio:** 1.7x-3.1x (midpoint 2.37x)
-**Market Cap:** ~$45.5B
-**Q1 2026 Revenue:** $390M (+841% YoY, +82% QoQ)
-**ARR:** $1.92B (+674% YoY) → guided $7-9B exit rate FY2026
-**FY2026 Guidance:** $3.0-3.4B revenue, ~40% adj. EBITDA margin
-**Capex:** $20-25B (RAISED from $16-20B)
-**Cash:** $9.3B (incl $2.3B operating cash flow in Q1)
-**2027-28 P/E:** 25-35x (profitable neocloud, 100%+ growth, 40% EBITDA)
-**Classification:** ⚡ BOTTLENECK — Compute delivery bottleneck. Only neocloud executing at scale + profitable.
-
 ---
 
 ## Supercycle: Deployed Compute Bottleneck + EU Sovereign AI
@@ -85,89 +70,69 @@
 | Macro | 9/10 | 120-150 GW compute. EU AI Act. NATO 5% GDP. NVIDIA partnership. |
 | Alpha | 2/5 | 18 analysts. Contracts well-known. EU sovereign moat somewhat under-appreciated. |
 | Risks | -3 | CoreWeave competes (-1). CapEx $16-20B heavy (-1). Execution risk 9 DCs simultaneously (-1). |
-| **Base** | **43/60 (72%)** | |
+| **Base** | **49/60 (82%)** | |
 
-## Ceiling — Forward TAM Math (Revised May 2 — ClickHouse + Eigen AI + Platform)
+## Compute Delivery Bottleneck (Q1 2026)
 
-```
-AI CLOUD TAM: Global $100B → $400-600B by 2030
+Q1 2026: $390M revenue (+841% YoY, +82% QoQ). ARR $1.92B (+674% YoY). FY2026 guidance: $3.0-3.4B revenue, $7-9B ARR exit rate, ~40% EBITDA margin. Capex RAISED $20-25B (from $16-20B) on "massive demand visibility into 2027."
 
-NBIS BACKLOG REALITY CHECK:
-  $46B total = $31B firm (Meta $12B + MSFT $19.4B) + $15B Meta option
-  $15B option: ~99% exercise probability in compute-scarce world
-  Realistic backlog: $46B over 5 years = ~$9B/yr steady state
+Reclassified from "customer" to "compute delivery bottleneck" — the only neocloud delivering revenue + raising guidance + targeting 40% margins simultaneously. "4+ customers competing for every GPU we bring online." Fully sold out. Prepayments increasing. Pricing increasing. Contracted power >4GW (exceeded >3GW YE26 target in Q1). 75% capacity OWNED.
 
-IMPORTANT: ARR ≠ Revenue
-  $7-9B ARR by end-2026 = annualized run rate at a point in time
-  FY2026 RECOGNIZED revenue: $3.0-3.4B (guided)
-  FY2027 recognized revenue: ~$5-7B (growing into ARR)
+Inference = fastest growing segment. Token Factory PMF confirmed. The "bond equivalent of AI" — safe 2-3x with minimal thesis risk.
 
-====================================================================
-PLATFORM VALUE ADDITIONS (NEW — May 2, 2026)
-====================================================================
+## Meta PUT Option + NVIDIA Preferential Supply (Q1 2026 Earnings Call)
 
-1. CLICKHOUSE STAKE (28%):
-   Last round: $4.2B → NBIS stake = $1.18B
-   
-   OpenAI defection from Datadog validates ClickHouse at hyperscale.
-   JPMorgan observability expert: "not surprised" by the move.
-   AI generates massive log volumes natively — "only as good as 
-   what telemetry you feed them."
-   Claude Code creates non-deterministic code → more bugs → more observability.
-   Every AI company faces same cost problem at scale as OpenAI.
-   
-   ClickHouse repricing scenarios:
-     Conservative: $8B (2x last round) → NBIS stake = $2.24B (+$1.06B)
-     Base: $12B (hyperscale logging standard) → NBIS stake = $3.36B (+$2.18B)
-     Bull: $20B (Datadog alternative at half the MC) → NBIS stake = $5.60B (+$4.42B)
-   
-   Per-share impact: +$4-17/share (at 253M shares)
+Meta $27B deal structured as $12B committed + $15B PUT OPTION at NBIS discretion — unique structure no competitor has. NBIS chooses whether to exercise the additional $15B, not Meta.
 
-2. EIGEN AI ACQUISITION ($643M):
-   MIT HAN Lab + MIT CSAIL founding team.
-   Inference optimization + post-training for Token Factory.
-   Impact: More $/MW deployed → revenue growth WITHOUT new datacenters.
-   Before Eigen: 1 MW = X tokens/second at $Y revenue
-   After Eigen: 1 MW = 1.5X tokens/second at $1.5Y revenue
-   Same power, same GPUs → 50% more revenue = pure margin expansion.
-   
-   Revenue impact: +5-15% on existing GPU cloud revenue
-   Per-share: +$10-25/share if $5B revenue × 10% uplift × 25x multiple
+NVIDIA preferential supply: $2B equity investment + 5GW by 2030 + early SKU access for Vera Rubin. NBIS gets next-gen GPUs before other neoclouds. Pipeline 3.5x QoQ EXCLUDING hyperscalers.
 
-3. PLATFORM MULTIPLE RE-RATE:
-   GPU-only neocloud: 15-20x revenue multiple
-   AI infrastructure platform (GPU + ClickHouse + Eigen + Toloka): 25-35x
-   
-   If market reclassifies from "neocloud" to "platform":
-   $9B rev × 20x = $180B vs $9B rev × 28x = $252B → +$280/share
-   Not in ceiling yet — optionality, not base case
+## Platform Thesis — Beyond GPU Cloud
 
-====================================================================
-NEAR-TERM EARNINGS (FY2028, ~2yr):
-  $9B rev, 25% OP = $2.25B × 25x = $56B → ~$220
-  + ClickHouse stake base: +$2.18B → +$9/share
-  + Eigen AI uplift: +$10/share
-  Near-term adjusted: ~$240
+No longer just "GPU cloud." Four-layer AI infrastructure platform:
+1. GPU Cloud (core) — compute delivery at scale
+2. ClickHouse (28% stake) — OpenAI defected from Datadog to ClickHouse at hyperscale. Data infrastructure layer.
+3. Eigen AI ($643M acquisition) — inference optimization = more $/MW extracted from each GPU
+4. Toloka — data labeling for AI training
 
-LONG-TERM INCREMENTAL (FY2030, ~4yr, discounted 15%/yr):
-  $18B rev, 30% OP = $5.4B × 25x = $135B → ~$530
-  + ClickHouse bull: +$4.42B → +$17/share
-  + Eigen AI full impact: +$25/share
-  Incremental: $572 - $240 = $332 × 0.52 = $173
+SaaS budgets shifting directly to AI infrastructure. UBS downgraded ServiceNow PT -41%: "over half of enterprise calls mention containing non-AI spend." The budget that leaves SaaS flows to NBIS.
 
-BLENDED CEILING: $400-$650 (raised from $350-600)
-  LOW ($400): GPU cloud executes + ClickHouse 2x = conservative platform
-  MID ($525): Full backlog + ClickHouse 3x + Eigen AI margin expansion
-  HIGH ($650): Platform re-rate + ClickHouse as hyperscale standard + defense AI
+## Ceiling — v4.0 AH-1 Full Derivation (40% EBITDA, 15x EV/EBITDA, single-number FY2028)
 
-KEY CHANGES vs PRIOR MODEL:
-  ClickHouse: Not valued before → $1-4.4B additional NBIS value
-  Eigen AI: Not modeled → 5-15% revenue uplift on existing infrastructure
-  SaaS budget shift: Every $ cut from ServiceNow/Datadog → available for NBIS
-  JPMorgan + UBS both confirming AI crowding out SaaS budgets
-```
+### Revenue Model (analyst consensus + extrapolation)
 
-**Entry:** $154.49 vs blended midpoint $525 = 3.40x → Entry 27/40
+Source: Yahoo Finance, 17 analysts. FY2026 consensus $3.44B, FY2027 consensus $10.99B.
+Extrapolated at decelerating growth beyond FY2027.
+
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $3.44B | 550% | Consensus (17 analysts) |
+| FY2027 | $11.0B | 220% | Consensus (17 analysts) |
+| FY2028 | $19.0B | 73% | Extrapolated (decelerating) |
+| FY2029 | $28.0B | 47% | Extrapolated |
+| FY2030 | $37.0B | 32% | Extrapolated |
+
+### Why EV/EBITDA Not P/E
+
+NBIS guided 40% adj. EBITDA margin (Q1 came in 45%). But $20-25B capex depreciating over ~5 years creates massive D&A that makes OP near zero or negative until 2029. Cloud infrastructure companies are valued on EBITDA, not earnings. D&A is a non-cash charge on capex already spent.
+
+### Full Valuation Table (40% EBITDA, 15x EV/EBITDA, ~254M shares):
+
+15x EV/EBITDA: conservative for a profitable neocloud growing 200%+. CoreWeave trades higher but is unprofitable. NBIS is the only neocloud executing at scale with positive margins.
+
+| Year | Revenue | EBITDA (40%) | × 15x | Per Share |
+|------|---------|-------------|-------|-----------|
+| 2027 | $11.0B | $4.4B | $66B | $260 |
+| 2028 | $19.0B | $7.6B | $114B | $449 |
+| 2029 | $28.0B | $11.2B | $168B | $661 |
+| 2030 | $37.0B | $14.8B | $222B | $874 |
+
+FY2027 at $260 vs current $215.90 — market pricing ~9 months forward. Growth is so fast the market can barely price two quarters ahead.
+
+### Ceiling Derivation:
+
+  FY2028: $19.0B × 40% EBITDA = $7.6B × 15x = $114B / 254M shares = $449
+
+CEILING: $449 (single number, FY2028 forward)
 
 ## Total: (73 × 0.6) + (68 × 0.4) = 44 + 27 = 71 WL
 
@@ -199,16 +164,3 @@ Every megawatt NBIS deploys = demand for every Layer -1 through Layer 2 position
 - CapEx $16-20B vs $3B revenue. Heavy investment. Need capital access.
 - Execution: 9 DCs across 7 locations simultaneously.
 - Market cap ~$37B. Removed hard filter per updated rules.
-
-## Verdict
-
-71 WL 🔒 — Owned. Platform thesis strengthening beyond pure GPU cloud. ClickHouse (28% stake) validated by OpenAI defecting from Datadog — JPMorgan's observability expert flagged as "notable." Eigen AI acquisition ($643M) adds inference optimization = more $/MW. SaaS extinction (UBS downgraded ServiceNow PT -41%, "over half of enterprise calls mention containing non-AI spend") shifts budgets directly TO NBIS infrastructure. The thesis is no longer just "GPU cloud" — it's GPU cloud + data infrastructure (ClickHouse) + inference optimization (Eigen) + data labeling (Toloka) = AI infrastructure PLATFORM. May 6 earnings is the first execution proof point.
-
-## Score Change Log
-- Apr 24, 2026: 74 WL (initial deep dive, $350-700 ceiling)
-- Apr 26, 2026: 70 WL (Rule 16 ceiling compression $350-600. ARR≠revenue distinction.)
-- **May 2, 2026: 71 WL** (ClickHouse 28% stake validated: OpenAI defects from Datadog to ClickHouse at hyperscale. JPMorgan confirms AI drives observability volume while making SaaS pricing unsustainable. Eigen AI acquisition adds inference optimization = more $/MW. UBS downgrades ServiceNow PT -41%, SaaS budgets shifting to AI infra. Ceiling raised $350-600→$400-470 (2027-2028). Platform thesis: GPU cloud + ClickHouse + Eigen + Toloka.)
-
-- **May 12, 2026: 70 WL — RESCORED AS COMPUTE DELIVERY BOTTLENECK.** Q1 2026: revenue $390M (+841% YoY, +82% QoQ), ARR $1.92B (+674% YoY). FY2026 guidance: $3.0-3.4B revenue, $7-9B ARR exit rate, ~40% EBITDA margin. Capex RAISED $20-25B (from $16-20B) on "massive demand visibility into 2027." Meta $27B deal (largest ever). NVIDIA $2B investment. Contracted power >4GW (exceeded >3GW YE26 target in Q1). 75% capacity OWNED. Pricing increasing, fully sold out, prepayments increasing. Reclassified from "customer" to "compute delivery bottleneck" — the only neocloud delivering + raising guidance + targeting 40% margins. Google Cloud +69% but backlog 2x. Anthropic projected 10x got 60x. Inference shortage confirmed. NBIS = the deployed compute bottleneck. Base 73→78% (+5): cycle 7→10 (revenue confirmed, accelerating, margins expanding), catalysts 3→5 (all firing). Ceiling $400-650→$300-550 (tightened per Rule 16e, confirmed data replaces optionality). At $179: ratio 2.37x, Entry 59%. Score limited by $45.5B MC — thesis quality (78% Base) is excellent but asymmetry limited for a $45B company. The "bond equivalent of AI" — safe 2-3x with minimal thesis risk.
-
-- **May 12, 2026: 73 WL (+3) — EARNINGS TRANSCRIPT BASE UPGRADE.** Q1 2026 call revealed: (1) Meta $27B deal structured as $12B committed + $15B PUT OPTION at NBIS discretion — unique structure no competitor has, (2) NVIDIA preferential supply: $2B equity + 5GW by 2030 + early SKU access for Vera Rubin, (3) Nebius AI EBITDA margin 45% (ABOVE 40% guide), (4) Pipeline 3.5x QoQ EXCLUDING hyperscalers, (5) "4+ customers competing for every GPU we bring online," (6) inference = fastest growing segment, Token Factory PMF confirmed. Core Thesis 14→16/20: Meta PUT option structure (+1), NVIDIA preferential supply depth (+1). Base 78→82%. Score 70→73. Still limited by $45.5B MC asymmetry constraint. Rule: always update ≥1 point changes.

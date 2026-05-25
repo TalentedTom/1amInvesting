@@ -1,13 +1,4 @@
 # ALRIB.PA — Riber SA | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 66 WL | Base 70% (42/60) | Entry 58 (23/40)
-**Price at Analysis:** €13.84
-**Ceiling:** €25-€32 (2027-2028)
-**Upside Ratio:** 1.8x-3.3x
-**Market Cap:** ~€93M (~$100M)
-**FY2025 Revenue:** €40.3M | Net Income: €5.2M (+27%)
-
 ---
 
 ## Supercycle: DB1 Photonics (QD Lasers + SiPh Integration) + Thematic Vector 14 (Quantum Materials)
@@ -47,21 +38,61 @@ MOCVD (Aixtron) is the dominant III-V epitaxy tool for most applications. MBE is
 | Risks | -2 | Very small/illiquid (-1). Export license dependency (-1). |
 | **Base** | **42/60 (70%)** | |
 
-## Ceiling
-```
-€40M → €45-55M → €60-80M → €90-140M → €120-200M
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 20x, single-number FY2028)
 
-€80M, 22% OP = €17.6M × 25x = €440M → ~€66
-€120M, 25% OP = €30M × 28x = €840M → ~€126
+### Vector 1: QD Laser MBE Systems
+Japan MBE 6000 order confirms production. QD lasers need MBE precision MOCVD can't deliver.
+Source: Jan 2026 order, management confirmation.
+AH-7 confidence: MEDIUM-HIGH.
 
-CEILING: €25-€45
-```
-**Entry:** €13.84 vs midpoint €35 = 2.53x → Entry 58
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €30M | €40M | €50M | €60M |
 
-## Total: (70 × 0.6) + (58 × 0.4) = 42 + 23 = 66 WL
+### Vector 2: ROSIE SiPh Integration
+300mm III-V on silicon. First delivered 2025. 2 ordered. ROSIE 2 building 2026.
+Source: 2 units ordered, management "true inflection point."
+AH-7 confidence: MEDIUM — inflection unproven at scale.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €10M | €20M | €35M | €55M |
+
+### Vector 3: Quantum + Legacy Services
+BTO/STO thin films (NQCP partnership). Legacy MBE services/upgrades.
+Source: Partnership confirmed.
+AH-7 confidence: LOW — Phase 3 optionality.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €15M | €15M | €15M | €20M |
+
+### Combined Revenue:
+
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. QD Laser MBE | €30M | €40M | €50M | €60M |
+| 2. ROSIE SiPh | €10M | €20M | €35M | €55M |
+| 3. Quantum/Legacy | €15M | €15M | €15M | €20M |
+| **TOTAL** | **€55M** | **€75M** | **€100M** | **€135M** |
+
+### Full Valuation Table (Graduated OP, 20x, ~6.65M shares):
+
+FY2027 at €33 vs current €13.84. Market has NOT found this stock — €93M micro-cap, 2 analysts, no English coverage. Same discovery gap as SIVE at SEK 7.8.
+
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | €55M | 20% | €11M | €220M | €33 |
+| 2028 | €75M | 22% | €16.5M | €330M | €50 |
+| 2029 | €100M | 24% | €24M | €480M | €72 |
+| 2030 | €135M | 26% | €35.1M | €702M | €106 |
+
+### Ceiling Derivation:
+
+  FY2028: €75M × 22% OP = €16.5M × 20x = €330M / 6.65M shares = €50
+
+CEILING: €50 (single number, FY2028 forward)
 
 ## The Sovereignty Premium
 French-headquartered MBE equipment maker. European IP for critical semiconductor materials growth technology. Same sovereignty thesis as SIVE and LPK.DE — retail visibility protects European chokepoints from hostile acquisition. At €93M market cap, an acquirer could buy the entire company for pocket change. The spotlight IS the defense.
 
-## Verdict
-66 WL. Three-vector MBE equipment play at €93M market cap. QD lasers (now), ROSIE SiPh integration (emerging), quantum materials (Phase 3). Profitable, established, tiny. The ROSIE inflection is the catalyst — if SiPh foundries adopt heterogeneous integration at scale, ROSIE becomes essential equipment. At €93M market cap, the entire three-vector optionality costs less than a single NVIDIA GPU order.

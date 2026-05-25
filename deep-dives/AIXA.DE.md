@@ -1,15 +1,4 @@
 # AIXA.DE — Aixtron SE | Deep Dive
-**Date:** April 25, 2026
-**Framework Version:** v3.6.3
-**Score:** 73 WL | Base 77% (46/60) | Entry 68 (27/40)
-**Price at Analysis:** €46.57 (Col 9)
-**Ceiling:** €120-€180 (2027-2028)
-**Upside Ratio:** 2.6x-5.4x
-**Market Cap:** ~€5B
-**FY2026 Guidance:** €560M ±€30M (raised Apr 14). EBIT 17-20%. GM ~42%.
-**Q1 2026 Orders:** €171M (+30% YoY). 65%+ optoelectronics.
-**Kerrisdale Target:** €1B revenue by 2028. 90% EBITDA upside vs consensus.
-**Earnings:** April 30, 2026 🔥
 
 ---
 
@@ -59,33 +48,78 @@ Every MOCVD tool shipped creates InP laser capacity 12-18 months later. Q1 order
 | Macro | 8/10 | AI photonics. 800V DC. EV recovery. NATO 5%. |
 | Alpha | 3/5 | ~12 analysts but consensus lagging. Kerrisdale not mainstream. European sovereignty. |
 | Risks | -2 | Veeco duopoly (-1). China exposure (-1). |
-| **Base** | **46/60 (77%)** | |
+| **Base** | **48/60 (80%)** | |
 
-## Ceiling — Forward TAM Math (Rule 4)
+## InP Equipment Confirmed as #1 Supply Chain Bottleneck (May 2026)
 
-```
-FY2026: €560M → FY2027: €750-900M → FY2028: €1.0-1.2B
-FY2029: €1.2-1.5B → FY2030: €1.5-2.0B
+Irrational Analysis (hardware analyst, outperforming hedge funds): "Indium phosphide is so bad. It's actually insane." When asked about AIXTRON: "Yes. They make the equipment for InP manufacturing." Confirms LITE, COHR, Sumitomo all buying AIXA MOCVD machines.
 
-€1.0B, 28% EBIT = €280M × 35x = €9.8B → ~€87
-€1.2B, 30% EBIT = €360M × 38x = €13.7B → ~€121
-€1.5B, 32% EBIT = €480M × 40x = €19.2B → ~€170
-€2.0B, 35% EBIT = €700M × 35x = €24.5B → ~€217
+The InP shortage creates a virtuous cycle for SiPh: InP shortage → EML shortage → SiPh demand up → CW laser demand up → InP fabs reallocate to CW (higher margin) → more EML shortage → more SiPh. AIXA is the equipment layer that enables ALL InP capacity expansion. Every new CW laser or EML line requires AIXTRON MOCVD machines.
 
-CEILING: €120-€250
-```
+## Remodelled with Full $193B Photonics TAM (May 2026)
 
-**Entry:** €46.57 vs midpoint €185 = 3.97x → Entry 68
+Goldman total photonics TAM 2028: $193.5B. AIXTRON's G10-AsP MOCVD reactor grows InP epitaxial layers for ALL laser types (CW, DFB, EML, VCSEL). Total InP laser demand is ~1.5x larger than CPO-only models. InP opto is 65% of Q1 orders and accelerating.
+
+Revenue trajectory revised: FY2027 €850M-1.0B, FY2028 €1.13-1.36B. Margin uplift from InP-dominant mix — InP tools are higher margin than GaN/SiC, EBIT expands from mix shift alone.
+
+Multiple corrected: 35-38x → 30x. Comp check: ASML 35-40x (monopoly), KLA 30-35x, AMAT 25-30x. AIXA has 70-90% share but Veeco competes (not sole-source like AEHR). 30x appropriate for near-monopoly with duopoly competitor.
+
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 30x near-monopoly equipment, single-number FY2029)
+
+### Vector 1: InP MOCVD (Photonics — CW, DFB, EML, VCSEL)
+70-90% MOCVD share. G10-AsP reactor grows InP for ALL laser types.
+65% of Q1 orders and accelerating. Every InP capacity expansion requires AIXTRON machines.
+Source: Q1 2026 orders, Irrational Analysis #1 bottleneck confirmation, $193B Goldman photonics TAM.
+AH-7 confidence: HIGH — orders observable, bottleneck confirmed.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €550M | €800M | €1,050M | €1,250M |
+
+### Vector 2: SiC MOCVD (Power Semiconductors)
+EV + industrial + grid. Cyclically recovering.
+Source: Company guidance, SiC market recovery.
+AH-7 confidence: MEDIUM — cyclical recovery timing uncertain.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €250M | €300M | €350M | €400M |
+
+### Vector 3: GaN MOCVD (RF, 5G, Defense)
+GaN for 5G base stations, defense radar, SATCOM. Stable growth.
+Source: Company financials.
+AH-7 confidence: MEDIUM — stable, not explosive.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| €125M | €150M | €200M | €250M |
+
+### Combined Revenue:
+
+| Vector | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|
+| 1. InP Photonics | €550M | €800M | €1,050M | €1,250M |
+| 2. SiC Power | €250M | €300M | €350M | €400M |
+| 3. GaN RF | €125M | €150M | €200M | €250M |
+| **TOTAL** | **€925M** | **€1,250M** | **€1,600M** | **€1,900M** |
+
+### Full Valuation Table (Graduated OP, 30x, ~113M shares):
+
+InP tools higher margin than GaN/SiC — mix shift drives margin expansion.
+FY2027 at €54 = current €53.68. Market pricing exactly 12 months forward.
+
+| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | €925M | 22% | €203M | €6.11B | €54 |
+| 2028 | €1,250M | 25% | €313M | €9.38B | €83 |
+| 2029 | €1,600M | 28% | €448M | €13.44B | €119 |
+| 2030 | €1,900M | 30% | €570M | €17.1B | €151 |
+
+### Ceiling Derivation:
+
+  FY2029: €1,600M × 28% OP = €448M × 30x = €13.44B / 113M shares = €119
+
+CEILING: €119 (single number, FY2029 forward)
 
 ## Total: (77 × 0.6) + (68 × 0.4) = 46 + 27 = 73 WL
 
-## Catalyst Clock: 🔥
-Earnings Apr 30. Q1 orders already disclosed. Question: does management raise guidance AGAIN or signal 2027 acceleration?
-Read-through: Aixtron Apr 30 → validates InP expansion → bullish for SIVE (May 13), AXTI (Apr 30), IQE (May 20).
-
-## Verdict
-73 WL. The ASML of compound semiconductors at 1/70th the market cap. 70-90% MOCVD share. Three independent growth engines. Universal primitive across Phase 1+2+3. Forward TAM gap 2.6x-5.4x from HERE. European sovereignty. Earnings Apr 30 🔥.
-
-- **May 15, 2026: 74 (+1) — InP EQUIPMENT CONFIRMED AS #1 SUPPLY CHAIN BOTTLENECK.** Irrational Analysis (hardware analyst, outperforming hedge funds): "Indium phosphide is so bad. It's actually insane." When asked about AIXTRON: "Yes. They make the equipment for InP manufacturing." Confirms LITE, COHR, Sumitomo all buying AIXA machines. The InP shortage is creating a virtuous cycle for SiPh: InP shortage → EML shortage → SiPh demand up → CW laser demand up → InP fabs reallocate to CW (higher margin) → more EML shortage → more SiPh. AIXA is the equipment layer that enables ALL InP capacity expansion. Every new CW laser or EML line requires AIXTRON MOCVD machines. His preferred InP plays: $LITE, $AXTI, and AIXTRON. Base 77→78% (+1): independent hardware analyst confirms InP as #1 bottleneck category, AIXTRON named as equipment enabler.
-
-- **May 16, 2026: 69 (-7) — REMODELLED WITH FULL $193B PHOTONICS TAM + MULTIPLE CORRECTED TO 30x.** Goldman total photonics TAM 2028: $193.5B. AIXTRON's G10-AsP MOCVD reactor grows InP epitaxial layers for ALL laser types (CW, DFB, EML, VCSEL). Total InP laser demand is ~1.5x larger than CPO-only models. InP opto is 65% of Q1 orders and accelerating. Revenue trajectory revised: FY2027 €850M-1.0B (was €750-900M), FY2028 €1.13-1.36B (was €1.0-1.2B). Margin uplift from InP-dominant mix: InP tools are higher margin than GaN/SiC, EBIT expands from mix shift alone. Base 78→80% (+2): full $193B photonics TAM = InP MOCVD demand 50% larger (+1), three independent InP #1 bottleneck confirmations increase probability of Kerrisdale targets (+1). MULTIPLE CORRECTED: 35-38x → 30x. Comp check: ASML 35-40x (monopoly), KLA 30-35x, AMAT 25-30x. AIXA has 70-90% share but Veeco competes (not sole-source like AEHR). 30x is appropriate for near-monopoly equipment with a duopoly competitor. Ceiling €120-180 → €100-115 ($193B uplift overwhelmed by multiple compression). At €51.98: midpoint €107.50, ratio 2.07x, Entry 52%. Score 76→69. Drops from #12 to #19. AIXA remains a strong thesis (Base 80%, InP #1 bottleneck) but limited upside at current price with conservative multiple. HC trigger: €35-40 pullback would restore ratio to 2.8-3.0x and score to 75+.

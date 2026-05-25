@@ -1,15 +1,4 @@
 # TSEM — Tower Semiconductor | Deep Dive
-**Date:** May 6, 2026 (RESCORED — LITE/COHR/GFS confirmation cascade + Level 3 signal)
-**Framework Version:** v3.6.6
-**Score:** 67 WL 🔒 | Base 75% (45/60) | Entry 55% (22/40)
-**Price at Analysis:** $218
-**Ceiling:** $300-$500 (2027-2028, SiPh foundry TAM validated by LITE CEO "massive CPO imbalance" + COHR 6-inch + GFS doubling)
-**Upside Ratio:** 1.4x-3.2x
-**Market Cap:** ~$25.6B
-**FY2025 Revenue:** ~$1.57B | SiPh: $228M (+115%)
-**2028 Target:** $2.84B revenue, $750M net profit
-**Earnings:** May 13, 2026 🔥🔥
-
 ---
 
 ## Supercycle: DB1 Photonics (SiPh Foundry Layer)
@@ -71,81 +60,71 @@ Soitec (SOI.PA) → Photonics-SOI substrate
 | Macro | 8/10 | 120-150 GW. CPO pulled forward. Every SiPh chip needs a foundry. |
 | Alpha | 2/5 | ~15 analysts. Thesis well-covered. Multiple public deep dives. |
 | Risks | -2 | TSMC COUPE competition (-1). GM 23% needs to reach 40% (-1). |
-| **Base** | **44/60 (73%)** | |
+| **Base** | **49/60 (82%)** | |
 
-## Ceiling — Forward TAM Math (Revised May 2 — 142% CPO CAGR Expansion)
+## $290M Prepayments + $1.3B Contracted SiPh (Q1 2026 Earnings)
 
-```
-MANAGEMENT 2028 MODEL (largely priced at $218):
-  $2.84B revenue, 39-40% GM, $750M NP
-  At 30x NP = $22.5B → ~$208 (current price = $218, ABOVE 2028 model)
-  The 2028 model IS the current stock price. Score requires BEYOND 2028.
+Q1 2026: Revenue $414M (+15% YoY), beat estimates. EPS $0.65 vs $0.55 est (+18% beat). Gross profit $111M (+52% YoY). OP $65M (nearly doubled). Q2 guided $455M (RECORD, +22% YoY).
 
-WHY THE TAM CHANGED — 142% CPO CAGR (May 2, 2026):
-  CPO market confirmed at 142% CAGR 2026-2030 (LightCounting/industry)
-  CPO TAM: ~$50M (2026) → $6.0B (2030) = 34x in 4 years
-  Scale-up CPO (GPU-to-GPU): $3.8B by 2030 = 63% of total
-  Tower Semiconductor is THE SiPh PIC foundry for CPO (~85% share)
-  Every CPO module needs a SiPh PIC → every PIC is fabbed at Tower
+$290M prepayments from SiPh customers in a single quarter. Customers PAYING UPFRONT to lock foundry capacity — same pattern as NBIS ("customers competing for every GPU") and SK Hynix (hyperscalers funding fabs). Extreme demand stickiness.
 
-TOWER SiPh REVENUE TRAJECTORY (REVISED):
-  FY2025: $228M SiPh (+115% YoY) — already confirmed
-  FY2026: $350-450M SiPh (capacity expansion + 1.6T demand)
-  FY2027: $500-700M SiPh (CPO production begins at scale)
-  FY2028: $700-1,000M SiPh (CPO 142% CAGR hits Tower's fabs)
-  FY2029: $1,000-1,500M SiPh (scale-up CPO dominant)
-  FY2030: $1,200-2,000M SiPh (full CPO maturity, 85% share of foundry)
-  
-  Prior model: SiPh reaching ~$500-700M by 2028
-  New model: SiPh reaching $700-1,000M by 2028, $1.2-2.0B by 2030
-  Delta: +$200-500M by 2028, +$700-1,300M by 2030
+$1.3B CONTRACTED SiPh revenue for 2027. SiPh growing from $228M (FY2025) to $1.3B contracted (FY2027) = 5.7x in 2 years. This is contracted, not estimated — revenue locked in.
 
-TOWER TOTAL REVENUE TRAJECTORY (SiPh + RF + Power + Analog):
-  FY2028 (mgmt model): $2.84B (SiPh ~$700-1,000M + other ~$1.84-2.14B)
-  FY2029: $3.2-4.0B (SiPh accelerating, other segments stable growth)
-  FY2030: $3.8-5.0B (SiPh $1.2-2.0B becomes majority of revenue)
+SOI.PA upstream connection: Tower's $1.3B contracted SiPh = ~$200-400M SOI.PA Photonics-SOI wafer demand LOCKED upstream. Tower can't make SiPh PICs without SOI.PA wafers.
 
-CAPACITY CONFIRMATION:
-  $350M+ SiPh capex committed (AP7 expansion)
-  AP7: 15K wafers/month starting H2 2027
-  >70% capacity prepaid through 2028 via customer commitments
-  GFS targeting $1B+ SiPh run rate (competition, but grows total pie)
-  Samsung entering SiPh (grows pie, Tower keeps qualification lead)
-  Soitec Photonics-SOI wafers approaching €100M (Tower's input substrate)
+## $193B Photonics TAM — SiPh Foundry Monopoly (May 2026)
 
-EARNINGS MODEL — BEYOND 2028 (where score asymmetry lives):
-  $3.5B, 35% OP = $1.23B × 25x = $30.6B → ~$280
-  $4.0B, 36% OP = $1.44B × 28x = $40.3B → ~$370
-  $4.5B, 38% OP = $1.71B × 30x = $51.3B → ~$475
-  $5.0B, 40% OP = $2.00B × 30x = $60.0B → ~$555
-  Bull $5.5B, 40% OP = $2.20B × 32x = $70.4B → ~$650
+Tower is THE SiPh foundry (~85% share). PH18 process fabricates SiPh PICs for BOTH CPO and pluggable. Every SiPh chip in the $193B photonics TAM goes through Tower or GFS. SiPh pluggable at 1.6T "dominant almost out of the gate" (Irrational Analysis) = Tower already fabricating pluggable SiPh PICs at volume.
 
-CEILING: $300-$700 (raised from $250-600)
-  LOW ($300): 2028 model executes + moderate SiPh growth beyond
-  MID ($500): SiPh reaches $1.2B by 2030, Tower maintains 80%+ share
-  HIGH ($700): SiPh foundry becomes as essential as advanced logic foundry,
-               CPO 142% CAGR fully flows through Tower's fabs
-               
-KEY CHANGE vs PRIOR MODEL:
-  Prior: CPO was a "2028+ maybe" — distant, heavily discounted
-  Now: CPO at 142% CAGR confirmed, production starting 2026-2027
-  Impact: SiPh revenue trajectory steepened, 2030 revenue $1.2-2.0B vs $500-700M
-  Entry improves because ceiling HIGH moved from $600→$700
-```
+$1.3B contracted SiPh for 2027 may be conservative given full $193B photonics demand stacking (pluggable + CPO simultaneously).
 
-**Entry:** $218.01 vs midpoint $500 = 2.29x → Entry 20/40
+Three independent sources naming Tower directly: FundaAI ($TSEM named as TPU v9 beneficiary, "higher-end PIC platforms"), Irrational Analysis ("Tower Semi going to the moon, people paying upfront for capacity"), Serenity ("InP shortage forces SiPh, SiPh needs SOI" = more SiPh = more Tower).
 
-## Total: (70 × 0.6) + (50 × 0.4) = 42 + 20 = 62 WL
+Revised revenue trajectory: FY2027 $2.7-2.9B, FY2028 $3.0-3.2B, FY2030 $4.5-5.5B.
 
-## The 2028 Model Is Priced — What's Beyond?
+## SiPh Production Partnership Ecosystem
 
-The critical insight: Tower's 2028 target ($2.84B/$750M NP) at 30x PE = $22.5B. Current market cap = $22B. **The market has already priced the 2028 model perfectly.** The score holds at 67 ONLY by looking beyond 2028 into a world where:
+$920M capex expansion (3x prior estimate of $350M). >5x SiPh wafer starts by end 2026. Patent suit vs GFS on SiPh = offensive IP defense.
 
-1. SiPh foundry becomes as structurally important as advanced logic foundry
-2. Quantum photonics creates new demand vector (Xanadu partnership)
-3. Power management (Gen3 BCD) adds $2.5B+ TAM
-4. Optical Circuit Switches (Salience/Oriole) become standard AI DC architecture
-5. Tower capacity advantage compounds (5x while competitors ramp slowly)
+Active production partnerships confirming platform breadth:
+- Coherent: 400Gbps/lane silicon modulator
+- Xanadu: quantum photonics
+- Scintil: DWDM CPO lasers
+- Salience: optical switches
+- Axiro: defense radar
+
+## Ceiling — v4.0 AH-1 Full Derivation (Aggressive OP ramp, 30x SiPh monopoly, single-number FY2029)
+
+### Revenue Model (consistent growth, no cliff):
+
+SiPh growing 5.7x in 2 years ($228M→$1.3B contracted). Growth doesn't suddenly decelerate — $193B photonics TAM pulls demand through.
+
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | ~$1.90B | +14% | Q1 $414M + Q2 $455M guided |
+| FY2027 | $2.80B | +47% | $1.3B SiPh contracted + legacy |
+| FY2028 | $3.80B | +36% | SiPh continues ramping |
+| FY2029 | $4.80B | +26% | Decelerating but $193B TAM pulling |
+| FY2030 | $5.80B | +21% | Maturing |
+
+### Full Valuation Table (Aggressive OP ramp, 30x, ~112M shares):
+
+$290M prepayments = customers begging for capacity. Same pricing power as SK Hynix at full utilization. TSMC went 25%→45% OP during chip shortage. TSEM with 85% SiPh monopoly and prepaying customers ramps margins faster than typical foundry.
+
+| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $2.80B | 22% | $616M | $18.5B | $165 |
+| 2028 | $3.80B | 28% | $1.06B | $31.9B | $285 |
+| 2029 | $4.80B | 32% | $1.54B | $46.1B | $411 |
+| 2030 | $5.80B | 34% | $1.97B | $59.2B | $528 |
+
+FY2028 at $285 vs current $264 — market pricing ~15 months forward. Consistent with pattern.
+
+### Ceiling Derivation:
+
+  FY2029: $4.80B × 32% OP = $1.54B × 30x = $46.1B / 112M shares = $411
+
+CEILING: $411 (single number, FY2029 forward)
 
 ## TSMC COUPE — The Competitive Threat
 
@@ -163,16 +142,3 @@ TSMC entering SiPh production with COUPE in H2 2026 is the biggest risk. If TSMC
 - $22B market cap limits asymmetry (framework prefers smaller)
 - 15+ analysts = limited information edge
 
-## Verdict
-
-67 WL 🔒. The dominant SiPh foundry with ~85% share, $920M expansion (Convequity, up from $350M+), >5x SiPh wafer starts by end 2026. LITE CEO confirmed "massive supply demand imbalance on CPO" — every CPO PIC runs at TSEM or GFS. COHR 6-inch InP yields > 3-inch validates chip demand acceleration. GFS confirmed SiPh doubling 2026 with >$1B run rate by 2028 — validates TAM but also competitive pressure. Patent suit vs GFS on SiPh = offensive IP defense. Level 3 investor holds TSEM alongside SIVE/MSScorps/ShunSin/SOI. Production partnerships: Coherent (400Gbps/lane silicon modulator), Xanadu (quantum photonics), Scintil (DWDM CPO lasers), Salience (optical switches), Axiro (defense radar). Base upgraded to 75% on supply chain confirmation cascade from last 48 hours. Entry at $218 constrains score — stock 30% above $169 consensus. HC at $130 pullback or SiPh >30% of revenue + patent suit won.
-
-## Score Change Log
-- Apr 24, 2026: 67 WL (initial deep dive)
-- Apr 26, 2026: 68 WL (NVIDIA CPO pull-forward. PIC demand timeline accelerated. AP7 ramp confirmed.)
-- May 2, 2026: 62 WL (Ceiling raised $250-600→$300-700 on 142% CPO CAGR. Stock ran $200→$218, compressing entry. Score NET DOWN because entry compression > ceiling expansion.)
-- **May 6, 2026: 67 WL** (MAJOR CONFIRMATION CASCADE. Base 70→75%: Core Thesis +1 (patent suit vs GFS = offensive IP, $920M capex 3x prior estimate, Coherent/Xanadu/Scintil/Salience production partnerships), Cycle +1 (LITE CEO "massive CPO imbalance" + COHR 6-inch validates chip demand + >5x SiPh starts), TAM +1 (Goldman $91B confirmed by Layer 1 CEO + Convequity bottom-up $305M wafer TAM), Catalysts +1 (May 13 🔥🔥 with LITE+COHR read-throughs), Macro +1 ($710B capex + LITE "infancy"). Alpha -1 (stock 30%+ above consensus). Risks +1 (patent suit offensive). Entry 55% at $218 — stock above consensus limits score. HC at $130 or SiPh >30% revenue + patent won.)
-
-- **May 13, 2026: 56 WL (+3) — Q1 2026 EARNINGS RESCORE.** Revenue $414M (+15% YoY), beat estimates. EPS $0.65 vs $0.55 est (+18% beat). Gross profit $111M (+52% YoY). OP $65M (nearly doubled). Q2 guided $455M (RECORD, +22% YoY). NUCLEAR: $290M prepayments from SiPh customers in single quarter. $1.3B CONTRACTED SiPh revenue for 2027. SiPh growing from $228M (FY2025) to $1.3B contracted (FY2027) = 5.7x in 2 years. Prepayments = customers PAYING UPFRONT to lock foundry capacity = extreme demand stickiness. Same pattern as NBIS ("customers competing for every GPU"). Base 75→80%: Core Thesis +1 ($290M prepayments confirm demand stickiness), Cycle Stage +2 ($1.3B contracted + record guidance + accelerating growth). Ceiling unchanged $300-500 (already modeled SiPh growth). At $264 (post 19.5% rally): ratio 1.52x, Entry 20%. Score limited by price rally, not thesis quality. HC at ~$200. SOI.PA connection: Tower $1.3B contracted SiPh = ~$200-400M SOI.PA Photonics-SOI wafer demand LOCKED upstream.
-
-- **May 16, 2026: 58 (+4) — REMODELLED WITH FULL $193B PHOTONICS TAM.** Tower is THE SiPh foundry (~85% share). PH18 fabricates SiPh PICs for BOTH CPO and pluggable. Every SiPh chip in the $193B photonics TAM goes through Tower. SiPh pluggable at 1.6T "dominant out of the gate" (Irrational Analysis) = Tower already fabricating pluggable SiPh PICs at volume. $1.3B contracted SiPh for 2027 may be conservative given full photonics demand. Three independent sources naming Tower directly: FundaAI ($TSEM named as TPU v9 beneficiary, "higher-end PIC platforms"), Irrational Analysis ("Tower Semi going to the moon, people paying upfront for capacity"), Serenity ("InP shortage forces SiPh, SiPh needs SOI" = same logic: more SiPh = more Tower). Revised trajectory: FY2027 $2.7-2.9B (was $2.5-2.7B), FY2028 $3.0-3.2B (was $2.84B mgmt target), FY2030 $4.5-5.5B (was $4.0-5.0B). Base 80→82% (+2): full $193B TAM confirms SiPh foundry demand 1.5x larger (+1), three independent sources naming Tower directly (+1). Ceiling $300-500 → $300-550. P/E: 22.8x/12.4x.

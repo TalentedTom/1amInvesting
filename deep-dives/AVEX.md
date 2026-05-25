@@ -1,14 +1,4 @@
 # AVEX — AEVEX Corp. | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 48 | Base 52% (31/60) | Entry 42 (17/40)
-**Price at Analysis:** ~$36
-**Ceiling:** $80-$115 (2027-2028)
-**Market Cap:** ~$3.7B
-**FY2025 Revenue:** $433M | Net Loss: -$16.78M
-**IPO:** April 17, 2026 at $20/share (7 days ago)
-**Backlog:** $503.1M | Pipeline: $8.1B
-
 ---
 
 ## Supercycle: DB8 Defense (UAS / Combat Drones)
@@ -54,25 +44,37 @@ AEVEX is a defense technology prime contractor specializing in UAS (unmanned aer
 | Risks | -2 | PE governance 79% voting control (-1). Hot IPO momentum = lockup expiration risk (-1). |
 | **Base** | **31/60 (52%)** | |
 
-## Ceiling
+## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 20x no-moat defense, midpoint FY2028-FY2029)
 
-```
-REVENUE:
-  FY2025: $433M → FY2026: $700-900M → FY2027: $1.0-1.5B
-  FY2028: $1.5-2.5B (if $8.1B pipeline converts)
+### Revenue Model (~40% CAGR, company projects 46%)
 
-EARNINGS:
-  $800M, 12% OP = $96M × 25x = $2.4B → ~$23 (BELOW CURRENT!)
-  $1.2B, 15% OP = $180M × 28x = $5.04B → ~$49
-  $1.8B, 18% OP = $324M × 30x = $9.72B → ~$94
-  Bull $2.5B, 20% OP = $500M × 30x = $15B → ~$145
+| Year | Revenue | Source |
+|------|---------|--------|
+| FY2025 | $433M | Actual (+30% YoY) |
+| FY2026 | $800M | Q1 annualized run rate |
+| FY2027 | $1,120M | 40% CAGR |
+| FY2028 | $1,568M | 40% CAGR |
+| FY2029 | $2,195M | 40% CAGR |
+| FY2030 | $3,073M | 40% CAGR |
 
-CEILING: $50-$85
-```
+### Full Valuation Table (Graduated OP, 20x, ~103M shares):
 
-**Entry:** $36 vs midpoint $67.50 = 1.88x → Entry 42
+No monopoly = margins stay compressed. AeroVironment comp ~25x but PE governance overhang justifies 20x discount.
+FY2027 at $26 ≈ current $27.06. Post-IPO spike to $42 was euphoria — settled back to honest math.
 
-## Total: (52 × 0.6) + (42 × 0.4) = 31 + 17 = 48
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $1,120M | 12% | $134M | $2.69B | $26 |
+| 2028 | $1,568M | 14% | $220M | $4.39B | $43 |
+| 2029 | $2,195M | 16% | $351M | $7.02B | $68 |
+| 2030 | $3,073M | 18% | $553M | $11.06B | $107 |
+
+### Ceiling Derivation:
+
+  FY2028: $43/share. FY2029: $68/share.
+  Midpoint: ($43 + $68) / 2 = $55.50
+
+CEILING: $55.50 (midpoint FY2028-FY2029)
 
 ## Why The Framework Scores AVEX Low
 
@@ -109,6 +111,3 @@ The framework's DB8 Defense positions (EOS.AX at 74, PNG.V at 68) score higher b
 | Cost per engagement | **Cents (electricity)** | $Thousands (per drone) |
 | ITAR-free? | **Yes (Australian)** | No (US-based, export controlled) |
 
-## Verdict
-
-48. Phoenix Ghost is combat-proven, the defense drone TAM is real, and revenue growth is strong. But AVEX is a hot IPO at peak hype (7 days old, doubled already), PE-controlled (79.1% voting), in a crowded competitive field with no technology monopoly, and trading above its near-term earnings power ($36 stock vs $23 on current fundamentals). The framework needs monopolies and bottlenecks, not momentum trades on defense narrative. If AVEX pulls back to $20-25 range post-lockup and demonstrates margin expansion, rescore warranted. At $36, it's priced for a future that hasn't been earned yet.

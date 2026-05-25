@@ -1,17 +1,4 @@
 # MRVL — Marvell Technology | Deep Dive
-**Date:** April 26, 2026 (RESCORED v2)
-**Framework Version:** v3.6.4
-**Score:** 65 WL 🔒 | Base 78% (47/60) | Entry 45 (18/40) | **Owned ✓**
-**Price at Analysis:** $164.31
-**Ceiling:** $260-$370 (2027-2028) (FY2028-31 blended, CPO discounted 15%/yr per Rule 16)
-**Upside Ratio:** 1.6x-2.3x
-**Market Cap:** ~$142B
-**Position Type:** 🔒 CHOKEPOINT — Custom ASIC duopoly (MRVL + Broadcom only)
-**FY2026 Revenue:** $8.195B (+42% YoY), record
-**FY2027 Guidance:** ~$11B (+34%, raised 3x in 6 months)
-**FY2028E:** ~$15B (+50% DC growth guided)
-**FY2030E:** $30-35B (ASIC doubling + Celestial CPO $10B+ TAM)
-
 ---
 
 ## Supercycle: DB1 Photonics (Optical DSP + Custom ASIC + Photonic Fabric)
@@ -74,51 +61,51 @@ Polariton's POH modulators use LWLG's Perkinamine polymer. Marvell acquired the 
 | Risks | -1 | Broadcom competes (-1). |
 | **Base** | **47/60 (78%)** | |
 
-## Ceiling — Forward TAM Math
+## ASIC Duopoly Chokepoint (April 2026)
 
-```
-REVENUE (with years — aggressive model per 1000%+ investor signal):
-  FY2027: $11B (guided, raised 3x)
-  FY2028: $15B (guided, 50% DC growth)
-  FY2029: $22-26B (ASIC doubling again + Celestial CPO ramping)
-  FY2030: $30-35B (ASIC $9-11B + CPO $5-8B + optical $8-10B + other)
-  FY2031: $35-45B (full ASIC + CPO + scale-up networking)
+Reclassified from ⚡ BOTTLENECK to 🔒 CHOKEPOINT. Custom ASIC is a duopoly — only MRVL and Broadcom can design hyperscaler-custom silicon. 2-3 year design cycle = structural switching costs. No new entrant can replicate this in less than 5 years.
 
-NEAR-TERM (FY2028, ~2yr):
-  $15B, 32% OP = $4.8B × 35x = $168B → $195
-  $16B, 35% OP = $5.6B × 38x = $213B → $247
-  Midpoint: $221
+Four hyperscalers locked in: Amazon (Graviton/Trainium), Google (TPU), Microsoft (Maia), Meta (MTIA). Each on multi-year design contracts. Once a hyperscaler commits to MRVL for custom silicon, they can't switch mid-generation.
 
-LONG-TERM INCREMENTAL (FY2030-31, ~4-5yr, discounted 15%/yr):
-  $32B, 34% OP = $10.9B × 30x = $327B → $379
-  $35B, 36% OP = $12.6B × 32x = $403B → $467
-  Midpoint: $423
-  Incremental over near-term: $423 - $221 = $202
-  At 0.85^4.5 = 0.49: $202 × 0.49 = $99
+## Revenue Raised — ASIC Doubling + Celestial CPO (April 2026)
 
-RULE 16 BLENDED CEILING: $260-$370 (midpoint $320)
-```
+FY2030 revenue raised from $20-22B to $30-35B. Two drivers:
 
-**Entry:** $164.31 vs blended midpoint $320 = 1.95x → Entry 45
+1. Custom ASIC revenue doubling as hyperscalers shift from merchant GPU to custom silicon for inference efficiency
+2. Celestial CPO platform: $10B+ TAM. MRVL's CPO ASIC (Celestial) is the switch chip inside CPO modules — every CPO deployment needs Marvell silicon
 
-## Total: (78 × 0.6) + (45 × 0.4) = 47 + 18 = 65 WL
+Combined: MRVL is both the custom compute chip AND the CPO switch chip. Dual chokepoint.
 
-## Why Owned at 65 WL 🔒
+## Ceiling — v4.0 AH-1 Full Derivation (Expanding OP 22-34%, 30x ASIC duopoly, single-number midpoint FY2029-FY2030)
 
-Tier 3 (≤1%) — HOLD, don't trim. The ASIC duopoly is a genuine chokepoint. Four hyperscalers locked in with 2-3 year switching costs. The 1000%+ investors see the destination ($300-500B) even if the framework scores the near-term Entry ratio conservatively. At 1.95x, MRVL is above the trim threshold (1.5x) and below the add threshold (3x).
+### Revenue Trajectory (guided + extrapolated):
 
-MRVL's acquisitions continue to VALIDATE every Layer 3 position:
-- Celestial AI needs CW lasers → SIVE
-- Polariton needs Perkinamine → LWLG
-- XConn needs optical links → LITE/COHR
-- Custom ASICs need testing → AEHR
-- 1.6T DSPs go into transceivers → AAOI
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $8.2B | +42% | Actual |
+| FY2027 | $11.0B | +34% | Guided, raised 3x |
+| FY2028 | $15.0B | +36% | Guided, 50% DC growth |
+| FY2029 | $22.0B | +47% | ASIC doubling + Celestial CPO ramp |
+| FY2030 | $32.0B | +45% | Midpoint $30-35B revised estimate |
 
-Every billion MRVL spends on acquisitions validates the supply chain underneath.
+### Full Valuation Table (Expanding OP, 30x, ~870M shares):
 
-## Position Sizing
+ASIC mix shift drives margin expansion — custom silicon higher margin than merchant. Broadcom comp 45% OP at maturity. MRVL heading toward 30-34% as ASIC becomes dominant revenue.
 
-At 65 WL with 1.95x Entry, MRVL warrants Tier 3 (≤1%). If it grows to 2%+ from price appreciation, trim back to 1% and redeploy to SIVE (6.6x), LPK.DE (4.95x), or AEHR (4.3x). The framework concentrates at the widest gaps — MRVL's gap is real but narrower than the top HC positions.
+FY2028 at $134 ≈ current $112. Market pricing ~12 months forward at 30x.
+
+| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $11.0B | 22% | $2.42B | $72.6B | $83 |
+| 2028 | $15.0B | 26% | $3.90B | $117B | $134 |
+| 2029 | $22.0B | 30% | $6.60B | $198B | $228 |
+| 2030 | $32.0B | 34% | $10.88B | $326.4B | $375 |
+
+### Ceiling Derivation:
+
+  Midpoint FY2029-FY2030: ($228 + $375) / 2 ≈ $300
+
+CEILING: $300 (single number, midpoint FY2029-FY2030)
 
 ## Key Risks
 
@@ -126,14 +113,3 @@ At 65 WL with 1.95x Entry, MRVL warrants Tier 3 (≤1%). If it grows to 2%+ from
 - $137B market cap = need to become top-10 global company for meaningful returns
 - Three acquisitions in 6 months = integration risk
 - Custom ASIC customer concentration (Amazon, Google dominant)
-
-## Verdict
-
-65 WL 🔒 (Owned, Tier 3). RESCORED from 56 after reclassification from ⚡ BOTTLENECK to 🔒 CHOKEPOINT. The custom ASIC duopoly (only MRVL + Broadcom) with 2-3 year design cycle switching costs IS a structural position, not a platform play. Four hyperscalers locked in (Amazon, Google, Microsoft, Meta). FY2030 revenue raised from $20-22B to $30-35B based on ASIC doubling + Celestial CPO $10B+ TAM.
-
-At 1.95x Entry ratio (blended), MRVL is a HOLD, not a trim. The 1000%+ investors see MRVL as the NVIDIA of custom silicon — a $140B company heading to $300-500B. The framework can't score that destination-based thesis above 65 because the near-term ceiling (FY2028) is close to today's price. But the framework also won't score it below WL because the ASIC duopoly is a genuine chokepoint with multi-year lock-in.
-
-## Score Change Log
-- Apr 24, 2026: 62 WL (initial deep dive, $250-500 undated ceiling, ⚡ classification)
-- Apr 26, 2026: 56 (Rule 16 ceiling compression, size penalty removed but Entry collapsed)
-- **Apr 26, 2026: 65 WL 🔒** (Reclassified CHOKEPOINT. ASIC duopoly. FY2030 $30-35B. Base 78%. 15%/yr discount. Blended ceiling $260-370.)
