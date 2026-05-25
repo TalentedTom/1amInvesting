@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const simpleCols = [
         "SuperCycle", "_chart", "Ticker", "Total", "Base", "Entry",
         "Current Price", "Change %", "Upside",
-        "FY2027", "FY2028", "FY2029", "FY2030"
+        "FY2027", "FY2028", "FY2029", "FY2030", "_sparkline"
     ];
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // without needing the click. Caption text is i18n-keyed so it
     // translates with the rest of the chrome.
     const labelFor = (col) => {
-        if (col === '_chart') return '';
+        if (col === '_chart' || col === '_sparkline') return '';
         const eng = displayNames[col] || col;
         const label = tr(`col_${eng}`);
         const capKey = COL_CAPTION_KEYS[col];
@@ -1329,6 +1329,76 @@ document.addEventListener('DOMContentLoaded', () => {
         return { bg: `rgb(${r}, ${g}, ${b})`, text };
     }
 
+    // Parse a price-like string ('TWD 175.50', 'A12.50', '3,822,000',
+    // 'SEK 1.2K') to a raw float. Returns NaN on anything unparseable.
+    // Used by the sparkline renderer to compare current price + FY
+    // targets on a single normalized axis.
+    function parseLooseNumber(value) {
+        if (value === null || value === undefined || value === '') return NaN;
+        let s = String(value).trim();
+        if (!s) return NaN;
+        // Strip 3-letter ISO currency codes (USD, KRW, TWD, …)
+        s = s.replace(/\b[A-Z]{3}\b/g, '');
+        // Strip common currency symbols
+        s = s.replace(/[$£€¥₩₪₹]/g, '');
+        // British pence 'p' suffix on numbers
+        s = s.replace(/(\d)[pP]\b/g, '$1');
+        // 1-2 letter currency prefixes directly before a digit (HK$, A, C, …)
+        s = s.replace(/\b[A-Z]{1,2}(?=\d)/g, '');
+        // Drop thousands separators and whitespace
+        s = s.replace(/[,\s]/g, '');
+        // K/M/B suffix expansion
+        const km = s.match(/^(-?\d+(?:\.\d+)?)([kKmMbB])$/);
+        if (km) {
+            const mult = { k: 1e3, K: 1e3, m: 1e6, M: 1e6, b: 1e9, B: 1e9 }[km[2]];
+            return parseFloat(km[1]) * mult;
+        }
+        const n = parseFloat(s);
+        return isFinite(n) ? n : NaN;
+    }
+
+    // Render a 5-point sparkline SVG: Current Price + FY2027 + FY2028 +
+    // FY2029 + FY2030. Values are normalized to the cell's local
+    // min-max so the SHAPE of the trajectory is readable — absolute
+    // levels would be useless across tickers priced in TWD vs USD vs
+    // KRW with very different magnitudes. Trend colour: green if
+    // last > first, red if last < first, grey if flat or only one
+    // point available. Returns '' when fewer than 2 numeric points
+    // are available — the cell falls back to a blank.
+    function renderTrajectorySparkline(row) {
+        const values = [
+            parseLooseNumber(row['Current Price']),
+            parseLooseNumber(row['FY2027']),
+            parseLooseNumber(row['FY2028']),
+            parseLooseNumber(row['FY2029']),
+            parseLooseNumber(row['FY2030']),
+        ];
+        const validIdxs = values
+            .map((v, i) => ({ v, i }))
+            .filter(o => isFinite(o.v));
+        if (validIdxs.length < 2) return '';
+        const W = 70, H = 22, padX = 3, padY = 3;
+        const vmin = Math.min(...validIdxs.map(o => o.v));
+        const vmax = Math.max(...validIdxs.map(o => o.v));
+        const vrange = vmax - vmin || 1;
+        const innerW = W - 2 * padX;
+        const innerH = H - 2 * padY;
+        const stepX = innerW / (values.length - 1);
+        const pts = validIdxs.map(({ v, i }) => {
+            const x = padX + i * stepX;
+            const y = padY + innerH * (1 - (v - vmin) / vrange);
+            return [x.toFixed(1), y.toFixed(1)];
+        });
+        const path = pts.map((p, idx) => `${idx === 0 ? 'M' : 'L'}${p[0]} ${p[1]}`).join(' ');
+        const first = validIdxs[0].v;
+        const last = validIdxs[validIdxs.length - 1].v;
+        const color = last > first ? '#10b981' : last < first ? '#ef4444' : '#94a3b8';
+        const circles = pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="1.4" fill="${color}"/>`).join('');
+        return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline" aria-hidden="true">` +
+               `<path d="${path}" fill="none" stroke="${color}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>` +
+               `${circles}</svg>`;
+    }
+
     // Strips currency codes/symbols and compacts any large numeric tokens in the string.
     // Used for "Current Price" — the currency is implied by the ticker.
     function compactPriceString(value) {
@@ -1376,6 +1446,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 `<polyline points="15,7 21,7 21,13"/>` +
                 `</svg>` +
                 `</button>`;
+        }
+
+        // _sparkline pseudo-column: 5-point trajectory mini-chart
+        // showing Current Price → FY2027 → FY2028 → FY2029 → FY2030.
+        // Normalized per-row so the SHAPE (uptrend / flat / down) is
+        // readable; absolute values are not meaningful across tickers
+        // priced in TWD vs USD vs KRW. Empty / unparseable rows render
+        // a blank cell — no broken-chart noise.
+        if (colName === '_sparkline') {
+            return row ? renderTrajectorySparkline(row) : '';
         }
 
         // SuperCycle column: render up to 4 tiny colored boxes in a 2-column
