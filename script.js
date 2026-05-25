@@ -1337,6 +1337,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (value === null || value === undefined || value === '') return NaN;
         let s = String(value).trim();
         if (!s) return NaN;
+        // British pence — quoted as mixed-case 'GBp' (not 3 uppercase),
+        // so it would slip past the ISO regex below. Strip it first.
+        s = s.replace(/\bGBp\b/g, '');
         // Strip 3-letter ISO currency codes (USD, KRW, TWD, …)
         s = s.replace(/\b[A-Z]{3}\b/g, '');
         // Strip common currency symbols
@@ -1361,10 +1364,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // FY2029 + FY2030. Values are normalized to the cell's local
     // min-max so the SHAPE of the trajectory is readable — absolute
     // levels would be useless across tickers priced in TWD vs USD vs
-    // KRW with very different magnitudes. Trend colour: green if
-    // last > first, red if last < first, grey if flat or only one
-    // point available. Returns '' when fewer than 2 numeric points
-    // are available — the cell falls back to a blank.
+    // KRW with very different magnitudes.
+    //
+    // Colour is PER-SEGMENT, not whole-line:
+    //   - segment going DOWN (next < prev)  → red
+    //   - segment going UP or FLAT          → green
+    // Lets the eye spot exactly which year breaks a clean uptrend
+    // instead of blanket-colouring the whole row.
+    //
+    // Returns '' when fewer than 2 numeric points are available — the
+    // cell falls back to a blank.
     function renderTrajectorySparkline(row) {
         const values = [
             parseLooseNumber(row['Current Price']),
@@ -1387,22 +1396,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const pts = validIdxs.map(({ v, i }) => {
             const x = padX + i * stepX;
             const y = padY + innerH * (1 - (v - vmin) / vrange);
-            return [x.toFixed(1), y.toFixed(1)];
+            return { x: x.toFixed(1), y: y.toFixed(1), v };
         });
-        const path = pts.map((p, idx) => `${idx === 0 ? 'M' : 'L'}${p[0]} ${p[1]}`).join(' ');
-        const first = validIdxs[0].v;
-        const last = validIdxs[validIdxs.length - 1].v;
-        const color = last > first ? '#10b981' : last < first ? '#ef4444' : '#94a3b8';
-        const circles = pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="1.4" fill="${color}"/>`).join('');
+        // Per-segment lines coloured by direction. Down = red, up or
+        // flat = green.
+        const segs = [];
+        for (let i = 0; i < pts.length - 1; i++) {
+            const a = pts[i], b = pts[i + 1];
+            const color = b.v < a.v ? '#ef4444' : '#10b981';
+            segs.push(
+                `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" ` +
+                `stroke="${color}" stroke-width="1.4" stroke-linecap="round"/>`
+            );
+        }
+        // Dots: neutral grey so they mark the data points without
+        // competing visually with the segment colours.
+        const dots = pts.map(p =>
+            `<circle cx="${p.x}" cy="${p.y}" r="1.4" fill="#94a3b8"/>`
+        ).join('');
         return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline" aria-hidden="true">` +
-               `<path d="${path}" fill="none" stroke="${color}" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>` +
-               `${circles}</svg>`;
+               segs.join('') + dots +
+               `</svg>`;
     }
 
     // Strips currency codes/symbols and compacts any large numeric tokens in the string.
     // Used for "Current Price" — the currency is implied by the ticker.
     function compactPriceString(value) {
         const cleaned = String(value)
+            .replace(/\bGBp\b/g, '')        // British pence (mixed-case, not matched by ISO regex)
             .replace(/\b[A-Z]{3}\b/g, '')   // 3-letter ISO currency codes (KRW, SEK, TWD, DKK…)
             .replace(/[$£€¥]/g, '')         // common currency symbols
             .replace(/\s+/g, ' ')
