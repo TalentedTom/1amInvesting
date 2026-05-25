@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         "FY2030": "FY30",
     };
 
+    // Explanatory sub-captions rendered above specific column headers. The
+    // first two FY columns get them because the relationship between
+    // "today's fair value" and "FY2027" isn't obvious without the
+    // 12-months-forward-looking framing. Mapping is col -> I18N key so
+    // the strings translate alongside the rest of the chrome.
+    const COL_CAPTION_KEYS = {
+        "FY2027": "caption_FY27",
+        "FY2028": "caption_FY28",
+    };
+
     // Canonical order for SuperCycle tag rendering — keeps rows scannable.
     const SUPERCYCLE_ORDER = ["AI", "CPO", "800G", "1.6T", "Other"];
 
@@ -123,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY28: "FY'28",
             col_FY29: "FY'29",
             col_FY30: "FY'30",
+            caption_FY27: 'Markets price ~12 months ahead — fair value today',
+            caption_FY28: 'Implied fair value ~1 year from now',
             modal_loading: 'Loading…',
             modal_dive_suffix: '— Deep Dive',
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
@@ -162,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY28: "FY'28",
             col_FY29: "FY'29",
             col_FY30: "FY'30",
+            caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
+            caption_FY28: '约 1 年后的合理估值',
             modal_loading: '加载中…',
             modal_dive_suffix: '— 深度分析',
             modal_no_dive: '尚未提供 {ticker} 的深度分析。',
@@ -207,10 +221,20 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     // The `_chart` pseudo-column has no header text — it's a narrow strip of
     // chart-icon buttons, header would only add visual noise.
+    //
+    // Columns listed in COL_CAPTION_KEYS get a small grey caption line
+    // rendered ABOVE the main label — used today for FY2027 / FY2028 to
+    // explain what they mean in terms of forward-looking pricing.
     const labelFor = (col) => {
         if (col === '_chart') return '';
         const eng = displayNames[col] || col;
-        return tr(`col_${eng}`);
+        const label = tr(`col_${eng}`);
+        const capKey = COL_CAPTION_KEYS[col];
+        if (capKey) {
+            return `<span class="col-caption">${tr(capKey)}</span>` +
+                   `<span class="col-main-label">${label}</span>`;
+        }
+        return label;
     };
 
     // Language preference persists across reloads.

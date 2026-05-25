@@ -357,6 +357,36 @@ th {
     white-space: nowrap;
     cursor: pointer;
     transition: color 0.2s, background 0.2s;
+    /* Bottom-aligned so captionless columns (most of them) keep their
+       labels flush along the bottom of the row even when neighbouring
+       FY27 / FY28 cells grow taller from their explanatory captions. */
+    vertical-align: bottom;
+}
+
+/* === Header sub-caption ====================================
+   Small grey italic line above the main column label. Used today by
+   FY2027 and FY2028 to explain the forward-pricing framework. The
+   caption wraps to multiple lines if needed (overrides th's nowrap)
+   but is capped at 130px so a wordy caption doesn't stretch its
+   column past the data values inside. Hidden on phones — those
+   columns are display:none anyway. */
+.col-caption {
+    display: block;
+    max-width: 130px;
+    margin-bottom: 4px;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-secondary);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.25;
+    white-space: normal;
+    opacity: 0.85;
+}
+.col-main-label {
+    display: block;
 }
 
 th:hover {
