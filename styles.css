@@ -51,6 +51,23 @@ body {
     overflow-x: hidden;
 }
 
+/* === Mobile Basic/ADV layout toggle ===
+   Phone-only control sitting at the left edge of the controls-area
+   (before the language flags). ADV mode hides Cycle / Chg% / Upside
+   and exposes the FY27-30 + sparkline columns. Desktop has room for
+   all columns so the toggle is hidden there. */
+.mobile-only {
+    display: none;
+}
+@media (max-width: 768px) {
+    .mobile-only {
+        display: inline-flex;
+    }
+}
+.mode-btn[data-mode] {
+    font-weight: 700;
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
@@ -359,6 +376,39 @@ th {
     transition: color 0.2s, background 0.2s;
 }
 
+/* === FY28 column emphasis =========================================
+   FY28 is the "1-year forward" reference point — most actionable
+   forecast in the table. Highlight it with a faint accent-blue tint
+   on both header and cells so it stays distinct from the surrounding
+   FY columns without being noisy. nth-child(11) maps to FY28 with
+   the current column order:
+     1 SuperCycle  2 _chart  3 Ticker  4 Total  5 Base  6 Entry
+     7 Price  8 Chg%  9 Upside  10 FY27  11 FY28  12 FY29  13 FY30
+     14 _sparkline */
+th:nth-child(11),
+td:nth-child(11) {
+    background: rgba(59, 130, 246, 0.07);
+}
+/* Keep the highlight visible through hover + expanded states (the
+   global hover/row-expanded rules would otherwise overwrite with
+   --row-hover and obscure the column distinction). */
+tbody tr:hover td:nth-child(11) {
+    background-color: rgba(59, 130, 246, 0.12);
+}
+tr.row-expanded td:nth-child(11) {
+    background-color: rgba(59, 130, 246, 0.10);
+}
+body.light-mode th:nth-child(11),
+body.light-mode td:nth-child(11) {
+    background: rgba(59, 130, 246, 0.06);
+}
+body.light-mode tbody tr:hover td:nth-child(11) {
+    background-color: rgba(59, 130, 246, 0.11);
+}
+body.light-mode tr.row-expanded td:nth-child(11) {
+    background-color: rgba(59, 130, 246, 0.09);
+}
+
 /* === Trajectory sparkline (5-point mini chart per row) ===========
    Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,
    normalized per-row so the SHAPE of the trend is readable across
@@ -397,30 +447,35 @@ th:nth-child(14), td:nth-child(14) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 14px;
-    height: 14px;
-    margin-left: 4px;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
     padding: 0;
-    background: rgba(148, 163, 184, 0.18);
-    border: 1px solid rgba(148, 163, 184, 0.35);
+    /* Vibrant accent so the badge clearly reads as "click for info" rather
+       than blending in with the column label. Subtle glow draws the eye. */
+    background: var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 50%;
-    color: var(--text-secondary);
+    color: #ffffff;
     font-family: var(--font-body);
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-weight: 700;
     line-height: 1;
     cursor: pointer;
     vertical-align: middle;
     text-transform: none;
     letter-spacing: 0;
-    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.45);
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
 }
 .col-info-btn:hover,
 .col-info-btn:focus-visible {
-    background: var(--accent);
-    border-color: var(--accent);
+    background: #1d4ed8;        /* darker blue on hover for tactile feedback */
+    border-color: #1d4ed8;
     color: #ffffff;
     outline: none;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+    transform: scale(1.08);
 }
 
 /* Floating popover, positioned via JS. Lives at document root (not
@@ -1148,17 +1203,61 @@ tbody tr {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the four FY-target columns and the trajectory sparkline
-       (10-14: FY2027/2028/2029/2030/_sparkline) on phones. The
-       iPhone-vertical budget can't fit 14 columns; Cycle / Chart /
-       Ticker / Total / Base / Entry / Price / Chg% / Upside stay
-       visible. FY targets + sparkline remain visible on desktop. */
-    th:nth-child(10), td:nth-child(10),
-    th:nth-child(11), td:nth-child(11),
-    th:nth-child(12), td:nth-child(12),
-    th:nth-child(13), td:nth-child(13),
-    th:nth-child(14), td:nth-child(14) {
+    /* === Mobile Basic mode (default) ===
+       Hide FY27/28/29/30 + sparkline (cols 10-14). Visible cols on
+       phones: Cycle / Chart / Ticker / Total / Base / Entry / Price /
+       Chg% / Upside. Body has no `.adv-mode` class in this state. */
+    body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10),
+    body:not(.adv-mode) th:nth-child(11), body:not(.adv-mode) td:nth-child(11),
+    body:not(.adv-mode) th:nth-child(12), body:not(.adv-mode) td:nth-child(12),
+    body:not(.adv-mode) th:nth-child(13), body:not(.adv-mode) td:nth-child(13),
+    body:not(.adv-mode) th:nth-child(14), body:not(.adv-mode) td:nth-child(14) {
         display: none;
+    }
+
+    /* === Mobile ADV mode ===
+       Hide Cycle (col 1), Chg% (col 8), Upside (col 9). Reveal
+       FY27/28/29/30 + sparkline (cols 10-14). FY columns are visible
+       by default in browsers since they're table-cell, but Basic
+       mode above hides them — ADV doesn't need to re-show explicitly,
+       just not match the Basic hide selector.
+
+       Sticky columns shift: Cycle (col 1) is hidden, so col 2 (Chart)
+       becomes the leftmost sticky and needs left:0. Col 3 (Ticker)
+       moves to left:24 (after the 24px Chart column). No third sticky
+       col in ADV mode — Ticker is the last sticky. */
+    body.adv-mode th:nth-child(1), body.adv-mode td:nth-child(1) { display: none; }
+    body.adv-mode th:nth-child(8), body.adv-mode td:nth-child(8) { display: none; }
+    body.adv-mode th:nth-child(9), body.adv-mode td:nth-child(9) { display: none; }
+    body.adv-mode th:nth-child(2), body.adv-mode td:nth-child(2) {
+        left: 0;
+    }
+    body.adv-mode th:nth-child(3), body.adv-mode td:nth-child(3) {
+        left: 24px;
+    }
+    /* ADV mobile column widths — keep the visible cells compact since
+       there are 11 of them in the table after this mode kicks in. */
+    body.adv-mode th:nth-child(10), body.adv-mode td:nth-child(10),
+    body.adv-mode th:nth-child(11), body.adv-mode td:nth-child(11),
+    body.adv-mode th:nth-child(12), body.adv-mode td:nth-child(12),
+    body.adv-mode th:nth-child(13), body.adv-mode td:nth-child(13) {
+        width: 48px; min-width: 44px; max-width: 56px;
+        padding-left: 0.15rem; padding-right: 0.15rem;
+        font-size: 0.65rem;
+    }
+    body.adv-mode th:nth-child(14), body.adv-mode td:nth-child(14) {
+        width: 70px; min-width: 64px; max-width: 78px;
+        padding-left: 2px; padding-right: 2px;
+    }
+    /* Mode toggle visible on mobile; padding tweaked for the tighter
+       header. */
+    .mode-selector {
+        order: -1;   /* push it leftmost in the controls-area flex */
+    }
+    .mode-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.02em;
     }
 
     /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small

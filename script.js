@@ -135,6 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: 'Markets price ~12 months ahead — fair value today',
             caption_FY28: 'Implied fair value ~1 year from now',
+            mode_basic: 'Basic',
+            mode_adv: 'ADV',
             modal_loading: 'Loading…',
             modal_dive_suffix: '— Deep Dive',
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
@@ -176,6 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
+            mode_basic: '基本',
+            mode_adv: '高级',
             modal_loading: '加载中…',
             modal_dive_suffix: '— 深度分析',
             modal_no_dive: '尚未提供 {ticker} 的深度分析。',
@@ -359,6 +363,24 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme')));
     });
     applyTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
+
+    // Basic/ADV mobile layout toggle. Mobile-only — the button strip is
+    // display:none on desktop. ADV swaps out SuperCycle / Chg% / Upside
+    // for FY27/28/29/30 + sparkline columns. The swap is pure CSS:
+    // toggling `body.adv-mode` flips which columns get display:none.
+    // No table re-render needed.
+    const MODE_STORAGE_KEY = 'mobileMode_v1';
+    const modeBtns = document.querySelectorAll('.mode-btn');
+    const applyMode = (mode) => {
+        const m = mode === 'adv' ? 'adv' : 'basic';
+        document.body.classList.toggle('adv-mode', m === 'adv');
+        modeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === m));
+        try { localStorage.setItem(MODE_STORAGE_KEY, m); } catch (_) {}
+    };
+    modeBtns.forEach(btn => {
+        btn.addEventListener('click', () => applyMode(btn.getAttribute('data-mode')));
+    });
+    applyMode(localStorage.getItem(MODE_STORAGE_KEY) === 'adv' ? 'adv' : 'basic');
 
     // Position Type Filter (All / Chokepoint / Bottleneck) — persists in localStorage.
     const positionToggle = document.getElementById('position-toggle');
