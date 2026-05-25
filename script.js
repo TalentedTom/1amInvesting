@@ -222,17 +222,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // The `_chart` pseudo-column has no header text — it's a narrow strip of
     // chart-icon buttons, header would only add visual noise.
     //
-    // Columns listed in COL_CAPTION_KEYS get a small grey caption line
-    // rendered ABOVE the main label — used today for FY2027 / FY2028 to
-    // explain what they mean in terms of forward-looking pricing.
+    // Columns listed in COL_CAPTION_KEYS get a small "?" info button next
+    // to their label — click it to reveal the explanation in a popover.
+    // Native `title=` is set too so desktop hover gives the same hint
+    // without needing the click. Caption text is i18n-keyed so it
+    // translates with the rest of the chrome.
     const labelFor = (col) => {
         if (col === '_chart') return '';
         const eng = displayNames[col] || col;
         const label = tr(`col_${eng}`);
         const capKey = COL_CAPTION_KEYS[col];
         if (capKey) {
-            return `<span class="col-caption">${tr(capKey)}</span>` +
-                   `<span class="col-main-label">${label}</span>`;
+            const text = tr(capKey).replace(/"/g, '&quot;');
+            return `${label}<button class="col-info-btn" type="button" ` +
+                   `data-caption-key="${capKey}" title="${text}" ` +
+                   `aria-label="${text}">?</button>`;
         }
         return label;
     };
@@ -899,6 +903,66 @@ document.addEventListener('DOMContentLoaded', () => {
         return touched;
     }
 
+    // === Column-info popover ============================================
+    // Tiny floating tooltip that appears below the "?" button next to
+    // certain column headers (FY27 / FY28 currently). Click the button
+    // to open, click anywhere else or press Escape to close. Only one
+    // popover is on screen at any time.
+    let activeColInfoPopover = null;
+    function closeColInfoPopover() {
+        if (activeColInfoPopover) {
+            activeColInfoPopover.remove();
+            activeColInfoPopover = null;
+        }
+    }
+    function showColInfoPopover(anchorEl, text) {
+        // Toggle behaviour: clicking the same button that's already open
+        // dismisses the popover (no jump-back-after-blink UX).
+        if (activeColInfoPopover && activeColInfoPopover._anchor === anchorEl) {
+            closeColInfoPopover();
+            return;
+        }
+        closeColInfoPopover();
+        const pop = document.createElement('div');
+        pop.className = 'col-info-popover';
+        pop.textContent = text;
+        pop.setAttribute('role', 'tooltip');
+        pop.style.visibility = 'hidden';   // measure before placing
+        document.body.appendChild(pop);
+
+        // Position below + slightly left-of-center under the button.
+        // Clamp horizontally so the popover stays inside the viewport.
+        const aRect = anchorEl.getBoundingClientRect();
+        const pRect = pop.getBoundingClientRect();
+        const margin = 8;
+        const anchorCenter = aRect.left + aRect.width / 2;
+        let left = anchorCenter - pRect.width / 2;
+        left = Math.max(margin, Math.min(left, window.innerWidth - pRect.width - margin));
+        const top = aRect.bottom + window.scrollY + 6;
+        pop.style.left = `${left + window.scrollX}px`;
+        pop.style.top = `${top}px`;
+        pop.style.visibility = '';
+
+        activeColInfoPopover = pop;
+        pop._anchor = anchorEl;
+    }
+    // Outside-click and Escape dismiss the popover. Using document-level
+    // listeners (registered once at boot) instead of per-popover
+    // listeners to avoid leaks across opens/closes.
+    document.addEventListener('click', (e) => {
+        if (!activeColInfoPopover) return;
+        if (e.target.closest('.col-info-popover')) return;
+        if (e.target.closest('.col-info-btn')) return;   // button toggles itself
+        closeColInfoPopover();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && activeColInfoPopover) closeColInfoPopover();
+    });
+    // Reposition or close on scroll/resize so the popover doesn't float
+    // detached from its anchor when the table scrolls.
+    window.addEventListener('scroll', closeColInfoPopover, true);
+    window.addEventListener('resize', closeColInfoPopover);
+
     async function pollLiveData(initial = false) {
         const live = await fetchLiveData();
         if (!live) return;
@@ -1126,9 +1190,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         thead.innerHTML = headHtml;
 
+        // Info ("?") buttons inside column headers — show a small popover
+        // with the column's explanatory caption on click. Attach the
+        // handler DIRECTLY to each button and swallow the event so the
+        // th's sort handler never sees it.
+        Array.from(thead.querySelectorAll('.col-info-btn')).forEach(btn => {
+            const swallow = (e) => {
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                e.preventDefault();
+            };
+            btn.addEventListener('pointerdown', swallow);
+            btn.addEventListener('mousedown', swallow);
+            btn.addEventListener('click', (e) => {
+                swallow(e);
+                const captionKey = btn.getAttribute('data-caption-key');
+                if (captionKey) showColInfoPopover(btn, tr(captionKey));
+            });
+        });
+
         // Attach Header Events for Sorting
         Array.from(thead.querySelectorAll('th')).forEach(th => {
             th.addEventListener('click', (e) => {
+                // Safety net: if a future code path lets an info-button
+                // click reach the th, refuse to treat it as a sort.
+                if (e.target.closest('.col-info-btn')) return;
                 const col = th.getAttribute('data-col');
                 if (sortState.col === col) {
                     sortState.asc = !sortState.asc;

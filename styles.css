@@ -357,36 +357,68 @@ th {
     white-space: nowrap;
     cursor: pointer;
     transition: color 0.2s, background 0.2s;
-    /* Bottom-aligned so captionless columns (most of them) keep their
-       labels flush along the bottom of the row even when neighbouring
-       FY27 / FY28 cells grow taller from their explanatory captions. */
-    vertical-align: bottom;
 }
 
-/* === Header sub-caption ====================================
-   Small grey italic line above the main column label. Used today by
-   FY2027 and FY2028 to explain the forward-pricing framework. The
-   caption wraps to multiple lines if needed (overrides th's nowrap)
-   but is capped at 130px so a wordy caption doesn't stretch its
-   column past the data values inside. Hidden on phones — those
-   columns are display:none anyway. */
-.col-caption {
-    display: block;
-    max-width: 130px;
-    margin-bottom: 4px;
-    font-family: var(--font-body);
-    font-size: 0.62rem;
-    font-weight: 400;
-    font-style: italic;
+/* === Column-header info "?" button + popover ====================
+   Small clickable badge next to specific column labels (FY27 / FY28
+   today) that pops up an explanatory tooltip. Compact and discreet —
+   stays out of the header's way until the user wants context. Native
+   `title=` is also set on the button so desktop hover gives the same
+   hint without clicking. */
+.col-info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    padding: 0;
+    background: rgba(148, 163, 184, 0.18);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 50%;
     color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    vertical-align: middle;
     text-transform: none;
     letter-spacing: 0;
-    line-height: 1.25;
-    white-space: normal;
-    opacity: 0.85;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
 }
-.col-main-label {
-    display: block;
+.col-info-btn:hover,
+.col-info-btn:focus-visible {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    outline: none;
+}
+
+/* Floating popover, positioned via JS. Lives at document root (not
+   inside the th) so it can render outside the table's clipping
+   boundary without being cropped by overflow:hidden. */
+.col-info-popover {
+    position: absolute;
+    z-index: 200;
+    max-width: 260px;
+    padding: 0.5rem 0.7rem;
+    background: var(--sticky-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+    pointer-events: auto;
+}
+body.light-mode .col-info-popover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 th:hover {
