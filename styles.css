@@ -472,70 +472,6 @@ tr.row-expanded td:nth-child(3) {
 .cycle-box[data-cycle="1.6T"]   { background: #06b6d4; }
 .cycle-box[data-cycle="Other"]  { background: #6b7280; }
 
-/* === Mobile P/E year-tag ===
-   Tiny '27-28 label stacked above the 'P/E' header text on phones, so
-   the time window of the multiplier is unambiguous. Block-display
-   creates the two-line stack within the table cell. Hidden by default
-   so it doesn't appear in Cycle mode — labelFor only renders this
-   span in mobile P/E mode. */
-.pe-year-tag {
-    display: block;
-    font-size: 0.48rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    line-height: 1;
-    letter-spacing: 0;
-    margin-bottom: 1px;
-    text-transform: none;
-}
-
-/* === Cycle/P-E swap button (mobile-only) ===
-   Appears in the SuperCycle column header on phones, lets the user flip
-   the column's contents between cycle pills and the 2027-28 P/E value.
-   Hidden on desktop, where both columns are visible already. */
-.col-mode-toggle {
-    display: none;   /* desktop: hidden — both columns are visible */
-    align-items: center;
-    justify-content: center;
-    width: 18px;
-    height: 18px;
-    margin-left: 2px;
-    padding: 0;
-    background: rgba(59, 130, 246, 0.12);
-    border: 1px solid rgba(59, 130, 246, 0.4);
-    border-radius: 4px;
-    color: var(--accent);
-    font-size: 0.7rem;
-    font-weight: 700;
-    line-height: 1;
-    cursor: pointer;
-    vertical-align: middle;
-    transition: background 0.18s ease, color 0.18s ease;
-}
-.col-mode-toggle:hover {
-    background: var(--accent);
-    color: #ffffff;
-}
-
-/* === 2027-28 P/E rendering =====================================
-   We show only the multiplier range (e.g. '20-28x') on both desktop
-   and mobile. The narrative annotation that lives in parens in the
-   xlsx is dropped at render — deep-dive markdown carries the
-   commentary if/when a deeper read is wanted. */
-.pe-range {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-.pe-compact {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 0.72rem;
-    color: var(--text-primary);
-    line-height: 1.1;
-    text-align: center;
-    width: 100%;
-}
-
 /* Mobile: tighter padding + smaller font */
 @media (max-width: 480px) {
     .cycle-box {
@@ -1122,24 +1058,15 @@ tbody tr {
         padding: 0.3rem 0.2rem;
     }
 
-    /* Hide the 2027-28 P/E column (10th — replaced Target) on phones.
-       Keeps the row scannable on iPhone vertical with Cycle / Chart /
-       Ticker / Total / Base / Entry / Price / Chg% / Upside all
-       visible. The P/E value remains reachable via the Cycle/P-E swap
-       button in the SuperCycle column header. */
-    th:nth-child(10), td:nth-child(10) {
+    /* Hide the four FY-target columns (10-13: FY2027/2028/2029/2030)
+       on phones. The iPhone-vertical budget can't fit 13 columns;
+       Cycle / Chart / Ticker / Total / Base / Entry / Price / Chg% /
+       Upside stay visible. FY targets remain visible on desktop. */
+    th:nth-child(10), td:nth-child(10),
+    th:nth-child(11), td:nth-child(11),
+    th:nth-child(12), td:nth-child(12),
+    th:nth-child(13), td:nth-child(13) {
         display: none;
-    }
-
-    /* Reveal the Cycle/P-E swap button on phones (hidden by default on
-       desktop where both columns are visible side-by-side). */
-    .col-mode-toggle {
-        display: inline-flex;
-        width: 14px;
-        height: 14px;
-        font-size: 0.55rem;
-        border-radius: 3px;
-        margin-left: 1px;
     }
 
     /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small

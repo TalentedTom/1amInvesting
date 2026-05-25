@@ -1,23 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Determine the columns based on requirements.
-    // 'Ceiling Target' was replaced by '2027-28 P/E' — the P/E is a more
-    // forward-looking valuation read than the price ceiling. The Cycle
-    // column on phones gains a swap-button that lets users toggle its
-    // display between the cycle pills and the same-row P/E value
-    // (the desktop layout has both as separate columns).
+    // The "2027-28 P/E" composite column was retired in favour of four
+    // explicit fiscal-year target-price columns (FY2027 through FY2030).
+    // All four are desktop-only — mobile hides them via the @media rule
+    // in styles.css. The mobile Cycle/P-E toggle that previously gave
+    // phones access to the P/E value is also gone (its source column no
+    // longer exists, and FY targets are richer than one toggle can carry).
     const simpleCols = [
         "SuperCycle", "_chart", "Ticker", "Total", "Base", "Entry",
         "Current Price", "Change %", "Upside",
-        "2027-28 P/E"
+        "FY2027", "FY2028", "FY2029", "FY2030"
     ];
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
         "Current Price": "Price",
-        "2027-28 P/E": "PE27",     // short alphanum key for I18N lookup
         "Change %": "Chg%",
-        "SuperCycle": "Cycle"
+        "SuperCycle": "Cycle",
+        "FY2027": "FY27",
+        "FY2028": "FY28",
+        "FY2029": "FY29",
+        "FY2030": "FY30",
     };
 
     // Canonical order for SuperCycle tag rendering — keeps rows scannable.
@@ -115,9 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Price: 'Price',
             'col_Chg%': 'Chg%',
             col_Upside: 'Upside',
-            col_PE27: "P/E '27-28",
-            col_PE_short: 'P/E',
-            cycle_pe_swap_label: 'Toggle Cycle / P/E view',
+            col_FY27: "FY'27",
+            col_FY28: "FY'28",
+            col_FY29: "FY'29",
+            col_FY30: "FY'30",
             modal_loading: 'Loading…',
             modal_dive_suffix: '— Deep Dive',
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
@@ -153,9 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Price: '价格',
             'col_Chg%': '涨跌%',
             col_Upside: '上涨',
-            col_PE27: "P/E '27-28",
-            col_PE_short: 'P/E',
-            cycle_pe_swap_label: '切换 周期 / P/E 视图',
+            col_FY27: "FY'27",
+            col_FY28: "FY'28",
+            col_FY29: "FY'29",
+            col_FY30: "FY'30",
             modal_loading: '加载中…',
             modal_dive_suffix: '— 深度分析',
             modal_no_dive: '尚未提供 {ticker} 的深度分析。',
@@ -201,16 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //
     // The `_chart` pseudo-column has no header text — it's a narrow strip of
     // chart-icon buttons, header would only add visual noise.
-    //
-    // On mobile in P/E mode, the SuperCycle column header shows a tiny
-    // '27-28 year-tag stacked above 'P/E' so the time window of the
-    // multiplier is unambiguous — without it the bare numbers (e.g.
-    // 20-28x) could be read as trailing P/E or current-year P/E.
     const labelFor = (col) => {
         if (col === '_chart') return '';
-        if (col === 'SuperCycle' && inMobilePEMode()) {
-            return `<span class="pe-year-tag">'27-28</span>${tr('col_PE_short')}`;
-        }
         const eng = displayNames[col] || col;
         return tr(`col_${eng}`);
     };
@@ -232,49 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const stored = localStorage.getItem(POSITION_STORAGE_KEY);
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
-
-    // Mobile-only Cycle/P-E toggle. On phones, column 1 doubles as either
-    // the SuperCycle pills or the 2027-28 P/E value. Desktop ignores
-    // this state — both surfaces are visible as separate columns there.
-    //
-    // Default: P/E. Phones already show cycle tags implicitly via the
-    // SuperCycle filter pills at the top; the P/E read is the more
-    // valuable inline signal for the limited column-1 space.
-    //
-    // Storage key bumped to v2 to apply the new default to anyone who
-    // last toggled under v1 (their old 'cycle' or 'pe' value is reset
-    // on this load — they re-pick if they want something other than
-    // the new default).
-    const CYCLE_PE_MODE_STORAGE_KEY = 'cycleMobileMode_v2';
-    let mobileCycleMode = (() => {
-        const v = localStorage.getItem(CYCLE_PE_MODE_STORAGE_KEY);
-        return v === 'cycle' ? 'cycle' : 'pe';
-    })();
-    // Live check rather than cached value — the user can resize their
-    // browser, and we don't want a stale flag to drive the rendering path.
-    function isMobileViewport() {
-        return window.matchMedia && window.matchMedia('(max-width: 480px)').matches;
-    }
-    function inMobilePEMode() {
-        return isMobileViewport() && mobileCycleMode === 'pe';
-    }
-    function toggleMobileCycleMode() {
-        mobileCycleMode = mobileCycleMode === 'pe' ? 'cycle' : 'pe';
-        try { localStorage.setItem(CYCLE_PE_MODE_STORAGE_KEY, mobileCycleMode); } catch (_) {}
-        renderData();
-    }
-
-    // Compact P/E renderer for the tight phone column-1 space. Source
-    // strings look like "20-28x (equipment, glass substrate monopoly)";
-    // we strip the parenthetical annotation and keep just the multiplier
-    // range so it fits in 64px. Falls back to raw value if no parens.
-    function formatPECompact(value) {
-        if (!value) return '<span style="color: #64748b;">-</span>';
-        const s = String(value).trim();
-        const open = s.indexOf('(');
-        const head = (open >= 0 ? s.slice(0, open) : s).trim();
-        return head || s;
-    }
 
     // SuperCycle multi-select filter. Default: every category except
     // 'Other' (which catches uncategorized / off-thesis tickers — the
@@ -1142,49 +1097,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isSorted = sortState.col === col;
                 const sortClass = isSorted ? (sortState.asc ? 'asc' : 'desc') : '';
                 const icon = isSorted ? (sortState.asc ? '↑' : '↓') : '↕';
-                // SuperCycle header on mobile carries a tiny swap button that
-                // toggles its cells between cycle pills and 2027-28 P/E. CSS
-                // hides the button entirely on desktop, where both columns
-                // are visible side-by-side already.
-                let extra = '';
-                if (col === 'SuperCycle') {
-                    const swapLabel = tr('cycle_pe_swap_label');
-                    extra = ` <button class="col-mode-toggle" type="button" aria-label="${swapLabel}" title="${swapLabel}">⇄</button>`;
-                }
-                headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelFor(col)}${extra} <span class="sort-icon">${icon}</span></th>`;
+                headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelFor(col)} <span class="sort-icon">${icon}</span></th>`;
             }
         });
         thead.innerHTML = headHtml;
 
-        // Cycle/P-E swap button — attach the click handler DIRECTLY to the
-        // button (not via th delegation) and stop the event from ever
-        // reaching the th's sort handler. Belt-and-suspenders: pointerdown
-        // is also caught so iOS Safari doesn't fire a synthesised click on
-        // the th after the button's own click resolves. Without this, on
-        // some touch devices the th's sort handler still fires alongside
-        // the toggle, leaving the user with an unwanted sort change.
-        Array.from(thead.querySelectorAll('.col-mode-toggle')).forEach(btn => {
-            const swallow = (e) => {
-                e.stopImmediatePropagation();
-                e.stopPropagation();
-                e.preventDefault();
-            };
-            btn.addEventListener('pointerdown', swallow);
-            btn.addEventListener('mousedown', swallow);
-            btn.addEventListener('click', (e) => {
-                swallow(e);
-                toggleMobileCycleMode();
-            });
-        });
-
         // Attach Header Events for Sorting
         Array.from(thead.querySelectorAll('th')).forEach(th => {
             th.addEventListener('click', (e) => {
-                // Safety net: if any future code path lets a toggle click
-                // reach the th anyway, refuse to treat it as a sort. The
-                // direct button listener above is the primary defence —
-                // this catches anything that slips past it.
-                if (e.target.closest('.col-mode-toggle')) return;
                 const col = th.getAttribute('data-col');
                 if (sortState.col === col) {
                     sortState.asc = !sortState.asc;
@@ -1351,14 +1271,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // SuperCycle column: render up to 4 tiny colored boxes in a 2-column
         // grid. Tags drawn in canonical order regardless of how they're listed
         // in the source string. Empty / dash values render as a hollow cell.
-        //
-        // On mobile in P/E mode, the same column space repurposes itself to
-        // show the row's 2027-28 P/E value in compact form (range only —
-        // the parenthetical narrative is dropped for fit).
         if (colName === 'SuperCycle') {
-            if (inMobilePEMode()) {
-                return `<span class="pe-compact">${formatPECompact(row && row['2027-28 P/E'])}</span>`;
-            }
             const raw = String(value || '').trim();
             if (!raw || raw === '—' || raw === '-') return '';
             const tags = raw.split(',').map(s => s.trim()).filter(Boolean);
@@ -1438,17 +1351,18 @@ document.addEventListener('DOMContentLoaded', () => {
             return out || `<span style="color: #64748b;">-</span>`;
         }
 
-        // 2027-28 P/E: show ONLY the multiplier range (e.g. "20-28x"). The
-        // source string in xlsx carries a narrative annotation in parens
-        // (e.g. "20-28x (equipment, glass substrate monopoly)"); we drop
-        // that here so the column stays a compact valuation read. The
-        // annotation is still preserved in the deep-dive markdown for any
-        // ticker that has one.
-        if (colName === "2027-28 P/E") {
-            const s = String(value).trim();
-            const open = s.indexOf('(');
-            const range = (open < 0 ? s : s.slice(0, open)).trim();
-            return `<span class="pe-range">${range || '-'}</span>`;
+        // FY2027 / FY2028 / FY2029 / FY2030: forecast target prices per
+        // fiscal year. Native currency, sometimes with a single-letter
+        // currency prefix (e.g. "A12.50" for AUD). Reuse the price
+        // compactor so big numbers render as "3.82m" instead of
+        // "3,822,000" — keeps the four-column block scannable.
+        if (colName === "FY2027" || colName === "FY2028" ||
+            colName === "FY2029" || colName === "FY2030") {
+            if (value === null || value === undefined || value === "") {
+                return `<span style="color: #64748b;">-</span>`;
+            }
+            const out = compactPriceString(value);
+            return out || `<span style="color: #64748b;">-</span>`;
         }
 
         // Ratings Badge Styling
@@ -1483,19 +1397,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         return String(value);
-    }
-
-    // Re-render when crossing the mobile breakpoint — the SuperCycle column
-    // changes its label (Cycle ↔ P/E header) and cell rendering based on
-    // viewport width, so an unrendered crossing leaves stale HTML in place.
-    if (window.matchMedia) {
-        const mobileBreakpoint = window.matchMedia('(max-width: 480px)');
-        const onBreakpointChange = () => renderData();
-        if (mobileBreakpoint.addEventListener) {
-            mobileBreakpoint.addEventListener('change', onBreakpointChange);
-        } else if (mobileBreakpoint.addListener) {
-            mobileBreakpoint.addListener(onBreakpointChange);   // legacy Safari
-        }
     }
 
     // Initial render — runs last so all const helpers (SCORE_STOPS etc)
