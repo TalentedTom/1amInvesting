@@ -1,11 +1,4 @@
 # COHR — Coherent Corp | Deep Dive
-**Date:** April 22, 2026
-**Framework Version:** v3.6.2
-**Score:** 66 WL | Base 77% | Entry 48
-**Price at Analysis:** $345 (updated to $337.68 on Apr 23)
-**Ceiling:** $500-$650 (2027-2028)
-**Upside Ratio:** 1.4x-2.6x
-
 ---
 
 ## Supercycle: DB1 Photonics (Layer 0 Laser/Transceiver + Layer 1 OCS + InP Substrate Owner)
@@ -57,57 +50,66 @@
 | Macro | 9/10 | TSMC structural demand confirmed. Hyperscaler capex all green. InP shortage (COHR is the supply!). |
 | Alpha | 2/5 | 14 analysts, NVIDIA deal public, stock near ATH, S&P 500 inclusion. Thesis fully known. |
 | Risks | -3 | Industrial dilution (-1). Large company, less asymmetric (-1). Competition from LITE in EML/OCS (-1). |
-| **Base** | **46/60 (77%)** | |
+| **Base** | **48/60 (80%)** | |
 
-## Ceiling — Forward TAM Math
+## Most Vertically Integrated InP Company (May 2026)
 
-```
-REVENUE TRAJECTORY:
-  FY2025: $5.81B
-  FY2026E: ~$6.8-7.2B (sequential growth guided)
-  FY2027E: ~$8.5-10B (growth rate exceeding FY2026)
-  FY2028E: ~$11-14B (InP + OCS + CPO + thermal at scale)
+No other company covers this many layers of the $193B photonics TAM: substrates → epitaxy → lasers → transceivers → OCS → CPO → thermal → SiC. Coherent serves ALL THREE Goldman TAM segments simultaneously:
 
-EARNINGS MODEL:
-  FY2027: $9B rev, 22% OP = $1.98B × 25x = $49.5B → ~$320 (below current!)
-  FY2027: $10B rev, 23% OP = $2.3B × 28x = $64.4B → ~$415
-  FY2028: $12B rev, 25% OP = $3.0B × 30x = $90B → ~$580
-  FY2028: $14B rev, 27% OP = $3.78B × 30x = $113B → ~$730
-  Bull: $15B rev, 28% OP = $4.2B × 32x = $134B → ~$870
+- EML for pluggable scale-up: $82.8B
+- CW for CPO: $70.9B
+- OCS for hyperscaler switching: $39.8B
 
-CEILING: $500-$900
-  LOW: Moderate growth + InP ramp
-  HIGH: Full InP + OCS + CPO at scale
-```
+OFC 2026: "Unprecedented demand for InP devices." Irrational Analysis: "Lumentums and Coherents of the world are buying those machines" (AIXTRON MOCVD). 142% CPO CAGR confirmed. LightCounting: InP going 44%→91% of all high-speed lanes by 2030.
 
-**Entry:** $345 vs midpoint $700 = 2.03x → Entry 48
+NVIDIA $2B investment validates Coherent as strategic InP infrastructure. Large CPO purchase order from "market-leading AI datacenter customer" on 6-inch line.
 
-## LITE vs COHR — The Photonics Duopoly
+## 6-inch InP Production — World's First (May 2026)
 
-| | LITE | COHR |
-|---|---|---|
-| Revenue (latest) | $665M/q, ~$2.9B FY | $1.7B/q, ~$5.8B FY |
-| Growth rate | +65-85% YoY | +17-34% YoY |
-| Market cap | ~$62B | ~$57B |
-| NVIDIA investment | $2B | $2B |
-| EML share | 50-60% | Strong #2 |
-| InP ownership | External sourcing | Owns 6-inch fabs (Texas + Sweden + Switzerland) |
-| OCS approach | MEMS (<1.5dB loss) | Liquid crystal (no moving parts) |
-| Diversification | 88% Cloud & Networking | ~71% DC&C, 29% Industrial |
-| Framework Score | 69 WL | 66 WL |
+6-inch InP production at TWO sites (Sherman, Texas + Järfälla, Sweden). World's first. Yields already exceeding mature 3-inch lines. 6-inch wafers = 2.25x more die per wafer = structural cost advantage over every competitor still on 3-inch/4-inch.
 
-The 3-point gap reflects LITE's higher growth rate and purer AI exposure, offset by COHR's ownership of the InP fabs themselves.
+## Revised Revenue Trajectory (May 2026)
+
+Revised upward from $193B full photonics TAM modeling:
+
+| Year | Revenue | Source |
+|------|---------|--------|
+| FY2027E | $9-11B | Revised from $8.5-10B |
+| FY2028E | $12-15B | Revised from $11-14B |
+| FY2029E+ | $16-20B | Revised from $14-18B |
+
+## Ceiling — v4.0 AH-1 Full Derivation (Faster OP graduation, 25x, single-number FY2028)
+
+### Revenue from May 16 Revised Trajectory (midpoints):
+
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2025 | $5.81B | +23% | Actual |
+| FY2026 | $7.0B | +20% | Q2 $1.7B/qtr annualized |
+| FY2027 | $10.0B | +43% | Revised $9-11B midpoint |
+| FY2028 | $13.5B | +35% | Revised $12-15B midpoint |
+| FY2029 | $18.0B | +33% | Revised $16-20B midpoint |
+| FY2030 | $22.0B | +22% | Extrapolated, decelerating |
+
+### Full Valuation Table (Faster OP graduation, 25x, ~155M shares):
+
+COHR owns 6-inch InP fabs (world's first) = structural cost advantage. LITE at 32.2% OP and expanding 700bps/qtr is the comp — COHR graduates slower due to 29% industrial drag but owns the fabs (higher margin than fabless). As InP/photonics grows 71%→80%→90% of revenue, margins expand toward LITE levels minus industrial discount.
+
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $10.0B | 26% | $2.6B | $65B | $419 |
+| 2028 | $13.5B | 30% | $4.05B | $101B | $653 |
+| 2029 | $18.0B | 33% | $5.94B | $149B | $959 |
+| 2030 | $22.0B | 35% | $7.70B | $193B | $1,242 |
+
+FY2027 at $419 vs current $378 — market pricing ~10 months forward.
+
+### Ceiling Derivation:
+
+  FY2028: $13.5B × 30% OP = $4.05B × 25x = $101B / 155M shares = $653
+
+CEILING: $653 (single number, FY2028 forward)
 
 ## Key Insight
 
 COHR IS the InP bottleneck Damnang's analysis describes. They own the 6-inch fabs in Texas, Sweden, and Switzerland that are doubling capacity. When the market says "InP is short," they're talking about Coherent's production lines.
-
-## Verdict
-
-66 WL. Strongest InP fab position globally. NVIDIA validated with $2B. Industrial segment dilution and large market cap limit asymmetry. The May 13 earnings will show 6-inch InP ramp progress and CPO order conversion.
-
-
-## Score Change Log
-- **May 2, 2026: 65 WL** (Price ran $345→$330, entry compressed. 142% CPO CAGR confirmed — Coherent's Sherman/Järfälla InP fabs serve CPO transition directly. OFC 2026: $20B+ incremental TAM announced. NVIDIA $2B investment validates. LightCounting: InP going from 44%→91% of all high-speed lanes by 2030. But $60B MC + 15+ analysts = zero information edge. Score NET DOWN from 66 due to entry compression at higher price vs original analysis.)
-
-- **May 16, 2026: 60 (+6) — REMODELLED WITH FULL $193B PHOTONICS TAM + 30x MULTIPLE.** COHR is the most vertically integrated InP company: owns substrates → epitaxy → lasers → transceivers → OCS → CPO → thermal → SiC. No other company covers this many layers of the $193B TAM. Serves all three segments: EML for pluggable (scale-up $82.8B), CW for CPO ($70.9B), OCS for hyperscaler switching. OFC 2026: "Unprecedented demand for InP devices." Irrational Analysis: "Lumentums and Coherents of the world are buying those machines." 6-inch InP production at TWO sites (Texas + Sweden), world's first, yields already exceeding mature 3-inch. Large CPO purchase order from "market-leading AI datacenter customer" on 6-inch line. Revised trajectory: FY2027E $9-11B (was $8.5-10B), FY2028E $12-15B (was $11-14B), FY2029+ $16-20B (was $14-18B). Base 77→80% (+3): full $193B TAM most vertically integrated (+1), OFC 2026 unprecedented InP demand confirmed (+1), 6-inch InP two-site capacity doubling (+1). Multiple set at 30x (consistent with LITE, appropriate for large-cap photonics at maturity). Ceiling $500-650 → $500-800. P/E: 22.9x/14.3x.

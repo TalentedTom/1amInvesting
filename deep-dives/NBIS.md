@@ -96,45 +96,42 @@ No longer just "GPU cloud." Four-layer AI infrastructure platform:
 
 SaaS budgets shifting directly to AI infrastructure. UBS downgraded ServiceNow PT -41%: "over half of enterprise calls mention containing non-AI spend." The budget that leaves SaaS flows to NBIS.
 
-## Ceiling — v4.0 AH-1 Full Derivation (40% EBITDA, 15x EV/EBITDA, single-number FY2028)
+## Ceiling — v4.0 AH-1 Full Derivation (OP × 20x, single-number FY2028)
 
-### Revenue Model (analyst consensus + extrapolation)
+### Revenue Model (Yahoo HIGH estimates + extrapolation)
 
-Source: Yahoo Finance, 17 analysts. FY2026 consensus $3.44B, FY2027 consensus $10.99B.
-Extrapolated at decelerating growth beyond FY2027.
+Source: Yahoo Finance HIGH estimates (17 analysts). Using HIGH because early-stage estimates consistently fall short and stocks re-rate 7-14 days before earnings.
 
 | Year | Revenue | Growth | Source |
 |------|---------|--------|--------|
-| FY2026 | $3.44B | 550% | Consensus (17 analysts) |
-| FY2027 | $11.0B | 220% | Consensus (17 analysts) |
-| FY2028 | $19.0B | 73% | Extrapolated (decelerating) |
-| FY2029 | $28.0B | 47% | Extrapolated |
-| FY2030 | $37.0B | 32% | Extrapolated |
+| FY2026 | $3.94B | | Yahoo HIGH (17 analysts) |
+| FY2027 | $18.0B | +357% | Yahoo HIGH (17 analysts) |
+| FY2028 | $32.4B | +80% | Extrapolated, decelerating |
+| FY2029 | $47.0B | +45% | Extrapolated |
+| FY2030 | $58.7B | +25% | Maturing |
 
-### Why EV/EBITDA Not P/E
+### Why OP × P/E (Not EV/EBITDA)
 
-NBIS guided 40% adj. EBITDA margin (Q1 came in 45%). But $20-25B capex depreciating over ~5 years creates massive D&A that makes OP near zero or negative until 2029. Cloud infrastructure companies are valued on EBITDA, not earnings. D&A is a non-cash charge on capex already spent.
+NBIS guided 40% EBITDA, but massive capex ($20-25B) creates D&A that suppresses OP well below EBITDA. Using OP × P/E provides a consistent methodology across all portfolio positions without requiring separate valuation frameworks for capex-heavy vs asset-light companies.
 
-### Full Valuation Table (40% EBITDA, 15x EV/EBITDA, ~254M shares):
+Cloud OP margin comps: AWS 37.7% (mature, 20 years), Azure ~43% (mature), Google Cloud 17-24% (recently profitable). NBIS converges toward Google Cloud stage of maturity.
 
-15x EV/EBITDA: conservative for a profitable neocloud growing 200%+. CoreWeave trades higher but is unprofitable. NBIS is the only neocloud executing at scale with positive margins.
+### Full Valuation Table (OP × 20x, ~254M shares):
 
-| Year | Revenue | EBITDA (40%) | × 15x | Per Share |
-|------|---------|-------------|-------|-----------|
-| 2027 | $11.0B | $4.4B | $66B | $260 |
-| 2028 | $19.0B | $7.6B | $114B | $449 |
-| 2029 | $28.0B | $11.2B | $168B | $661 |
-| 2030 | $37.0B | $14.8B | $222B | $874 |
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $18.0B | 12% | $2.2B | $44B | $173 |
+| 2028 | $32.4B | 19% | $6.0B | $120B | $472 |
+| 2029 | $47.0B | 21% | $9.8B | $196B | $772 |
+| 2030 | $58.7B | 23% | $13.5B | $270B | $1,063 |
 
-FY2027 at $260 vs current $215.90 — market pricing ~9 months forward. Growth is so fast the market can barely price two quarters ahead.
+FY2027 at $173 vs current $215 — market pricing AHEAD of FY2027 OP, paying for EBITDA not waiting for D&A. FY2028 at $472 is the real upside as OP margins expand toward Google Cloud levels.
 
 ### Ceiling Derivation:
 
-  FY2028: $19.0B × 40% EBITDA = $7.6B × 15x = $114B / 254M shares = $449
+  FY2028: $32.4B × 19% OP = $6.0B × 20x = $120B / 254M shares = $472
 
-CEILING: $449 (single number, FY2028 forward)
-
-## Total: (73 × 0.6) + (68 × 0.4) = 44 + 27 = 71 WL
+CEILING: $472 (single number, FY2028 forward, OP × 20x)
 
 ## The Defense AI Compute Vector (Under-Appreciated)
 

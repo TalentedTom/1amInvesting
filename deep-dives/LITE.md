@@ -1,12 +1,4 @@
 # LITE — Lumentum Holdings | Deep Dive
-**Date:** April 26, 2026 (RESCORED)
-**Framework Version:** v3.6.4
-**Score:** 71 WL 🔒 | Base 78% (47/60) | Entry 60 (24/40)
-**Price at Analysis:** $865 (updated to $846.89 on Apr 23)
-**Ceiling:** $1,500-$1,800 (2027-2028) (FY2028-30)
-**Upside Ratio:** 1.8x-3.0x
-**Market Cap:** $62.9B
-
 ---
 
 ## Supercycle: DB1 Photonics (Layer 0 Laser + Layer 1 OCS Systems)
@@ -62,53 +54,61 @@
 | Macro | 9/10 | TSMC structural demand. Hyperscaler capex all green. InP shortage. AI DC mix 25%→60%. |
 | Alpha | 1/5 | 15 analysts. NVIDIA deal public. $63B MC. Thesis fully mainstream. |
 | Risks | -3 | $63B MC limits asymmetry (-1). Competition from COHR (-1). 5th fab execution risk (-1). |
-| **Base** | **47/60 (78%)** | |
+| **Base** | **49/60 (81%)** | |
 
-## Ceiling — Forward TAM Math
+## 8x Capacity Still 20-30% Short (OFC 2026)
 
-```
-REVENUE TRAJECTORY:
-  FY2026E: ~$2.91B
-  FY2027E: ~$4.81B (OCS + EML ramp)
-  FY2028E: ~$6-8B (OCS + CPO + full InP expansion)
-  FY2029+: $8-10B (platform at scale)
+After 8x capacity expansion, Lumentum is STILL 20-30% short of demand. LightCounting: "demand exceeding supply by 30%." 5th InP fab acquired from Qorvo at $5B capacity, full scale 2028. Multi-year backlog locked in. AI mix shifted 25%→60% of revenue.
 
-EARNINGS MODEL:
-  FY2027: $14.98 EPS × 45x = $674 (below current!)
-  FY2028: ~$22 EPS × 45x = $990
-  FY2028: ~$25 EPS × 50x = $1,250
-  FY2029: ~$30 EPS × 50x = $1,500
-  Bull: $35 EPS × 55x = $1,925
+CW laser shortage confirmed on Q3 earnings: "tension to get CW lasers externally." LITE reallocating 20% of EML fab capacity to CW production — the market is pulling them from lower-margin EML toward higher-margin CW.
 
-CEILING: $1,500-$2,500
-  LOW: FY2028 at $6B, 28% OP, 35x
-  HIGH: FY2029+ at $8-10B, 30% OP, platform premium
-```
+Pluggable cycle correction warning from LightCounting: "shortages should be going away by end of 2026" and "double ordering goes away when capacity adds." LITE's pluggable dominance is Wave 2 (peaking), while CPO is Wave 3 (accelerating). The transition from EML pluggable to CW CPO is a margin expansion event, not a revenue decline.
 
-**Entry:** $865 vs midpoint $2,000 = 2.31x → Entry 53
+## $193B Full Photonics TAM — #1 InP Play (May 2026)
 
-## Comparison
+Lumentum serves ALL THREE layers of $193B Goldman photonics TAM simultaneously:
+- EML for pluggable scale-up: $82.8B (50-60% share)
+- CW for CPO: $70.9B
+- OCS for hyperscaler switching: $2-4B SAM by 2030
 
-| | LITE | SIVE | AEHR |
-|---|---|---|---|
-| Market cap | $62B | ~$1B | ~$3B |
-| Base quality | 80% | 92% | 93% |
-| Entry | 53 | 90 | 78 |
-| Total | 69 | 91 | 87 |
+Irrational Analysis: "My preferred way to play InP? Basically Lumentum. Sold everything out for the next two years." LITE is the #1 InP company by revenue — NVIDIA locked up LITE + COHR for CPO supply, leaving SIVE as the independent supplier for everyone else.
 
-SIVE and AEHR score higher because they're smaller with wider TAM gaps. LITE is a battleship — harder to sink, but harder to double.
+EML→CW reallocation happening AT Lumentum = margin uplift from mix shift to higher-margin CW. Same dynamic as Win Semi's mix shift.
 
-## Verdict
+Revised revenue trajectory: FY2027E $5.0-5.3B, FY2028E $7-9B, FY2029+ $9.5-12B. InP share of AI DC lanes: 44% (2022)→79% (2025)→91% (2030). Optical AI TAM $18B→$90B+ at ~40% CAGR.
 
-71 WL 🔒. Base upgraded to 78% on OFC 2026 data: 8x production increase STILL 20-30% short of demand, 5th InP fab with $5B capacity, multi-year multi-billion backlog confirmed, 1.6T shipping summer 2026, AI DC mix shifting 25%→60% in two years. The thesis quality is HC-grade.
+## Ceiling — v4.0 AH-1 Full Derivation (Real margins from Q3 FY2026, 30x, single-number FY2028)
 
-Entry compressed at $63B MC — LITE needs to reach $120-180B for framework-grade upside. The stock already prices the EML dominance. The upside case is OCS ($1B+ by 2027) + CPO laser transition + 5th fab revenue ($5B capacity by 2028) driving total revenue to $8-10B. At that scale with 30% OP margins and 35x multiple = $84-105B MC range.
+### Revenue Model (Yahoo HIGH estimates + extrapolation)
 
-The "20-30% short" data point is the single most important supply chain confirmation: if the world's largest EML producer can't meet demand after 8x expansion, every company underneath LITE is equally or more constrained.
+Source: Yahoo Finance HIGH estimates (22 analysts). Growth decelerating from 120% FY2027.
 
-## Score Change Log
-- Apr 22, 2026: 69 WL (initial deep dive)
-- **Apr 26, 2026: 71 WL** (OFC 2026 data: 8x still 20-30% short, 5th fab $5B capacity, multi-yr backlog, 25%→60% AI mix. Base 80%→78% on recalibrated scoring. Entry 53→60 reflecting $63B MC.)
-- **May 2, 2026: 71 WL** (142% CPO CAGR confirmed — Lumentum slides show optical AI TAM $18B→$90B+ at ~40% CAGR. InP share of AI datacenter lanes: 44% (2022)→79% (2025)→91% (2030). LITE is 20-30% short on supply after 8x expansion. LightCounting: "demand exceeding supply by 30%." But LightCounting also warns pluggable cycle correction coming — "shortages should be going away by end of 2026" and "double ordering goes away when capacity adds." LITE's pluggable dominance is Wave 2 (peaking), not Wave 3 (CPO, accelerating). Score unchanged — $64B MC with heavy analyst coverage limits asymmetry.)
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $3.02B | +83% | Yahoo HIGH (20 analysts) |
+| FY2027 | $6.64B | +120% | Yahoo HIGH (22 analysts) |
+| FY2028 | $10.3B | +55% | Extrapolated, decelerating |
+| FY2029 | $13.9B | +35% | Extrapolated |
+| FY2030 | $17.4B | +25% | Maturing |
 
-- **May 16, 2026: 52 (-7) — REMODELLED WITH FULL $193B PHOTONICS TAM + MULTIPLE CORRECTED TO 30x.** LITE serves ALL THREE layers of $193B photonics TAM: EML for pluggable (scale-up $82.8B, 50-60% share), CW for CPO ($70.9B), OCS for hyperscaler switching ($2-4B SAM by 2030). Irrational Analysis: "My preferred way to play InP? Basically Lumentum. Sold everything out for the next two years." EML→CW reallocation happening AT Lumentum = margin uplift from mix shift to higher-margin CW. Revised trajectory: FY2027E $5.0-5.3B (was $4.81B), FY2028E $7-9B (was $6-8B), FY2029+ $9.5-12B (was $8-10B). 5th InP fab from Qorvo ($5B capacity) at full scale 2028. Base 78→81% (+3): Irrational Analysis #1 InP play (+1), full $193B TAM dual-product coverage (+1), EML→CW margin uplift (+1). MULTIPLE CORRECTED: 45-50x → 30x. At $75B+ MC, LITE is a large-cap photonics company. 30x is appropriate for maturity. Ceiling $1,500-1,800 → $1,100-1,500. FY2029 $37 EPS × 30x = $1,110 (LOW). FY2030 bull $50 EPS × 30x = $1,500 (HIGH). P/E: 34.7x/19.4x.
+### Q3 FY2026 Margins (May 5, 2026 — Most Recent)
+
+Non-GAAP OP margin: 32.2% (+700bps QoQ, +1,730bps YoY). GM 47.9%. Revenue $808M RECORD (+90% YoY). Margins EXPANDING as InP mix shifts from EML to higher-margin CW + 200G EMLs. CEO: "the more impressive part has been our margin expansion."
+
+### Full Valuation Table (Real margins, 30x, ~67M shares):
+
+OP already 32.2% and expanding 700bps/quarter. Margins plateau 35-37% at maturity as mix shift completes. FY2027 at $980 ≈ current $947 — perfect 12-month forward pricing.
+
+| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $6.64B | 33% | $2.19B | $65.7B | $980 |
+| 2028 | $10.3B | 35% | $3.61B | $108.2B | $1,615 |
+| 2029 | $13.9B | 36% | $5.00B | $150.1B | $2,241 |
+| 2030 | $17.4B | 37% | $6.44B | $193.1B | $2,882 |
+
+### Ceiling Derivation:
+
+  FY2028: $10.3B × 35% OP = $3.61B × 30x = $108.2B / 67M shares = $1,615
+
+CEILING: $1,615 (single number, FY2028 forward)
+
