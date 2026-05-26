@@ -1,13 +1,4 @@
 # CRDO — Credo Technology | Deep Dive
-**Date:** April 24, 2026
-**Framework Version:** v3.6.2
-**Score:** 62 | Base 72% (43/60) | Entry 48 (19/40)
-**Price at Analysis:** $195.04
-**Ceiling:** $300-$360 (2027-2028)
-**Market Cap:** ~$34B
-**Q3 FY2026 Revenue:** $407M (+4x YoY) | 9-Month: $898M
-**Non-GAAP GM:** 67.6%
-
 ---
 
 ## Supercycle: DB1 Photonics / AI Datacenter Connectivity (AEC + Optical DSP + SerDes)
@@ -61,26 +52,48 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 | Risks | -2 | Customer concentration 88% (-1). Copper distance limits (-1). |
 | **Base** | **43/60 (72%)** | |
 
-## Ceiling
+## Ceiling — v4.0 AH-1 Full Derivation (TAM-grounded per-rack math, 40% OP, 25x, blended)
 
-```
-REVENUE (with DustPhotonics + multi-sector expansion):
-  FY2026: ~$1.3-1.5B (Q3 $407M annualizes to $1.6B)
-  FY2027: $2.5-3.5B (guided 50%+ growth + optical doubling + PCIe)
-  FY2028: $4-6B (multi-sector: robots, auto, custom chips, edge)
+### Per-Rack Connectivity Math:
 
-EARNINGS:
-  $2.5B, 40% OP = $1.0B × 35x = $35B → ~$200 (≈ current price)
-  $3.5B, 42% OP = $1.47B × 35x = $51.5B → ~$294
-  $5B, 44% OP = $2.2B × 35x = $77B → ~$440
-  Bull $7B, 45% OP = $3.15B × 35x = $110B → ~$630
+Current: ~$46K per CRDO-equipped rack (FY2026). 35% rack penetration (3-4 hyperscalers).
 
-CEILING: $300-$500
-```
+| Product | Today | FY2028+ | Per Rack |
+|---------|-------|---------|----------|
+| AECs (ZeroFlap) | $46K | $60-80K | Volume + 1.6T |
+| Optical DSPs | Ramping | $50-100K | 800G/1.6T |
+| PCIe Retimers | Design wins | $20-40K | Gen6 production |
+| SiPh PICs (DustPhotonics) | Pre-revenue | $50-100K | Vertical integration |
+| **Per-rack total** | **$46K** | **$180-320K** | **4-7x today** |
 
-**Entry:** $195.04 vs midpoint $400 = 2.05x → **Entry 48**
+### Revenue Model (Flat 35% penetration, $/rack expands):
 
-## Total: (72 × 0.6) + (48 × 0.4) = 43 + 19 = 62
+Analysts model AECs only ($2.52B FY2027). TAM model adds 3 product vectors (optical DSP, SiPh PIC, PCIe retimer) that stack on top of AECs as $/rack goes $46K→$120K→$200K→$280K.
+
+| Year | Racks/yr | × 35% | $/Rack | Revenue |
+|------|----------|-------|--------|---------|
+| FY2026 | 83K | 29K | $46K | $1.33B (actual) |
+| FY2027 | 120K | 42K | $65K | $2.73B |
+| FY2028 | 170K | 60K | $120K | $7.14B |
+| FY2029 | 230K | 81K | $200K | $16.1B |
+| FY2030 | 300K | 105K | $280K | $29.4B |
+
+### Full Valuation Table (40% OP, 25x, ~197M shares):
+
+| Year | Revenue | OP (40%) | × 25x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | $2.73B | $1.09B | $27.3B | $139 |
+| 2028 | $7.14B | $2.86B | $71.4B | $362 |
+| 2029 | $16.1B | $6.44B | $161B | $817 |
+| 2030 | $29.4B | $11.76B | $294B | $1,492 |
+
+FY2027 at $139 vs current $218 — market pricing ahead of TAM math, paying for FY2028 optical DSP + SiPh PIC ramp that hasn't started yet.
+
+### Ceiling Derivation (Blended May 2026):
+
+  (8/12 × $362) + (4/12 × $817) = $514
+
+CEILING: $514 (blended 67% FY2028 + 33% FY2029)
 
 ## CRDO in the AI Connectivity Stack
 
@@ -101,32 +114,10 @@ AECs and optical are COMPLEMENTARY. CRDO wins short-reach.
 SIVE/LITE/COHR win long-reach. Both grow with AI compute.
 ```
 
-## Why The Score Is 62 Despite 72% Base
-
-The base quality is genuinely strong — 68.6% GM, SerDes IP moat, 100x reliability, 4+ hyperscaler customers, 5x revenue growth, DustPhotonics acquisition creating the most complete connectivity stack outside Broadcom. Multi-sector expansion (robots, auto, edge, custom chips) significantly expands TAM beyond just AEC.
-
-But the Entry at $195.04 gives only 2.05x to ceiling midpoint. The framework needs 2.5x+ for WL. And at $34B market cap with 15+ analysts, information edge is limited.
-
-The DustPhotonics acquisition (SiPh PIC vertical integration) and multi-sector SerDes thesis are the upgrades from the original scoring — this is no longer just "an AEC company," it's becoming a universal connectivity platform. Baker's comment ("PIC has early RF black magic vibes") suggests the optical integration could be a larger moat than currently appreciated.
-
-Compare to the photonics positions that CRDO complements:
-
-| | SIVE (90 HC) | CRDO (56) |
-|---|---|---|
-| Market cap | $1B | $11B |
-| Analysts | 3 | 15+ |
-| Upside ratio | 6.6x | 1.9x |
-| Information edge | Maximum | Zero |
-| Technology moat | Physics (CW laser) | IP (SerDes) + first-mover (AEC) |
-
 ## Key Risks
 
 - **Customer concentration:** Top 3 = 88%. Loss of one = catastrophic.
 - **Copper distance limits:** AECs can't replace optical for long-reach. If racks spread out, AEC TAM shrinks.
 - **Competition:** Broadcom and Marvell have SerDes capabilities. Could develop competing AECs.
 - **Transition risk:** 100G→200G per lane creates qualification risk at each generation.
-- **Stock already ran:** $10→$80+ = most of the re-rating complete.
 
-## Verdict
-
-62. Credo has evolved from an AEC-focused company into the most complete connectivity stack outside Broadcom — SerDes IP + AEC + optical DSP + SiPh PIC (DustPhotonics) + PCIe retimers + software (PILOT). The multi-sector SerDes thesis (DC + robots + auto + edge + custom chips) significantly expands the addressable market. 68.6% GM and 5x revenue growth validate execution. But at $195/$34B with 15+ analysts and 2.05x Entry ratio, the asymmetry the framework seeks is limited. If multi-sector revenue materializes (robot/auto design wins), rescore to 65+ warranted.

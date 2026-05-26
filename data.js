@@ -90,6 +90,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 5,
+            "Ticker": "6830.TWO",
+            "Name": "MSScorps (汎銓科技)",
+            "Total": 86,
+            "Base": 91,
+            "Entry": 79,
+            "Rating": "HC — CPO PIC inspection patent monopoly. Night Gecko equipment pivot. 142% CPO CAGR = 34x market in 4 years.",
+            "Port": "✓",
+            "Current Price": 787,
+            "Ceiling Target": "2,473",
+            "Upside": "3.1x",
+            "Position Type": "🔒 CHOKEPOINT\nCPO PIC light leakage inspection. Patented in TW/JP/US. Suing Enli, refusing to license. 6yr co-development with customers. VICR-pattern dual moat (physics + legal).",
+            "2027-28 P/E": "5.2x/3.7x",
+            "Artifact Updated": "May 21 (Audit)",
+            "SuperCycle": "AI, CPO",
+            "FY2027": "851",
+            "FY2028": "1,906",
+            "FY2029": "3,607",
+            "FY2030": "5,649",
+            "Change %": "+0.55%"
+        },
+        {
+            "Rank": 6,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "Total": 85,
@@ -111,7 +133,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.83%"
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "8147.TWO",
             "Name": "Nextronics Engineering",
             "Total": 82,
@@ -133,7 +155,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.79%"
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "AAOI",
             "Name": "Applied Optoelectronics",
             "Total": 78,
@@ -155,7 +177,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-11.85%"
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "AEHR",
             "Name": "Aehr Test Systems",
             "Total": 78,
@@ -175,28 +197,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "261",
             "FY2030": "321",
             "Change %": "-14.14%"
-        },
-        {
-            "Rank": 9,
-            "Ticker": "6830.TWO",
-            "Name": "MSScorps (汎銓科技)",
-            "Total": 77,
-            "Base": 91,
-            "Entry": 57,
-            "Rating": "HC — CPO PIC inspection patent monopoly. Night Gecko equipment pivot. 142% CPO CAGR = 34x market in 4 years.",
-            "Port": "✓",
-            "Current Price": 787,
-            "Ceiling Target": "1,803",
-            "Upside": "2.3x",
-            "Position Type": "🔒 CHOKEPOINT\nCPO PIC light leakage inspection. Patented in TW/JP/US. Suing Enli, refusing to license. 6yr co-development with customers. VICR-pattern dual moat (physics + legal).",
-            "2027-28 P/E": "5.2x/3.7x",
-            "Artifact Updated": "May 21 (Audit)",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "620",
-            "FY2028": "1,390",
-            "FY2029": "2,630",
-            "FY2030": "4,119",
-            "Change %": "+0.55%"
         },
         {
             "Rank": 10,
@@ -288,6 +288,50 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 14,
+            "Ticker": "MU",
+            "Name": "Micron Technology",
+            "Total": 73,
+            "Base": 83,
+            "Entry": 58,
+            "Rating": "FAIL — 81% GM, $842B MC. Thesis excellent but stock AT ceiling ($746 vs $800 low). Same as ARM: great company, zero asymmetry. HC at $400.",
+            "Port": "",
+            "Current Price": 751,
+            "Ceiling Target": "1,753",
+            "Upside": "2.3x",
+            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
+            "2027-28 P/E": "8.0x/4.7x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI",
+            "FY2027": "1,307",
+            "FY2028": "1,678",
+            "FY2029": "1,904",
+            "FY2030": "2,152",
+            "Change %": "-2.99%"
+        },
+        {
+            "Rank": 15,
+            "Ticker": "SNDK",
+            "Name": "SanDisk Corp",
+            "Total": 73,
+            "Base": 80,
+            "Entry": 62,
+            "Rating": "FAIL — NAND supercycle confirmed but stock at $1,562 is 87% of ceiling LOW ($1,800). Same as MU: great thesis, no Entry. HC at $900.",
+            "Port": "",
+            "Current Price": 1478.69,
+            "Ceiling Target": "3,680",
+            "Upside": "2.5x",
+            "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
+            "2027-28 P/E": "7.7x/5.5x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI",
+            "FY2027": "2,732",
+            "FY2028": "3,478",
+            "FY2029": "4,084",
+            "FY2030": "4,503",
+            "Change %": "-4.75%"
+        },
+        {
+            "Rank": 16,
             "Ticker": "EOS.AX",
             "Name": "Electro Optic Systems",
             "Total": 71,
@@ -309,7 +353,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.13%"
         },
         {
-            "Rank": 15,
+            "Rank": 17,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "Total": 68,
@@ -331,7 +375,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.20%"
         },
         {
-            "Rank": 16,
+            "Rank": 18,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "Total": 67,
@@ -353,7 +397,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.61%"
         },
         {
-            "Rank": 17,
+            "Rank": 19,
+            "Ticker": "CRDO",
+            "Name": "Credo Technology",
+            "Total": 67,
+            "Base": 72,
+            "Entry": 59,
+            "Rating": "Multi-sector SerDes + DustPhotonics SiPh PIC",
+            "Port": "",
+            "Current Price": 218.41,
+            "Ceiling Target": "514",
+            "Upside": "2.4x",
+            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
+            "2027-28 P/E": "21.5x/17.9x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": "139",
+            "FY2028": "362",
+            "FY2029": "817",
+            "FY2030": "1,492",
+            "Change %": "-8.79%"
+        },
+        {
+            "Rank": 20,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "Total": 62,
@@ -375,7 +441,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.31%"
         },
         {
-            "Rank": 18,
+            "Rank": 21,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "Total": 62,
@@ -397,7 +463,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.63%"
         },
         {
-            "Rank": 19,
+            "Rank": 22,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "Total": 60,
@@ -418,7 +484,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "498"
         },
         {
-            "Rank": 20,
+            "Rank": 23,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "Total": 58,
@@ -440,7 +506,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%"
         },
         {
-            "Rank": 21,
+            "Rank": 24,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
             "Total": 58,
@@ -462,7 +528,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%"
         },
         {
-            "Rank": 22,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "Total": 57,
@@ -484,7 +550,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.41%"
         },
         {
-            "Rank": 23,
+            "Rank": 26,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "Total": 57,
@@ -506,7 +572,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%"
         },
         {
-            "Rank": 24,
+            "Rank": 27,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "Total": 54,
@@ -528,7 +594,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.88%"
         },
         {
-            "Rank": 25,
+            "Rank": 28,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "Total": 52,
@@ -550,95 +616,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%"
         },
         {
-            "Rank": 26,
-            "Ticker": "PL",
-            "Name": "Planet Labs",
-            "Total": 51,
-            "Base": 63,
-            "Entry": 34,
-            "Rating": "WL-adjacent (defense pivot real, Path B competitive)",
-            "Port": "",
-            "Current Price": "$44.33",
-            "Ceiling Target": "$65-90",
-            "Upside": "1.5x-2.0x",
-            "Position Type": "⚡ BOTTLENECK\nRegulatory: Unclassified intelligence niche — valid moat but satellite fleet depreciates. 2-3yr window.",
-            "2027-28 P/E": "23.2x/19.1x",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "Other",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-1.36%"
-        },
-        {
-            "Rank": 27,
-            "Ticker": "SNDK",
-            "Name": "SanDisk Corp",
-            "Total": 52,
-            "Base": 76,
-            "Entry": 16,
-            "Rating": "FAIL — NAND supercycle confirmed but stock at $1,562 is 87% of ceiling LOW ($1,800). Same as MU: great thesis, no Entry. HC at $900.",
-            "Port": "",
-            "Current Price": 1478.69,
-            "Ceiling Target": "$1,800-2,500",
-            "Upside": "1.2x-1.7x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
-            "2027-28 P/E": "7.7x/5.5x",
-            "Artifact Updated": "May 16",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-4.75%"
-        },
-        {
-            "Rank": 28,
-            "Ticker": "CRDO",
-            "Name": "Credo Technology",
-            "Total": 51,
-            "Base": 72,
-            "Entry": 19,
-            "Rating": "Multi-sector SerDes + DustPhotonics SiPh PIC",
-            "Port": "",
-            "Current Price": 218.41,
-            "Ceiling Target": "$300-360",
-            "Upside": "1.4x-1.6x",
-            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
-            "2027-28 P/E": "21.5x/17.9x",
-            "Artifact Updated": "May 2",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-8.79%"
-        },
-        {
             "Rank": 29,
-            "Ticker": "MU",
-            "Name": "Micron Technology",
-            "Total": 51,
-            "Base": 80,
-            "Entry": 8,
-            "Rating": "FAIL — 81% GM, $842B MC. Thesis excellent but stock AT ceiling ($746 vs $800 low). Same as ARM: great company, zero asymmetry. HC at $400.",
-            "Port": "",
-            "Current Price": 751,
-            "Ceiling Target": "$800-1,200",
-            "Upside": "1.1x-1.6x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
-            "2027-28 P/E": "8.0x/4.7x",
-            "Artifact Updated": "May 9",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.99%"
-        },
-        {
-            "Rank": 30,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "Total": 49,
@@ -660,7 +638,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%"
         },
         {
-            "Rank": 31,
+            "Rank": 30,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "Total": 49,
@@ -682,7 +660,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%"
         },
         {
-            "Rank": 32,
+            "Rank": 31,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "Total": 48,
@@ -704,7 +682,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%"
         },
         {
-            "Rank": 33,
+            "Rank": 32,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 47,
@@ -726,7 +704,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.18%"
         },
         {
-            "Rank": 34,
+            "Rank": 33,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 47,
@@ -748,7 +726,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.84%"
         },
         {
-            "Rank": 35,
+            "Rank": 34,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "Total": 47,
@@ -769,7 +747,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 36,
+            "Rank": 35,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "Total": 46,
@@ -790,7 +768,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 37,
+            "Rank": 36,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 45,
@@ -812,7 +790,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%"
         },
         {
-            "Rank": 38,
+            "Rank": 37,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "Total": 42,
@@ -832,6 +810,28 @@ window.PORTFOLIO_DATA = {
             "FY2029": "476",
             "FY2030": "602",
             "Change %": "-5.80%"
+        },
+        {
+            "Rank": 38,
+            "Ticker": "PL",
+            "Name": "Planet Labs",
+            "Total": 38,
+            "Base": 63,
+            "Entry": 0,
+            "Rating": "WL-adjacent (defense pivot real, Path B competitive)",
+            "Port": "",
+            "Current Price": "$44.33",
+            "Ceiling Target": "10.73",
+            "Upside": "0.2x",
+            "Position Type": "⚡ BOTTLENECK\nRegulatory: Unclassified intelligence niche — valid moat but satellite fleet depreciates. 2-3yr window.",
+            "2027-28 P/E": "23.2x/19.1x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "Other",
+            "FY2027": "0.79",
+            "FY2028": "7.13",
+            "FY2029": "17.94",
+            "FY2030": "37.36",
+            "Change %": "-1.36%"
         },
         {
             "Rank": 39,
@@ -2000,6 +2000,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 5,
+            "Ticker": "6830.TWO",
+            "Name": "MSScorps (泛铨科技)",
+            "Total": 86,
+            "Base": 91,
+            "Entry": 79,
+            "Rating": "HC——CPO PIC检查专利垄断。夜壁虎装备枢轴。 142% CPO 复合年增长率 = 4 年内市场规模的 34 倍。",
+            "Port": "✓",
+            "Current Price": 787,
+            "Ceiling Target": "2,473",
+            "Upside": "3.1x",
+            "Position Type": "🔒 阻塞点\nCPO PIC漏光检查。在台湾/日本/美国获得专利。起诉恩利，拒绝许可。与客户共同开发 6 年。 VICR 模式双护城河（物理+法律）。",
+            "2027-28 P/E": "5.2x/3.7x",
+            "Artifact Updated": "May 21 (Audit)",
+            "SuperCycle": "AI, CPO",
+            "FY2027": "851",
+            "FY2028": "1,906",
+            "FY2029": "3,607",
+            "FY2030": "5,649",
+            "Change %": "+0.55%"
+        },
+        {
+            "Rank": 6,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "Total": 85,
@@ -2021,7 +2043,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.83%"
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "8147.TWO",
             "Name": "明思电子工程",
             "Total": 82,
@@ -2043,7 +2065,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.79%"
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "AAOI",
             "Name": "应用光电",
             "Total": 78,
@@ -2065,7 +2087,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-11.85%"
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "AEHR",
             "Name": "空气测试系统",
             "Total": 78,
@@ -2085,28 +2107,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "261",
             "FY2030": "321",
             "Change %": "-14.14%"
-        },
-        {
-            "Rank": 9,
-            "Ticker": "6830.TWO",
-            "Name": "MSScorps (泛铨科技)",
-            "Total": 77,
-            "Base": 91,
-            "Entry": 57,
-            "Rating": "HC——CPO PIC检查专利垄断。夜壁虎装备枢轴。 142% CPO 复合年增长率 = 4 年内市场规模的 34 倍。",
-            "Port": "✓",
-            "Current Price": 787,
-            "Ceiling Target": "1,803",
-            "Upside": "2.3x",
-            "Position Type": "🔒 阻塞点\nCPO PIC漏光检查。在台湾/日本/美国获得专利。起诉恩利，拒绝许可。与客户共同开发 6 年。 VICR 模式双护城河（物理+法律）。",
-            "2027-28 P/E": "5.2x/3.7x",
-            "Artifact Updated": "May 21 (Audit)",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "620",
-            "FY2028": "1,390",
-            "FY2029": "2,630",
-            "FY2030": "4,119",
-            "Change %": "+0.55%"
         },
         {
             "Rank": 10,
@@ -2198,6 +2198,50 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 14,
+            "Ticker": "MU",
+            "Name": "美光科技",
+            "Total": 73,
+            "Base": 83,
+            "Entry": 58,
+            "Rating": "失败——81% GM，$842B MC。论文优秀，但股票 AT 上限（746 美元 vs 最低 800 美元）。与 ARM 一样：伟大的公司，零不对称。 HC 价格为 400 美元。",
+            "Port": "",
+            "Current Price": 751,
+            "Ceiling Target": "1,753",
+            "Upside": "2.3x",
+            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
+            "2027-28 P/E": "8.0x/4.7x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI",
+            "FY2027": "1,307",
+            "FY2028": "1,678",
+            "FY2029": "1,904",
+            "FY2030": "2,152",
+            "Change %": "-2.99%"
+        },
+        {
+            "Rank": 15,
+            "Ticker": "SNDK",
+            "Name": "闪迪公司",
+            "Total": 73,
+            "Base": 80,
+            "Entry": 62,
+            "Rating": "失败——NAND 超级周期已确认，但股价 1,562 美元是最低上限（1,800 美元）的 87%。与 MU 相同：伟大的论文，没有条目。 HC 售价 900 美元。",
+            "Port": "",
+            "Current Price": 1478.69,
+            "Ceiling Target": "3,680",
+            "Upside": "2.5x",
+            "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
+            "2027-28 P/E": "7.7x/5.5x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI",
+            "FY2027": "2,732",
+            "FY2028": "3,478",
+            "FY2029": "4,084",
+            "FY2030": "4,503",
+            "Change %": "-4.75%"
+        },
+        {
+            "Rank": 16,
             "Ticker": "EOS.AX",
             "Name": "光电系统",
             "Total": 71,
@@ -2219,7 +2263,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+4.13%"
         },
         {
-            "Rank": 15,
+            "Rank": 17,
             "Ticker": "COHR",
             "Name": "相干公司",
             "Total": 68,
@@ -2241,7 +2285,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-6.20%"
         },
         {
-            "Rank": 16,
+            "Rank": 18,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "Total": 67,
@@ -2263,7 +2307,29 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.61%"
         },
         {
-            "Rank": 17,
+            "Rank": 19,
+            "Ticker": "CRDO",
+            "Name": "信条科技",
+            "Total": 67,
+            "Base": 72,
+            "Entry": 59,
+            "Rating": "多扇区 SerDes + DustPhotonics SiPh PIC",
+            "Port": "",
+            "Current Price": 218.41,
+            "Ceiling Target": "514",
+            "Upside": "2.4x",
+            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
+            "2027-28 P/E": "21.5x/17.9x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": "139",
+            "FY2028": "362",
+            "FY2029": "817",
+            "FY2030": "1,492",
+            "Change %": "-8.79%"
+        },
+        {
+            "Rank": 20,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "Total": 62,
@@ -2285,7 +2351,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.31%"
         },
         {
-            "Rank": 18,
+            "Rank": 21,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "Total": 62,
@@ -2307,7 +2373,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.63%"
         },
         {
-            "Rank": 19,
+            "Rank": 22,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "Total": 60,
@@ -2328,7 +2394,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "498"
         },
         {
-            "Rank": 20,
+            "Rank": 23,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "Total": 58,
@@ -2350,7 +2416,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%"
         },
         {
-            "Rank": 21,
+            "Rank": 24,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
             "Total": 58,
@@ -2372,7 +2438,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%"
         },
         {
-            "Rank": 22,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "Total": 57,
@@ -2394,7 +2460,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.41%"
         },
         {
-            "Rank": 23,
+            "Rank": 26,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "Total": 57,
@@ -2416,7 +2482,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%"
         },
         {
-            "Rank": 24,
+            "Rank": 27,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "Total": 54,
@@ -2438,7 +2504,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.88%"
         },
         {
-            "Rank": 25,
+            "Rank": 28,
             "Ticker": "VICR",
             "Name": "维科公司",
             "Total": 52,
@@ -2460,95 +2526,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%"
         },
         {
-            "Rank": 26,
-            "Ticker": "PL",
-            "Name": "星球实验室",
-            "Total": 51,
-            "Base": 63,
-            "Entry": 34,
-            "Rating": "WL-相邻（防守支点真实，路径 B 竞争）",
-            "Port": "",
-            "Current Price": "$44.33",
-            "Ceiling Target": "$65-90 美元",
-            "Upside": "1.5x-2.0x",
-            "Position Type": "⚡ 瓶颈\n监管：非机密情报领域——有效的护城河，但卫星舰队会贬值。 2-3年的窗口。",
-            "2027-28 P/E": "23.2x/19.1x",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "Other",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-1.36%"
-        },
-        {
-            "Rank": 27,
-            "Ticker": "SNDK",
-            "Name": "闪迪公司",
-            "Total": 52,
-            "Base": 76,
-            "Entry": 16,
-            "Rating": "失败——NAND 超级周期已确认，但股价 1,562 美元是最低上限（1,800 美元）的 87%。与 MU 相同：伟大的论文，没有条目。 HC 售价 900 美元。",
-            "Port": "",
-            "Current Price": 1478.69,
-            "Ceiling Target": "1,800-2,500 美元",
-            "Upside": "1.2x-1.7x",
-            "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
-            "2027-28 P/E": "7.7x/5.5x",
-            "Artifact Updated": "May 16",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-4.75%"
-        },
-        {
-            "Rank": 28,
-            "Ticker": "CRDO",
-            "Name": "信条科技",
-            "Total": 51,
-            "Base": 72,
-            "Entry": 19,
-            "Rating": "多扇区 SerDes + DustPhotonics SiPh PIC",
-            "Port": "",
-            "Current Price": 218.41,
-            "Ceiling Target": "$300-360 美元",
-            "Upside": "1.4x-1.6x",
-            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
-            "2027-28 P/E": "21.5x/17.9x",
-            "Artifact Updated": "May 2",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-8.79%"
-        },
-        {
             "Rank": 29,
-            "Ticker": "MU",
-            "Name": "美光科技",
-            "Total": 51,
-            "Base": 80,
-            "Entry": 8,
-            "Rating": "失败——81% GM，$842B MC。论文优秀，但股票 AT 上限（746 美元 vs 最低 800 美元）。与 ARM 一样：伟大的公司，零不对称。 HC 价格为 400 美元。",
-            "Port": "",
-            "Current Price": 751,
-            "Ceiling Target": "$800-1,200",
-            "Upside": "1.1x-1.6x",
-            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
-            "2027-28 P/E": "8.0x/4.7x",
-            "Artifact Updated": "May 9",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.99%"
-        },
-        {
-            "Rank": 30,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "Total": 49,
@@ -2570,7 +2548,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%"
         },
         {
-            "Rank": 31,
+            "Rank": 30,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "Total": 49,
@@ -2592,7 +2570,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%"
         },
         {
-            "Rank": 32,
+            "Rank": 31,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "Total": 48,
@@ -2614,7 +2592,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%"
         },
         {
-            "Rank": 33,
+            "Rank": 32,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 47,
@@ -2636,7 +2614,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.18%"
         },
         {
-            "Rank": 34,
+            "Rank": 33,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 47,
@@ -2658,7 +2636,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.84%"
         },
         {
-            "Rank": 35,
+            "Rank": 34,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "Total": 47,
@@ -2679,7 +2657,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 36,
+            "Rank": 35,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "Total": 46,
@@ -2700,7 +2678,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 37,
+            "Rank": 36,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 45,
@@ -2722,7 +2700,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%"
         },
         {
-            "Rank": 38,
+            "Rank": 37,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "Total": 42,
@@ -2742,6 +2720,28 @@ window.PORTFOLIO_DATA = {
             "FY2029": "476",
             "FY2030": "602",
             "Change %": "-5.80%"
+        },
+        {
+            "Rank": 38,
+            "Ticker": "PL",
+            "Name": "星球实验室",
+            "Total": 38,
+            "Base": 63,
+            "Entry": 0,
+            "Rating": "WL-相邻（防守支点真实，路径 B 竞争）",
+            "Port": "",
+            "Current Price": "$44.33",
+            "Ceiling Target": "10.73",
+            "Upside": "0.2x",
+            "Position Type": "⚡ 瓶颈\n监管：非机密情报领域——有效的护城河，但卫星舰队会贬值。 2-3年的窗口。",
+            "2027-28 P/E": "23.2x/19.1x",
+            "Artifact Updated": "May 25 (Audit)",
+            "SuperCycle": "Other",
+            "FY2027": "0.79",
+            "FY2028": "7.13",
+            "FY2029": "17.94",
+            "FY2030": "37.36",
+            "Change %": "-1.36%"
         },
         {
             "Rank": 39,

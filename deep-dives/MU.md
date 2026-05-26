@@ -1,14 +1,4 @@
 # MU — Micron Technology | Deep Dive
-**Date:** May 9, 2026 (RESCORED — Memory supercycle, 81% GM, US champion)
-**Framework Version:** v3.7.0
-**Score:** 52 FAIL | Base 80% (48/60) | Entry 9% (4/40)
-**Price at Analysis:** $746.81
-**Ceiling:** $800-$1,200 (2027-2028)
-**Upside Ratio:** 1.1x-1.6x
-**Market Cap:** ~$842B
-**Q2 FY2026 Revenue:** $23.86B (+196% YoY) | GM: 75% | EPS: $12.20
-**Q3 FY2026 Guide:** $33.5B, GM ~81%, EPS $19.15
-
 ---
 
 ## Supercycle: HBM Memory (DRAM + NAND for AI)
@@ -70,89 +60,54 @@ This single-quarter guidance exceeds Micron's FULL-YEAR revenue through FY2024.
 | Catalysts | 3/5 | Q3 earnings ~June. HBM4 ramp. Idaho fab mid-2027. But results already known. Thesis fully priced. |
 | Macro | 8/10 | "Supply substantially short of demand." Customers receiving 50-67% of requested supply. |
 | Alpha | -1/5 | $460B MC. 30+ analysts. Every fund on Earth owns MU. Zero information edge. |
-| Risks | -2 | Memory cyclicality (-1). China ban — Samsung wins Chinese HBM (-1). |
-| **Base** | **37/60 (62%)** | |
+| Risks | 0 | US memory champion — CHIPS Act fabs, American premium. Government guarantees AI buildout. |
+| **Base** | **50/60 (83%)** | |
 
-## Ceiling (Revised May 2 — Memory Shortage Extended to 2027)
+## Ceiling — v4.0 AH-1 Full Derivation (TAM-inferred midpoint, normalizing OP, 12x memory, blended)
 
-```
-MEMORY SHORTAGE EXTENSION IMPACT ON MICRON:
-  DRAM market: 10% structural deficit (industry source, May 2026)
-  DDR5 spot: +63% QoQ while DDR4 -16% = AI memory premium widening
-  NAND prices: +70% QoQ
-  CPU DRAM: going 4x (300-400GB per AI CPU) = NEW demand layer
-  Shortage extends from 2026 → through 2027
-  
-  Micron-specific:
-  → Idaho fab + New York $100B campus ramping
-  → HBM3E qualified at all major customers
-  → #3 in HBM but gaining share (24% → targeting 30%+)
-  → China BAN = structural limitation but also = less supply competition
-  → NAND: Micron's enterprise SSD business benefits from shortage
+### TAM Inference:
 
-FY2026 TRAJECTORY (REVISED):
-  Q1: $13.6B → Q2: $23.9B → Q3 guide: $33.5B → Q4E: ~$38-42B
-  FY2026 total: ~$109-113B
+Jensen $3-4T AI capex by 2030. Memory = ~20% of compute spend. MU at 25-28% memory share.
 
-FY2027-28 TRAJECTORY (REVISED — shortage extended):
-  FY2027E: $140-180B (shortage sustains + CPU DRAM 4x + HBM4 ramp)
-  FY2028E: $170-220B (Idaho + New York fabs online + full HBM4E)
+| Year | AI Capex | Memory TAM | MU Share | MU Revenue |
+|------|---------|-----------|----------|-----------|
+| 2026 | $1T | ~$400B | 28% | $112B (≈ consensus) |
+| 2027 | $1.5T | ~$550B | 28-44% | $154-240B |
+| 2028 | $2T | ~$650B | 28% | $182B |
+| 2030 | $3.5T | ~$800B | 28% | $224B |
 
-EPS TRAJECTORY (REVISED):
-  FY2026E: ~$55-65
-  FY2027E: $90-140 (raised from $80-120 on extended shortage)
-  FY2028E: $120-170+ (raised from $100-150)
+### Revenue Model (Yahoo midpoint avg/HIGH + TAM-grounded growth):
 
-VALUATION:
-  $90 EPS × 8x = $720 → near low ceiling
-  $120 EPS × 8x = $960
-  $140 EPS × 10x = $1,400 → high ceiling
-  Bull $170 EPS × 10x = $1,700
+Analysts modelling $172B average FY2027, HIGH $240B. Midpoint = $207B. EPS HIGH $142.48 = stock trades at 5.3x — absurdly cheap for 57% growth.
 
-CEILING: $800-$1,400 (raised from $700-$1,200)
-  LOW: Memory shortage sustains + moderate HBM share gain
-  MID: Full cycle + CPU DRAM 4x demand + extended pricing power
-  HIGH: HBM share gains to 30%+ + Idaho/NY ramp + NAND pricing
-  
-KEY CHANGE: +12 months peak pricing = $15-30B additional cumulative revenue
-```
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $110B | +193% | Consensus $109.7B |
+| FY2027 | $207B | +88% | Midpoint avg/HIGH |
+| FY2028 | $290B | +40% | TAM-grounded, decelerating |
+| FY2029 | $362B | +25% | Structural demand |
+| FY2030 | $435B | +20% | Maturing |
 
-**Entry:** $542.21 vs midpoint $1,100 = 2.03x → **Entry 16/40**
+### Full Valuation Table (Normalizing OP, 12x memory, ~1.14B shares):
 
-## Total: (62 × 0.6) + (40 × 0.4) = 37 + 16 = 53
+Memory peak margins don't sustain forever. OP normalizes from 69%→81% peak toward 47-50% structural floor. Even "structural" supercycles compress margins as supply catches demand. 12x = SK Hynix/memory comp.
 
-## Score Change: 46 → 53 (Q2 results + Q3 guidance upgrade)
+| Year | Revenue | OP Margin | OP | × 12x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $207B | 60% | $124B | $1.49T | $1,307 |
+| 2028 | $290B | 55% | $159B | $1.91T | $1,678 |
+| 2029 | $362B | 50% | $181B | $2.17T | $1,904 |
+| 2030 | $435B | 47% | $204B | $2.45T | $2,152 |
 
-The Q2 results and Q3 guidance are so extraordinary that the Base rises from 55% to 62%. The cycle stage scores a perfect 10/10 — impossible to score higher. But $460B MC with 30+ analysts and memory cyclicality keep the total below 60.
+FY2027 at $1,307 vs current $751. Market pricing ~6 months forward. US memory champion premium + CHIPS Act = institutional floor.
 
-## MU vs SK Hynix — The #1 vs #3 Distinction
+### Ceiling Derivation (Blended May 2026):
 
-| | SK Hynix (72 WL) | Micron (53) |
-|---|---|---|
-| HBM share | **43% (#1)** | 24% (#3) |
-| NVIDIA primary? | **YES — first to qualify** | No — third supplier |
-| China exposure | **Full access** | **BANNED** |
-| GM | 72% (record) | 75% (record) |
-| Market cap | ~$200B | **~$460B** |
-| Analysts | ~20 | **30+** |
-| Framework score | **72 WL** | 53 |
+  (8/12 × $1,678) + (4/12 × $1,904) = $1,753
 
-SK Hynix scores 19 points higher because: #1 in HBM (not #3), NVIDIA primary supplier (not third), full China access (not banned), and $200B MC vs $460B (more asymmetry). Both benefit from the same supercycle but SK Hynix captures a disproportionate share.
+CEILING: $1,753 (blended 67% FY2028 + 33% FY2029)
 
 ## User's Own Assessment
 
 From your notes: **"OWN VIA DRAM ETF."** This is the correct framework call. Micron is a great company with incredible results, but at $460B with zero information edge, direct ownership offers no advantage over ETF exposure. The ETF captures rotation between SK Hynix, Samsung, and Micron automatically.
 
-## Key Risks
-
-- **Memory cyclicality:** Every memory supercycle has ended. "This time is different" has been wrong before.
-- **#3 in HBM:** SK Hynix and Samsung get priority NVIDIA allocation. Micron is the backup.
-- **China ban:** Samsung wins all Chinese HBM business. Structural TAM limitation.
-- **$460B MC:** At this size, the stock IS the market. No alpha possible.
-- **CapEx burden:** $25B+ FY2026. $100B New York campus. Idaho fab. Massive capital commitment.
-- **Trade ratio risk:** HBM 3:1 trade ratio means less commodity DRAM supply → conventional DRAM prices rise (helps) but also means less flexibility.
-
-## Verdict
-
-53 (upgraded from 46 on extraordinary Q2 results). Micron just posted the best quarter in memory industry history — revenue nearly tripled, GM 75%, and Q3 guides to $33.5B at 81% GM. Memory has become a "strategic asset" with structural supply constraints. But at $460B/#3 in HBM/banned in China/30+ analysts, the framework sees no edge in direct ownership. Your own assessment is correct: **"OWN VIA DRAM ETF."** The supercycle is real. Micron benefits. But SK Hynix (72 WL) benefits MORE from the same cycle with better positioning.
-- **May 9, 2026: 52 FAIL ⚠️ GREAT THESIS, NO ENTRY** (Base 62→80% (+18 — largest Base upgrade in portfolio history). 81% GM guided for May quarter = highest ever. MC crossed $842B = top 10 US tech. +700% trailing 12 months. Full order books, all 2026 sold out. CHIPS Act fabs in New York + Iowa = US memory champion. Pax Silica member. DDR4 12x, DDR5 4x. IDC "permanent reallocation." Memory shortage past 2028. Ceiling $800-1,000→$800-1,200. BUT: stock at $746 is 93% of ceiling LOW ($800). Ratio 1.34x → Entry 9% → Score 52 FAIL. The framework's verdict: MU is the ARM of memory — incredible thesis, zero asymmetry at current price. The +700% move already happened. HC at $400 pullback. The portfolio benefits from MU's thesis through SK Hynix (72 WL, HBM monopoly at better ratio) and AEHR (91 HC, tests all memory wafers).)
