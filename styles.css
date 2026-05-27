@@ -68,6 +68,46 @@ body {
     font-weight: 700;
 }
 
+/* === Mode selector visual punch (mobile) =====================
+   The Basic/ADV switch is the only meaningful state-change control
+   in the mobile header — easy to overlook when it shares neutral
+   styling with the language flags and theme buttons. Give it a
+   distinct accent-tinted shell + a stronger active-state fill so
+   it visibly reads as 'tap me to switch layout'. */
+@media (max-width: 768px) {
+    .mode-selector {
+        background: rgba(59, 130, 246, 0.15);
+        border-color: rgba(59, 130, 246, 0.55);
+        box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.18),
+                    0 0 12px rgba(59, 130, 246, 0.35);
+    }
+    .mode-btn {
+        color: var(--accent);
+        font-weight: 800;
+        letter-spacing: 0.06em;
+    }
+    /* Inactive button on a mobile that's busy gets too-thin contrast;
+       bump it up so 'Basic' and 'ADV' are equally legible regardless
+       of which is selected. */
+    .mode-btn:not(.active) {
+        color: var(--accent);
+        opacity: 0.75;
+    }
+    .mode-btn:not(.active):hover {
+        opacity: 1;
+        background: rgba(59, 130, 246, 0.08);
+    }
+    .mode-btn.active {
+        background: var(--accent);
+        color: #ffffff;
+        box-shadow: inset 0 -2px 0 #1d4ed8,
+                    0 0 6px rgba(59, 130, 246, 0.6);
+    }
+    body.light-mode .mode-selector {
+        background: rgba(59, 130, 246, 0.10);
+    }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
@@ -1394,9 +1434,9 @@ tbody tr {
         order: -1;   /* push it leftmost in the controls-area flex */
     }
     .mode-btn {
-        padding: 0.3rem 0.5rem;
-        font-size: 0.7rem;
-        letter-spacing: 0.02em;
+        padding: 0.42rem 0.7rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
     }
 
     /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small
