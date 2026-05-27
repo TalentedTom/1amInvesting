@@ -114,7 +114,21 @@ body {
 }
 .header-content .logo-area {
     grid-column: 2;
-    text-align: center;
+    /* Flex layout: title text + contact buttons side by side.
+       text-align: left so the title hugs its left edge inside the
+       logo-area; align-items: center so the buttons sit beside the
+       title vertically. The logo-area itself stays in grid-column 2
+       (still optically centered between the 1fr spacers either
+       side), so adding contacts shifts the whole block as one unit
+       rather than throwing off the rest of the header. */
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: left;
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
 }
 .header-content .controls-area {
     grid-column: 3;
@@ -138,6 +152,108 @@ body {
     color: var(--text-secondary);
     margin-top: 0.2rem;
     font-weight: 500;
+}
+
+/* === Contact buttons (X / Email / WeChat) ====================
+   Three icon buttons sitting to the right of the title. Neutral
+   resting state matches the surrounding header chrome; on hover
+   each takes on the relevant brand colour (X = white, Email =
+   accent blue, WeChat = WeChat green) so the affordance is
+   unmistakable to anyone who already uses these platforms. */
+.contact-buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+body.light-mode .contact-btn {
+    background: rgba(0, 0, 0, 0.04);
+}
+.contact-btn:hover,
+.contact-btn:focus-visible {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px);
+    outline: none;
+}
+body.light-mode .contact-btn:hover,
+body.light-mode .contact-btn:focus-visible {
+    background: rgba(0, 0, 0, 0.06);
+}
+.contact-btn.x-btn:hover       { color: #ffffff;   border-color: #ffffff; }
+body.light-mode .contact-btn.x-btn:hover { color: #0f172a; border-color: #0f172a; }
+.contact-btn.email-btn:hover   { color: var(--accent); border-color: var(--accent); }
+.contact-btn.wechat-btn:hover  { color: #07c160;   border-color: #07c160; }
+.contact-btn svg { display: block; }
+
+/* === WeChat QR popover ==================================
+   Click-to-show panel with the QR code image. Positioned below
+   the WeChat button by JS, clamped inside the viewport, dismissed
+   on outside click or Escape. */
+.wechat-popover {
+    position: absolute;
+    z-index: 1000;
+    width: 240px;
+    padding: 0.85rem 0.85rem 0.7rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+body.light-mode .wechat-popover {
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.15);
+}
+.wechat-popover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    margin: 0 auto 0.55rem;
+    border-radius: 6px;
+    /* White background so a QR with transparent border still scans */
+    background: #ffffff;
+    padding: 4px;
+}
+.wechat-popover p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+.wechat-popover-close {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 22px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.wechat-popover-close:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+body.light-mode .wechat-popover-close:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 /* Live-status pill under the subtitle — green pulsing dot + "Live · 5s ago"
@@ -1121,6 +1237,17 @@ tbody tr {
     .subtitle {
         font-size: 0.75rem;
     }
+    .logo-area {
+        gap: 0.7rem;
+    }
+    .contact-btn {
+        width: 32px;
+        height: 32px;
+    }
+    .contact-btn svg {
+        width: 15px;
+        height: 15px;
+    }
     .table-container {
         padding: 0.5rem;
     }
@@ -1169,6 +1296,18 @@ tbody tr {
     }
     .subtitle {
         font-size: 0.68rem;
+    }
+    .logo-area {
+        gap: 0.55rem;
+    }
+    .contact-btn {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+    }
+    .contact-btn svg {
+        width: 13px;
+        height: 13px;
     }
     .controls-area {
         gap: 0.4rem;
