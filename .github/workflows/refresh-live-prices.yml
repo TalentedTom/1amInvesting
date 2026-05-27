@@ -44,17 +44,34 @@ on:
 permissions:
   contents: write       # we push live.json to the live-prices branch
 
-# Kill any in-flight run if a new cron tick fires before the previous
-# one finishes. Yfinance is occasionally slow; we'd rather skip a fire
-# than queue an overlapping commit.
+# Concurrency: let slow runs FINISH instead of cancelling them.
+#   `cancel-in-progress: false` means: when a new cron tick fires while
+#   a previous run is still going, the new fire waits in the pending
+#   queue rather than killing the running one. GitHub keeps at most
+#   1 running + 1 pending per concurrency group; additional pending
+#   fires replace each other (so the queue never grows unbounded).
+#
+# Why this change (from earlier `cancel-in-progress: true`):
+#   yfinance is occasionally slow — runs that would normally take 60s
+#   sometimes balloon to 3-5 minutes during peak market hours. Under
+#   the old cancel-aggressive setting, those slow runs would get
+#   killed by the next 2-min cron tick before they could push, AND
+#   the next run after that, and the next — chaining cancellations
+#   that delayed live.json updates by 10+ minutes. Letting slow runs
+#   finish makes the system self-healing: the SLOW run completes
+#   eventually, the queued fresh fire then runs against fresh state.
 concurrency:
   group: refresh-live-prices
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    # Bumped from 5 to 10 min to give slow yfinance fetches room to
+    # complete rather than hard-failing at the timeout. Normal runs
+    # still finish in <90 s; this is purely a safety margin for the
+    # bad days.
+    timeout-minutes: 10
     steps:
       - name: Check out main (for data.js + scripts)
         uses: actions/checkout@v4
