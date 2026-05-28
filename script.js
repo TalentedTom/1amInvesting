@@ -260,7 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const stored = localStorage.getItem(LANG_STORAGE_KEY);
         return (stored === 'en' || stored === 'zh-CN') ? stored : 'en';
     })();
-    let sortState = { col: null, asc: true };
+    // Default sort: EV Upside, descending — the table opens ranked by the
+    // headline metric (highest expected-value upside first). Unranked rows
+    // still pin to the bottom via pinUnrankedComparator. The user can click
+    // any header to re-sort; the choice isn't persisted, so a fresh page
+    // load always lands back on EV Upside desc.
+    let sortState = { col: 'EV Upside', asc: false };
     let hiddenCols = new Set();
     // Default to 'all'. Storage key is intentionally bumped to v2 so any old
     // 'positionFilter' value from before the All option existed is ignored —
@@ -272,19 +277,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
 
-    // SuperCycle multi-select filter. Default: every category except
-    // 'Other' (which catches uncategorized / off-thesis tickers — the
-    // user wants those hidden until explicitly opted into). Persisted as
-    // JSON array in localStorage. Composes with the position-type filter
-    // — both filters must accept a row.
+    // SuperCycle multi-select filter. Default: ALL categories active
+    // (including 'Other') — the table opens showing every position;
+    // users narrow down by toggling pills off. Persisted as a JSON
+    // array in localStorage. Composes with the position-type filter —
+    // both filters must accept a row.
     //
-    // Storage key bumped to v2 because the default changed: visitors with
-    // a v1 entry would inherit a stale "all 5 active" state otherwise.
-    // Anyone who had explicitly toggled pills on v1 loses that state on
-    // upgrade — acceptable trade-off for a clean rollout.
-    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v2';
+    // Storage key bumped to v3 because the default changed again
+    // ('Other' was excluded in v2, now re-included). Visitors with a
+    // v2 entry get the fresh all-active default on next load; anyone
+    // who had explicitly toggled pills loses that state on upgrade —
+    // acceptable for a default-behavior change.
+    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v3';
     const ALL_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];
-    const DEFAULT_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T'];   // 'Other' off by default
+    const DEFAULT_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];   // all on by default
     let activeSupercycles = (() => {
         try {
             const raw = localStorage.getItem(SUPERCYCLE_STORAGE_KEY);
