@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'AMS.SW':    'https://s3-symbol-logo.tradingview.com/ams-osram--big.svg',
         // Denmark
         'NKT':       'https://s3-symbol-logo.tradingview.com/nkt-a-s--big.svg',
+        // Belgium / Euronext (X-FAB is Belgian, lists on Euronext Paris)
+        'XFAB':      'https://s3-symbol-logo.tradingview.com/x-fab-silicon-foundries-se--big.svg',
         // Australia
         'EOS.AX':    'https://s3-symbol-logo.tradingview.com/eos--big.svg',
         // Taiwan
@@ -697,6 +699,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Strip any annotation in parens like "AVGO (Broadcom)" → "AVGO".
         const raw = String(yahooTicker).split('(')[0].trim();
         if (!raw) return null;
+        // Bare-ticker overrides: a few rows are stored without an exchange
+        // suffix in data.js (NKT, ALRIB, XFAB) but aren't US-listed, so
+        // TradingView's auto-resolve guesses wrong. Pin them explicitly.
+        const BARE_TO_TV = {
+            'XFAB':  'EURONEXT:XFAB',   // X-FAB Silicon Foundries (Euronext Paris)
+            'NKT':   'OMXCOP:NKT',      // NKT A/S (Copenhagen)
+            'ALRIB': 'EURONEXT:ALRIB',  // Riber (Euronext Paris)
+        };
+        if (BARE_TO_TV[raw.toUpperCase()]) return BARE_TO_TV[raw.toUpperCase()];
         // Split base + Yahoo suffix
         const parts = raw.split('.');
         const base = parts[0].trim().toUpperCase();

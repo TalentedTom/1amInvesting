@@ -266,6 +266,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 13,
+            "Ticker": "EOS.AX",
+            "Name": "Electro Optic Systems",
+            "Total": 75,
+            "Base": 77,
+            "Entry": 73,
+            "Rating": "WL (was HC — governance downgrade after Grizzly/ASIC/Goldrone)",
+            "Port": "",
+            "Current Price": 9.69,
+            "Ceiling Target": "28.4",
+            "Upside": "2.9x",
+            "Position Type": "🔒 CHOKEPOINT\nPhysics: Speed-of-light directed energy + ITAR-free. Zero marginal cost/shot. 2026-2035+",
+            "2027-28 P/E": "8.7x/9.9x",
+            "Artifact Updated": "May 23 (Audit)",
+            "SuperCycle": "Other",
+            "FY2027": "12.50",
+            "FY2028": "23.40",
+            "FY2029": "38.33",
+            "FY2030": "51.00",
+            "Change %": "+4.13%"
+        },
+        {
+            "Rank": 14,
             "Ticker": "000660.KS",
             "Name": "SK Hynix",
             "Total": 74,
@@ -285,28 +307,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "5,124,000",
             "FY2030": "5,425,000",
             "Change %": "+1.15%"
-        },
-        {
-            "Rank": 14,
-            "Ticker": "EOS.AX",
-            "Name": "Electro Optic Systems",
-            "Total": 69,
-            "Base": 77,
-            "Entry": 58,
-            "Rating": "WL (was HC — governance downgrade after Grizzly/ASIC/Goldrone)",
-            "Port": "",
-            "Current Price": 9.69,
-            "Ceiling Target": "22.5",
-            "Upside": "2.3x",
-            "Position Type": "🔒 CHOKEPOINT\nPhysics: Speed-of-light directed energy + ITAR-free. Zero marginal cost/shot. 2026-2035+",
-            "2027-28 P/E": "8.7x/9.9x",
-            "Artifact Updated": "May 23 (Audit)",
-            "SuperCycle": "Other",
-            "FY2027": "A12.50",
-            "FY2028": "A22.50",
-            "FY2029": "A35.67",
-            "FY2030": "A45.67",
-            "Change %": "+4.13%"
         },
         {
             "Rank": 15,
@@ -376,6 +376,27 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 18,
+            "Ticker": "XFAB",
+            "Name": "X-Fab Silicon Foundries",
+            "Total": 67,
+            "Base": 73,
+            "Entry": 59,
+            "Rating": "",
+            "Port": "",
+            "Current Price": 12,
+            "Ceiling Target": "28.3",
+            "Upside": "2.4x",
+            "Position Type": "WL",
+            "2027-28 P/E": "",
+            "Artifact Updated": "May 27 (New)",
+            "SuperCycle": "AI\nCPO\n800G",
+            "FY2027": "13.74",
+            "FY2028": "23.82",
+            "FY2029": "37.33",
+            "FY2030": "52.21"
+        },
+        {
+            "Rank": 19,
             "Ticker": "MU",
             "Name": "Micron Technology",
             "Total": 67,
@@ -397,7 +418,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.99%"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "CRDO",
             "Name": "Credo Technology",
             "Total": 66,
@@ -419,7 +440,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.79%"
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "Total": 60,
@@ -440,7 +461,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "498"
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "Total": 60,
@@ -462,7 +483,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.31%"
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "Total": 60,
@@ -484,7 +505,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.63%"
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "Total": 60,
@@ -506,7 +527,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%"
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "Total": 57,
@@ -528,7 +549,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.41%"
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
             "Total": 57,
@@ -550,7 +571,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%"
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "Total": 55,
@@ -571,7 +592,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "130.91"
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "Total": 54,
@@ -593,7 +614,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%"
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "Total": 53,
@@ -615,7 +636,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.88%"
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "Total": 51,
@@ -637,7 +658,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.18%"
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "Total": 49,
@@ -659,7 +680,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%"
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "Total": 49,
@@ -681,7 +702,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%"
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "Total": 49,
@@ -703,7 +724,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%"
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 47,
@@ -725,7 +746,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.84%"
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "Total": 47,
@@ -746,7 +767,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "Total": 46,
@@ -767,7 +788,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "Total": 45,
@@ -789,7 +810,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%"
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "Total": 43,
@@ -811,7 +832,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%"
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "Total": 43,
@@ -833,7 +854,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.80%"
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "Total": 38,
@@ -855,7 +876,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.36%"
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "Total": 37,
@@ -2197,6 +2218,28 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 13,
+            "Ticker": "EOS.AX",
+            "Name": "光电系统",
+            "Total": 75,
+            "Base": 77,
+            "Entry": 73,
+            "Rating": "WL（原为 HC — Grizzly/ASIC/Goldrone 之后治理降级）",
+            "Port": "",
+            "Current Price": 9.69,
+            "Ceiling Target": "28.4",
+            "Upside": "2.9x",
+            "Position Type": "🔒 阻塞点\n物理：光速定向能 + 不受 ITAR 限制。每次射击的边际成本为零。 2026-2035+",
+            "2027-28 P/E": "8.7x/9.9x",
+            "Artifact Updated": "May 23 (Audit)",
+            "SuperCycle": "Other",
+            "FY2027": "12.50",
+            "FY2028": "23.40",
+            "FY2029": "38.33",
+            "FY2030": "51.00",
+            "Change %": "+4.13%"
+        },
+        {
+            "Rank": 14,
             "Ticker": "000660.KS",
             "Name": "SK海力士",
             "Total": 74,
@@ -2216,28 +2259,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "5,124,000",
             "FY2030": "5,425,000",
             "Change %": "+1.15%"
-        },
-        {
-            "Rank": 14,
-            "Ticker": "EOS.AX",
-            "Name": "光电系统",
-            "Total": 69,
-            "Base": 77,
-            "Entry": 58,
-            "Rating": "WL（原为 HC — Grizzly/ASIC/Goldrone 之后治理降级）",
-            "Port": "",
-            "Current Price": 9.69,
-            "Ceiling Target": "22.5",
-            "Upside": "2.3x",
-            "Position Type": "🔒 阻塞点\n物理：光速定向能 + 不受 ITAR 限制。每次射击的边际成本为零。 2026-2035+",
-            "2027-28 P/E": "8.7x/9.9x",
-            "Artifact Updated": "May 23 (Audit)",
-            "SuperCycle": "Other",
-            "FY2027": "A12.50",
-            "FY2028": "A22.50",
-            "FY2029": "A35.67",
-            "FY2030": "A45.67",
-            "Change %": "+4.13%"
         },
         {
             "Rank": 15,
@@ -2307,6 +2328,27 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 18,
+            "Ticker": "XFAB",
+            "Name": "X-Fab 硅铸造厂",
+            "Total": 67,
+            "Base": 73,
+            "Entry": 59,
+            "Rating": "",
+            "Port": "",
+            "Current Price": 12,
+            "Ceiling Target": "28.3",
+            "Upside": "2.4x",
+            "Position Type": "WL",
+            "2027-28 P/E": "",
+            "Artifact Updated": "May 27 (New)",
+            "SuperCycle": "AI\nCPO\n800G",
+            "FY2027": "13.74",
+            "FY2028": "23.82",
+            "FY2029": "37.33",
+            "FY2030": "52.21"
+        },
+        {
+            "Rank": 19,
             "Ticker": "MU",
             "Name": "美光科技",
             "Total": 67,
@@ -2328,7 +2370,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.99%"
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "CRDO",
             "Name": "信条科技",
             "Total": 66,
@@ -2350,7 +2392,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.79%"
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "Total": 60,
@@ -2371,7 +2413,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "498"
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "Total": 60,
@@ -2393,7 +2435,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.31%"
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "Total": 60,
@@ -2415,7 +2457,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.63%"
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "Total": 60,
@@ -2437,7 +2479,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%"
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "Total": 57,
@@ -2459,7 +2501,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.41%"
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
             "Total": 57,
@@ -2481,7 +2523,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%"
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "Total": 55,
@@ -2502,7 +2544,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "130.91"
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "Total": 54,
@@ -2524,7 +2566,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%"
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "Total": 53,
@@ -2546,7 +2588,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+3.88%"
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "Total": 51,
@@ -2568,7 +2610,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.18%"
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "VICR",
             "Name": "维科公司",
             "Total": 49,
@@ -2590,7 +2632,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%"
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "Total": 49,
@@ -2612,7 +2654,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%"
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "Total": 49,
@@ -2634,7 +2676,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%"
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "Total": 47,
@@ -2656,7 +2698,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.84%"
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "Total": 47,
@@ -2677,7 +2719,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "Total": 46,
@@ -2698,7 +2740,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": ""
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "Total": 45,
@@ -2720,7 +2762,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%"
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "Total": 43,
@@ -2742,7 +2784,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%"
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "Total": 43,
@@ -2764,7 +2806,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.80%"
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "PL",
             "Name": "星球实验室",
             "Total": 38,
@@ -2786,7 +2828,7 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.36%"
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "Total": 37,

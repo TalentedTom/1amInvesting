@@ -38,6 +38,7 @@ SKIP_TICKER_SUBSTRINGS = ("PRE-IPO",)
 BARE_TO_YAHOO = {
     "NKT": "NKT.CO",
     "ALRIB": "ALRIB.PA",
+    "XFAB": "XFAB.PA",   # X-FAB Silicon Foundries — Euronext Paris (EUR)
 }
 
 
