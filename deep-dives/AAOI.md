@@ -152,26 +152,24 @@ AH-7 confidence: LOW — dependent on V4 closing.
   Revenue PEAKS 2029 then declines — pluggable fades faster than CPO/laser ramps.
   This is why AAOI is ⚡ BOTTLENECK (trade) not a compounder. The S-curve is visible.
 
-### Full Valuation Table (38% OP per management target, 25x, 85M shares post-ATM dilution):
+### Full Valuation Table (38% OP, 20x, 85M shares post-ATM):
 
-| Year | Revenue | OP (38%) | × 25x | Per Share |
+Yahoo midpoint FY2027: $3.04B (avg $2.57B / HIGH $3.5B). Hockey stick ramp confirmed — $471M H1 2027 back-loaded into explosive H2 (~$1.27B/qtr exit rate). Exit-rate logic: H2 exit velocity = FY2028 floor. $600M ATM funds capacity expansion to meet demand. Pluggable S-curve peaks FY2029 then declines as CPO transition begins.
+
+| Year | Revenue | OP (38%) | × 20x | Per Share |
 |------|---------|----------|-------|-----------|
-| 2027 | $4.5B | $1.71B | $42.75B | $503 |
-| 2028 | $5.35B | $2.03B | $50.83B | $598 |
-| 2029 | $5.7B | $2.17B | $54.15B | $637 |
-| 2030 | $5.05B | $1.92B | $47.95B | $564 |
+| 2027 | $3.04B | $1.15B | $23.1B | $272 |
+| 2028 | $6.0B | $2.28B | $45.6B | $536 |
+| 2029 | $7.5B | $2.85B | $57.0B | $671 |
+| 2030 | $6.5B | $2.47B | $49.4B | $581 |
 
-  Peaks 2029 at $637 then DECLINES. Pluggable S-curve visible in the numbers.
-  $600M ATM dilution (82M→85M shares) reduces per-share values ~3.5%.
+Exit-rate logic: H2 2027 at ~$1.27B/qtr = $5.1B annualized floor entering FY2028, growing to $6.0B. Peaks FY2029 at $671 then DECLINES. Pluggable S-curve visible.
 
-### Ceiling Derivation:
+### Ceiling Derivation (Blended May 2026):
 
-  FY2029 (peak): $5.7B × 38% OP = $2.17B × 25x = $54.15B / 85M shares = $637
-  Discounted 30%: $637 × 0.70 = $446
+  (8/12 × $536) + (4/12 × $671) = $581
 
-CEILING: $446 (single number, discounted FY2029 peak base case)
-
-## Total: (68 × 0.6) + (58 × 0.4) = 41 + 23 = 64
+CEILING: $581 (blended 67% FY2028 + 33% FY2029 peak, midpoint revenue + exit-rate logic)
 
 ## AAOI's Role in the Supply Chain
 

@@ -182,7 +182,7 @@ AH-7 confidence: HIGH — confirmed shipping, multiple platform qualifications.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $85M | $230M | $400M | $560M |
+| $92M | $248M | $432M | $605M |
 
 ### Vector 2: Jabil 1.6T LRO (PULLED FORWARD 9 MONTHS)
 Jabil EVP Crowley at JPM: quals 1-4 months, production as early as August 2026 (was H2 2027).
@@ -344,37 +344,43 @@ MRVL CEO on earnings call: "Scale-up optics revenue next year should be more tha
 
 Impact: Vector 7 (Celestial) upgraded MEDIUM→HIGH confidence, revenue doubled. Vectors 1, 6, 8, 11 all receive 10-15% probability uplift from "market adoption accelerate" macro confirmation.
 
+### Ayar/Wiwynn Rack-Scale Commercialization (May 28, 2026)
+
+Ayar Labs + Wiwynn partnership for CPO rack-scale AI systems. Wiwynn clients: Amazon, Meta, Microsoft + in talks for Google TPU servers. Reference architecture ~512+ Supernova light sources per rack. Macom + Lumentum REMOVED from Ayar's partner site — confirms SIVE as primary/sole laser array supplier.
+
+Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commercialization channel reaching all 4 hyperscalers. Commercialization path now concrete, not theoretical.
+
 ### Combined Revenue Table:
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
-| 1. Ayar/CPO | $75M | $200M | $350M | $500M |
+| 1. Ayar/CPO | $92M | $248M | $432M | $605M |
 | 2. Jabil LRO | $50M | $75M | $100M | $120M |
 | 3. Apple | $0 | $65M | $100M | $130M |
 | 4. Defense NEMC | $5M | $10M | $15M | $20M |
 | 5. Defense Primes | $10M | $20M | $30M | $40M |
 | 6. Lightmatter | $20M | $48M | $75M | $105M |
-| 7. Celestial/O-Net | $15M | $45M | $70M | $95M |
+| 7. Celestial/O-Net | $25M | $75M | $120M | $160M |
 | 8. Lightelligence | $12M | $35M | $58M | $75M |
 | 9. Nokia | $8M | $20M | $30M | $35M |
 | 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
 | 11. AMD/GFS | $6M | $28M | $45M | $62M |
 | 12. YSS/Defense | $5M | $13M | $25M | $15M |
-| **TOTAL** | **$206M** | **$560M** | **$900M** | **$1,200M** |
+| **TOTAL** | **$238M** | **$652M** | **$1,055M** | **$1,402M** |
 
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
 | Year | Revenue | OP (40%) | × 35x | MC | Per Share |
 |------|---------|----------|-------|----|-----------|
-| 2027 | $211M | $84M | $2.95B | SEK 28.0B | SEK 100 |
-| 2028 | $580M | $232M | $8.12B | SEK 77.1B | SEK 273 |
-| 2029 | $940M | $376M | $13.16B | SEK 125.0B | SEK 443 |
-| 2030 | $1,260M | $504M | $17.64B | SEK 167.6B | SEK 594 |
+| 2027 | $238M | $95M | $3.33B | SEK 31.6B | SEK 119 |
+| 2028 | $652M | $261M | $9.13B | SEK 86.7B | SEK 326 |
+| 2029 | $1,055M | $422M | $14.77B | SEK 140.3B | SEK 525 |
+| 2030 | $1,402M | $561M | $19.63B | SEK 186.5B | SEK 697 |
 
 WHY WE DON'T MODEL $60B:
-  Serenity's $60B assumes SIVE acquires downstream and competes with LITE ($64B MC).
+  Serenity's $60B assumes SIVE acquires downstream and competes with LITE.
   That requires M&A execution we can't score. If SIVE stays a component company,
-  $13-18B is the ceiling. If they vertically integrate into optical engines,
+  $14-19B is the ceiling. If they vertically integrate into optical engines,
   $30-60B is theoretically possible but a different company at that point.
 ```
 
