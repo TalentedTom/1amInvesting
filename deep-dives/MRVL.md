@@ -76,36 +76,37 @@ FY2030 revenue raised from $20-22B to $30-35B. Two drivers:
 
 Combined: MRVL is both the custom compute chip AND the CPO switch chip. Dual chokepoint.
 
-## Ceiling — v4.0 AH-1 Full Derivation (Expanding OP 22-34%, 30x ASIC duopoly, single-number midpoint FY2029-FY2030)
+## Ceiling — v4.0 AH-1 Full Derivation (MRVL Q1 FY2027 Earnings Call, 40% OP, 30x, blended)
 
-### Revenue Trajectory (guided + extrapolated):
+### Revenue Model (Earnings call guided + extrapolated):
+
+MRVL CEO May 27, 2026: FY2027 raised to $11.5B (+40%), FY2028 raised to $16.5B (+$1.5B vs prior). Custom silicon $10B+ FY2029 confirmed. Interconnect >70% YoY. Scale-up optics $300M+ (Celestial + MRVL). "Every program we looked at a year ago is larger when we look a year later."
 
 | Year | Revenue | Growth | Source |
 |------|---------|--------|--------|
-| FY2026 | $8.2B | +42% | Actual |
-| FY2027 | $11.0B | +34% | Guided, raised 3x |
-| FY2028 | $15.0B | +36% | Guided, 50% DC growth |
-| FY2029 | $22.0B | +47% | ASIC doubling + Celestial CPO ramp |
-| FY2030 | $32.0B | +45% | Midpoint $30-35B revised estimate |
+| FY2027 | $11.5B | +40% | Guided on earnings call |
+| FY2028 | $18.0B | +57% | Guided $16.5B + upward bias from "every program larger" |
+| FY2029 | $26.0B | +44% | Custom $10B+ confirmed, interconnect + scale-up optics |
+| FY2030 | $35.0B | +35% | Decelerating |
 
-### Full Valuation Table (Expanding OP, 30x, ~870M shares):
+### Full Valuation Table (40% OP, 30x ASIC duopoly, ~915M shares):
 
-ASIC mix shift drives margin expansion — custom silicon higher margin than merchant. Broadcom comp 45% OP at maturity. MRVL heading toward 30-34% as ASIC becomes dominant revenue.
+Q1 FY2027 non-GAAP OP margin 35%. Management targets upper end of 38-40% by FY2028. 40% flat reflects Broadcom-convergence as ASIC becomes dominant revenue. Broadcom at 45%+ validates trajectory.
 
-FY2028 at $134 ≈ current $112. Market pricing ~12 months forward at 30x.
+| Year | Revenue | OP (40%) | × 30x | Per Share |
+|------|---------|----------|-------|-----------|
+| 2027 | $11.5B | $4.60B | $138B | $151 |
+| 2028 | $18.0B | $7.20B | $216B | $236 |
+| 2029 | $26.0B | $10.40B | $312B | $341 |
+| 2030 | $35.0B | $14.00B | $420B | $459 |
 
-| Year | Revenue | OP Margin | OP | × 30x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | $11.0B | 22% | $2.42B | $72.6B | $83 |
-| 2028 | $15.0B | 26% | $3.90B | $117B | $134 |
-| 2029 | $22.0B | 30% | $6.60B | $198B | $228 |
-| 2030 | $32.0B | 34% | $10.88B | $326.4B | $375 |
+FY2027 at $151 vs current $197. Market pricing ~18 months forward.
 
-### Ceiling Derivation:
+### Ceiling Derivation (Blended May 2026):
 
-  Midpoint FY2029-FY2030: ($228 + $375) / 2 ≈ $300
+  (8/12 × $236) + (4/12 × $341) = $271
 
-CEILING: $300 (single number, midpoint FY2029-FY2030)
+CEILING: $271 (blended 67% FY2028 + 33% FY2029)
 
 ## Key Risks
 

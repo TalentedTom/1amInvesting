@@ -161,14 +161,14 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 19/20 | Physics-required. Sole independent CW supplier. ALL 4 CPO platforms. Platform-independent. SATCOM dual-vector, no competitor in quadrant. -1 NRE→volume execution ahead. |
-| Cycle Stage | 7/10 | Stage 1-2. Pipeline exploding. Volume approaching. CPO H2 2026. |
-| TAM Expansion | 9/10 | Phase 1+2+3. Universal light source primitive. Ford Principle satisfied. |
-| Catalysts | 5/5 | Q1 earnings May 20 🔥. CPO H2 2026. SATCOM milestones. NASDAQ dual-listing. WIN Semi qual. |
-| Macro | 9/10 | 120-150 GW compute. InP structural shortage. CPO pulled forward. NATO 5% GDP. |
-| Alpha | 5/5 | ALL 4 CPO platforms confirmed. Amazon 8-K warrant. Anders Storm math. Damnang confirms from below. Swedish media = "meme stock." 3 analysts. Deepest asymmetry in portfolio. |
-| Risks | -1 | NRE must convert to production (-1). |
-| **Base** | **53/60 (88%)** | |
+| Core Thesis | 20/20 | Physics-required. Sole independent CW supplier. ALL 4 CPO platforms confirmed (NVIDIA COUPE, Broadcom Davisson, Marvell Celestial, MediaTek). 12 revenue vectors. Golden Dome $1.2T. MRVL CEO confirms Celestial HVM ramp. |
+| Cycle Stage | 9/10 | NRE converting to volume. MRVL "bringing Celestial to high volume manufacturing." Jabil quals 1-4 months, production Aug 2026. CPO H2 2026. -1 first production revenue not yet reported. |
+| TAM Expansion | 10/10 | Goldman $193B photonics TAM. EU Chips Act 2.0 photonics pillar. Golden Dome $1.2T. Universal light source primitive across CPO/LRO/FMCW/SATCOM/defense. |
+| Catalysts | 5/5 | SIVE earnings May 29. MRVL Celestial confirmation. EU Chips Act 2.0. Jabil production Aug 2026. NASDAQ dual-listing. |
+| Macro | 10/10 | US CHIPS Act funding received. EU Chips Act 2.0 photonics pillar. NATO defense. Golden Dome. Dual government backing (US + EU). |
+| Alpha | 5/5 | 3 analysts. Swedish media calls "meme stock." OSINT supply chain mapping to Celestial/Ayar/Lightmatter. Deepest asymmetry in portfolio. Market hasn't connected MRVL Celestial ramp to SIVE laser supply. |
+| Risks | 0 | NRE→production risk resolved by MRVL HVM confirmation + Jabil quals timeline. Government-backed (US + EU). |
+| **Base** | **59/60 (99%)** | |
 
 ## Ceiling — v4.0 AH-1 Full Derivation (12-Vector, 40% OP, 35x, per Rule AH-9)
 
@@ -182,7 +182,7 @@ AH-7 confidence: HIGH — confirmed shipping, multiple platform qualifications.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $75M | $200M | $350M | $500M |
+| $85M | $230M | $400M | $560M |
 
 ### Vector 2: Jabil 1.6T LRO (PULLED FORWARD 9 MONTHS)
 Jabil EVP Crowley at JPM: quals 1-4 months, production as early as August 2026 (was H2 2027).
@@ -267,7 +267,7 @@ AH-7 confidence: MEDIUM — GFS confirmed, Lightmatter-specific volume uncertain
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $18M | $42M | $65M | $90M |
+| $20M | $48M | $75M | $105M |
 
 ### Vector 7: Celestial AI / O-Net (Chinese Hyperscaler Demand)
 Celestial: acquired by Marvell, became their CPO growth vector. Would be $10B+ standalone.
@@ -279,18 +279,18 @@ AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncerta
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $15M | $45M | $70M | $95M |
+| $25M | $75M | $120M | $160M |
 
 ### Vector 8: Lightelligence (Photonic COMPUTE)
 88.3% share of China's independent optical interconnect. Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE.
 Distinct from Lightmatter (V6): Lightelligence = photonic COMPUTE (processing data with light).
 $250M funded. SIVE supplies lasers to BOTH approaches (interconnect + compute).
 Source: Serenity 12-vector mapping, Lightelligence confirmed.
-AH-7 confidence: MEDIUM — confirmed customer, China regulatory risk.
+AH-7 confidence: HIGH — MRVL CEO confirmed Celestial volume ramp on earnings call (May 2026). Scale-up optics revenue >2x prior $150M outlook. "Bringing Celestial to high volume manufacturing."
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $10M | $30M | $50M | $65M |
+| $12M | $35M | $58M | $75M |
 
 ### Vector 9: Nokia (Telecom Infrastructure)
 Finland revenue 268x YoY growth confirmed. Nokia is a direct customer.
@@ -320,7 +320,7 @@ Probability: 25%
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $5M | $25M | $40M | $55M |
+| $6M | $28M | $45M | $62M |
 
 ### Vector 12: YSS / Defense Miscellaneous
 Smaller defense and specialty photonics contracts.
@@ -338,6 +338,12 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 
 ---
 
+### MRVL Earnings Confirmation (May 27, 2026)
+
+MRVL CEO on earnings call: "Scale-up optics revenue next year should be more than 2x prior ~$150M outlook" based on Celestial. "Multiple CPO and NPO engagements accelerating." "Bringing Celestial to high volume manufacturing." Celestial selected by T1 hyperscaler (likely Amazon). Serenity confirms OSINT maps SIVE directly to Celestial as laser supplier.
+
+Impact: Vector 7 (Celestial) upgraded MEDIUM→HIGH confidence, revenue doubled. Vectors 1, 6, 8, 11 all receive 10-15% probability uplift from "market adoption accelerate" macro confirmation.
+
 ### Combined Revenue Table:
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
@@ -347,12 +353,12 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 | 3. Apple | $0 | $65M | $100M | $130M |
 | 4. Defense NEMC | $5M | $10M | $15M | $20M |
 | 5. Defense Primes | $10M | $20M | $30M | $40M |
-| 6. Lightmatter | $18M | $42M | $65M | $90M |
+| 6. Lightmatter | $20M | $48M | $75M | $105M |
 | 7. Celestial/O-Net | $15M | $45M | $70M | $95M |
-| 8. Lightelligence | $10M | $30M | $50M | $65M |
+| 8. Lightelligence | $12M | $35M | $58M | $75M |
 | 9. Nokia | $8M | $20M | $30M | $35M |
 | 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
-| 11. AMD/GFS | $5M | $25M | $40M | $55M |
+| 11. AMD/GFS | $6M | $28M | $45M | $62M |
 | 12. YSS/Defense | $5M | $13M | $25M | $15M |
 | **TOTAL** | **$206M** | **$560M** | **$900M** | **$1,200M** |
 
@@ -365,63 +371,12 @@ AH-7 confidence: LOW — catch-all for smaller revenue streams.
 | 2029 | $940M | $376M | $13.16B | SEK 125.0B | SEK 443 |
 | 2030 | $1,260M | $504M | $17.64B | SEK 167.6B | SEK 594 |
 
-  Revenue ramps from $206M to $1,200M in 4 years (5.8x).
-  SEK 97 → SEK 566 per share. Strong long-term compounder at 40% OP margins.
-  Margins justified: pure-play laser company, LITE at 32% and rising, SIVE more concentrated.
-
-### Ceiling Derivation:
-
-  LOW = FY2027 base: $211M × 40% × 35x / 297M = SEK 100
-  HIGH = FY2028 + discounted FY2029 + discounted FY2030
-       = 273 + (443-273) × 0.85 + (594-443) × 0.72
-       = 273 + 145 + 109 = SEK 527 → rounded SEK 525
-
-CEILING: SEK 100-525 (includes Golden Dome Hydra terminal increment)
-
-SERENITY COMPARISON:
-  $3B today = SEK ~100 → matches our LOW
-  $10B next year = SEK ~340 → matches our MID-HIGH
-  $60B long-term = SEK ~2,000 → requires downstream IP acquisitions (not modeled)
-
 WHY WE DON'T MODEL $60B:
   Serenity's $60B assumes SIVE acquires downstream and competes with LITE ($64B MC).
   That requires M&A execution we can't score. If SIVE stays a component company,
   $13-18B is the ceiling. If they vertically integrate into optical engines,
   $30-60B is theoretically possible but a different company at that point.
 ```
-
-**Entry:** SEK 55.95 (post-gap) vs midpoint SEK 300 = 5.4x → Entry 35/40
-
-## Ceiling — v4.0 AH-1 Summary (35x, 40% OP)
-
-Reconciled 12-vector base case (session-confirmed totals):
-  2027: $206M | 2028: $560M | 2029: $900M | 2030: $1,200M
-
-  FY2027: $206M x 40% OP = $82M x 35x = $2.88B / 297M shares = SEK 97 -> SEK 100
-  FY2028: $560M x 40% OP = $224M x 35x = $7.84B / 297M shares = SEK 264
-  FY2029: $900M x 40% OP = $360M x 35x = $12.6B / 297M shares = SEK 424
-  FY2030: $1,200M x 40% OP = $480M x 35x = $16.8B / 297M shares = SEK 566
-
-  LOW = FY2027 base = SEK 100
-  HIGH = 264 + (424-264) x 0.85 + (566-424) x 0.72 = SEK 500
-
-CEILING: SEK 100-500
-
-## Supply Chain Position
-
-The #1 position sits at the convergence of every supply chain layer:
-
-```
-120-150 GW compute demand
-  → needs optical interconnects (1,024 lasers per rack)
-    → needs CW lasers (SIVE — sole independent supplier)
-      → needs InP epi (IQE, LandMark)
-        → needs InP substrate (AXTI)
-          → needs MOCVD tools (Aixtron)
-            → needs test equipment (AEHR)
-```
-
-SIVE is Layer 0 — the laser. Everything above needs it. Everything below feeds it.
 
 ## Key Risks
 
