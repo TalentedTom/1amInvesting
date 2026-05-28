@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // phones access to the P/E value is also gone (its source column no
     // longer exists, and FY targets are richer than one toggle can carry).
     const simpleCols = [
-        "SuperCycle", "_chart", "Ticker", "Total", "Base", "Entry",
+        "SuperCycle", "_chart", "Ticker", "EV Upside", "Base", "Entry",
         "Current Price", "Change %", "Upside",
         "FY2027", "FY2028", "FY2029", "FY2030", "_sparkline"
     ];
@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Current Price": "Price",
         "Change %": "Chg%",
         "SuperCycle": "Cycle",
+        "EV Upside": "EVUp",
         "FY2027": "FY27",
         "FY2028": "FY28",
         "FY2029": "FY29",
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Cycle: 'Cycle',
             col_Ticker: 'Ticker',
             col_Total: 'Total',
+            col_EVUp: 'EV Up',
             col_Base: 'Base',
             col_Entry: 'Entry',
             col_Price: 'Price',
@@ -171,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Cycle: '周期',
             col_Ticker: '代码',
             col_Total: '总分',
+            col_EVUp: 'EV 上涨',
             col_Base: '基础',
             col_Entry: '入场',
             col_Price: '价格',
@@ -933,6 +936,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (live_t.change_pct !== undefined) arr[i]['Change %'] = live_t.change_pct;
                 if (live_t.entry !== undefined) arr[i]['Entry'] = live_t.entry;
                 if (live_t.total !== undefined) arr[i]['Total'] = live_t.total;
+                if (live_t.ev_upside !== undefined) arr[i]['EV Upside'] = live_t.ev_upside;
                 if (live_t.upside !== undefined) arr[i]['Upside'] = live_t.upside;
             }
             touched = true;
@@ -1692,11 +1696,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
-        // Score Badge Styling (Total, Base, Entry) — continuous red → yellow → green gradient
+        // EV Upside — the headline metric (replaced Total). Unbounded
+        // value = Base × (high-end Upside multiplier − 1). Uses its own
+        // 6-tier color system (NOT the 0-100 gradient) because the value
+        // range and meaning are different:
+        //   300+      maximum pop  (deep green + animated glow)
+        //   200-300   strong green
+        //   100-200   green
+        //    50-100   faint green (almost neutral)
+        //     0- 50   neutral grey
+        //     < 0     red (price above ceiling — avoid)
+        if (colName === "EV Upside") {
+            const v = parseFloat(value);
+            if (isNaN(v)) return `<span style="color:#64748b;">-</span>`;
+            const t = evUpsideStyle(v);
+            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${value}</span>`;
+        }
+
+        // Score Badge Styling (Base, Entry) — continuous red → yellow → green gradient
         // so every integer score 0–100 has its own blended color. Scores >100 get the
         // EXTREME treatment (gold border + animated glow, defined in CSS) on top of the
         // max-green gradient.
-        if (colName === "Total" || colName === "Base" || colName === "Entry") {
+        if (colName === "Base" || colName === "Entry") {
             const scoreNum = parseFloat(value);
             if (!isNaN(scoreNum)) {
                 const c = scoreColor(scoreNum);
@@ -1710,8 +1731,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             return `<span style="font-weight: 600;">${value}</span>`;
         }
-        
+
         return String(value);
+    }
+
+    // EV Upside 6-tier color mapper. Returns { bg, text, cls } where cls
+    // is a CSS hook for tier-specific effects (the 300+ glow). Thresholds
+    // match the analyst's spec: 300+/200/100/50/0/neg.
+    function evUpsideStyle(v) {
+        if (v >= 300) return { bg: '#047857', text: '#ffffff', cls: 'ev-max' };
+        if (v >= 200) return { bg: '#059669', text: '#ffffff', cls: 'ev-200' };
+        if (v >= 100) return { bg: '#10b981', text: '#ffffff', cls: 'ev-100' };
+        if (v >= 50)  return { bg: 'rgba(16, 185, 129, 0.22)', text: '#34d399', cls: 'ev-50' };
+        if (v >= 0)   return { bg: 'rgba(148, 163, 184, 0.18)', text: 'var(--text-secondary)', cls: 'ev-0' };
+        return { bg: '#b91c1c', text: '#ffffff', cls: 'ev-neg' };
     }
 
     // Initial render — runs last so all const helpers (SCORE_STOPS etc)

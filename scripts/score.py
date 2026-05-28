@@ -274,6 +274,24 @@ def upside_display(low: float, high: float, price: float) -> str:
     return f"{low/price:.1f}x-{high/price:.1f}x"
 
 
+def ev_upside(base: int, high: float, price: float) -> int:
+    """Expected-value upside score = Base × (high-end multiplier − 1).
+
+    The headline metric (replaced 'Total'). Uses the HIGH end of the
+    Ceiling Target range — i.e. the same multiplier shown as the top of
+    the Upside column. Unbounded by design:
+        - deeply positive (e.g. SIVE ~475) when a high-conviction name
+          still has multiple-x upside to its ceiling
+        - negative when price is already above ceiling (Upside < 1x →
+          multiplier − 1 < 0), flagging an avoid
+
+    Verified against the analyst's xlsx:
+        SIVE  base 99, 5.8x -> 99 × 4.8 = 475
+        NBIS  base 82, 2.5x -> 82 × 1.5 = 123
+    """
+    return int(round(base * (high / price - 1)))
+
+
 def score_row(row):
     """Return a summary dict if the row was scored, or None if skipped.
     Mutates `row` in-place when scoring succeeds.
@@ -299,8 +317,9 @@ def score_row(row):
     # Note: we deliberately do NOT write Rating — it carries free-form analyst
     # text and bucket crossings are reported via alerts instead.
     row["Entry"] = entry
-    row["Total"] = total
+    row["Total"] = total          # kept for bucket/alert logic (not displayed)
     row["Upside"] = upside
+    row["EV Upside"] = ev_upside(base, high, price)   # headline metric (displayed)
 
     return {
         "ticker": str(row.get("Ticker") or ""),
@@ -410,6 +429,7 @@ def main():
             lang_data[i]["Entry"] = row["Entry"]
             lang_data[i]["Total"] = row["Total"]
             lang_data[i]["Upside"] = row["Upside"]
+            lang_data[i]["EV Upside"] = row["EV Upside"]
 
     save_data_js(prefix, data)
 

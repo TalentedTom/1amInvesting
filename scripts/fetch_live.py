@@ -68,6 +68,7 @@ from score import (  # noqa: E402
     entry_score,
     total_score,
     upside_display,
+    ev_upside,
     bucket_for,
 )
 
@@ -185,6 +186,7 @@ def build_live_payload(data):
             entry_payload["entry"] = entry
             entry_payload["total"] = total
             entry_payload["upside"] = upside_display(low, high, price)
+            entry_payload["ev_upside"] = ev_upside(base, high, price)
             bucket_counts[bucket_for(total)] = bucket_counts.get(bucket_for(total), 0) + 1
         else:
             no_score.append(ticker)

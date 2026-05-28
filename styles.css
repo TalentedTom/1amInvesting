@@ -1058,6 +1058,55 @@ body.light-mode .badge.score-tier-red-3 {
     text-align: center;
 }
 
+/* === EV Upside badge (headline metric, replaced Total) ===========
+   6-tier color system keyed off the unbounded EV Upside value.
+   Background + text colors are set inline by evUpsideStyle() in JS;
+   these classes carry the structural bits + tier-specific effects.
+   The 300+ tier ('ev-max') gets an animated green glow so the very
+   best asymmetric setups jump off the page. */
+.badge.ev-badge {
+    border: 1px solid transparent;
+    font-weight: 700;
+    min-width: 30px;
+    text-align: center;
+}
+.badge.ev-badge.ev-200 { box-shadow: 0 0 10px rgba(5, 150, 105, 0.45); }
+.badge.ev-badge.ev-100 { box-shadow: 0 0 6px rgba(16, 185, 129, 0.30); }
+/* Faint + neutral tiers: subtle border so the low-contrast fills still
+   read as a contained badge. */
+.badge.ev-badge.ev-50  { border-color: rgba(16, 185, 129, 0.40); }
+.badge.ev-badge.ev-0   { border-color: var(--border); font-weight: 600; }
+/* Negative (avoid): solid red with a faint red halo. */
+.badge.ev-badge.ev-neg { box-shadow: 0 0 8px rgba(185, 28, 28, 0.45); }
+
+/* Maximum pop — 300+. Deep-green fill (set inline) + gold border +
+   animated glow, the strongest visual weight in the whole table. */
+.badge.ev-badge.ev-max {
+    border: 2px solid #fbbf24 !important;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+    animation: ev-max-glow 2.2s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+@keyframes ev-max-glow {
+    0%, 100% {
+        box-shadow:
+            inset 0 0 5px rgba(190, 255, 210, 0.40),
+            0 0 8px rgba(16, 185, 129, 0.55),
+            0 0 16px rgba(16, 185, 129, 0.30);
+    }
+    50% {
+        box-shadow:
+            inset 0 0 8px rgba(190, 255, 210, 0.60),
+            0 0 14px rgba(16, 185, 129, 0.90),
+            0 0 26px rgba(16, 185, 129, 0.55);
+    }
+}
+body.light-mode .badge.ev-badge.ev-max {
+    border-color: #b45309 !important;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+}
+
 /* === EXTREME score badge (Total/Entry > 100, scale-breaking) ===
    Layered on top of .score-gradient: a gold border + slow pulsing glow,
    plus a subtle text-shadow so the number itself pops a touch. Rare by
