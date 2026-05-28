@@ -1152,7 +1152,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!scRaw || scRaw === '—') {
                         tags = ['Other'];   // unspecified/dash treated as Other
                     } else {
-                        tags = scRaw.split(',').map(s => s.trim()).filter(Boolean);
+                        // Split on commas OR newlines — most rows are
+                        // comma-separated ('AI, CPO') but some xlsx cells
+                        // use line breaks ('AI\nCPO\n800G'). Handle both.
+                        tags = scRaw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
                     }
                     if (!tags.some(t => activeSupercycles.has(t))) return false;
                 }
@@ -1583,7 +1586,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (colName === 'SuperCycle') {
             const raw = String(value || '').trim();
             if (!raw || raw === '—' || raw === '-') return '';
-            const tags = raw.split(',').map(s => s.trim()).filter(Boolean);
+            // Split on commas OR newlines: most rows are comma-separated
+            // ('AI, CPO') but some xlsx cells use line breaks instead
+            // ('AI\nCPO\n800G' — e.g. XFAB). Both must parse to tags.
+            const tags = raw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
             const sorted = SUPERCYCLE_ORDER.filter(c => tags.includes(c));
             if (!sorted.length) return '';
             const cls = `cycle-cell cycle-n${sorted.length}`;
