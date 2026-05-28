@@ -1710,7 +1710,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const v = parseFloat(value);
             if (isNaN(v)) return `<span style="color:#64748b;">-</span>`;
             const t = evUpsideStyle(v);
-            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${value}</span>`;
+            // Display as a percentage ('472%') so the meaning — "472%
+            // expected-value upside" — is obvious at a glance. The '%' is
+            // display-only; data.js stores the bare number, so sorting
+            // (which strips %) is unaffected.
+            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${v}%</span>`;
         }
 
         // Score Badge Styling (Base, Entry) — continuous red → yellow → green gradient
