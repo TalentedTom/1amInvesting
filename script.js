@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // phones access to the P/E value is also gone (its source column no
     // longer exists, and FY targets are richer than one toggle can carry).
     const simpleCols = [
-        "SuperCycle", "_chart", "Ticker", "EV Upside", "Base", "Entry",
+        "SuperCycle", "_chart", "Ticker", "EV Upside", "Base",
         "Current Price", "Change %", "Upside",
         "FY2027", "FY2028", "FY2029", "FY2030", "_sparkline"
     ];

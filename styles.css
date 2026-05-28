@@ -536,32 +536,32 @@ th {
    FY28 is the "1-year forward" reference point — most actionable
    forecast in the table. Highlight it with a faint accent-blue tint
    on both header and cells so it stays distinct from the surrounding
-   FY columns without being noisy. nth-child(11) maps to FY28 with
-   the current column order:
-     1 SuperCycle  2 _chart  3 Ticker  4 Total  5 Base  6 Entry
-     7 Price  8 Chg%  9 Upside  10 FY27  11 FY28  12 FY29  13 FY30
-     14 _sparkline */
-th:nth-child(11),
-td:nth-child(11) {
+   FY columns without being noisy. nth-child(10) maps to FY28 with
+   the current column order (Entry column removed):
+     1 SuperCycle  2 _chart  3 Ticker  4 EV Upside  5 Base
+     6 Price  7 Chg%  8 Upside  9 FY27  10 FY28  11 FY29  12 FY30
+     13 _sparkline */
+th:nth-child(10),
+td:nth-child(10) {
     background: rgba(59, 130, 246, 0.07);
 }
 /* Keep the highlight visible through hover + expanded states (the
    global hover/row-expanded rules would otherwise overwrite with
    --row-hover and obscure the column distinction). */
-tbody tr:hover td:nth-child(11) {
+tbody tr:hover td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.12);
 }
-tr.row-expanded td:nth-child(11) {
+tr.row-expanded td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.10);
 }
-body.light-mode th:nth-child(11),
-body.light-mode td:nth-child(11) {
+body.light-mode th:nth-child(10),
+body.light-mode td:nth-child(10) {
     background: rgba(59, 130, 246, 0.06);
 }
-body.light-mode tbody tr:hover td:nth-child(11) {
+body.light-mode tbody tr:hover td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.11);
 }
-body.light-mode tr.row-expanded td:nth-child(11) {
+body.light-mode tr.row-expanded td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.09);
 }
 
@@ -583,8 +583,9 @@ body.light-mode .sparkline {
 }
 /* Sparkline column sizing — keep it tight so it doesn't push the FY
    columns leftward more than necessary. The SVG itself is 70x22; cell
-   padding + a few pixels of slack puts the column at ~82px. */
-th:nth-child(14), td:nth-child(14) {
+   padding + a few pixels of slack puts the column at ~82px.
+   nth-child(13) = last column now that Entry was removed. */
+th:nth-child(13), td:nth-child(13) {
     width: 82px;
     min-width: 82px;
     max-width: 82px;
@@ -1432,20 +1433,20 @@ tbody tr {
     }
 
     /* === Mobile Basic mode (default) ===
-       Hide FY27/28/29/30 + sparkline (cols 10-14). Visible cols on
-       phones: Cycle / Chart / Ticker / Total / Base / Entry / Price /
-       Chg% / Upside. Body has no `.adv-mode` class in this state. */
+       Hide FY27/28/29/30 + sparkline (cols 9-13, after Entry removal).
+       Visible cols on phones: Cycle / Chart / Ticker / EV Upside /
+       Base / Price / Chg% / Upside. Body has no `.adv-mode` class. */
+    body:not(.adv-mode) th:nth-child(9),  body:not(.adv-mode) td:nth-child(9),
     body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10),
     body:not(.adv-mode) th:nth-child(11), body:not(.adv-mode) td:nth-child(11),
     body:not(.adv-mode) th:nth-child(12), body:not(.adv-mode) td:nth-child(12),
-    body:not(.adv-mode) th:nth-child(13), body:not(.adv-mode) td:nth-child(13),
-    body:not(.adv-mode) th:nth-child(14), body:not(.adv-mode) td:nth-child(14) {
+    body:not(.adv-mode) th:nth-child(13), body:not(.adv-mode) td:nth-child(13) {
         display: none;
     }
 
     /* === Mobile ADV mode ===
-       Hide Cycle (col 1), Chg% (col 8), Upside (col 9). Reveal
-       FY27/28/29/30 + sparkline (cols 10-14). FY columns are visible
+       Hide Cycle (col 1), Chg% (col 7), Upside (col 8). Reveal
+       FY27/28/29/30 + sparkline (cols 9-13). FY columns are visible
        by default in browsers since they're table-cell, but Basic
        mode above hides them — ADV doesn't need to re-show explicitly,
        just not match the Basic hide selector.
@@ -1455,25 +1456,25 @@ tbody tr {
        moves to left:24 (after the 24px Chart column). No third sticky
        col in ADV mode — Ticker is the last sticky. */
     body.adv-mode th:nth-child(1), body.adv-mode td:nth-child(1) { display: none; }
+    body.adv-mode th:nth-child(7), body.adv-mode td:nth-child(7) { display: none; }
     body.adv-mode th:nth-child(8), body.adv-mode td:nth-child(8) { display: none; }
-    body.adv-mode th:nth-child(9), body.adv-mode td:nth-child(9) { display: none; }
     body.adv-mode th:nth-child(2), body.adv-mode td:nth-child(2) {
         left: 0;
     }
     body.adv-mode th:nth-child(3), body.adv-mode td:nth-child(3) {
         left: 24px;
     }
-    /* ADV mobile column widths — keep the visible cells compact since
-       there are 11 of them in the table after this mode kicks in. */
+    /* ADV mobile column widths — keep the visible cells compact. FY
+       cols are 9-12, sparkline is 13 (after Entry removal). */
+    body.adv-mode th:nth-child(9),  body.adv-mode td:nth-child(9),
     body.adv-mode th:nth-child(10), body.adv-mode td:nth-child(10),
     body.adv-mode th:nth-child(11), body.adv-mode td:nth-child(11),
-    body.adv-mode th:nth-child(12), body.adv-mode td:nth-child(12),
-    body.adv-mode th:nth-child(13), body.adv-mode td:nth-child(13) {
+    body.adv-mode th:nth-child(12), body.adv-mode td:nth-child(12) {
         width: 48px; min-width: 44px; max-width: 56px;
         padding-left: 0.15rem; padding-right: 0.15rem;
         font-size: 0.65rem;
     }
-    body.adv-mode th:nth-child(14), body.adv-mode td:nth-child(14) {
+    body.adv-mode th:nth-child(13), body.adv-mode td:nth-child(13) {
         width: 70px; min-width: 64px; max-width: 78px;
         padding-left: 2px; padding-right: 2px;
     }
