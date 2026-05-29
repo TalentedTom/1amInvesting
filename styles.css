@@ -1495,12 +1495,12 @@ tbody tr {
         overflow: visible;
         padding-top: 17px;
     }
-    body:not(.adv-mode) th:nth-child(9) .ev-group-float {
+    body:not(.adv-mode) th:nth-child(10) .ev-group-float {
         display: block;
         position: absolute;
         top: 2px;
-        left: 0;
-        width: 200%;
+        right: 0;            /* pin to 2027's right edge (= table edge) */
+        width: 200%;         /* span leftward across Today + 2027 */
         text-align: center;
         font-size: 0.52rem;
         font-weight: 700;

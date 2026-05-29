@@ -1312,17 +1312,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 // self-explanatory there.
                 let labelHtml = labelFor(col);
                 if (col === 'FY2027') {
-                    // The .ev-group-float span renders the 'Expected Value'
-                    // group label as a floating banner anchored in this
-                    // (Today) header cell, spanning rightward across the
-                    // 2027 column. Mobile-Basic-only (CSS-gated). This
-                    // replaces the earlier separate group <tr>, which the
-                    // body-column nth-child hide/sticky rules kept clobbering.
-                    labelHtml = `<span class="ev-group-float">${tr('ev_group')}</span>` +
-                                `<span class="lbl-wide">${labelHtml}</span>` +
+                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
                                 `<span class="lbl-evbasic">${tr('ev_today')}</span>`;
                 } else if (col === 'FY2028') {
-                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
+                    // The .ev-group-float span renders the 'Target' group
+                    // label as a floating banner anchored in THIS (2027)
+                    // header — the rightmost visible column in Basic mode.
+                    // CSS pins it with right:0 and spans it leftward
+                    // (width:200%) across the Today column, so it never
+                    // spills past the table's right edge (which clips,
+                    // chopping the text to 'TAR'). Mobile-Basic-only.
+                    labelHtml = `<span class="ev-group-float">${tr('ev_group')}</span>` +
+                                `<span class="lbl-wide">${labelHtml}</span>` +
                                 `<span class="lbl-evbasic">${tr('ev_1year')}</span>`;
                 }
                 headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
