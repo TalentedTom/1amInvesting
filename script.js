@@ -1312,7 +1312,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // self-explanatory there.
                 let labelHtml = labelFor(col);
                 if (col === 'FY2027') {
-                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
+                    // The .ev-group-float span renders the 'Expected Value'
+                    // group label as a floating banner anchored in this
+                    // (Today) header cell, spanning rightward across the
+                    // 2027 column. Mobile-Basic-only (CSS-gated). This
+                    // replaces the earlier separate group <tr>, which the
+                    // body-column nth-child hide/sticky rules kept clobbering.
+                    labelHtml = `<span class="ev-group-float">${tr('ev_group')}</span>` +
+                                `<span class="lbl-wide">${labelHtml}</span>` +
                                 `<span class="lbl-evbasic">${tr('ev_today')}</span>`;
                 } else if (col === 'FY2028') {
                     labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
@@ -1323,31 +1330,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         thead.innerHTML = headHtml;
 
-        // Group-header row (mobile-Basic only): a single 'Expected Value'
-        // cell sitting above the Today + 1-year columns (grid cols 9-10).
-        // Lives as a separate <tr> at the top of the <thead>; CSS hides it
-        // on desktop and mobile-ADV.
-        //
-        // The colspans tile the FULL 13-column grid (8 + 2 + 3 = 13), not
-        // just the mobile-visible columns. This is critical: display:none
-        // cells still occupy grid columns (they collapse to zero width but
-        // keep their position), so a label must be spanned across the real
-        // grid indices. Spanning cols 1-8 / 9-10 / 11-13 puts 'Expected
-        // Value' exactly over cols 9-10 (Today + 2027) no matter which
-        // columns inside the other two spans are hidden. (The earlier
-        // 5+2 colspan assumed hidden cols didn't count — they do, which
-        // is why the label landed over the wrong columns.)
-        const theadEl = thead.parentElement;
-        let groupRow = document.getElementById('ev-group-row');
-        if (!groupRow) {
-            groupRow = document.createElement('tr');
-            groupRow.id = 'ev-group-row';
-            theadEl.insertBefore(groupRow, thead);
-        }
-        groupRow.innerHTML =
-            `<th class="ev-group-spacer" colspan="8"></th>` +
-            `<th class="ev-group-label" colspan="2">${tr('ev_group')}</th>` +
-            `<th class="ev-group-spacer" colspan="3"></th>`;
+        // NOTE: the 'Expected Value' group label is rendered as a floating
+        // banner inside the Today (FY2027) header cell — see the
+        // .ev-group-float span added in the header build above, positioned
+        // by CSS to span across the 2027 column. We previously used a
+        // separate group <tr> with colspans, but the body-column
+        // nth-child hide/sticky/width rules kept matching its cells and
+        // clobbering the layout. Anchoring the label inside a real
+        // column header sidesteps all of that.
+
+        // Clean up the obsolete group row if a prior render created it
+        // (defensive — harmless once the deployed build no longer makes it).
+        const staleGroupRow = document.getElementById('ev-group-row');
+        if (staleGroupRow) staleGroupRow.remove();
 
         // Info ("?") buttons inside column headers — show a small popover
         // with the column's explanatory caption on click. Attach the

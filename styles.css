@@ -565,35 +565,16 @@ body.light-mode tr.row-expanded td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.09);
 }
 
-/* === Expected Value group header (mobile-Basic only) =============
+/* === Expected Value group label (mobile-Basic only) ==============
    FY2027 / FY2028 headers carry two labels: the normal one (.lbl-wide,
    'FY27' / 'FY28' incl. the '?' button) and a mobile-Basic one
-   (.lbl-evbasic, 'Today' / '1 year'). By default we show the wide
-   label and hide the EV-basic label + the group row. The mobile-Basic
-   media query below flips this. */
+   (.lbl-evbasic, 'Today' / '2027'). The 'Expected Value' group label
+   (.ev-group-float) is a banner anchored inside the Today header cell
+   that visually spans across the 2027 column. All three are hidden by
+   default; the mobile-Basic media query reveals .lbl-evbasic +
+   .ev-group-float and hides .lbl-wide for these two columns. */
 .lbl-evbasic { display: none; }
-#ev-group-row { display: none; }
-.ev-group-spacer {
-    background: transparent !important;
-    border: none !important;
-    cursor: default;
-    /* Override the global th position:sticky so this row doesn't pin to
-       top:0 and overlap the main (sticky) header row. It scrolls away
-       normally; the 'Today'/'1 year' labels in the main header stay
-       pinned. */
-    position: static;
-}
-.ev-group-label {
-    text-align: center;
-    cursor: default;
-    font-size: 0.6rem;
-    letter-spacing: 0.04em;
-    color: var(--accent);
-    background: rgba(59, 130, 246, 0.10);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.35);
-    padding: 0.25rem 0.18rem;
-    position: static;   /* see .ev-group-spacer note */
-}
+.ev-group-float { display: none; }
 
 /* === Trajectory sparkline (5-point mini chart per row) ===========
    Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,
@@ -1487,7 +1468,9 @@ tbody tr {
     body:not(.adv-mode) th:nth-child(3), body:not(.adv-mode) td:nth-child(3) {
         left: 24px;
     }
-    /* Today (9) + 1 year (10) column sizing — compact but readable. */
+    /* Today (9) + 2027 (10) column sizing — compact but readable, equal
+       widths so the 'Expected Value' float (width:200% of col 9) spans
+       them symmetrically. */
     body:not(.adv-mode) th:nth-child(9),  body:not(.adv-mode) td:nth-child(9),
     body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10) {
         width: 52px; min-width: 46px; max-width: 60px;
@@ -1495,11 +1478,42 @@ tbody tr {
         font-size: 0.68rem;
         text-align: right;
     }
-    /* Reveal the 'Expected Value' group header + swap FY labels for the
-       'Today' / '1 year' wording (Basic mode only). */
-    body:not(.adv-mode) #ev-group-row { display: table-row; }
-    body:not(.adv-mode) .lbl-wide     { display: none; }
-    body:not(.adv-mode) .lbl-evbasic  { display: inline; }
+    /* Swap FY labels for the 'Today' / '2027' wording (Basic mode only). */
+    body:not(.adv-mode) .lbl-wide    { display: none; }
+    body:not(.adv-mode) .lbl-evbasic { display: inline; }
+
+    /* 'Expected Value' floating group label. Anchored in the Today (col 9)
+       header, it spans rightward (width 200% = Today + 2027, equal-width)
+       and centers above both. The two header cells get extra top padding
+       to make vertical room; all header labels bottom-align so the data
+       labels (Today / 2027 / Price / etc.) stay on one baseline while the
+       group banner floats above the EV pair only. */
+    body:not(.adv-mode) #table-head-row th { vertical-align: bottom; }
+    body:not(.adv-mode) th:nth-child(9),
+    body:not(.adv-mode) th:nth-child(10) {
+        position: relative;
+        overflow: visible;
+        padding-top: 17px;
+    }
+    body:not(.adv-mode) th:nth-child(9) .ev-group-float {
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 200%;
+        text-align: center;
+        font-size: 0.52rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        line-height: 1.1;
+        color: var(--accent);
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.45);
+        pointer-events: none;
+        z-index: 5;
+    }
 
     /* === Mobile ADV mode ===
        Hide Cycle (col 1), Chg% (col 6), Upside (col 8). Reveal
