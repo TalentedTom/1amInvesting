@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // longer exists, and FY targets are richer than one toggle can carry).
     const simpleCols = [
         "SuperCycle", "_chart", "Ticker", "EV Upside", "Base",
-        "Current Price", "Change %", "Upside",
+        "Change %", "Current Price", "Upside",
         "FY2027", "FY2028", "FY2029", "FY2030", "_sparkline"
     ];
 
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mode_adv: 'ADV',
             ev_group: 'Expected Value',
             ev_today: 'Today',
-            ev_1year: '1 year',
+            ev_1year: '2027',
             wechat_scan: 'Scan with WeChat to add me',
             wechat_close: 'Close',
             modal_loading: 'Loading…',
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mode_adv: '高级',
             ev_group: '预期价值',
             ev_today: '今日',
-            ev_1year: '1年后',
+            ev_1year: '2027',
             wechat_scan: '微信扫一扫加我',
             wechat_close: '关闭',
             modal_loading: '加载中…',
@@ -1324,13 +1324,19 @@ document.addEventListener('DOMContentLoaded', () => {
         thead.innerHTML = headHtml;
 
         // Group-header row (mobile-Basic only): a single 'Expected Value'
-        // cell spanning the Today + 1-year columns, with a spacer cell
-        // covering the 5 visible columns before them (Chart, Ticker, EV
-        // Upside, Base, Price). Lives as a separate <tr> at the top of the
-        // <thead>; CSS hides it on desktop and mobile-ADV. The colspans
-        // (5 + 2 = 7) match the 7 columns visible in mobile-Basic, so it
-        // aligns there; on other layouts it's display:none so the
-        // colspan mismatch is harmless.
+        // cell sitting above the Today + 1-year columns (grid cols 9-10).
+        // Lives as a separate <tr> at the top of the <thead>; CSS hides it
+        // on desktop and mobile-ADV.
+        //
+        // The colspans tile the FULL 13-column grid (8 + 2 + 3 = 13), not
+        // just the mobile-visible columns. This is critical: display:none
+        // cells still occupy grid columns (they collapse to zero width but
+        // keep their position), so a label must be spanned across the real
+        // grid indices. Spanning cols 1-8 / 9-10 / 11-13 puts 'Expected
+        // Value' exactly over cols 9-10 (Today + 2027) no matter which
+        // columns inside the other two spans are hidden. (The earlier
+        // 5+2 colspan assumed hidden cols didn't count — they do, which
+        // is why the label landed over the wrong columns.)
         const theadEl = thead.parentElement;
         let groupRow = document.getElementById('ev-group-row');
         if (!groupRow) {
@@ -1339,8 +1345,9 @@ document.addEventListener('DOMContentLoaded', () => {
             theadEl.insertBefore(groupRow, thead);
         }
         groupRow.innerHTML =
-            `<th class="ev-group-spacer" colspan="5"></th>` +
-            `<th class="ev-group-label" colspan="2">${tr('ev_group')}</th>`;
+            `<th class="ev-group-spacer" colspan="8"></th>` +
+            `<th class="ev-group-label" colspan="2">${tr('ev_group')}</th>` +
+            `<th class="ev-group-spacer" colspan="3"></th>`;
 
         // Info ("?") buttons inside column headers — show a small popover
         // with the column's explanatory caption on click. Attach the

@@ -1463,14 +1463,16 @@ tbody tr {
     }
 
     /* === Mobile Basic mode (default) ===
-       Layout: Chart / Ticker / EV Upside / Base / Price / Today / 1 year
-       under an 'Expected Value' group header. Hides Cycle (1), Chg% (7),
-       Upside (8), FY29 (11), FY30 (12), sparkline (13). SHOWS FY2027 (9,
-       relabeled 'Today') and FY2028 (10, relabeled '1 year') — these sit
-       right after Price once Chg%/Upside are hidden. Body has no
-       `.adv-mode` class in this state. */
+       Column order (Chg% now sits left of Price):
+         1 Cycle  2 Chart  3 Ticker  4 EV Upside  5 Base  6 Chg%
+         7 Price  8 Upside  9 FY2027(Today)  10 FY2028(2027)
+         11 FY29  12 FY30  13 sparkline
+       Layout: Chart / Ticker / EV Upside / Base / Chg% / Price / Today /
+       2027, with an 'Expected Value' group header over Today + 2027.
+       Hides Cycle (1), Upside (8), FY29 (11), FY30 (12), sparkline (13).
+       SHOWS Chg% (6), Price (7), FY2027 (9, 'Today'), FY2028 (10, '2027').
+       Body has no `.adv-mode` class in this state. */
     body:not(.adv-mode) th:nth-child(1),  body:not(.adv-mode) td:nth-child(1),
-    body:not(.adv-mode) th:nth-child(7),  body:not(.adv-mode) td:nth-child(7),
     body:not(.adv-mode) th:nth-child(8),  body:not(.adv-mode) td:nth-child(8),
     body:not(.adv-mode) th:nth-child(11), body:not(.adv-mode) td:nth-child(11),
     body:not(.adv-mode) th:nth-child(12), body:not(.adv-mode) td:nth-child(12),
@@ -1500,18 +1502,18 @@ tbody tr {
     body:not(.adv-mode) .lbl-evbasic  { display: inline; }
 
     /* === Mobile ADV mode ===
-       Hide Cycle (col 1), Chg% (col 7), Upside (col 8). Reveal
-       FY27/28/29/30 + sparkline (cols 9-13). FY columns are visible
-       by default in browsers since they're table-cell, but Basic
-       mode above hides them — ADV doesn't need to re-show explicitly,
-       just not match the Basic hide selector.
+       Hide Cycle (col 1), Chg% (col 6), Upside (col 8). Reveal
+       FY27/28/29/30 + sparkline (cols 9-13). Price stays at col 7.
+       FY columns are visible by default in browsers since they're
+       table-cell, but Basic mode above hides them — ADV doesn't need to
+       re-show explicitly, just not match the Basic hide selector.
 
        Sticky columns shift: Cycle (col 1) is hidden, so col 2 (Chart)
        becomes the leftmost sticky and needs left:0. Col 3 (Ticker)
        moves to left:24 (after the 24px Chart column). No third sticky
        col in ADV mode — Ticker is the last sticky. */
     body.adv-mode th:nth-child(1), body.adv-mode td:nth-child(1) { display: none; }
-    body.adv-mode th:nth-child(7), body.adv-mode td:nth-child(7) { display: none; }
+    body.adv-mode th:nth-child(6), body.adv-mode td:nth-child(6) { display: none; }
     body.adv-mode th:nth-child(8), body.adv-mode td:nth-child(8) { display: none; }
     body.adv-mode th:nth-child(2), body.adv-mode td:nth-child(2) {
         left: 0;
