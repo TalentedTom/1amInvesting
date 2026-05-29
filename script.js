@@ -141,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
             caption_FY28: 'Implied fair value ~1 year from now',
             mode_basic: 'Basic',
             mode_adv: 'ADV',
+            ev_group: 'Expected Value',
+            ev_today: 'Today',
+            ev_1year: '1 year',
             wechat_scan: 'Scan with WeChat to add me',
             wechat_close: 'Close',
             modal_loading: 'Loading…',
@@ -187,6 +190,9 @@ document.addEventListener('DOMContentLoaded', () => {
             caption_FY28: '约 1 年后的合理估值',
             mode_basic: '基本',
             mode_adv: '高级',
+            ev_group: '预期价值',
+            ev_today: '今日',
+            ev_1year: '1年后',
             wechat_scan: '微信扫一扫加我',
             wechat_close: '关闭',
             modal_loading: '加载中…',
@@ -1296,10 +1302,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isSorted = sortState.col === col;
                 const sortClass = isSorted ? (sortState.asc ? 'asc' : 'desc') : '';
                 const icon = isSorted ? (sortState.asc ? '↑' : '↓') : '↕';
-                headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelFor(col)} <span class="sort-icon">${icon}</span></th>`;
+                // FY2027 / FY2028 carry a SECOND label used only in the
+                // mobile-Basic "Expected Value" layout: 'Today' / '1 year'.
+                // Both labels are rendered; CSS shows the right one per
+                // viewport/mode (.lbl-wide = desktop+ADV, .lbl-evbasic =
+                // mobile-Basic). Wrapping the desktop label (which includes
+                // the '?' info button) in .lbl-wide means the '?' is hidden
+                // on mobile-Basic too — the Today/1-year labels are
+                // self-explanatory there.
+                let labelHtml = labelFor(col);
+                if (col === 'FY2027') {
+                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
+                                `<span class="lbl-evbasic">${tr('ev_today')}</span>`;
+                } else if (col === 'FY2028') {
+                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
+                                `<span class="lbl-evbasic">${tr('ev_1year')}</span>`;
+                }
+                headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
             }
         });
         thead.innerHTML = headHtml;
+
+        // Group-header row (mobile-Basic only): a single 'Expected Value'
+        // cell spanning the Today + 1-year columns, with a spacer cell
+        // covering the 5 visible columns before them (Chart, Ticker, EV
+        // Upside, Base, Price). Lives as a separate <tr> at the top of the
+        // <thead>; CSS hides it on desktop and mobile-ADV. The colspans
+        // (5 + 2 = 7) match the 7 columns visible in mobile-Basic, so it
+        // aligns there; on other layouts it's display:none so the
+        // colspan mismatch is harmless.
+        const theadEl = thead.parentElement;
+        let groupRow = document.getElementById('ev-group-row');
+        if (!groupRow) {
+            groupRow = document.createElement('tr');
+            groupRow.id = 'ev-group-row';
+            theadEl.insertBefore(groupRow, thead);
+        }
+        groupRow.innerHTML =
+            `<th class="ev-group-spacer" colspan="5"></th>` +
+            `<th class="ev-group-label" colspan="2">${tr('ev_group')}</th>`;
 
         // Info ("?") buttons inside column headers — show a small popover
         // with the column's explanatory caption on click. Attach the

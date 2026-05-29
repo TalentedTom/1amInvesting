@@ -565,6 +565,36 @@ body.light-mode tr.row-expanded td:nth-child(10) {
     background-color: rgba(59, 130, 246, 0.09);
 }
 
+/* === Expected Value group header (mobile-Basic only) =============
+   FY2027 / FY2028 headers carry two labels: the normal one (.lbl-wide,
+   'FY27' / 'FY28' incl. the '?' button) and a mobile-Basic one
+   (.lbl-evbasic, 'Today' / '1 year'). By default we show the wide
+   label and hide the EV-basic label + the group row. The mobile-Basic
+   media query below flips this. */
+.lbl-evbasic { display: none; }
+#ev-group-row { display: none; }
+.ev-group-spacer {
+    background: transparent !important;
+    border: none !important;
+    cursor: default;
+    /* Override the global th position:sticky so this row doesn't pin to
+       top:0 and overlap the main (sticky) header row. It scrolls away
+       normally; the 'Today'/'1 year' labels in the main header stay
+       pinned. */
+    position: static;
+}
+.ev-group-label {
+    text-align: center;
+    cursor: default;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    background: rgba(59, 130, 246, 0.10);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.35);
+    padding: 0.25rem 0.18rem;
+    position: static;   /* see .ev-group-spacer note */
+}
+
 /* === Trajectory sparkline (5-point mini chart per row) ===========
    Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,
    normalized per-row so the SHAPE of the trend is readable across
@@ -1433,16 +1463,41 @@ tbody tr {
     }
 
     /* === Mobile Basic mode (default) ===
-       Hide FY27/28/29/30 + sparkline (cols 9-13, after Entry removal).
-       Visible cols on phones: Cycle / Chart / Ticker / EV Upside /
-       Base / Price / Chg% / Upside. Body has no `.adv-mode` class. */
-    body:not(.adv-mode) th:nth-child(9),  body:not(.adv-mode) td:nth-child(9),
-    body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10),
+       Layout: Chart / Ticker / EV Upside / Base / Price / Today / 1 year
+       under an 'Expected Value' group header. Hides Cycle (1), Chg% (7),
+       Upside (8), FY29 (11), FY30 (12), sparkline (13). SHOWS FY2027 (9,
+       relabeled 'Today') and FY2028 (10, relabeled '1 year') — these sit
+       right after Price once Chg%/Upside are hidden. Body has no
+       `.adv-mode` class in this state. */
+    body:not(.adv-mode) th:nth-child(1),  body:not(.adv-mode) td:nth-child(1),
+    body:not(.adv-mode) th:nth-child(7),  body:not(.adv-mode) td:nth-child(7),
+    body:not(.adv-mode) th:nth-child(8),  body:not(.adv-mode) td:nth-child(8),
     body:not(.adv-mode) th:nth-child(11), body:not(.adv-mode) td:nth-child(11),
     body:not(.adv-mode) th:nth-child(12), body:not(.adv-mode) td:nth-child(12),
     body:not(.adv-mode) th:nth-child(13), body:not(.adv-mode) td:nth-child(13) {
         display: none;
     }
+    /* Sticky cols in Basic mode: Cycle (1) is now hidden, so Chart (2)
+       is leftmost (left:0) and Ticker (3) sits after it (left:24). */
+    body:not(.adv-mode) th:nth-child(2), body:not(.adv-mode) td:nth-child(2) {
+        left: 0;
+    }
+    body:not(.adv-mode) th:nth-child(3), body:not(.adv-mode) td:nth-child(3) {
+        left: 24px;
+    }
+    /* Today (9) + 1 year (10) column sizing — compact but readable. */
+    body:not(.adv-mode) th:nth-child(9),  body:not(.adv-mode) td:nth-child(9),
+    body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10) {
+        width: 52px; min-width: 46px; max-width: 60px;
+        padding-left: 0.18rem; padding-right: 0.18rem;
+        font-size: 0.68rem;
+        text-align: right;
+    }
+    /* Reveal the 'Expected Value' group header + swap FY labels for the
+       'Today' / '1 year' wording (Basic mode only). */
+    body:not(.adv-mode) #ev-group-row { display: table-row; }
+    body:not(.adv-mode) .lbl-wide     { display: none; }
+    body:not(.adv-mode) .lbl-evbasic  { display: inline; }
 
     /* === Mobile ADV mode ===
        Hide Cycle (col 1), Chg% (col 7), Upside (col 8). Reveal
