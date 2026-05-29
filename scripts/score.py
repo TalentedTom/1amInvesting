@@ -292,6 +292,26 @@ def ev_upside(base: int, high: float, price: float) -> int:
     return int(round(base * (high / price - 1)))
 
 
+# Column name for the high-end target price that drives Upside + EV Upside.
+# The analyst's xlsx renamed 'Ceiling Target' -> '1y EV' (and switched its
+# data from a range like 'SEK 100-525' to a single 1-year fair-value
+# number). We read the new name first, fall back to the old one, so either
+# xlsx vintage scores correctly. The math is identical either way: Upside =
+# target/price, EV Upside = Base * (target/price - 1).
+TARGET_COLS = ("1y EV", "Ceiling Target")
+
+
+def target_cell(row):
+    """Return the row's target-price cell, trying the current column name
+    ('1y EV') then the legacy one ('Ceiling Target'). Returns '' if neither
+    is present so parse_range yields (None, None) and the row is skipped."""
+    for col in TARGET_COLS:
+        v = row.get(col)
+        if v not in (None, ""):
+            return v
+    return ""
+
+
 def score_row(row):
     """Return a summary dict if the row was scored, or None if skipped.
     Mutates `row` in-place when scoring succeeds.
@@ -300,7 +320,7 @@ def score_row(row):
     if base is None:
         return None
     price = parse_price(row.get("Current Price"))
-    low, high = parse_range(row.get("Ceiling Target"))
+    low, high = parse_range(target_cell(row))
     if price is None or low is None or high is None:
         return None
 

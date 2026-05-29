@@ -1354,7 +1354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let rowClass = '';
             if (row._displayRank === '—') {
                 const ticker = String(row.Ticker || '');
-                const ceiling = String(row['Ceiling Target'] || '').trim().toUpperCase();
+                const ceiling = String(row['1y EV'] || row['Ceiling Target'] || '').trim().toUpperCase();
                 if (ticker.includes('PRE-IPO')) {
                     rowClass = ' row-pre-ipo';
                 } else if (ceiling === 'FAIL') {
