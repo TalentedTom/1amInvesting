@@ -576,6 +576,21 @@ body.light-mode tr.row-expanded td:nth-child(10) {
 .lbl-evbasic { display: none; }
 .ev-group-float { display: none; }
 
+/* === Tiny % delta on the Today / 2027 target cells ==============
+   Financial-ticker style: a small green/red percentage showing the
+   move from current Price to that fiscal-year target, sitting just
+   left of the value (e.g. '+10% 66'). Rendered at ~0.5× the cell
+   font so it barely adds column width. */
+.fy-pct {
+    font-size: 0.5em;
+    font-weight: 700;
+    vertical-align: middle;
+    margin-right: 2px;
+    letter-spacing: -0.02em;
+}
+.fy-pos { color: #10b981; }   /* target above price — green */
+.fy-neg { color: #ef4444; }   /* target below price — red */
+
 /* === Trajectory sparkline (5-point mini chart per row) ===========
    Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,
    normalized per-row so the SHAPE of the trend is readable across

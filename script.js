@@ -1731,7 +1731,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `<span style="color: #64748b;">-</span>`;
             }
             const out = compactPriceString(value);
-            return out || `<span style="color: #64748b;">-</span>`;
+            if (!out) return `<span style="color: #64748b;">-</span>`;
+            // For the two headline targets — Today (FY2027) and 2027
+            // (FY2028) — prefix a tiny green/red % showing the move from
+            // the current Price to that target (financial-ticker style,
+            // e.g. "+10% 66"). The % is rendered at a fraction of the
+            // cell font so it barely affects column width. FY2029/FY2030
+            // stay bare.
+            if (colName === "FY2027" || colName === "FY2028") {
+                const price = parseLooseNumber(row && row['Current Price']);
+                const target = parseLooseNumber(value);
+                if (isFinite(price) && price > 0 && isFinite(target)) {
+                    const pct = (target / price - 1) * 100;
+                    const cls = pct >= 0 ? 'fy-pct fy-pos' : 'fy-pct fy-neg';
+                    const pctStr = `${pct >= 0 ? '+' : ''}${Math.round(pct)}%`;
+                    return `<span class="${cls}">${pctStr}</span>${out}`;
+                }
+            }
+            return out;
         }
 
         // Ratings Badge Styling
