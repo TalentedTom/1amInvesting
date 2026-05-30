@@ -582,7 +582,7 @@ body.light-mode tr.row-expanded td:nth-child(10) {
    left of the value (e.g. '+10% 66'). Rendered at ~0.5× the cell
    font so it barely adds column width. */
 .fy-pct {
-    font-size: 0.5em;
+    font-size: 0.72em;   /* ~half the value's size (was 0.5em) */
     font-weight: 700;
     vertical-align: middle;
     margin-right: 2px;
