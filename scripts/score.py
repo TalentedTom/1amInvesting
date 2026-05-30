@@ -293,12 +293,15 @@ def ev_upside(base: int, high: float, price: float) -> int:
 
 
 # Column name for the high-end target price that drives Upside + EV Upside.
-# The analyst's xlsx renamed 'Ceiling Target' -> '1y EV' (and switched its
-# data from a range like 'SEK 100-525' to a single 1-year fair-value
-# number). We read the new name first, fall back to the old one, so either
-# xlsx vintage scores correctly. The math is identical either way: Upside =
-# target/price, EV Upside = Base * (target/price - 1).
-TARGET_COLS = ("1y EV", "Ceiling Target")
+# This column has been renamed twice as the model evolved:
+#   'Ceiling Target' (price range)  ->  '1y EV' (single number)  ->  removed,
+# with the 1-year target value now living in the 'FY2028' column.
+# We read the newest source first and fall back through the older names so
+# any xlsx vintage scores correctly. The math is identical regardless of
+# which column supplies it: Upside = target/price,
+# EV Upside = Base * (target/price - 1). Verified FY2028 reproduces the
+# analyst's pre-computed EV Upside exactly (SIVE 356, LPK.DE 268, etc.).
+TARGET_COLS = ("FY2028", "1y EV", "Ceiling Target")
 
 
 def target_cell(row):
