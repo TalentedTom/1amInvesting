@@ -1687,10 +1687,11 @@ document.addEventListener('DOMContentLoaded', () => {
             //   Korea:   .KS (KOSPI),      .KQ (KOSDAQ)
             //   China:   .SS / .SSE (Shanghai), .SZ / .SZSE (Shenzhen)
             //   HK:      .HK
+            //   Japan:   .T  (Tokyo) — numeric codes like 4078.T
             // The underlying ticker stays in a data-ticker attribute so
             // deep-dive routing, the live.json merge, and the chart button
             // all continue to key off the canonical symbol.
-            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SZ|SZSE|HK)$/i;
+            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SZ|SZSE|HK|T)$/i;
             let displayText = sym;
             if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
                 const name = String(row.Name).trim();

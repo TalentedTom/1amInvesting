@@ -1,144 +1,91 @@
-# NVIDIA Corporation (NVDA) — Deep Dive Artifact
-
-**Score:** 53 FAIL | Base 85% | Entry 6%
-**Price:** ~$224
-**Ceiling:** $240-340 (FY2027-FY2028)
-**Market Cap:** ~$5.5T
-**Exchange:** NASDAQ
-**Sector:** AI GPU + Networking + Software
-
+# NVDA — NVIDIA Corporation | Deep Dive
 ---
 
-## Core Thesis: The AI Infrastructure Monopoly
+## Supercycle: DB1 AI Infrastructure (GPU Compute Monopoly + Networking + Software)
 
-NVIDIA is the most dominant technology company since peak Microsoft. It designs the GPUs, networking (InfiniBand/Spectrum-X/NVLink), and software stack (CUDA) that power virtually all frontier AI training and increasingly inference. There is no substitute at scale.
+## Core Thesis: The Toll Booth of the AI Revolution
 
-### Pillar 1 — Data Center GPU
+NVIDIA is the foundational infrastructure layer of AI. Every hyperscaler, sovereign cloud, and enterprise AI deployment runs on NVIDIA GPUs. Jensen Huang: AI capex "$3 to $4 trillion annually" by 2030. NVIDIA captures 80-90% of AI training compute and expanding into inference via Blackwell/Rubin architectures.
 
-Q1 FY2027 DC revenue: $75.2B. Hyperscalers $38B (+12% Q/Q), ACIE (AI clouds, industrial, enterprise) $37B (tripled YoY). Blackwell drives 70% of DC compute. Every hyperscaler is a customer. Every sovereign AI program buys NVIDIA.
+Not a chokepoint in the framework sense (too large, too discovered), but THE platform everything else in our portfolio sits on top of. SIVE's lasers connect NVIDIA's GPUs. AEHR tests the photonics chips in NVIDIA's racks. SOI.PA's wafers become the SiPh PICs in NVIDIA's CPO switches. FOCI aligns the fibers. MSScorps inspects the packaging.
 
-Rubin architecture shipping H2 2026. Rubin Ultra NVL576 (8 racks) is the CPO-enabling platform. GB300 Ultra moving from sampling to production.
+## Q1 FY2027 Results (May 20, 2026)
 
-### Pillar 2 — Networking
-
-NVLink, InfiniBand, Spectrum-X. Networking revenue surging as GPU clusters scale. NVL72 requires 36 switches. NVL576 (Rubin Ultra) requires CPO-enabled switches. SIG channel checks: 2:1 transceiver:GPU ratio confirmed for Rubin. InfiniBand peaking 2026, Spectrum-X taking over.
-
-NVIDIA drives the optical interconnect demand the entire portfolio feeds on.
-
-### Pillar 3 — Software/CUDA
-
-The true moat. CUDA ecosystem has 5M+ developers. ROCm (AMD) improving but years behind. Every AI framework defaults to CUDA. Switching cost measured in years of developer retraining. Jensen: "CUDA is a $50B ecosystem."
-
----
-
-## Financials (Q1 FY2027 — Reported May 20, 2026)
-
-**Q1 FY2027:** $81.62B revenue (beat $79.18B consensus by 3.1%)
+- Revenue: $81.6B (+85% YoY, +20% QoQ) — beat $78.8B consensus
+- Data Center: $75.2B (+92% YoY) — 92% of total revenue
+- GAAP GM: 74.9%
+- Operating income: $53.5B (+147% YoY)
+- Operating margin: 66% — highest in trailing 8 quarters
 - Non-GAAP EPS: $1.87 (beat $1.77 consensus)
-- GAAP EPS: $2.39
-- Data Center: $75.2B (beat $73B consensus)
-- Hyperscalers: $38B (+12% Q/Q)
-- ACIE: $37B (AI clouds tripled YoY)
-- GAAP gross margin: 74.9%
-- Raised quarterly dividend to $0.25/share
-- Added $80B to share repurchase authorization
+- Free cash flow: $48.6B in single quarter
+- Q2 guidance: $91B ± 2% — above $86B consensus
+- Excludes China data center compute revenue entirely
 
-**Q2 FY2027 guide:** $91.0B ± 2% (beat consensus $87.3B by 4.2%)
+## Architecture Roadmap
 
-**FY2026 full year:** $215.9B revenue (+65% YoY), $193.7B Data Center
+- **Blackwell (2025-2026):** Current generation. GB200/GB300. NVL72/NVL576.
+- **Rubin (2027):** Next generation. Expected $38.2B FY2027 revenue (consensus).
+- **Rubin Ultra (2028):** NVL576 with 4-5x structural optical consumption increase.
+- **Feynman (2029+):** 1MW per rack. VPD required. CPO standard.
 
----
+Each generation = more optical content, more power delivery, more HBM, more testing. Our entire portfolio benefits from NVIDIA's roadmap acceleration.
 
-## Revenue Trajectory (Base Case)
+## Key Financials
 
-| Year | Revenue | OP Margin | Operating Profit | EPS |
-|---|---|---|---|---|
-| FY2026 | $215.9B | 62% | $134B | $5.47 |
-| FY2027E | $367B | 65% | $239B | $9.75 |
-| FY2028E | $470B | 65% | $306B | $12.49 |
-| FY2029E | $550B | 65% | $358B | $14.61 |
+- FY2026 (ended Jan 2026): $215.93B revenue (+65%), GM 71.1%, NI $120B, EPS $4.90
+- FY2027 consensus: $366.8B revenue, EPS $8.06 (Simply Wall St, 56 analysts)
+- Market cap: ~$5.3T at $215
+- ~24.5B shares
+- Consensus P/E: 20-27x (S&P Global range 15-23x, market paying ~27x)
+- Hyperscaler capex 2026: $725B collectively (+77% YoY) — mostly NVIDIA GPUs
 
-Growth rates: FY27 +70%, FY28 +28%, FY29 +17%. Decelerating from hyper-growth but still massive absolute dollar increases.
+## Scoring Breakdown
 
----
+| Category | Score | Evidence |
+|----------|-------|---------|
+| Core Thesis | 18/20 | GPU compute monopoly. 80-90% AI training share. Blackwell/Rubin roadmap. $81.6B quarter. Software moat (CUDA). Networking (Spectrum-X, NVLink). |
+| Cycle Stage | 10/10 | $81.6B revenue growing 85% YoY on $5.3T market cap. Stage 5 mega-cap growth. |
+| TAM | 10/10 | Jensen: $3-4T annually by 2030. TSMC $1.5T chip TAM. NVIDIA captures the largest share. |
+| Catalysts | 4/5 | Q2 guidance $91B beat. Rubin ramp FY2027. China policy changes. Sovereign AI deals. |
+| Macro | 9/10 | Government-backed AI buildout. DPA. Every nation building AI infrastructure. |
+| Alpha | -2/5 | $5.3T market cap. 56 analysts. Most covered stock on earth. ZERO information edge. |
+| Risks | 0 | Government guarantees AI buildout. Export controls are known and priced. |
+| **Base** | **49/60 (82%)** | |
 
-## Ceiling Derivation
+## Ceiling — v4.0 AH-1 Full Derivation (OP 61-64%, 25x, single-number FY2028)
 
-FY2027 base: $367B x 65% OP = $239B x 25x = $5.97T -> **$244/share**
-FY2028 base: $470B x 65% OP = $306B x 23x = $7.04T -> **$287/share**
-FY2029 discounted: $550B x 65% OP x 20x = $7.15T -> $292 x 0.85 = **+$58**
+### Revenue Model:
 
-**Ceiling: $240-340**
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $216B | +65% | Actual |
+| FY2027 | $370B | +71% | Consensus ~$367B + Q2 $91B guidance upside |
+| FY2028 | $500B | +35% | Rubin ramp + continued hyperscaler capex |
+| FY2029 | $650B | +30% | Rubin Ultra + sovereign AI + inference explosion |
+| FY2030 | $800B | +23% | Jensen $3-4T capex → NVIDIA captures 20-25% |
 
-P/E at $224: ~23x/18x (FY2027/FY2028 modeled EPS)
+### Full Valuation Table (OP 61-64%, 25x, ~24.5B shares):
 
----
+66% OP currently. Slight compression as custom ASIC (Marvell, Broadcom) takes inference share at lower margins. But CUDA moat + training dominance + networking bundle sustains 60%+ OP.
 
-## Scoring
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $370B | 64% | $237B | $5.93T | $242 |
+| 2028 | $500B | 63% | $315B | $7.88T | $322 |
+| 2029 | $650B | 62% | $403B | $10.08T | $411 |
+| 2030 | $800B | 61% | $488B | $12.20T | $498 |
 
-**Base: 85%**
-- Product Moat: 15/15 — GPU monopoly + CUDA + networking. No substitute at scale. Perfect score.
-- TAM: 15/15 — $765B AI capex (2026), $1.01T (2027). NVIDIA captures 30-40% of total.
-- Cycle Stage: 10/10 — Revenue doubling. Blackwell ramping. Rubin next. Perfect execution.
-- Catalysts: 9/10 — Q2 guide $91B beat, Rubin H2 2026, sovereign AI, China potential reopening.
-- Alpha: 1/10 — 42 analysts, $5.5T MC. Most covered stock on earth. Zero informational edge.
-- Risks: 6/10 — China export restrictions, AMD/custom ASIC competition long-term, hyperscaler concentration.
+FY2027 at $242 vs current $215. Market pricing ~9 months forward. Stock has sold off after 4 of last 5 earnings despite beating — market pricing in perfection.
 
-**Entry: 6%** — Ratio 1.29x (barely above 1.2x threshold). Price near ceiling LOW.
+### Ceiling Derivation:
 
-**Total: (85 x 0.6) + (6 x 0.4) = 51 + 2.4 = 53**
+  FY2028: $500B × 63% OP = $315B × 25x = $7.88T / 24.5B shares = $322
 
----
-
-## Portfolio Relevance — THE DEMAND ENGINE
-
-NVIDIA is the single most important company for the portfolio. Every GPU sold generates downstream demand for:
-- **SIVE (#2, 112):** CPO-enabled switches need CW lasers. NVL576 = 4-5x optical content.
-- **LPK.DE (#1, 113):** Advanced packaging drives glass substrate demand.
-- **AEHR (#3, 97):** SiPh PIC + SiC burn-in test demand from NVIDIA supply chain.
-- **MSScorps (#4, 95):** SiPh PIC inspection for NVIDIA CPO modules.
-- **ShunSin (#5, 95):** CPO packaging for NVIDIA switch ASICs via Foxconn.
-- **SOI.PA (#7, 83):** Photonics-SOI wafers for TSMC COUPE CPO (NVIDIA).
-- **PCL (#9, 80):** Broadcom ELSFP modules for NVIDIA Spectrum-X networking.
-- **AAOI (#12, 77):** 800G/1.6T transceivers for NVIDIA cluster interconnect.
-- **Win Semi (#13, 77):** InP lasers fabbed for NVIDIA optical supply chain.
-
-NVIDIA's Q2 guide of $91B and Rubin commentary directly determines the demand trajectory for ALL optically-exposed held positions. Tracking NVIDIA earnings is non-optional for portfolio management.
-
----
-
-## Key Architecture Data (Framework Intelligence)
-
-- NVL72: 72 GPUs / 36 switches. Pluggable optics. 800G transceivers.
-- NVL576 (Rubin Ultra): 8 racks. First CPO on switch ASICs (not GPU). 4-5x optical content increase.
-- Feynman (next): copper backplane intra-rack + CPO inter-rack. NVL1152 (8x Kyber racks).
-- Transceiver:GPU ratio: 2:1 for Rubin (confirmed SIG channel checks May 19).
-- CPO enabled switches ramping Q3 2026, C27 volumes 3-4x higher (Jefferies Taiwan).
-- Blackwell capacity: 600K/month flat from Q4 FY2026. Rubin very small today, ramps Q4 2026.
-
----
+CEILING: $322 (single number, FY2028 forward)
 
 ## Key Risks
 
-1. **China export controls:** Q1 excluded China DC compute revenue. Reopening = upside. Tightening = downside.
-2. **Custom ASIC competition:** Google TPU (9.87M units 2027), AMD MI450/MI500, Broadcom custom. Long-term GPU share may compress from 90% to 70%.
-3. **Hyperscaler concentration:** Top 4 customers = majority of DC revenue. Any single pullback = meaningful impact.
-4. **Valuation:** At $5.5T and 23x FY2027 earnings, stock is priced for sustained 65% OP margins and $400B+ annual revenue. Little room for disappointment.
-5. **Groq/alternative architectures:** Inference-optimized hardware could erode GPU share in specific workloads. Early but monitoring.
-
----
-
-## Entry Analysis
-
-NVIDIA becomes more interesting at:
-- **$180:** Ratio crosses 1.5x, score enters ~60s
-- **$140:** Score reaches ~70 (WL)
-- **$100:** Score reaches ~80+ (HC)
-
-The stock was $18.97 at 52-week low (May 2025). At that price, score would have been 95+ (highest in portfolio). The 12x move consumed all Entry. Same AMD/INTC pattern: mega-cap thesis-to-price convergence is complete.
-
----
-
-## Changelog
-
-- **May 20, 2026: 53 FAIL — INITIAL DEEP DIVE.** Added for portfolio completeness as NVIDIA is the demand engine for all optically-exposed positions. Highest Base in portfolio (85%) but minimal Entry (6%, ratio 1.29x). Q1 FY2027 just reported: $81.62B rev (beat), DC $75.2B, EPS $1.87, Q2 guide $91B (beat $87.3B consensus). Stock slides despite beat (fell on 4 of last 5 beats). FY2026 full year: $215.9B. Would have scored 95+ at $19 twelve months ago. $80B added to buyback. CPO switch ramp Q3 2026 confirmed by Jefferies.
+- Custom ASIC competition (Marvell/Broadcom) taking inference share
+- China export controls limiting TAM
+- $5.3T market cap = any deceleration causes violent correction
+- 56 analysts = zero information edge, consensus is highly efficient

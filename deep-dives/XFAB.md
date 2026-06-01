@@ -41,15 +41,17 @@ Confirmed customers:
 
 Every AI data center needs SiC power devices for 800V power delivery. The same Infineon price increase cycle driving power semi demand = more wafers through X-Fab's SiC foundry.
 
-## Vector 2: Silicon Photonics / CPO — NVIDIA photonixFAB
+## Vector 2: Silicon Photonics / CPO — NVIDIA + Nokia HVM Qualification
 
 "NVIDIA is responsible for testing the photonixFAB technology as an end user. The company will use the photonixFAB platform to generate layouts for transceivers and optical switches and will evaluate the demonstrators on its testbed."
 
-X-Fab leads the photonixFAB consortium under a different name — the market hasn't connected this to NVIDIA's CPO push. Same dynamic as TSEM before Serenity went long.
+NVIDIA and Nokia are now qualifying X-Fab for silicon photonics HVM (per Serenity, May 2026). GFS deck lists X-Fab in the SiPh foundry ecosystem. EU has provided **€47.6M specifically for X-Fab's silicon photonics supply chain** — a third government funding line dedicated to SiPh capability.
+
+X-Fab leads the photonixFAB consortium — the market hasn't connected this to NVIDIA's CPO push or Nokia's optical networking needs. Same dynamic as TSEM before Serenity went long.
 
 Current: ~$5-6M NRE (development phase). Product revenue expected 2027-2028. Microsystems + photonics hit RECORD $33.7M Q1 2026 (+42% YoY).
 
-If X-Fab qualifies as a SiPh foundry for NVIDIA CPO, they become the THIRD SiPh foundry alongside TSEM and GFS — and the only one with simultaneous SiC + SiPh capability.
+If X-Fab qualifies as a SiPh foundry for NVIDIA CPO and Nokia optical, they become the THIRD SiPh foundry alongside TSEM and GFS — and the only one with simultaneous SiC + SiPh + MEMS capability.
 
 ## Vector 3: 800V Power Semis for AI Data Centers
 
@@ -61,11 +63,12 @@ X-Fab doesn't make the chips — it MANUFACTURES them for fabless designers (Nav
 
 | Source | Amount | Purpose |
 |--------|--------|---------|
-| EU CHIPS Act 1.0 | €128M | European foundry capacity |
+| EU CHIPS Act 1.0 | €128M | European foundry capacity (MEMS, AI, etc.) |
 | US CHIPS Act | $50M | Lubbock SiC foundry expansion |
-| EU CHIPS Act 2.0 | Pending (May 2026) | Photonics specifically targeted — X-Fab likely included |
+| EU SiPh funding | €47.6M | Silicon photonics supply chain leadership |
+| EU CHIPS Act 2.0 | Pending (June 2026) | Photonics specifically targeted — X-Fab likely included |
 
-Total ~$180M+ in government grants against $1.28B MC. Government is funding 14%+ of the company's market cap in capex. "At a certain point, they're just getting the capex funded by Governments" (Serenity).
+Total ~$230M+ in government grants against $1.28B MC. Government is funding 18%+ of the company's market cap in capex. Three separate funding lines for three separate capabilities (SiC, MEMS/foundry, SiPh). "At a certain point, they're just getting the capex funded by Governments" (Serenity).
 
 ## The SOI.PA Parallel
 
@@ -83,14 +86,14 @@ Total ~$180M+ in government grants against $1.28B MC. Government is funding 14%+
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 14/20 | SiC foundry duopoly (only 2 globally). NVIDIA photonixFAB evaluation. Navitas/POWI confirmed customers. SiC +152% Q1. But: photonics still NRE phase, SiC is duopoly not monopoly. |
+| Core Thesis | 15/20 | SiC foundry duopoly (only 2 globally). NVIDIA + Nokia qualifying for SiPh HVM. Navitas/POWI confirmed customers. SiC +152% Q1. €47.6M EU SiPh-specific funding. But: photonics still pre-revenue, SiC is duopoly not monopoly. |
 | Cycle Stage | 8/10 | SiC tripling wafer shipments. Microsystems record. Power semi upcycle confirmed. Auto bottoming. |
 | TAM | 7/10 | SiC power devices TAM $10B+ by 2030. Silicon photonics foundry TAM growing. But: X-Fab's share of both is uncertain. |
-| Catalysts | 4/5 | EU Chips Act 2.0 (photonics pillar). Infineon price hikes. NVIDIA photonixFAB qualification. Auto recovery H2 2026. |
-| Macro | 8/10 | Dual US+EU government funding. 800V power transition structural. Photonics EU policy priority. |
+| Catalysts | 4/5 | EU Chips Act 2.0 (photonics pillar). Infineon price hikes. NVIDIA/Nokia SiPh HVM qualification. Auto recovery H2 2026. |
+| Macro | 8/10 | Triple US+EU government funding ($230M+). 800V power transition structural. Photonics EU policy priority. |
 | Alpha | 3/5 | Serenity identified. ~10 analysts but Western photonics connection underappreciated. photonixFAB link to NVIDIA not widely known. |
-| Risks | 0 | Government backstopped. SiC demand structural. |
-| **Base** | **44/60 (73%)** | |
+| Risks | +1 | Government backstopped. SiC demand structural. Below-replacement P/B (0.5-0.7x per Serenity analysis) structurally limits downside. |
+| **Base** | **46/60 (77%)** | +2 from prior (NVIDIA/Nokia HVM upgrade, replacement P/B downside protection) |
 
 ## Ceiling — v4.0 AH-1 Full Derivation (5-vector, graduated OP, 15x specialty foundry, blended)
 
@@ -101,25 +104,24 @@ Management targets $1.5B revenue + 35% EBITDA by 2030. SiC +152% Q1 growth is th
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
 | 1. SiC Foundry | $400M | $600M | $800M | $950M |
-| 2. Silicon Photonics | $15M | $60M | $120M | $200M |
+| 2. Silicon Photonics | $20M | $80M | $150M | $250M |
 | 3. Auto/Industrial (legacy) | $400M | $420M | $440M | $450M |
 | 4. Medical/MEMS | $150M | $170M | $190M | $200M |
 | 5. Power Semis (POWI/NVTS) | $35M | $50M | $75M | $100M |
-| **TOTAL** | **$1.0B** | **$1.3B** | **$1.63B** | **$1.9B** |
+| **TOTAL** | **$1.01B** | **$1.32B** | **$1.66B** | **$1.95B** |
 
-### Full Valuation Table (Graduated OP, 15x specialty foundry, ~131M shares):
+### Full Valuation Table (Graduated OP, 20x specialty foundry, ~131M shares):
 
-EBITDA currently 22.6% but EBIT only 8.8% — heavy depreciation from capex cycle. As capex normalizes ($100M FY2026 vs $204M FY2025) and SiC + photonics mix increases, OP expands. 15x reflects specialty foundry (TSEM comp at 30x is premium; X-Fab is less pure-play).
+EBITDA currently 22.6% but EBIT only 8.8% — heavy depreciation from capex cycle. As capex normalizes ($100M FY2026 vs $204M FY2025) and SiC + photonics mix increases, OP expands. 20x reflects: SiC duopoly scarcity + SiPh optionality + dual-continent government backing + below-replacement P/B. Comparable to integrators/foundries with structural moats.
 
-| Year | Revenue | OP Margin | OP | × 15x | Per Share |
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------| 
-| 2027 | $1.0B | 12% | $120M | $1.80B | $13.74 |
-| 2028 | $1.3B | 16% | $208M | $3.12B | $23.82 |
-| 2029 | $1.63B | 20% | $326M | $4.89B | $37.33 |
-| 2030 | $1.9B | 24% | $456M | $6.84B | $52.21 |
+| 2027 | $1.01B | 12% | $121M | $2.42B | $18.47 |
+| 2028 | $1.32B | 16% | $211M | $4.22B | $32.21 |
+| 2029 | $1.66B | 20% | $332M | $6.64B | $50.69 |
+| 2030 | $1.95B | 24% | $468M | $9.36B | $71.45 |
 
-### Ceiling Derivation (Blended May 2026):
+### Per-share values for Excel:
+FY2027: $18.47 | FY2028: $32.21 | FY2029: $50.69 | FY2030: $71.45
 
-  (8/12 × $23.82) + (4/12 × $37.33) = $28.32
-
-CEILING: $28.32 (blended 67% FY2028 + 33% FY2029)
+Updated Jun 1, 2026: Base 73→77 (+2 for NVIDIA/Nokia SiPh HVM qualification + below-replacement P/B). SiPh vector revenue bumped on €47.6M dedicated EU funding + HVM qualification momentum. Multiple 15x→20x per integrator/foundry standard with structural moats.
