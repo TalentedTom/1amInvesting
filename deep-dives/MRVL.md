@@ -31,22 +31,27 @@ Polariton's POH modulators use LWLG's Perkinamine polymer. Marvell acquired the 
 
 ## Financial Trajectory
 
-| Period | Revenue | DC Revenue | Custom ASIC |
-|--------|---------|------------|-------------|
-| FY2024 | $5.77B | ~$3.3B | ~$0 |
-| FY2025 | $5.77B | ~$4.1B | Ramping |
-| FY2026 | $8.20B (+42%) | $6.0B+ (+46%) | ~$1.5B |
-| FY2027E | ~$11B (+34%) | ~$8B+ | ~$3B+ |
-| FY2028E | ~$15B (+50% DC) | ~$12B+ | ~$6B+ |
+| Period | Revenue | DC Revenue | Custom ASIC | Celestial CPO |
+|--------|---------|------------|-------------|---------------|
+| FY2024 | $5.77B | ~$3.3B | ~$0 | — |
+| FY2025 | $5.77B | ~$4.1B | Ramping | — |
+| FY2026 | $8.20B (+42%) | $6.0B+ (+46%) | ~$1.5B | Pre-revenue |
+| FY2027E | $11.5B (+40%) | ~$8.5B+ | ~$3.5B+ | ~$300M |
+| FY2028E | $20.5B (+78%) | ~$16B+ | ~$8B+ | ~$1.5B+ |
+| FY2029E | $31.0B (+51%) | ~$25B+ | ~$14B+ | ~$3B+ |
+| FY2030E | $44.0B (+42%) | ~$36B+ | ~$20B+ | ~$5B+ |
 
-- FY2027 raised THREE times in 6 months: $9.5B → $10B → **$11B**
-- Custom ASIC: ~$0 → $1.5B → doubling again by FY2028
-- Celestial AI CPO: **$500M annualized run rate by Q4 FY2028**
+- FY2027 raised THREE times in 6 months: $9.5B → $10B → **$11.5B**
+- Custom ASIC accelerating: Google TPU (largest custom silicon program, 134K in single fabric), Amazon Trainium, Microsoft Maia, Meta MTIA — all scaling simultaneously
+- Celestial AI CPO: revised UP from $500M to **$1.5B+ run rate by FY2028** (Goldman CPO hockey stick $25B 2027 → $71B 2028; MRVL is CPO switch chip)
+- NVLink Fusion (March 2026): co-designed NVIDIA+MRVL connectivity for heterogeneous DC. NEW revenue vector ~$1B+ FY2029+
 - 18 distinct design wins in FY2026 (record)
-- Google co-developing TWO custom AI chips (4th hyperscaler)
-- NVIDIA **$2B investment** + ecosystem integration
+- Google co-developing TWO custom AI chips — Google is NOT "4th hyperscaler," it's the MOST advanced custom silicon program
+- NVIDIA **$2B investment** + NVLink Fusion ecosystem integration
+- Jensen Huang at Computex Jun 2, 2026: **"This is the next trillion-dollar company"** (Layer 1 signal)
 - 1.6T optical entered volume production H2 FY2026
 - "Revenue growth to accelerate each quarter in FY2027"
+- "Every program we looked at a year ago is larger when we look a year later" — CEO Matt Murphy
 
 ## Scoring Breakdown
 
@@ -82,35 +87,43 @@ Combined: MRVL is both the custom compute chip AND the CPO switch chip. Dual cho
 
 MRVL CEO May 27, 2026: FY2027 raised to $11.5B (+40%), FY2028 raised to $16.5B (+$1.5B vs prior). Custom silicon $10B+ FY2029 confirmed. Interconnect >70% YoY. Scale-up optics $300M+ (Celestial + MRVL). "Every program we looked at a year ago is larger when we look a year later."
 
+**Jun 2, 2026 Computex revision:** Jensen Huang on stage with Murphy: "This is the next trillion-dollar company." NVLink Fusion co-designed connectivity for heterogeneous DC. Agentic AI specifically drives disaggregated compute → more connectivity per inference event. Three vectors revised UP:
+1. Custom ASIC: Google TPU scaling faster than modeled (134K TPUs single fabric, Anthropic $21B Google TPU orders in one quarter). All 4 hyperscalers accelerating custom silicon simultaneously.
+2. Celestial CPO: $500M → $1.5B+ run rate by FY2028. Goldman CPO hockey stick validates.
+3. NVLink Fusion: NEW revenue vector not in prior model. ~$1B+ FY2029.
+
 | Year | Revenue | Growth | Source |
 |------|---------|--------|--------|
 | FY2027 | $11.5B | +40% | Guided on earnings call |
-| FY2028 | $18.0B | +57% | Guided $16.5B + upward bias from "every program larger" |
-| FY2029 | $26.0B | +44% | Custom $10B+ confirmed, interconnect + scale-up optics |
-| FY2030 | $35.0B | +35% | Decelerating |
+| FY2028 | $20.5B | +78% | Guided $16.5B + ASIC accel +$1.5B + Celestial CPO +$1B + upward bias |
+| FY2029 | $31.0B | +51% | Custom $14B+ (4 hyperscalers scaling), CPO $3B+, NVLink $1B+ |
+| FY2030 | $44.0B | +42% | ASIC $20B+, CPO $5B+, NVLink $1.5B+. Still below Jensen's implied ~$80B for $1T MC. |
 
 ### Full Valuation Table (40% OP, 30x ASIC duopoly, ~915M shares):
 
-Q1 FY2027 non-GAAP OP margin 35%. Management targets upper end of 38-40% by FY2028. 40% flat reflects Broadcom-convergence as ASIC becomes dominant revenue. Broadcom at 45%+ validates trajectory.
+Q1 FY2027 non-GAAP OP margin 35%. Management targets upper end of 38-40% by FY2028. 40% flat reflects Broadcom-convergence as ASIC becomes dominant revenue. Broadcom at 45%+ validates trajectory. Multiple held at 30x (35x case deferred pending market signal).
 
 | Year | Revenue | OP (40%) | × 30x | Per Share |
 |------|---------|----------|-------|-----------|
 | 2027 | $11.5B | $4.60B | $138B | $151 |
-| 2028 | $18.0B | $7.20B | $216B | $236 |
-| 2029 | $26.0B | $10.40B | $312B | $341 |
-| 2030 | $35.0B | $14.00B | $420B | $459 |
+| 2028 | $20.5B | $8.20B | $246B | $269 |
+| 2029 | $31.0B | $12.40B | $372B | $406 |
+| 2030 | $44.0B | $17.60B | $528B | $577 |
 
-FY2027 at $151 vs current $197. Market pricing ~18 months forward.
+FY2028 at $269 vs current $252 (post-Computex AH). 1.07x upside. Near-term compressed; alpha is in FY2029+ ($406, $577).
 
-### Ceiling Derivation (Blended May 2026):
+Jensen's implied $1T = ~$1,093/share. At 30x/40% OP, $1T requires ~$91B revenue. At 35x/45%, ~$63B. Our FY2030 at $44B is a base case; $1T is a FY2031-2032 aspiration.
 
-  (8/12 × $236) + (4/12 × $341) = $271
+### Ceiling Derivation (Jun 2, 2026):
 
-CEILING: $271 (blended 67% FY2028 + 33% FY2029)
+FY2028 per share: $269
+
+CEILING: $269 (pure FY2028 forward, per v4.1 EV Upside methodology)
 
 ## Key Risks
 
 - Broadcom competes for same hyperscaler ASIC wins
-- $137B market cap = need to become top-10 global company for meaningful returns
+- ~$231B market cap at $252 = need continued re-rating for meaningful returns
 - Three acquisitions in 6 months = integration risk
 - Custom ASIC customer concentration (Amazon, Google dominant)
+- FY2028 $20.5B requires +78% growth — aggressive but supported by 4 hyperscalers scaling simultaneously
