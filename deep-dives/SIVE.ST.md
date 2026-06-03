@@ -140,7 +140,7 @@ H2 2026:   CPO volume begins (Vector 1)
 6. **MediaTek** → Qualified on CPO platform
 7. **Raytheon (RTX)** → Beamformers using SIVE chip IP (CHIPS Act funded)
 8. **BAE Systems** → STAR duplex arrays using SIVE chip IP (CHIPS Act funded)
-9. **GlobalFoundries** → SIVE on GFS laser source supplier list (Lightmatter chain)
+9. **GlobalFoundries** → SIVE laser arrays integrated into GF reference designs (CPO + LPO + SCALE™). Jun 2, 2026 strategic collaboration (Reuters).
 10. **Lightmatter** → CW lasers for photonic interconnect (Serenity discovery, $4.4B+ private)
 Plus: Amazon (8-K warrant), Apple (breadcrumb), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain)
 
@@ -161,14 +161,22 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 20/20 | Physics-required. Sole independent CW supplier. ALL 4 CPO platforms confirmed (NVIDIA COUPE, Broadcom Davisson, Marvell Celestial, MediaTek). 12 revenue vectors. Golden Dome $1.2T. MRVL CEO confirms Celestial HVM ramp. |
-| Cycle Stage | 9/10 | NRE converting to volume. MRVL "bringing Celestial to high volume manufacturing." Jabil quals 1-4 months, production Aug 2026. CPO H2 2026. -1 first production revenue not yet reported. |
-| TAM Expansion | 10/10 | Goldman $193B photonics TAM. EU Chips Act 2.0 photonics pillar. Golden Dome $1.2T. Universal light source primitive across CPO/LRO/FMCW/SATCOM/defense. |
+| Core Thesis | 18/20 | Physics moat (Si can't generate light) protects the InP-laser CATEGORY, not SIVE specifically. Sole INDEPENDENT CW supplier (LITE/COHR vertically integrated competitors also supply). Confirmed across all 4 CPO platforms + 13 vectors. Docked 2: multi-sourced (hyperscalers buy from several), and SIVE owns the IP/design but NOT the manufacturing bottleneck — not an AEHR/ASML-grade own-the-chokepoint monopoly. |
+| Cycle Stage | 9/10 | NRE converting to volume. MRVL "bringing Celestial to high volume manufacturing." Jabil quals 1-4 months, production Aug 2026. CPO H2 2026. -1 first production revenue not yet reported (earnings May 29). |
+| TAM Expansion | 10/10 | Goldman $193B photonics TAM. EU Chips Act 2.0 photonics pillar. Golden Dome $1.2T. Universal light source primitive across CPO/LRO/FMCW/SATCOM/defense. Demand undisputed (the shortage IS the demand). |
 | Catalysts | 5/5 | SIVE earnings May 29. MRVL Celestial confirmation. EU Chips Act 2.0. Jabil production Aug 2026. NASDAQ dual-listing. |
 | Macro | 10/10 | US CHIPS Act funding received. EU Chips Act 2.0 photonics pillar. NATO defense. Golden Dome. Dual government backing (US + EU). |
 | Alpha | 5/5 | 3 analysts. Swedish media calls "meme stock." OSINT supply chain mapping to Celestial/Ayar/Lightmatter. Deepest asymmetry in portfolio. Market hasn't connected MRVL Celestial ramp to SIVE laser supply. |
-| Risks | 0 | NRE→production risk resolved by MRVL HVM confirmation + Jabil quals timeline. Government-backed (US + EU). |
-| **Base** | **59/60 (99%)** | |
+| Risks | −2 | Fab-light dependency: SIVE owns laser IP but NOT InP fab capacity (depends on Win Semiconductors) — the real chokepoint sits one stage up, where SIVE is a customer. IP lead erodes over a multi-year horizon as larger competitors close the gap. Multi-source pricing pressure in a balanced market. PARTIALLY MITIGATED: Win capacity agreements secured (SIVE appears ahead in line — Lumentum buying on open market), erosion is slow (years), and the InP shortage (20x demand vs 12x supply, Goldman CW tight through Q3 2028) confers pricing power through the monetization window. Modest deduction, not severe. |
+| **Base** | **55/60 (92%)** | |
+
+### Bear-case re-examination (May 28, 2026)
+
+Substantive bear case (Moody @MoodyWriter13): SIVE is "well connected but irreplaceable nowhere" — multi-sourced, lacks pricing power, and the real chokepoint is fab CAPACITY (which SIVE doesn't own), not laser design. SIVE benefits now (Lumentum buying open-market because its capacity is NVIDIA-prioritized) but that's a Phase 1 effect; IP lead erodes before the fab chokepoint resolves.
+
+What the bear gets right (cost Base 59→55): (1) multi-sourcing caps pricing power in a balanced market; (2) fab-light vulnerability is real — SIVE depends on partner InP capacity; (3) IP leads erode over 5-year horizons. These are genuine and were under-priced at 99%.
+
+What the bear gets wrong (why ceiling unchanged): (1) in a 67%-undersupplied market, multi-sourcing is customers securing volume, not commoditizing the supplier — pricing power survives shortage; (2) SIVE SECURED Win capacity while competitors reach into the open market, suggesting SIVE is ahead in the fab line, not behind; (3) "Phase 1" lasts through 2030 (Rosenblatt InP shortage, Goldman CW tight through Q3 2028 = 14 quarters) — SIVE's entire FY2027-2030 revenue ramp happens INSIDE the window the bear concedes SIVE wins; (4) no evidence IP catch-up outpaces capacity addition. Ceiling (SEK 405) survives the bear's own timeline; only the certainty (Base) was overstated.
 
 ## Ceiling — v4.0 AH-1 Full Derivation (12-Vector, 40% OP, 35x, per Rule AH-9)
 
@@ -285,7 +293,7 @@ AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncerta
 88.3% share of China's independent optical interconnect. Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE.
 Distinct from Lightmatter (V6): Lightelligence = photonic COMPUTE (processing data with light).
 $250M funded. SIVE supplies lasers to BOTH approaches (interconnect + compute).
-Source: Serenity 12-vector mapping, Lightelligence confirmed.
+Source: Serenity 13-vector mapping, Lightelligence confirmed.
 AH-7 confidence: HIGH — MRVL CEO confirmed Celestial volume ramp on earnings call (May 2026). Scale-up optics revenue >2x prior $150M outlook. "Bringing Celestial to high volume manufacturing."
 
 | 2027 | 2028 | 2029 | 2030 |
@@ -304,23 +312,28 @@ AH-7 confidence: MEDIUM-HIGH — revenue already flowing, growth trajectory conf
 
 ### Vector 10: LIGHTIUM / TFLN (Thin-Film Lithium Niobate)
 TFLN modulators on Chinese supply chains. Emerging technology with SIVE as laser source.
-Source: Serenity 12-vector mapping.
+Source: Serenity 13-vector mapping.
 AH-7 confidence: LOW-MEDIUM — early stage, technology pathway confirmed but commercial scale uncertain.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $5M | $15M | $25M | $35M |
 
-### Vector 11: AMD / GlobalFoundries CPO
-AMD MI500 uses GFS Fotonix for CPO. GFS ecosystem slide shows SIVE and LITE as ONLY two laser providers.
-MI450 now confirmed ramping at two hyperscalers (Inventec for MSFT, Wiwynn for Meta). MI500 follows with CPO.
-Source: GFS ecosystem slide, Jefferies Taiwan channel checks (May 2026).
-AH-7 confidence: MEDIUM — GFS confirmed, MI500 CPO timeline 2027. SIVE selection not individually confirmed.
-Probability: 25%
+### Vector 11: GFS SiPh Platform — CPO + LPO + SCALE (expanded Jun 2, 2026)
+**Jun 2, 2026: SIVE × GlobalFoundries strategic collaboration (Reuters).** SIVE's laser arrays integrated into GF's reference designs across ALL optical architectures: CPO, LPO (linear pluggable optics), and SCALE™ platform. This is reference design INTEGRATION — not supplier list, not qualification. SIVE is the DEFAULT laser route for every design prototyped on GF's SiPh platform. GF customers include Broadcom, NVIDIA, Marvell, AMD, Lightmatter.
+
+Prior Vector 11 was AMD MI500 CPO only at 25% probability. Now expanded to full GF SiPh platform at 80%:
+- CPO: AMD MI500 + all other GF CPO customers
+- LPO: next-gen SiPh-based pluggable transceivers ($25B pluggable market by 2030)
+- SCALE: GF's co-packaged advanced light engine platform
+
+Source: Reuters/PRNewswire Jun 2 2026, GFS ecosystem slide, Jefferies Taiwan channel checks.
+AH-7 confidence: **HIGH** — reference design integration confirmed via official press release. GF Senior Fellow Vikas Gupta: "Pairing Sivers' laser array technology with our silicon photonics and SCALE CPO platforms provides our customers with advanced, scalable optical engine solutions."
+Probability: **80%** (was 25%)
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $6M | $28M | $45M | $62M |
+| $15M | $80M | $150M | $220M |
 
 ### Vector 12: YSS / Defense Miscellaneous
 Smaller defense and specialty photonics contracts.
@@ -344,6 +357,17 @@ MRVL CEO on earnings call: "Scale-up optics revenue next year should be more tha
 
 Impact: Vector 7 (Celestial) upgraded MEDIUM→HIGH confidence, revenue doubled. Vectors 1, 6, 8, 11 all receive 10-15% probability uplift from "market adoption accelerate" macro confirmation.
 
+### Vector 13: POET Technologies (NEW May 2026)
+
+POET optical interposer platform. $50M → $500M order signals volume trajectory. POET H2 2026 volume ramp with SIVE as the light source. SIVE captures laser/light-source content of POET's optical engine BOM.
+
+Source: Serenity supply chain mapping (May 28, 2026).
+AH-7 confidence: MEDIUM — SIVE→POET light source confirmed, POET $50M→$500M order confirmed, POET execution adds uncertainty.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $8M | $20M | $35M | $45M |
+
 ### Ayar/Wiwynn Rack-Scale Commercialization (May 28, 2026)
 
 Ayar Labs + Wiwynn partnership for CPO rack-scale AI systems. Wiwynn clients: Amazon, Meta, Microsoft + in talks for Google TPU servers. Reference architecture ~512+ Supernova light sources per rack. Macom + Lumentum REMOVED from Ayar's partner site — confirms SIVE as primary/sole laser array supplier.
@@ -364,18 +388,19 @@ Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commerciali
 | 8. Lightelligence | $12M | $35M | $58M | $75M |
 | 9. Nokia | $8M | $20M | $30M | $35M |
 | 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
-| 11. AMD/GFS | $6M | $28M | $45M | $62M |
+| 11. GFS SiPh Platform | $15M | $80M | $150M | $220M |
 | 12. YSS/Defense | $5M | $13M | $25M | $15M |
-| **TOTAL** | **$238M** | **$652M** | **$1,055M** | **$1,402M** |
+| 13. POET | $8M | $20M | $35M | $45M |
+| **TOTAL** | **$255M** | **$724M** | **$1,195M** | **$1,605M** |
 
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
 | Year | Revenue | OP (40%) | × 35x | MC | Per Share |
 |------|---------|----------|-------|----|-----------|
-| 2027 | $238M | $95M | $3.33B | SEK 31.6B | SEK 119 |
-| 2028 | $652M | $261M | $9.13B | SEK 86.7B | SEK 326 |
-| 2029 | $1,055M | $422M | $14.77B | SEK 140.3B | SEK 525 |
-| 2030 | $1,402M | $561M | $19.63B | SEK 186.5B | SEK 697 |
+| 2027 | $255M | $102M | $3.57B | SEK 33.9B | SEK 128 |
+| 2028 | $724M | $290M | $10.14B | SEK 96.3B | SEK 362 |
+| 2029 | $1,195M | $478M | $16.73B | SEK 158.9B | SEK 598 |
+| 2030 | $1,605M | $642M | $22.47B | SEK 213.5B | SEK 803 |
 
 WHY WE DON'T MODEL $60B:
   Serenity's $60B assumes SIVE acquires downstream and competes with LITE.

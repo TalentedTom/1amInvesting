@@ -61,7 +61,7 @@ This single-quarter guidance exceeds Micron's FULL-YEAR revenue through FY2024.
 | Macro | 8/10 | "Supply substantially short of demand." Customers receiving 50-67% of requested supply. |
 | Alpha | -1/5 | $460B MC. 30+ analysts. Every fund on Earth owns MU. Zero information edge. |
 | Risks | 0 | US memory champion — CHIPS Act fabs, American premium. Government guarantees AI buildout. |
-| **Base** | **50/60 (83%)** | |
+| **Base** | **50.4/60 (84%)** | +1 Rule 16c-2: Hyperscaler prepayments confirmed (Microsoft $10B+ to Samsung, 15-30% advance on contracted volume). 3-5yr LTAs with supplier-floor + upward adjustment pricing. Structural, not cyclical. |
 
 ## Ceiling — v4.0 AH-1 Full Derivation (TAM-inferred midpoint, normalizing OP, 12x memory, blended)
 
@@ -88,24 +88,24 @@ Analysts modelling $172B average FY2027, HIGH $240B. Midpoint = $207B. EPS HIGH 
 | FY2029 | $362B | +25% | Structural demand |
 | FY2030 | $435B | +20% | Maturing |
 
-### Full Valuation Table (Normalizing OP, 12x memory, ~1.14B shares):
+### Full Valuation Table (Structural re-rate 20x — HBM contracted infrastructure, ~1.14B shares):
 
-Memory peak margins don't sustain forever. OP normalizes from 69%→81% peak toward 47-50% structural floor. Even "structural" supercycles compress margins as supply catches demand. 12x = SK Hynix/memory comp.
+Memory peak margins don't sustain forever. OP normalizes from 69%→81% peak toward 47-50% structural floor. Even "structural" supercycles compress margins as supply catches demand. 20x re-rate: HBM is contracted infrastructure (hyperscaler LTAs, near-sovereign credit), not consumer cyclical. Old 12x was a cyclical anchor. 20x = S&P 500 average, conservative given 700% growth + net cash + 60% peak OP. MU diversified DRAM+HBM+NAND, US champion (CHIPS Act). Below SK Hynix HBM-purity but re-rated off cyclical.
 
-| Year | Revenue | OP Margin | OP | × 12x | Per Share |
+| Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------| 
-| 2027 | $207B | 60% | $124B | $1.49T | $1,307 |
-| 2028 | $290B | 55% | $159B | $1.91T | $1,678 |
-| 2029 | $362B | 50% | $181B | $2.17T | $1,904 |
-| 2030 | $435B | 47% | $204B | $2.45T | $2,152 |
+| 2027 | $207B | 60% | $124B | $2.48T | $2,178 |
+| 2028 | $290B | 55% | $159B | $3.18T | $2,797 |
+| 2029 | $362B | 50% | $181B | $3.62T | $3,173 |
+| 2030 | $435B | 47% | $204B | $4.08T | $3,587 |
 
 FY2027 at $1,307 vs current $751. Market pricing ~6 months forward. US memory champion premium + CHIPS Act = institutional floor.
 
 ### Ceiling Derivation (Blended May 2026):
 
-  (8/12 × $1,678) + (4/12 × $1,904) = $1,753
+  (8/12 × $2,797) + (4/12 × $3,173) = $2,922
 
-CEILING: $1,753 (blended 67% FY2028 + 33% FY2029)
+CEILING: $2,922 (blended 67% FY2028 + 33% FY2029)
 
 ## User's Own Assessment
 

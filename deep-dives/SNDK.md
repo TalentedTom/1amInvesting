@@ -1,14 +1,4 @@
 # SNDK — SanDisk Corporation | Deep Dive
-**Date:** May 9, 2026 (RESCORED — NAND supercycle, memory shortage past 2028)
-**Framework Version:** v3.7.0
-**Score:** 49 FAIL | Base 75% (45/60) | Entry 11% (4/40)
-**Price at Analysis:** $1,562.34
-**Ceiling:** $1,800-$2,500 (2027-2028)
-**Upside Ratio:** 1.2x-1.6x
-**Market Cap:** ~$231B
-**Q3 FY2026 Revenue:** $5.95B (+251% YoY) | GM: 78.4% | EPS: $23.41 (beat $14.45 est)
-**Q4 Guide:** $7.75-8.25B, EPS $30-33
-
 ---
 
 ## Supercycle: Memory Supercycle (NAND Flash / Enterprise SSD for AI)
@@ -58,95 +48,67 @@ This is NET NEW demand that didn't exist before. NVIDIA literally created an ent
 |----------|-------|---------|
 | Core Thesis | 12/20 | NAND shortage structural. G3.5 creates new demand. Kioxia JV vertical integration. Enterprise SSD growing 40%+. BUT: oligopoly not monopoly — Samsung, Micron, SK compete (-3). NAND is cyclical — shortage CAN reverse (-3). Consumer/mobile still majority of revenue (-2). |
 | Cycle Stage | 9/10 | Revenue +61%. EPS $6.20 crushing estimates. NAND prices +38%. GM expanding dramatically. BiCS8/10 ramping. |
-| TAM | 7/10 | NAND flash: $80-100B by 2028. Enterprise SSD for AI: $20-30B. G3.5 inference tier: new. |
+| TAM | 8/10 | NAND flash: $184B annualized Q1 2026 (Counterpoint), tracking $300B+ by 2028. Enterprise SSD for AI: $80B+ (eSSD 43%→60% of market). G3.5 inference tier: new. |
 | Catalysts | 5/5 | Q3 earnings April 30 🔥. NAND price increases continuing. BiCS10 ramp. Hyperscaler quals. Rubin ICMS deployment. |
 | Macro | 8/10 | 120-150 GW compute needs storage. G3.5 inference tier. Memory supercycle. NAND shortage. |
 | Alpha | -1/5 | 20+ analysts. $50B+ market cap. +1,350% run. Thesis EXTREMELY well-known. Zero edge. |
-| Risks | -2 | NAND is cyclical (-1). Oligopoly pricing could break (-1). |
-| **Base** | **38/60 (63%)** | |
+| Risks | 0 | US NAND champion. Structural supercycle, not cyclical. Government guarantees AI buildout. |
+| **Base** | **48.6/60 (81%)** | +1 Rule 16c-2: Hyperscaler prepayments confirmed across memory industry. 3-5yr LTAs with supplier-floor + upward adjustment pricing. NAND structural demand from AI training data pipelines. |
 
-## Ceiling (Revised May 2 — Q3 Beat + NAND Shortage Extended to 2027)
+## NAND Supercycle — Structural Not Cyclical (May 2026)
 
-```
-Q3 FY2026 RESULTS (April 30 — MASSIVE BEAT):
-  Revenue: $5.95B (+251% YoY) — crushed $4.69B estimate
-  GAAP Net Income: $3.62B (from LOSSES a year ago)
-  Non-GAAP EPS: $23.41 (beat $14.45 estimate by 62%)
-  GAAP Gross Margin: 78.4% (from 22.5% prior year)
-  Datacenter revenue: +233% SEQUENTIAL
-  Q4 guide: $7.75-8.25B, EPS $30-33
-  Zero debt, $3.74B cash, $6B buyback authorized
+NAND wafer starts at capacity limits. Shortage projected past 2028. YMTC limited impact through 2027 (cannot fill the gap). AI creating NEW structural NAND demand layers: KV cache storage for inference, model checkpointing for training, retrieval-augmented generation. These are additive to existing consumer/enterprise demand.
 
-NEW BUSINESS MODEL AGREEMENTS:
-  5 NBM deals signed, $42B MINIMUM revenue lifetime
-  $11B+ financial guarantees (take-or-pay components)
-  Longest deal: 5 years
-  Currently negotiating with "several" additional customers
-  NBM covers >1/3 of FY27 bits
-  "Buy out the store before the storm" — Goldman Sachs
+DDR4 $1.35→$16 spillover across ALL memory types. IDC: "potentially permanent strategic reallocation" of wafer capacity from consumer to AI. This is not cyclical — it is structural. Memory companies don't return to trough pricing when the demand driver is AI infrastructure that compounds annually.
 
-NAND SHORTAGE EXTENSION:
-  NAND prices: +70% QoQ (Q1→Q2 contract pricing)
-  Q2 contract pricing: forecasted +70-75% additional
-  Industry-wide: 2026 NAND capacity SOLD OUT
-  Samsung shortening contracts (pricing power to suppliers)
-  HBF co-development with SK Hynix = new demand tier for 2028+
+SanDisk as pure NAND play (spun from Western Digital) captures the full NAND ASP surge without DRAM/HBM dilution. Kioxia partnership provides manufacturing while SanDisk controls output supply and pricing (SNDK/Kioxia analogy = same allocation pricing power as SIVE/Win Semi).
 
-REVISED EPS TRAJECTORY:
-  FY2026E EPS: ~$80-90 (Q3 $23 + Q4 $30-33 + H1 ~$30)
-  FY2027E EPS: $130-200 (NBM pricing locks + NAND shortage sustains)
-  FY2028E EPS: $150-220 (BiCS9 ramp + HBF optionality)
+## Kioxia Confirms Tightness Through 2027 (May 2026)
 
-VALUATION AT RE-RATE MULTIPLES:
-  $150 EPS × 12x = $1,800 (floor — memory discount multiple)
-  $180 EPS × 15x = $2,700 (base — structural growth recognition)
-  $200 EPS × 16x = $3,200 (bull — NBM de-risks cyclicality premium)
+Goldman on Kioxia: NAND market "very tight for both 2026 and 2027." Kioxia ASPs more than doubled QoQ. OPM 60%, guidance 74% for CY2Q26. Irrational Analysis: "No clean room capacity. Everything will sell out at 80% gross margins. Who cares?"
 
-CEILING: $1,800-$3,200 (raised from $1,500-$2,700)
-  LOW: NAND pricing sustains through 2027 + moderate NBM execution
-  MID: Full NBM portfolio + NAND shortage extends + BiCS9 ramp
-  HIGH: HBF NVIDIA announcement catalyst + governance re-rate
-```
+Goldman raising NAND ASP estimates +22%/+24%. Kioxia preparing ADR listing — positive for SanDisk sentiment as former parent/partner re-enters public markets.
 
-**Entry:** $1,187 vs midpoint $2,500 = 2.11x → **Entry 17/40**
+## Ceiling — v4.0 AH-1 Full Derivation (Yahoo HIGH, normalizing OP, 15x memory, blended)
 
-## Total: (65 × 0.6) + (43 × 0.4) = 39 + 17 = 56
+### Q3 FY2026 Results (April 30, 2026)
 
-## Why $693 Compresses the Score
+Revenue $5.95B (+251% YoY). GM 78.4%. Non-GAAP EPS $23.41 (beat est $14.66 by 60%). Datacenter +233%. Q4 guided $7.75-8.25B, EPS $30-33. EPS estimates revised up 170% in 90 days.
 
-The framework's honest math: SanDisk at $40 (Feb 2025) would have scored 75+ HC. The thesis hasn't weakened — it's STRENGTHENED (G3.5, DeepSeek V4 validation, +38% NAND pricing). But the stock moved 17x faster than the thesis evolved.
+### Revenue Model (Yahoo HIGH + structural growth):
 
-| Entry Price | Ceiling Midpoint | Ratio | Entry Score | Total |
-|-------------|-----------------|-------|-------------|-------|
-| $40 (Feb 2025) | $1,000 | 25x | 95 | ~82 HC |
-| $250 (Dec 2025) | $1,000 | 4x | 75 | ~68 WL |
-| $693 (today) | $1,000 | 1.44x | 35 | 52 |
+NAND supercycle is structural: AI KV cache, G3.5 inference tier, 1,152TB per Rubin server, wafer starts at capacity limits, shortage past 2028. Revenue decelerates but compounds — not flat.
 
-The thesis was right. The timing was right. The price already reflects it.
+| Year | Revenue | Growth | Source |
+|------|---------|--------|--------|
+| FY2026 | $20.3B | +175% | Yahoo HIGH (19 analysts) |
+| FY2027 | $52.0B | +157% | Yahoo HIGH (20 analysts) |
+| FY2028 | $72.8B | +40% | G3.5 ramp + NAND shortage |
+| FY2029 | $91.0B | +25% | Structural AI NAND demand |
+| FY2030 | $104.7B | +15% | Decelerating but compounding |
 
-## SNDK in the AI Storage Stack
+### Full Valuation Table (Partial structural re-rate 18x — NAND less monopolistic than HBM but LTA price floors + shortage past 2028 break cyclical frame, ~157M shares):
 
-```
-NVIDIA designs GPU + rack architecture
-  └── Rubin includes G3.5 inference storage tier (NEW)
-      └── requires 1,152TB NAND per server
-          └── SanDisk / Samsung / Micron supply SSDs
-              └── using NAND from Kioxia JV / Samsung / Micron fabs
-```
+GM 78.4% at peak. OP margins normalize from peak 60%+ toward structural 45% floor as NAND cycle matures. Kioxia at 60% OPM confirms near-term. 18x = partial re-rate: NAND structural (LTA floors, Kioxia 60% OPM, shortage past 2028) but below HBM 20x given more suppliers / less monopoly. US NAND champion.
 
-SanDisk is one of THREE companies that can supply enterprise SSDs at this scale. Not a monopoly — a tier-1 oligopoly member. Samsung and Micron have equivalent or superior NAND technology. The moat is the Kioxia JV cost structure + BiCS8/10 technology lead, not a physics barrier.
+EPS revision trajectory: 90 days ago $81 → 30 days ago $110 → today $175 → HIGH $218. Revisions are vertical and likely still underestimating.
 
-## Key Risks
+| Year | Revenue | OP Margin | OP | × 18x | Per Share |
+|------|---------|-----------|-----|-------|-----------| 
+| 2027 | $52.0B | 55% | $28.6B | $515B | $3,278 |
+| 2028 | $72.8B | 50% | $36.4B | $655B | $4,174 |
+| 2029 | $91.0B | 47% | $42.8B | $769B | $4,901 |
+| 2030 | $104.7B | 45% | $47.1B | $848B | $5,404 |
 
-- **NAND cyclicality:** Every NAND bull market has ended with a supply glut. 2023 taught hard lessons. Supply discipline holding... for now.
-- **Oligopoly pricing:** Samsung, SK Hynix (Solidigm), Micron can all increase supply. If one breaks discipline, prices crash.
-- **$693 stock = priced for perfection:** Any earnings miss, any guidance reduction, any NAND price softening = violent correction.
-- **Consumer/mobile still majority:** Enterprise is only 14.5-28% of revenue. The commodity segments drag margins.
-- **China NAND (YMTC):** Chinese NAND capacity growing. Can't do cutting-edge BiCS8/10 yet, but could flood mature nodes.
+FY2027 at $2,732 vs current $1,479. Stock pricing ~6 months forward on 15x. At FY2027 P/E of 6.8x on HIGH EPS — absurdly cheap for 157% growth.
 
-## Verdict
+### Model Uncertainty Note:
 
-58. SanDisk is a genuine beneficiary of the AI storage revolution — G3.5 inference tier, NAND shortage, HBF catalyst pending. At $989.90 the stock looks expensive on trailing metrics but trades at only 10.1x FY2027E EPS (street) or 7.7x on your first-principles estimate of $129 EPS — which is actually CHEAP for a NAND oligopolist in a structural supercycle. The HBF NVIDIA announcement catalyst (50-80% expected move) provides event-driven upside. Base upgraded to 65% for HBF optionality. Your 2-3% Tier 2 allocation is appropriately sized. Q3 earnings April 30 is the next proof point.
-- **May 9, 2026: 49 FAIL** (Base 65→75% (+10). NAND supercycle confirmed: wafer starts at capacity limits, shortage past 2028, YMTC limited impact through 2027. AI KV cache + checkpointing driving structural NAND demand. DDR4 $1.35→$16 spillover. IDC "permanent reallocation" across ALL memory types. Ceiling $1,800-2,300→$1,800-2,500. BUT: stock ran $1,187→$1,562 (+32% since last score). At $1,562: ratio 1.38x → Entry 11% → 49 FAIL. Same pattern as MU — Base upgraded significantly but stock ran faster than ceiling expanded. SNDK at $1,562 is 87% of ceiling LOW. The +31% move ate all the asymmetry. HC at $900.)
+EPS revisions over 18 months have been extreme (stock up 40x from $40 spin-off). This model is likely wrong in magnitude but directionally correct. NAND structural demand is real; the question is how much ASP normalization occurs.
 
-- **May 16, 2026: 54 (+1) — KIOXIA NAND BREADCRUMB.** Goldman on Kioxia: NAND market "very tight for both 2026 and 2027." Kioxia ASPs more than doubled QoQ. Kioxia OPM 60%, guidance 74% for CY2Q26. Irrational Analysis: "Everything will sell out at 80% gross margins. Who cares?" NAND supply tightness confirmed through 2027. SanDisk as pure NAND play benefits directly from ASP surge and supply constraint. Kioxia preparing ADR listing (SanDisk's former parent/partner). Base 75→76% (+1): NAND tightness acceleration confirmed by Kioxia guidance + Goldman raising estimates.
+### Ceiling Derivation (Blended May 2026):
+
+  (8/12 × $4,174) + (4/12 × $4,901) = $4,416
+
+CEILING: $4,416 (blended 67% FY2028 + 33% FY2029)
+
