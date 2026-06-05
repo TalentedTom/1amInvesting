@@ -90,22 +90,22 @@ Analysts modelling $172B average FY2027, HIGH $240B. Midpoint = $207B. EPS HIGH 
 
 ### Full Valuation Table (Structural re-rate 20x — HBM contracted infrastructure, ~1.14B shares):
 
-Memory peak margins don't sustain forever. OP normalizes from 69%→81% peak toward 47-50% structural floor. Even "structural" supercycles compress margins as supply catches demand. 20x re-rate: HBM is contracted infrastructure (hyperscaler LTAs, near-sovereign credit), not consumer cyclical. Old 12x was a cyclical anchor. 20x = S&P 500 average, conservative given 700% growth + net cash + 60% peak OP. MU diversified DRAM+HBM+NAND, US champion (CHIPS Act). Below SK Hynix HBM-purity but re-rated off cyclical.
+**Margin harmonization (Jun 3, 2026):** MU has the highest current OP margins (Q2 69%, Q3 guided ~76%) AND no union profit-sharing (unlike SK Hynix and Samsung). MU maintains a structural 3-5pp premium over Korean peers through the compression cycle. Linear decline from ~75% peak to 55% terminal over 4 years = -5pp/year. SK Hynix/Samsung use 65%→55% (union + in SK Hynix case, less diversified revenue). MU converges at 55% terminal where capacity additions normalize industry margins.
+
+20x re-rate: HBM is contracted infrastructure (hyperscaler LTAs, near-sovereign credit). US CHIPS Act subsidizes capex, supporting margins. MU diversified DRAM+HBM+NAND, US champion. Below SK Hynix HBM-purity but re-rated off cyclical.
 
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | $207B | 60% | $124B | $2.48T | $2,178 |
-| 2028 | $290B | 55% | $159B | $3.18T | $2,797 |
-| 2029 | $362B | 50% | $181B | $3.62T | $3,173 |
-| 2030 | $435B | 47% | $204B | $4.08T | $3,587 |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | $207B | 70% | $145B | $2.90T | $2,544 |
+| 2028 | $290B | 65% | $189B | $3.77T | $3,316 |
+| 2029 | $362B | 60% | $217B | $4.34T | $3,807 |
+| 2030 | $435B | 55% | $239B | $4.79T | $4,193 |
 
-FY2027 at $1,307 vs current $751. Market pricing ~6 months forward. US memory champion premium + CHIPS Act = institutional floor.
+### Ceiling Derivation (Jun 3, 2026 — margin harmonized, v4.1 methodology):
 
-### Ceiling Derivation (Blended May 2026):
+  FY2028: $290B × 65% OP = $189B × 20x = $3.77T / 1.14B shares = $3,316
 
-  (8/12 × $2,797) + (4/12 × $3,173) = $2,922
-
-CEILING: $2,922 (blended 67% FY2028 + 33% FY2029)
+CEILING: $3,316 (FY2028 forward, per v4.1 EV Upside methodology)
 
 ## User's Own Assessment
 

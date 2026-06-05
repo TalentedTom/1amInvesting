@@ -75,58 +75,68 @@ This is buried inside "AI Networking" with no separate revenue disclosure. The t
 | Risks | -2 | Customer concentration (Google ~30%+). MRVL competition intensifying (NVLink Fusion). VMware integration drag. Antitrust scrutiny. |
 | **Base** | **48/60 (80%)** | |
 
-## Ceiling — v4.1 Full Derivation (30x, 63% OP normalizing, ~4.94B shares)
+## Ceiling — v4.1 Full Derivation (25x, OP normalizing from 67% to 58%, ~4.94B shares)
 
-### Revenue Model:
+### Q2 FY2026 Earnings (Jun 3, 2026):
 
-CEO "line of sight" to AI chip revenue >$100B by FY2027. $73B AI backlog. At least 10% QoQ sequential growth through FY2026. FY2028 revenue guidance raised to $16.5B... wait, that was MRVL. AVGO FY2028 will be derived from AI trajectory.
+Record quarter. Revenue $22.2B (+48% YoY, beat $22.0B guide). AI semi $10.8B (+143% YoY). Bookings $30B against $10.8B shipped (2.8x book-to-bill). Operating margin 67.3% (record). EBITDA 69%.
 
-Q2 AI at $10.7B → $42.8B annualized. Growing 140% YoY. Backlog provides 2+ years visibility.
+Q3 guidance: **$29.4B** (+84% YoY). AI semi **$16.0B** (+200% YoY). Software **$8.9B** (+31% — accelerating).
+
+FY2026 AI: **$56B** (+180%). FY2027 AI: **>$100B** reiterated. Hock: "on same trajectory as back half of 2026."
+FY2028: "substantial growth" from FY2027. Visibility extended to 2028 (was 2027 three months ago).
+10 GW shipping FY2027 (back-half loaded). "A lot more gigawatts" in FY2028.
+
+Six customers: Google (multi-gen TPU, "very substantial" LTA), Anthropic (1 GW 2026 + 5 GW 2027), OpenAI (silicon delivered, 1.3 GW 2027, 10 GW by 2029), Meta (3 GW through 2028, 1 GW initial order received), Two unnamed ($6B POs). Apollo/Blackstone: >20 GW platform through 2028, $35B first tranche.
+
+**Critical photonics note:** Hock stated "In CPOs — CW and EML lasers — we are the de facto standard in the industry." AVGO makes its OWN CW and EML lasers for its own CPO platform (Bell Labs InP fab). On AVGO's internal platform, SIVE is NOT the laser supplier. SIVE wins on every OTHER platform (GF SCALE, Ayar, COUPE, POET, Jabil). TAM split: AVGO CPO = AVGO lasers. Non-AVGO CPO = SIVE lasers.
+
+### Revenue Model (post-Q2 revision):
 
 | Year | AI Semi | Non-AI Semi | Software | Total | Growth |
 |------|---------|-------------|----------|-------|--------|
-| FY2026 | $47B | $17B | $28B | **$92B** | +41% | 
-| FY2027 | $90B | $18B | $32B | **$140B** | +52% |
-| FY2028 | $125B | $19B | $35B | **$179B** | +28% |
-| FY2029 | $155B | $20B | $38B | **$213B** | +19% |
-| FY2030 | $180B | $21B | $41B | **$242B** | +14% |
+| FY2026 | $56B | $17B | $28B | **$105B** | +61% |
+| FY2027 | $110B | $18B | $38B | **$167B** | +59% |
+| FY2028 | $145B | $19B | $43B | **$207B** | +24% |
+| FY2029 | $170B | $20B | $47B | **$242B** | +17% |
+| FY2030 | $190B | $21B | $51B | **$272B** | +12% |
 
-FY2027 AI at $90B is below CEO's $100B target — conservative bias. AI decelerates from +91% (FY27) to +39% (FY28) to +24% (FY29) as base grows. Software grows ~10%/yr (VMware stable). Non-AI semi low single digits.
+FY2026 AI = $56B per management guidance. FY2027 AI $110B: CEO says >$100B, trajectory is "same as back half of 2026" (i.e. ~2x). Software accelerating from $28B to $38B (VCF 9.1 driving enterprise AI adoption, Q3 guided $8.9B = $35.6B annualized and growing). FY2028 AI at $145B reflects "substantial growth" from FY2027 with deceleration. Software continues +10-12%/yr.
 
-### Full Valuation Table (30x ASIC duopoly, OP normalizing from 66% to 58%, ~4.94B shares):
+### Full Valuation Table (25x, OP normalizing, ~4.94B shares):
 
-30x: same multiple as MRVL (ASIC duopoly comp). OP margin starts at current 66% and compresses slowly as mix shifts. Software at 80%+ margins offsets some semi compression. 30x justified by $73B backlog visibility + duopoly lock-in + recurring software.
+25x: discount to MRVL 30x reflecting mega-cap size ($2.3T+), zero information edge, 43 analyst coverage. AVGO will never be mispriced — the market sees everything. 25x still above historical 15-20x for large-cap semi (justified by $73B backlog, duopoly lock-in, recurring software). Below NVIDIA 25x adjusted for growth. OP margin starts at 65% (Q2 actual 67%, normalizing for AI mix dilution) and compresses to 58% by FY2030.
 
-| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | $140B | 65% | $91B | $2,730B | $553 |
-| 2028 | $179B | 63% | $113B | $3,383B | $685 |
-| 2029 | $213B | 60% | $128B | $3,836B | $777 |
-| 2030 | $242B | 58% | $140B | $4,210B | $852 |
+| 2027 | $167B | 65% | $109B | $2,714B | $549 |
+| 2028 | $207B | 63% | $130B | $3,260B | $660 |
+| 2029 | $242B | 60% | $145B | $3,630B | $735 |
+| 2030 | $272B | 58% | $158B | $3,944B | $799 |
 
-FY2027 at $553 vs current $460. Market pricing ~9-10 months forward.
+### Ceiling Derivation (Jun 3, 2026 — post-Q2 earnings):
 
-### Ceiling Derivation (Jun 3, 2026):
+  FY2028: $207B × 63% OP = $130B × 25x = $3,260B / 4.94B shares = $660
 
-FY2028: $179B × 63% OP = $113B × 30x = $3,383B / 4.94B shares = $685
+CEILING: $660 (FY2028 forward, per v4.1 EV Upside methodology)
 
-CEILING: $685 (FY2028 forward, per v4.1 EV Upside methodology)
-
-**⚠️ NOTE: Q2 FY2026 earnings report TODAY (Jun 3 after close). Model may need immediate revision based on results and updated guidance.**
+**Price needs updating with post-earnings close. Pre-earnings $460. At $460: Upside = 1.43x, EV = 35%.**
 
 ## AVGO vs MRVL — Framework Comparison
 
 | | AVGO | MRVL |
 |---|---|---|
 | ASIC share | 60% (#1) | ~18% (growing) |
-| AI revenue | $8.4B/quarter | $1.8B/quarter |
-| Photonics | Own InP fab, EML, DSP, switch | Celestial AI, XConn, NVLink Fusion |
-| Software | VMware $30B/yr | None |
+| AI revenue | $10.8B/quarter (Q2) | $1.8B/quarter |
+| AI bookings | $30B/quarter | Not disclosed |
+| Photonics | Own InP fab, CW + EML, DSP, switch | Celestial AI, XConn, NVLink Fusion |
+| Software | VMware $38B/yr (accel) | None |
 | Market cap | ~$2.3T | ~$250B |
-| FY2028 EV Upside | ~34% | -6% |
+| FY2028 EV Upside | ~35% | -6% |
 | Information edge | Zero | Zero |
+| Multiple | 25x (mega-cap) | 30x |
 
-AVGO is larger, more diversified, stronger moat. MRVL is cheaper on FY2028 (but our MRVL FY values may be stale post-Computex). Both are framework-relevant as the ASIC duopoly but neither offers significant alpha at current prices. The framework value is in tracking them as ecosystem anchors — their earnings confirm or deny the entire photonics supply chain thesis.
+Both are framework-relevant as the ASIC duopoly but neither offers significant alpha at current prices. AVGO is the ultimate tracking position: when Hock says "insatiable demand" and books $30B in a quarter, every fishie in our top 10 gets a macro tailwind.
 
 ## Key Risks
 
