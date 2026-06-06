@@ -1,0 +1,34 @@
+# Netlify custom headers.
+# https://docs.netlify.com/routing/headers/
+#
+# Problem this solves: after a deploy, browsers (iOS Safari especially)
+# kept serving a STALE data.js from cache. The live.json polling refreshes
+# price-derived fields (EV Upside, Upside, Price, Change %), but the
+# FY2027-FY2030 targets and Base ratings live ONLY in data.js — so a
+# cached data.js showed old numbers in those columns even though the
+# deploy had landed. Netlify's default `must-revalidate` wasn't enough
+# for iOS Safari's tab-restore caching.
+#
+# Fix: `no-store` on the app-shell + data files so the browser always
+# fetches the freshest copy on every load. These files are small and
+# change on every deploy, so caching them buys nothing but staleness.
+# Logos, deep-dive .md files, fonts, and the WeChat QR (large + rarely
+# changing) keep Netlify's default caching.
+
+/
+  Cache-Control: no-store
+
+/index.html
+  Cache-Control: no-store
+
+/data.js
+  Cache-Control: no-store
+
+/script.js
+  Cache-Control: no-store
+
+/styles.css
+  Cache-Control: no-store
+
+/deep-dives/index.json
+  Cache-Control: no-store
