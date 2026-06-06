@@ -409,6 +409,53 @@ WHY WE DON'T MODEL $60B:
   $30-60B is theoretically possible but a different company at that point.
 ```
 
+---
+
+## ⚠️ FLAG: Stage 3 Optical I/O — Unmodeled TAM Add-On (Jun 6, 2026)
+
+**Source:** Anders Storm Substack (Jun 6, 2026) cross-referencing Goldman Sachs "Optical Networking: The Next Mega Trend in AI Infrastructure" (April 2026) + Wiwynn/Ayar Labs Computex 2026 rack-scale demonstration.
+
+**What Goldman models (Stage 2 — switch-centric CPO):**
+- 30-60 External Light Sources (ELS) per rack
+- $91B CPO TAM within $154B total optical networking by 2028
+- Our SIVE model is built on this Goldman TAM framework
+
+**What Goldman does NOT model (Stage 3 — XPU-to-XPU Optical I/O):**
+- Goldman labels this "CPO with XPU" with note: "Adoption schedule still unclear"
+- This stage replaces copper NVLink-type interconnect with optical I/O directly at the compute layer
+- Goldman's $154B TAM EXCLUDES this architecture entirely — it is a 100% add-on
+
+**What Computex 2026 revealed (Wiwynn + Ayar Labs demo):**
+- Full rack solution: 32 AI compute trays, 64 AI ASICs, 800+ TB/s optical bandwidth
+- Up to 16 SuperNova light source assemblies per compute tray × 32 trays = **512 SuperNova assemblies per rack**
+- Each SuperNova contains SIVE CW laser arrays (16 wavelengths per assembly)
+- 512 vs Goldman's 30-60 = **8-15x more ELS per rack than currently modeled**
+- Wiwynn is ODM for Meta, Microsoft, Amazon — the hyperscalers who would deploy this
+
+**What this means for SIVE ceiling if Stage 3 deploys:**
+- Our FY2028 Vector 1 (Ayar): $248M — built on Stage 2 switch-CPO economics
+- If Ayar's optical I/O architecture deploys at 512 ELS/rack instead of 30-60, Vector 1 revenue scales 8-15x
+- Even at conservative 3-5x (partial deployment, mixed architectures): Vector 1 could be $750M-$1.25B FY2029-2030
+- This would raise total FY2030 revenue from $1.6B to potentially $2.5-3.5B
+- Per share impact at current model assumptions (40% OP, 35x, 297M): $1,200-1,700 per share (vs current $803)
+
+**Data needed to model this add-on:**
+1. First hyperscaler production order for optical I/O racks (not demo — volume PO)
+2. SuperNova assembly count confirmed at production spec (512 is theoretical max, production may differ)
+3. SIVE laser content per SuperNova at production pricing (current NRE pricing ≠ volume ASP)
+4. Timeline: Ayar Labs/Storm estimate "2028-2030 ramp starting 2027." Confirmation of first deployment year.
+5. Copper NVLink replacement rate — how fast does optical I/O displace copper within racks?
+6. Goldman or third-party revised TAM incorporating Stage 3 (current $154B excludes it)
+
+**Trigger for ceiling revision:** First confirmed production deployment of optical I/O at a hyperscaler. Until then, this is upside optionality NOT in the base case.
+
+**Three-stage revenue timeline for SIVE:**
+- Stage 1 (Pluggable — NOW): Vector 2 (Jabil LRO) + Vector 11 (GFS pluggable/LPO). Revenue flowing.
+- Stage 2 (Switch CPO — 2027-2028): Vectors 1, 3, 6, 7, 8, 11 (CPO portion). Goldman's $91B TAM. IN OUR MODEL.
+- Stage 3 (Optical I/O — 2028-2030): 8-15x more ELS per rack. Goldman acknowledges but cannot model. NOT IN OUR MODEL. Free option at current scoring.
+
+---
+
 ## Key Risks
 
 - NRE-to-volume conversion must execute (72% NRE today)
