@@ -1312,7 +1312,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // self-explanatory there.
                 let labelHtml = labelFor(col);
                 if (col === 'FY2027') {
-                    labelHtml = `<span class="lbl-wide">${labelHtml}</span>` +
+                    // .ev-group-float-desktop: the 'Target' banner for the
+                    // DESKTOP/tablet layout, anchored in this (FY2027, the
+                    // leftmost FY) header and spanning rightward across all
+                    // four FY columns (FY27-FY30). Its exact width is set by
+                    // positionDesktopTarget() in JS (auto-width columns make
+                    // a pure-CSS % span imprecise). CSS-gated to >=481px.
+                    labelHtml = `<span class="ev-group-float-desktop">${tr('ev_group')}</span>` +
+                                `<span class="lbl-wide">${labelHtml}</span>` +
                                 `<span class="lbl-evbasic">${tr('ev_today')}</span>`;
                 } else if (col === 'FY2028') {
                     // The .ev-group-float span renders the 'Target' group
@@ -1454,7 +1461,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.classList.toggle('row-expanded');
             }
         });
+
+        // Size the desktop 'Target' banner to span FY27..FY30 exactly.
+        positionDesktopTarget();
     }
+
+    // Width the desktop/tablet 'Target' banner so it spans precisely from
+    // the FY2027 column's left edge to the FY2030 column's right edge.
+    // Desktop FY columns are auto-width (content-sized), so a pure-CSS
+    // percentage span would be imprecise — we measure the real layout
+    // instead. No-op below 481px (mobile uses its own fixed-width
+    // Today/2027 banner). The banner is anchored left:0 inside the FY2027
+    // header (CSS), so we only need to set its width here.
+    function positionDesktopTarget() {
+        const headRow = document.getElementById('table-head-row');
+        if (!headRow) return;
+        const banner = headRow.querySelector('.ev-group-float-desktop');
+        if (!banner) return;
+        if (!(window.matchMedia && window.matchMedia('(min-width: 481px)').matches)) {
+            banner.style.width = '';
+            return;
+        }
+        const fy27 = headRow.querySelector('th[data-col="FY2027"]');
+        const fy30 = headRow.querySelector('th[data-col="FY2030"]');
+        if (!fy27 || !fy30) { banner.style.width = ''; return; }
+        const r27 = fy27.getBoundingClientRect();
+        const r30 = fy30.getBoundingClientRect();
+        const w = Math.round(r30.right - r27.left);
+        if (w > 0) banner.style.width = `${w}px`;
+    }
+    // Re-measure on resize — column widths (and thus the span) change with
+    // the viewport. Cheap; only touches one element's width.
+    window.addEventListener('resize', () => positionDesktopTarget());
 
     // Maps a 0–100 score to a continuous red → yellow → green color.
     // Anchors: 0 deep red, 50 pure yellow, 70 vivid green, 100 deep green.

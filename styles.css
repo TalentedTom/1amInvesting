@@ -575,6 +575,43 @@ body.light-mode tr.row-expanded td:nth-child(10) {
    .ev-group-float and hides .lbl-wide for these two columns. */
 .lbl-evbasic { display: none; }
 .ev-group-float { display: none; }
+.ev-group-float-desktop { display: none; }
+
+/* === 'Target' group banner — desktop / tablet (>=481px) ==========
+   Mirrors the mobile Target banner but spans all four FY columns
+   (FY27-FY30). Anchored in the FY2027 header's top padding; its exact
+   width is set by positionDesktopTarget() in JS since the desktop FY
+   columns are auto-width. All header labels bottom-align so the FY
+   column labels stay on the shared baseline while the banner floats
+   above the FY block. */
+@media (min-width: 481px) {
+    #table-head-row th { vertical-align: bottom; }
+    #table-head-row th[data-col="FY2027"],
+    #table-head-row th[data-col="FY2028"],
+    #table-head-row th[data-col="FY2029"],
+    #table-head-row th[data-col="FY2030"] {
+        position: relative;
+        padding-top: 20px;   /* room for the banner above the label */
+    }
+    #table-head-row th[data-col="FY2027"] .ev-group-float-desktop {
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 0;             /* width set by JS (positionDesktopTarget) */
+        text-align: center;
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.1;
+        color: var(--accent);
+        text-transform: uppercase;
+        white-space: nowrap;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.45);
+        pointer-events: none;
+        z-index: 5;
+    }
+}
 
 /* === Tiny % delta on the Today / 2027 target cells ==============
    Financial-ticker style: a small green/red percentage showing the
