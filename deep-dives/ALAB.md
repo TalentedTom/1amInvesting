@@ -1,138 +1,162 @@
-# ALAB — Astera Labs | Deep Dive
-**Date:** April 26, 2026
-**Framework Version:** v3.6.4
-**Score:** 54 (Unranked) | Base 70% (42/60) | Entry 30 (12/40)
-**Price at Analysis:** ~$200 (estimated)
-**Ceiling:** $250-$290 (2027-2028) (FY2028-30 blended, 15%/yr discount per Rule 16)
-**Upside Ratio:** 1.3x-1.5x
-**Market Cap:** ~$36B
-**Position Type:** ⚡ BOTTLENECK — PCIe Gen 6 first-mover, standards-based = competitors catching up
-**FY2025 Revenue:** $852.5M (+115% YoY), record
-**Q1 FY2026 Guidance:** $286-297M
-**Earnings:** May 5, 2026
+# ALAB — Astera Labs | Deep Dive (Full, replaces screen-level pass)
+
+**Date:** June 10, 2026 | External re-audit merged June 10, 2026 (see merge note)
+**Price at dive:** $341.70 | MC ~$62B | ~184M diluted shares (Q1 2026 10-Q basis)
+**Exchange:** NASDAQ
+**Supercycle:** DB1 — AI Interconnect (scale-out + scale-up fabric, signal conditioning, CXL memory, optical 2027+)
+**Classification:** ⚡ BOTTLENECK-ADJACENT PLATFORM (best-of-breed merchant, NOT sole-source in any socket)
 
 ---
 
-## Supercycle: DB1 Interconnect (Age of Interconnection — Connectivity Layer)
+## Core Thesis
 
-## TAM Expansion Lens
+Astera is the leading **merchant** AI connectivity platform: #1 PCIe retimers (Aries), PCIe Gen 6 fabric switches (Scorpio P scale-out, Scorpio X scale-up), Ethernet AECs/SCMs (Taurus), CXL memory controllers (Leo), unified by COSMOS fleet-management software. The thesis inflection: transition from component supplier (retimer cycle) to **fabric platform** — Scorpio becomes largest product line by YE2026 (was 15% of FY2025 revenue), UALink switches carry "substantially higher ASPs than PCIe switches," optical (aiXscale acquisition) ships NPO chipsets 2027 and CPO switches 2028, and custom silicon programs (NVLink Fusion with NVIDIA; KV-cache CXL offload) layer on top.
 
-**Q1 (Today):** PCIe Gen 6 retimers for AI servers (80% penetration). Taurus smart cable modules for 400G Ethernet. Scorpio P-Series PCIe fabric switches.
+The structural caveat that caps the score: **ALAB is not sole-source anywhere.** Every socket is contested — AVGO (PEX switches, SUE scale-up, Tomahawk), MRVL (custom, retimers), CRDO (AECs), Cisco, and above all NVIDIA-native NVLink in the majority of racks. The moat is qualification depth + software + speed-to-spec, not physics. Hyperscaler warrant agreements (Amazon 2024; a SECOND major customer warrant executed Q2 2026 per guidance disclosure) are the customer-alignment evidence — hyperscalers take equity-linked positions in suppliers they intend to scale. The Amazon warrant mechanics (sourced, re-audit): up to 3.26M shares at $142.82 strike, vesting tied to purchase milestones up to **$6.5B cumulative** — a hard demand anchor from a single customer.
 
-**Q2 (3-5 Years):** CXL memory controllers enabling rack-level memory pooling (Leo, first deployment Microsoft Azure). Scorpio X-Series scale-up switching ($20B TAM by 2030). PCIe Gen 7. UALink support.
+**System-qualification lock-in (re-audit addition):** ALAB expanded its Taiwan Cloud-Scale Interop Lab with AMD, Arm, Intel, NVIDIA, Gigabyte, Ingrasys/Foxconn, Inventec, Quanta, and Wiwynn as named validation partners. Rack-scale AI moves at the speed of qualification; once a hyperscaler qualifies a rack around ALAB silicon + COSMOS telemetry + interop tooling, switching cost exceeds "swap the chip." A soft moat, but a real one — worth +1 on Core Thesis, not the physics premium.
 
-**Q3 (New Markets):** Heterogeneous AI infrastructure connectivity. Enterprise CXL adoption. Edge AI connectivity.
+---
 
-**Ford Principle:** Not "retimer chips." The nervous system of AI infrastructure — the connectivity silicon that prevents thousands of GPUs from becoming thousands of isolated processors.
+## Q1 2026 Actuals (reported May 5, 2026 — source: company release/8-K)
 
-## Product Portfolio
+- Revenue $308.4M, +93% YoY, +14% QoQ (beat consensus $292M)
+- Non-GAAP GM 76.4%; Non-GAAP OM 36.2%; Non-GAAP EPS $0.61; GAAP OM 20.1%
+- PCIe Gen 6 >1/3 of total revenue
+- Cash $1.18B, no structural debt issues
+- Q2 guide: $355-365M (+15-18% QoQ), NG EPS $0.68-0.70, GM ~73% including ~200bps non-cash impact from NEW customer warrant agreement
 
-| Product | Role | Revenue Share | Growth |
-|---------|------|--------------|--------|
-| **Aries** | PCIe Gen 5/6 + CXL retimers | ~70% | +70% YoY |
-| **Taurus** | Smart Cable Modules (400G Ethernet) | Growing | 4x YoY |
-| **Scorpio P** | PCIe fabric switches | >15% FY2025 | Ramping |
-| **Scorpio X** | Scale-up fabric switches | Starting | Initial production H2 2026 |
-| **Leo** | CXL memory controllers | Pre-revenue | First deployment: Microsoft Azure |
-| **COSMOS** | Management software platform | Included | Cross-platform |
+## Confirmed Forward Drivers (sourced, earnings call May 5 2026 + GTC 2026)
 
-## Financial Trajectory
+- Scorpio X 320-lane: initial volumes now, production ramp H2 2026, largest product line by YE2026
+- TWO additional major hyperscalers begin receiving Scorpio P late 2026
+- Leo CXL: Microsoft Azure M-Series private beta → GA by YE2026; SECOND custom KV-cache offload design at a new hyperscaler, ships for revenue 2027 (CEO: "working with them on at-scale performance tests")
+- Optical roadmap (aiXscale Photonics acquired): pluggable connectors + NPO-based chipsets volume 2027, fully optical CPO switches 2028; "all necessary foundational IP — mixed-signal, electronic ICs, photonic ICs"
+- NVLink Fusion: custom scale-up connectivity program in development with NVIDIA for hybrid racks (XPU ↔ NVIDIA ecosystem); Trainium 4 incorporates NVLink Fusion + UALink (TAM expansion read, not displacement)
+- UALink 2.0 spec advanced; UALink switches = "substantially higher ASPs than PCIe switches" (radix, complexity, optical media)
 
-| Period | Revenue | YoY Growth | GM | OP Margin |
-|--------|---------|-----------|-----|-----------|
-| FY2023 | $116M | — | ~76% | — |
-| FY2024 | $396M | +242% | 76.4% | 30.2% (non-GAAP) |
-| FY2025 | $852.5M | +115% | 75.7% | 40.2% (non-GAAP) |
-| Q1 FY2026E | $286-297M | +80% YoY | ~74% | ~38% |
-| FY2026E | ~$1.2-1.4B | +40-65% | ~74% | ~38% |
-| FY2027E | ~$2.0-2.5B | +50-80% | ~72% | ~36% |
-| FY2028E | ~$3.0-4.0B | +40-60% | ~70% | ~35% |
-
-## Amazon $6.5B Warrant — The Hyperscaler Lock-In Signal
-
-Amazon signed a $6.5B cumulative warrant-linked purchase agreement with Astera Labs. Same signal structure as:
-- NVIDIA → LITE: $2B investment + multi-billion purchase
-- SpaceX → FTC.L: 15% warrant + £47.3M order
-- Amazon → ALAB: $6.5B warrant-linked commitment
-
-Rule 7: When the customer gives you equity, they're telling you they NEED you.
-
-## The "80% of AI Servers" Claim
-
-PCIe signals DEGRADE over board-level distances at 64GT/s (Gen 6). Physics requires signal regeneration (retiming). Astera's Aries retimer is the only Gen 6 retimer shipping at volume. No competitor has matched this. 75.7% gross margins at $850M revenue PROVE the lack of competition.
-
-However: PCIe is an OPEN STANDARD. Anyone can design to it. Astera's advantage is TIMING (first to ship) and DESIGN QUALITY (mixed-signal analog expertise at 224Gbps+). Broadcom, Intel, Marvell, Montage can all design retimers to the same standard eventually.
+---
 
 ## Scoring Breakdown
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 13/20 | 80% AI server penetration. PCIe Gen 6 first-mover. Amazon $6.5B warrant. CXL first deployment. BUT: standards-based = eventually commoditizes (-3). Broadcom competes (-2). First-mover ≠ permanent (-2). |
-| Cycle Stage | 9/10 | +115% YoY. 75% GM. 40% OP margin. Scorpio ramping. Multiple product lines inflecting. |
-| TAM | 8/10 | $25B+ within 5yr. Retimers + switches + CXL controllers. Multiple vectors all Phase 1-2. |
-| Catalysts | 4/5 | Q1 earnings May 5. Scorpio X ramp H2 2026. CXL Azure production. UALink 1.0. |
-| Macro | 9/10 | Age of Interconnection. Every AI server needs retimers. Nutty essay confirms connectivity thesis. |
-| Alpha | 1/5 | 15+ analysts. IPO darling. Thesis fully priced at ~$36B MC. Zero information edge. |
-| Risks | -2 | Standards-based commoditization (-1). Broadcom competes (-1). |
-| **Base** | **42/60 (70%)** | |
+| Core Thesis | 15/20 | Best-of-breed merchant platform across 5 product families + COSMOS software + two hyperscaler warrant alignments ($6.5B Amazon milestones) + Taiwan Interop Lab system-qualification lock-in. BUT: zero sole-source sockets — AVGO/MRVL/CRDO/Cisco/Montage/NVIDIA-native contest everything. Qualification moat, not physics. |
+| Cycle Stage | 10/10 | +93% YoY record revenue, beat-and-raise, Scorpio inflecting NOW, 36% NG OM at scale, $1.18B cash. Re-audit is right: this is 10/10 cycle evidence. |
+| TAM Expansion | 9/10 | Three NEW vectors since prior screen: UALink high-ASP switches (2027+), optical NPO/CPO (2027/2028), KV-cache CXL custom (2027). Management pegs merchant scale-up switching alone at $20B by 2030. |
+| Catalysts | 5/5 | Scorpio X H2 ramp; 2 new hyperscalers late 2026; Azure Leo GA YE2026; KV-cache ship 2027; UALink 2.0 deployments; NPO volume 2027; Q2 print Aug 4 (Scorpio ≥25% test). |
+| Macro | 9/10 | Same supercycle as the book; merchant XPU buildout (Trainium/TPU/MTIA) is its specific engine. |
+| Alpha | 1/5 | $62B MC, 25+ analysts, 49x NTM EV/EBITDA, institutional darling. Zero informational edge. (Rule 1: the prior run is NOT the penalty — the absence of edge is.) |
+| Risks | -4 | Not sole-source (-1). Customer concentration + insourcing scares (Trainium 4 headline = -13% day) (-1). NVIDIA-native NVLink owns the majority of scale-up sockets (-1). Montage CXL/retimer entry + multiple-compression risk at 49x NTM EV/EBITDA vs 31x peer mean (-1). |
+| **Base** | **45/60 (75%)** | Screen 70 → dive 73 → re-audit merge 75. |
 
-## Ceiling — Forward TAM Math
+---
 
-```
-REVENUE (with years):
-  FY2026: $1.2-1.4B (guided trajectory)
-  FY2027: $2.0-2.5B (CXL + Scorpio ramp)
-  FY2028: $3.0-4.0B (full platform)
-  FY2030: $5-8B (if Scorpio X captures scale-up switching TAM)
+## Ceiling — v4.1 AH-1 Full Derivation (graduated 36-38% NG OP, 28x, shares 184M→200M)
 
-NEAR-TERM (FY2028, ~2yr):
-  $3.5B, 35% OP = $1.22B × 30x = $36.8B → ~$205
+### Revenue Vectors
 
-LONG-TERM INCREMENTAL (FY2030, ~4yr, discounted 15%/yr):
-  $6.5B, 33% OP = $2.15B × 28x = $60B → ~$333
-  Incremental: $333 - $205 = $128 × 0.52 = $67
+**V1. Scorpio fabric switches (P scale-out + X scale-up + UALink/custom 2027+)**
+Source: management — largest line by YE2026 (from 15% of FY2025 ≈ $108M); X production H2 2026; 2 new hyperscalers late 2026; UALink ASP uplift commentary; management $20B merchant scale-up switch TAM by 2030; Amazon warrant $6.5B cumulative purchase milestones. FY2030 = 14.5% capture of management's own TAM. AH-7: MEDIUM-HIGH through 2027, MEDIUM beyond.
 
-BLENDED CEILING: $250-$290 (midpoint $270)
-```
+| 2026 | 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|------|
+| $520M | $1,100M | $1,600M | $2,150M | $2,900M |
 
-**Entry:** ~$200 / $270 midpoint = 1.35x → Entry 30
+**V2. Signal conditioning (Aries retimers Gen6→Gen7 + Taurus AEC/SCM)**
+Source: Q1 actuals (majority of current revenue), Gen 6 >1/3 of company revenue, 800G/1.6T Ethernet cycle. Share declines as fabric ramps; CRDO competition in AECs. AH-7: MEDIUM.
 
-## Total: (70 × 0.6) + (30 × 0.4) = 42 + 12 = 54
+| 2026 | 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|------|
+| $950M | $1,050M | $1,150M | $1,200M | $1,250M |
 
-## Why Unranked Despite Elite Fundamentals
+**V3. Leo CXL / KV-cache custom silicon**
+Source: Azure M-Series GA YE2026 (named); second hyperscaler KV-cache custom ships 2027 (CEO quote); Penguin Solutions Leo deployments show 75% higher GPU utilization and 2x inference throughput for CXL-attached KV-cache (company data). Inference memory wall = structural tailwind. HELD at demo-stage sizing per the re-audit's own risk: CXL pooling needs production deployments, not demos — tagged uncertainty must discount the number (FOCI lesson). AH-7: MEDIUM-LOW.
 
-If ALAB were at $5B MC with 3 analysts, this would score 75+ HC. 80% penetration + 75% margins + Amazon $6.5B warrant + CXL first-mover is genuinely elite. But at ~$36B MC with 15+ analysts, the market ALREADY KNOWS. The gap between price and ceiling is 1.35x — barely above 1x. The framework hunts for UNDISCOVERED chokepoints at UNDISCOVERED market caps. ALAB is neither.
+| 2026 | 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|------|
+| $40M | $150M | $300M | $450M | $600M |
 
-## Comparison
+**V4. Optical (aiXscale): connectors/NPO chipsets 2027 → CPO switches 2028**
+Source: management roadmap, acquisition IP claims. No volume customer named yet. AH-7: LOW-MEDIUM.
 
-| | ALAB (54, unranked) | CRDO (62, ranked) | SIVE (90 HC) |
-|---|---|---|---|
-| Product | PCIe retimers + CXL | SerDes IP + AEC | CW laser arrays |
-| GM | 75.7% | ~65% | 30%+ at scale |
-| Revenue | $852M | ~$600M | ~SEK 300M |
-| MC | ~$36B | $36B | ~$870M |
-| Moat | First-mover (temporal) | ZeroFlap 100x reliability | Physics (silicon can't lase) |
-| Entry ratio | 1.35x | 1.5x | 6.6x |
+| 2026 | 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|------|
+| $0 | $100M | $350M | $700M | $950M |
 
-The comparison tells the story: same MC, similar revenue trajectories, but SIVE at $870M has 26x more upside per dollar invested. The framework allocates to the widest gap.
+**V5. NVLink Fusion custom silicon**
+Source: program confirmed with NVIDIA (Dec 2025 + GTC 2026); hybrid-rack scope (XPU racks bridging into NVLink ecosystems — Trainium 4 incorporates NVLink Fusion + UALink). Revenue sizing is inference; FY2030 raised modestly on the hybrid-rack anchor. AH-7: LOW.
+
+| 2026 | 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|------|
+| $0 | $50M | $200M | $450M | $800M |
+
+### Combined Revenue
+
+| Vector | 2026 | 2027 | 2028 | 2029 | 2030 |
+|--------|------|------|------|------|------|
+| 1. Scorpio/UALink/custom | $520M | $1,100M | $1,600M | $2,150M | $2,900M |
+| 2. Signal conditioning | $950M | $1,050M | $1,150M | $1,200M | $1,250M |
+| 3. Leo CXL/KV-cache | $40M | $150M | $300M | $450M | $600M |
+| 4. Optical | $0 | $100M | $350M | $700M | $950M |
+| 5. NVLink Fusion custom | $0 | $50M | $200M | $450M | $800M |
+| **TOTAL** | **$1,510M** | **$2,450M** | **$3,600M** | **$4,950M** | **$6,500M** |
+
+Cross-check: FY2026 consistent with Q1 $308M + Q2 guide ~$360M + H2 ramp (≈ +81-110% YoY vs analyst ~81%). FY2027 +59% consistent with TIKR quarterly path ($360M Q2'26 → ~$540M Q2'27 = +50% YoY mid-year, accelerating on UALink/optical layering). FY2028+ tagged MEDIUM-LOW/LOW; conservative alternative (TIKR mid-case shape) would run ~$2.9B/$3.8B/$4.6B for 2028-2030 — noted, not used, because it ignores the three new vectors entirely.
+
+### Full Valuation Table (NG OP 36/37/38/38%, 28x, shares 190/195/200/200M)
+
+| Year | Revenue | OP | × 28x | MC | Per Share |
+|------|---------|-----|-------|-----|-----------|
+| 2027 | $2,450M | $882M (36%) | $24.7B | $24.7B | **$130** |
+| 2028 | $3,600M | $1,332M (37%) | $37.3B | $37.3B | **$191** |
+| 2029 | $4,950M | $1,881M (38%) | $52.7B | $52.7B | **$263** |
+| 2030 | $6,500M | $2,470M (38%) | $69.2B | $69.2B | **$337** |
+
+28x FLAT justification: between AVGO at 25x (slower growth, customer-churn risk) and the 30x+ reserved for sole-source monopolies. The re-audit's 30x→26x declining-multiple path was rejected — forecasting multiple compression is analyst behavior, not TAM math (Rule 2 adjacent); multiples hold flat or graduate UP on proof. Margins graduate UP (36→38%), not down — 76% GM + COSMOS software mix + visible opex leverage; warrant amortization hits gross margin against specific revenue, it does not erode the operating model. Pre-rounding per AH-2: 129.98 / 191.26 / 263.34 / 337.37.
+
+### Ceiling Derivation
+
+  FY2028: $3,600M × 37% NG OP = $1,332M × 28x = $37.30B / 195M shares = **$191**
+
+CEILING: $191 (FY2028 column standard; rolling blend in Excel)
+
+### The Embedded-Expectations Check (why the market price fails the model)
+
+To justify $342 on FY2028 at 28x/37%: requires $342 × 195M = $66.7B MC → $2.38B OP → **$6.4B FY2028 revenue** — a 4.3x from FY2026 in two years, i.e., ALAB winning the merchant scale-up fabric as a near-monopoly while AVGO, MRVL, and NVIDIA-native all concede. The competitive structure does not support that as a BASE case. The market has paid forward for the monopoly outcome; the model pays for the best-of-breed-in-contested-sockets outcome.
+
+---
+
+## Entry Analysis
+
+- **$191:** FY2028 fair value. Above this = negative EV on FY2028.
+- **$159:** 1.2x FY2028, EV = 75% × 0.20 = **+15%**. Watchlist entry.
+- **$123:** 1.55x FY2028, EV = 75% × 0.55 = **+41%**. Strong buy. (Dec 2025 price was $152 — the entry existed six months ago.)
+- **Current $341.70:** 0.56x FY2028, EV = **-33%**. Even FY2030 ($337) sits below the current price.
+
+## Re-Rate Triggers (either direction)
+
+- UALink switch volume orders at disclosed ASPs (would lift V1 materially)
+- Optical NPO chipset customer named with volume (V4 confidence LOW-MEDIUM → MEDIUM-HIGH)
+- Third hyperscaler warrant or KV-cache program (V3 expansion)
+- Q2 print (Aug 4): Scorpio ≥25% of revenue confirms largest-line trajectory
+- NVIDIA-native NVLink extending into XPU hybrid racks at scale = V1/V5 threat
 
 ## Key Risks
 
-- Standards-based interface = Broadcom, Intel, Marvell design competing retimers within 12-18 months
-- 75% margins compress as competition arrives at Gen 6/7
-- CFO departure (Feb 2026) — leadership uncertainty
-- At $36B MC, any earnings miss = violent drawdown (high expectations embedded)
-- Amazon warrant creates accounting complexity (non-GAAP adjustments needed)
+1. Not sole-source in any socket; AVGO SUE and NVIDIA-native NVLink contest the scale-up fabric prize directly. Montage has launched PCIe 6.x/CXL 3.x retimers and AECs (re-audit catch); MRVL's Structera/XConn stack targets CXL pooling head-on.
+2. Customer concentration; a single hyperscaler architecture decision moves the stock -13% in a session (Trainium 4 episode).
+3. Multiple risk independent of execution: 49x NTM EV/EBITDA vs 31x peer mean (TIKR) — compression alone is -35% with zero revenue miss.
+4. Gross margin mix-down as hardware-heavy fabric/optical scales (73% Q2 guide vs 76.4% Q1).
+5. Optical vectors (V4) compete with COHR/LITE/AAOI module incumbents and depend on external CW laser supply — same constrained ecosystem the book already owns upstream.
 
-## What Would Change the Score
+## Jun 10, 2026 — External Re-Audit Merge Note
 
-- MC compression to $15-20B (Entry widens to 2x+, score rises to 62-65)
-- Scorpio X wins a SOLE-SOURCE design at a hyperscaler (chokepoint, not first-mover)
-- CXL becomes a STANDARD with Astera as the only qualified controller (monopoly, not market leader)
-- CRDO-style reliability differentiation discovered (switching cost, not just speed advantage)
+A second independent dive (external) was merged same-day. ADOPTED (sourced): Amazon warrant mechanics ($6.5B milestones / 3.26M shares @ $142.82), management $20B merchant scale-up TAM by 2030, Penguin Solutions Leo performance data, Taiwan Interop Lab ODM roster (system-qualification lock-in → Core Thesis +1), Montage as named competitor (Risks -1). REJECTED with reasoning: 30x multiple (monopoly pricing on a self-described non-monopoly), declining 30→26x multiple path (compression forecasting ≠ TAM math), declining 36→33% margin path (contradicts GM/software mix/opex leverage), Leo at $2.1B FY2030 (violates its own "demos ≠ deployments" risk — tagged uncertainty must discount the number). Both models agreed on the verdict sign at current price: external -21%, ours -33%, merge -33%. Provenance flag: the external dive cited an "old artifact (Base 70, ceiling $250-290)" that does not exist in the artifact store — ALAB was Excel-range-only before today.
 
-## Verdict
+## Portfolio Cross-References (Rule 19)
 
-54 (Unranked). Elite company at an elite valuation. 80% AI server penetration with 75% margins is genuinely rare. Amazon $6.5B warrant confirms hyperscaler dependency. But at ~$36B MC with 15+ analysts, the framework adds zero alpha. The Age of Interconnection thesis is CORRECT — Astera proves it with every earnings report. But the investment alpha is already captured by the market. Monitor for pullback to $15-20B MC where the Entry ratio widens to framework-grade.
-
-The supply chain intelligence (CXL memory pooling 21.9x throughput, PCIe Gen 6 timing, scale-up switching $20B TAM) is useful for understanding the macro thesis. ALAB validates the portfolio's connectivity positions (CRDO, SIVE, MRVL) from the interface layer.
+- V3 KV-cache offload = third-party validation of the inference memory wall (memory pillar support; no score change)
+- V4 optical = ALAB becomes a CW-laser/SiPh CONSUMER 2027+ — adds to aggregate demand flowing through SIVE/Win Semi/IQE chain
+- CRDO: Taurus/AEC competition already reflected in CRDO risks; no change
+- Rule 18 competition sweep: AVGO, MRVL, Credo, Cisco — all already tracked/known

@@ -1,5 +1,5 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 4, 2026 
+**Date:** May 4, 2026 | Restructured Jun 9, 2026 (stale 6/8-vector sections removed, Golden Dome merged into V12, Base harmonized 92%) 
 
 ---
 
@@ -15,121 +15,6 @@
 
 **Ford Principle:** SIVE isn't selling "laser chips." It's selling the universal light source primitive. Silicon cannot generate light — permanent physics truth.
 
-## Core Thesis — Eight Vectors (+ undiscovered Customer B, C, D)
-
-### Vector 1: AI Photonics (CW Laser Monopoly)
-
-- **Physics moat:** Silicon cannot generate light. Every SiPh chip requires external InP laser.
-- **Platform independence:** Supplies ALL 4 CPO platforms — POET (Starlight ELS), COUPE/TSMC, OpenLight/Tower, Ayar Labs/GF. Wins regardless of which architecture succeeds.
-- **Sole independent supplier:** Only independent CW laser supplier outside LITE and COHR (who compete with their own customers). Neutral, non-competing.
-- **Revenue mix:** 72% NRE / 28% product (FY2025). NRE = customers paying to develop products they intend to buy at volume. The flip is coming.
-
-### Vector 2: Jabil 1.6T LRO (Shipping NOW)
-
-- **Confirmed partnership:** Jabil ($34B Fortune 500) publicly endorsed on LinkedIn
-- **Specs:** 1.6T DR8, 70mW CW DFB, Linear Receive Optics — ultra-low-power (no DSP)
-- **Chain:** SIVE (CW laser) → Intel (SiPh PIC) → Jabil (assembly) → Hyperscalers
-- **Bridge revenue:** Generates revenue NOW while CPO ramps H2 2026+
-
-### Vector 3: Consumer Wearables (Apple breadcrumb)
-
-- **50M unit RFQ** from "US Fortune 100." 135-wavelength architecture.
-- Management SILENT — POET NDA breach proves the value of discretion.
-
-### Vector 4+5: US Defense (Direct + Primes)
-
-- NEMC Phase 2: $7.6M funded (SF-STAR EW + 6G MIMO)
-- RTX: beamformers. BAE: STAR duplex arrays. Ericsson: space/telecom.
-- CHIPS Act Round 2 incoming. Multi-decade lock-in.
-- "US government doesn't fund random $1B Swedish companies" — Serenity
-
-### Vector 6: Lightmatter Optical Interconnect (NEW)
-
-- **Lightmatter:** $4.4B+ private, investors include Microsoft, Google, NVIDIA
-- **Product:** Passage (photonic interconnect) + Constellation (all-optical switching)
-- **Needs:** External CW light source — does NOT make lasers
-- **Supply chain:** SIVE on GlobalFoundries laser source supplier list
-- **Chain:** SIVE → GFS → Lightmatter → Microsoft/Google/Meta
-- **Revenue impact:** Private BOM = market can't model it. "Appears out of nowhere."
-- Revenue estimates (Anders Storm): $21.5M (2027) → $53M (2028) → $88M (2029) → $124M (2030)
-- TAM denominator: 995,000+ NATO vehicles + Navy + commercial satellite terminals
-
-**NEMC Phase 2 Funding (April 2026):**
-- Project 1 (SF-STAR): $5.1M Year 2 — Electronic Warfare simultaneous transmit/receive
-- Project 2 (6G MIMO): $2.5M Year 2 — NextG secure military comms + GRAND decoding hardware
-- Total: $7.6M Phase 2. DoD does NOT approve Phase 2 unless Phase 1 was exceptional.
-
-**Defense Primes Using SIVE Chip IP (Serenity intelligence, April 2026):**
-- **Raytheon (RTX):** Beamformers for space/telecom applications
-- **BAE Systems:** STAR duplex arrays for radar jamming during electronic warfare
-- **Ericsson:** Beamformers for space/telecom
-- Defense primes are using SIVE's microchip IP to build classified final products
-- Applications: LEO satellite comms, electronic warfare, space-based sensing/ISR
-- Commercial spinoff: SpaceX Starlink / Amazon Kuiper LEO constellation applications
-
-**CHIPS Act Round 2 (Serenity hint, April 2026):**
-- "CHIPS Act round 2 incoming soon" — consistent with renewal cycle
-- US government funding a $1.5B SWEDISH company is "highly unusual"
-- Signals SIVE has capability NO American company can provide
-- Each CHIPS Act round deepens entrenchment in US defense supply chain
-- Classified defense revenue may "appear randomly in financial statements"
-
-**Why This Matters:**
-- Defense qualification = multi-DECADE revenue streams, recession-proof
-- Classified programs = structural information asymmetry (analysts can't model it)
-- Five revenue vectors with ZERO correlation to each other
-- SIVE is now embedded in both AI infrastructure AND US national security
-
-## Six Revenue Vectors — ALL Confirmed
-
-```
-Vector 1: CPO CW lasers (AI infrastructure)        — $90B+ TAM, H2 2026+ ramp
-  All 4 CPO platforms: NVIDIA, Broadcom, Marvell, MediaTek
-  Ayar Labs SuperNova: 64 × 16 = 1,024 lasers/rack
-  Amazon 8-K warrant ($87 strike through Dec 2030)
-  
-Vector 2: Jabil 1.6T LRO (pluggable transceivers)  — SHIPPING NOW
-  LinkedIn: Jabil publicly confirmed "Looking forward to what we'll achieve together!"
-  Specs: 1.6T data rate, DR8 architecture, 70mW CW DFB laser, Linear Rx Optics
-  Intel SiPh PIC + SIVE CW laser + Jabil assembly = complete LRO module
-  Platform-agnostic: works for pluggable AND CPO — SIVE wins either way
-  
-Vector 3: Consumer wearables (Apple breadcrumb)     — 50M units/yr, H2 2027+
-  "US Fortune 100" RFQ for 50M units. 135-wavelength architecture.
-  Only Apple ships ~50M wearables annually in US Fortune 100.
-  SIVE management SILENT on Apple — POET NDA breach proves why silence is golden
-  
-Vector 4: US Defense direct (NEMC Phase 2)          — $7.6M funded, scaling
-  SF-STAR: $5.1M — simultaneous jamming + comms (EW holy grail)
-  6G MIMO: $2.5M — secure military comms hardware
-  
-Vector 5: Defense primes (RTX + BAE using SIVE IP)  — classified scale
-  Raytheon: beamformers for space/telecom
-  BAE Systems: STAR duplex arrays for radar jamming/EW
-  Ericsson: beamformers for space/telecom
-  Commercial spinoff: SpaceX/Amazon Kuiper LEO satellite comms
-  CHIPS Act Round 2 incoming — deepens US defense entrenchment
-
-Vector 6: Lightmatter optical interconnect (NEW)    — $4.4B+ private, MSFT/GOOG invested
-  Lightmatter makes Passage (photonic interconnect) + Constellation (optical switching)
-  Lightmatter does NOT make lasers — needs external CW light source
-  SIVE is on GlobalFoundries' laser source supplier list alongside LITE
-  Supply chain: SIVE (CW lasers) → GFS (SiPh fabrication) → Lightmatter → Hyperscalers
-  Lightmatter investors: Microsoft, Google, NVIDIA, GV
-  Manufacturing partners: TSMC, GlobalFoundries, Tower Semi, Amkor
-  Serenity discovery: "Lightmatter uses SIVE lasers — brand new information"
-  Revenue will "appear out of nowhere on the balance sheet" — private BOM, undisclosed
-```
-
-**Revenue timeline — NO GAPS in any S-curve:**
-```
-NOW:       Jabil 1.6T LRO shipping (Vector 2)
-H2 2026:   CPO volume begins (Vector 1)
-2027:      SATCOM/Defense ramp (Vectors 4+5), Apple potential (Vector 3)
-2027+:     Lightmatter volume ramp (Vector 6)
-2028+:     Full CPO scale + all vectors at volume
-```
-
 ## Ten Confirmed Partnership/Customer Relationships
 
 1. **Jabil** → 1.6T LRO (PUBLIC LinkedIn confirmation, shipping)
@@ -142,7 +27,7 @@ H2 2026:   CPO volume begins (Vector 1)
 8. **BAE Systems** → STAR duplex arrays using SIVE chip IP (CHIPS Act funded)
 9. **GlobalFoundries** → SIVE laser arrays integrated into GF reference designs (CPO + LPO + SCALE™). Jun 2, 2026 strategic collaboration (Reuters).
 10. **Lightmatter** → CW lasers for photonic interconnect (Serenity discovery, $4.4B+ private)
-Plus: Amazon (8-K warrant), Apple (breadcrumb), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain)
+Plus: Amazon (8-K warrant, $87 strike through Dec 2030), Apple (breadcrumb), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain)
 
 **Zero failed partnerships. Zero cancelled contracts. Zero NDA breaches.**
 Management discipline on confidentiality (Apple silence) = hyperscaler trust.
@@ -178,7 +63,7 @@ What the bear gets right (cost Base 59→55): (1) multi-sourcing caps pricing po
 
 What the bear gets wrong (why ceiling unchanged): (1) in a 67%-undersupplied market, multi-sourcing is customers securing volume, not commoditizing the supplier — pricing power survives shortage; (2) SIVE SECURED Win capacity while competitors reach into the open market, suggesting SIVE is ahead in the fab line, not behind; (3) "Phase 1" lasts through 2030 (Rosenblatt InP shortage, Goldman CW tight through Q3 2028 = 14 quarters) — SIVE's entire FY2027-2030 revenue ramp happens INSIDE the window the bear concedes SIVE wins; (4) no evidence IP catch-up outpaces capacity addition. Ceiling (SEK 405) survives the bear's own timeline; only the certainty (Base) was overstated.
 
-## Ceiling — v4.0 AH-1 Full Derivation (12-Vector, 40% OP, 35x, per Rule AH-9)
+## Ceiling — v4.1 AH-1 Full Derivation (13-Vector, 40% OP, 35x, per Rule AH-9)
 
 ### Vector 1: Ayar Labs / CPO CW Lasers (PRIMARY)
 Confirmed on ALL 4 CPO platforms: NVIDIA COUPE, Broadcom Davisson, Marvell/Celestial, MediaTek.
@@ -216,38 +101,9 @@ AH-7 confidence: MEDIUM-HIGH — 70-80% probability. RfQ confirmed, timeline unc
 |------|------|------|------|
 | $0 | $65M | $100M | $130M |
 
-### Golden Dome Supply Chain (May 2026 — Anders Storm / York Space Systems)
-
-**$1.2 TRILLION program over 20 years (CBO estimate, May 12, 2026).**
-York Space Systems (Golden Dome contractor, $237M+ IDIQs) acquired All.Space ($355M) for Hydra tactical SATCOM terminal. SIVE is SINGLE-SOURCE BFIC supplier inside Hydra.
-
-Supply chain: York (prime) → All.Space (terminal) → SIVE (beamforming RFICs) → GFS (trusted US foundry)
-
-Unit economics (from SIVE investor presentations):
-  - ~$5 per Ka-band chip × 1,800 chips per Hydra terminal = $9,000 SIVE content per terminal
-  - Dual-band Ka/Ku chip raises ASP above $5 (expands addressable to legacy Ku-band constellations)
-  - Re-qualification cost $5-20M, 18-36 months. SIVE locked in for 15-20 year production lifecycle.
-  - MIL-STD-810, MIL-STD-461, MIL-STD-704 certified through Hydra.
-
-Two independent paths into Golden Dome:
-  Path A: Single-source supplier to All.Space/York for Layer 5 tactical SATCOM terminals
-  Path B: CHIPS Act validated component supplier (BAE, Raytheon, MIT Lincoln Lab, Ericsson partners)
-
-Sweden-USA MoU (signed May 22, 2026): Covers AI, defense innovation, space, quantum technology.
-Eliminates "foreign supplier" objection permanently. SIVE chips US-manufactured at GFS Vermont/NY (DoD trusted foundry).
-
-Counter-cyclical value: Defense revenue is independent of commercial AI cycle. If AI capex slows, Golden Dome spending continues. 15-20 year production lifecycle = structural recurring revenue.
-Source: Anders Storm Substack (May 23, 2026), CBO report, York Q1 2026 earnings call, Sweden-USA MoU.
-AH-7 confidence: HIGH for lock-in, MEDIUM for terminal volume (program still early).
-
-  Hydra terminal production estimates:
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| ~500 units | ~2,000 units | ~4,000 units | ~6,000 units |
-| $4.5M | $20M | $40M | $60M |
-
 ### Vector 4: Defense NEMC (US DoD CHIPS Act)
 $6.6M BAE Year 2 CHIPS Act funded. SF-STAR electronic warfare + 6G MIMO hardware.
+NEMC Phase 2 breakdown: SF-STAR $5.1M Year 2 (EW simultaneous transmit/receive) + 6G MIMO $2.5M Year 2 (NextG secure comms + GRAND decoding) = $7.6M total Phase 2. DoD does NOT approve Phase 2 unless Phase 1 was exceptional. (Note: $6.6M BAE and $7.6M NEMC Phase 2 are different scopes — reconcile at next earnings.)
 Phase 2 = Phase 1 delivered exceptional results. DoD doesn't fund random $1B Swedish companies.
 Source: CHIPS Act public awards database, BAE Systems confirmation.
 AH-7 confidence: HIGH — government-funded, contracted.
@@ -335,14 +191,44 @@ Probability: **80%** (was 25%)
 |------|------|------|------|
 | $15M | $80M | $150M | $220M |
 
-### Vector 12: YSS / Defense Miscellaneous
-Smaller defense and specialty photonics contracts.
-Source: SIVE financial reports, misc. defense revenue.
-AH-7 confidence: LOW — catch-all for smaller revenue streams.
+### Vector 12: YSS (York Space Systems) / All.Space — Golden Dome SATCOM (MERGED + REBUILT Jun 9, 2026)
+
+**The chain:** York Space Systems (Golden Dome prime contractor, $237M+ IDIQs) → acquired All.Space ($355M) → SIVE is SINGLE-SOURCE BFIC supplier inside the Hydra tactical SATCOM terminal → chips fabricated at GFS (DoD trusted foundry, Vermont/NY).
+
+**$8.2M volume orders CONFIRMED** (Jun 9, 2026) for beamforming ICs powering LEO/multi-orbit satellite communications — the first confirmed volume PO under this chain. "Volume orders" marks the Wireless segment's transition from design wins/NRE to production ramp. Design-in inherited by the prime through the All.Space acquisition; primes do not re-qualify component suppliers mid-program (same inheritance logic as EOS prime relationships).
+
+**Golden Dome program context:** $1.2 TRILLION over 20 years (CBO estimate, May 12, 2026).
+
+**Unit economics (SIVE investor presentations):**
+- ~$5 per Ka-band chip × 1,800 chips per Hydra terminal = ~$9,000 SIVE content per terminal
+- Dual-band Ka/Ku chip raises ASP above $5 (expands addressable to legacy Ku-band constellations)
+- Re-qualification cost $5-20M, 18-36 months → SIVE locked in for 15-20 year production lifecycle
+- MIL-STD-810, MIL-STD-461, MIL-STD-704 certified through Hydra
+- **Cross-check:** the $8.2M order ≈ ~900 terminals of content — lands between the 2027 (~500) and 2028 (~2,000) Hydra ramp estimates below. Two independent estimates converge.
+
+**Hydra terminal ramp estimates (standalone):**
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $5M | $13M | $25M | $15M |
+| ~500 units | ~2,000 units | ~4,000 units | ~6,000 units |
+| $4.5M | $20M | $40M | $60M |
+
+**Two independent paths into Golden Dome:**
+- Path A: Single-source supplier to All.Space/York for Layer 5 tactical SATCOM terminals
+- Path B: CHIPS Act validated component supplier (BAE, Raytheon, MIT Lincoln Lab, Ericsson partners)
+
+**Sweden-USA MoU (signed May 22, 2026):** Covers AI, defense innovation, space, quantum. Eliminates "foreign supplier" objection permanently — SIVE chips US-manufactured at GFS.
+
+**Counter-cyclical value:** Defense revenue independent of the commercial AI cycle. If AI capex slows, Golden Dome spending continues. TAM denominator: 995,000+ NATO vehicles + Navy + commercial satellite terminals. Follow-on optionality: LEO constellation buildout ahead of the SpaceX IPO screening wave.
+
+**Rule 16b weighting:** $8.2M confirmed flowing 2026-2027. Follow-on stream (prime-wide YSS adoption) at 50-55% probability on 2-4x run-rate expansion by 2028, plus misc defense. Hydra standalone unit math supports ~$60M by 2030 — our $45M is the conservative take.
+
+Source: allspace volume order announcement (Jun 9 2026), Anders Storm Substack (May 23 2026), CBO report, York Q1 2026 earnings call, Sweden-USA MoU, Serenity supply-chain analysis.
+AH-7 confidence: **MEDIUM-HIGH** (was LOW) — confirmed volume PO + named prime + MIL-STD certified product + funded program.
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $25M | $35M | $45M |
 
 ### Additional Optionality (NOT in base revenue):
 - Vertical integration (30% probability): Board M&A nominations signal structural preparation. Capture rate 13-19% vs current 5-8%.
@@ -389,18 +275,18 @@ Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commerciali
 | 9. Nokia | $8M | $20M | $30M | $35M |
 | 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
 | 11. GFS SiPh Platform | $15M | $80M | $150M | $220M |
-| 12. YSS/Defense | $5M | $13M | $25M | $15M |
+| 12. YSS/allspace | $10M | $25M | $35M | $45M |
 | 13. POET | $8M | $20M | $35M | $45M |
-| **TOTAL** | **$255M** | **$724M** | **$1,195M** | **$1,605M** |
+| **TOTAL** | **$260M** | **$736M** | **$1,205M** | **$1,635M** |
 
 ### Full Valuation Table (40% OP, 35x, 297M shares):
 
 | Year | Revenue | OP (40%) | × 35x | MC | Per Share |
 |------|---------|----------|-------|----|-----------|
-| 2027 | $255M | $102M | $3.57B | SEK 33.9B | SEK 128 |
-| 2028 | $724M | $290M | $10.14B | SEK 96.3B | SEK 362 |
-| 2029 | $1,195M | $478M | $16.73B | SEK 158.9B | SEK 598 |
-| 2030 | $1,605M | $642M | $22.47B | SEK 213.5B | SEK 803 |
+| 2027 | $260M | $104M | $3.64B | SEK 34.6B | SEK 130 |
+| 2028 | $736M | $294M | $10.30B | SEK 97.9B | SEK 368 |
+| 2029 | $1,205M | $482M | $16.87B | SEK 160.3B | SEK 603 |
+| 2030 | $1,635M | $654M | $22.89B | SEK 217.5B | SEK 818 |
 
 WHY WE DON'T MODEL $60B:
   Serenity's $60B assumes SIVE acquires downstream and competes with LITE.
@@ -431,6 +317,10 @@ WHY WE DON'T MODEL $60B:
 - Each SuperNova contains SIVE CW laser arrays (16 wavelengths per assembly)
 - 512 vs Goldman's 30-60 = **8-15x more ELS per rack than currently modeled**
 - Wiwynn is ODM for Meta, Microsoft, Amazon — the hyperscalers who would deploy this
+
+**Supporting signals since flag creation:**
+- **Jun 7, 2026 — Ayar Labs joins NVIDIA NVLink Fusion ecosystem.** CEO Mark Wade: making Ayar's CPO technology compatible with NVLink Fusion enables "hyperscalers, system innovators, and silicon partners to connect into NVLink AI fabrics with optical I/O... as AI clusters grow beyond what copper can support." Charles Wuischpard — the former Ayar CEO who BUILT the optical I/O technology, now at NVIDIA — publicly endorsed it: "Tremendous! This will open up a trillion dollar market opportunity." NVIDIA hired the architect of Stage 3 and he is calling the TAM from inside the company. Anders Storm explicitly connected this to Goldman's unmodeled third stage.
+- **Jun 9, 2026 — SemiAnalysis InferenceX GB300 benchmark data.** GB300 NVL72 dominates all inference systems on DeepSeek V4; "the rack-scale advantage is fundamentally a scale-up domain story" — 72 GPUs in one NVLink domain keeps MoE all-to-all traffic on fast interconnect while 8-GPU islands hit the wall early. Wide expert parallelism is THE performance lever. This is the empirical demand driver for ever-larger scale-up domains (NVL576 → NVL1152) that copper physically cannot span — the precise economic forcing function for optical I/O at the compute layer.
 
 **What this means for SIVE ceiling if Stage 3 deploys:**
 - Our FY2028 Vector 1 (Ayar): $248M — built on Stage 2 switch-CPO economics
