@@ -1304,6 +1304,66 @@ tr.row-unranked.row-expanded {
     opacity: 1;
 }
 
+/* === Research archive (collapsed unranked rows) ==================
+   Unranked rows carry .archive-row and hide by default — visitors see
+   the ranked book; the divider button at the boundary expands the
+   archive on demand. State = body.archive-open (survives live-poll
+   re-renders; resets collapsed on fresh page load). */
+tr.archive-row {
+    display: none;
+}
+body.archive-open tr.archive-row {
+    display: table-row;
+}
+
+/* Divider row. Its single colspan cell must escape ALL the positional
+   td:nth-child(1) styling (sticky/left/width caps on desktop+tablet,
+   display:none in both phone modes) — hence the !important resets. */
+tr.archive-divider td {
+    display: table-cell !important;
+    position: static !important;
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    text-align: left !important;
+    padding: 0.35rem 0.6rem;
+    background: var(--bg-panel) !important;
+    border-bottom: 1px solid var(--border);
+}
+.archive-toggle {
+    /* Sticky-left so the button stays in view while the (wide) table is
+       scrolled horizontally. Scroll container = .table-wrapper. */
+    position: sticky;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(148, 163, 184, 0.10);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.32rem 0.95rem;
+    cursor: pointer;
+    transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.archive-toggle::before {
+    content: '▾';
+    font-size: 0.7em;
+    opacity: 0.7;
+}
+body.archive-open .archive-toggle::before {
+    content: '▴';
+}
+.archive-toggle:hover {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+    background: rgba(148, 163, 184, 0.16);
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }

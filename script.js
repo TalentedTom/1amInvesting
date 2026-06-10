@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 12-months-forward-looking framing. Mapping is col -> I18N key so
     // the strings translate alongside the rest of the chrome.
     const COL_CAPTION_KEYS = {
+        "EV Upside": "caption_EVUp",
         "FY2027": "caption_FY27",
         "FY2028": "caption_FY28",
     };
@@ -139,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: 'Markets price ~12 months ahead — fair value today',
             caption_FY28: 'Implied fair value ~1 year from now',
+            caption_EVUp: 'EV Upside = Base (conviction, as a probability) × upside beyond 1x to the 1-year target. e.g. Base 80 × 2.0x surplus = 160%. Negative = price already above target — avoid.',
+            archive_show: 'Show research archive ({n})',
+            archive_hide: 'Hide research archive',
             mode_basic: 'Basic',
             mode_adv: 'ADV',
             ev_group: 'Target',
@@ -188,6 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
+            caption_EVUp: 'EV 上涨 = 基础分（视为概率）× 距 1 年目标价的超额涨幅。例：80 × 2.0 = 160%。负值 = 股价已高于目标价 — 回避。',
+            archive_show: '显示研究存档（{n}）',
+            archive_hide: '隐藏研究存档',
             mode_basic: '基本',
             mode_adv: '高级',
             ev_group: '目标',
@@ -1389,6 +1396,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 2. Build Rows
+        // Unranked rows are the "research archive" — analyzed-but-not-
+        // investment-grade names pinned below the ranked list. They're
+        // collapsed by default behind a divider/toggle so visitors see the
+        // ranked book first; the analyst can expand when needed. State
+        // lives in a body class (archive-open) so live-poll re-renders
+        // don't reset it mid-session; fresh page loads start collapsed.
+        const archivedCount = data.filter(r => r._displayRank === '—').length;
+        let dividerInserted = false;
         let bodyHtml = '';
         data.forEach((row, index) => {
             // Apply a staggered animation delay
@@ -1403,7 +1418,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //                   '?', mojibake, market-cap-as-price, etc.)
             // Ranked rows get no extra class — fast path, no border accent.
             let rowClass = '';
-            if (row._displayRank === '—') {
+            const isArchived = row._displayRank === '—';
+            if (isArchived) {
                 const ticker = String(row.Ticker || '');
                 const ceiling = String(row['1y EV'] || row['Ceiling Target'] || '').trim().toUpperCase();
                 if (ticker.includes('PRE-IPO')) {
@@ -1413,10 +1429,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     rowClass = ' row-unranked';
                 }
+                rowClass += ' archive-row';
+
+                // Divider sits at the ranked/unranked boundary (unranked are
+                // always pinned last, so this fires exactly once).
+                if (!dividerInserted) {
+                    dividerInserted = true;
+                    const open = document.body.classList.contains('archive-open');
+                    const label = open ? tr('archive_hide') : tr('archive_show', { n: String(archivedCount) });
+                    bodyHtml += `<tr class="archive-divider"><td colspan="${simpleCols.length}">` +
+                                `<button type="button" id="archive-toggle" class="archive-toggle">${label}</button>` +
+                                `</td></tr>`;
+                }
             }
 
             bodyHtml += `<tr class="${rowClass.trim()}" style="animation-delay: ${delay}s">`;
-            
+
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
                     // Pass the row through so formatCell can read computed
@@ -1427,8 +1455,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             bodyHtml += `</tr>`;
         });
-        
+
         tbody.innerHTML = bodyHtml;
+
+        // Archive toggle — re-bound every render (the button is recreated by
+        // the innerHTML swap above, so old listeners die with the old node).
+        const archToggle = document.getElementById('archive-toggle');
+        if (archToggle) {
+            archToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const open = document.body.classList.toggle('archive-open');
+                archToggle.textContent = open
+                    ? tr('archive_hide')
+                    : tr('archive_show', { n: String(archivedCount) });
+            });
+        }
 
         // Row click handler:
         //   - clicking the chart-icon button opens TradingView modal
@@ -1437,30 +1478,42 @@ document.addEventListener('DOMContentLoaded', () => {
         // Chart button is checked first because it lives in a sibling sticky
         // column to the ticker — without explicit ordering, the row-expand
         // fallback could win on near-misses.
-        tbody.addEventListener('click', (e) => {
-            const chartBtn = e.target.closest('.chart-btn');
-            if (chartBtn) {
-                const ticker = chartBtn.getAttribute('data-chart-ticker');
-                e.stopPropagation();
-                openChart(ticker);
-                return;
-            }
-            const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
-            if (tickerEl) {
-                // Use data-ticker (the canonical symbol) rather than the
-                // visible text — for Taiwanese/Korean rows the visible
-                // text is the company Name, not the ticker. Fall back to
-                // textContent for rows where the attribute isn't set.
-                const ticker = tickerEl.getAttribute('data-ticker') || tickerEl.textContent.trim();
-                e.stopPropagation();
-                openDeepDive(ticker);
-                return;
-            }
-            const tr = e.target.closest('tr');
-            if (tr) {
-                tr.classList.toggle('row-expanded');
-            }
-        });
+        //
+        // Bound ONCE (guarded by dataset flag): the tbody element survives
+        // innerHTML swaps, so re-binding on every render stacked duplicate
+        // listeners — after an even number of renders, row-expand toggled
+        // an even number of times per click and looked dead. Delegated
+        // handlers need no per-render rebinding anyway.
+        if (!tbody.dataset.handlersBound) {
+            tbody.dataset.handlersBound = '1';
+            tbody.addEventListener('click', (e) => {
+                // Archive divider has its own button handler; clicks on the
+                // divider row shouldn't fall through to row-expand.
+                if (e.target.closest('.archive-divider')) return;
+                const chartBtn = e.target.closest('.chart-btn');
+                if (chartBtn) {
+                    const ticker = chartBtn.getAttribute('data-chart-ticker');
+                    e.stopPropagation();
+                    openChart(ticker);
+                    return;
+                }
+                const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
+                if (tickerEl) {
+                    // Use data-ticker (the canonical symbol) rather than the
+                    // visible text — for Taiwanese/Korean rows the visible
+                    // text is the company Name, not the ticker. Fall back to
+                    // textContent for rows where the attribute isn't set.
+                    const ticker = tickerEl.getAttribute('data-ticker') || tickerEl.textContent.trim();
+                    e.stopPropagation();
+                    openDeepDive(ticker);
+                    return;
+                }
+                const tr = e.target.closest('tr');
+                if (tr) {
+                    tr.classList.toggle('row-expanded');
+                }
+            });
+        }
 
         // Size the desktop 'Target' banner to span FY27..FY30 exactly.
         positionDesktopTarget();

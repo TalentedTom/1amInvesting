@@ -18,6 +18,13 @@ name: Refresh live prices (no-Netlify)
 #        scripts/fetch_yahoo.py — fetch helper imported by fetch_live.py
 #        scripts/score.py       — scoring formula (parse_range, etc.)
 #        scripts/requirements.txt — dep pin changes
+#   3. schedule — hourly GitHub-side BACKUP heartbeat, Mon-Fri. Insurance
+#      against cron-job.org going down or auto-disabling itself (it
+#      already did once, after a GitHub Actions outage fed it 26
+#      consecutive 500s). Worst-case staleness with the backup alone is
+#      ~1 h instead of indefinite. Zero Netlify cost (live-prices branch
+#      only). Minute 17 dodges GitHub's congested top-of-hour scheduler
+#      slot, which can delay :00 crons by 15+ minutes.
 #
 # Critical property: this workflow ONLY pushes to the `live-prices`
 # branch, which Netlify is NOT configured to build. That makes price
@@ -32,6 +39,8 @@ name: Refresh live prices (no-Netlify)
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 * * * 1-5'   # hourly backup heartbeat, Mon-Fri (see #3 above)
   push:
     branches: [main]
     paths:
