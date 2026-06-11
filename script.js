@@ -1627,62 +1627,70 @@ document.addEventListener('DOMContentLoaded', () => {
         return isFinite(n) ? n : NaN;
     }
 
-    // Render a 5-point sparkline SVG: Current Price + FY2027 + FY2028 +
-    // FY2029 + FY2030. Values are normalized to the cell's local
-    // min-max so the SHAPE of the trajectory is readable — absolute
-    // levels would be useless across tickers priced in TWD vs USD vs
-    // KRW with very different magnitudes.
+    // Render a 4-bar year-over-year growth chart: % change for each hop
+    // Price→FY27, FY27→FY28, FY28→FY29, FY29→FY30.
     //
-    // Colour is PER-SEGMENT, not whole-line:
-    //   - segment going DOWN (next < prev)  → red
-    //   - segment going UP or FLAT          → green
-    // Lets the eye spot exactly which year breaks a clean uptrend
-    // instead of blanket-colouring the whole row.
+    // This replaced a min-max-normalized line sparkline. The line version
+    // stretched every row to fill the same box, so a steady +20%/yr name
+    // and a +300%-ramp-year name produced near-identical pictures. Bars
+    // fix that with two properties the line couldn't have:
+    //   1. FIXED CROSS-ROW SCALE — a bar's height means the same thing in
+    //      every row (full height = +200% YoY, the cap), so monster ramp
+    //      years visibly tower and rows are directly comparable.
+    //   2. PER-YEAR ATTRIBUTION — each bar IS one year's growth, so "the
+    //      big year is FY29" is readable at a glance.
+    // Heights are sqrt-compressed (h ∝ √(pct/cap)) so modest years (+20%)
+    // stay visible next to capped monsters instead of vanishing to 1px.
     //
-    // Returns '' when fewer than 2 numeric points are available — the
-    // cell falls back to a blank.
+    // Green bar = growth, red = decline (drawn below the baseline), faint
+    // grey stub = segment endpoint missing. Hover tooltip (SVG <title>)
+    // lists the exact percentages. Returns '' when no segment is
+    // computable — the cell falls back to a blank.
     function renderTrajectorySparkline(row) {
-        const values = [
+        const seq = [
             parseLooseNumber(row['Current Price']),
             parseLooseNumber(row['FY2027']),
             parseLooseNumber(row['FY2028']),
             parseLooseNumber(row['FY2029']),
             parseLooseNumber(row['FY2030']),
         ];
-        const validIdxs = values
-            .map((v, i) => ({ v, i }))
-            .filter(o => isFinite(o.v));
-        if (validIdxs.length < 2) return '';
-        const W = 70, H = 22, padX = 3, padY = 3;
-        const vmin = Math.min(...validIdxs.map(o => o.v));
-        const vmax = Math.max(...validIdxs.map(o => o.v));
-        const vrange = vmax - vmin || 1;
-        const innerW = W - 2 * padX;
-        const innerH = H - 2 * padY;
-        const stepX = innerW / (values.length - 1);
-        const pts = validIdxs.map(({ v, i }) => {
-            const x = padX + i * stepX;
-            const y = padY + innerH * (1 - (v - vmin) / vrange);
-            return { x: x.toFixed(1), y: y.toFixed(1), v };
-        });
-        // Per-segment lines coloured by direction. Down = red, up or
-        // flat = green.
-        const segs = [];
-        for (let i = 0; i < pts.length - 1; i++) {
-            const a = pts[i], b = pts[i + 1];
-            const color = b.v < a.v ? '#ef4444' : '#10b981';
-            segs.push(
-                `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" ` +
-                `stroke="${color}" stroke-width="1.4" stroke-linecap="round"/>`
-            );
+        const W = 70, H = 22;
+        const BASE_Y = 15;            // baseline: growth up, decline down
+        const POS_MAX = 13;           // px above baseline at/over the cap
+        const NEG_MAX = 6;            // px below baseline at/over the cap
+        const CAP = 200;              // |%| change that fills the bar
+        const slotW = W / 4;
+        const barW = 11;
+        const parts = [];
+        const tips = [];
+        let computable = 0;
+        parts.push(`<line x1="1" y1="${BASE_Y}" x2="${W - 1}" y2="${BASE_Y}" stroke="#94a3b8" stroke-width="0.75" opacity="0.35"/>`);
+        for (let i = 0; i < 4; i++) {
+            const a = seq[i], b = seq[i + 1];
+            const x = (slotW * i + (slotW - barW) / 2).toFixed(1);
+            if (!isFinite(a) || !isFinite(b) || a <= 0) {
+                // Missing endpoint — neutral stub keeps the year's slot
+                // visible so the remaining bars stay aligned.
+                parts.push(`<rect x="${x}" y="${BASE_Y - 1}" width="${barW}" height="2" fill="#94a3b8" opacity="0.25" rx="1"/>`);
+                tips.push('–');
+                continue;
+            }
+            computable++;
+            const pct = (b / a - 1) * 100;
+            tips.push(`${pct >= 0 ? '+' : ''}${Math.round(pct)}%`);
+            const mag = Math.sqrt(Math.min(Math.abs(pct), CAP) / CAP);
+            if (pct >= 0) {
+                const h = Math.max(1.5, POS_MAX * mag);
+                parts.push(`<rect x="${x}" y="${(BASE_Y - h).toFixed(1)}" width="${barW}" height="${h.toFixed(1)}" fill="#10b981" rx="1"/>`);
+            } else {
+                const h = Math.max(1.5, NEG_MAX * mag);
+                parts.push(`<rect x="${x}" y="${BASE_Y}" width="${barW}" height="${h.toFixed(1)}" fill="#ef4444" rx="1"/>`);
+            }
         }
-        // Dots: neutral grey so they mark the data points without
-        // competing visually with the segment colours.
-        const dots = pts.map(p =>
-            `<circle cx="${p.x}" cy="${p.y}" r="1.4" fill="#94a3b8"/>`
-        ).join('');
-        return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline" aria-hidden="true">` +
-               segs.join('') + dots +
+        if (!computable) return '';
+        const tip = `YoY growth →27 →28 →29 →30: ${tips.join('  ')}`;
+        return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline"><title>${tip}</title>` +
+               parts.join('') +
                `</svg>`;
     }
 
@@ -1736,12 +1744,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 `</button>`;
         }
 
-        // _sparkline pseudo-column: 5-point trajectory mini-chart
-        // showing Current Price → FY2027 → FY2028 → FY2029 → FY2030.
-        // Normalized per-row so the SHAPE (uptrend / flat / down) is
-        // readable; absolute values are not meaningful across tickers
-        // priced in TWD vs USD vs KRW. Empty / unparseable rows render
-        // a blank cell — no broken-chart noise.
+        // _sparkline pseudo-column: 4-bar year-over-year growth chart
+        // (Price→FY27, FY27→28, FY28→29, FY29→30) on a FIXED cross-row
+        // scale — see renderTrajectorySparkline for the design rationale.
+        // Empty / unparseable rows render a blank cell — no broken-chart
+        // noise.
         if (colName === '_sparkline') {
             return row ? renderTrajectorySparkline(row) : '';
         }
