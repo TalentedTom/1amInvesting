@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             caption_EVUp: 'EV Upside = Base (conviction, as a probability) × upside beyond 1x to the 1-year target. e.g. Base 80 × 2.0x surplus = 160%. Negative = price already above target — avoid.',
             archive_show: 'Show research archive ({n})',
             archive_hide: 'Hide research archive',
+            modal_updated: 'Analysis updated {date}',
             mode_basic: 'Basic',
             mode_adv: 'ADV',
             ev_group: 'Target',
@@ -195,6 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
             caption_EVUp: 'EV 上涨 = 基础分（视为概率）× 距 1 年目标价的超额涨幅。例：80 × 2.0 = 160%。负值 = 股价已高于目标价 — 回避。',
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
+            modal_updated: '分析更新于 {date}',
             mode_basic: '基本',
             mode_adv: '高级',
             ev_group: '目标',
@@ -639,6 +641,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // the user has clearly figured the feature out.
         dismissHint(true);
         deepDiveTitle.textContent = `${ticker} ${tr('modal_dive_suffix')}`;
+        // Freshness stamp: the xlsx 'Artifact Updated' field (e.g.
+        // "May 23 (Audit+GD)") tells readers when the thesis was last
+        // reviewed. Show just the date — the parenthetical is analyst
+        // process shorthand. Appended as a DOM node (not innerHTML) so
+        // ticker/date content needs no escaping.
+        const _updRaw = (() => {
+            try {
+                const rows = (window.PORTFOLIO_DATA || {}).en || [];
+                const r = rows.find(x => String(x.Ticker || '').trim() === ticker);
+                return r ? String(r['Artifact Updated'] || '').trim() : '';
+            } catch (_) { return ''; }
+        })();
+        const _updDate = _updRaw.replace(/\s*\([^)]*\)\s*$/, '').trim();
+        if (_updDate && _updDate !== '—' && _updDate !== '-') {
+            const span = document.createElement('span');
+            span.className = 'modal-updated';
+            span.textContent = `· ${tr('modal_updated', { date: _updDate })}`;
+            deepDiveTitle.appendChild(span);
+        }
         if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_close_label'));
         deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
         deepDiveModal.classList.remove('hidden');

@@ -1,160 +1,114 @@
 # AEHR — Aehr Test Systems | Deep Dive
 
+**Date:** April 2026 (dive) | May 20 (audit) | **June 11, 2026 (restructured — single generation; Base reconciled to evidence)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT) | **Base 93% (56/60)**
+**Price at restructure:** $93.32 | ~29.9M shares | MC ~$2.8B
+**Ceiling:** FY2028 $177 (FY-column standard)
+
 ---
 
-## Supercycle: DB1 Photonics (WLBI for SiPh/InP) + DB4 Power (SiC) + AI ASIC (Sonoma PLBI)
+## Supercycle: DB1 Photonics (WLBI for SiPh/InP) + AI ASIC (Sonoma PLBI) + DB4 Power (SiC)
 
-## TAM Expansion Lens
+## Core Thesis: The Universal Reliability Guarantee
 
-**Q1 (Today — Phase 1):** WLBI for silicon photonics transceivers (sole-source monopoly). PLBI via Sonoma for custom AI processor ASICs. Both AI datacenter applications.
-
-**Q2 (3-5 Years — Phase 2):** GaN power device testing for EV motor drivers, robot actuators. SiC burn-in for EV powertrains and charging infrastructure. Every compound semiconductor material creates a new AEHR market.
-
-**Q3 (New Markets — Phase 3):** Quantum chip testing. Photonic IC burn-in. Next-gen memory reliability screening. Any device where "infant mortality" in the field is catastrophic.
-
-**Ford Principle:** AEHR isn't selling "test equipment." It's selling the universal reliability guarantee for every advanced semiconductor. As chips get hotter, more complex, and more mission-critical, burn-in becomes MORE important.
-
-## The Monopoly
-
-**Wafer-Level Burn-In: No competitor on earth.**
-
-The FOX-XP tests, burns in, and stabilizes entire wafers simultaneously — screening for latent defects that only surface under real-world stress (heat, voltage, sustained current). No other company makes WLBI equipment. This is the only 20/20 Core Thesis in the entire portfolio.
-
-A hyperscaler doesn't place a record $41M order with a $2.7B company unless there is literally no alternative.
+Ford Principle: not "test equipment" — the reliability guarantee for every advanced semiconductor. As chips run hotter, more complex, and more mission-critical, burn-in becomes MORE important, and **wafer-level burn-in has no competitor on earth.** The FOX-XP tests, burns in, and stabilizes entire wafers simultaneously, screening latent defects that only surface under real-world stress. No other company makes WLBI equipment — the only 20/20 Core Thesis in the book, and a hyperscaler does not place a record $41M order with a $2.8B company if an alternative exists.
 
 ## The Bookings Explosion
 
-| Period | Bookings | Cumulative Signal |
-|--------|----------|-------------------|
+| Period | Bookings | Signal |
+|--------|----------|--------|
 | Q2 FY2026 | $6.2M | Trough |
-| Q3 FY2026 | $37.2M (6x sequential) | B/B >3.5x |
+| Q3 FY2026 | $37.2M | 6x sequential, B/B >3.5x |
 | Q4 first 5 weeks | +$12.2M | Accelerating |
-| April 16 record order | +$41M | Largest in history |
-| **H2 FY2026 total** | **>$92M** | **Blew through $60-80M guidance** |
-| Effective backlog | >$90M+ | Record |
+| April 16 record order | +$41M | Largest in company history |
+| **H2 FY2026** | **>$92M** | **Through the $60-80M guidance** |
 
-## Three Growth Vectors
+Effective backlog >$90M; contract manufacturing adding >20 Sonoma systems/month of capacity.
 
-### Vector 1 — WLBI for Silicon Photonics
-- Market leader with large installed base at leading global companies
-- March 31: Won MAJOR NEW SiPh customer — "global leader in networking, major supplier to datacenter optical transceiver market"
-- FOX-XP (9 wafers parallel) + WaferPak Auto Aligner + FOX-NP systems + WaferPak contactors
-- Customer forecast for additional systems as early as later this year
-- "Significant multiyear expansion of silicon photonics production"
-
-### Vector 2 — Sonoma PLBI for AI ASICs
-- Record $41M order (April 16) — largest in company history
-- Lead hyperscale customer for PLBI of custom AI processor ASICs (training + inference)
-- Customer ALSO developing "significantly higher-power AI accelerator ASIC" — already placed initial Sonoma order
-- "Further substantial increases in demand for Sonoma systems" expected
-- Contract manufacturing adding >20 Sonoma systems/month capacity
-
-### Vector 3 — WLBI for SiC/GaN Power
-- Original growth vector (EV, charging, solar inverters)
-- Temporarily soft due to EV demand pause
-- Structural demand intact — every SiC device needs burn-in
-
-## Scoring Breakdown
+## Scoring Breakdown (reconciled Jun 11 — evidence-based; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 20/20 | Sole-source WLBI monopoly. No competitor on earth. Physics-required. Non-substitutable. Now ALSO Sonoma PLBI for AI ASICs. Record $41M validates. Perfect score. |
-| Cycle Stage | 8/10 | Bookings explosion ($6.2M→$37.2M→$41M). B/B >3.5x. Revenue trough Q3, inflection Q4/FY2027. Manufacturing expanding. -2 for current-quarter revenue still declining (timing lag). |
-| TAM Expansion | 9/10 | Phase 1: SiPh + AI ASIC. Phase 2: SiC/GaN for EV + robotics. Phase 3: quantum/photonic IC/memory. Every new compound semi material = new AEHR market. |
-| Catalysts | 5/5 | Record $41M order announced. New SiPh customer. Q4 earnings ~July. FY2027 revenue inflection. Next-gen ASIC ramp. |
-| Macro | 9/10 | 120-150 GW compute. CPO pulled forward. AI ASIC proliferation. SiC for EV/grid. |
-| Alpha | 4/5 | 9 analysts. Bookings-to-revenue lag confuses sell-side. WLBI monopoly not fully understood by generalists. |
-| Risks | -1 | Customer concentration (-0.5). Revenue timing lag creates volatility (-0.5). |
-| **Base** | **56/60 (94%)** | |
+| Core Thesis | 20/20 | Sole-source WLBI monopoly — no competitor exists; physics-required, non-substitutable; record $41M order is the market's own proof. The book's only perfect score, scoped to the WLBI claim itself. |
+| Cycle Stage | 9/10 | $6.2M→$37.2M→$41M bookings; B/B >3.5x; >$90M backlog with conversion mechanically scheduled; -1 only for reported revenue still lagging the bookings curve. |
+| TAM | 9/10 | SiPh + AI ASIC today; SiC/GaN for EV/robotics next; quantum/photonic-IC/memory after — every new compound-semi material creates a new AEHR market. V2 competition caps it below 10. |
+| Catalysts | 5/5 | Q4 print (~July): conversion begins + FY2027 guide; SiPh customer follow-on systems "later this year"; next-gen higher-power ASIC ramp; manufacturing scale-up. |
+| Macro | 10/10 | CPO schedule on the record; custom-ASIC proliferation across every hyperscaler (and now sovereign/startup designers); every PIC and every ASIC needs reliability screening. |
+| Alpha | 4/5 | 9 analysts; the bookings-to-revenue lag systematically confuses sell-side models; WLBI monopoly not understood by generalists. |
+| Risks | -1 | Customer concentration — the lead hyperscaler dominates the order book (-1). Bookings-to-revenue timing creates quarter-to-quarter volatility — noted as a price-volatility driver, not a thesis risk. |
+| **Base** | **56/60 (93%)** | Strict evidence read. The 94th point parked: TAM 10 if the universal-reliability primitive is ruled SOI-class (Tom's call). |
 
-## Ceiling — v4.0 AH-1 Full Derivation (40% OP, 30x, per Rule AH-9)
+## Ceiling — v4.1 AH-1 Full Derivation (40% OP monopoly equipment, 30x, ~29.9M shares, FY-column standard)
 
-### Vector 1: SiPh WLBI — Wafer-Level Burn-In for Silicon Photonics (PRIMARY)
-Sole-source WLBI monopoly. 20/20 Core Thesis. No competitor on earth.
-Every SiPh PIC (CPO + pluggable) needs reliability screening before deployment.
-Goldman $193B total photonics TAM = all SiPh PICs flow through AEHR.
-May 2026: New customer win confirmed pluggable SiPh also needs WLBI (not just CPO).
-Source: Goldman $193B photonics TAM, new customer win (May 2026), Damnang S-Tier ranking.
-AH-7 confidence: HIGH — sole-source monopoly, shipping, customer base expanding.
+### V1: SiPh WLBI (PRIMARY) — AH-7: HIGH
+Sole-source. Every SiPh PIC — CPO and pluggable — flows through WLBI before deployment; the March 31 customer win (a "global leader in networking, major supplier to the datacenter optical transceiver market") confirmed pluggables need it too, with follow-on systems forecast this year. Goldman $193B total photonics TAM is the demand pool.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $70M | $195M | $300M | $400M |
 
-### Vector 2: Sonoma ASIC PLBI — Package-Level Burn-In for Custom AI ASICs
-Record $41M single order (April 16, 2026). Next-gen higher-power ASIC already ordered.
-Contract manufacturing adding >20 Sonoma systems/month.
-$92M+ H2 FY2026 bookings converting to FY2027 revenue.
-Every custom AI ASIC (Google TPU, Amazon Trainium, Meta MTIA, Microsoft Maia) needs burn-in.
-Source: Company earnings, $41M order disclosure, contract manufacturing ramp.
-AH-7 confidence: HIGH — record order confirmed, backlog visible, >20 systems/month production.
+### V2: Sonoma PLBI for Custom AI ASICs — AH-7: HIGH
+Record $41M order (Apr 16); the same customer's next-gen "significantly higher-power" ASIC already carries an initial Sonoma order; every custom AI ASIC (TPU, Trainium, MTIA, Maia, and the widening startup field) needs burn-in. Competition exists here (Advantest, Teradyne) — AEHR leads in ASIC burn-in but V2 is not the monopoly.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $100M | $195M | $280M | $330M |
 
-### Vector 3: SiC/GaN Power Semiconductor Test
-Silicon carbide for EVs and power electronics. Original AEHR thesis before AI pivot.
-EV adoption slower than expected but industrial/grid SiC demand growing.
-Source: Company guidance, EV/industrial SiC TAM.
-AH-7 confidence: MEDIUM — cyclical, EV-dependent. Recovery timeline uncertain.
+### V3: SiC/GaN Power — AH-7: MEDIUM
+The original thesis; EV pause delays it, structural demand intact (every SiC device needs burn-in).
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $30M | $50M | $70M | $70M |
 
-### Combined Revenue:
+### Combined + Valuation
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
 | 1. SiPh WLBI | $70M | $195M | $300M | $400M |
 | 2. Sonoma ASIC | $100M | $195M | $280M | $330M |
-| 3. SiC/GaN Power | $30M | $50M | $70M | $70M |
+| 3. SiC/GaN | $30M | $50M | $70M | $70M |
 | **TOTAL** | **$200M** | **$440M** | **$650M** | **$800M** |
-
-  Revenue ramps $200M -> $800M in 4 years (4x).
-  V1 and V2 contribute roughly equally by 2028.
-  Sole-source monopoly in V1 is the moat. V2 has competition (Advantest, Teradyne) but AEHR leads in ASIC burn-in.
-
-### Full Valuation Table (40% OP monopoly equipment, 30x, ~29.9M shares):
 
 | Year | Revenue | OP (40%) | × 30x | Per Share |
 |------|---------|----------|-------|-----------|
-| 2027 | $200M | $80M | $2.4B | $80 |
-| 2028 | $440M | $176M | $5.28B | $177 |
-| 2029 | $650M | $260M | $7.8B | $261 |
-| 2030 | $800M | $320M | $9.6B | $321 |
+| 2027 | $200M | $80M | $2.4B | **$80** |
+| 2028 | $440M | $176M | $5.28B | **$177** |
+| 2029 | $650M | $260M | $7.8B | **$261** |
+| 2030 | $800M | $320M | $9.6B | **$321** |
 
-  $80 -> $321 in 4 years. Monopoly pricing power sustains 40% OP at scale.
+40% OP / 30x is monopoly-equipment economics (the KLA class), earned by V1's sole-source position.
 
-### Ceiling Derivation:
+  FY2028: $440M × 40% OP = $176M × 30x = $5.28B / 29.9M shares = **$177**
 
-  LOW = $180 (FY2027 base $80 raised to capture hockey stick inflection, not the trough)
-  HIGH = FY2028 + discounted FY2029 + discounted FY2030
-       = $177 + ($261-$177) x 0.85 + ($321-$261) x 0.72
-       = $177 + $71 + $43 = $291 -> rounded $290
+CEILING: $177 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the LOW/HIGH multi-year-composite convention)
 
-CEILING: $180-290
-
-## Read-Through Map
-
-AEHR's bookings are the earliest demand signal for the entire photonics supply chain:
+## Read-Through Map (earliest signal in the chain)
 
 ```
 AEHR bookings explode
-  → SiPh production lines being built out
-    → COHR: DC revenue (SiPh wafers need lasers)
-    → TSEM: SiPh foundry demand
-    → AAOI: Transceiver demand
-    → AXTI: InP substrate demand
-    → SIVE: CW laser demand (CPO on same architecture)
+  → SiPh production lines building out
+    → COHR (lasers) · TSEM (foundry) · AAOI (transceivers) · AXTI (InP) · SIVE (CW lasers)
 ```
 
-Every SiPh wafer burn-in tested at AEHR eventually becomes a transceiver needing a laser from SIVE, on InP substrate from AXTI, fabricated at TSEM.
+AEHR's order book is the leading indicator for the entire photonics supply chain — wafers burn in before anything ships.
 
 ## Key Risks
 
-- Revenue timing lag: Bookings convert 1-2 quarters later. Creates volatility.
-- Customer concentration: Lead hyperscale customer dominant. New SiPh win helps diversify.
-- SiC recovery timing: EV slowdown delayed. Structural thesis intact.
+1. Customer concentration — the lead hyperscaler dominates; the new SiPh win is the first diversification step
+2. Bookings-to-revenue lag — 1-2 quarter conversion creates print volatility (not a thesis risk)
+3. SiC recovery timing — EV-dependent vector, structurally intact
+4. V2 competition — Advantest/Teradyne in package-level burn-in; AEHR's lead is positional, not physical
 
+## Re-Rate Triggers
+
+1. **Q4 print (~July): bookings conversion begins + FY2027 guidance** — the model's first verification event
+2. SiPh customer follow-on systems ordered "later this year" → V1 expansion confirmed
+3. Second hyperscaler PLBI win → concentration penalty relief
+4. Next-gen higher-power ASIC volume ramp → V2 step-up
+5. **MONOPOLY FALSIFICATION (pre-registered): any competitor commercially ships a WLBI system → Core 20 breaks, immediate Base review** — the perfect score carries a standing test, AMPX-style
+6. TAM-10 ruling (universal-reliability primitive, SOI-class) → Base 93→94 (Tom's call)
+7. SiC recovery prints → V3 confidence MEDIUM→HIGH
+
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/AEHR_artifact_pre_restructure_2026-06-11.md*

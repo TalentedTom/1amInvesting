@@ -1814,6 +1814,16 @@ tbody tr {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+/* Freshness stamp appended after the deep-dive title — 'Analysis updated
+   May 23'. De-emphasised so the ticker stays the headline; truncates with
+   the rest of the h2 on narrow phones. */
+.modal-updated {
+    margin-left: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.72em;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
 .modal-close {
     flex-shrink: 0;
     width: 36px;

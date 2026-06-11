@@ -116,6 +116,11 @@ def main():
 
     try:
         df = pd.read_excel(EXCEL_PATH, sheet_name="Master Portfolio")
+        # Drop phantom columns Excel creates from stray formatting — a header
+        # cell with no name comes through pandas as 'Unnamed: N'. They carry
+        # nothing the site uses and would otherwise leak into data.js
+        # (observed: 'Unnamed: 15' duplicated across both language blocks).
+        df = df.loc[:, ~df.columns.astype(str).str.startswith("Unnamed")]
         df = df.fillna("")
         data_en = df.to_dict(orient="records")
 
