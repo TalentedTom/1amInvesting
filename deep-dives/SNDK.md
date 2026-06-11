@@ -1,114 +1,85 @@
 # SNDK — SanDisk Corporation | Deep Dive
+
+**Date:** May 2026 (dive + May 31 prepayment bump) | **June 10, 2026 (restructured — single generation; Base reconciled to evidence)**
+**Framework Version:** v4.1
+**Status:** HELD (✓) | **Base 80% (48/60)**
+**Price at restructure:** $1,646.54 | ~157M shares
+**Ceiling:** FY2028 $4,174 (FY-column standard)
+
 ---
 
-## Supercycle: Memory Supercycle (NAND Flash / Enterprise SSD for AI)
+## Supercycle: DB6 Memory Structural — NAND / Enterprise SSD for AI
 
-## Core Thesis: The "Silent Squeeze" — AI is Eating NAND
+## Core Thesis: The Silent Squeeze — AI Is Eating NAND
 
-NAND flash has gone from commodity to strategic AI asset. SanDisk, spun off from Western Digital in Feb 2025, is the pure-play vehicle for this transformation. NVIDIA's G3.5 inference storage tier (validated by DeepSeek V4 paper) creates an entirely new NAND demand category. Enterprise SSDs for AI datacenter are the growth engine. NAND contract prices surging +38%. Stock up 1,350% since spin-off.
+SanDisk is the pure-play vehicle for NAND's transformation from commodity to strategic AI asset. The structural driver is a demand category that did not exist two years ago: **NVIDIA's G3.5 inference storage tier** (CES 2026), validated by the DeepSeek V4 paper showing KV cache offloads from HBM to NVMe — mapping exactly onto NVIDIA's ICMS rack design. Per Vera Rubin server: ~1,152TB of additional SSD NAND. At 100K Rubin units (2027), that is ~9.3% of global NAND demand, net new.
 
-## Key Financials
+Structural supports: Kioxia JV extended to 2034 — manufacturing partnership where SanDisk controls its output allocation and pricing (the SIVE/Win Semi allocation-power analogy); **HBF (High Bandwidth Flash) standardization with SK Hynix** — flash entering the HBM-adjacent stack; $1B Nanya DRAM investment; US NAND champion positioning. Five hyperscaler engagements (2 qualifying, 3 planned). Honest penalties: NAND is an oligopoly with more suppliers than HBM, consumer/mobile/client still ~72% of revenue, and shortages CAN reverse — LTA floors soften but don't erase the cycle.
 
-- Spin-off: Feb 2025 at ~$40. Stock: ~$693. ATH: $777.60. **+1,350%.**
-- FY2025 (ending June): $7.4B revenue. GM: 30.1%.
-- Q1 FY2026 (Sept): $2.31B (+23% YoY). EPS: $1.22.
-- **Q2 FY2026 (Jan): $3.03B (+61% YoY). EPS: $6.20** (beat $4.85 est by 28%).
-- Datacenter revenue: $440M Q2 (+26% QoQ). Only 14.5% of revenue — room to grow.
-- NAND contract prices: +38% in Q1 2026.
-- **GM projected: 65-67% by Q3 2026** (from 30% in FY2025).
-- BiCS8: 15% of bits → majority by end FY2026.
-- BiCS10 (332-layer): production ahead of schedule.
-- Kioxia JV extended to 2034. $1B Nanya DRAM investment.
-- HBF standardization with SK Hynix.
-- 5 hyperscaler engagements (2 qualifying, 3 planned).
-- **Q3 FY2026 earnings: April 30 🔥**
+## Q3 FY2026 Anchor (reported April 30 — the current quarter of record)
 
-## The NVIDIA G3.5 Connection (From Jukan / DeepSeek V4)
+| Metric | Q3 FY2026 | YoY |
+|--------|----------|-----|
+| Revenue | **$5.95B** | **+251%** |
+| Gross Margin | **78.4%** | from 30.1% FY2025 |
+| Non-GAAP EPS | **$23.41** | beat $14.66 est by 60% |
+| Datacenter | +233% | fastest segment |
+| **Q4 guide** | **$7.75-8.25B, EPS $30-33** | |
 
-NVIDIA's G3.5 storage tier — unveiled at CES 2026 — creates a NEW memory category exclusively for AI inference. DeepSeek V4 paper confirms that KV cache can be offloaded from GPU HBM to NVMe storage. This maps exactly to NVIDIA's ICMS rack design.
+EPS revision trajectory: $81 → $110 → $175 → high $218 within 90 days — vertical and likely still underestimating. Roadmap: BiCS8 to majority of bits by end FY2026; BiCS10 (332-layer) ahead of schedule. NAND contract prices +38% (Q1 CY2026); Kioxia ASPs doubled QoQ, OPM 60% with 74% guided; Goldman raising NAND ASP estimates +22%/+24%; wafer starts at capacity limits; shortage projected past 2028; YMTC limited impact through 2027.
 
-**Per Vera Rubin server:** ~1,152TB additional SSD NAND required.
-- 30K Rubin units (2026): 34.6M TB = **2.8% of global NAND demand**
-- 100K Rubin units (2027): 115.2M TB = **9.3% of global NAND demand**
-
-This is NET NEW demand that didn't exist before. NVIDIA literally created an entirely new storage tier for AI, and SanDisk is one of three companies that can supply it at scale.
-
-## Revenue Segments
-
-| Segment | % Revenue | Growth Driver |
-|---------|-----------|--------------|
-| Enterprise/DC | ~28% (growing fast) | AI inference SSDs, hyperscaler quals, 128TB/256TB drives |
-| Client SSD | ~30% | Laptop/PC refresh + AI PC content growth |
-| Consumer Flash | ~15% | Stable, lower-margin |
-| Mobile | ~27% | Smartphone storage content growth |
-
-## Scoring Breakdown
+## Scoring Breakdown (reconciled Jun 10 — evidence-based; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 12/20 | NAND shortage structural. G3.5 creates new demand. Kioxia JV vertical integration. Enterprise SSD growing 40%+. BUT: oligopoly not monopoly — Samsung, Micron, SK compete (-3). NAND is cyclical — shortage CAN reverse (-3). Consumer/mobile still majority of revenue (-2). |
-| Cycle Stage | 9/10 | Revenue +61%. EPS $6.20 crushing estimates. NAND prices +38%. GM expanding dramatically. BiCS8/10 ramping. |
-| TAM | 8/10 | NAND flash: $184B annualized Q1 2026 (Counterpoint), tracking $300B+ by 2028. Enterprise SSD for AI: $80B+ (eSSD 43%→60% of market). G3.5 inference tier: new. |
-| Catalysts | 5/5 | Q3 earnings April 30 🔥. NAND price increases continuing. BiCS10 ramp. Hyperscaler quals. Rubin ICMS deployment. |
-| Macro | 8/10 | 120-150 GW compute needs storage. G3.5 inference tier. Memory supercycle. NAND shortage. |
-| Alpha | -1/5 | 20+ analysts. $50B+ market cap. +1,350% run. Thesis EXTREMELY well-known. Zero edge. |
-| Risks | 0 | US NAND champion. Structural supercycle, not cyclical. Government guarantees AI buildout. |
-| **Base** | **48.6/60 (81%)** | +1 Rule 16c-2: Hyperscaler prepayments confirmed across memory industry. 3-5yr LTAs with supplier-floor + upward adjustment pricing. NAND structural demand from AI training data pipelines. |
+| Core Thesis | 14/20 | G3.5/ICMS net-new demand validated; Kioxia allocation control to 2034; HBF with SKH; US champion. Penalties: oligopoly (-2), consumer/mobile revenue majority (-2), cyclical-reversal risk softened by LTA floors but real (-2). |
+| Cycle Stage | 10/10 | +251% revenue, 60% EPS beat, GM 30%→78.4% in a year, revisions vertical. Block-maximal. |
+| TAM | 9/10 | NAND $184B annualized (Counterpoint Q1) tracking $300B+ by 2028; eSSD mix 43%→60%; G3.5 a genuinely new category; HBF optionality. |
+| Catalysts | 5/5 | Q4 print (~July): $7.75-8.25B test; BiCS10 ramp; hyperscaler quals converting; Rubin ICMS deployments. |
+| Macro | 10/10 | Wafer limits, shortage past 2028, IDC permanent reallocation, buyer LTA regime — same evidence class as the rest of the memory block. |
+| Alpha | 1/5 | 20+ analysts, $250B+ class market cap, thesis extremely well-known. Conviction-at-discovery, not edge. |
+| Risks | -2 | Supply response: Samsung P5 + SK Hynix China fabs landing from H1 2027 (-1). Magnitude uncertainty — the model's own note: "likely wrong in magnitude, directionally correct"; ASP normalization is the swing (-1). |
+| Subtotal | 47/60 | |
+| Rule 16c-2 | **+1** | Hyperscaler prepayment regime industry-wide; supplier-floor LTAs with upward adjusters. |
+| **Base** | **48/60 (80%)** | Strict evidence read. The 81st point is available via Core 15 if the Kioxia-allocation + HBF position is judged to soften the oligopoly penalty — flagged for Tom, not applied. |
 
-## NAND Supercycle — Structural Not Cyclical (May 2026)
+## Ceiling — v4.1 AH-1 Full Derivation (Yahoo-HIGH anchored, margin curve, 18x, 157M shares, FY-column standard)
 
-NAND wafer starts at capacity limits. Shortage projected past 2028. YMTC limited impact through 2027 (cannot fill the gap). AI creating NEW structural NAND demand layers: KV cache storage for inference, model checkpointing for training, retrieval-augmented generation. These are additive to existing consumer/enterprise demand.
+**Revenue anchor:** Yahoo HIGH consensus FY2026 $20.3B / FY2027 $52.0B (19-20 analysts — AH-6 input anchors, not targets); outer years from G3.5 ramp + shortage persistence, decelerating but compounding.
 
-DDR4 $1.35→$16 spillover across ALL memory types. IDC: "potentially permanent strategic reallocation" of wafer capacity from consumer to AI. This is not cyclical — it is structural. Memory companies don't return to trough pricing when the demand driver is AI infrastructure that compounds annually.
-
-SanDisk as pure NAND play (spun from Western Digital) captures the full NAND ASP surge without DRAM/HBM dilution. Kioxia partnership provides manufacturing while SanDisk controls output supply and pricing (SNDK/Kioxia analogy = same allocation pricing power as SIVE/Win Semi).
-
-## Kioxia Confirms Tightness Through 2027 (May 2026)
-
-Goldman on Kioxia: NAND market "very tight for both 2026 and 2027." Kioxia ASPs more than doubled QoQ. OPM 60%, guidance 74% for CY2Q26. Irrational Analysis: "No clean room capacity. Everything will sell out at 80% gross margins. Who cares?"
-
-Goldman raising NAND ASP estimates +22%/+24%. Kioxia preparing ADR listing — positive for SanDisk sentiment as former parent/partner re-enters public markets.
-
-## Ceiling — v4.0 AH-1 Full Derivation (Yahoo HIGH, normalizing OP, 15x memory, blended)
-
-### Q3 FY2026 Results (April 30, 2026)
-
-Revenue $5.95B (+251% YoY). GM 78.4%. Non-GAAP EPS $23.41 (beat est $14.66 by 60%). Datacenter +233%. Q4 guided $7.75-8.25B, EPS $30-33. EPS estimates revised up 170% in 90 days.
-
-### Revenue Model (Yahoo HIGH + structural growth):
-
-NAND supercycle is structural: AI KV cache, G3.5 inference tier, 1,152TB per Rubin server, wafer starts at capacity limits, shortage past 2028. Revenue decelerates but compounds — not flat.
-
-| Year | Revenue | Growth | Source |
-|------|---------|--------|--------|
-| FY2026 | $20.3B | +175% | Yahoo HIGH (19 analysts) |
-| FY2027 | $52.0B | +157% | Yahoo HIGH (20 analysts) |
-| FY2028 | $72.8B | +40% | G3.5 ramp + NAND shortage |
-| FY2029 | $91.0B | +25% | Structural AI NAND demand |
-| FY2030 | $104.7B | +15% | Decelerating but compounding |
-
-### Full Valuation Table (Partial structural re-rate 18x — NAND less monopolistic than HBM but LTA price floors + shortage past 2028 break cyclical frame, ~157M shares):
-
-GM 78.4% at peak. OP margins normalize from peak 60%+ toward structural 45% floor as NAND cycle matures. Kioxia at 60% OPM confirms near-term. 18x = partial re-rate: NAND structural (LTA floors, Kioxia 60% OPM, shortage past 2028) but below HBM 20x given more suppliers / less monopoly. US NAND champion.
-
-EPS revision trajectory: 90 days ago $81 → 30 days ago $110 → today $175 → HIGH $218. Revisions are vertical and likely still underestimating.
+**Margin curve:** 55%→50%→47%→45% terminal as capacity responds — Kioxia's printed 60% OPM validates the near end. *Standing revisit trigger (NAND-flavored): if NAND LTA floors confirm at structurally higher levels through the Samsung P5 / SKH China capacity arrivals, the 45% terminal is too conservative — revisit alongside any memory-block margin pass.*
 
 | Year | Revenue | OP Margin | OP | × 18x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | $52.0B | 55% | $28.6B | $515B | $3,278 |
-| 2028 | $72.8B | 50% | $36.4B | $655B | $4,174 |
-| 2029 | $91.0B | 47% | $42.8B | $769B | $4,901 |
-| 2030 | $104.7B | 45% | $47.1B | $848B | $5,404 |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | $52.0B | 55% | $28.6B | $515B | **$3,278** |
+| 2028 | $72.8B | 50% | $36.4B | $655B | **$4,174** |
+| 2029 | $91.0B | 47% | $42.8B | $769B | **$4,901** |
+| 2030 | $104.7B | 45% | $47.1B | $848B | **$5,404** |
 
-FY2027 at $2,732 vs current $1,479. Stock pricing ~6 months forward on 15x. At FY2027 P/E of 6.8x on HIGH EPS — absurdly cheap for 157% growth.
+18x rationale: partial structural re-rate — LTA floors, Kioxia economics, and shortage-past-2028 break the cyclical frame, but NAND's wider supplier set keeps it below HBM-grade 20x. **Model-uncertainty note retained deliberately:** revisions this vertical mean the model is likely wrong in magnitude while directionally correct; the 18x and the margin curve are where the conservatism lives.
 
-### Model Uncertainty Note:
+  FY2028: $72.8B × 50% OP = $36.4B × 18x = $655B / 157M shares = **$4,174**
 
-EPS revisions over 18 months have been extreme (stock up 40x from $40 spin-off). This model is likely wrong in magnitude but directionally correct. NAND structural demand is real; the question is how much ASP normalization occurs.
+CEILING: $4,174 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 10 from the blended-single-number convention)
 
-### Ceiling Derivation (Blended May 2026):
+## Rare-Earth Optionality (flagged, not priced)
 
-  (8/12 × $4,174) + (4/12 × $4,901) = $4,416
+From the June 2026 scenario work: a serious Chinese magnet-export control hits HDD voice-coil/spindle motors (kilogram-class magnet content) while nearline HDD is already sold out — accelerating hyperscaler cold-storage substitution toward QLC NAND. SNDK is a primary beneficiary of that substitution wave. Trigger: control announcement with extraterritorial or end-user-denial language → price the substitution vector per Rule 16b.
 
-CEILING: $4,416 (blended 67% FY2028 + 33% FY2029)
+## Key Risks
 
+1. Supply response — Samsung P5 and SK Hynix China NAND capacity arriving from H1 2027; the 45% terminal embeds normalization, but timing is the swing
+2. Magnitude uncertainty — own-model note; ASP path drives everything
+3. Oligopoly — Samsung, SK Hynix, Micron, Kioxia, YMTC (post-2027) all add bits
+4. Revenue mix — consumer/mobile majority dilutes the AI story until DC share compounds past it
+5. Cyclical perception — the 40x spin-off run makes SNDK the first thing momentum sells in memory wobbles
+
+## Re-Rate Triggers
+
+1. Q4 print (~July): $7.75-8.25B / EPS $30-33 delivery → anchor refresh on a beat
+2. Hyperscaler qualifications converting 2→5 → Core Thesis evidence
+3. NAND LTA floors confirmed through the 2027 capacity arrivals → terminal-margin revisit
+4. Rare-earth control announcement → QLC-substitution vector per Rule 16b
+5. Core 15 ruling (Kioxia allocation + HBF softening oligopoly penalty) → Base 80→81 (Tom's call)
+
+*Restructured Jun 10, 2026 — prior version: /mnt/user-data/outputs/versions/SNDK_artifact_pre_restructure_2026-06-10.md*

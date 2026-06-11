@@ -1,73 +1,49 @@
 # ALRIB.PA — Riber SA | Deep Dive
+
+**Date:** May 2026 (dive) | May 23 (audit) | **June 10, 2026 (restructured — single generation)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, top-10) | **Base 70% (42/60)**
+**Price at restructure:** €13.26 | 6.65M shares | MC ~€88M
+**Ceiling:** FY2028 €50 (FY-column standard)
+
 ---
 
-## Supercycle: DB1 Photonics (QD Lasers + SiPh Integration) + Thematic Vector 14 (Quantum Materials)
+## Supercycle: DB1 Photonics (QD Lasers + SiPh Integration) + Quantum Materials
 
-## Three Vectors from One Technology Base
+## Core Thesis: The Precision Tool of Layer 1
 
-### Vector 1 — QD Lasers for Datacenter (NOW)
-MBE systems grow InAs/GaAs quantum dot structures for datacenter lasers. Superior temperature stability + lower power vs edge-emitting. Japan MBE 6000 order (Jan 2026) confirms production scaling. "Demand for QD lasers continues to support MBE production systems market."
+Riber is the leading MBE (molecular beam epitaxy) equipment maker — the atomic-layer-precision complement to Aixtron's MOCVD in the III-V equipment duopoly. MOCVD dominates volume epitaxy; MBE owns the structures that demand atomic control: quantum-dot lasers, heterogeneous III-V-on-silicon integration, quantum materials. As the laser shortage forces capacity buildout across every architecture (the June 2026 evidence week: Fabrinet naming lasers as THE industry constraint, COHR doubling InP capacity twice in 18 months, LITE sold out through 2027), the equipment layer beneath laser fabrication tightens with it — and Riber is one of two companies selling the shovels.
 
-### Vector 2 — ROSIE for Silicon Photonics (EMERGING)
-ROSIE (Riber Oxide on Silicon Epitaxy) = MBE for 300mm SiPh integration. Grows III-V materials directly on silicon wafers. If foundries need heterogeneous integration (lasers on-wafer), ROSIE is the tool. First delivery 2025. 2 ordered. ROSIE 2 (dual-chamber) manufacturing 2026. Management: "true inflection point."
-
-### Vector 3 — Quantum Computing Materials (PHASE 3)
-Partnership with NQCP (Novo Nordisk / Niels Bohr Institute). BTO/STO thin films on silicon for topological quantum computing. First samples 2026. If quantum needs these substrates at scale → Riber is the only MBE maker with production platform.
+### Three vectors from one technology base
+**V1 — QD lasers for datacenter (NOW):** InAs/GaAs quantum-dot structures — superior temperature stability and lower power vs edge-emitting; QD precision REQUIRES MBE. Japan MBE 6000 production order (Jan 2026) confirms scaling.
+**V2 — ROSIE for silicon photonics (EMERGING):** Riber Oxide on Silicon Epitaxy — III-V grown directly on 300mm silicon. If foundries integrate lasers on-wafer, ROSIE is the tool. First delivery 2025; two ordered; dual-chamber ROSIE 2 building 2026; management: "true inflection point."
+**V3 — Quantum materials (PHASE 3):** NQCP partnership (Novo Nordisk / Niels Bohr Institute) — BTO/STO thin films on silicon for topological quantum computing; first samples 2026. If quantum needs these substrates at scale, Riber is the only MBE maker with a production platform.
 
 ## Key Financials
-- FY2025: €40.3M revenue (-2% but stable). NI €5.2M (+27%). GM 38.6%.
-- 12 machines delivered (9 production + first ROSIE)
-- ROSIE: 2 systems ordered 2025. ROSIE 2 building 2026.
-- Revenue split: Asia 55%, Europe 36%, NA 7%
-- 2026 target: revenue growth (subject to export licenses)
-- Profitable, cash-generating, established company (founded 1964)
 
-## Why MBE Matters (vs MOCVD)
-MOCVD (Aixtron) is the dominant III-V epitaxy tool for most applications. MBE is the PRECISION tool — atomic-layer-by-layer growth control that MOCVD can't match for certain structures. QD lasers REQUIRE MBE precision. Quantum materials REQUIRE MBE precision. ROSIE heterogeneous integration REQUIRES MBE precision. As applications demanding atomic-level control grow, MBE's TAM grows.
+FY2025: €40.3M revenue (-2%, stable), NI €5.2M (+27%), GM 38.6%. Twelve machines delivered (9 production + first ROSIE). Revenue split: Asia 55% / Europe 36% / NA 7%. Profitable, cash-generating, founded 1964. **2026 guidance: revenue growth — explicitly conditional on export licenses** (the live gate; Asia majority makes it structural, not procedural).
 
-## Scoring
+## Scoring Breakdown (verified Jun 10 — table sums and matches Excel; no reconciliation required)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 14/20 | Leading MBE equipment maker. QD laser demand confirmed. ROSIE breakthrough for SiPh. Quantum materials optionality. Rule 3 IP-licensing. BUT: very small (-2), MBE niche vs MOCVD (-2), ROSIE early (-1), export risk (-1). |
-| Cycle Stage | 6/10 | ROSIE delivered + 2 ordered. NI +27%. Revenue flat. Stage 1-2 for new platforms. |
-| TAM | 8/10 | QD lasers + SiPh integration + quantum materials. Three Phase 1+2+3 vectors. |
-| Catalysts | 4/5 | ROSIE 2 manufacturing 2026. BTO/STO samples 2026. QD orders. Export licenses. |
-| Macro | 8/10 | Photonics supercycle. SiPh integration accelerating. Quantum investment growing. |
-| Alpha | 4/5 | ~2 analysts. €93M micro-cap. No English coverage. ROSIE inflection not modeled. |
-| Risks | -2 | Very small/illiquid (-1). Export license dependency (-1). |
+| Core Thesis | 14/20 | Leading MBE maker; QD demand confirmed; ROSIE SiPh breakthrough; quantum optionality. Penalties: very small (-2), MBE niche vs MOCVD volume (-2), ROSIE early (-1), export risk (-1). |
+| Cycle Stage | 6/10 | ROSIE delivered + 2 ordered; NI +27%; revenue flat — Stage 1-2 for the new platforms. |
+| TAM | 8/10 | QD lasers + SiPh heterogeneous integration + quantum materials — Phase 1/2/3 all live. |
+| Catalysts | 4/5 | ROSIE 2 build 2026; BTO/STO samples 2026; QD follow-on orders; export license decisions. |
+| Macro | 8/10 | Laser-capacity buildout is the binding industry constraint (Jun 2026 confirmations); SiPh integration accelerating. |
+| Alpha | 4/5 | ~2 analysts, ~€88M micro-cap, no English coverage; ROSIE inflection unmodeled — the SIVE-at-SEK-7.8 class of discovery gap. |
+| Risks | -2 | Very small/illiquid (-1). Export-license dependency on majority-Asia revenue (-1). |
 | **Base** | **42/60 (70%)** | |
 
-## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 20x, single-number FY2028)
+## Ceiling — v4.1 AH-1 Full Derivation (graduated OP, 20x, 6.65M shares, FY-column standard)
 
-### Vector 1: QD Laser MBE Systems
-Japan MBE 6000 order confirms production. QD lasers need MBE precision MOCVD can't deliver.
-Source: Jan 2026 order, management confirmation.
-AH-7 confidence: MEDIUM-HIGH.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| €30M | €40M | €50M | €60M |
-
-### Vector 2: ROSIE SiPh Integration
-300mm III-V on silicon. First delivered 2025. 2 ordered. ROSIE 2 building 2026.
-Source: 2 units ordered, management "true inflection point."
-AH-7 confidence: MEDIUM — inflection unproven at scale.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| €10M | €20M | €35M | €55M |
-
-### Vector 3: Quantum + Legacy Services
-BTO/STO thin films (NQCP partnership). Legacy MBE services/upgrades.
-Source: Partnership confirmed.
-AH-7 confidence: LOW — Phase 3 optionality.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| €15M | €15M | €15M | €20M |
-
-### Combined Revenue:
+**V1 QD Laser MBE — AH-7: MEDIUM-HIGH** (Jan 2026 production order; laser-capacity supercycle upstream demand):
+€30M / €40M / €50M / €60M (2027-30)
+**V2 ROSIE SiPh — AH-7: MEDIUM** (2 ordered; inflection unproven at scale):
+€10M / €20M / €35M / €55M
+**V3 Quantum + legacy services — AH-7: LOW** (partnership confirmed; Phase 3 optionality):
+€15M / €15M / €15M / €20M
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
@@ -76,23 +52,41 @@ AH-7 confidence: LOW — Phase 3 optionality.
 | 3. Quantum/Legacy | €15M | €15M | €15M | €20M |
 | **TOTAL** | **€55M** | **€75M** | **€100M** | **€135M** |
 
-### Full Valuation Table (Graduated OP, 20x, ~6.65M shares):
-
-FY2027 at €33 vs current €13.84. Market has NOT found this stock — €93M micro-cap, 2 analysts, no English coverage. Same discovery gap as SIVE at SEK 7.8.
+### Valuation (graduated OP 20→26%, 20x)
 
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | €55M | 20% | €11M | €220M | €33 |
-| 2028 | €75M | 22% | €16.5M | €330M | €50 |
-| 2029 | €100M | 24% | €24M | €480M | €72 |
-| 2030 | €135M | 26% | €35.1M | €702M | €106 |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | €55M | 20% | €11M | €220M | **€33** |
+| 2028 | €75M | 22% | €16.5M | €330M | **€50** |
+| 2029 | €100M | 24% | €24M | €480M | **€72** |
+| 2030 | €135M | 26% | €35.1M | €702M | **€106** |
 
-### Ceiling Derivation:
+  FY2028: €75M × 22% OP = €16.5M × 20x = €330M / 6.65M shares = **€50**
 
-  FY2028: €75M × 22% OP = €16.5M × 20x = €330M / 6.65M shares = €50
+CEILING: €50 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — convention label harmonized Jun 10)
 
-CEILING: €50 (single number, FY2028 forward)
+## Sovereignty Premium
 
-## The Sovereignty Premium
-French-headquartered MBE equipment maker. European IP for critical semiconductor materials growth technology. Same sovereignty thesis as SIVE and LPK.DE — retail visibility protects European chokepoints from hostile acquisition. At €93M market cap, an acquirer could buy the entire company for pocket change. The spotlight IS the defense.
+French-headquartered, European IP for critical materials-growth technology — the same retail-visibility-as-defense thesis as SIVE and LPK.DE. At ~€88M, an acquirer buys the whole company for pocket change; the spotlight IS the protection (FiconTEC pattern).
 
+## Rule 19 Cross-References
+
+Epi-house and laser-fab capex (IQE, COHR InP doubling, Win Semi, every CW/EML/QD line) = Riber demand one layer up. AIXA.DE is the MOCVD sibling — together the two Layer 1 equipment bottlenecks Convequity flagged. ROSIE success would feed the SOI.PA/foundry heterogeneous-integration chain.
+
+## Key Risks
+
+1. Export-license dependency — Asia is 55% of revenue and 2026 guidance is conditional on grants; a denial regime is the kill shot
+2. Micro-cap mechanics — €88M, thin liquidity, 2 analysts
+3. ROSIE inflection risk — two units ordered is a start, not a platform
+4. MBE niche vs MOCVD — if volume techniques close the precision gap, the moat thins
+5. Quantum vector is optionality, not a base case
+
+## Re-Rate Triggers
+
+1. Export license grants/denials — the binary gate on 2026 guidance (both directions)
+2. ROSIE 2 delivery + third/fourth orders → V2 MEDIUM→HIGH (ceiling expansion)
+3. QD laser follow-on production orders (post-Japan MBE 6000) → V1 confidence up
+4. BTO/STO sample results at NQCP (2026) → V3 from optionality toward vector
+5. Laser-capacity capex announcements naming MBE lines → upstream demand conversion
+
+*Restructured Jun 10, 2026 — prior version: /mnt/user-data/outputs/versions/Riber_artifact_pre_restructure_2026-06-10.md*

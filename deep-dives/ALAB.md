@@ -1,6 +1,6 @@
 # ALAB — Astera Labs | Deep Dive (Full, replaces screen-level pass)
 
-**Date:** June 10, 2026 | External re-audit merged June 10, 2026 (see merge note)
+**Date:** June 10, 2026 | External re-audit merged June 10, 2026 (log in VERSION_LOG)
 **Price at dive:** $341.70 | MC ~$62B | ~184M diluted shares (Q1 2026 10-Q basis)
 **Exchange:** NASDAQ
 **Supercycle:** DB1 — AI Interconnect (scale-out + scale-up fabric, signal conditioning, CXL memory, optical 2027+)
@@ -48,7 +48,7 @@ The structural caveat that caps the score: **ALAB is not sole-source anywhere.**
 | Macro | 9/10 | Same supercycle as the book; merchant XPU buildout (Trainium/TPU/MTIA) is its specific engine. |
 | Alpha | 1/5 | $62B MC, 25+ analysts, 49x NTM EV/EBITDA, institutional darling. Zero informational edge. (Rule 1: the prior run is NOT the penalty — the absence of edge is.) |
 | Risks | -4 | Not sole-source (-1). Customer concentration + insourcing scares (Trainium 4 headline = -13% day) (-1). NVIDIA-native NVLink owns the majority of scale-up sockets (-1). Montage CXL/retimer entry + multiple-compression risk at 49x NTM EV/EBITDA vs 31x peer mean (-1). |
-| **Base** | **45/60 (75%)** | Screen 70 → dive 73 → re-audit merge 75. |
+| **Base** | **45/60 (75%)** | |
 
 ---
 
@@ -113,7 +113,7 @@ Cross-check: FY2026 consistent with Q1 $308M + Q2 guide ~$360M + H2 ramp (≈ +8
 | 2029 | $4,950M | $1,881M (38%) | $52.7B | $52.7B | **$263** |
 | 2030 | $6,500M | $2,470M (38%) | $69.2B | $69.2B | **$337** |
 
-28x FLAT justification: between AVGO at 25x (slower growth, customer-churn risk) and the 30x+ reserved for sole-source monopolies. The re-audit's 30x→26x declining-multiple path was rejected — forecasting multiple compression is analyst behavior, not TAM math (Rule 2 adjacent); multiples hold flat or graduate UP on proof. Margins graduate UP (36→38%), not down — 76% GM + COSMOS software mix + visible opex leverage; warrant amortization hits gross margin against specific revenue, it does not erode the operating model. Pre-rounding per AH-2: 129.98 / 191.26 / 263.34 / 337.37.
+28x FLAT justification: between AVGO at 25x (slower growth, customer-churn risk) and the 30x+ reserved for sole-source monopolies. Multiples hold flat or graduate UP on proof — never forecast compression (analyst behavior, not TAM math; Rule 2 adjacent). Margins graduate UP (36→38%) on 76% GM + COSMOS software mix + opex leverage; warrant amortization hits gross margin against specific customer revenue, not the operating model. Pre-rounding per AH-2: 129.98 / 191.26 / 263.34 / 337.37.
 
 ### Ceiling Derivation
 
@@ -150,9 +150,7 @@ To justify $342 on FY2028 at 28x/37%: requires $342 × 195M = $66.7B MC → $2.3
 4. Gross margin mix-down as hardware-heavy fabric/optical scales (73% Q2 guide vs 76.4% Q1).
 5. Optical vectors (V4) compete with COHR/LITE/AAOI module incumbents and depend on external CW laser supply — same constrained ecosystem the book already owns upstream.
 
-## Jun 10, 2026 — External Re-Audit Merge Note
-
-A second independent dive (external) was merged same-day. ADOPTED (sourced): Amazon warrant mechanics ($6.5B milestones / 3.26M shares @ $142.82), management $20B merchant scale-up TAM by 2030, Penguin Solutions Leo performance data, Taiwan Interop Lab ODM roster (system-qualification lock-in → Core Thesis +1), Montage as named competitor (Risks -1). REJECTED with reasoning: 30x multiple (monopoly pricing on a self-described non-monopoly), declining 30→26x multiple path (compression forecasting ≠ TAM math), declining 36→33% margin path (contradicts GM/software mix/opex leverage), Leo at $2.1B FY2030 (violates its own "demos ≠ deployments" risk — tagged uncertainty must discount the number). Both models agreed on the verdict sign at current price: external -21%, ours -33%, merge -33%. Provenance flag: the external dive cited an "old artifact (Base 70, ceiling $250-290)" that does not exist in the artifact store — ALAB was Excel-range-only before today.
+*External re-audit merged Jun 10, 2026. Adopted items are incorporated in the body above; rejected items and full merge reasoning live in VERSION_LOG. Standing flag: the external dive cited a prior artifact that never existed (phantom citation) — verify claimed references against the artifact store.*
 
 ## Portfolio Cross-References (Rule 19)
 
