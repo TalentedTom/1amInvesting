@@ -210,6 +210,11 @@
             <button class="hint-dismiss" data-i18n-attr="aria-label:hint_dismiss_label" aria-label="Dismiss tip">×</button>
         </div>
 
+        <!-- One-line portfolio summary (ranked count, HC count, median EV,
+             top name). Populated by updateStatsStrip() on every render so
+             it tracks live data. -->
+        <div class="stats-strip" id="stats-strip" aria-live="polite"></div>
+
         <main class="table-container">
             <div class="table-wrapper">
                 <table id="portfolio-table">
@@ -233,6 +238,13 @@
         <div class="modal-panel">
             <header class="modal-header">
                 <h2 id="deep-dive-title">Deep Dive</h2>
+                <!-- Prev/next: flips through deep-dives in the table's
+                     current sort/filter order. Visible only in dive mode
+                     (.modal.dive-mode) — hidden for TradingView charts. -->
+                <div class="modal-nav" role="group" aria-label="Deep-dive navigation">
+                    <button class="modal-nav-btn" id="dive-prev" type="button" data-i18n-attr="aria-label:dive_prev" aria-label="Previous deep dive">‹</button>
+                    <button class="modal-nav-btn" id="dive-next" type="button" data-i18n-attr="aria-label:dive_next" aria-label="Next deep dive">›</button>
+                </div>
                 <button class="modal-close" data-modal-close="1" data-i18n-attr="aria-label:modal_close_label" aria-label="Close deep dive">×</button>
             </header>
             <div class="modal-content" id="deep-dive-content">

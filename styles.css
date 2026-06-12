@@ -343,6 +343,21 @@ body.light-mode .wechat-popover-close:hover {
     opacity: 0.5;
 }
 
+/* DATA-stale state (market closed / cron quiet for 20+ min): the pill
+   switches from a pulsing-green "Live · 3m ago" to a static amber
+   "As of Fri 16:59" — honest about showing non-live prices. Set by
+   updateLiveStatus() via the live-stale class on the wrap. */
+.live-status-wrap.live-stale {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.25);
+}
+.live-status-wrap.live-stale .live-dot {
+    background: #f59e0b;
+    box-shadow: none;
+    animation: none;
+    opacity: 0.9;
+}
+
 @media (max-width: 480px) {
     .live-status-wrap {
         font-size: 0.62rem;
@@ -1368,6 +1383,40 @@ body.archive-open .archive-toggle::before {
     background: rgba(148, 163, 184, 0.16);
 }
 
+/* === Summary stats strip ========================================
+   One-line portfolio overview above the table. Numbers emphasised
+   via <strong> (injected by the i18n string); the rest stays muted. */
+.stats-strip {
+    text-align: center;
+    padding: 0.1rem 1rem 0.45rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+}
+.stats-strip strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+@media (max-width: 480px) {
+    .stats-strip {
+        font-size: 0.68rem;
+        padding: 0 0.5rem 0.35rem;
+    }
+}
+
+/* === Trim-signal flag ===========================================
+   Small amber warning beside tickers trading ABOVE their 1-year
+   target (FY2028 < price) — the same condition the cron's
+   ABOVE CEILING alerts fire on. cursor:help + title tooltip explain
+   it on hover. */
+.trim-flag {
+    margin-left: 3px;
+    font-size: 0.8em;
+    color: #f59e0b;
+    cursor: help;
+    flex-shrink: 0;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -1377,6 +1426,14 @@ body.archive-open .archive-toggle::before {
 tbody tr {
     animation: fadeIn 0.4s ease forwards;
     opacity: 0;
+}
+/* Entry animation runs ONCE per page load. buildTable adds
+   body.table-settled ~700ms after the first render; subsequent
+   live-poll rebuilds then skip the stagger entirely — without this,
+   the whole table shimmered every ~2 minutes during market hours. */
+body.table-settled tbody tr {
+    animation: none;
+    opacity: 1;
 }
 
 /* Dropdown Styles */
@@ -1813,10 +1870,57 @@ tbody tr {
     font-weight: 600;
     color: var(--text-primary);
     margin: 0;
-    /* Truncate long titles instead of wrapping to keep the header compact */
+    /* Truncate long titles instead of wrapping to keep the header compact.
+       flex:1 + min-width:0 keep truncation working now that the nav
+       buttons share the header row. */
+    flex: 1;
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+/* === Deep-dive prev/next navigation =============================
+   Visible only in dive mode (.modal.dive-mode) — chart mode and the
+   not-in-current-order case hide it (the latter via inline style from
+   updateDiveNav). */
+.modal-nav {
+    display: none;
+    align-items: center;
+    gap: 0.35rem;
+    margin-left: 0.6rem;
+    flex-shrink: 0;
+}
+.modal.dive-mode .modal-nav {
+    display: inline-flex;
+}
+.modal-nav-btn {
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    line-height: 1;
+    padding-bottom: 3px;   /* optically center the ‹ › glyphs */
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.modal-nav-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+body.light-mode .modal-nav-btn:hover:not(:disabled) {
+    background: rgba(0, 0, 0, 0.05);
+}
+.modal-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
 }
 /* Freshness stamp appended after the deep-dive title — 'Analysis updated
    May 23'. De-emphasised so the ticker stays the headline; truncates with
@@ -2330,6 +2434,12 @@ body.light-mode .hint-dismiss:hover {
         width: 44px;
         height: 44px;
         font-size: 1.5rem;
+    }
+    .modal-nav-btn {
+        /* Match the close button's phone tap-target size */
+        width: 40px;
+        height: 40px;
+        font-size: 1.35rem;
     }
     .modal-content {
         padding: 1rem 1.1rem 1.5rem;

@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
             archive_show: 'Show research archive ({n})',
             archive_hide: 'Hide research archive',
             modal_updated: 'Analysis updated {date}',
+            asof_label: 'As of',
+            stats_line: '<strong>{ranked}</strong> ranked · <strong>{hc}</strong> high-conviction · median EV <strong>{med}</strong> · top: <strong>{top} {ev}</strong>',
+            trim_flag_tip: 'Trading above its 1-year target — trim signal',
+            dive_prev: 'Previous deep dive',
+            dive_next: 'Next deep dive',
             mode_basic: 'Basic',
             mode_adv: 'ADV',
             ev_group: 'Target',
@@ -197,6 +202,11 @@ document.addEventListener('DOMContentLoaded', () => {
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
+            asof_label: '截至',
+            stats_line: '<strong>{ranked}</strong> 个排名 · <strong>{hc}</strong> 个高确信 · EV 中位数 <strong>{med}</strong> · 最高：<strong>{top} {ev}</strong>',
+            trim_flag_tip: '股价已高于 1 年目标价 — 减仓信号',
+            dive_prev: '上一篇深度分析',
+            dive_next: '下一篇深度分析',
             mode_basic: '基本',
             mode_adv: '高级',
             ev_group: '目标',
@@ -474,6 +484,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // (no underline, no chevron, default cursor) — implicitly signalling
     // that no deep-dive exists for them yet.
     let deepDiveAvailable = new Set();
+    // Prev/next navigation order for the deep-dive modal — rebuilt by
+    // buildTable to mirror the table's current sort/filter order.
+    let diveOrder = [];
+    let diveIndex = -1;
     function loadDeepDiveManifest() {
         return fetch('deep-dives/index.json', { cache: 'no-cache' })
             .then((r) => (r.ok ? r.json() : []))
@@ -663,6 +677,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_close_label'));
         deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
         deepDiveModal.classList.remove('hidden');
+        // dive-mode shows the prev/next arrows (hidden in chart mode).
+        deepDiveModal.classList.add('dive-mode');
+        diveIndex = diveOrder.indexOf(ticker);
+        updateDiveNav();
         document.body.style.overflow = 'hidden';   // prevent background scroll
         // Reset scroll position when reopening (in case prior dive scrolled).
         const scroller = deepDiveContent;
@@ -709,6 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // modal element, single set of dismiss handlers.
     function closeDeepDive() {
         deepDiveModal.classList.add('hidden');
+        deepDiveModal.classList.remove('dive-mode');
         document.body.style.overflow = '';
         // Wipe any TradingView iframe so it stops fetching market data in
         // the background; clear the chart-mode class so the next deep-dive
@@ -716,6 +735,31 @@ document.addEventListener('DOMContentLoaded', () => {
         deepDiveContent.innerHTML = '';
         deepDiveContent.classList.remove('modal-chart');
     }
+
+    // Prev/next deep-dive navigation. diveOrder mirrors the table's
+    // current sort/filter order (rebuilt by buildTable); diveIndex tracks
+    // the open dive's position in it. Buttons disable at the ends, and
+    // hide entirely when the open ticker isn't in the current order
+    // (e.g. opened via search while filtered out).
+    const divePrevBtn = document.getElementById('dive-prev');
+    const diveNextBtn = document.getElementById('dive-next');
+    function updateDiveNav() {
+        if (!divePrevBtn || !diveNextBtn) return;
+        const inOrder = diveIndex >= 0 && diveOrder.length > 1;
+        divePrevBtn.style.display = inOrder ? '' : 'none';
+        diveNextBtn.style.display = inOrder ? '' : 'none';
+        if (!inOrder) return;
+        divePrevBtn.disabled = diveIndex <= 0;
+        diveNextBtn.disabled = diveIndex >= diveOrder.length - 1;
+    }
+    function stepDive(delta) {
+        if (diveIndex < 0) return;
+        const next = diveIndex + delta;
+        if (next < 0 || next >= diveOrder.length) return;
+        openDeepDive(diveOrder[next]);
+    }
+    if (divePrevBtn) divePrevBtn.addEventListener('click', (e) => { e.stopPropagation(); stepDive(-1); });
+    if (diveNextBtn) diveNextBtn.addEventListener('click', (e) => { e.stopPropagation(); stepDive(1); });
 
     // === TradingView Chart Modal ===
     // Same modal element as the deep-dive (#deep-dive-modal) but rendered
@@ -810,6 +854,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_chart_close_label'));
         deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
         deepDiveModal.classList.remove('hidden');
+        deepDiveModal.classList.remove('dive-mode');   // hide prev/next arrows in chart mode
         document.body.style.overflow = 'hidden';
         deepDiveContent.scrollTop = 0;
 
@@ -883,8 +928,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.closest('[data-modal-close]')) closeDeepDive();
     });
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !deepDiveModal.classList.contains('hidden')) {
+        if (deepDiveModal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') {
             closeDeepDive();
+        } else if (deepDiveModal.classList.contains('dive-mode')) {
+            // Arrow keys page through deep-dives in table order.
+            if (e.key === 'ArrowLeft') stepDive(-1);
+            else if (e.key === 'ArrowRight') stepDive(1);
         }
     });
 
@@ -932,6 +982,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const LIVE_POLL_INTERVAL_MS = 30 * 1000;   // 30 s — matches cache-bust bucket; tight enough to feel live
     let lastLiveTs = null;       // de-dupe: skip re-render if the file hasn't changed
     let lastLiveFetchAt = null;  // wall-clock ms when the most recent successful fetch landed
+    let lastLiveDataMs = null;   // epoch ms parsed from live.json's own `ts` — when the DATA was generated
 
     async function fetchLiveData() {
         // Cache-bust with a 15-second-bucketed query string. Bucketing
@@ -1110,8 +1161,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!live) return;
         // Record successful-fetch wall clock so the "Last updated" UI can
         // age-stamp the most recent data, even when the payload hasn't
-        // changed since the previous poll.
+        // changed since the previous poll. Also parse the payload's OWN
+        // timestamp — the data's generation time — which is what the
+        // freshness pill reports (fetch time would claim "Live · 5s ago"
+        // on a weekend while showing Friday's prices).
         lastLiveFetchAt = Date.now();
+        if (live.ts) {
+            const parsed = Date.parse(live.ts);
+            if (isFinite(parsed)) lastLiveDataMs = parsed;
+        }
         updateLiveStatus();
         // Skip the data-patch work if the file hasn't been re-stamped
         // since our last poll — but we still updated the timestamp above
@@ -1140,22 +1198,89 @@ document.addEventListener('DOMContentLoaded', () => {
         const hr = Math.floor(min / 60);
         return `${hr}h ago`;
     }
+    // The pill reports DATA freshness (live.json's own generation
+    // timestamp), not fetch freshness. Two states:
+    //   fresh (< 20 min): green pulsing dot, "Live · 3m ago"
+    //   stale (>= 20 min — market closed, cron down): amber static dot,
+    //          "As of Fri 16:59" — honest about showing old prices.
+    // Falls back to fetch-age behavior if the payload had no parsable ts.
+    const LIVE_STALE_MS = 20 * 60 * 1000;
     function updateLiveStatus() {
         const el = document.getElementById('live-status');
         if (!el) return;
+        const wrap = el.closest('.live-status-wrap');
+        const labelEl = wrap ? wrap.querySelector('.live-label') : null;
         if (lastLiveFetchAt == null) {
             el.textContent = '· —';
             el.classList.remove('live-fresh');
+            if (wrap) wrap.classList.remove('live-stale');
             return;
         }
-        const ageMs = Date.now() - lastLiveFetchAt;
-        el.textContent = `· ${formatAgo(ageMs)}`;
-        // Fresh = updated within the last 90 s (3× poll interval). Anything
-        // older suggests the network or cron is wedged.
-        el.classList.toggle('live-fresh', ageMs < 90 * 1000);
+        const dataMs = lastLiveDataMs != null ? lastLiveDataMs : lastLiveFetchAt;
+        const ageMs = Date.now() - dataMs;
+        const stale = ageMs >= LIVE_STALE_MS;
+        if (stale) {
+            const d = new Date(dataMs);
+            const stamp = d.toLocaleString(currentLang === 'zh-CN' ? 'zh-CN' : 'en-US',
+                { weekday: 'short', hour: '2-digit', minute: '2-digit' });
+            if (labelEl) labelEl.textContent = tr('asof_label');
+            el.textContent = ` ${stamp}`;
+            el.classList.remove('live-fresh');
+            if (wrap) wrap.classList.add('live-stale');
+        } else {
+            if (labelEl) labelEl.textContent = tr('live_label');
+            el.textContent = `· ${formatAgo(ageMs)}`;
+            el.classList.add('live-fresh');
+            if (wrap) wrap.classList.remove('live-stale');
+        }
     }
     // Heartbeat that keeps the "Xs ago" counter moving between actual fetches.
     setInterval(updateLiveStatus, 5 * 1000);
+
+    // === Summary stats strip ===========================================
+    // One-line portfolio overview above the table: ranked count, high-
+    // conviction count (Total >= 75, the HC bucket threshold from
+    // scripts/score.py), median EV Upside, and the top EV name. Computed
+    // from the FULL dataset (not the filtered view) so it describes the
+    // portfolio, not the current filter. Re-run after every render — live
+    // merges update EV Upside in place, so the strip tracks live too.
+    function updateStatsStrip() {
+        const el = document.getElementById('stats-strip');
+        if (!el) return;
+        const full = window.PORTFOLIO_DATA;
+        const rows = (full && full.en) || [];
+        const ranked = rows.filter(r => {
+            const n = parseFloat(String(r.Rank));
+            return isFinite(n);
+        });
+        if (!ranked.length) { el.innerHTML = ''; return; }
+        const evs = ranked
+            .map(r => parseFloat(String(r['EV Upside'])))
+            .filter(v => isFinite(v))
+            .sort((a, b) => a - b);
+        const hcCount = ranked.filter(r => parseFloat(String(r.Total)) >= 75).length;
+        let median = null;
+        if (evs.length) {
+            const mid = Math.floor(evs.length / 2);
+            median = evs.length % 2 ? evs[mid] : (evs[mid - 1] + evs[mid]) / 2;
+        }
+        let topT = '', topV = null;
+        for (const r of ranked) {
+            const v = parseFloat(String(r['EV Upside']));
+            if (isFinite(v) && (topV === null || v > topV)) {
+                topV = v;
+                topT = String(r.Ticker || '').trim();
+            }
+        }
+        const fmtPct = (v) => `${v >= 0 ? '+' : ''}${Math.round(v)}%`;
+        el.innerHTML = tr('stats_line', {
+            ranked: String(ranked.length),
+            hc: String(hcCount),
+            med: median === null ? '—' : fmtPct(median),
+            top: topT.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c])),
+            ev: topV === null ? '—' : fmtPct(topV),
+        });
+    }
 
     // Page Visibility — kick a fresh poll the moment the tab regains focus.
     // Browsers throttle setInterval in background tabs (Chrome: max 1/min),
@@ -1464,7 +1589,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            bodyHtml += `<tr class="${rowClass.trim()}" style="animation-delay: ${delay}s">`;
+            // data-ticker on the row lets us re-apply per-row state (e.g.
+            // tap-expanded) after the innerHTML rebuild wipes the old DOM.
+            const rowTicker = String(row.Ticker || '').trim().replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+            bodyHtml += `<tr class="${rowClass.trim()}" data-ticker="${rowTicker}" style="animation-delay: ${delay}s">`;
 
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
@@ -1477,7 +1605,42 @@ document.addEventListener('DOMContentLoaded', () => {
             bodyHtml += `</tr>`;
         });
 
+        // Snapshot which rows the user has tap-expanded BEFORE the rebuild
+        // wipes them — live polls re-render every couple of minutes during
+        // market hours, and losing the expansion mid-read was a real
+        // annoyance.
+        const expandedTickers = new Set(
+            Array.from(tbody.querySelectorAll('tr.row-expanded[data-ticker]'))
+                .map(el => el.getAttribute('data-ticker'))
+                .filter(Boolean)
+        );
+
         tbody.innerHTML = bodyHtml;
+
+        // Re-apply expansion state by ticker.
+        if (expandedTickers.size) {
+            Array.from(tbody.querySelectorAll('tr[data-ticker]')).forEach(el => {
+                if (expandedTickers.has(el.getAttribute('data-ticker'))) {
+                    el.classList.add('row-expanded');
+                }
+            });
+        }
+
+        // Entry animation runs ONCE per page load. After the first stagger
+        // completes, body.table-settled disables the fadeIn so live-poll
+        // rebuilds don't make the whole table shimmer every ~2 minutes.
+        if (!document.body.classList.contains('table-settled')) {
+            setTimeout(() => document.body.classList.add('table-settled'), 700);
+        }
+
+        // Deep-dive navigation order = the table's current visual order,
+        // filtered to tickers that actually have a dive on file. Used by
+        // the modal's prev/next arrows.
+        diveOrder = data
+            .map(r => String(r.Ticker || '').trim())
+            .filter(t => t && deepDiveAvailable.has(t));
+
+        updateStatsStrip();
 
         // Archive toggle — re-bound every render (the button is recreated by
         // the innerHTML swap above, so old listeners die with the old node).
@@ -1846,7 +2009,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const safeDisplay = displayText.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
             const safeSym = sym.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             const tickerClass = deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
-            return `<span class="ticker-cell"><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span></span>`;
+            // Hover tooltip shows whichever identity ISN'T displayed:
+            // rows showing the bare ticker (US/EU) reveal the company
+            // name; rows showing the name (Asian numeric tickers) reveal
+            // the symbol.
+            const tipSrc = displayText === sym
+                ? String((row && row.Name) || '').trim()
+                : sym;
+            const safeTip = tipSrc.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+            const titleAttr = safeTip ? ` title="${safeTip}"` : '';
+            // Trim signal: ranked name trading ABOVE its 1-year target
+            // (FY2028 < price). Same condition the cron's ABOVE CEILING
+            // alerts fire on — surfaced here instead of only in CI logs.
+            let trimFlag = '';
+            if (row && row._displayRank !== '—') {
+                const tgt = parseLooseNumber(row['FY2028']);
+                const px = parseLooseNumber(row['Current Price']);
+                if (isFinite(tgt) && isFinite(px) && px > 0 && tgt > 0 && tgt < px) {
+                    trimFlag = `<span class="trim-flag" title="${tr('trim_flag_tip')}">⚠</span>`;
+                }
+            }
+            return `<span class="ticker-cell"${titleAttr}><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span>${trimFlag}</span>`;
         }
 
         if (value === null || value === undefined || value === "") {
