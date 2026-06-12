@@ -1383,27 +1383,6 @@ body.archive-open .archive-toggle::before {
     background: rgba(148, 163, 184, 0.16);
 }
 
-/* === Summary stats strip ========================================
-   One-line portfolio overview above the table. Numbers emphasised
-   via <strong> (injected by the i18n string); the rest stays muted. */
-.stats-strip {
-    text-align: center;
-    padding: 0.1rem 1rem 0.45rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.01em;
-}
-.stats-strip strong {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-@media (max-width: 480px) {
-    .stats-strip {
-        font-size: 0.68rem;
-        padding: 0 0.5rem 0.35rem;
-    }
-}
-
 /* === Trim-signal flag ===========================================
    Small amber warning beside tickers trading ABOVE their 1-year
    target (FY2028 < price) — the same condition the cron's

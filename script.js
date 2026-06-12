@@ -145,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
             archive_hide: 'Hide research archive',
             modal_updated: 'Analysis updated {date}',
             asof_label: 'As of',
-            stats_line: '<strong>{ranked}</strong> ranked · <strong>{hc}</strong> high-conviction · median EV <strong>{med}</strong> · top: <strong>{top} {ev}</strong>',
             trim_flag_tip: 'Trading above its 1-year target — trim signal',
             dive_prev: 'Previous deep dive',
             dive_next: 'Next deep dive',
@@ -203,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
             asof_label: '截至',
-            stats_line: '<strong>{ranked}</strong> 个排名 · <strong>{hc}</strong> 个高确信 · EV 中位数 <strong>{med}</strong> · 最高：<strong>{top} {ev}</strong>',
             trim_flag_tip: '股价已高于 1 年目标价 — 减仓信号',
             dive_prev: '上一篇深度分析',
             dive_next: '下一篇深度分析',
@@ -1237,50 +1235,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Heartbeat that keeps the "Xs ago" counter moving between actual fetches.
     setInterval(updateLiveStatus, 5 * 1000);
 
-    // === Summary stats strip ===========================================
-    // One-line portfolio overview above the table: ranked count, high-
-    // conviction count (Total >= 75, the HC bucket threshold from
-    // scripts/score.py), median EV Upside, and the top EV name. Computed
-    // from the FULL dataset (not the filtered view) so it describes the
-    // portfolio, not the current filter. Re-run after every render — live
-    // merges update EV Upside in place, so the strip tracks live too.
-    function updateStatsStrip() {
-        const el = document.getElementById('stats-strip');
-        if (!el) return;
-        const full = window.PORTFOLIO_DATA;
-        const rows = (full && full.en) || [];
-        const ranked = rows.filter(r => {
-            const n = parseFloat(String(r.Rank));
-            return isFinite(n);
-        });
-        if (!ranked.length) { el.innerHTML = ''; return; }
-        const evs = ranked
-            .map(r => parseFloat(String(r['EV Upside'])))
-            .filter(v => isFinite(v))
-            .sort((a, b) => a - b);
-        const hcCount = ranked.filter(r => parseFloat(String(r.Total)) >= 75).length;
-        let median = null;
-        if (evs.length) {
-            const mid = Math.floor(evs.length / 2);
-            median = evs.length % 2 ? evs[mid] : (evs[mid - 1] + evs[mid]) / 2;
-        }
-        let topT = '', topV = null;
-        for (const r of ranked) {
-            const v = parseFloat(String(r['EV Upside']));
-            if (isFinite(v) && (topV === null || v > topV)) {
-                topV = v;
-                topT = String(r.Ticker || '').trim();
-            }
-        }
-        const fmtPct = (v) => `${v >= 0 ? '+' : ''}${Math.round(v)}%`;
-        el.innerHTML = tr('stats_line', {
-            ranked: String(ranked.length),
-            hc: String(hcCount),
-            med: median === null ? '—' : fmtPct(median),
-            top: topT.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c])),
-            ev: topV === null ? '—' : fmtPct(topV),
-        });
-    }
 
     // Page Visibility — kick a fresh poll the moment the tab regains focus.
     // Browsers throttle setInterval in background tabs (Chrome: max 1/min),
@@ -1639,8 +1593,6 @@ document.addEventListener('DOMContentLoaded', () => {
         diveOrder = data
             .map(r => String(r.Ticker || '').trim())
             .filter(t => t && deepDiveAvailable.has(t));
-
-        updateStatsStrip();
 
         // Archive toggle — re-bound every render (the button is recreated by
         // the innerHTML swap above, so old listeners die with the old node).
