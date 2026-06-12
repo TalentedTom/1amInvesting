@@ -637,21 +637,25 @@ body.light-mode tr.row-expanded td:nth-child(10) {
     display: block;
     /* Vertically center inside the cell */
     margin: 0 auto;
-    /* Subtle backdrop so the line stands off the row background */
+    /* Subtle backdrop so the chart stands off the row background */
     background: rgba(255, 255, 255, 0.02);
     border-radius: 3px;
+    /* The SVG is authored at 90x26; in narrower cells (mobile ADV's
+       ~70px column) it scales down proportionally instead of clipping. */
+    max-width: 100%;
+    height: auto;
 }
 body.light-mode .sparkline {
     background: rgba(0, 0, 0, 0.02);
 }
 /* Sparkline column sizing — keep it tight so it doesn't push the FY
-   columns leftward more than necessary. The SVG itself is 70x22; cell
-   padding + a few pixels of slack puts the column at ~82px.
-   nth-child(13) = last column now that Entry was removed. */
+   columns leftward more than necessary. The SVG is 90x26 (grew from
+   70x22 to host the peak-year % label); cell padding + slack puts the
+   column at ~102px. nth-child(13) = last column. */
 th:nth-child(13), td:nth-child(13) {
-    width: 82px;
-    min-width: 82px;
-    max-width: 82px;
+    width: 102px;
+    min-width: 102px;
+    max-width: 102px;
     text-align: center;
     padding-left: 4px;
     padding-right: 4px;

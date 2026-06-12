@@ -1654,21 +1654,36 @@ document.addEventListener('DOMContentLoaded', () => {
             parseLooseNumber(row['FY2029']),
             parseLooseNumber(row['FY2030']),
         ];
-        const W = 70, H = 22;
-        const BASE_Y = 15;            // baseline: growth up, decline down
-        const POS_MAX = 13;           // px above baseline at/over the cap
+        // 90x26 (was 70x22): the extra room hosts the peak-year % label
+        // along the top. On phones the CSS scales the whole SVG down to
+        // fit the narrower cell (max-width:100%; height:auto).
+        const W = 90, H = 26;
+        const BASE_Y = 19;            // baseline: growth up, decline down
+        const POS_MAX = 12;           // px above baseline at/over the cap
         const NEG_MAX = 6;            // px below baseline at/over the cap
         const CAP = 200;              // |%| change that fills the bar
         const slotW = W / 4;
-        const barW = 11;
+        const barW = 14;
         const parts = [];
         const tips = [];
         let computable = 0;
-        parts.push(`<line x1="1" y1="${BASE_Y}" x2="${W - 1}" y2="${BASE_Y}" stroke="#94a3b8" stroke-width="0.75" opacity="0.35"/>`);
+        // Peak year = largest positive YoY. Gets the gold bar + % label so
+        // "which year is the ramp, and how big" is answered at a glance.
+        // All-decline rows get no gold/label — nothing to celebrate.
+        let peakIdx = -1, peakPct = 0;
+        const pcts = [];
         for (let i = 0; i < 4; i++) {
             const a = seq[i], b = seq[i + 1];
+            if (!isFinite(a) || !isFinite(b) || a <= 0) { pcts.push(null); continue; }
+            const pct = (b / a - 1) * 100;
+            pcts.push(pct);
+            if (pct > peakPct) { peakPct = pct; peakIdx = i; }
+        }
+        parts.push(`<line x1="1" y1="${BASE_Y}" x2="${W - 1}" y2="${BASE_Y}" stroke="#94a3b8" stroke-width="0.75" opacity="0.35"/>`);
+        for (let i = 0; i < 4; i++) {
+            const pct = pcts[i];
             const x = (slotW * i + (slotW - barW) / 2).toFixed(1);
-            if (!isFinite(a) || !isFinite(b) || a <= 0) {
+            if (pct === null) {
                 // Missing endpoint — neutral stub keeps the year's slot
                 // visible so the remaining bars stay aligned.
                 parts.push(`<rect x="${x}" y="${BASE_Y - 1}" width="${barW}" height="2" fill="#94a3b8" opacity="0.25" rx="1"/>`);
@@ -1676,18 +1691,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 continue;
             }
             computable++;
-            const pct = (b / a - 1) * 100;
             tips.push(`${pct >= 0 ? '+' : ''}${Math.round(pct)}%`);
             const mag = Math.sqrt(Math.min(Math.abs(pct), CAP) / CAP);
             if (pct >= 0) {
                 const h = Math.max(1.5, POS_MAX * mag);
-                parts.push(`<rect x="${x}" y="${(BASE_Y - h).toFixed(1)}" width="${barW}" height="${h.toFixed(1)}" fill="#10b981" rx="1"/>`);
+                const fill = i === peakIdx ? '#fbbf24' : '#10b981';
+                parts.push(`<rect x="${x}" y="${(BASE_Y - h).toFixed(1)}" width="${barW}" height="${h.toFixed(1)}" fill="${fill}" rx="1"/>`);
             } else {
                 const h = Math.max(1.5, NEG_MAX * mag);
                 parts.push(`<rect x="${x}" y="${BASE_Y}" width="${barW}" height="${h.toFixed(1)}" fill="#ef4444" rx="1"/>`);
             }
         }
         if (!computable) return '';
+        // % label centered over the peak bar, clamped so it never clips at
+        // the cell edges. Theme-aware fill via CSS var (white-on-dark /
+        // dark-on-light both work since it sits on the cell background).
+        if (peakIdx >= 0 && peakPct > 0) {
+            const label = `+${Math.round(peakPct)}%`;
+            const halfW = label.length * 1.85;   // ~3.7px/char at 6.5px font
+            let cx = slotW * peakIdx + slotW / 2;
+            cx = Math.max(halfW + 1, Math.min(cx, W - halfW - 1));
+            parts.push(`<text x="${cx.toFixed(1)}" y="6.5" text-anchor="middle" ` +
+                `font-size="6.5" font-weight="700" font-family="Inter, sans-serif" ` +
+                `style="fill:var(--text-primary)">${label}</text>`);
+        }
         const tip = `YoY growth →27 →28 →29 →30: ${tips.join('  ')}`;
         return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline"><title>${tip}</title>` +
                parts.join('') +
