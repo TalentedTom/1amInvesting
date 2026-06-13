@@ -1,144 +1,89 @@
 # TSEM — Tower Semiconductor | Deep Dive
+
+**Date:** April 2026 (dive) | May 13 (Q1 fold-in) | May 23 (audit) | **June 11, 2026 (restructured — single generation)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — Capital + Qualification: ~85% SiPh foundry share behind a 12-18mo requalification barrier) | **Base 82% (49/60)**
+**Price at restructure:** $256.79 | ~112M shares | MC ~$28.8B
+**Ceiling:** FY2028 $285 (FY-column standard)
+
 ---
 
 ## Supercycle: DB1 Photonics (SiPh Foundry Layer)
 
-## The "Mini TSMC" for Silicon Photonics
+## Core Thesis: The Merchant SiPh Foundry
 
-Every SiPh chip needs a foundry. Tower holds ~85% SiPh foundry share. The PH18 platform supports 100G through 1.6T for AI datacenter networking. $920M CapEx to 5x capacity. >70% already reserved/prepaid through 2028.
-
-"By betting big on the optical interconnects that make AI data centers possible, TSEM has positioned itself for a multi-year growth cycle that traditional foundries may struggle to match."
+Every silicon-photonics chip needs a foundry, and Tower holds **~85% of merchant SiPh foundry share.** The PH18 platform fabricates PICs from 100G through 1.6T for both CPO and pluggable — every SiPh chip in the $193B photonics TAM flows through Tower or GlobalFoundries. The demand side has locked itself in with capital: **$290M of customer prepayments in a single quarter, $1.3B of contracted 2027 SiPh revenue (5.7x the 2025 base — contracted, not estimated), and >70% of a $920M, 5x capacity expansion reserved through 2028.** Customers paying upfront for foundry slots is the same regime as hyperscalers funding memory fabs — demand-side capital converting a qualification moat into a prepaid one.
 
 ## Key Financials
 
-- FY2025: $1.57B revenue. Q4 $440M record. Net profit $220M.
-- **SiPh revenue doubled: $106M (2024) → $228M (2025) (+115%)**
-- Q1 2026 guided: $412M ±5%
-- Sequential revenue and profitability growth throughout 2026
-- **2028 model: $2.84B revenue, 39-40% GM, 31.7% OP margin, $750M NP**
-- GM currently ~23% → targeting ~40% as SiPh mix increases (margins TRIPLE)
+FY2025: $1.57B, Q4 $440M record, NP $220M | **SiPh: $106M (2024) → $228M (2025), +115%** | **Q1 2026: $414M (+15%), EPS $0.65 (+18% beat), GP +52%, OP nearly doubled** | **Q2 guided $455M — record, +22%** | 2028 model: $2.84B revenue, 39-40% GM, 31.7% OP, $750M NP | GM ~23% today → ~40% target as SiPh mix rises — the margin-tripling path | Intel New Mexico: cap-light 300mm for power/RF.
 
-## The $920M Capacity Expansion
+## The Soitec Connection (Layer -1 → Layer 0, cross-book)
 
-- 5x SiPh + SiGe capacity by Q4 2026
-- **>70% of new capacity already reserved/prepaid through 2028**
-- 28% of CapEx already spent
-- Continuous tool qualification through 2026
-- Intel Foundry (New Mexico): cap-light 300mm scaling for power/RF
-- Customer prepayments = demand visibility + reduced TSEM cash risk
+Every SiPh wafer Tower fabricates sits on a Soitec Photonics-SOI substrate (>95% monopoly upstream). The $1.3B contracted SiPh implies **~$200-400M of SOI.PA wafer demand locked upstream** — Tower's expansion is Soitec's order book.
+
+```
+Soitec (SOI.PA) substrate → Tower (TSEM) SiPh PIC → transceivers (AAOI/COHR/LITE)
+  → CW lasers (SIVE) → WLBI test (AEHR)
+```
 
 ## Technology Partnerships
 
-| Partner | Application | Status |
-|---------|------------|--------|
-| Coherent | 400 Gbps/lane SiPh demo | Production-ready (March 2026) |
-| Xanadu | Quantum photonic computing | Custom material stack |
-| Scintil | Heterogeneous III-V integration | PH18DA platform |
-| Salience Labs | Optical Circuit Switches for AI DC | Pre-production |
-| Oriole Networks | Nanosecond OCS for AI networking | Collaboration |
+Coherent (400G/lane modulator, production-ready Mar 2026) | Xanadu (quantum photonics, custom stack) | Scintil (DWDM CPO lasers, PH18DA) | Salience Labs + Oriole (optical circuit switching for AI networking) | Axiro (defense radar). Channel facts: customers paying upfront for capacity (Tier-0 confirmed); named a TPU-v9 platform beneficiary (FUNDA); the InP-shortage→SiPh→SOI chain (Serenity) runs straight through this foundry.
 
-## Soitec Connection (Layer -1 → Layer 0)
-
-Every SiPh wafer Tower fabricates sits on a **Soitec Photonics-SOI substrate** (>95% monopoly). When Tower 5x's capacity, it needs 5x more Soitec wafers. The supply chain is locked:
-
-```
-Soitec (SOI.PA) → Photonics-SOI substrate
-  └── Tower (TSEM) → fabricates SiPh chips on the substrate
-      └── SiPh chips go into transceivers (AAOI, COHR, LITE)
-          └── with CW lasers from SIVE
-              └── tested by AEHR WLBI
-```
-
-## Scoring Breakdown
+## Scoring Breakdown (reconciled Jun 11 — table now derives the sanctioned May 23 Base; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 15/20 | ~85% SiPh foundry share. PH18 qualified for 1.6T. $920M expansion, >70% prepaid. BUT: TSMC COUPE entering (-2), GF expanding (-1), foundry substitutable given time (-2). |
-| Cycle Stage | 8/10 | SiPh doubled. Q4 record. 5x expansion funded. >70% reserved. Growing sequentially. |
-| TAM | 8/10 | SiPh foundry $500M→$3-5B. Power + RF + quantum. Phase 1+2. |
-| Catalysts | 5/5 | Q1 May 13 🔥. 5x capacity Q4 2026. 2028 model. NVIDIA ramp. Quantum. |
-| Macro | 8/10 | 120-150 GW. CPO pulled forward. Every SiPh chip needs a foundry. |
-| Alpha | 2/5 | ~15 analysts. Thesis well-covered. Multiple public deep dives. |
-| Risks | -2 | TSMC COUPE competition (-1). GM 23% needs to reach 40% (-1). |
+| Core Thesis | 16/20 | ~85% merchant share; PH18 qualified to 1.6T; the prepaid-capacity lock + 12-18mo requalification barrier harden the moat in practice. Penalties: TSMC COUPE entering H2 2026 (-2); GF expanding + foundry substitutable given time (-2). |
+| Cycle Stage | 10/10 | $1.3B contracted 2027 SiPh = ~5.7x forward lock (the AVGO book-to-bill standard); $290M single-quarter prepayments; >70% of the 5x expansion reserved; OP nearly doubled; record guide — the headline +15% is legacy mix lagging the leading indicators. |
+| TAM | 9/10 | SiPh foundry $500M→$3-5B with both CPO and pluggable stacking on the same lines; power/RF/quantum adjacencies. |
+| Catalysts | 5/5 | Q2 record print (~Aug); 5x capacity completion Q4 2026; COUPE launch (the test); 2028-model checkpoints. |
+| Macro | 9/10 | CPO pulled forward; pluggable 1.6T "dominant out of the gate"; the prepayment regime industry-wide; every SiPh chip needs a foundry. |
+| Alpha | 2/5 | ~15 analysts; multiple public deep dives; the thesis is properly discovered — conviction, not edge. |
+| Risks | -2 | COUPE share threat (-1). The 23%→40% GM transformation requires near-perfect execution (-1). |
 | **Base** | **49/60 (82%)** | |
 
-## $290M Prepayments + $1.3B Contracted SiPh (Q1 2026 Earnings)
+## Ceiling — v4.1 AH-1 Full Derivation (aggressive OP ramp, 30x SiPh near-monopoly, ~112M shares, FY-column standard)
 
-Q1 2026: Revenue $414M (+15% YoY), beat estimates. EPS $0.65 vs $0.55 est (+18% beat). Gross profit $111M (+52% YoY). OP $65M (nearly doubled). Q2 guided $455M (RECORD, +22% YoY).
+**Revenue model:** FY2026 ~$1.90B (Q1+Q2 actual/guided pace) → FY2027 $2.80B ($1.3B contracted SiPh + legacy) → $3.80B → $4.80B → $5.80B; the $193B TAM pulls through with deceleration, no cliff.
 
-$290M prepayments from SiPh customers in a single quarter. Customers PAYING UPFRONT to lock foundry capacity — same pattern as NBIS ("customers competing for every GPU") and SK Hynix (hyperscalers funding fabs). Extreme demand stickiness.
-
-$1.3B CONTRACTED SiPh revenue for 2027. SiPh growing from $228M (FY2025) to $1.3B contracted (FY2027) = 5.7x in 2 years. This is contracted, not estimated — revenue locked in.
-
-SOI.PA upstream connection: Tower's $1.3B contracted SiPh = ~$200-400M SOI.PA Photonics-SOI wafer demand LOCKED upstream. Tower can't make SiPh PICs without SOI.PA wafers.
-
-## $193B Photonics TAM — SiPh Foundry Monopoly (May 2026)
-
-Tower is THE SiPh foundry (~85% share). PH18 process fabricates SiPh PICs for BOTH CPO and pluggable. Every SiPh chip in the $193B photonics TAM goes through Tower or GFS. SiPh pluggable at 1.6T "dominant almost out of the gate" (Irrational Analysis) = Tower already fabricating pluggable SiPh PICs at volume.
-
-$1.3B contracted SiPh for 2027 may be conservative given full $193B photonics demand stacking (pluggable + CPO simultaneously).
-
-Three independent sources naming Tower directly: FundaAI ($TSEM named as TPU v9 beneficiary, "higher-end PIC platforms"), Irrational Analysis ("Tower Semi going to the moon, people paying upfront for capacity"), Serenity ("InP shortage forces SiPh, SiPh needs SOI" = more SiPh = more Tower).
-
-Revised revenue trajectory: FY2027 $2.7-2.9B, FY2028 $3.0-3.2B, FY2030 $4.5-5.5B.
-
-## SiPh Production Partnership Ecosystem
-
-$920M capex expansion (3x prior estimate of $350M). >5x SiPh wafer starts by end 2026. Patent suit vs GFS on SiPh = offensive IP defense.
-
-Active production partnerships confirming platform breadth:
-- Coherent: 400Gbps/lane silicon modulator
-- Xanadu: quantum photonics
-- Scintil: DWDM CPO lasers
-- Salience: optical switches
-- Axiro: defense radar
-
-## Ceiling — v4.0 AH-1 Full Derivation (Aggressive OP ramp, 30x SiPh monopoly, single-number FY2029)
-
-### Revenue Model (consistent growth, no cliff):
-
-SiPh growing 5.7x in 2 years ($228M→$1.3B contracted). Growth doesn't suddenly decelerate — $193B photonics TAM pulls demand through.
-
-| Year | Revenue | Growth | Source |
-|------|---------|--------|--------|
-| FY2026 | ~$1.90B | +14% | Q1 $414M + Q2 $455M guided |
-| FY2027 | $2.80B | +47% | $1.3B SiPh contracted + legacy |
-| FY2028 | $3.80B | +36% | SiPh continues ramping |
-| FY2029 | $4.80B | +26% | Decelerating but $193B TAM pulling |
-| FY2030 | $5.80B | +21% | Maturing |
-
-### Full Valuation Table (Aggressive OP ramp, 30x, ~112M shares):
-
-$290M prepayments = customers begging for capacity. Same pricing power as SK Hynix at full utilization. TSMC went 25%→45% OP during chip shortage. TSEM with 85% SiPh monopoly and prepaying customers ramps margins faster than typical foundry.
+**Margin logic:** prepaying customers are the SK-Hynix-at-full-utilization condition; TSMC ran 25%→45% OP through the chip shortage; Tower with 85% share and prepaid lines ramps faster than a typical foundry — 22%→34% OP path.
 
 | Year | Revenue | OP Margin | OP | × 30x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | $2.80B | 22% | $616M | $18.5B | $165 |
-| 2028 | $3.80B | 28% | $1.06B | $31.9B | $285 |
-| 2029 | $4.80B | 32% | $1.54B | $46.1B | $411 |
-| 2030 | $5.80B | 34% | $1.97B | $59.2B | $528 |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | $2.80B | 22% | $616M | $18.5B | **$165** |
+| 2028 | $3.80B | 28% | $1.06B | $31.9B | **$285** |
+| 2029 | $4.80B | 32% | $1.54B | $46.1B | **$411** |
+| 2030 | $5.80B | 34% | $1.97B | $59.2B | **$528** |
 
-FY2028 at $285 vs current $264 — market pricing ~15 months forward. Consistent with pattern.
+The market prices roughly a year forward — FY2028 sits near spot, which is what full discovery looks like on a correct thesis.
 
-### Ceiling Derivation:
+  FY2028: $3.80B × 28% OP = $1.06B × 30x = $31.9B / 112M shares = **$285**
 
-  FY2029: $4.80B × 32% OP = $1.54B × 30x = $46.1B / 112M shares = $411
+CEILING: $285 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the FY2029-forward convention)
 
-CEILING: $411 (single number, FY2029 forward)
+## TSMC COUPE — The Competitive Test (pre-registered)
 
-## TSMC COUPE — The Competitive Threat
-
-TSMC entering SiPh production with COUPE in H2 2026 is the biggest risk. If TSMC captures significant SiPh share, Tower's ~85% dominance could compress to 50-60%. However:
-- Tower has qualification lead (years of customer recipes)
-- Switching foundries = 12-18 month requalification
-- >70% prepaid capacity through 2028 = locked revenue
-- Tower specializes in SiPh; TSMC treats it as one of many platforms
+COUPE enters H2 2026. Tower's defenses: years of qualified customer recipes, the 12-18mo requalification cost, >70% prepaid capacity through 2028, and specialization (TSMC treats SiPh as one platform among many). **The test criteria, committed now:** a named TSEM customer defecting to COUPE → Core penalty deepens, Base review; COUPE confined to TSMC-ecosystem CPO while Tower keeps the merchant/pluggable base → thesis intact. Cross-book note: COUPE also sits on Soitec substrates — the upstream monopoly wins either way.
 
 ## Key Risks
 
-- TSMC COUPE entering H2 2026 — credible competitive threat
-- 2028 model already priced into current stock
-- GM 23% → 40% transformation requires perfect execution
-- $22B market cap limits asymmetry (framework prefers smaller)
-- 15+ analysts = limited information edge
+1. COUPE — the credible share threat, test above
+2. The margin transformation — 23%→40% GM is the entire 2028 model; slippage compresses every FY column
+3. Full discovery — at ~$29B with the 2028 model near the price, asymmetry is spent
+4. GFS — the other merchant foundry, plus active patent litigation
+5. Execution on a 5x expansion with continuous tool qualification through 2026
 
+## Re-Rate Triggers
+
+1. Q2 print (~Aug): $455M record guide + **prepayment continuation** — the forward-lock telemetry
+2. 5x capacity completion (Q4 2026) → the volume gate opens
+3. **COUPE launch (H2 2026) → the pre-registered share-defense test fires** — watch named-customer behavior, not press releases
+4. Contracted-SiPh updates (the $1.3B growing) → forward book-to-bill telemetry
+5. GM prints toward 40% → the margin-tripling gate, quarterly
+6. 2028-model checkpoints ($2.84B / 31.7% OP trajectory)
+7. GFS patent-suit outcomes → IP-moat evidence either way
+8. Quantum (Xanadu) / OCS (Salience, Oriole) partnerships converting to volume → optionality vectors
+
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/TSEM_artifact_pre_restructure_2026-06-11.md*

@@ -1,129 +1,89 @@
 # MRVL — Marvell Technology | Deep Dive
+
+**Date:** April 2026 (dive) | May 27 (Q1 FY2027 fold-in) | Jun 2 (Computex revision) | **June 11, 2026 (restructured — single generation)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — custom-ASIC duopoly with 2-3yr design lock-in; held as duopoly telemetry, optical thesis expressed deeper per Axiom 3) | **Base 78% (47/60)**
+**Price at restructure:** $281.24 | ~915M shares | MC ~$257B
+**Ceiling:** FY2028 $269 (FY-column standard)
+
 ---
 
 ## Supercycle: DB1 Photonics (Optical DSP + Custom ASIC + Photonic Fabric)
 
-## TAM Expansion Lens
+## Core Thesis: The Custom Silicon + Optical Connectivity Platform
 
-**Q1 (Today):** Custom AI ASICs (Amazon Trainium, Google TPU). Optical DSPs for 800G/1.6T (Inphi). Switch silicon. Storage. Data center = 75%+ of revenue.
+Ford Principle: not "networking chips" — the platform hyperscalers use to build AI infrastructure they can't buy from NVIDIA. Custom ASIC is a **duopoly**: only Marvell and Broadcom can design hyperscaler-custom AI silicon, with 2-3 year design cycles creating structural lock-in. All four are committed: Amazon (Trainium), Google (TPU — the *most* advanced custom program, 134K TPUs in a single fabric, two chips co-developing with MRVL), Microsoft (Maia), Meta (MTIA). NVIDIA invested **$2B** and co-designed NVLink Fusion connectivity with Marvell — the GPU monopolist buying alignment with the custom-silicon alternative.
 
-**Q2 (3-5 Years):** Photonic Fabric (Celestial AI) for scale-up interconnects. 3.2T optical (Polariton POH). AI inference ASICs. CPO integration.
+### The Acquisition Stack
+Inphi $10B (coherent DSP/SiPh, 2021) | Innovium $1.1B (switch silicon) | **Celestial AI $3.25B + $2.25B milestones (photonic fabric — scale-up optical, Dec 2025)** | XConn $540M (PCIe/CXL) | Polariton (POH modulators for 3.2T, Apr 2026). The most complete optical-compute stack outside Broadcom.
 
-**Q3 (New Markets):** Automotive AI. Enterprise inference. Edge compute. Defense networking.
+### The LWLG Hidden Link
+Polariton's POH modulators use LWLG's patented Perkinamine polymer. Marvell acquired the device, **not the material** — a structural dependency on LWLG for the 3.2T roadmap. (Cross-book watch.)
 
-**Ford Principle:** Not "networking chips." The custom silicon + optical connectivity platform hyperscalers use to build AI infrastructure they can't buy from NVIDIA.
+## Financial Trajectory (sourced)
 
-## The Acquisition Stack (Building the Optical-Compute Platform)
+FY2026 $8.20B (+42%), DC $6.0B+, custom ASIC ~$1.5B from ~$0 | **FY2027 guided $11.5B (+40%) — raised three times in six months** ($9.5B→$10B→$11.5B) | FY2028 guided $16.5B+ on the call, modeled $20.5B with ASIC acceleration + Celestial | Q1 FY2027 non-GAAP OP 35%, management targeting 38-40% upper end by FY2028 | 18 design wins FY2026 (record) | 1.6T optical in volume production | scale-up optics $300M+ already | CEO: "Every program we looked at a year ago is larger when we look a year later." Layer 1 principal signal (Computex, Jun 2): Jensen Huang, on stage with Murphy — "This is the next trillion-dollar company." The artifact prices what that implies (~$91B revenue at 30x/40%) and deliberately keeps it OUT of the model: a FY2031-32 aspiration, not a ceiling input.
 
-| Acquisition | Price | What | Year |
-|------------|-------|------|------|
-| Inphi | $10B | Coherent DSP, SiPh | 2021 |
-| Innovium | $1.1B | Ethernet switch silicon | 2021 |
-| **Celestial AI** | **$3.25B + $2.25B milestones** | **Photonic Fabric — scale-up optical** | **Dec 2025** |
-| **XConn** | **$540M** | **PCIe/CXL switching** | **Dec 2025** |
-| **Polariton** | **Undisclosed** | **POH modulators for 3.2T** | **Apr 2026** |
-
-Most complete optical-compute stack outside Broadcom. Each acquisition fills a gap.
-
-## The LWLG Hidden Link
-
-Polariton's POH modulators use LWLG's Perkinamine polymer. Marvell acquired the device but NOT the material. Perkinamine is patented, not replaceable. Marvell now has structural dependency on LWLG for its 3.2T roadmap.
-
-## Financial Trajectory
-
-| Period | Revenue | DC Revenue | Custom ASIC | Celestial CPO |
-|--------|---------|------------|-------------|---------------|
-| FY2024 | $5.77B | ~$3.3B | ~$0 | — |
-| FY2025 | $5.77B | ~$4.1B | Ramping | — |
-| FY2026 | $8.20B (+42%) | $6.0B+ (+46%) | ~$1.5B | Pre-revenue |
-| FY2027E | $11.5B (+40%) | ~$8.5B+ | ~$3.5B+ | ~$300M |
-| FY2028E | $20.5B (+78%) | ~$16B+ | ~$8B+ | ~$1.5B+ |
-| FY2029E | $31.0B (+51%) | ~$25B+ | ~$14B+ | ~$3B+ |
-| FY2030E | $44.0B (+42%) | ~$36B+ | ~$20B+ | ~$5B+ |
-
-- FY2027 raised THREE times in 6 months: $9.5B → $10B → **$11.5B**
-- Custom ASIC accelerating: Google TPU (largest custom silicon program, 134K in single fabric), Amazon Trainium, Microsoft Maia, Meta MTIA — all scaling simultaneously
-- Celestial AI CPO: revised UP from $500M to **$1.5B+ run rate by FY2028** (Goldman CPO hockey stick $25B 2027 → $71B 2028; MRVL is CPO switch chip)
-- NVLink Fusion (March 2026): co-designed NVIDIA+MRVL connectivity for heterogeneous DC. NEW revenue vector ~$1B+ FY2029+
-- 18 distinct design wins in FY2026 (record)
-- Google co-developing TWO custom AI chips — Google is NOT "4th hyperscaler," it's the MOST advanced custom silicon program
-- NVIDIA **$2B investment** + NVLink Fusion ecosystem integration
-- Jensen Huang at Computex Jun 2, 2026: **"This is the next trillion-dollar company"** (Layer 1 signal)
-- 1.6T optical entered volume production H2 FY2026
-- "Revenue growth to accelerate each quarter in FY2027"
-- "Every program we looked at a year ago is larger when we look a year later" — CEO Matt Murphy
-
-## Scoring Breakdown
+## Scoring Breakdown (redecomposed Jun 11 — same sanctioned Base, honest components; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 15/20 | 🔒 CHOKEPOINT: Custom ASIC duopoly — only MRVL + Broadcom can design hyperscaler AI chips. 2-3yr design cycle switching cost = structural lock-in. Amazon, Google, Microsoft, Meta all locked in. Celestial CPO exclusive. NVIDIA $2B. BUT: not physics-required (-2), Broadcom is credible competitor (-2), capital barrier not physics barrier (-1). |
-| Cycle Stage | 9/10 | +42% at $8.2B. Custom ASIC $0→$1.5B. FY2027 raised 3x ($9.5B→$10B→$11B). Growth accelerating. |
-| TAM | 9/10 | Custom ASIC $118B by 2033 (Counterpoint). CPO via Celestial $10B+ by 2030. Optical DSP $15-20B. Multiple vectors Phase 1. |
-| Catalysts | 4/5 | FY2027 $11B. Google co-dev 2 chips. Celestial CPO $500M run rate by Q4 FY2028. Polariton 3.2T. |
-| Macro | 9/10 | 120-150 GW compute. Optical era confirmed. Every rack needs DSPs. |
-| Alpha | 2/5 | 32 analysts. Amazon 8-K → Marvell → Celestial → SIVE chain IS supply chain archaeology consensus missed. But thesis broadly known. |
-| Risks | -1 | Broadcom competes (-1). |
+| Core Thesis | 15/20 | ASIC duopoly with design-cycle lock-in; all four hyperscalers committed; Celestial CPO exclusivity; NVIDIA $2B + NVLink Fusion. Penalties: not physics-required (-2); Broadcom is a fully credible competitor (-2); capital/talent barrier, not physics (-1). |
+| Cycle Stage | 9/10 | +42% printing; custom ASIC $0→$1.5B in a year; FY2027 raised three times; "revenue accelerates each quarter." |
+| TAM | 9/10 | Custom ASIC $118B by 2033; Celestial CPO $10B+; optical DSP $15-20B; NVLink Fusion new vector. |
+| Catalysts | 5/5 | Q2 FY2027 print (~Aug); Celestial run-rate milestones toward $1.5B; NVLink Fusion wins; Google two-chip co-dev; Polariton 3.2T. |
+| Macro | 9/10 | 120-150 GW; agentic AI drives disaggregated compute = more connectivity per inference event; the optical era confirmed. |
+| Alpha | 2/5 | 32 analysts; the Amazon-8-K→Marvell→Celestial→SIVE chain is the framework's signature archaeology, but the headline thesis is consensus. |
+| Risks | -2 | Broadcom contests every ASIC award (-1). Three acquisitions in six months integration + hyperscaler customer concentration (-1). |
 | **Base** | **47/60 (78%)** | |
 
-## ASIC Duopoly Chokepoint (April 2026)
+## Ceiling — v4.1 AH-1 Full Derivation (guided + extrapolated, 40% OP, 30x, ~915M shares, FY-column standard)
 
-Reclassified from ⚡ BOTTLENECK to 🔒 CHOKEPOINT. Custom ASIC is a duopoly — only MRVL and Broadcom can design hyperscaler-custom silicon. 2-3 year design cycle = structural switching costs. No new entrant can replicate this in less than 5 years.
-
-Four hyperscalers locked in: Amazon (Graviton/Trainium), Google (TPU), Microsoft (Maia), Meta (MTIA). Each on multi-year design contracts. Once a hyperscaler commits to MRVL for custom silicon, they can't switch mid-generation.
-
-## Revenue Raised — ASIC Doubling + Celestial CPO (April 2026)
-
-FY2030 revenue raised from $20-22B to $30-35B. Two drivers:
-
-1. Custom ASIC revenue doubling as hyperscalers shift from merchant GPU to custom silicon for inference efficiency
-2. Celestial CPO platform: $10B+ TAM. MRVL's CPO ASIC (Celestial) is the switch chip inside CPO modules — every CPO deployment needs Marvell silicon
-
-Combined: MRVL is both the custom compute chip AND the CPO switch chip. Dual chokepoint.
-
-## Ceiling — v4.0 AH-1 Full Derivation (MRVL Q1 FY2027 Earnings Call, 40% OP, 30x, blended)
-
-### Revenue Model (Earnings call guided + extrapolated):
-
-MRVL CEO May 27, 2026: FY2027 raised to $11.5B (+40%), FY2028 raised to $16.5B (+$1.5B vs prior). Custom silicon $10B+ FY2029 confirmed. Interconnect >70% YoY. Scale-up optics $300M+ (Celestial + MRVL). "Every program we looked at a year ago is larger when we look a year later."
-
-**Jun 2, 2026 Computex revision:** Jensen Huang on stage with Murphy: "This is the next trillion-dollar company." NVLink Fusion co-designed connectivity for heterogeneous DC. Agentic AI specifically drives disaggregated compute → more connectivity per inference event. Three vectors revised UP:
-1. Custom ASIC: Google TPU scaling faster than modeled (134K TPUs single fabric, Anthropic $21B Google TPU orders in one quarter). All 4 hyperscalers accelerating custom silicon simultaneously.
-2. Celestial CPO: $500M → $1.5B+ run rate by FY2028. Goldman CPO hockey stick validates.
-3. NVLink Fusion: NEW revenue vector not in prior model. ~$1B+ FY2029.
+### Revenue Model (AH-6 sourced)
 
 | Year | Revenue | Growth | Source |
 |------|---------|--------|--------|
-| FY2027 | $11.5B | +40% | Guided on earnings call |
-| FY2028 | $20.5B | +78% | Guided $16.5B + ASIC accel +$1.5B + Celestial CPO +$1B + upward bias |
-| FY2029 | $31.0B | +51% | Custom $14B+ (4 hyperscalers scaling), CPO $3B+, NVLink $1B+ |
-| FY2030 | $44.0B | +42% | ASIC $20B+, CPO $5B+, NVLink $1.5B+. Still below Jensen's implied ~$80B for $1T MC. |
+| FY2027 | $11.5B | +40% | Guided (May 27 call) |
+| FY2028 | $20.5B | +78% | Guided $16.5B + ASIC acceleration + Celestial $1B + Computex bias |
+| FY2029 | $31.0B | +51% | Custom $14B+ (four hyperscalers), CPO $3B+, NVLink $1B+ |
+| FY2030 | $44.0B | +42% | ASIC $20B+, CPO $5B+, NVLink $1.5B+ — still well below the $1T aspiration math |
 
-### Full Valuation Table (40% OP, 30x ASIC duopoly, ~915M shares):
-
-Q1 FY2027 non-GAAP OP margin 35%. Management targets upper end of 38-40% by FY2028. 40% flat reflects Broadcom-convergence as ASIC becomes dominant revenue. Broadcom at 45%+ validates trajectory. Multiple held at 30x (35x case deferred pending market signal).
+### Valuation (40% OP — Broadcom-convergence as ASIC dominates mix; 30x, 35x case deferred)
 
 | Year | Revenue | OP (40%) | × 30x | Per Share |
 |------|---------|----------|-------|-----------|
-| 2027 | $11.5B | $4.60B | $138B | $151 |
-| 2028 | $20.5B | $8.20B | $246B | $269 |
-| 2029 | $31.0B | $12.40B | $372B | $406 |
-| 2030 | $44.0B | $17.60B | $528B | $577 |
+| 2027 | $11.5B | $4.60B | $138B | **$151** |
+| 2028 | $20.5B | $8.20B | $246B | **$269** |
+| 2029 | $31.0B | $12.40B | $372B | **$406** |
+| 2030 | $44.0B | $17.60B | $528B | **$577** |
 
-FY2028 at $269 vs current $252 (post-Computex AH). 1.07x upside. Near-term compressed; alpha is in FY2029+ ($406, $577).
+The market prices roughly a year ahead — FY2028 sits near spot; the asymmetry lives in FY2029-30 execution.
 
-Jensen's implied $1T = ~$1,093/share. At 30x/40% OP, $1T requires ~$91B revenue. At 35x/45%, ~$63B. Our FY2030 at $44B is a base case; $1T is a FY2031-2032 aspiration.
+  FY2028: $20.5B × 40% OP = $8.20B × 30x = $246B / 915M shares = **$269**
 
-### Ceiling Derivation (Jun 2, 2026):
+CEILING: $269 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
 
-FY2028 per share: $269
+## Cross-Book Relevance
 
-CEILING: $269 (pure FY2028 forward, per v4.1 EV Upside methodology)
+MRVL sits one layer ABOVE the book's optical core: Celestial's photonic fabric needs external CW lasers (the Amazon-warrant 8-K chain that built SIVE's case), Polariton needs LWLG's polymer, the DSP franchise rides the same 1.6T wave as the laser chain. Per Axiom 3 (deeper = stronger moat), the optical thesis is expressed through SIVE/SOI/Win Semi; MRVL is held as the **duopoly telemetry instrument** — its ASIC wins and losses are the live scoreboard of the custom-silicon fight that AVGO's artifact watches from the other side.
 
 ## Key Risks
 
-- Broadcom competes for same hyperscaler ASIC wins
-- ~$231B market cap at $252 = need continued re-rating for meaningful returns
-- Three acquisitions in 6 months = integration risk
-- Custom ASIC customer concentration (Amazon, Google dominant)
-- FY2028 $20.5B requires +78% growth — aggressive but supported by 4 hyperscalers scaling simultaneously
+1. Broadcom — the other half of the duopoly contests every award; share splits are the real risk, not the duopoly itself
+2. Integration — Celestial + XConn + Polariton absorbed in six months
+3. Customer concentration — four hyperscalers are the whole custom book
+4. FY2028 +78% is aggressive; supported by four simultaneous ramps but execution-loaded
+5. At ceiling — FY2028 fully priced; the next leg is FY2029 conversion or the 35x un-defer
+
+## Re-Rate Triggers
+
+1. **Q2 FY2027 print (~Aug — the NVDA macro window): "accelerates each quarter" tested + Celestial scale-up run-rate telemetry**
+2. Celestial CPO run-rate milestones toward $1.5B FY2028 → the CPO vector verified against Goldman's hockey stick
+3. NVLink Fusion design-win announcements → the new vector converts from ~$0
+4. Google TPU-generation awards + two-chip co-dev milestones → duopoly share defense (cross-watch with AVGO's artifact)
+5. **Counter: a named hyperscaler ASIC defection to Broadcom → duopoly-split review** — the single most damaging headline class
+6. Polariton 3.2T milestones → POH path + the LWLG material-dependency watch
+7. Counter: integration stumble across the acquisition stack → execution review
+8. **The 35x un-defer condition: revenue trajectory printing toward $60B+ with 45% OP → multiple case reopens** (the trillion-dollar checkpoint, formalized)
+
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/MRVL_artifact_pre_restructure_2026-06-11.md*

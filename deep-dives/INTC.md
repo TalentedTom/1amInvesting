@@ -1,206 +1,93 @@
-# Intel Corporation (INTC) — Deep Dive Artifact
+# INTC — Intel Corporation | Deep Dive
 
-**Score:** 48 | Base 81% | Entry -15%
-**Price:** $110.27
-**Ceiling:** $43-173 (FY2027-FY2030, Google 6M + NVIDIA EMIB)
-**Market Cap:** ~$560B
-**Exchange:** NASDAQ
-**Sector:** CPU + Foundry + Advanced Packaging
-
----
-
-## Core Thesis: The Turnaround Under Lip-Bu Tan
-
-Intel is attempting the most ambitious semiconductor turnaround in history: simultaneously reclaiming CPU leadership, building a world-class foundry business, and scaling advanced packaging to compete with TSMC. Under Lip-Bu Tan (CEO since March 2025), the company has beaten revenue expectations for 6 consecutive quarters and delivered 18A into high-volume manufacturing.
-
-### Pillar 1 — CPU Renaissance (CCG + DCAI)
-
-DCAI grew 22% YoY to $5.1B in Q1 2026. Lip-Bu: "CPU:GPU ratio moving back toward CPU." Customer asked for 3x allocation increase. CPU shortage confirmed: "I cannot even ship enough to the customer." Agentic AI driving 1:8→1:1→4:1 CPU:GPU ratios. Panther Lake shipping in volume. Coral Rapids coming with multi-threading.
-
-Lip-Bu: "The CPU is reinserting itself as the indispensable foundation of the AI era. This isn't just our wishful thinking, it's what we hear from our customers."
-
-### Pillar 2 — Intel Foundry
-
-18A in HVM Q1 2026 (first angstrom-era US node: RibbonFET + backside power delivery). 14A risk production 2028, volume 2029 (TSMC parity timeline). Tesla foundry partnership (landmark deal). Revenue +16% YoY to $5.4B. "Multiple customers engaged with 0.5 PDK available."
-
-**Jun 8, 2026 — Jeff Pu/Haitong note (major data upgrade):**
-- **18A yields improved to ~80%** (above 70% mass production threshold). Mass production economics now viable.
-- **EMIB yields at 90-95%** in recent weeks. Advanced packaging fully de-risked.
-- **Intel 3: +80% capacity expansion** (mainly Ireland) by end-2028
-- **18A: +100% capacity expansion** (Arizona) by end-2028. Clearwater Forest starts Q3 2026, full volume Q1 2027 (~1/3 of total 18A wafers).
-- **14A: strong ramp in Oregon**
-- **IFS to turn profitable H2 2027** (Samsung foundry hits profitability Q3 2026, Intel follows 12 months later)
-- **Major US fabless on pipeline** (likely MRVL — confirmed designing Google networking chip on 18A/18AP)
-- **Major smartphone maker** starting with 18A-P (tablets/PCs) + **committed to 14A capacity** (likely Apple)
-- **NVIDIA collaboration:** x86 CPUs for PC (RTX + Nova Lake 2027), Server CPUs (Intel x86 IP + foundry) late 2028
-- **TeraFab project late-2028**
-- **DCAI revenue +39% YoY in 2026E, +30% in 2027E** (was +22% in Q1)
-- **Target price raised to $135** (Haitong)
-
-### Pillar 3 — Advanced Packaging (EMIB-T)
-
-CoWoS overflow opportunity. Lip-Bu: "Our technology is called EMIB-T. We really have the best technology and now we are making sure we can bring it into volume production with reliable yield." **EMIB yields now confirmed at 90-95% (Jeff Pu Jun 2026).** Customers prepaying for substrates (4 Taiwan, 2 Japan suppliers confirmed). EMIB-T clients shouldering substrate prepayments to support Intel. EMIB supports 9x-12x reticle-size packages vs CoWoS falling off after 5.5 reticles (TrendForce).
+**Date:** May 2026 (dive) | Jun 8, 2026 (re-audit: Google 6M TPU + Jeff Pu yields) | **June 11, 2026 (restructured — single generation; Base lattice-harmonized)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist — Path B sovereign foundry/platform turnaround, not a bottleneck) | **Base 80% (48/60)**
+**Price at restructure:** $117.73 | ~5.08B shares | MC ~$598B
+**Ceiling:** FY2028 $90 (FY-column standard)
 
 ---
 
-## Key Customers & Partnerships
+## Supercycle: AI Compute + Sovereign Foundry (Path B platform)
 
-- **Tesla:** Landmark foundry partnership on 18A
-- **TikTok/Oracle:** Demand from Houston facility, taking GB300 from Google
-- **Wiwynn:** Starting to ramp GB300 to Oracle, small volumes in H1
-- **Microsoft, Meta, Google, AWS, Tencent:** Expanding EPYC/Xeon deployments
-- **Defense/Government:** CHIPS Act funding, Trump administration support
+## Core Thesis: The Most Ambitious Turnaround in Semiconductor History
 
----
+Under Lip-Bu Tan, Intel is simultaneously reclaiming CPU relevance, building an external foundry, and scaling advanced packaging — six consecutive beat quarters in. The thesis hardened materially on Jun 8 channel data: **18A yields ~80%** (above the 70% mass-production threshold — economics now viable), **EMIB yields 90-95%** (packaging fully de-risked), Intel 3 capacity +80% and 18A +100% by end-2028, **IFS profitable H2 2027** (Samsung foundry profitable Q3 2026, Intel ~12 months behind — a watchable lead indicator).
 
-## Financials
+**Pillar 1 — CPU renaissance:** DCAI +22% in Q1 to $5.1B, channel 2026E +39%; "I cannot even ship enough to the customer"; a customer asked for a 3x allocation increase; agentic AI shifting CPU:GPU ratios from 1:8 toward 1:1+ ("The CPU is reinserting itself as the indispensable foundation of the AI era — it's what we hear from our customers"). Panther Lake in volume; Clearwater Forest starts Q3 2026 (~1/3 of 18A wafers at full volume Q1 2027).
 
-**Q1 2026:** $13.6B revenue (+7% YoY), beat consensus by $1.4B.
-- Non-GAAP EPS: $0.29 (crushed $0.01 consensus by 2800%)
-- GAAP EPS: -$0.73 (still GAAP unprofitable from restructuring)
-- DCAI: $5.1B (+22% YoY)
-- Intel Foundry: $5.4B (+16% YoY)
-- CCG: $7.7B (+1% YoY)
-- Q2 guide: ~$14.3B, GAAP EPS $0.08 (first GAAP positive since Q2 2024)
+**Pillar 2 — Foundry:** 18A in HVM (first angstrom-era US node: RibbonFET + backside power); 14A risk production 2028; Tesla landmark partnership; a major US fabless on the pipeline (likely MRVL — confirmed designing a Google networking chip on 18A/18AP); a major smartphone maker starting on 18A-P and **committed to 14A capacity** (likely Apple); NVIDIA collaboration on x86 (PC 2027, server CPUs late 2028); TeraFab late 2028.
 
-**6th consecutive quarter beating expectations.**
+**Pillar 3 — EMIB packaging (the overflow chokepoint-class asset):** TSMC CoWoS is sold out; EMIB-T supports 9-12x reticle-size packages vs CoWoS falling off after 5.5; **customers are prepaying substrates** (4 Taiwan + 2 Japan suppliers confirmed — the 16c-2 pattern at Intel); "We really have the best technology and now we are making sure we can bring it into volume production with reliable yield."
 
-**52-week range:** $18.97 - $132.75. Stock up 100%+ in 2026, 84% in 2025.
+**The Jun 8 demand event:** The Information (via Reuters, unverified independently): **Google ordered Intel manufacturing for >3M TPUs in 2028** — channel clarification: ~6M+ TPUs across 2027-2028. NVIDIA evaluating Intel for a multi-GPU processor (testing, no order). MediaTek confirmed dual CoWoS+EMIB support, sizing custom-ASIC TAM at $70-80B in 2027.
 
-Lip-Bu: "This is a fundamentally different company today. We used to have leadership in data center, and over the years we lost it. We made some big mistakes."
+## Key Financials
 
----
+Q1 2026: $13.6B (+7%, beat by $1.4B), non-GAAP EPS $0.29 vs $0.01 consensus; GAAP -$0.73 (restructuring); DCAI $5.1B (+22%), Foundry $5.4B (+16%), CCG $7.7B | Q2 guide ~$14.3B, GAAP EPS $0.08 — **first GAAP-positive quarter since Q2 2024** | Sixth consecutive beat.
 
-## Revenue Trajectory (Re-Audited Jun 8, 2026 — Google TPU order + Jeff Pu yields)
+## Scoring Breakdown (constructed Jun 11 in v4.1 categories — the prior section used the retired 70-pt rubric; Base lattice-harmonized 81→80; archaeology in VERSION_LOG)
 
-**Source:** Reuters reported The Information says Google placed an order with Intel to manufacture >3M TPUs in 2028. Nvidia evaluating Intel technology for a multi-GPU processor (no order placed). Reuters could not independently verify. MediaTek confirmed support for both TSMC CoWoS and Intel EMIB, estimated custom AI ASIC TAM at $70-80B in 2027, targeting 10-15% share.
+| Category | Score | Evidence |
+|----------|-------|---------|
+| Core Thesis | 16/20 | x86 duopoly; foundry PROVEN at 80%/90-95% yields; EMIB overflow position with prepaying customers; sovereign backing. Penalties: Path B turnaround/platform, not a bottleneck (-2); TSMC remains the benchmark and AMD takes share on both fronts (-2). |
+| Cycle Stage | 9/10 | Six consecutive beats; 18A above the mass-production threshold; DCAI accelerating to +39% 2026E; "confirmed execution, no longer early turnaround." |
+| TAM | 9/10 | $120B server CPU + $100B+ external foundry pipeline (Google/Apple/NVIDIA/MRVL) + the packaging overflow. |
+| Catalysts | 5/5 | Google TPU revenue 2027 (dated); Clearwater Forest Q3 2026; first GAAP-positive print (~Jul); IFS profitability H2 2027; Apple 14A confirmation pending. |
+| Macro | 9/10 | CHIPS Act + national-security foundry designation + administration support; the CoWoS-sold-out overflow regime; CPU-renaissance macro. |
+| Alpha | 2/5 | 48 analysts — the most-covered turnaround in semi history; the residual edge is the Asian-channel reads (Jukan TPU clarification, yield data) acted on days before broad circulation. |
+| Risks | -2 | 14A execution + yield claims unverified in revenue; capex strain (CHIPS + prepayments fund, cash flow must hold) (-1). AMD share losses + Apple/NVIDIA modeled as inferences, not signatures (-1). |
+| **Base** | **48/60 (80%)** | Harmonized Jun 11 from 81 (not n/60-representable) per the LITE/Win Semi rounding-lattice precedent; EV unchanged. |
 
-### Revenue Vectors:
+## Ceiling — v4.1 AH-1 Full Derivation (Jun 8 model preserved; 20-22x, ~5.08B shares, FY-column standard)
 
-| Vector | FY2027 | FY2028 | FY2029 | FY2030 | Confidence |
-|--------|--------|--------|--------|--------|------------|
-| Client + Other (CCG) | $34.5B | $36.5B | $38.0B | $39.0B | Medium |
-| DCAI / Server CPU | $31.0B | $39.0B | $47.0B | $55.0B | Medium |
-| External Foundry + Adv Packaging | $8.0B | $19.0B | $32.0B | $49.0B | Low-Medium |
-| **Total Revenue** | **$73.5B** | **$94.5B** | **$117.0B** | **$143.0B** | Medium-Low |
+### Revenue Vectors (AH-9, consolidated net of intersegment)
 
-Note: consolidated revenue net of intersegment eliminations (~$5.3B/quarter). Do NOT double-count internal foundry.
+| Vector | FY2027 | FY2028 | FY2029 | FY2030 | AH-7 |
+|--------|--------|--------|--------|--------|------|
+| Client + Other (CCG) | $34.5B | $36.5B | $38.0B | $39.0B | MEDIUM |
+| DCAI / Server CPU | $31.0B | $39.0B | $47.0B | $55.0B | MEDIUM |
+| External Foundry + Packaging | $8.0B | $19.0B | $32.0B | $49.0B | LOW-MEDIUM |
+| **TOTAL** | **$73.5B** | **$94.5B** | **$117.0B** | **$143.0B** | |
 
-### External Foundry + Advanced Packaging Breakdown:
+**External vector detail (FY2028):** Google TPU fab+packaging ~4M units × ~$3K = $12.0B; Apple/Tesla/14A/EMIB pipeline $3.0B; **NVIDIA Feynman EMIB probability-weighted at 25% = $0.5B** (testing phase; escalates to 40% on testing confirmation per Rule 16b); MediaTek/custom packaging $2.5B; other $1.0B.
 
-**FY2027 (NEW — Google ordering for 2027+2028):**
+**Content-per-TPU sensitivity (FY2028):** $1K → $88B revenue → $83/sh; **$3K (base) → $94.5B → $90/sh**; $5K → $101B → $97/sh.
 
-| Component | FY2027 |
-|-----------|--------|
-| Google TPU packaging (~2M units × ~$3K) | $6.0B |
-| Apple / Tesla / early 18A-P | $1.0B |
-| Other external foundry | $1.0B |
-| **Total** | **$8.0B** |
+### Valuation (margin ramp on the de-risked yields; 20x FY27 → 22x thereafter, below TSMC's 30x for execution risk)
 
-**FY2028:**
+| Year | Revenue | OP Margin | OP | Multiple | MC | Per Share |
+|------|---------|-----------|-----|---------|-----|-----------|
+| 2027 | $73.5B | 15% | $11.0B | 20x | $220B | **$43** |
+| 2028 | $94.5B | 22% | $20.8B | 22x | $458B | **$90** |
+| 2029 | $117.0B | 26% | $30.4B | 22x | $669B | **$132** |
+| 2030 | $143.0B | 28% | $40.0B | 22x | $881B | **$173** |
 
-| Component | FY2028 |
-|-----------|--------|
-| Google TPU fab + packaging (~4M units × ~$3K) | $12.0B |
-| Apple / Tesla / 14A / EMIB pipeline | $3.0B |
-| NVIDIA EMIB Feynman (25% probability-weighted, testing phase) | $0.5B |
-| MediaTek / Google custom packaging pipeline | $2.5B |
-| Other external foundry and ASAT | $1.0B |
-| **Total** | **$19.0B** |
+  FY2028: $94.5B × 22% OP = $20.8B × 22x = $458B / 5.08B shares = **$90**
 
-**Jun 8 revision:** The Information reported Google ordered >3M TPU packaging + Jukan clarified 6M+ TPUs across 2027-2028. Split ~2M/4M between years. NVIDIA testing Intel EMIB for Feynman (2028 architecture) — not an order, testing only. Probability-weighted at 25% for FY2028, rising to 40% FY2029 if testing confirms.
+CEILING: $90 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
 
-**Sensitivity on Intel content per Google TPU:**
+## Cross-Book Relevance
 
-| Content/TPU | FY2028 Revenue | FY2028 Per Share |
-|-------------|---------------|-----------------|
-| $1,000 | $88B | $83 |
-| $3,000 (base) | $94.5B | $90 |
-| $5,000 | $101B | $97 |
-
-### Operating Margin Model:
-
-| Year | OP Margin | Rationale |
-|------|-----------|-----------|
-| FY2027 | 15% | DCAI strength + early foundry loss narrowing. IFS profitable H2 only. |
-| FY2028 | 22% | External foundry becomes material but still early ramp. Google TPU volume helps utilization. |
-| FY2029 | 26% | Better utilization, higher DCAI mix, foundry no longer heavy drag. |
-| FY2030 | 28% | Still below TSMC maturity (~40%) because Intel carries lower-margin client/CPU mix. |
-
-18A yields at 80% and EMIB at 90-95% (Jeff Pu Jun 2026) justify faster margin ramp than prior model. IFS profitable H2 2027 eliminates foundry drag 12 months earlier.
-
-### Full Valuation Table (20-22x, ~5.08B shares):
-
-| Year | Revenue | OP Margin | OP | Multiple | Market Cap | Per Share |
-|------|---------|-----------|-----|---------|-----------|-----------|
-| 2027 | $73.5B | 15% | $11.0B | 20x | $220B | $43 |
-| 2028 | $94.5B | 22% | $20.8B | 22x | $458B | $90 |
-| 2029 | $117.0B | 26% | $30.4B | 22x | $669B | $132 |
-| 2030 | $143.0B | 28% | $40.0B | 22x | $881B | $173 |
-
-20x FY2027 (turnaround still proving out), 22x FY2028+ (external foundry ramping, sovereign policy support). Below TSMC 30x reflecting execution risk. Path B sovereign foundry/platform, not a structural bottleneck monopoly.
-
----
-
-## Ceiling Derivation (Jun 8, 2026 — Google 6M TPU + NVIDIA EMIB Feynman testing)
-
-FY2027: $73.5B × 15% OP = $11.0B × 20x = $220B / 5.08B shares → **$43/share**
-FY2028: $94.5B × 22% OP = $20.8B × 22x = $458B / 5.08B shares → **$90/share**
-FY2029: $117.0B × 26% OP = $30.4B × 22x = $669B / 5.08B shares → **$132/share**
-FY2030: $143.0B × 28% OP = $40.0B × 22x = $881B / 5.08B shares → **$173/share**
-
-**Ceiling: FY2028 $90**
-
-At $110.27: FY2028 ratio = $90/$110 = 0.82x. EV = 81% × (-0.18) = **-15%**.
-At $110.27: FY2029 ratio = $132/$110 = 1.20x. EV = 81% × 0.20 = **+16%**.
-
-Intel becomes actionable at ~$75 (FY2028 upside 1.20x, EV = 81% × 0.20 = +16%).
-
-**Note:** Stock jumped 11% on The Information report (Google 6M TPU + NVIDIA EMIB testing). Ceiling moved up ~$3 (from $87 to $90) but price moved up ~$11 (from $99 to $110). The market front-ran the upgrade. FY2029 ceiling of $132 provides upside from current levels if foundry execution continues.
-
----
-
-## Scoring
-
-**Base: 81%** (revised Jun 8 from 77%)
-- Product Moat: 11/15 — x86 duopoly with AMD. Foundry now proven at 80% yields on 18A. EMIB at 90-95%.
-- TAM: 13/15 — $120B server CPU + $100B+ foundry (now with Apple, NVIDIA, MRVL as likely customers) + packaging. Massive.
-- Cycle Stage: 9/10 — 18A yields at 80% (above mass production threshold). EMIB 90-95%. IFS profitable H2 2027. DCAI +39% YoY. 6 consecutive beats. No longer "early turnaround" — confirmed execution. (+2)
-- Catalysts: 9/10 — Apple likely on 14A. NVIDIA server CPU collab late 2028. MRVL on 18A confirmed. TeraFab late 2028. IFS profitability H2 2027. All 12-24 month catalysts. (+1)
-- Alpha: 2/10 — 48 analysts, ~$500B MC. Most covered turnaround in semiconductor history.
-- Risks: 6/10 — 18A at 80% de-risks the foundry binary. EMIB at 90-95% de-risks packaging. Still GAAP restructuring charges. Massive capex (but CHIPS Act + customer prepayments fund it). AMD gaining share. (+1)
-
-**Entry: -13%** — Price $99.17, FY2028 ceiling $83. Ratio 0.84x.
-
----
-
-## Portfolio Relevance
-
-Intel matters for multiple ranked positions:
-- **ShunSin (#5, 95):** Intel EMIB-T at 20% probability. Trigger: "ShunSin mentioned in Intel OSAT context -> 40%." If EMIB-T scales, ShunSin could package Intel AI modules.
-- **LPK.DE (#1, 113):** Intel is a glass substrate early adopter. LIDE process validation customer.
-- **SIVE (#2, 112):** Jabil acquired Intel's SiPh transceiver business. SIVE lasers now flow into Intel's photonics legacy through Jabil's LRO.
-- **AEHR (#3, 97):** Intel CPUs don't use WLBI, but Panther Lake on 18A uses advanced packaging that drives broader test demand.
-
----
+ShunSin — EMIB-T OSAT optionality (trigger armed: ShunSin named in Intel OSAT context → probability 20%→40%). LPK — Intel is a glass-substrate early adopter and LIDE validation customer. SIVE — Jabil acquired Intel's SiPh transceiver line; SIVE lasers flow into the legacy through Jabil's LRO. AMD — the direct cross-watch: AMD's Venice server-share prints are this artifact's bear telemetry, and vice versa.
 
 ## Key Risks
 
-1. **Foundry execution remains the swing factor.** 18A at 80% is promising but 14A must also deliver. TSMC N2 is the benchmark. Yield claims need verification in revenue.
-2. **GAAP still unprofitable** from restructuring. Non-GAAP positive but GAAP transition to positive expected Q2 2026.
-3. **Massive capex requirement.** Leading-edge fabs cost $20B+ each. CHIPS Act + customer prepayments partially fund but Intel must sustain cash flow.
-4. **AMD taking share.** EPYC gaining in servers, MI450 in AI accelerators. Intel must reclaim lost ground.
-5. **Apple/NVIDIA not confirmed.** Jeff Pu note references "major smartphone maker" and "NVIDIA collaboration" but formal announcements pending. These are high-probability inferences, not signed deals.
-6. **Valuation still prices execution.** At $99 and FY2028 EPS of ~$3.79, the stock trades at 26x FY2028 — reasonable if execution continues, expensive if it stumbles.
+1. Foundry execution — 18A at 80% is channel-reported; 14A must also deliver; yields must verify in revenue
+2. Capex — $20B+ per leading-edge fab; CHIPS + prepayments fund partially, cash flow must sustain the rest
+3. AMD — taking share in server CPU and AI accelerators simultaneously
+4. Apple/NVIDIA remain high-probability inferences, not signatures — the model carries them probability-weighted, not at face
+5. GAAP restructuring tail until the Q2 transition prints
 
----
+## Re-Rate Triggers
 
-## Entry Analysis
+1. **Google TPU revenue recognition begins (2027) → the external-foundry gate opens** — the 6M-unit channel claim verified in segment revenue
+2. **NVIDIA Feynman EMIB: testing → order = probability 25%→40% per the model's pre-committed escalation** (Rule 16b armed)
+3. Clearwater Forest ramp (Q3 2026) + 18A wafer mix → foundry verification in volume
+4. **Samsung foundry profitability (Q3 2026) → the 12-month lead indicator for IFS H2 2027** — watch the leader to time the follower
+5. Apple 14A formal confirmation → the inference converts to signature, V3 hardens
+6. Q2 print (~Jul): first GAAP-positive quarter since Q2 2024 — the turnaround's symbolic gate
+7. Counter: **AMD Venice server-share prints → the duopoly cross-watch** (paired with AMD artifact trigger #4)
+8. Counter: 14A slip or yield claims failing to verify in revenue → foundry-vector haircut
 
-Intel becomes interesting at:
-- **$75:** FY2028 ratio 1.20x, EV = 81% × 0.20 = +16%. Watchlist entry.
-- **$55:** FY2028 ratio 1.64x, EV = 81% × 0.64 = +52%. Strong buy.
-- **$90:** FY2028 break-even. Above this, negative EV on FY2028.
-- **Current $110:** FY2028 EV = -15%. Market front-ran the Google/NVIDIA news. Stock moved +11% ($11) while ceiling moved +$3. FY2029 ceiling $132 provides 20% upside from current price if foundry execution continues.
-
----
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/INTC_artifact_pre_restructure_2026-06-11.md*

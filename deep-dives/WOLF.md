@@ -1,152 +1,90 @@
 # WOLF — Wolfspeed | Deep Dive
+
+**Date:** June 1, 2026 (dive) | **June 11, 2026 (restructured — single generation)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist — SiC sector intelligence; turnaround + optionality, not bottleneck + underpricing) | **Base 55% (33/60)**
+**Price at restructure:** $44.81 | ~50M shares (+ convertibles/warrants — see dilution risk) | MC ~$2.2B
+**Ceiling:** FY2028 $13 (FY-column standard; FY2027 deliberately negative — see model note)
+
 ---
 
 ## Supercycle: AI Power Infrastructure — SiC Materials & Devices
 
-## Core Thesis: World SiC Leader, Post-Bankruptcy Turnaround With AI Datacenter Optionality
+## Core Thesis: World SiC Leader, Post-Bankruptcy, With AI Optionality
 
-Wolfspeed is the world's leading vertically integrated silicon carbide (SiC) company — materials (wafers) + power devices (MOSFETs, diodes, modules). SiC is structurally superior to silicon for high-voltage, high-efficiency power conversion: lower switching losses, higher thermal conductivity, smaller form factor.
+Wolfspeed is the world's leading vertically integrated silicon-carbide company — the only one with 200mm SiC in production AND a demonstrated 300mm wafer (industry first, Jan 2026). SiC is structurally superior silicon for high-voltage power conversion, and the AI thesis is real: 800V DC architectures, grid-to-rack delivery, UPS — every watt of conversion inefficiency compounds across millions of servers. The AI-datacenter vector is growing 30-50% QoQ off a small base, the 10kV MOSFET and TOLT portfolio target it directly, and the 300mm substrate may address thermal/mechanical barriers in next-gen AI packaging.
 
-The thesis: AI datacenters consume enormous power (800 TWh projected in China alone by 2030). SiC power devices enable more efficient power delivery to GPU racks, grid modernization, and 800V DC architectures NVIDIA is pushing. As AI power consumption scales, SiC transitions from EV niche to AI infrastructure must-have.
-
-The problem: Wolfspeed just emerged from Chapter 11 bankruptcy (September 2025). Revenue is declining. Gross margins are deeply negative. The company is burning cash. Chinese SiC competitors are flooding the low-end market. This is a turnaround play, not a proven bottleneck.
+The honest classification: **a turnaround wearing an optionality thesis.** The company emerged from Chapter 11 in September 2025, revenue is declining (-19% YoY), gross margin is deeply negative (-26.6%), and Chinese SiC competition is flooding the commodity end (SOI.PA's €41M SmartSiC impairment is the cross-book warning shot). The framework exists to find bottlenecks with pricing gaps; WOLF is a recovery bet where the market pre-pays the recovery.
 
 ## Key Financials
 
-- Price: ~$59 (May 2026, post-Citrini rally)
-- MC: ~$2.95B (estimated, ~50M shares post-restructuring)
-- Shares: ~48.3M as of Q3 FY2026 (Mar 2026), plus additional issuances
-- FY2025 revenue: $757.6M (-6.1% YoY)
-- Q3 FY2026 (Mar 2026): $150.2M revenue (-19% YoY)
-- **Gross LOSS: -$40M (-26.6% gross margin)**
-- Net loss: -$119.9M (Q3 FY2026)
-- Adjusted EBITDA: -$82M
-- Cash: $695M as of March 2026 (down from $1.3B in Dec 2025)
-- Capex: down 90% YoY (conservation mode)
-- Opex: -$200M annualized reduction vs prior year
-- AI datacenter revenue: +50% QoQ (Q2), +30% QoQ (Q3) — "moderate but expanding"
-- Analyst coverage: 2 analysts, "Sell" rating, $40 target (stock at $59)
+Q3 FY2026 (Mar): $150.2M (-19%), **gross LOSS -$40M (-26.6% GM)**, net -$119.9M, adj EBITDA -$82M | cash $695M (from $1.3B Dec) | capex -90% YoY, opex -$200M annualized | FY2025: $757.6M | AI-DC revenue +50%/+30% QoQ — "moderate but expanding" | 2 analysts — genuinely under-covered post-restructuring.
 
-Source: SEC filings (10-Q, 8-K), StockAnalysis, company earnings releases
+## Restructuring Facts
 
-## Restructuring History
+Ch. 11 emergence Sep 2025 (prepackaged); fresh-start accounting ($1.1B reorg gain); Renesas debt-to-equity (16.85M shares + board seat, CFIUS-cleared Jan 2026); Mar 2026: $379M converts + 3.25M shares + 2M pre-funded warrants at $18.46; $700M Section 48D refunds received ($175M to debt retirement); share count 155M → ~48M (prior equity functionally wiped).
 
-- **September 2025:** Emerged from Chapter 11 via prepackaged restructuring
-- **Fresh start accounting applied:** $1.1B gain on reorganization items
-- **Renesas:** Converted unsecured debt to equity + secured convertible debt. Received 16.85M shares + board seat. CFIUS cleared January 2026.
-- **March 2026:** $379M convertible notes + 3.25M shares + 2M pre-funded warrants at $18.46/share
-- **$700M Section 48D tax refunds received** — used $175M for debt retirement
-- Share count went from ~155M (pre-bankruptcy) to ~48M (post-restructuring) — massive equity wipeout for prior shareholders
+## Segments
 
-## Business Segments
+**Materials:** Mohawk Valley 200mm ramping; Durham 150mm device fab shut, site → materials; 300mm demonstrated; wafers sold to ON/ST/Infineon/XFAB and others — vertical integration is the unique structural asset.
+**Devices:** MOSFETs/diodes/modules; 10kV launched (grid, AI-DC, pulsed power); TOLT for AI-DC.
+**AI-DC vector:** GPU-rack power delivery, UPS, grid-to-rack; 300mm packaging engagement with AI ecosystem partners — the optionality, not yet the business.
 
-### 1. SiC Materials (Wafers)
-- 200mm production at Mohawk Valley (ramping)
-- Durham 150mm device fab shut down, site refocused on materials
-- **300mm SiC wafer demonstrated** (January 2026) — industry first, future optionality
-- SiC wafers are used by XFAB, ON Semi, STMicro, Infineon, and others for power devices
-- Vertically integrated: Wolfspeed both grows the crystals AND makes devices
-
-### 2. SiC Power Devices
-- MOSFETs, Schottky diodes, power modules
-- Applications: EV traction inverters, onboard chargers, industrial drives, grid, AI datacenter power
-- **10kV SiC MOSFET launched** (Q3 FY2026) — for grid modernization, AI datacenter infrastructure, pulsed power
-- **TOLT portfolio** introduced for AI datacenter demand
-
-### 3. AI Datacenter Vector (new, growing)
-- Revenue growing 30-50% QoQ sequentially
-- Still "moderate" portion of total revenue
-- Use cases: power delivery to GPU racks, UPS systems, grid-to-rack power conversion
-- 300mm SiC substrate potentially addresses "thermal, mechanical, and electrical performance barriers" in next-gen AI packaging
-- Engaging AI ecosystem partners on 300mm platform for HPC/AI applications
-
-## SiC Market Context
-
-- Global SiC power device market: projected >$10B by 2030
-- SiC is critical for 800V DC bus architectures (NVIDIA pushing, EV standard)
-- AI datacenter power draw growing 39.5% CAGR (China alone: 170 TWh → 800 TWh by 2030)
-- Every watt of inefficiency at the power delivery layer compounds across millions of servers
-
-### Competition Threat (significant)
-- **Chinese SiC makers flooding low-end:** SOI.PA took a €41M SmartSiC impairment from Chinese mono-SiC price competition (filed in XFAB artifact)
-- **ON Semi, STMicro, Infineon:** all have SiC device lines
-- **XFAB:** one of only 2 SiC foundries globally, potential competitor at the device layer
-- **Rohm:** Japanese SiC player, vertically integrated
-- **Pricing pressure:** commodity SiC devices face margin compression from Chinese entrants
-
-## Scoring Breakdown
+## Scoring Breakdown (verified Jun 11 — sums to Excel; no reconciliation required)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 14/20 | SiC is genuinely critical for AI power infrastructure. Wolfspeed is the world leader in SiC materials (only company with 200mm + demonstrated 300mm). Vertical integration (materials + devices) is unique. BUT: company nearly went bankrupt, Chinese competition is aggressive, and the AI datacenter vector is "moderate" not dominant. 300mm is future optionality, not current revenue. |
-| Cycle Stage | 4/10 | Post-bankruptcy. Revenue declining -19% YoY. Gross margin deeply negative (-26.6%). Mohawk Valley 200mm ramping but slowly. Not pre-inflection — pre-turnaround. |
-| TAM Expansion | 7/10 | SiC power >$10B by 2030. AI datacenter power structural. 800V push. Company's own $3B long-term revenue target. But TAM capture requires successful fab ramp from a company that just went bankrupt. |
-| Catalysts | 3/5 | Citrini Research coverage sparked rally. AI datacenter vector growing 30-50% QoQ. 300mm demo. But no single transformative catalyst — gradual turnaround. |
-| Macro | 6/10 | AI power consumption structural. CHIPS Act tax refunds received. But Chinese SiC competition, post-bankruptcy execution risk, and tariff exposure are headwinds. |
-| Alpha | 3/5 | 2 analysts with "Sell" and $40 target — stale and potentially wrong. Citrini bringing new attention. But stock has already rallied from ~$16 to ~$59 on this attention. |
-| Risks | -4 | Post-bankruptcy execution. Negative gross margins. Cash burn ($695M and declining). Chinese SiC competition. Massive dilution from restructuring. Share count uncertainty from convertibles/warrants. Renesas board influence. |
+| Core Thesis | 14/20 | World SiC materials leader; only 200mm-at-scale + 300mm demo; vertical integration unique. Penalties: post-bankruptcy turnaround, not proven bottleneck; Chinese commodity flood; AI vector still "moderate." |
+| Cycle Stage | 4/10 | Revenue declining, GM deeply negative, pre-turnaround — not pre-inflection. |
+| TAM | 7/10 | SiC power >$10B by 2030; AI power structural; 800V push; capture requires a successful ramp from a company that just failed once. |
+| Catalysts | 3/5 | AI-DC vector compounding QoQ; 300mm demo; 10kV launch — gradual, no transformative binary. |
+| Macro | 6/10 | AI power consumption structural + 48D refunds banked; Chinese competition and execution risk offset. |
+| Alpha | 3/5 | 2 analysts, stale coverage, post-restructuring complexity deters institutions — genuine informational gap both directions. |
+| Risks | -4 | Post-bankruptcy execution; negative GM on every unit; finite cash runway with new convert overhead; dilution-count uncertainty + Chinese pricing pressure. |
 | **Base** | **33/60 (55%)** | |
 
-## Ceiling — v4.1 AH-1 Full Derivation
+## Ceiling — v4.1 AH-1 Full Derivation (turnaround model, 15x, ~50M shares, FY-column standard)
 
-### Revenue Model:
+**Model note:** GM is negative today, so FY2027 produces a negative OP — the Excel FY2027 cell deliberately carries "neg" (a negative ceiling is meaningless; the marker is the honest handling, like PNG's post-merger dash). All assumptions LOW confidence per AH-7: they require a successful 200mm ramp from a post-bankruptcy base.
 
-The fundamental challenge: Wolfspeed has negative gross margins today. The standard Revenue × OP × Multiple approach produces negative per-share values for FY2027-2028. This is a turnaround model, not a growth model.
+| Year | Revenue | GM | OP Margin | OP |
+|------|---------|-----|-----------|-----|
+| FY2027 | $650M | 5% | -15% | -$97M |
+| FY2028 | $850M | 20% | 5% | $42M |
+| FY2029 | $1.3B | 30% | 15% | $195M |
+| FY2030 | $1.9B | 35% | 20% | $380M |
 
-Management's long-term target: $3B revenue. Current: ~$600M annualized, declining.
+**15x rationale:** post-bankruptcy discount, execution risk, Chinese pricing pressure — below ON Semi's 18-20x.
 
-Assumptions:
-- Mohawk Valley 200mm ramp drives revenue recovery FY2027+
-- AI datacenter vector accelerates (30-50% QoQ currently)
-- Gross margin flips positive as 200mm production scales and 150mm costs eliminated
-- Chinese competition caps pricing power on commodity devices; premium on high-voltage (10kV+) AI-relevant products
+| Year | OP | × 15x | Per Share |
+|------|-----|-------|-----------|
+| FY2027 | -$97M | — | **neg** |
+| FY2028 | $42M | $630M | **$13** |
+| FY2029 | $195M | $2.93B | **$59** |
+| FY2030 | $380M | $5.70B | **$114** |
 
-| Year | Revenue | Gross Margin | OP Margin | OP | Notes |
-|------|---------|-------------|-----------|-----|-------|
-| FY2027 | $650M | 5% | -15% | -$97M | Still unprofitable. MV ramping. |
-| FY2028 | $850M | 20% | 5% | $42M | Inflection to profitability. AI datacenter growing. |
-| FY2029 | $1.3B | 30% | 15% | $195M | 200mm at scale. AI power demand structural. |
-| FY2030 | $1.9B | 35% | 20% | $380M | Approaching long-term model. 300mm optionality. |
+  FY2028: $850M × 5% OP = $42M × 15x = $630M / 50M shares = **$13**
 
-(Low confidence per AH-7 — turnaround assumptions require successful fab ramp from a post-bankruptcy company with no current profitability)
-
-### Valuation Table (15x OP — post-bankruptcy, execution risk, ~50M shares):
-
-15x reflects: post-bankruptcy discount, execution risk, competitive pressure from Chinese SiC, dilution uncertainty. Below SiC comps (ON Semi at 18-20x) because of restructuring overhang.
-
-| Year | OP | × 15x | MC | Per Share |
-|------|-----|-------|-----|-----------|
-| FY2027 | -$97M | Negative | Negative | Negative |
-| FY2028 | $42M | $630M | $630M | $13 |
-| FY2029 | $195M | $2.93B | $2.93B | $59 |
-| FY2030 | $380M | $5.70B | $5.70B | $114 |
-
-### At ~$59:
-
-FY2028 per share = $13 → 1y EV / Price = 0.22x
-FY2029 per share = $59 → matches current price exactly
-FY2030 per share = $114 → 1.93x
-
-**The stock at $59 is priced at FY2029 value.** The market has fully priced a successful turnaround 3 years out. There is no near-term EV Upside.
-
-EV Upside = 55% × (0.22 - 1) = **-43%**
+CEILING: $13 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel). The market trades far above the FY2028 column — it pre-pays a successful multi-year turnaround; the framework requires the gross-margin inflection to print first.
 
 ## Key Risks
 
-1. **Post-bankruptcy execution.** The company just emerged from Chapter 11. Turnarounds fail frequently. Revenue is declining while the stock has rallied 3.5x from March lows.
-2. **Negative gross margins.** Cost of revenue exceeds revenue. Every unit sold loses money. The 200mm transition must work for margins to flip positive.
-3. **Cash burn.** $695M cash declining. $379M in new convertible debt. Cash runway is finite without profitability improvement.
-4. **Chinese SiC competition.** SOI.PA's €41M SmartSiC impairment is the warning signal. Chinese producers flood commodity SiC, compressing margins for everyone.
-5. **Dilution uncertainty.** Post-restructuring share count is complex: common + Renesas shares + convertible notes + warrants + potential further dilution. True fully diluted count unclear.
-6. **AI datacenter vector is small.** "Moderate but expanding" is management's own language. This is not yet a meaningful revenue driver.
-7. **Analyst "Sell" with $40 target.** Stock at $59 is 48% above the only published target. Discovery has happened; the easy money is made.
+1. Post-bankruptcy execution — turnarounds fail more often than they succeed, and this one must ramp a fab while burning cash
+2. Negative gross margin — every unit currently sold loses money; the 200mm transition is the entire model
+3. Cash runway — $695M declining, $379M converts layered on; a raise before profitability = dilution event
+4. Chinese SiC — the SmartSiC impairment at SOI.PA shows the commodity floor collapsing
+5. Dilution-count uncertainty — common + Renesas + converts + warrants; the true diluted denominator is unresolved
+6. AI vector smallness — "moderate but expanding" is management's own phrase
 
-## Framework Conclusion
+## Re-Rate Triggers
 
-Wolfspeed is the world leader in SiC with a legitimate path to AI datacenter relevance via power delivery and 300mm substrate optionality. But the stock at $59 prices a successful turnaround that is 3 years away (FY2029 value = $59). There is no near-term EV Upside.
+1. **GROSS MARGIN INFLECTION — the gate.** -26.6% → positive is the single number the entire model hinges on; quarterly watch, nothing else matters until it turns
+2. Mohawk Valley 200mm utilization prints → the ramp verified in cost-per-wafer
+3. AI-DC revenue share of mix (the 30-50% QoQ continuing) → vector hardening toward material
+4. 300mm commercialization — first named customer/design-in → Rule 16b probability-weighted add (currently unmodeled optionality)
+5. Share-count stabilization — converts/warrants resolution → denominator certainty, per-share columns recompute
+6. Cash-burn telemetry — quarterly runway math; an equity raise = immediate per-share ceiling erosion
+7. **Counter: 800V architecture push-out (the unrefuted Jun 2026 delay note) → AI-DC vector timing review** — third artifact on this watch (XFAB, AIXA, WOLF)
+8. Counter: Chinese SiC pricing escalation (the SmartSiC signal repeating) → commodity-margin cap confirmed, GM-inflection bar rises
 
-The thesis is turnaround + AI optionality, not bottleneck + underpricing. The framework is designed for structural bottlenecks with pricing gaps. WOLF has no pricing gap — the market has already priced the bull case.
-
-Compare to your held positions: SIVE at 0.57x FY2027 (massively underpriced), FOCI at 0.61x (massively underpriced), ShunSin at 0.59x (massively underpriced). WOLF at 4.5x FY2028 (massively overpriced on near-term fundamentals).
-
-Watchlist for SiC sector intelligence. Monitor: gross margin inflection (most important), Mohawk Valley utilization, AI datacenter revenue as % of mix, 300mm SiC commercialization timeline, and share count stabilization.
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/WOLF_artifact_pre_restructure_2026-06-11.md*

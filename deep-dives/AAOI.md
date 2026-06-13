@@ -3,7 +3,7 @@
 **Date:** May 7, 2026 (Q1 rescore) | May 28, 2026 (sanctioned valuation model) | **June 10, 2026 (restructured — single generation)**
 **Framework Version:** v4.1
 **Status:** HELD (✓) | **Base 74% (44/60)**
-**Price at restructure:** $162.88 | MC ~$13.8B | 85M shares (post-ATM)
+**Price at restructure:** $162.88 | MC ~$13.8B | 80.2M shares outstanding (SEC filing, May 13 2026) → ~85M modeled at full ATM execution
 **Ceiling:** FY2028 $536 (FY-column standard)
 
 ---
@@ -18,7 +18,7 @@ Two structural upgrades layered on the assembler base:
 
 **1. CW laser vertical integration.** AAOI internally fabricates CW lasers, with 350% laser capacity expansion by 2027 (tripling Texas laser manufacturing). This creates a two-tier transceiver market: Tier 1 (own CW: AAOI, LITE, COHR) can produce through the shortage; Tier 2 (buy CW: Innolight, Eoptolink, CIG) is gated by external availability — and LITE confirmed (May 5) the external CW market is sold out. **Third-party confirmation Jun 10: Fabrinet states the industry constraint is "lasers, not assembly"** — the assembler with its own lasers holds the scarce input. Three multi-year CPO/laser agreements remain IN NEGOTIATION; any signing reclassifies AAOI from pluggable-only to laser + transceiver dual-revenue.
 
-**2. US manufacturing advantage.** Houston/Sugar Land/Pearland footprint approaching 900K sqft; $20M Texas subsidy; CHIPS-eligible. Pax Silica / "buy American" procurement pressure gives the premier US-based high-volume transceiver producer a structural edge with US hyperscalers and sovereign/government demand. $600M ATM funds the expansion.
+**2. US manufacturing advantage.** Houston/Sugar Land/Pearland footprint approaching 900K sqft; $20M Texas subsidy; CHIPS-eligible. Pax Silica / "buy American" procurement pressure gives the premier US-based high-volume transceiver producer a structural edge with US hyperscalers and sovereign/government demand. $1.1B total ATM ($500M amended Mar 12 + $600M filed May 14) funds the expansion.
 
 ## Q1 2026 Actuals + Guidance (reported May 7)
 
@@ -91,7 +91,7 @@ AAOI revenue IS demand for Layer 0 positions: EMLs from LITE (input), wafers via
 - **Customer concentration:** 3 customers = 91% (Microsoft ~29%). One slowdown is catastrophic to the hockey stick.
 - **EML input gate (added Jun 10):** AAOI self-supplies CW but still buys EMLs; LITE's EML capacity is locked in LTAs through 2027 — AAOI's remaining external dependency just got formally scarce. Watch allocation commentary.
 - **Pricing:** LightCounting warns capacity catch-up could sharpen ASP declines by end-2026; the widening industry gap (Jun 2026 data) argues against it near-term.
-- **Dilution:** $600M ATM funds expansion; share count assumptions (85M) already reflect it.
+- **Dilution:** $1.1B total ATM ($500M + $600M) funds expansion; 80.2M shares outstanding as of May 13 (SEC prospectus); 85M modeled at full execution — sensitivity: each additional 1M shares above 85M reduces FY2028 ceiling by ~$6.
 - **Execution history:** AAOI has missed ramps before; this is why no beat assumption is applied and the position is a trade, not a compounder.
 
 *Restructured Jun 10, 2026 — prior version: /mnt/user-data/outputs/versions/AAOI_artifact_pre_restructure_2026-06-10.md*

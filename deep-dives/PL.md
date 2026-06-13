@@ -1,122 +1,95 @@
 # PL — Planet Labs | Deep Dive
+
+**Date:** May 2026 (dive) | Jun 3 (Q1 FY2027 fold-in) | **June 11, 2026 (restructured — single generation; regulatory-niche classification written back)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, ⚡ TEMPORAL — regulatory niche: the unclassified-intelligence layer; valid moat with a fleet-depreciation clock, ~2-3yr window) | **Base 67% (40/60)**
+**Price at restructure:** $34.15 | ~335M shares | MC ~$11.4B
+**Ceiling:** FY2028 $7.10 (FY-column standard)
+
 ---
 
 ## Supercycle: DB3 LEO Space + DB8 Defense
 
-## Key Data
+## Core Thesis: The Unclassified Intelligence Layer
 
-- **Q1 FY2027 (May 2026): Record $94M revenue (+42% YoY).** Third consecutive Rule of 40 quarter.
-- FY2027 guidance RAISED: $425-441M (+41% midpoint, was $415-440M)
-- D&I revenue: +65% YoY (accelerating from 50%+). Commercial: +20% YoY (inflecting). Civil: flat (NASA headwind offset by Europe).
-- Adjusted EBITDA: -$1M (near breakeven). Free cash flow: -$2.5M (seasonal, expects annual FCF positive).
-- Backlog: **$906M** (+72% YoY). RPOs $816M (+80% YoY). 40% within 12 months, 69% within 24 months.
-- Cash: **$731M** (up $500M+ YoY from convertible debt + warrant exercises + FCF)
-- FY2026 revenue $307.7M (+26% YoY). First annual EBITDA profitability ($15.5M). First annual positive FCF ($52.9M).
-- Market cap ~$15.9B at $48.09. Shares ~335M (post-warrant exercises).
+Planet operates the largest commercial Earth-observation constellation (~200+ satellites) and is converting it into a defense-and-intelligence recurring-revenue machine: D&I +65% YoY, backlog $906M (+72%), sovereign satellite-as-a-service proven at startling speed (Sweden's first recon satellite in orbit **four months after signing**). The moat, honestly classified, is a **regulatory niche with a clock**: commercial unclassified imagery is the only intelligence layer that can be shared freely — with NATO partners, civil agencies, coalition allies, journalists — which classified national assets structurally cannot serve. That niche is valid and growing (EMEA +86%); it is also temporal — satellites depreciate, Maxar/BlackSky/Capella/Umbra contest every award, and the window holds only while Planet's launch cadence and archive depth outrun replication (~2-3 years of visibility).
 
-## Major Contracts
+## Key Data (Q1 FY2027, May 2026)
 
-**Defense & Intelligence (primary growth engine):**
-- €240M multi-year Germany deal (sovereign satellites)
-- Nine-figure Sweden agreement (first sovereign recon satellite launched Jun 2026, 4 months after signing)
-- NGA Luno B IDIQ: **$21.9M** one-year extension for maritime surveillance (Jun 2026)
-- U.S. Navy: **$7.5M** renewal for Pacific vessel detection and monitoring (Jun 2026)
-- NGA: new award for global monitoring service / crisis response (Jun 2026)
-- New **eight-figure** international D&I dedicated capacity deal (Q1 FY2027)
-- NATO renewal (seven-figure)
-- US Missile Defense Agency awards
-- SHIELD IDIQ Prime Contractor
-- DIU awards: Indo-Pacific Command + Hybrid Space with Pelican
+Record $94M (+42%), third consecutive Rule-of-40 quarter | FY2027 guidance RAISED $425-441M | D&I +65% accelerating; Commercial +20% inflecting; Civil flat (NASA offset by Europe) | adj EBITDA -$1M (near breakeven), annual FCF-positive expected | **backlog $906M (+72%), RPO $816M (+80%), 69% within 24 months** | cash $731M | FY2026: $307.7M, first annual EBITDA ($15.5M) and FCF ($52.9M) profitability.
 
-**Technology Partnerships:**
-- Google Suncatcher: orbital compute R&D using TPU architecture. Same bus as Owl constellation.
-- NVIDIA: AI-powered satellite data processing (Jetson GPUs in space)
+## Contract Base
 
-**Civil & Commercial:**
-- Greek government: two-year, seven-figure (via ESA)
-- Czech Republic: two-year, seven-figure agricultural monitoring
-- Scottish agriculture: seven-figure PlanetScope + analytics
-- John Deere Supplier Sustainability Award (2025)
-- Watch Duty (wildfire tracking) — new customer
-- Brazil SCCON: 133,000+ users, $5.3B impact from $59M investment
+**D&I:** €240M Germany (sovereign satellites) | nine-figure Sweden (orbit in 4 months) | NGA Luno B $21.9M extension + new global-monitoring award (Jun 2026) | US Navy $7.5M Pacific renewal | eight-figure international dedicated-capacity deal | NATO renewal | MDA awards | SHIELD IDIQ prime | DIU Indo-Pacific + Hybrid Space.
+**Technology:** Google Suncatcher (orbital compute on TPU architecture, Owl bus) | NVIDIA Jetson on-orbit processing.
+**Civil/Commercial:** Greece, Czech, Scotland (seven-figure each) | John Deere award | Watch Duty | Brazil SCCON 133K users.
 
-## Scoring Breakdown
+## Scoring Breakdown (verified Jun 11 — sums to Excel; classification written back from the Position cell)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 12/20 | Largest commercial earth observation satellite constellation (~200+ satellites). Defense revenue +65% YoY. Major European sovereignty contracts. Pelican next-gen (50cm→30cm). Sovereign satellite-as-a-service (Sweden in 4 months). BUT: NOT a bottleneck — Maxar, BlackSky, Capella, Umbra all compete. Path B platform. Data is valuable but not physics-required monopoly. |
-| Cycle Stage | 8/10 | Revenue +42% and accelerating. Rule of 40 three consecutive quarters. $906M backlog (+72%). Near EBITDA breakeven. FCF positive annually. Stage 3 ramp. |
-| TAM | 7/10 | Earth observation $5B→$15B+ by 2030. Satellite services expanding. Sovereign space demand accelerating (NATO 5% GDP). Phase 1 defense/intel + Phase 2 commercial monitoring + Phase 3 AI-powered intelligence platform. |
-| Catalysts | 4/5 | FY2027 guidance raised. Pelican Gen 2 tech demo shipping. Owl tech demo end of CY2026. New sovereign deals in pipeline ($3-4B+ pipeline, "increased since Analyst Day"). AI App beta. |
-| Macro | 8/10 | NATO 5% GDP. Global defense budgets rising. European sovereignty driving satellite procurement. EMEA +86% YoY. |
-| Alpha | 3/5 | Sovereign satellite speed (4 months to orbit) misunderstood as competitive moat. Defense backlog transformation under-appreciated. Orbital compute optionality not priced by most analysts. |
-| Risks | -2 | Path B competitive (-1). Still GAAP unprofitable ($246M net loss) (-1). Commercial inflecting (+20%) — no longer a drag. |
-| **Base** | **40/60 (67%)** | +2 from prior: Cycle Stage 7→8, Commercial risk removed. |
+| Core Thesis | 12/20 | Largest commercial EO constellation; the unclassified-intelligence regulatory niche; sovereign SaaS proven in 4 months; Pelican 50cm→30cm roadmap. Penalties: contested — Maxar/BlackSky/Capella/Umbra (-4); temporal — fleets depreciate, the niche has a clock (-4). |
+| Cycle Stage | 8/10 | +42% accelerating; Rule of 40 ×3; backlog +72%; EBITDA/FCF inflection crossed — Stage 3 ramp. |
+| TAM | 7/10 | EO $5B→$15B+ by 2030; sovereign space demand under NATO 5%; AI-analytics and orbital-compute optionality. |
+| Catalysts | 4/5 | Pelican Gen 2 on Transporter 17; Owl demo end-CY2026; AI App beta→GA; sovereign pipeline $3-4B+ "increased since Analyst Day." |
+| Macro | 8/10 | NATO 5% GDP; European sovereignty procurement; EMEA +86%; defense surveillance structurally funded. |
+| Alpha | 3/5 | The 4-month sovereign-delivery speed and the backlog transformation are under-modeled; orbital compute unpriced by coverage. |
+| Risks | -2 | Path B competitive field (-1). GAAP unprofitable ($246M net loss) while the model demands operating leverage (-1). |
+| **Base** | **40/60 (67%)** | |
 
-## Ceiling — v4.1 Full Derivation (5-vector, graduated OP, 30x, ~335M shares)
+## Ceiling — v4.1 AH-1 Full Derivation (5 vectors, graduated OP, 30x, ~335M shares, FY-column standard)
 
-### Revenue Model — 5 Vectors (updated Q1 FY2027):
+### Vectors (AH-9)
 
-| Vector | FY2027 | FY2028 | FY2029 | FY2030 |
-|--------|--------|--------|--------|--------|
-| 1. Defense & Intel (data + analytics) | $220M | $320M | $435M | $565M |
-| 2. Government Civil | $58M | $75M | $95M | $115M |
-| 3. Commercial (agri + energy + finance) | $85M | $115M | $160M | $220M |
-| 4. Satellite Services (sovereign programs) | $60M | $120M | $200M | $320M |
-| 5. AI Analytics Platform (App + SuperRes + orbital) | $10M | $30M | $75M | $150M |
-| **TOTAL** | **$433M** | **$660M** | **$965M** | **$1,370M** |
+| Vector | FY2027 | FY2028 | FY2029 | FY2030 | AH-7 |
+|--------|--------|--------|--------|--------|------|
+| 1. Defense & Intel | $220M | $320M | $435M | $565M | HIGH (backlog) |
+| 2. Government Civil | $58M | $75M | $95M | $115M | MEDIUM |
+| 3. Commercial | $85M | $115M | $160M | $220M | MEDIUM |
+| 4. Satellite Services (sovereign) | $60M | $120M | $200M | $320M | MEDIUM (pipeline $3-4B+) |
+| 5. AI Analytics Platform | $10M | $30M | $75M | $150M | LOW-MEDIUM |
+| **TOTAL** | **$433M** | **$660M** | **$965M** | **$1,370M** | |
 
-**FY2027 ($433M):** Matches raised guidance midpoint ($425-441M). Q1 $94M + Q2 guided $102-107M + Q3/Q4 acceleration from backlog conversion. D&I +65% YoY is primary driver. Commercial inflecting +20%. Civil flat (NASA offset by Europe).
+FY2027 matches the raised guidance midpoint; FY2028 carries D&I at +45% with Germany/Sweden deliveries and the AI App GA; FY2029-30 convert the sovereign pipeline.
 
-**FY2028 ($660M):** D&I decelerates to +45% but remains growth engine. Satellite services ramp as Germany/Sweden programs deliver sovereign satellites and new sovereign deals close. AI Analytics emerges ($30M) from AI App GA + defense solutions. Commercial sustains +35% from agriculture reset + AI-powered solutions.
+### Margin Model
 
-**FY2029-2030:** Sovereign satellite pipeline ($3-4B+ per Analyst Day, "increased since") converts to sustained Satellite Services growth. AI Analytics scales as orbital compute pilot yields commercial products. $965M FY2029, $1,370M FY2030.
-
-**Key assumption changes from prior model:** D&I growth raised (50%→65% base). Commercial flipped from declining to +20% growth. Satellite Services broken out as separate vector (was embedded in D&I). AI Analytics platform on faster timeline (AI App beta live, was conceptual). Share count 326M→335M (warrant exercises).
-
-### Margin Model — SaaS-like Recurring Transition:
-
-Satellites in orbit = near-zero marginal cost for data delivery. Multi-year contracts (€240M Germany, nine-figure Sweden, NGA Luno B) = recurring revenue. Q1 FY2027 non-GAAP GM 56%, guided 52-54% for FY2027 (satellite services launches + depreciation temporarily compress margins). GM expands 65%→75% as data+analytics dominate hardware.
-
-OP margins ramp from breakeven (FY2027) through SaaS-like operating leverage as revenue scales against relatively fixed satellite infrastructure costs.
-
-### Full Valuation Table (OP × 30x, ~335M shares):
+Satellites in orbit = near-zero marginal cost; multi-year contracts = recurring. GM 56% → 65-75% as data+analytics dominate; OP ramps from ~breakeven through SaaS-like leverage against fixed constellation costs: 2% → 12% → 20% → 28%.
 
 | Year | Revenue | OP Margin | OP | × 30x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | $433M | 2% | $8.7M | $260M | $0.78 |
-| 2028 | $660M | 12% | $79M | $2.38B | $7.10 |
-| 2029 | $965M | 20% | $193M | $5.79B | $17.28 |
-| 2030 | $1,370M | 28% | $384M | $11.51B | $34.35 |
+| 2027 | $433M | 2% | $8.7M | $260M | **$0.78** |
+| 2028 | $660M | 12% | $79M | $2.38B | **$7.10** |
+| 2029 | $965M | 20% | $193M | $5.79B | **$17.28** |
+| 2030 | $1,370M | 28% | $384M | $11.51B | **$34.35** |
 
-### Model Gap Acknowledgment:
+**Methodological note (preserved, price-free):** the market values PL on revenue multiples and TAM narratives (Golden Dome $185B, Space Force's 30,000-satellite 2040 vision, EU sovereignty); the framework's OP×P/E lens deliberately lags — it credits operating leverage only when it prints. The gap between the two lenses is the framework's choice, not an oversight; the Excel computes the live distance.
 
-Current price ($48.09) significantly exceeds OP × P/E valuation through FY2029. The market values PL on revenue multiples (~35x forward P/S) and defense surveillance TAM expansion that our OP × P/E methodology captures slowly. At $48.09, the market is pricing somewhere between FY2029 and FY2030 outcomes. Rather than declare the market wrong, we acknowledge the defense surveillance TAM ($185B Golden Dome, Space Force 30,000 satellite 2040 vision, EU sovereignty) and sovereign satellite-as-a-service recurring model may justify growth premium. A 50% correction to ~$24 would bring PL into FY2028-2029 territory and make it actionable.
+  FY2028: $660M × 12% OP = $79M × 30x = $2.38B / 335M shares = **$7.10**
 
-### Ceiling Derivation (Jun 3, 2026 — Q1 FY2027 update, v4.1 methodology):
+CEILING: $7.10 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
 
-  FY2028: $660M × 12% OP = $79M × 30x = $2.38B / 335M shares = $7.10
+## Product Roadmap
 
-CEILING: $7.10 (FY2028 forward, per v4.1 EV Upside methodology)
+Pelican Gen 1 (50cm, three launched incl. Sweden) | **Pelican Gen 2 (30cm, intersatellite links + NVIDIA GPUs, demo on Transporter 17 — hours→minutes latency)** | Owl (1m daily, demo end-CY2026, Suncatcher bus) | Suncatcher (Google orbital TPU compute — "within 10 years, definitely cheaper in space") | AI App (private beta, natural-language archive) | SuperRes (2m-class from PlanetScope) | Tanager SWIR (5x swath).
 
-**At $48.09: Upside = 0.15x. EV = 67% × (0.15 - 1) = -57%. Stock needs to reach ~$7.10 for EV = 0, or ~$24 for FY2029 entry ($17.28, Upside 0.72x).**
+## Key Risks
 
-## Product Roadmap (updated Jun 2026)
+1. The window — fleets depreciate and competitors launch; the regulatory niche decays without cadence
+2. Competition — Maxar/BlackSky/Capella/Umbra contest the same awards
+3. GAAP losses — the operating-leverage story must print, not just guide
+4. Civil exposure — NASA budget politics offset by Europe, not eliminated
+5. The two-lens gap — a P/S-valued stock graded on OP×P/E carries permanent negative EV until leverage arrives
 
-- **Pelican Gen 1:** 50cm class. Three launched Q1 FY2027 (including Sweden). More launches on deck.
-- **Pelican Gen 2:** 30cm class. First tech demo shipped to Vandenberg for Transporter 17. Includes intersatellite links + NVIDIA GPUs. Latency: hours → minutes for analysis.
-- **Owl constellation:** 1m class daily monitoring. First tech demo spacecraft building, scheduled end CY2026. Same bus as Suncatcher.
-- **Suncatcher (Google):** Orbital compute using TPU architecture. Early tech demo phase. Will Marshall: "Within 10 years, definitely cheaper in space than on the ground."
-- **AI App:** Private beta. Natural language queryable archive. "Previously unanswerable questions about the world."
-- **SuperRes:** AI-powered 2m class resolution from PlanetScope (was 3m).
-- **Tanager SWIR:** Expanded swath (5x) for atmospheric gas detection and fire fuel monitoring.
+## Re-Rate Triggers
 
-## What Would Upgrade PL
+1. **THE OPERATING-LEVERAGE GATE: OP margin printing positive and scaling (the 2%→12% FY27→FY28 hinge)** — the model's entire shape; quarterly
+2. Satellite-services margin proof — Germany/Sweden deliveries showing SaaS-like recurring economics at scale → V4 multiple case
+3. AI App GA + measurable commercial expansion → V5 conversion from concept to revenue
+4. Pelican Gen 2 on-orbit performance → the capability-moat test vs Maxar/BlackSky (30cm + links + on-board GPU)
+5. Sovereign pipeline conversion (the $3-4B+ book) → V4 hardening, Rule 16b adds per signed program
+6. Suncatcher/orbital-compute commercial milestones → currently unmodeled optionality
+7. **Counter (the window clock): competitor sovereign-satellite wins at Germany/Sweden class → the regulatory-niche decay confirmed → Core review**
+8. Exclusive-award watch, both ways: a de-facto-monopoly defense award upgrades Core; an NGA/Luno recompete loss starts the decay
 
-- 50% price correction to ~$24 (FY2029 entry becomes viable)
-- Exclusive defense contract creating de facto monopoly positioning
-- Satellite services model proving SaaS-like margins at scale
-- AI App going GA and driving measurable commercial expansion
-- Pelican Gen 2 capabilities that competitors cannot match
-- Orbital compute proving commercially viable ahead of schedule
-
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/PL_artifact_pre_restructure_2026-06-11.md*

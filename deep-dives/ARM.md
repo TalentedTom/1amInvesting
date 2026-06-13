@@ -1,165 +1,94 @@
-# ARM — Arm Holdings | Deep Dive
-**Date:** May 6, 2026 (Q4 FY2026 earnings day)
-**Framework Version:** v3.6.6
-**Score:** 65 WL 🔒 | Base 80% (48/60) | Entry 42% (17/40)
-**Price at Analysis:** $221 (closed May 6, +12.5%)
-**Ceiling:** $250-$260 (2027-2028)
-**Upside Ratio:** 1.1x-2.3x
-**Market Cap:** ~$235B | Shares: 1.06B | SoftBank ~90% ownership
-**FY2026 Revenue:** $4.92B (record, +20% YoY, 3rd straight year 20%+)
-**Gross Margin:** 97.5% | Non-GAAP OP Margin: 41%+
-**Earnings:** Q4 FY2026 just reported ✅
+# ARM — Arm Holdings plc | Deep Dive
+
+**Date:** June 11, 2026 (NEW DIVE — re-screen after dismissal error; first net-new position post-restructure-program)
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — instruction-set architecture monopoly; the deepest switching-cost moat in computing) | **Base 75% (45/60)**
+**Price at dive:** $311.00 (Jun 10 close; next bulk update refreshes) | ~1.05B shares | MC ~$327B
+**Ceiling:** FY2028 $170 (FY-column standard)
 
 ---
 
-## Supercycle: ALL — Universal Compute Architecture
+## Supercycle: AI Compute (Architecture Layer) — the toll under DB-everything
 
-## The IP Architecture Monopoly
+## Core Thesis: The World's Software Compiles to Arm
 
-ARM is the only compute architecture spanning milliwatts to megawatts. 99% of smartphone CPUs. Growing rapidly in datacenter — Neoverse royalties MORE THAN DOUBLED YoY. 1.25B cores shipped to datacenters. 250B+ total chips shipped on ARM architecture. 22M+ developer ecosystem.
+Arm owns the instruction-set architecture that the planet's software targets — the one moat in computing measured in *decades of compiled code* rather than fab capex or patent counts. Switching cost is civilizational: you cannot recompile the world. The business prints like the moat implies: **98% gross margin, 49% non-GAAP operating margin**, royalties on a meaningful share of every chip shipped on earth. FY2026 (ended March): $4.92B (+23%, third consecutive 20%+ year), royalty $2.61B (+21%), licensing $2.31B (+25%).
 
-**Pure IP licensing model:** ARM doesn't make chips. It licenses the architecture and collects royalties on every chip shipped. 97.5% gross margin. Near-100% incremental margin on royalties. Rule 3: IP-licensing exempt from geographic pricing culture.
+**The AI inflection is in the royalty line:** data-center royalty revenue **more than doubling YoY with "no break in this momentum"** — Arm-based server chips ramping at all major hyperscalers, **hyperscaler CPU compute share now 50%**, and **~100% share in DPUs/SmartNICs**. Armv9 + Compute Subsystems (CSS) carry materially higher royalty rates per chip, so mix alone lifts the take rate while units grow.
 
-**Disappearance test: FAILS.** If ARM disappeared, global computing infrastructure collapses. Every smartphone, every custom hyperscaler chip (Google Axion, AWS Graviton, Microsoft Cobalt), every IoT device, increasingly every datacenter CPU. x86 cannot serve mobile power envelopes. RISC-V is years from parity. ARM IS the chokepoint.
+**The reframe (FY2026 slides): Arm became a merchant chip company.** The **Arm AGI CPU** ships as actual silicon — a $15B chip-revenue target and **>$9 non-GAAP EPS by FY2031** in management's own model, against a company TAM slide of $535B (FY26) → **$1.5T+ (FY31)**, Cloud AI $330B → $1.15T. The licensor now competes upward into its licensees' market — the single largest strategic change since the IPO, carrying both the revenue ramp and the channel-conflict risk scored below.
 
-## The Agentic AI CPU Renaissance
+**The architecture-layer hedge, verified (Jun 12):** NVIDIA's Vera — its first standalone CPU, built for agentic AI — is **Arm-based** (88 cores, full production, August China availability, adopters including OpenAI, Anthropic, ByteDance, CoreWeave, Oracle, with the entire ODM complex building 256-CPU MGX racks). NVIDIA entering the CPU market *pays Arm royalties to attack Arm's other licensees* — Arm wins the CPU fight regardless of which vendor takes the socket. Arm's CEO has additionally argued CPU export controls are nearly unfeasible to write (no clean performance threshold exists), keeping the China lane structurally open for Arm-architecture silicon when GPU lanes close. And a fourth royalty surface is forming: the Google pooled-DRAM architecture (Jukan-sourced, FUNDA supply-chain-checked) specifies **an ARM-based scheduling CPU on every memory tray** — if disaggregated memory deploys at scale, Arm collects on the memory side of the rack as well as the compute side.
 
-**Morgan Stanley Research (May 2026):** As AI workloads become more agentic, latency shifts from GPU to CPU:
-```
-Chatbot:                85% GPU / 15% CPU
-RAG Pipeline:           55% GPU / 45% CPU
-Coding Assistant:        45% GPU / 55% CPU
-Multi-tool Agent:       30% GPU / 70% CPU
-Research Agent:         18% GPU / 82% CPU
-Complex Orchestration:   8% GPU / 92% CPU ← WHERE WE'RE GOING
-```
+## Screening-Error Note (why this artifact exists)
 
-**Lisa Su (May 6, 2026):** "With loads and loads of agents, you could imagine more CPUs than GPUs."
+The informal prior dismissed ARM as "fully covered, 70-90x, fails" — sector-beta treatment. That was a **class error**: Rule 3 explicitly exempts IP-licensing models, Axiom 9 scores them on patent durability and switching cost (ARM's is the highest in technology), and Rule 6's bottleneck test passes cleanly (ISA non-substitutability is closer to SIVE's physics than to AMD's beneficiary status). The honest Base is 75, not a dismissal. The EV remains negative — **the disqualifier was never the thesis, only the price** — and the distinction matters: a 75-Base name above its ceiling is a rotation candidate awaiting a correction, not a name to forget. Codified lesson: dismissals must derive like everything else.
 
-**CEO Rene Haas:** CPU cores per GW of DC capacity scales from 30M to 120M as agentic workloads grow. More cores per GW = more ARM royalties per GW built.
-
-**UBS:** Server CPU TAM 5x to ~$170B by 2030.
-
-This is not speculative. The shift is happening NOW. Claude Code went from 3,000→135,000 commits/day. Each commit is agentic orchestration = CPU-bound.
-
-## AGI CPU — ARM Becomes a Chip Company
-
-March 2026: ARM launched the AGI CPU — first proprietary chip product (not just IP licensing).
-- 136 cores per chip, 6TB DDR5-8800, 3nm TSMC, 300W TDP
-- Air-cooled rack: 8,160 CPU cores (vs 2-4K current x86)
-- Liquid-cooled: 45,000+ cores, 2+ petabytes DDR5 per rack
-- Partners: Meta (co-developed), OpenAI, Cerebras, Cloudflare, SK Telecom
-- Production: late 2026
-- This moves ARM from IP licensor ($0.01-0.10 per chip) to chip designer ($100-500 per chip)
-
-## Q4 FY2026 Earnings (REPORTED TODAY May 6)
-
-- Revenue: $1.49B (beat $1.47B est). FY2026 full year: $4.92B (record).
-- EPS: $0.60 (beat $0.58 est).
-- Record full-year royalty revenue: $2.61B. Q4 royalty: $671M.
-- Data center royalties MORE THAN DOUBLED YoY.
-- 3rd consecutive year of 20%+ revenue growth.
-- "Growth across smartphones, Edge AI, Physical AI, and Cloud AI."
-- Stock +12.5% on the day, after hours ~$228-232.
-
-## Revenue Trajectory
-
-```
-FY2024: $3.23B
-FY2025: $3.89B (+20%)
-FY2026: $4.92B (+26%, record)
-FY2027E: $6.5-7.5B (AGI CPU first revenue + v9/CSS mix upgrade)
-FY2028E: $9-11B (AGI CPU ramp + DC royalties 3-4x + edge)
-FY2030E: $15B (Level 3 investor target, 8.8% of $170B CPU TAM)
-FY2032E: $20-25B (agentic fully deployed, Physical AI)
-```
-
-**$15B target context:** Cloud AI royalty TAM is ~$3B today. CEO expects it to become ARM's LARGEST business within a few years. At $15B total, DC would be $5-7B = plausible if 120M cores/GW at 120-150GW deployed.
-
-## TAM Expansion — The Universal Primitive
-
-ARM is the ultimate Ford Principle company. Every device that computes uses ARM.
-
-**Phase 1 (DC, 2024-2027):** GPU clusters need CPUs alongside accelerators. Graviton, Axion, Cobalt all ARM. Royalties doubled YoY. AGI CPU launching.
-
-**Phase 2 (Physical AI, 2026-2030):** Every robot, drone, autonomous vehicle runs ARM. NVIDIA Jetson is ARM. Tesla FSD is ARM. Each unit is a mobile datacenter paying ARM royalties.
-
-**Phase 3 (Everything, 2027-2035):** Edge AI, IoT, AR/VR, satellites, medical devices. ARM is already in 99% of smartphones. Expansion into EVERY compute endpoint.
-
-```
-CPU cores per GW of DC: 30M → 120M (4x from agentic)
-GW of DC by 2030: 120-150 GW
-Total ARM DC cores: 3.6B → 18B
-Each core pays royalty to ARM
-Plus: billions of edge/phone/auto/IoT/robot devices
-```
-
-## Scoring
+## Scoring Breakdown (constructed Jun 11)
 
 | Category | Score | Evidence |
-|---|---|---|
-| Core Thesis | 18/20 | 99% smartphone, DC doubled, only milliwatt→megawatt architecture. 97.5% GM. AGI CPU. 22M developers = network moat. SoftBank control (-1), RISC-V long-term (-1). |
-| Cycle Stage | 8/10 | DC Stage 2 (doubled). AGI CPU launching. Mobile Stage 4 but upgrading. Edge Stage 1. |
-| TAM | 10/10 | MAXIMUM. $170B CPU TAM by 2030. Universal primitive. Phase 1+2+3. 30M→120M cores/GW. |
-| Catalysts | 4/5 | Q4 beat today. AGI CPU late 2026. Meta/OpenAI customers. AMD validated CPU demand. |
-| Macro | 9/10 | $710B capex. 120-150GW. Agentic = CPU renaissance. Lisa Su confirmed. |
-| Alpha | 1/5 | 36 analysts. $235B MC. Zero information edge. |
-| Risks | -2 | SoftBank 90% + dual CEO role (-1). RISC-V open-source (-1). 282x P/E. |
-| **Base** | **48/60 (80%)** | |
+|----------|-------|---------|
+| Core Thesis | 17/20 | ISA monopoly — decades of compiled software as the moat; 50% hyperscaler CPU compute, ~100% DPU/SmartNIC; Rule 3/Axiom 9 IP-licensing class. Penalties: AGI CPU competes with its own licensees — channel conflict (-1); RISC-V is the one credible long-horizon architectural threat (-2). |
+| Cycle Stage | 8/10 | +23% on the third straight 20%+ year; DC royalty doubling; CSS mix lifting royalty-per-chip; licensing +29% on CSS conversions — mature base, accelerating AI mix. |
+| TAM | 9/10 | Company TAM $535B→$1.5T; the genuine universal primitive — every CPU from edge to cloud, plus the custom-silicon wave (Trainium/TPU-adjacent designs lean Arm). |
+| Catalysts | 4/5 | AGI CPU ramp toward $15B; CSS license conversions; DC share march past 50%; FY2031 $9-EPS model checkpoints. Dense, but no single dated binary. |
+| Macro | 9/10 | The CPU renaissance (BofA server-CPU TAM $125B→$170B on agentic AI); inference-era CPU intensity; sovereign and hyperscaler custom-silicon programs are Arm-architecture by default. |
+| Alpha | 1/5 | 40+ analysts; the most-watched IP name in semiconductors; zero informational edge — the honest floor. |
+| Risks | -3 | Valuation prices the FY2031 model today (-1). Channel conflict — licensees pushed toward RISC-V by AGI CPU competition (-1). SoftBank overhang/concentrated float (-1). |
+| **Base** | **45/60 (75%)** | |
 
-## Ceiling
+## Ceiling — v4.1 AH-1 Full Derivation (40x IP-monopoly tier, ~1.05B shares, FY-column standard)
 
-```
-CEILING: $250-$500 (FY2028-2032)
-  Near-term (2028-29): $250-$350 (AGI CPU + DC royalty 3-4x)
-  Long-term (2030-32): $400-$500 (discounted per Rule 16)
-  Midpoint: $375
-```
+### Vectors (AH-9)
 
-**Entry at $221:** $375/$221 = 1.70x → Entry 42% → Fund 17/40
+**V1 Royalty — AH-7: HIGH** (Armv9/CSS mix + DC doubling; the installed-base annuity): $3.1B / $3.9B / $4.9B / $6.1B (FY27-30)
+**V2 Licensing — AH-7: HIGH** (CSS upfront bookings ~20% near-term, normalizing high-single-digit per CFO): $2.7B / $3.1B / $3.5B / $3.9B
+**V3 AGI CPU / merchant silicon — AH-7: MEDIUM** (management $15B target; first silicon shipping; ramp curve modeled well short of target): $0.8B / $2.5B / $5.5B / $9.0B
 
-## Total: (80% × 60) + (42% × 40) = 48 + 17 = 65 WL
+| Vector | FY2027 | FY2028 | FY2029 | FY2030 |
+|--------|--------|--------|--------|--------|
+| 1. Royalty | $3.1B | $3.9B | $4.9B | $6.1B |
+| 2. Licensing | $2.7B | $3.1B | $3.5B | $3.9B |
+| 3. AGI CPU (merchant) | $0.8B | $2.5B | $5.5B | $9.0B |
+| **TOTAL** | **$6.6B** | **$9.5B** | **$13.9B** | **$19.0B** |
 
-## HC Trigger Table
+### Valuation (40x — the framework's equipment/IP-monopoly ceiling tier; OP blends DOWN as merchant silicon grows)
 
-```
-$221 (current)  → 1.70x → Score 65 WL
-$180            → 2.08x → Score 69 WL
-$150            → 2.50x → Score 71 WL
-$130            → 2.88x → Score 74 WL
-$120            → 3.13x → Score 75 HC ← THRESHOLD
-$100 (52wk low) → 3.75x → Score 78 HC
-```
+| Year | Revenue | OP Margin | OP | × 40x | Per Share |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | $6.6B | 48% | $3.17B | $127B | **$121** |
+| 2028 | $9.5B | 47% | $4.47B | $179B | **$170** |
+| 2029 | $13.9B | 46% | $6.39B | $256B | **$244** |
+| 2030 | $19.0B | 45% | $8.55B | $385B | **$366** |
 
-## Supply Chain Position — WHY ARM IS IN THIS PORTFOLIO
+**AH-5 cross-check:** FY2030 OP $8.55B less ~15% tax ≈ $7.3B / 1.05B ≈ **$6.9 EPS**, tracking toward management's ">$9 by FY2031" one year later — the model independently approaches the company target on a conservative ramp. **The market trades well above the FY2028 column — it pre-pays the FY2030-31 model today; the Excel computes the live gap, and the framework's entry condition is mechanical.**
 
-ARM doesn't compete with SIVE, AEHR, or LPK.DE. It CREATES DEMAND for them:
+  FY2028: $9.5B × 47% OP = $4.47B × 40x = $179B / 1.05B shares = **$170**
 
-```
-More ARM CPUs per rack (agentic AI)
-  → more total silicon per rack
-  → more substrates (LPK.DE, SOI.PA)
-  → more memory per CPU (SK Hynix — 1.5TB LPDDR5X per AGI CPU)
-  → more optical links (SIVE — more chips = more bandwidth)
-  → more test (AEHR — CPU wafers need burn-in)
-  → more power (VICR, HPS-A.TO)
-  → more packaging (ShunSin, MSScorps)
-```
+CEILING: $170 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
 
-Every ARM core deployed is a DEMAND MULTIPLIER for the rest of the portfolio. ARM is the architecture layer ABOVE the component chokepoints we own. They create the demand, we own the bottlenecks that constrain the supply.
+## Cross-Book Relevance — the Three-Way CPU Cross-Watch
+
+Arm's **DC-royalty-doubling cadence is the cleanest single telemetry stream for the agentic-CPU renaissance** that AMD (EPYC, V2) and INTC (DCAI, Pillar 1) express at the product layer — three artifacts, one demand signal, read quarterly (paired with AMD trigger #4 and INTC trigger #7). The custom-silicon wave (MRVL/AVGO duopoly designs) is overwhelmingly Arm-architecture: every hyperscaler ASIC win anywhere in the book is, at the architecture layer, an Arm royalty event.
 
 ## Key Risks
 
-- 282x trailing P/E = priced for perfection
-- SoftBank 90%+ control, CEO dual role at SoftBank
-- RISC-V open-source long-term threat
-- 36 analysts, stock 30% above $175 consensus
-- AGI CPU execution risk (first chip, late 2026)
-- Mobile 50%+ of royalties — smartphone weakness drags
+1. Valuation — the FY2031 management model is substantially in today's price; perfection is pre-paid
+2. Channel conflict — AGI CPU competes with licensees; the strategic response is RISC-V investment
+3. RISC-V — the only architectural alternative; currently sub-scale in datacenter, existential on a 10-year horizon
+4. SoftBank — ~88% holder; any distribution is a structural float event
+5. Merchant-silicon execution — Arm has never run a chip P&L at scale; the $15B target imports fab-economics risk into a 98%-GM company
 
-## Verdict
+## Re-Rate Triggers
 
-65 WL 🔒. The IP architecture monopoly underneath ALL compute. 80% Base = HC-grade thesis at a WL-grade price. ARM is to CPUs what Soitec is to SiPh wafers — the foundational layer everything is built on. The agentic AI CPU renaissance (85→8% GPU shift) is the structural catalyst that could make this a $500B+ company. But at $221 with 282x P/E and 36 analysts, the Entry math doesn't work. HC at $120 pullback. Position as demand multiplier for the rest of the portfolio — every ARM core deployed creates demand for SIVE, AEHR, SOI.PA, SK Hynix, LPK.DE.
+1. **AGI CPU ramp milestones toward $15B → V3 verification; Rule 16b adds per named hyperscaler design win**
+2. **DC royalty doubling cadence (quarterly) → the three-way CPU cross-watch telemetry** (AMD #4 / INTC #7 / ARM) — now including **Vera unit volumes as a pure royalty stream** (every NVIDIA CPU sold is an Arm win; verified Jun 12)
+3. CSS conversion rate + Armv9 penetration → royalty-per-chip mix verification
+4. FY2031 model checkpoints ($9-EPS cadence) → quarterly progress against the management curve
+5. Q1 FY2027 print (~Aug) → first AGI-CPU revenue disclosure quality
+6. Counter: **a RISC-V hyperscaler design win at datacenter scale → the architectural falsification test** — the only thesis-breaking headline class
+7. Counter: a major licensee publicly shifting roadmap to RISC-V citing AGI CPU competition → channel-conflict risk fires
+8. **Memory-tray royalty surface: Google pooled-DRAM deployment milestones (TPU v8 era, ~30% initial per the architecture thread) → ARM scheduling-CPU attach per tray = a new royalty vector** (Jukan-sourced, FUNDA-checked; Rule 16b add on first confirmed deployment)
+9. Counter: SoftBank distribution/secondary → float event, multiple review
 
-## Score Change Log
-- **May 6, 2026: 65 WL** (Initial deep dive. Q4 FY2026 beat: $1.49B rev, $0.60 EPS. FY2026 $4.92B record. DC royalties doubled. AGI CPU launching late 2026. Morgan Stanley agentic CPU shift. Lisa Su "more CPUs than GPUs." 80% Base = HC-grade thesis. Entry destroyed at $221 — 1.70x to midpoint. HC at $120.)
+*New dive Jun 11, 2026 — the first net-new position after the restructure program; screening-error correction documented above.*

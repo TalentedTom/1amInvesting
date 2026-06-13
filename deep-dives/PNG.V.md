@@ -1,93 +1,80 @@
 # PNG.V — Kraken Robotics | Deep Dive
 
+**Date:** April 2026 (dive) | May 2026 (Anduril + merger detail) | May 23 (audit) | **June 11, 2026 (restructured — single generation; Sonardyne moat written back)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT-VIA-MERGER — the qualification rung: Sonardyne gold-standard positioning, decades of qual inertia; merger-contingent) | **Base 75% (45/60)**
+**Price at restructure:** C$7.09 | ~155M shares (≈305M diluted post-merger) | MC ~C$1.1B
+**Ceiling:** FY2028 C$8.03 (FY-column standard, post-merger model; FY2027 intentionally blank — see note)
+
+---
+
 ## Supercycle: DB8 Defense (Subsea Autonomous Systems + Mine Countermeasures)
-## Classification: WL — Covelya merger as key catalyst trigger
 
----
+## Core Thesis: Buying the Gold Standard
 
-## Core Thesis
+Kraken builds the eyes and ears of subsea defense — Synthetic Aperture Sonar, AUVs, minehunting — for NATO navies, in a budget line that is structural, not cyclical: subsea cable protection and mine countermeasures don't shrink after a toast, whichever leaders are shaking hands this week.
 
-Kraken builds the "eyes and ears" of subsea defense — Synthetic Aperture Sonar (SAS), autonomous underwater vehicles (AUVs), and minehunting systems for NATO navies. Subsea defense budgets are structurally expanding post-Ukraine. "Trump and Xi shaking hands will not change this. Subsea defense budgets don't shrink after a toast."
+**The merger is the moat acquisition.** The pending Covelya combination doesn't just 3x revenue (C$1.8B combined platform, TSX Main Board uplisting, institutional access — the SIVE-Nasdaq discovery pattern): it brings **Sonardyne, the gold standard in underwater positioning, carrying decades of qualification inertia** across navies and offshore operators. On the framework's defense moat ladder — physics > qualification > temporal — standalone Kraken holds a technology position contested by Thales, L3Harris, and Kongsberg; the combined entity holds the qualification rung, where displacement takes a decade of trust rather than a better spec sheet. Merger probability: 70%. **This is a merger bet with a moat prize — and it is honestly both.**
 
-### Covelya Merger (Pending)
-Transforms Kraken from C$625M single-product company to C$1.8B combined ocean technology platform. 3x revenue. TSX Main Board uplisting unlocks institutional access (same discovery pattern as SIVE Nasdaq). Merger probability: 70%.
-
-### Anduril Orders (May 2026)
-New defense prime customer confirmed. Anduril building autonomous undersea vehicles — Kraken supplies the sensor suite. Anduril IPO rumors create ecosystem valuation catalyst.
-
-### Daniel Koss Conviction (May 2026)
-Increased allocation from 20%→30%: "Risk reward at this level just feels too good to ignore." Four catalysts stacking for H2 2026: Covelya merger, TSX uplisting, Anduril orders, Anduril IPO.
-
----
+**Anduril (May 2026):** confirmed as a new defense prime customer — Kraken supplies the sensor suite for Anduril's autonomous undersea vehicles. A named prime converting is cycle evidence, not just a logo.
 
 ## Key Financials
 
-- FY2025 Revenue: ~C$130M (standalone Kraken)
-- Covelya combined revenue: ~C$600M (post-merger)
-- Backlog growing, defense contracts multi-year
-- TSX-V listed (limited institutional access until TSX Main Board uplisting)
+FY2025 standalone ~C$130M | Covelya combined ~C$600M | backlog growing on multi-year defense contracts | TSX-V listed until uplisting (institutional access gated on the merger).
 
----
-
-## Scoring Breakdown
+## Scoring Breakdown (reconciled Jun 11 — table now derives the sanctioned May 23 Base; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 12/20 | Best SAS sonar technology. Minehunting leader. BUT: not sole-source, competition from Thales, L3Harris, Kongsberg. Technology moat, not physics monopoly. |
-| Cycle Stage | 7/10 | Revenue inflecting. Backlog growing. Pre-merger catalyst window. |
-| TAM Expansion | 8/10 | Subsea defense TAM expanding structurally. Covelya 3x revenue. Autonomous undersea vehicles emerging market. |
-| Catalysts | 5/5 | Covelya merger (70%), TSX uplisting, Anduril orders, Anduril IPO. Four catalysts stacking H2 2026. |
-| Macro | 8/10 | NATO defense budgets targeting 5% GDP. Subsea cable protection. Mine countermeasures. Structural not cyclical. |
-| Alpha | 4/5 | TSX-V microcap. Zero US institutional coverage. Daniel Koss conviction. |
-| Risks | -2 | Merger execution risk (-1). TSX-V liquidity (-1). |
+| Core Thesis | 14/20 | Best-in-class SAS + minehunting; the merger acquires Sonardyne's gold-standard qualification moat (decades of inertia). Penalties: sonar contested — Thales/L3Harris/Kongsberg (-3); the moat is merger-contingent (-3). |
+| Cycle Stage | 8/10 | Revenue inflecting; backlog growing; Anduril confirmed as a new prime customer; pre-merger catalyst window. |
+| TAM | 8/10 | Subsea defense structurally expanding; combined platform 3x; autonomous undersea an emerging category. |
+| Catalysts | 5/5 | Covelya close (70%); TSX uplisting; Anduril order conversion; H2 2026 stack. |
+| Macro | 8/10 | NATO 5% GDP; subsea cable protection post-sabotage era; mine countermeasures structural. |
+| Alpha | 4/5 | TSX-V microcap, no US institutional coverage; the Sonardyne qualification angle is invisible to the merger-arb framing most observers apply. |
+| Risks | -2 | Merger execution (-1). TSX-V liquidity + integration complexity (-1). |
 | **Base** | **45/60 (75%)** | |
 
----
+## Ceiling — v4.1 AH-1 Full Derivation (graduated OP, 18x, FY-column standard, post-merger model)
 
-## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 18x, single-number FY2029 post-merger)
+**FY2027 note:** intentionally blank in the Excel — the sanctioned model is the post-merger entity, which begins FY2028; the EV anchors FY2028 as always. **Methodological note:** the ceiling carries post-merger face value with the 30% break case as the named downside (below), rather than EOS-style probability-weighted vectors — defensible for a single near-term binary, and the break consequence is pre-registered in trigger #1.
 
-### Pre-Merger (Standalone Kraken, ~155M shares):
-
-| Year | Revenue | OP Margin | OP | × 18x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2027 | C$180M | 12% | C$21.6M | C$389M | C$2.51 |
-| 2028 | C$240M | 15% | C$36M | C$648M | C$4.18 |
-| 2029 | C$300M | 16% | C$48M | C$864M | C$5.57 |
-| 2030 | C$350M | 17% | C$59.5M | C$1.07B | C$6.90 |
-
-Standalone ceiling is BELOW current price of C$7.38 at FY2028. The stock already prices the merger.
-
-### Post-Merger (Covelya Combined, 70% probability, ~305M diluted shares):
+### Post-Merger (Covelya combined, ~305M diluted shares):
 
 | Year | Revenue | OP Margin | OP | × 18x | Per Share |
-|------|---------|-----------|-----|-------|-----------| 
-| 2028 | C$850M | 16% | C$136M | C$2.45B | C$8.03 |
-| 2029 | C$1,100M | 17% | C$187M | C$3.37B | C$11.03 |
-| 2030 | C$1,400M | 18% | C$252M | C$4.54B | C$14.87 |
+|------|---------|-----------|-----|-------|-----------|
+| 2028 | C$850M | 16% | C$136M | C$2.45B | **C$8.03** |
+| 2029 | C$1,100M | 17% | C$187M | C$3.37B | **C$11.03** |
+| 2030 | C$1,400M | 18% | C$252M | C$4.54B | **C$14.87** |
 
-C$8.03 → C$14.87 in 3 years. FY2028 at C$8.03 ≈ today's C$7.38 — market pricing post-merger FY2028 at ~92%.
+### Standalone (the break case, ~155M shares — the named downside):
 
-### Why FY2029 as Ceiling:
+| Year | Revenue | OP | × 18x | Per Share |
+|------|---------|-----|-------|-----------|
+| 2028 | C$240M | C$36M | C$648M | **C$4.18** |
+| 2029 | C$300M | C$48M | C$864M | C$5.57 |
 
-FY2028 post-merger (C$8.03) is roughly today's price — already priced in. FY2029 captures the integration synergies and combined platform revenue scaling. The upside is in FY2029-2030 execution.
+The market prices the post-merger FY2028 near par — meaning the merger is substantially in the price, and the standalone case sits 30-40% below it. The stock is a 70/30 binary wearing a defense thesis.
 
-### Why Standalone Matters:
+  FY2028 (post-merger): C$850M × 16% OP = C$136M × 18x = C$2.45B / 305M shares = **C$8.03**
 
-If merger fails (30% probability), standalone ceiling is C$4-5 range — significant downside from current C$7.38. The stock is a merger bet. This is not a moat play.
-
-### Ceiling Derivation:
-
-  FY2029 post-merger: C$1,100M × 17% OP = C$187M × 18x = C$3.37B / 305M shares = C$11.03
-
-CEILING: C$11 (single number, FY2029 post-merger)
-
----
+CEILING: C$8.03 (FY2028 column standard, post-merger; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the FY2029-forward convention)
 
 ## Key Risks
 
-1. Covelya merger may not close (30% failure probability) — if fails, stock is 30-40% overvalued at current price
-2. Share dilution nearly doubles in merger (155M→305M shares)
-3. Standalone Kraken ceiling BELOW current price — merger is the entire thesis
-4. TSX-V liquidity, no US institutional access until uplisting
-5. Defense competition (Thales, L3Harris, Kongsberg) — technology moat, not monopoly
-6. Integration risk post-merger — combining ocean technology companies is complex
+1. **Merger break (30%)** — the stock immediately re-prices toward the standalone C$4-5 range; consequence pre-registered below
+2. Dilution — shares roughly double (155M→305M) in the combination
+3. Integration — combining ocean-technology companies is multi-year work
+4. Competition — Thales/L3Harris/Kongsberg contest the sonar layer continuously
+5. TSX-V liquidity until uplisting
+
+## Re-Rate Triggers
+
+1. **MERGER BINARY (pre-registered both ways): close → uplisting path live, Sonardyne qualification moat owned, integration triggers activate; terminated → ceiling 8.03 → 4.18 immediately, EV recompute, Base review — no deliberation, the consequence is committed now**
+2. TSX Main Board uplisting → institutional discovery event (the SIVE-Nasdaq pattern)
+3. Anduril order conversion prints → the prime-customer vector verified
+4. Post-merger: Sonardyne qualification-base cross-sell evidence (Kraken sensors into Sonardyne's installed navies) → the moat thesis's first proof
+5. Subsea-sabotage incidents / NATO cable-protection programs → demand-pull events
+6. Counter: merger terms re-cut or financing wobble → probability review below 70%
+
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/PNG_artifact_pre_restructure_2026-06-11.md*

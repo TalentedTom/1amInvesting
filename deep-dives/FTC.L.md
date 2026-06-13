@@ -1,149 +1,93 @@
 # FTC.L — Filtronic PLC | Deep Dive
-**Date:** May 2, 2026 
+
+**Date:** May 2, 2026 (dive) | May 21 (audit) | **June 11, 2026 (restructured — single generation; SPCX listing eve)**
+**Framework Version:** v4.1
+**Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — E-band GaN SSPA commercial monopoly; V-band optionality SpaceX-funded) | **Base 80% (48/60)**
+**Price at restructure:** GBp 310 | ~223M shares | MC ~£691M
+**Ceiling:** FY2028 GBp 477 (FY-column standard)
 
 ---
 
 ## Supercycle: DB3 LEO Space Infrastructure + DB8 Defense
 
-## TAM Expansion Lens
+## Core Thesis: The High-Power mmWave Primitive
 
-**Q1 (Today):** E-band GaN SSPAs for Starlink ground gateway stations. Sole-source commercial monopoly at the intersection of high-power + E-band + GaN. Thousands of ground stations needed globally.
+**Q1 (today):** E-band GaN SSPAs for Starlink ground gateways — a sole-source commercial monopoly at the intersection of high power + E-band (71-86 GHz) + GaN. Ka-band is congested; GaAs can't match GaN's power and efficiency; nobody else ships production E-band GaN SSPAs at this power level. Thousands of ground stations needed globally.
 
-**Q2 (3-5 Years):** V-band GaN SSPAs for consumer and enterprise terminals. If V-band development succeeds, TAM explodes from thousands of ground stations to tens of millions of user terminals. SpaceX is funding this R&D through the warrant structure. Ford Principle: selling "ground station amplifiers" today, but actually selling "the universal high-power mmWave primitive for all LEO connectivity."
+**Q2 (3-5 years):** V-band GaN SSPAs for consumer/enterprise terminals — if V-band development succeeds, the TAM steps from thousands of ground stations to tens of millions of terminals, and **SpaceX is funding the R&D through the warrant structure.** Ford Principle: selling ground-station amplifiers today, actually selling the universal high-power mmWave primitive for all LEO connectivity. The May 2026 expansion to V/Ka/Q-band research makes Filtronic SpaceX's multi-band RF partner, not a one-frequency supplier.
 
-**Q3 (New Markets):** Defense electronic warfare, aerospace sensors, next-gen radar. European defense contracts already expanding (£7M+ with European defense prime). NATO 5% GDP = defense comms spending structural.
+**Q3 (new markets):** Defense EW, aerospace sensors, next-gen radar — European defense prime contracts (£7M+ initial) already expanding; NATO 5% GDP makes defense comms structural.
 
-### V/Ka/Q-Band Expansion (May 2026)
-Research collaboration with SpaceX expanding beyond E-band to V-band, Ka-band, and Q-band amplifiers. This is a significant TAM expansion beyond the original E-band-only thesis. Filtronic is not a one-frequency company — they are becoming SpaceX's multi-band RF partner.
-
-### SpaceX Strategic Lock-In (May 2026)
-If SpaceX purchases specific volume from Filtronic, SpaceX holds right to acquire 10-15% equity stake in Filtronic. A customer becoming a shareholder is the ultimate strategic lock-in. SpaceX manufactures 85% of components in-house and only outsources when third-party technology is "crucial." Filtronic is in the 15% SpaceX cannot replicate.
-
-### SpaceX IPO Catalyst
-Bloomberg reports SpaceX IPO expected mid-June 2026, potentially largest IPO in history at $1.5-2T valuation. KaizenInvestor names Filtronic as #1 beneficiary out of 5 global SpaceX supply chain companies. SpaceX IPO draws global attention to their supply chain — investors searching "who supplies SpaceX" find Filtronic at #1.
+### The Lock-In Structure
+SpaceX's £47.3M ($62.5M) E-band GaN order is the largest in company history (first production shipments FY2027); warrants extended to E-band GaN with vesting doubled and tied to delivery; volume purchases give SpaceX the right to a **10-15% equity stake** — a customer becoming a shareholder is the deepest alignment available (the NVIDIA-in-LITE/COHR pattern, for LEO). SpaceX manufactures ~85% in-house and outsources only what it calls "crucial" — Filtronic sits in the 15% it cannot replicate. By occupying Filtronic's lines, SpaceX also boxes Amazon/Kuiper out of the technology. SpaceX VP Engineering, on record: "Filtronic is a valuable partner to SpaceX, and has been an important contributor to the rollout and success of the Starlink constellation."
 
 ## Key Data
 
-- Stock: GBp 283. 52-week range GBp 1.64 to GBp 285
-- Market cap: ~£620M (~$780M)
-- SpaceX £47.3M ($62.5M) GaN E-band order — largest single order in company history. First production shipments FY2027
-- SpaceX VP Engineering: "Filtronic is a valuable partner to SpaceX, and has been an important contributor to the rollout and success of the Starlink constellation"
-- Warrants extended to include E-Band GaN. Vesting doubled and tied to product delivery
-- SpaceX warrant for up to 15% of shares = deepest possible customer alignment
-- FY2026 net profit expected ~£7.3M. Forward P/E ~48x. Cash £10.5M, zero debt
-- European defense prime contracts: ~£7M+ initial tranche
-- 186 employees. UK-based (AIM-listed). 3 analysts, all Buy.
+MC ~£691M | FY2026 net profit expected ~£7.3M | Cash £10.5M, zero debt | 186 employees, AIM-listed | 3 analysts, all Buy | An unnamed US partner disclosed (unconfirmed identity) — potential second-customer de-risk | **SPCX lists June 12, 2026** — the supply-chain spotlight event.
 
-## The Monopoly
-
-The thesis matches the framework's highest-value pattern: physics-required, sole-source, customer-validated.
-
-- **E-band GaN SSPAs** = specific frequency band (71-86 GHz) + specific semiconductor material (GaN) + specific application (high-power satellite ground comms). The intersection is extremely narrow, and Filtronic occupies it alone.
-- Ka-band is congested. GaAs can't match GaN's power/efficiency. Nobody else makes production E-band GaN SSPAs at this power level.
-- SpaceX signing warrants for 15% equity = they're not just buying components, they're locking the supplier into their ecosystem. This is NVIDIA investing $2B in LITE/COHR, but for LEO.
-- By occupying Filtronic's production lines, SpaceX boxes out Amazon/Kuiper from accessing the same technology.
-
-## Scoring Breakdown
+## Scoring Breakdown (reconciled Jun 11 — table now derives the sanctioned May 21 Base; archaeology in VERSION_LOG)
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 16/20 | Commercial monopoly in E-band GaN SSPAs. SpaceX £47.3M order + 15% warrant. Capacity lock-out strategy blocks Amazon. Unnamed US partner (Amazon?) = potential dual-customer de-risk. -2 for extreme customer concentration, -2 for SpaceX vertical integration risk. |
-| Cycle Stage | 7/10 | Stage 2 ramp. Revenue growing. Largest order signed. GaN shipping FY2027. V-band in R&D (Stage 0). |
-| TAM | 9/10 | Phase 1: E-band ground stations — thousands (2026-2029). Phase 2: V-band terminals — tens of millions (2031-2033, SpaceX-funded). Phase 3: Defense/Golden Dome. Three orders of magnitude TAM expansion. |
-| Catalysts | 5/5 | GaN production FY2027. V-band milestones. European defense expansion. Golden Dome ($185B, SpaceX #1 contractor). SpaceX IPO = supply chain spotlight. |
-| Macro | 8/10 | LEO buildout. NATO 5% GDP. Golden Dome $185B. 120-150 GW compute needs satellite connectivity. |
-| Alpha | 4/5 | £620M AIM-listed, 3 analysts. KaizenInvestor V-band thesis not mainstream. SpaceX lock-out strategy invisible to consensus. V-band TAM not modeled by anyone. |
-| Risks | -2 | Customer concentration (SpaceX dominant) (-1). V-band still R&D (-1). |
+| Core Thesis | 16/20 | E-band GaN SSPA commercial monopoly; £47.3M order + 10-15% warrant lock-in; capacity lock-out vs Kuiper; unnamed US partner optionality. Penalties: extreme customer concentration (-2); SpaceX vertical-integration doctrine (-2). |
+| Cycle Stage | 7/10 | Stage 2 ramp — largest order signed, warrants vesting on delivery, GaN production ships FY2027; V-band still Stage 0 R&D. |
+| TAM | 9/10 | Three orders of magnitude staged: thousands of gateways → tens of millions of terminals (SpaceX-funded) → defense/Golden Dome. |
+| Catalysts | 5/5 | SPCX listing (Jun 12); GaN production FY2027; V-band milestones; European defense expansion; Golden Dome flow-through. |
+| Macro | 9/10 | FCC voted a 7x satellite-broadband capacity increase — regulatory demand creation; Golden Dome $185B with SpaceX #1 contractor; NATO 5%; Starlink ~7,000 satellites scaling toward 42,000. |
+| Alpha | 4/5 | £691M AIM-listed, 3 analysts; the V-band TAM and the lock-out strategy are absent from consensus models. |
+| Risks | -2 | SpaceX concentration (-1). V-band remains R&D — the big TAM is unproven (-1). |
 | **Base** | **48/60 (80%)** | |
 
-## Ceiling — v4.0 AH-1 Full Derivation (Graduated OP, 25x, single-number FY2030 discounted 30%)
+## Ceiling — v4.1 AH-1 Full Derivation (graduated OP, 25x, ~223M shares, FY-column standard)
 
-### Vector 1: SpaceX E-band Ground Station SSPAs (PRIMARY)
-Only commercial 50-100W GaN SSPA at E-band. Physics-based thermal management moat.
-SpaceX 15% warrants + £47M order = strategic lock-in. SpaceX outsources only when technology is "crucial."
-FCC voted 7x increase in satellite broadband capacity = regulatory demand creation.
-Starlink ~7,000 satellites scaling to 42,000. Each ground station cluster needs E-band backhaul amplifiers.
-Source: SpaceX order book, FCC ruling (May 2026), KaizenInvestor #1 SpaceX supplier.
-AH-7 confidence: HIGH — £47M order confirmed, shipping, sole qualified supplier.
+### Vectors (AH-9)
 
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| £65M | £100M | £140M | £180M |
-
-### Vector 2: V/Ka/Q-Band Expansion (TAM multiplier)
-Research collaboration expanding beyond E-band to V-band, Ka-band, Q-band.
-V-band backhaul TAM: $1.32B → $8.85B by 2033 (21.4% CAGR).
-Each new band is separate product line using same GaN SSPA core competence.
-Source: Filtronic R&D disclosure (May 2026).
-AH-7 confidence: MEDIUM — R&D confirmed, production timeline 2028-2029 for V-band.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| £5M | £25M | £60M | £120M |
-
-### Vector 3: Defense (DPA, Military SATCOM, Radar)
-Government-legislated demand floor via DPA and CHIPS Act positioning.
-E-band and V-band amplifiers for military satellite communications and radar.
-UK/NATO defense budgets expanding to 5% GDP target.
-Source: DPA positioning, NATO defense spending trajectory.
-AH-7 confidence: MEDIUM — confirmed but contract timing uncertain.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| £10M | £20M | £35M | £50M |
-
-### Vector 4: Non-SpaceX Commercial (Other LEO, Telecom Backhaul)
-OneWeb, Amazon Kuiper, Telesat all building LEO constellations needing ground station backhaul.
-mmWave equipment TAM: $7.6B by 2030.
-Source: Industry TAM reports, LEO constellation plans.
-AH-7 confidence: LOW-MEDIUM — no confirmed non-SpaceX orders yet, technology transferable.
-
-| 2027 | 2028 | 2029 | 2030 |
-|------|------|------|------|
-| £5M | £15M | £30M | £50M |
-
-### Vector 5: Base Business (legacy RF products)
-Stable existing revenue: £10M/year.
-
-### Combined Revenue:
+**V1 SpaceX E-band Gateways (PRIMARY) — AH-7: HIGH** (order confirmed, sole qualified, FCC 7x):
+£65M / £100M / £140M / £180M (2027-30)
+**V2 V/Ka/Q-Band Expansion — AH-7: MEDIUM** (R&D confirmed, SpaceX-funded; production 2028-29; deliberately small in-model until prototype milestones — the time-discount on far TAM is applied here at the vector level): £5M / £25M / £60M / £120M
+**V3 Defense (SATCOM/radar/EW) — AH-7: MEDIUM**: £10M / £20M / £35M / £50M
+**V4 Non-SpaceX LEO (OneWeb/Kuiper/Telesat) — AH-7: LOW-MEDIUM** (no confirmed orders; technology transferable): £5M / £15M / £30M / £50M
+**V5 Base RF — AH-7: HIGH**: £10M flat
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
 | 1. SpaceX E-band | £65M | £100M | £140M | £180M |
 | 2. V/Ka/Q-band | £5M | £25M | £60M | £120M |
 | 3. Defense | £10M | £20M | £35M | £50M |
-| 4. Non-SpaceX | £5M | £15M | £30M | £50M |
+| 4. Non-SpaceX LEO | £5M | £15M | £30M | £50M |
 | 5. Base | £10M | £10M | £10M | £10M |
 | **TOTAL** | **£95M** | **£170M** | **£275M** | **£410M** |
 
-### Full Valuation Table (Graduated OP, 25x, ~223M shares):
+### Valuation (graduated OP, 25x)
 
 | Year | Revenue | OP Margin | OP | × 25x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | £95M | 20% | £19M | £475M | GBp 213 |
-| 2028 | £170M | 25% | £42.5M | £1.06B | GBp 477 |
-| 2029 | £275M | 28% | £77M | £1.93B | GBp 864 |
-| 2030 | £410M | 30% | £123M | £3.08B | GBp 1,379 |
+| 2027 | £95M | 20% | £19M | £475M | **GBp 213** |
+| 2028 | £170M | 25% | £42.5M | £1.06B | **GBp 477** |
+| 2029 | £275M | 28% | £77M | £1.93B | **GBp 864** |
+| 2030 | £410M | 30% | £123M | £3.08B | **GBp 1,379** |
 
-  Revenue ramps £95M → £410M in 4 years (4.3x). GBp 213 → GBp 1,379.
-  Strong long-term compounder as V/Ka/Q-band adds revenue layers on top of SpaceX E-band base.
+  FY2028: £170M × 25% OP = £42.5M × 25x = £1.06B / 223M shares = **GBp 477**
 
-### Ceiling Derivation:
+CEILING: GBp 477 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the discounted-FY2030 convention)
 
-  FY2030: £410M × 30% OP = £123M × 25x = £3.08B / 223M shares = GBp 1,379
-  Discounted 30%: GBp 1,379 × 0.70 = GBp 965
+## Key Risks
 
-CEILING: GBp 965 (single number, discounted FY2030 base case)
+1. SpaceX concentration — dominant customer, and the 85%-in-house doctrine means the partner relationship must stay "crucial"
+2. V-band execution — the three-orders-of-magnitude TAM is R&D until a prototype demonstrates
+3. Warrant dilution — the lock-in costs 10-15% of the company if exercised
+4. AIM liquidity and a forward P/E (~48x) that prices the ramp
+5. Kuiper/competitor GaN programs eventually contesting the band
 
-## Why 71 and Not HC
+## Re-Rate Triggers
 
-**V-band discounting per Rule 16.** The V-band consumer terminal TAM (tens of millions of units) is 2031-2033 — six years out. At 20%/yr discount, only 26% of that value flows into the Entry calculation. If V-band were 2028-2029, this would score 76+ HC. The thesis quality (Base 78%) IS HC-grade. The timeline compresses the Entry.
+1. **SPCX listing (June 12 — tomorrow): the supply-chain spotlight flow event** — IPO-day discovery of "who supplies SpaceX" is the proxy-pattern mechanic running live; watch for re-rating and for V1-relevant disclosures in the prospectus
+2. **V-band prototype demonstrated → AH-7 MEDIUM→HIGH → V2 re-rate** — the thesis hinge; this is where the terminal TAM becomes priceable
+3. Second customer confirmed (the unnamed US partner named) → concentration penalty relief
+4. First GaN E-band production shipments (FY2027) → V1 verification begins
+5. E-band revenue run rate >£100M → commercial-scale proof
+6. Golden Dome contract flow-through (SpaceX content awards naming Filtronic)
+7. SpaceX warrant exercise → lock-in confirmed + dilution math applied
+8. Counter: SpaceX in-housing signals in RF → the vertical-integration risk firing → Core review
 
-**Customer concentration is real.** SpaceX is dominant. The unnamed US partner (Amazon?) would de-risk this, but unconfirmed.
-
-## What Gets FTC to HC (75+)
-
-- V-band prototype demonstrated → discount drops from 0.8^6 to 0.8^3, ceiling expands, re-run model
-- Second major customer confirmed (Amazon/Kuiper would transform the thesis)
-- SpaceX IPO creates Starlink supply chain re-rating
-- E-band revenue exceeds £100M/yr (proves commercial scale)
+*Restructured Jun 11, 2026 — prior version: /mnt/user-data/outputs/versions/FTC_artifact_pre_restructure_2026-06-11.md*
