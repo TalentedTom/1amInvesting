@@ -5,6 +5,8 @@ import re
 import subprocess
 import sys
 import time
+from pathlib import Path
+
 from deep_translator import GoogleTranslator
 
 # Fields populated by the cron pipeline that are NOT a function of any xlsx
@@ -15,7 +17,16 @@ from deep_translator import GoogleTranslator
 # Instead, we re-run score.py at the end so those get recomputed cleanly.
 PRESERVE_FROM_PRIOR = ("Change %",)
 
-EXCEL_PATH = r"C:\Users\GamerTech\.gemini\antigravity\scratch\Artifacts\v3.2_master_portfolio.xlsx"
+# Source xlsx location. Portable across machines (different username / OS):
+#   1. PORTFOLIO_XLSX env var, if set — explicit override.
+#   2. Otherwise the repo's sibling Artifacts/ folder — the standard layout
+#      (this script lives at the repo root; Artifacts/ sits beside the repo).
+# sync_deep_dives.py already resolves Artifacts/ the same relative way, so a
+# fresh `git clone` + an Artifacts/ sibling folder Just Works — no path edits.
+_REPO_ROOT = Path(__file__).resolve().parent
+EXCEL_PATH = os.environ.get("PORTFOLIO_XLSX") or str(
+    _REPO_ROOT.parent / "Artifacts" / "v3.2_master_portfolio.xlsx"
+)
 OUTPUT_PATH = "data.js"
 CACHE_PATH = "translation_cache.json"
 

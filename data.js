@@ -617,26 +617,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 32,
-            "Ticker": "CRDO",
-            "Name": "Credo Technology",
-            "EV Upside": 25,
-            "Base": 73,
-            "Port": "",
-            "Current Price": 265.46,
-            "Upside": "1.3x",
-            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
-            "Artifact Updated": "Jun 10 (audit)",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "198",
-            "FY2028": "356",
-            "FY2029": "569",
-            "FY2030": "796",
-            "Change %": "-8.79%",
-            "Entry": 9,
-            "Total": 47
-        },
-        {
-            "Rank": 33,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "EV Upside": 17,
@@ -656,7 +636,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 34,
+            "Rank": 33,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "EV Upside": 15,
@@ -676,7 +656,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 35,
+            "Rank": 34,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 14,
@@ -696,7 +676,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 36,
+            "Rank": 35,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "EV Upside": 10,
@@ -716,7 +696,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 37,
+            "Rank": 36,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "EV Upside": 9,
@@ -736,7 +716,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 38,
+            "Rank": 37,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV Upside": 5,
@@ -755,7 +735,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 39,
+            "Rank": 38,
             "Ticker": "300408.SZ",
             "Name": "Three-Circle Group",
             "EV Upside": 4,
@@ -772,6 +752,26 @@ window.PORTFOLIO_DATA = {
             "FY2030": 129,
             "Entry": 0,
             "Total": 43
+        },
+        {
+            "Rank": 39,
+            "Ticker": "CRDO",
+            "Name": "Credo Technology",
+            "EV Upside": 0,
+            "Base": 73,
+            "Port": "",
+            "Current Price": 265.46,
+            "Upside": "1.0x",
+            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
+            "Artifact Updated": "Jun 13 (vector rebuild)",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 145,
+            "FY2028": 267,
+            "FY2029": 410,
+            "FY2030": 555,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 44
         },
         {
             "Rank": 40,
@@ -2396,26 +2396,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 32,
-            "Ticker": "CRDO",
-            "Name": "信条科技",
-            "EV Upside": 25,
-            "Base": 73,
-            "Port": "",
-            "Current Price": 265.46,
-            "Upside": "1.3x",
-            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
-            "Artifact Updated": "Jun 10 (audit)",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "198",
-            "FY2028": "356",
-            "FY2029": "569",
-            "FY2030": "796",
-            "Change %": "-8.79%",
-            "Entry": 9,
-            "Total": 47
-        },
-        {
-            "Rank": 33,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "EV Upside": 17,
@@ -2435,7 +2415,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 34,
+            "Rank": 33,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "EV Upside": 15,
@@ -2455,7 +2435,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 35,
+            "Rank": 34,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 14,
@@ -2475,7 +2455,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 36,
+            "Rank": 35,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "EV Upside": 10,
@@ -2495,7 +2475,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 37,
+            "Rank": 36,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "EV Upside": 9,
@@ -2515,7 +2495,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 38,
+            "Rank": 37,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV Upside": 5,
@@ -2534,7 +2514,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 39,
+            "Rank": 38,
             "Ticker": "300408.SZ",
             "Name": "三环集团",
             "EV Upside": 4,
@@ -2551,6 +2531,26 @@ window.PORTFOLIO_DATA = {
             "FY2030": 129,
             "Entry": 0,
             "Total": 43
+        },
+        {
+            "Rank": 39,
+            "Ticker": "CRDO",
+            "Name": "信条科技",
+            "EV Upside": 0,
+            "Base": 73,
+            "Port": "",
+            "Current Price": 265.46,
+            "Upside": "1.0x",
+            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
+            "Artifact Updated": "Jun 13 (vector rebuild)",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 145,
+            "FY2028": 267,
+            "FY2029": 410,
+            "FY2030": 555,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 44
         },
         {
             "Rank": 40,

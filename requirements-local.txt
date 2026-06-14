@@ -1,0 +1,11 @@
+# Python deps for running the data pipeline LOCALLY (update_data.py +
+# scripts/*). The GitHub Actions cron only needs scripts/requirements.txt
+# (yfinance); this file covers the full local regen.
+#
+#   pip install -r requirements-local.txt
+#
+pandas>=2.0
+openpyxl>=3.1          # pandas' .xlsx engine
+deep-translator>=1.11  # Google Translate for the zh-CN block
+yfinance>=0.2.40       # live-price fetch (also in scripts/requirements.txt)
+pillow>=10.0           # only for scripts/gen_brand_assets.py (favicon/OG card)
