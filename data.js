@@ -756,6 +756,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 39,
+            "Ticker": "300408.SZ",
+            "Name": "Three-Circle Group",
+            "EV Upside": 4,
+            "Base": 72,
+            "Port": "",
+            "Current Price": 80,
+            "Upside": "1.1x",
+            "Position Type": "⚡/🔒 MIXED\nFiber optic ceramic ferrule 70-80% global monopoly (85%+ MPO/MT). MLCC fastest-growing Chinese w/ 100% powder self-supply. Dual AI thesis. H-share HKEX listing pending",
+            "Artifact Updated": "Jun 13 (new dive)",
+            "SuperCycle": "AI Photonics + MLCC",
+            "FY2027": 67,
+            "FY2028": 84,
+            "FY2029": 104,
+            "FY2030": 129,
+            "Entry": 0,
+            "Total": 43
+        },
+        {
+            "Rank": 40,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "EV Upside": -1,
@@ -775,7 +794,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "EV Upside": -3,
@@ -795,7 +814,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "EV Upside": -7,
@@ -814,7 +833,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "SHMD",
             "Name": "SCHMID Group",
             "EV Upside": -11,
@@ -833,7 +852,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 43,
+            "Rank": 44,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "EV Upside": -19,
@@ -852,7 +871,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 44,
+            "Rank": 45,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -28,
@@ -871,7 +890,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 45,
+            "Rank": 46,
             "Ticker": "ARM",
             "Name": "Arm Holdings",
             "EV Upside": -34,
@@ -891,7 +910,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 46,
+            "Rank": 47,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "EV Upside": -36,
@@ -911,7 +930,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 48,
             "Ticker": "WOLF",
             "Name": "Wolfspeed",
             "EV Upside": -39,
@@ -930,7 +949,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 48,
+            "Rank": 49,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "EV Upside": -53,
@@ -950,7 +969,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 49,
+            "Rank": 50,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "EV Upside": -58,
@@ -968,24 +987,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": "—",
-            "Ticker": "NKT",
-            "Name": "NKT A/S",
-            "EV Upside": 108,
-            "Base": 70,
-            "Port": "",
-            "Current Price": 995,
-            "Upside": "2.2x-2.9x",
-            "Position Type": "🔒 CHOKEPOINT\nPhysics+Capital: HVDC submarine cable — 3-player oligopoly, 5-7yr barrier to entry. 2026-2035+",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-0.95%"
         },
         {
             "Rank": "—",
@@ -2534,6 +2535,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 39,
+            "Ticker": "300408.SZ",
+            "Name": "三环集团",
+            "EV Upside": 4,
+            "Base": 72,
+            "Port": "",
+            "Current Price": 80,
+            "Upside": "1.1x",
+            "Position Type": "⚡/🔒 混合\n光纤陶瓷插芯全球垄断70-80%（85%+ MPO/MT）。中国增长最快的MLCC，粉末100%自供。双人工智能论文。 H股港交所上市待定",
+            "Artifact Updated": "Jun 13 (new dive)",
+            "SuperCycle": "AI Photonics + MLCC",
+            "FY2027": 67,
+            "FY2028": 84,
+            "FY2029": 104,
+            "FY2030": 129,
+            "Entry": 0,
+            "Total": 43
+        },
+        {
+            "Rank": 40,
             "Ticker": "VICR",
             "Name": "维科公司",
             "EV Upside": -1,
@@ -2553,7 +2573,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "EV Upside": -3,
@@ -2573,7 +2593,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "EV Upside": -7,
@@ -2592,7 +2612,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "SHMD",
             "Name": "施密德集团",
             "EV Upside": -11,
@@ -2611,7 +2631,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 43,
+            "Rank": 44,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "EV Upside": -19,
@@ -2630,7 +2650,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 44,
+            "Rank": 45,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -28,
@@ -2649,7 +2669,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 45,
+            "Rank": 46,
             "Ticker": "ARM",
             "Name": "安谋控股",
             "EV Upside": -34,
@@ -2669,7 +2689,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 46,
+            "Rank": 47,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "EV Upside": -36,
@@ -2689,7 +2709,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 48,
             "Ticker": "WOLF",
             "Name": "狼速",
             "EV Upside": -39,
@@ -2708,7 +2728,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 48,
+            "Rank": 49,
             "Ticker": "PL",
             "Name": "星球实验室",
             "EV Upside": -53,
@@ -2728,7 +2748,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 49,
+            "Rank": 50,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "EV Upside": -58,
@@ -2746,24 +2766,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": "—",
-            "Ticker": "NKT",
-            "Name": "NKT A/S",
-            "EV Upside": 108,
-            "Base": 70,
-            "Port": "",
-            "Current Price": 995,
-            "Upside": "2.2倍-2.9倍",
-            "Position Type": "🔒 阻塞点\n物理+资本：高压直流海底电缆——三人寡头垄断，5-7年的进入壁垒。 2026-2035+",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-0.95%"
         },
         {
             "Rank": "—",
