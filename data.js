@@ -10,7 +10,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 80.7,
             "Upside": "4.6x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: CW laser — silicon cannot generate light. Every CPO gen. 2026-2035+",
-            "Artifact Updated": "Jun 9 (restructure)",
+            "Artifact Updated": "Jun 9 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "130",
             "FY2028": "368",
@@ -229,7 +229,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 174.8,
             "Upside": "3.1x",
             "Position Type": "⚡ BOTTLENECK\nCapacity: Transceiver assembly — capacity expanding to 500K/mo. Competitive market. 1-2yr window.",
-            "Artifact Updated": "Jun 10 (restructure) +Jun13 ATM/share fix",
+            "Artifact Updated": "Jun 10 (restructure) +Jun13 ATM/share fix +Jun13 VI correction +AXT/Nov10",
             "SuperCycle": "AI, 1.6T, 800G",
             "FY2027": "272",
             "FY2028": "536",
@@ -348,7 +348,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 102.71,
             "Upside": "1.7x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: Sole-source WLBI — no competitor exists. Every compound semi. 2026-2035+",
-            "Artifact Updated": "Jun 11 (restructure)",
+            "Artifact Updated": "Jun 11 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "80",
             "FY2028": "177",
@@ -368,7 +368,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 886.04,
             "Upside": "1.8x",
             "Position Type": "🔒 CHOKEPOINT\nPhysics: EML laser near-monopoly — capacity sold out to 2029. 2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold",
+            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "980",
             "FY2028": "1,615",
@@ -380,6 +380,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 20,
+            "Ticker": "4078.T",
+            "Name": "Sakai Chemical (堺化学)",
+            "EV Upside": 67,
+            "Base": 62,
+            "Port": "",
+            "Current Price": 4530,
+            "Upside": "2.1x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 13 (MLCC revision)",
+            "SuperCycle": "Other",
+            "FY2027": 7385,
+            "FY2028": 9436,
+            "FY2029": 11590,
+            "FY2030": 14154,
+            "Entry": 52,
+            "Total": 58
+        },
+        {
+            "Rank": 21,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "EV Upside": 64,
@@ -388,7 +407,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 363.07,
             "Upside": "1.8x",
             "Position Type": "🔒 CHOKEPOINT\nVertical: Most advanced InP lines globally — doubling capacity TWICE still not enough. 2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold",
+            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "419",
             "FY2028": "653",
@@ -399,7 +418,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "EV Upside": 64,
@@ -408,7 +427,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 481.5,
             "Upside": "1.8x",
             "Position Type": "⚡ Bottleneck",
-            "Artifact Updated": "Jun 11 (restructure)",
+            "Artifact Updated": "Jun 11 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "513",
             "FY2028": "858",
@@ -419,7 +438,7 @@ window.PORTFOLIO_DATA = {
             "Total": 64
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "AVGO",
             "Name": "Broadcom Inc",
             "EV Upside": 57,
@@ -438,7 +457,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "EV Upside": 52,
@@ -458,7 +477,7 @@ window.PORTFOLIO_DATA = {
             "Total": 51
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "EV Upside": 48,
@@ -478,7 +497,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (汎銓科技)",
             "EV Upside": 47,
@@ -498,7 +517,7 @@ window.PORTFOLIO_DATA = {
             "Total": 59
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "EV Upside": 47,
@@ -517,7 +536,7 @@ window.PORTFOLIO_DATA = {
             "Total": 58
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "EV Upside": 46,
@@ -535,25 +554,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%",
             "Entry": 25,
             "Total": 56
-        },
-        {
-            "Rank": 28,
-            "Ticker": "4078.T",
-            "Name": "Sakai Chemical (堺化学)",
-            "EV Upside": 44,
-            "Base": 58,
-            "Port": "",
-            "Current Price": 4530,
-            "Upside": "1.8x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "Other",
-            "FY2027": 6667,
-            "FY2028": "8000",
-            "FY2029": "9744",
-            "FY2030": "11897",
-            "Entry": 35,
-            "Total": 49
         },
         {
             "Rank": 29,
@@ -1788,7 +1788,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 80.7,
             "Upside": "4.6x",
             "Position Type": "🔒 阻塞点\n物理：连续激光——硅不能发光。每个 CPO 一代。 2026-2035+",
-            "Artifact Updated": "Jun 9 (restructure)",
+            "Artifact Updated": "Jun 9 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "130",
             "FY2028": "368",
@@ -2007,7 +2007,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 174.8,
             "Upside": "3.1x",
             "Position Type": "⚡ 瓶颈\n产能：收发器组装——产能扩大至500K/月。竞争市场。 1-2年窗口期。",
-            "Artifact Updated": "Jun 10 (restructure) +Jun13 ATM/share fix",
+            "Artifact Updated": "Jun 10 (restructure) +Jun13 ATM/share fix +Jun13 VI correction +AXT/Nov10",
             "SuperCycle": "AI, 1.6T, 800G",
             "FY2027": "272",
             "FY2028": "536",
@@ -2126,7 +2126,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 102.71,
             "Upside": "1.7x",
             "Position Type": "🔒 阻塞点\n物理：WLBI 唯一来源——不存在竞争对手。每个复合半。 2026-2035+",
-            "Artifact Updated": "Jun 11 (restructure)",
+            "Artifact Updated": "Jun 11 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "80",
             "FY2028": "177",
@@ -2146,7 +2146,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 886.04,
             "Upside": "1.8x",
             "Position Type": "🔒 阻塞点\n物理学：EML 激光器近乎垄断——产能到 2029 年就已售罄。2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold",
+            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "980",
             "FY2028": "1,615",
@@ -2158,6 +2158,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 20,
+            "Ticker": "4078.T",
+            "Name": "堺化学",
+            "EV Upside": 67,
+            "Base": 62,
+            "Port": "",
+            "Current Price": 4530,
+            "Upside": "2.1x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 13 (MLCC revision)",
+            "SuperCycle": "Other",
+            "FY2027": 7385,
+            "FY2028": 9436,
+            "FY2029": 11590,
+            "FY2030": 14154,
+            "Entry": 52,
+            "Total": 58
+        },
+        {
+            "Rank": 21,
             "Ticker": "COHR",
             "Name": "相干公司",
             "EV Upside": 64,
@@ -2166,7 +2185,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 363.07,
             "Upside": "1.8x",
             "Position Type": "🔒 阻塞点\n垂直：全球最先进的 InP 生产线——产能翻倍仍然不够。 2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold",
+            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "419",
             "FY2028": "653",
@@ -2177,7 +2196,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "EV Upside": 64,
@@ -2186,7 +2205,7 @@ window.PORTFOLIO_DATA = {
             "Current Price": 481.5,
             "Upside": "1.8x",
             "Position Type": "⚡ 瓶颈",
-            "Artifact Updated": "Jun 11 (restructure)",
+            "Artifact Updated": "Jun 11 (restructure) +Nov10",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
             "FY2027": "513",
             "FY2028": "858",
@@ -2197,7 +2216,7 @@ window.PORTFOLIO_DATA = {
             "Total": 64
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "AVGO",
             "Name": "博通公司",
             "EV Upside": 57,
@@ -2216,7 +2235,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "EV Upside": 52,
@@ -2236,7 +2255,7 @@ window.PORTFOLIO_DATA = {
             "Total": 51
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "EV Upside": 48,
@@ -2256,7 +2275,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (泛铨科技)",
             "EV Upside": 47,
@@ -2276,7 +2295,7 @@ window.PORTFOLIO_DATA = {
             "Total": 59
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "EV Upside": 47,
@@ -2295,7 +2314,7 @@ window.PORTFOLIO_DATA = {
             "Total": 58
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "EV Upside": 46,
@@ -2313,25 +2332,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%",
             "Entry": 25,
             "Total": 56
-        },
-        {
-            "Rank": 28,
-            "Ticker": "4078.T",
-            "Name": "堺化学",
-            "EV Upside": 44,
-            "Base": 58,
-            "Port": "",
-            "Current Price": 4530,
-            "Upside": "1.8x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "Other",
-            "FY2027": 6667,
-            "FY2028": "8000",
-            "FY2029": "9744",
-            "FY2030": "11897",
-            "Entry": 35,
-            "Total": 49
         },
         {
             "Rank": 29,
