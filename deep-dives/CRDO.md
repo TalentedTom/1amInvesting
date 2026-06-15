@@ -56,51 +56,75 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 | Risks | -3 | Customer concentration (-1). Copper distance limits (-1). AEC socket competition now live: ALAB Taurus inside a $62B platform push + Montage PCIe 6.x AECs launched (-1). |
 | **Base** | **44/60 (73%)** | Jun 10 follow-through: Core +1 (Dust closed, Robin/Cardinal, full-stack), Cycle +1 (book-to-bill >4x, LTAs), Risks -1 (ALAB/Montage AEC entry). |
 
-## Ceiling — v4.0 AH-1 Full Derivation (TAM-grounded per-rack math, 40% OP, 25x, blended)
+## Ceiling — v4.2 AH-1 Full Derivation (explicit vector model with 16b probability-weighted breadcrumbs, 48% OP, 25x, ~199M shares)
 
-### Per-Rack Connectivity Math:
+### Vector Model (AH-9) — each product line independently sourced and probability-weighted per Rule 16b
 
-Current: ~$46K per CRDO-equipped rack (FY2026). 35% rack penetration (3-4 hyperscalers).
+**CONFIRMED VECTORS (in management guide / shipping):**
 
-| Product | Today | FY2028+ | Per Rack |
-|---------|-------|---------|----------|
-| AECs (ZeroFlap) | $46K | $60-80K | Volume + 1.6T |
-| Optical DSPs | Ramping | $50-100K | 800G/1.6T |
-| PCIe Retimers | Design wins | $20-40K | Gen6 production |
-| SiPh PICs (DustPhotonics) | Pre-revenue | $50-100K | Vertical integration |
-| **Per-rack total** | **$46K** | **$180-320K** | **4-7x today** |
+**V1 AECs (ZeroFlap copper, 88% market share per 650 Group) — AH-7: HIGH** (the base business; 1.6T gen ramping; NVL576 keeps copper intra-rack): $1.60B / $2.00B / $2.30B / $2.50B (FY2027-30). 16b: 85% (shipping at scale, 88% share, guided).
 
-### Revenue Model (Flat 35% penetration, $/rack expands):
+**V2 Optical DSPs (Cardinal) — AH-7: HIGH** (mgmt: >$100M in FY2027 within $600M optical; ramping with 800G/1.6T): $0.35B / $0.70B / $1.10B / $1.50B. 16b: 80% (shipping, guided breakdown).
 
-Analysts model AECs only ($2.52B FY2027). TAM model adds 3 product vectors (optical DSP, SiPh PIC, PCIe retimer) that stack on top of AECs as $/rack goes $46K→$120K→$200K→$280K.
+**V3 ZeroFlap Optics (optical transceivers) — AH-7: HIGH** (mgmt: >$100M in FY2027; ZF reliability extends to optical): $0.25B / $0.60B / $1.00B / $1.40B. 16b: 75% (guided, qualification in progress).
 
-| Year | Racks/yr | × 35% | $/Rack | Revenue |
-|------|----------|-------|--------|---------|
-| FY2026 | 83K | 29K | $46K | $1.33B (actual) |
-| FY2027 | 120K | 42K | $65K | $2.73B |
-| FY2028 | 170K | 60K | $120K | $7.14B |
-| FY2029 | 230K | 81K | $200K | $16.1B |
-| FY2030 | 300K | 105K | $280K | $29.4B |
+**V4 SiPh PICs (DustPhotonics, acquired) — AH-7: MEDIUM** (400G-3.2T roadmap; L3C architecture uses CW lasers = EML-shortage-immune; mgmt: >$100M FY2027): $0.15B / $0.50B / $1.00B / $1.50B. 16b: 65% (acquisition closed, products in development, revenue nascent).
 
-### Full Valuation Table (40% OP, 25x, ~197M shares):
+**V5 Retimers (Blue Heron PCIe Gen6, production Q3 FY2027) — AH-7: MEDIUM** (first scale-up-market exposure): $0.05B / $0.30B / $0.60B / $0.90B. 16b: 70% (design wins confirmed, production dated).
 
-| Year | Revenue (mgmt +40% beat) | OP (48%) | × 25x | Per Share |
+| Vector | FY2027 | FY2028 | FY2029 | FY2030 |
+|--------|--------|--------|--------|--------|
+| V1 AECs (88% share) | $1.60B | $2.00B | $2.30B | $2.50B |
+| V2 Optical DSPs | $0.35B | $0.70B | $1.10B | $1.50B |
+| V3 ZeroFlap Optics | $0.25B | $0.60B | $1.00B | $1.40B |
+| V4 SiPh PICs | $0.15B | $0.50B | $1.00B | $1.50B |
+| V5 Retimers | $0.05B | $0.30B | $0.60B | $0.90B |
+| **CONFIRMED BASE** | **$2.40B** | **$4.10B** | **$6.00B** | **$7.80B** |
+
+**PROBABILITY-WEIGHTED BREADCRUMB VECTORS (Rule 16b — priced at probability, not certainty):**
+
+**V6 OmniConnect Weaver ($2,000-3,000 revenue per GPU, CEO-guided, CEO performance awards tied to revenue milestones) — AH-7: MEDIUM** (FY2028 ramp; at $2,500 midpoint × deployment scale): $0.0B / $0.5B / $1.2B / $2.0B. 16b: **50%** (management hint + performance awards = credible but unverified at scale).
+
+**V7 NPO/CPO initial revenue — AH-7: LOW** (industry timeline dependent; mgmt flagged FY2028): $0.0B / $0.2B / $0.5B / $1.0B. 16b: **40%** (industry-dependent, not CRDO-specific).
+
+| Breadcrumb Vector | Full Value | × Probability | Weighted Add |
+|-------------------|-----------|---------------|-------------|
+| V6 Weaver FY28 | $0.50B | × 50% | $0.25B |
+| V6 Weaver FY29 | $1.20B | × 50% | $0.60B |
+| V6 Weaver FY30 | $2.00B | × 50% | $1.00B |
+| V7 NPO/CPO FY28 | $0.20B | × 40% | $0.08B |
+| V7 NPO/CPO FY29 | $0.50B | × 40% | $0.20B |
+| V7 NPO/CPO FY30 | $1.00B | × 40% | $0.40B |
+
+| | FY2027 | FY2028 | FY2029 | FY2030 |
+|--|--------|--------|--------|--------|
+| Confirmed base | $2.40B | $4.10B | $6.00B | $7.80B |
+| + Weighted adds | $0.00B | $0.33B | $0.80B | $1.40B |
+| **TOTAL REVENUE** | **$2.40B** | **$4.43B** | **$6.80B** | **$9.20B** |
+
+### Valuation (48% OP per Q4 FY2026 actual + mgmt ~50% net margin guide; 25x; 199M diluted shares)
+
+| Year | Revenue | OP (48%) | × 25x | Per Share |
 |------|---------|----------|-------|-----------|
-| 2027 | $3.28B | $1.57B | $39.4B | $198 |
-| 2028 | $5.9B | $2.83B | $70.8B | $356 |
-| 2029 | $9.4B | $4.53B | $113.3B | $569 |
-| 2030 | $13.2B | $6.34B | $158.4B | $796 |
+| 2027 | $2.40B | $1.15B | $28.8B | **$145** |
+| 2028 | $4.43B | $2.13B | $53.2B | **$267** |
+| 2029 | $6.80B | $3.26B | $81.6B | **$410** |
+| 2030 | $9.20B | $4.42B | $110.4B | **$555** |
 
-Model: management guides +80% FY2027 (~$2.34B). CRDO beat FY2026 guide by ~2x. Conservative 40% revenue beat applied across all years. OP margin 48% per actual Q4 FY2026 (49.6%) and management ~50% net margin guide. 199M diluted shares. 25x multiple.
+  FY2028: $4.43B × 48% OP = $2.13B × 25x = $53.2B / 199M shares = **$267**
+
+CEILING: $267 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
+
+**Model change note (Jun 13):** replaced the prior "mgmt +40% beat" single-multiplier approach with explicit vector decomposition. The 40% beat was a proxy standing in for five product ramps, each with different timelines and probabilities. Decomposing it via Rule 16b reveals the confirmed base ($2.40B FY2027 = management's own guide) plus probability-weighted upside from Weaver and NPO/CPO. The result is lower than the prior model but structurally honest — each number traces to a named product, a management source, and a probability weight. Escalation paths pre-registered: Weaver deployment confirmation → 50%→75%; NPO/CPO order → 40%→60%; each escalation lifts the weighted adds and re-derives the ceiling.
 
 ### Per-share values for Excel:
-FY2027: $198 | FY2028: $356 | FY2029: $569 | FY2030: $796
+FY2027: $145 | FY2028: $267 | FY2029: $410 | FY2030: $555
 
 ## Jun 10, 2026 — Follow-Through Audit (full pass, post-architecture-week)
 
-**Verdict: model survives. FY values UNCHANGED (198/356/569/796). Base 72 → 73.**
+**Verdict: Base 72 → 73. Jun 13: model REBUILT from "mgmt +40% beat" to explicit 7-vector decomposition with Rule 16b probability weights. FY values revised: 198/356/569/796 → 145/267/410/555.**
 
-**The 40%-beat assumption was re-audited and RETAINED.** Evidence: FY2026 delivered 2x management's initial expectation (sourced, Q4 reporting); book-to-bill >4x with orders into CY2028 and LTAs to end of decade; supply "tightness throughout next year or longer" (mgmt). A beat assumption this aggressive needs exactly this evidence class — it has it. Re-check at Q1 FY2027 print (~September): if the beat cadence narrows below ~20%, step the assumption down.
+**The 40%-beat assumption was retired in favor of vector-level pricing.** The beat was a single multiplier standing in for five confirmed product ramps plus two breadcrumb vectors (Weaver $2-3K/GPU, NPO/CPO), each with different timelines and probabilities. Decomposing it reveals that some vectors (AECs at 88% share, optical DSPs) are near-certain but maturing, while others (Weaver, CPO) are high-upside but 40-50% probability. The blended result is lower but structurally honest — each number traces to a named product, a source, and a probability weight. Escalation paths are pre-registered: each vector's probability ratchets upward on verification prints.
 
 **What the architecture week validated (no numbers moved):**
 - CRDO was green on BOTH bloodbath days (Friday rotation + Jun 9) — the market independently identified it as an NPO-transition winner
