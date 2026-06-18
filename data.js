@@ -302,13 +302,13 @@ window.PORTFOLIO_DATA = {
             "Rank": 16,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
-            "EV Upside": 99,
-            "Base": 80,
+            "EV Upside": 101,
+            "Base": 82,
             "Port": "✓",
             "Current Price": 1868.48,
             "Upside": "2.2x",
             "Position Type": "⚡ BOTTLENECK\nSupply: NAND shortage — new fabs coming (Samsung P5, SK Hynix China). Through H1 2027.",
-            "Artifact Updated": "Jun 10 (restructure)",
+            "Artifact Updated": "Jun 15 (Core15 +AI NAND)",
             "SuperCycle": "AI",
             "FY2027": "3,278",
             "FY2028": "4,174",
@@ -316,7 +316,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "5,404",
             "Change %": "-4.75%",
             "Entry": 56,
-            "Total": 70
+            "Total": 72
         },
         {
             "Rank": 17,
@@ -340,6 +340,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 18,
+            "Ticker": "4078.T",
+            "Name": "Sakai Chemical (堺化学)",
+            "EV Upside": 80,
+            "Base": 63,
+            "Port": "",
+            "Current Price": 4530,
+            "Upside": "2.3x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 15 (JPM MLCC revision)",
+            "SuperCycle": "Other",
+            "FY2027": 8017,
+            "FY2028": 10256,
+            "FY2029": 13214,
+            "FY2030": 16410,
+            "Entry": 57,
+            "Total": 61
+        },
+        {
+            "Rank": 19,
             "Ticker": "AEHR",
             "Name": "Aehr Test Systems",
             "EV Upside": 67,
@@ -359,7 +378,7 @@ window.PORTFOLIO_DATA = {
             "Total": 69
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "EV Upside": 67,
@@ -377,25 +396,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.61%",
             "Entry": 39,
             "Total": 65
-        },
-        {
-            "Rank": 20,
-            "Ticker": "4078.T",
-            "Name": "Sakai Chemical (堺化学)",
-            "EV Upside": 67,
-            "Base": 62,
-            "Port": "",
-            "Current Price": 4530,
-            "Upside": "2.1x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 13 (MLCC revision)",
-            "SuperCycle": "Other",
-            "FY2027": 7385,
-            "FY2028": 9436,
-            "FY2029": 11590,
-            "FY2030": 14154,
-            "Entry": 52,
-            "Total": 58
         },
         {
             "Rank": 21,
@@ -478,6 +478,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 25,
+            "Ticker": "000636.SZ",
+            "Name": "Fenghua Advanced (风华高科)",
+            "EV Upside": 49,
+            "Base": 77,
+            "Port": "",
+            "Current Price": 64.3,
+            "Upside": "1.6x",
+            "Position Type": "WL",
+            "Artifact Updated": "Jun 15 (35% peak margin)",
+            "SuperCycle": "AI, MLCC",
+            "FY2027": 52.27,
+            "FY2028": 105,
+            "FY2029": 128,
+            "FY2030": 152.73,
+            "Entry": 27,
+            "Total": 57
+        },
+        {
+            "Rank": 26,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "EV Upside": 48,
@@ -497,7 +516,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (汎銓科技)",
             "EV Upside": 47,
@@ -517,7 +536,7 @@ window.PORTFOLIO_DATA = {
             "Total": 59
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "EV Upside": 47,
@@ -536,7 +555,7 @@ window.PORTFOLIO_DATA = {
             "Total": 58
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "EV Upside": 46,
@@ -556,7 +575,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
             "EV Upside": 43,
@@ -576,7 +595,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV Upside": 41,
@@ -596,7 +615,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "EV Upside": 38,
@@ -616,7 +635,7 @@ window.PORTFOLIO_DATA = {
             "Total": 51
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "EV Upside": 17,
@@ -636,7 +655,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "EV Upside": 15,
@@ -656,7 +675,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 14,
@@ -676,7 +695,26 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 35,
+            "Rank": 36,
+            "Ticker": "300408.SZ",
+            "Name": "Three-Circle Group",
+            "EV Upside": 12,
+            "Base": 73,
+            "Port": "",
+            "Current Price": 80,
+            "Upside": "1.2x",
+            "Position Type": "⚡/🔒 MIXED\nFiber optic ceramic ferrule 70-80% global monopoly (85%+ MPO/MT). MLCC fastest-growing Chinese w/ 100% powder self-supply. Dual AI thesis. H-share HKEX listing pending",
+            "Artifact Updated": "Jun 15 (JPM MLCC revision)",
+            "SuperCycle": "AI Photonics + MLCC",
+            "FY2027": 68,
+            "FY2028": 93,
+            "FY2029": 115,
+            "FY2030": 148,
+            "Entry": 0,
+            "Total": 44
+        },
+        {
+            "Rank": 37,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "EV Upside": 10,
@@ -696,7 +734,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 36,
+            "Rank": 38,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "EV Upside": 9,
@@ -714,44 +752,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": 37,
-            "Ticker": "000636.SZ",
-            "Name": "Fenghua Advanced (风华高科)",
-            "EV Upside": 5,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 64.3,
-            "Upside": "1.1x",
-            "Position Type": "WL",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI, MLCC",
-            "FY2027": "41.82",
-            "FY2028": "68.18",
-            "FY2029": "99.27",
-            "FY2030": "130.91",
-            "Entry": 0,
-            "Total": 45
-        },
-        {
-            "Rank": 38,
-            "Ticker": "300408.SZ",
-            "Name": "Three-Circle Group",
-            "EV Upside": 4,
-            "Base": 72,
-            "Port": "",
-            "Current Price": 80,
-            "Upside": "1.1x",
-            "Position Type": "⚡/🔒 MIXED\nFiber optic ceramic ferrule 70-80% global monopoly (85%+ MPO/MT). MLCC fastest-growing Chinese w/ 100% powder self-supply. Dual AI thesis. H-share HKEX listing pending",
-            "Artifact Updated": "Jun 13 (new dive)",
-            "SuperCycle": "AI Photonics + MLCC",
-            "FY2027": 67,
-            "FY2028": 84,
-            "FY2029": 104,
-            "FY2030": 129,
-            "Entry": 0,
-            "Total": 43
         },
         {
             "Rank": 39,
@@ -853,6 +853,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 44,
+            "Ticker": "300285.SZ",
+            "Name": "Sinocera (国瓷材料)",
+            "EV Upside": -11,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 62.4,
+            "Upside": "0.9x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 15 (JPM margin front-load)",
+            "SuperCycle": "MLCC",
+            "FY2027": 31.2,
+            "FY2028": 53.4,
+            "FY2029": 67.8,
+            "FY2030": 83.5,
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 45,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "EV Upside": -19,
@@ -869,25 +888,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": "173",
             "Entry": 0,
             "Total": 48
-        },
-        {
-            "Rank": 45,
-            "Ticker": "300285.SZ",
-            "Name": "Sinocera (国瓷材料)",
-            "EV Upside": -28,
-            "Base": 73,
-            "Port": "",
-            "Current Price": 62.4,
-            "Upside": "0.6x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "MLCC",
-            "FY2027": "25.5",
-            "FY2028": "38.2",
-            "FY2029": "55.2",
-            "FY2030": "77.1",
-            "Entry": 0,
-            "Total": 44
         },
         {
             "Rank": 46,
@@ -2081,13 +2081,13 @@ window.PORTFOLIO_DATA = {
             "Rank": 16,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
-            "EV Upside": 99,
-            "Base": 80,
+            "EV Upside": 101,
+            "Base": 82,
             "Port": "✓",
             "Current Price": 1868.48,
             "Upside": "2.2x",
             "Position Type": "⚡ 瓶颈\n供应：NAND 短缺——新晶圆厂即将建成（三星 P5、SK 海力士中国）。到 2027 年上半年。",
-            "Artifact Updated": "Jun 10 (restructure)",
+            "Artifact Updated": "Jun 15 (Core15 +AI NAND)",
             "SuperCycle": "AI",
             "FY2027": "3,278",
             "FY2028": "4,174",
@@ -2095,7 +2095,7 @@ window.PORTFOLIO_DATA = {
             "FY2030": "5,404",
             "Change %": "-4.75%",
             "Entry": 56,
-            "Total": 70
+            "Total": 72
         },
         {
             "Rank": 17,
@@ -2119,6 +2119,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 18,
+            "Ticker": "4078.T",
+            "Name": "堺化学",
+            "EV Upside": 80,
+            "Base": 63,
+            "Port": "",
+            "Current Price": 4530,
+            "Upside": "2.3x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 15 (JPM MLCC revision)",
+            "SuperCycle": "Other",
+            "FY2027": 8017,
+            "FY2028": 10256,
+            "FY2029": 13214,
+            "FY2030": 16410,
+            "Entry": 57,
+            "Total": 61
+        },
+        {
+            "Rank": 19,
             "Ticker": "AEHR",
             "Name": "空气测试系统",
             "EV Upside": 67,
@@ -2138,7 +2157,7 @@ window.PORTFOLIO_DATA = {
             "Total": 69
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "EV Upside": 67,
@@ -2156,25 +2175,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-8.61%",
             "Entry": 39,
             "Total": 65
-        },
-        {
-            "Rank": 20,
-            "Ticker": "4078.T",
-            "Name": "堺化学",
-            "EV Upside": 67,
-            "Base": 62,
-            "Port": "",
-            "Current Price": 4530,
-            "Upside": "2.1x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 13 (MLCC revision)",
-            "SuperCycle": "Other",
-            "FY2027": 7385,
-            "FY2028": 9436,
-            "FY2029": 11590,
-            "FY2030": 14154,
-            "Entry": 52,
-            "Total": 58
         },
         {
             "Rank": 21,
@@ -2257,6 +2257,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 25,
+            "Ticker": "000636.SZ",
+            "Name": "Fenghua Advanced (风华高科)",
+            "EV Upside": 49,
+            "Base": 77,
+            "Port": "",
+            "Current Price": 64.3,
+            "Upside": "1.6x",
+            "Position Type": "WL",
+            "Artifact Updated": "Jun 15 (35% peak margin)",
+            "SuperCycle": "AI, MLCC",
+            "FY2027": 52.27,
+            "FY2028": 105,
+            "FY2029": 128,
+            "FY2030": 152.73,
+            "Entry": 27,
+            "Total": 57
+        },
+        {
+            "Rank": 26,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "EV Upside": 48,
@@ -2276,7 +2295,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (泛铨科技)",
             "EV Upside": 47,
@@ -2296,7 +2315,7 @@ window.PORTFOLIO_DATA = {
             "Total": 59
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "EV Upside": 47,
@@ -2315,7 +2334,7 @@ window.PORTFOLIO_DATA = {
             "Total": 58
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "EV Upside": 46,
@@ -2335,7 +2354,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
             "EV Upside": 43,
@@ -2355,7 +2374,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV Upside": 41,
@@ -2375,7 +2394,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "EV Upside": 38,
@@ -2395,7 +2414,7 @@ window.PORTFOLIO_DATA = {
             "Total": 51
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "EV Upside": 17,
@@ -2415,7 +2434,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "EV Upside": 15,
@@ -2435,7 +2454,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 14,
@@ -2455,7 +2474,26 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 35,
+            "Rank": 36,
+            "Ticker": "300408.SZ",
+            "Name": "三环集团",
+            "EV Upside": 12,
+            "Base": 73,
+            "Port": "",
+            "Current Price": 80,
+            "Upside": "1.2x",
+            "Position Type": "⚡/🔒 混合\n光纤陶瓷插芯全球垄断70-80%（85%+ MPO/MT）。中国增长最快的MLCC，粉末100%自供。双人工智能论文。 H股港交所上市待定",
+            "Artifact Updated": "Jun 15 (JPM MLCC revision)",
+            "SuperCycle": "AI Photonics + MLCC",
+            "FY2027": 68,
+            "FY2028": 93,
+            "FY2029": 115,
+            "FY2030": 148,
+            "Entry": 0,
+            "Total": 44
+        },
+        {
+            "Rank": 37,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "EV Upside": 10,
@@ -2475,7 +2513,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 36,
+            "Rank": 38,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "EV Upside": 9,
@@ -2493,44 +2531,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": 37,
-            "Ticker": "000636.SZ",
-            "Name": "Fenghua Advanced (风华高科)",
-            "EV Upside": 5,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 64.3,
-            "Upside": "1.1x",
-            "Position Type": "WL",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI, MLCC",
-            "FY2027": "41.82",
-            "FY2028": "68.18",
-            "FY2029": "99.27",
-            "FY2030": "130.91",
-            "Entry": 0,
-            "Total": 45
-        },
-        {
-            "Rank": 38,
-            "Ticker": "300408.SZ",
-            "Name": "三环集团",
-            "EV Upside": 4,
-            "Base": 72,
-            "Port": "",
-            "Current Price": 80,
-            "Upside": "1.1x",
-            "Position Type": "⚡/🔒 混合\n光纤陶瓷插芯全球垄断70-80%（85%+ MPO/MT）。中国增长最快的MLCC，粉末100%自供。双人工智能论文。 H股港交所上市待定",
-            "Artifact Updated": "Jun 13 (new dive)",
-            "SuperCycle": "AI Photonics + MLCC",
-            "FY2027": 67,
-            "FY2028": 84,
-            "FY2029": 104,
-            "FY2030": 129,
-            "Entry": 0,
-            "Total": 43
         },
         {
             "Rank": 39,
@@ -2632,6 +2632,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 44,
+            "Ticker": "300285.SZ",
+            "Name": "Sinocera (国瓷材料)",
+            "EV Upside": -11,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 62.4,
+            "Upside": "0.9x",
+            "Position Type": "",
+            "Artifact Updated": "Jun 15 (JPM margin front-load)",
+            "SuperCycle": "MLCC",
+            "FY2027": 31.2,
+            "FY2028": 53.4,
+            "FY2029": 67.8,
+            "FY2030": 83.5,
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 45,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "EV Upside": -19,
@@ -2648,25 +2667,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": "173",
             "Entry": 0,
             "Total": 48
-        },
-        {
-            "Rank": 45,
-            "Ticker": "300285.SZ",
-            "Name": "Sinocera (国瓷材料)",
-            "EV Upside": -28,
-            "Base": 73,
-            "Port": "",
-            "Current Price": 62.4,
-            "Upside": "0.6x",
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "MLCC",
-            "FY2027": "25.5",
-            "FY2028": "38.2",
-            "FY2029": "55.2",
-            "FY2030": "77.1",
-            "Entry": 0,
-            "Total": 44
         },
         {
             "Rank": 46,

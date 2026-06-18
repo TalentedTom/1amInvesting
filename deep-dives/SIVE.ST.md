@@ -175,21 +175,23 @@ AH-7 confidence: LOW-MEDIUM — early stage, technology pathway confirmed but co
 |------|------|------|------|
 | $5M | $15M | $25M | $35M |
 
-### Vector 11: GFS SiPh Platform — CPO + LPO + SCALE (expanded Jun 2, 2026)
+### Vector 11: GFS SiPh Platform — CPO + LPO + SCALE (expanded Jun 2, 2026; AMD fold Jun 15)
 **Jun 2, 2026: SIVE × GlobalFoundries strategic collaboration (Reuters).** SIVE's laser arrays integrated into GF's reference designs across ALL optical architectures: CPO, LPO (linear pluggable optics), and SCALE™ platform. This is reference design INTEGRATION — not supplier list, not qualification. SIVE is the DEFAULT laser route for every design prototyped on GF's SiPh platform. GF customers include Broadcom, NVIDIA, Marvell, AMD, Lightmatter.
 
-Prior Vector 11 was AMD MI500 CPO only at 25% probability. Now expanded to full GF SiPh platform at 80%:
-- CPO: AMD MI500 + all other GF CPO customers
+**Jun 15, 2026: AMD negotiating large-scale CW laser POs (TrendForce via Serenity).** AMD "actively ordering materials for its external laser solutions and negotiating large-scale purchase orders for high-power CW laser chips to ensure its future production capacity is not constrained by NVIDIA." SIVE is one of only two laser suppliers on the GFS SCALE slide (SIVE + LITE). LITE is sold out through 2028. **Two GPU companies (NVIDIA and AMD) are now competing for CW laser supply from the same constrained supplier base — bidding-war dynamic for SIVE's output.** This is the V11 trigger firing: AMD's MI500 CPO via GFS needs CW lasers, and SIVE is the available independent source.
+
+Prior Vector 11 was AMD MI500 CPO only at 25% probability. Expanded Jun 2 to full GF SiPh platform at 80%. **Escalated Jun 15 to 85%** on TrendForce AMD procurement confirmation:
+- CPO: AMD MI500 + all other GF CPO customers (AMD actively securing supply)
 - LPO: next-gen SiPh-based pluggable transceivers ($25B pluggable market by 2030)
 - SCALE: GF's co-packaged advanced light engine platform
 
-Source: Reuters/PRNewswire Jun 2 2026, GFS ecosystem slide, Jefferies Taiwan channel checks.
-AH-7 confidence: **HIGH** — reference design integration confirmed via official press release. GF Senior Fellow Vikas Gupta: "Pairing Sivers' laser array technology with our silicon photonics and SCALE CPO platforms provides our customers with advanced, scalable optical engine solutions."
-Probability: **80%** (was 25%)
+Source: Reuters/PRNewswire Jun 2 2026, GFS ecosystem slide, Jefferies Taiwan channel checks, **TrendForce Jun 15 2026 (AMD CW laser POs)**.
+AH-7 confidence: **HIGH** — reference design integration confirmed + AMD procurement action confirmed.
+Probability: **85%** (was 80%; escalated on TrendForce AMD evidence)
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $15M | $80M | $150M | $220M |
+| $15M | $95M | $175M | $250M |
 
 ### Vector 12: YSS (York Space Systems) / All.Space — Golden Dome SATCOM (MERGED + REBUILT Jun 9, 2026)
 
@@ -274,19 +276,25 @@ Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commerciali
 | 8. Lightelligence | $12M | $35M | $58M | $75M |
 | 9. Nokia | $8M | $20M | $30M | $35M |
 | 10. LIGHTIUM/TFLN | $5M | $15M | $25M | $35M |
-| 11. GFS SiPh Platform | $15M | $80M | $150M | $220M |
+| 11. GFS SiPh Platform | $15M | $95M | $175M | $250M |
 | 12. YSS/allspace | $10M | $25M | $35M | $45M |
 | 13. POET | $8M | $20M | $35M | $45M |
-| **TOTAL** | **$260M** | **$736M** | **$1,205M** | **$1,635M** |
+| **TOTAL** | **$260M** | **$751M** | **$1,230M** | **$1,665M** |
 
-### Full Valuation Table (40% OP, 35x, 297M shares):
+### Full Valuation Table (40% OP, 35x, 305M verified shares — Nasdaq dilution NOT pre-applied):
 
-| Year | Revenue | OP (40%) | × 35x | MC | Per Share |
-|------|---------|----------|-------|----|-----------|
-| 2027 | $260M | $104M | $3.64B | SEK 34.6B | SEK 130 |
-| 2028 | $736M | $294M | $10.30B | SEK 97.9B | SEK 368 |
-| 2029 | $1,205M | $482M | $16.87B | SEK 160.3B | SEK 603 |
-| 2030 | $1,635M | $654M | $22.89B | SEK 217.5B | SEK 818 |
+**Share count verified Jun 15, 2026:** 305,154,751 total shares outstanding (Sivers IR page). Nasdaq authorization (53.8M shares) approved but NOT issued — dilution modeled only when shares are actually created, not on authorization. Could be October 2026 at earliest, could be 6+ months. The 7M stock option grant (Items 14-16) was WITHDRAWN from the AGM by the new Board — deferred to future EGM.
+
+| Year | Revenue | OP (40%) | × 35x | Shares | Per Share |
+|------|---------|----------|-------|--------|-----------|
+| 2027 | $260M | $104M | $3.64B | 305M | **SEK 126** |
+| 2028 | $751M | $300M | $10.51B | 305M | **SEK 365** |
+| 2029 | $1,230M | $492M | $17.22B | 305M | **SEK 598** |
+| 2030 | $1,665M | $666M | $23.31B | 305M | **SEK 810** |
+
+(USD/SEK 10.6)
+
+**When to apply the Nasdaq dilution:** on the day shares are actually issued. At that point, affected FY columns recompute at ~359M shares. The Nasdaq listing catalyst (institutional access, US liquidity, potential multiple re-rate from 35x toward 40x+) arrives WITH the dilution — both modeled simultaneously when the event occurs.
 
 WHY WE DON'T MODEL $60B:
   Serenity's $60B assumes SIVE acquires downstream and competes with LITE.
@@ -327,7 +335,7 @@ WHY WE DON'T MODEL $60B:
 - If Ayar's optical I/O architecture deploys at 512 ELS/rack instead of 30-60, Vector 1 revenue scales 8-15x
 - Even at conservative 3-5x (partial deployment, mixed architectures): Vector 1 could be $750M-$1.25B FY2029-2030
 - This would raise total FY2030 revenue from $1.6B to potentially $2.5-3.5B
-- Per share impact at current model assumptions (40% OP, 35x, 297M): $1,200-1,700 per share (vs current $803)
+- Per share impact at current model assumptions (40% OP, 35x, 305M shares): SEK 1,200-1,700 per share (vs current SEK 810)
 
 **Data needed to model this add-on:**
 1. First hyperscaler production order for optical I/O racks (not demo — volume PO)
@@ -353,4 +361,5 @@ WHY WE DON'T MODEL $60B:
 - CPO timeline could delay (ASE confirmed H2 2026 but risk exists)
 - SATCOM Gen 2 BFIC development timeline uncertain
 - LITE/COHR vertically integrated — could squeeze independent suppliers (mitigated by 4-platform fragmentation)
+- **InP substrate supply chain exposure (added Jun 13, corrected Jun 13).** SIVE's lasers are fabbed at Win Semi, which sources InP substrates from undisclosed suppliers. InP substrate market (Reuters): Sumitomo ~40%, AXT ~35%, JX ~10% — AXT+Sumitomo = ~80%, but Sumitomo consumes much internally so the *available* external market is heavily AXT-dependent. Win Semi likely has at least partial AXT exposure at that concentration. Win Semi's GM acknowledged supply chains "relatively tight" (May 3, 2026). **China's indium export control policy expires November 10, 2026** — renewal/tightening = another leg of scarcity (bullish for SIVE's laser pricing power, but potentially constraining output); lapse = scarcity premium compresses. 6-inch InP wafer price +250% to ~$5,000 since controls began. Net effect for SIVE is mixed: pricing power WIDENS but production ceiling could LOWER. Watch policy signals from Q3 2026.
 

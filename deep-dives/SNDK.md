@@ -1,8 +1,8 @@
 # SNDK — SanDisk Corporation | Deep Dive
 
-**Date:** May 2026 (dive + May 31 prepayment bump) | **June 10, 2026 (restructured — single generation; Base reconciled to evidence)**
-**Framework Version:** v4.1
-**Status:** HELD (✓) | **Base 80% (48/60)**
+**Date:** May 2026 (dive + May 31 prepayment bump) | June 10, 2026 (restructured) | **June 15, 2026 (AI inference NAND fold + Core 15 ruling)**
+**Framework Version:** v4.2
+**Status:** HELD (✓) | **Base 82% (49/60)**
 **Price at restructure:** $1,646.54 | ~157M shares
 **Ceiling:** FY2028 $4,174 (FY-column standard)
 
@@ -32,16 +32,16 @@ EPS revision trajectory: $81 → $110 → $175 → high $218 within 90 days — 
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 14/20 | G3.5/ICMS net-new demand validated; Kioxia allocation control to 2034; HBF with SKH; US champion. Penalties: oligopoly (-2), consumer/mobile revenue majority (-2), cyclical-reversal risk softened by LTA floors but real (-2). |
+| Core Thesis | 15/20 | G3.5/ICMS net-new demand validated; Kioxia allocation control to 2034; HBF with SKH; US champion. **AI inference NAND now an industry-wide architectural tier** — three independent Layer 0/1 validations: NVIDIA CMX (datacenter KV cache in flash), AMD MEXT (system memory hierarchy with flash warm tier), Apple AFM (inactive MoE experts stored in flash, loaded to DRAM on demand). NAND transitions from storage to active AI memory tier. Core 15 ruling: oligopoly penalty softened from -2 to -1 (Kioxia allocation + HBF + three-validation evidence = oligopoly of a strategic input, same re-rating as DRAM). Remaining penalties: oligopoly (-1), consumer/mobile majority (-1, softened by Apple AFM making consumer NAND AI-relevant), cyclical-reversal risk softened by LTA floors but real (-2). |
 | Cycle Stage | 10/10 | +251% revenue, 60% EPS beat, GM 30%→78.4% in a year, revisions vertical. Block-maximal. |
 | TAM | 9/10 | NAND $184B annualized (Counterpoint Q1) tracking $300B+ by 2028; eSSD mix 43%→60%; G3.5 a genuinely new category; HBF optionality. |
 | Catalysts | 5/5 | Q4 print (~July): $7.75-8.25B test; BiCS10 ramp; hyperscaler quals converting; Rubin ICMS deployments. |
 | Macro | 10/10 | Wafer limits, shortage past 2028, IDC permanent reallocation, buyer LTA regime — same evidence class as the rest of the memory block. |
 | Alpha | 1/5 | 20+ analysts, $250B+ class market cap, thesis extremely well-known. Conviction-at-discovery, not edge. |
 | Risks | -2 | Supply response: Samsung P5 + SK Hynix China fabs landing from H1 2027 (-1). Magnitude uncertainty — the model's own note: "likely wrong in magnitude, directionally correct"; ASP normalization is the swing (-1). |
-| Subtotal | 47/60 | |
+| Subtotal | 48/60 | |
 | Rule 16c-2 | **+1** | Hyperscaler prepayment regime industry-wide; supplier-floor LTAs with upward adjusters. |
-| **Base** | **48/60 (80%)** | Strict evidence read. The 81st point is available via Core 15 if the Kioxia-allocation + HBF position is judged to soften the oligopoly penalty — flagged for Tom, not applied. |
+| **Base** | **49/60 (82%)** | Core 15 ruling RESOLVED: YES (Jun 15, 2026). Kioxia-allocation + HBF + three independent AI-inference-NAND validations (NVIDIA CMX, AMD MEXT, Apple AFM) collectively soften the oligopoly penalty. NAND as AI inference infrastructure = oligopoly of a strategic input, same re-rating logic as DRAM. |
 
 ## Ceiling — v4.1 AH-1 Full Derivation (Yahoo-HIGH anchored, margin curve, 18x, 157M shares, FY-column standard)
 
@@ -80,6 +80,8 @@ From the June 2026 scenario work: a serious Chinese magnet-export control hits H
 2. Hyperscaler qualifications converting 2→5 → Core Thesis evidence
 3. NAND LTA floors confirmed through the 2027 capacity arrivals → terminal-margin revisit
 4. Rare-earth control announcement → QLC-substitution vector per Rule 16b
-5. Core 15 ruling (Kioxia allocation + HBF softening oligopoly penalty) → Base 80→81 (Tom's call)
+5. Core 15 ruling — **RESOLVED Jun 15, 2026: YES.** Applied. Base 80→82.
+6. **AI inference NAND validation cadence (added Jun 15).** Watch: NVIDIA CMX deployment prints (racks implementing flash-based KV cache); AMD MEXT revenue commentary (flash tier adoption in MI-series clusters); Apple AFM device-level NAND demand uplift (higher capacity/performance per device requiring premium NAND). Each validation entering earnings language converts the architectural signal to revenue. If all three confirm in FY2027 earnings, the revenue model may need upward revision via a component-based rebuild.
+7. Counter: **Chinese NAND competition for the AI inference tier.** NAND is easier to produce than HBM; YMTC/CXMT have more NAND capability than HBM capability. If flash-as-memory becomes a $15-20B TAM, Chinese producers could compete for it, pressuring margins differently than the DRAM oligopoly. 3-5 year risk, not near-term. Watch YMTC qualification progress at hyperscalers.
 
 *Restructured Jun 10, 2026 — prior version: /mnt/user-data/outputs/versions/SNDK_artifact_pre_restructure_2026-06-10.md*

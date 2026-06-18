@@ -1,10 +1,10 @@
 # IQE.L — IQE plc | Deep Dive
 
-**Date:** April 2026 (dive) | May 2026 (Tier-0 naming + MACOM floor) | May 23 (audit) | **June 11, 2026 (restructured — single generation; Base reconciled to evidence)**
-**Framework Version:** v4.1
-**Status:** NOT HELD (watchlist, ⚡ BOTTLENECK — EVENT-DRIVEN: the M&A review is the trigger, the InP thesis is the floor; 6-12mo window) | **Base 72% (43/60)**
+**Date:** April 2026 (dive) | May 2026 (Tier-0 naming + MACOM floor) | May 23 (audit) | June 11, 2026 (restructured) | **June 15, 2026 (InP policy-duration + TSEM deal + margin front-load)**
+**Framework Version:** v4.2
+**Status:** NOT HELD (watchlist, ⚡ BOTTLENECK — EVENT-DRIVEN: the M&A review is the trigger, the InP thesis is the floor; 6-12mo window) | **Base 77% (46/60)**
 **Price at restructure:** GBp 43.90 | ~655M shares | MC ~£288M
-**Ceiling:** FY2028 GBp 67 (FY-column standard; M&A takeout is optionality outside the ceiling)
+**Ceiling:** FY2028 GBp 159 (FY-column standard; M&A takeout is optionality outside the ceiling)
 
 ---
 
@@ -37,31 +37,31 @@ FY2025: ~£97M (-17.8% — the trough year), EBITDA ~£2M | FY2024: £118M, net 
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 13/20 | Largest independent epi foundry; Tier-0-named #1 bottleneck category; MACOM £45M strategic lock relieves the distress class; QD-laser first; 6" SiPh platform. Penalties: revenue declined through 2025 (-3); competitors per line — Coherent, VPEC, Landmark (-2); M&A-outcome uncertainty (-2). |
-| Cycle Stage | 7/10 | Trough exited: Q1 2026 order book strong across all segments, InP ramping, MACOM capacity funding deploying — trailing revenue decline is the lagging indicator. |
-| TAM | 7/10 | Epi services $3-5B with the $193B photonics TAM flowing through it; InP to 91% of high-speed lanes; GaN defense + IR + microLED vectors. |
+| Core Thesis | 14/20 | Largest independent epi foundry; Tier-0-named #1 bottleneck category; MACOM £45M strategic lock; QD-laser first; 6" SiPh platform. **TSEM multi-year InP epi agreement (Jun 15) — converts former litigation adversary into customer (desperation-grade demand signal); confirms IQE as qualified non-Chinese InP source; diversifies beyond LITE/MACOM to foundry layer.** Penalties: revenue declined through 2025 but recovery now printing with three simultaneous customer validations (-2 reduced from -3); competitors per line — Coherent, VPEC, Landmark (-2); M&A-outcome uncertainty (-2). |
+| Cycle Stage | 8/10 | Trough definitively behind: TSEM multi-year deal + MACOM £45M deploying + Q1 2026 order book strong + LITE sold out through 2028 (needs more IQE epiwafers). Three simultaneous customer-validation events = 8-grade evidence. |
+| TAM | 8/10 | Epi services $3-5B with the $193B photonics TAM flowing through it; InP to 91% of high-speed lanes; GaN defense + IR + microLED vectors. **InP shortage confirmed policy-duration (Reuters Jun 2026); Europeans at 50-70% export approval rates vs Japan <20% (Chinese regulatory document) — IQE as UK-based epi house sits in the favored tier for non-Chinese InP supply. TSEM deal adds foundry customer vector beyond LITE/MACOM.** |
 | Catalysts | 5/5 | Strategic Review outcome; Taiwan sale; MACOM deployment milestones; InP ramp prints; results fold-in. |
 | Macro | 9/10 | InP structural shortage (demand 3x vs supply 1.5-2x growth); CPO pulled forward; NATO 5% GDP for GaN/IR; gallium controls favor Western epi. |
 | Alpha | 4/5 | 3-4 analysts; AIM micro-cap; M&A discount to strategic value; the epi layer invisible to generalists; early institutional accumulation. |
 | Risks | -2 | Balance sheet — waiver, converts, thin cash; a dilutive raise remains possible (-1). Revenue share questions until the InP ramp prints (-1). |
-| **Base** | **43/60 (72%)** | |
+| **Base** | **46/60 (77%)** | Core +1 (revenue-decline penalty reduced, recovery printing with three customer validations), Cycle +1 (trough definitively behind on TSEM+MACOM+LITE evidence), TAM +1 (TSEM customer diversification + InP policy-duration + European favored-tier). Jun 15, 2026. |
 
-## Ceiling — v4.1 AH-1 Full Derivation (graduated OP from trough, 20x, ~655M shares, FY-column standard)
+## Ceiling — v4.2 AH-1 Full Derivation (revised revenue + front-loaded margins, 20x, ~655M shares, FY-column standard)
 
-**Revenue model (recovery from the FY2025 trough):** £120M FY2026 (+24%, order-book led) → £160M FY2027 (InP + MACOM capacity) → £220M FY2028 (full InP demand) → £290M / £370M outer years. Margins rebuild from near-zero as photonics mix rises; 20x reflects bottleneck-layer positioning.
+**Revenue model (revised Jun 15 — TSEM deal + LITE sold-out + InP shortage pricing):** £130M FY2026 (+34%, order-book led + MACOM) → £180M FY2027 (InP ramp + MACOM capacity + TSEM deal flowing) → £260M FY2028 (full InP demand + peak shortage pricing) → £340M / £420M outer years. TSEM multi-year agreement adds ~£10-20M ramping to £30-40M by FY2029 on top of prior LITE/MACOM vectors. LITE sold out through 2028 = LITE needs MORE IQE epiwafers, lifting the existing vector.
+
+**Margin revision (Jun 15 — front-loaded to peak shortage):** Prior curve (8→10→13→15%) was anchored to trough economics. Revised curve peaks at FY2028 when InP deficit is deepest: MACOM-funded capacity means IQE sets prices, not begs for orders. Customer-funded expansion + multi-year agreements + policy-duration shortage = the same pattern that produced 72% GM at SKH and 78% GM at SNDK. IQE's epi foundry margins are structurally lower than finished-product companies, but 20% OP at peak shortage with customer-funded capacity is defensible against Win Semi's 15-20% OP in normal conditions.
 
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | £160M | 8% | £12.8M | £256M | **GBp 39** |
-| 2028 | £220M | 10% | £22M | £440M | **GBp 67** |
-| 2029 | £290M | 13% | £37.7M | £754M | **GBp 115** |
-| 2030 | £370M | 15% | £55.5M | £1,110M | **GBp 169** |
+| 2027 | £180M | 14% | £25.2M | £504M | **GBp 77** |
+| 2028 | £260M | 20% | £52.0M | £1,040M | **GBp 159** |
+| 2029 | £340M | 18% | £61.2M | £1,224M | **GBp 187** |
+| 2030 | £420M | 16% | £67.2M | £1,344M | **GBp 205** |
 
-FY2027 sits below the market price because the market is pricing the M&A premium, not organic FY2027 — the event-driven classification in one number. FY2028 is the first organic-upside year.
+  FY2028: £260M × 20% OP = £52.0M × 20x = £1,040M / 655M shares = **GBp 159**
 
-  FY2028: £220M × 10% OP = £22M × 20x = £440M / 655M shares = **GBp 67**
-
-CEILING: GBp 67 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the FY2029-forward convention)
+CEILING: GBp 159 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — revised Jun 15 from GBp 67; revenue lifted on TSEM deal + LITE sold-out demand; margin front-loaded to peak at InP shortage maximum)
 
 **M&A optionality (deliberately outside the ceiling):** a group takeout at 100-140p would be 2-3x — binary, not modelable in base case. The MACOM £45M provides the strategic floor under the binary.
 
