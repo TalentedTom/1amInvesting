@@ -2133,6 +2133,15 @@ body.light-mode .modal-content th {
     justify-content: center;
     gap: 0.4rem;
 }
+/* Wraps one filter (label + its pills). On desktop the groups flow inline as
+   one centered row; on mobile they sit side-by-side (see the media query). */
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
 .sc-spacer {
     /* empty mirror of the search column — keeps the pill group optically
        centered between equal-width side columns */
@@ -2300,20 +2309,36 @@ body.light-mode .sc-search-input:focus {
         width: 100%;
         justify-self: stretch;
     }
+    /* SuperCycle and Region sit side-by-side (squeezed) instead of stacked.
+       Each group keeps its label on top with pills wrapping beneath; a
+       vertical divider separates the two columns. */
+    .sc-controls {
+        flex-wrap: nowrap;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0.35rem;
+    }
+    .filter-group {
+        flex: 1 1 0;
+        min-width: 0;
+        gap: 0.25rem;
+        align-content: flex-start;
+    }
     .supercycle-bar .filter-label {
-        font-size: 0.68rem;
-        margin-right: 0.2rem;
+        font-size: 0.66rem;
+        margin: 0 0 0.12rem;
         flex-basis: 100%;
         text-align: center;
-        margin-bottom: 0.1rem;
     }
     .sc-pill,
     .region-pill {
-        padding: 0.25rem 0.55rem;
-        font-size: 0.72rem;
+        padding: 0.22rem 0.5rem;
+        font-size: 0.7rem;
     }
     .sc-divider {
-        display: none;   /* groups already split onto separate rows when stacked */
+        display: block;
+        align-self: stretch;
+        margin: 0 0.1rem;
     }
 }
 

@@ -174,26 +174,33 @@
         <section class="supercycle-bar" id="supercycle-bar">
             <div class="sc-spacer" aria-hidden="true"></div>
             <div class="sc-controls">
-                <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
-                <button class="sc-pill active" data-sc="AI">AI</button>
-                <button class="sc-pill active" data-sc="CPO">CPO</button>
-                <button class="sc-pill active" data-sc="800G">800G</button>
-                <button class="sc-pill active" data-sc="1.6T">1.6T</button>
-                <!-- 'Other' is ON by default now (catches uncategorized
-                     rows). JS reads the active state from localStorage /
-                     DEFAULT_SUPERCYCLES, so this initial class is only the
-                     pre-JS paint state. -->
-                <button class="sc-pill active" data-sc="Other" data-i18n="cycle_Other">Other</button>
+                <!-- Each filter is wrapped in its own .filter-group so the two
+                     can sit side-by-side (SuperCycle | Region) on mobile rather
+                     than stacking. On desktop they flow inline as one row. -->
+                <div class="filter-group">
+                    <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
+                    <button class="sc-pill active" data-sc="AI">AI</button>
+                    <button class="sc-pill active" data-sc="CPO">CPO</button>
+                    <button class="sc-pill active" data-sc="800G">800G</button>
+                    <button class="sc-pill active" data-sc="1.6T">1.6T</button>
+                    <!-- 'Other' is ON by default now (catches uncategorized
+                         rows). JS reads the active state from localStorage /
+                         DEFAULT_SUPERCYCLES, so this initial class is only the
+                         pre-JS paint state. -->
+                    <button class="sc-pill active" data-sc="Other" data-i18n="cycle_Other">Other</button>
+                </div>
+                <span class="sc-divider" aria-hidden="true"></span>
                 <!-- Region filter (single-select): All / China / Ex-China.
-                     "China" = Hong Kong (.HK), Shanghai (.SS/.SSE) and
+                     "China" = Hong Kong (.HK), Shanghai (.SS/.SSE/.SH) and
                      Shenzhen (.SZ/.SZSE) listings only — Taiwan/Korea/Japan
                      are NOT counted as China. Composes (AND) with the
                      position-type and SuperCycle filters. -->
-                <span class="sc-divider" aria-hidden="true"></span>
-                <span class="filter-label" data-i18n="region_label">Region</span>
-                <button class="region-pill active" data-region="all" data-i18n="region_all">All</button>
-                <button class="region-pill" data-region="china" data-i18n="region_china">🇨🇳 China</button>
-                <button class="region-pill" data-region="exchina" data-i18n="region_exchina">Ex-China</button>
+                <div class="filter-group">
+                    <span class="filter-label" data-i18n="region_label">Region</span>
+                    <button class="region-pill active" data-region="all" data-i18n="region_all">All</button>
+                    <button class="region-pill" data-region="china" data-i18n="region_china">🇨🇳 China</button>
+                    <button class="region-pill" data-region="exchina" data-i18n="region_exchina">Ex-China</button>
+                </div>
             </div>
             <div class="sc-search" id="sc-search">
                 <span class="sc-search-icon" aria-hidden="true">
