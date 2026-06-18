@@ -345,9 +345,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return (stored === 'china' || stored === 'exchina') ? stored : 'all';
     })();
     // "Chinese" = mainland + Hong Kong listings only: Hong Kong (.HK),
-    // Shanghai (.SS / .SSE) and Shenzhen (.SZ / .SZSE). Taiwan (.TW/.TWO),
-    // Korea (.KS/.KQ) and Japan (.T) are deliberately NOT counted as China.
-    const CHINA_SUFFIX_RE = /\.(HK|SS|SSE|SZ|SZSE)$/i;
+    // Shanghai (.SS / .SSE / .SH) and Shenzhen (.SZ / .SZSE). Taiwan
+    // (.TW/.TWO), Korea (.KS/.KQ) and Japan (.T) are deliberately NOT
+    // counted as China. (.SH is an alternate Shanghai spelling that shows
+    // up in the xlsx alongside the canonical Yahoo .SS — accept both.)
+    const CHINA_SUFFIX_RE = /\.(HK|SS|SSE|SH|SZ|SZSE)$/i;
     const isChineseTicker = (ticker) => CHINA_SUFFIX_RE.test(String(ticker || '').trim());
 
     // Columns Dropdown Logic
@@ -1996,7 +1998,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // The underlying ticker stays in a data-ticker attribute so
             // deep-dive routing, the live.json merge, and the chart button
             // all continue to key off the canonical symbol.
-            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SZ|SZSE|HK|T)$/i;
+            const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SH|SZ|SZSE|HK|T)$/i;
             let displayText = sym;
             if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
                 const name = String(row.Name).trim();

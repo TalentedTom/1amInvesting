@@ -1,10 +1,10 @@
 # AIXA.DE — AIXTRON SE | Deep Dive
 
-**Date:** April 2026 (dive) | May 2026 (Tier-0 confirmation + $193B remodel) | May 23 (audit) | **June 11, 2026 (restructured — single generation; empty duplicate removed)**
-**Framework Version:** v4.1
+**Date:** April 2026 (dive) | May 2026 (Tier-0 confirmation + $193B remodel) | May 23 (audit) | June 11, 2026 (restructured) | **June 16, 2026 (V1 Chinese expansion lift + multiple 30x→25x)**
+**Framework Version:** v4.2
 **Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — Layer -3: the tool that makes the laser-makers possible) | **Base 80% (48/60)**
 **Price at restructure:** €55.02 | ~113M shares | MC ~€6.2B
-**Ceiling:** FY2028 €83 (FY-column standard)
+**Ceiling:** FY2028 €74 (FY-column standard)
 
 ---
 
@@ -51,31 +51,31 @@ Every MOCVD tool shipped becomes InP laser capacity 12-18 months later. **AIXTRO
 
 ### Vectors (AH-9)
 
-**V1 InP MOCVD — AH-7: HIGH** (orders observable; bottleneck Tier-0-confirmed): €550M / €800M / €1,050M / €1,250M (2027-30)
+**V1 InP MOCVD — AH-7: HIGH** (orders observable; bottleneck Tier-0-confirmed; **Jun 16: Source Photonics ~30 imported MOCVD tools confirmed, likely mainly AIXA; Chinese InP/EML expansion wave (Yunnan Germanium, GCS, Source) all needing MOCVD = additive to Western buyer base**): €610M / €880M / €1,150M / €1,375M (2027-30)
 **V2 SiC MOCVD — AH-7: MEDIUM** (recovery timing): €250M / €300M / €350M / €400M
 **V3 GaN MOCVD — AH-7: MEDIUM** (800V mandate + 5G/defense): €125M / €150M / €200M / €250M
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
-| 1. InP Photonics | €550M | €800M | €1,050M | €1,250M |
+| 1. InP Photonics | €610M | €880M | €1,150M | €1,375M |
 | 2. SiC Power | €250M | €300M | €350M | €400M |
 | 3. GaN RF/Power | €125M | €150M | €200M | €250M |
-| **TOTAL** | **€925M** | **€1,250M** | **€1,600M** | **€1,900M** |
+| **TOTAL** | **€985M** | **€1,330M** | **€1,700M** | **€2,025M** |
 
-### Valuation (graduated OP, 30x)
+### Valuation (graduated OP, 25x — revised Jun 16 from 30x per Tom's instruction; near-monopoly equipment but Veeco duopoly + project lumpiness + China exposure warrant discount vs ASML/KLA)
 
-| Year | Revenue | OP Margin | OP | × 30x | Per Share |
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | €925M | 22% | €203M | €6.11B | **€54** |
-| 2028 | €1,250M | 25% | €313M | €9.38B | **€83** |
-| 2029 | €1,600M | 28% | €448M | €13.44B | **€119** |
-| 2030 | €1,900M | 30% | €570M | €17.1B | **€151** |
+| 2027 | €985M | 22% | €217M | €5.42B | **€48** |
+| 2028 | €1,330M | 25% | €333M | €8.31B | **€74** |
+| 2029 | €1,700M | 28% | €476M | €11.90B | **€105** |
+| 2030 | €2,025M | 30% | €608M | €15.19B | **€134** |
 
-The market prices roughly twelve months forward — FY2027 sits near spot by design; FY2028 is where the InP mix shift and order conversion stack.
+25x reflects: Veeco duopoly (not sole-source like ASML), project-based revenue lumpiness, and growing China exposure under export-control regimes. Below KLA's 30-35x and ASML's 35-40x. Above AMAT's 20-25x. The multiple is the honest discount for a near-monopoly that isn't a full monopoly.
 
-  FY2028: €1,250M × 25% OP = €313M × 30x = €9.38B / 113M shares = **€83**
+  FY2028: €1,330M × 25% OP = €333M × 25x = €8.31B / 113M shares = **€74**
 
-CEILING: €83 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — harmonized Jun 11 from the FY2029-forward convention)
+CEILING: €74 (FY2028 column standard; revised Jun 16 — V1 lifted for Source Photonics ~30 MOCVD tools + Chinese InP/EML expansion wave; multiple compressed 30x→25x)
 
 ## Key Risks
 

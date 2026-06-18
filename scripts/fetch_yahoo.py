@@ -47,6 +47,7 @@ def yahoo_candidates(xlsx_ticker: str):
     yield xlsx_ticker  # most tickers match Yahoo as-is
     swaps = [
         (".SSE", ".SS"),
+        (".SH", ".SS"),    # alternate Shanghai spelling -> Yahoo's .SS
         (".SZSE", ".SZ"),
         (".TWO", ".TW"),
         (".TW", ".TWO"),
