@@ -2145,7 +2145,8 @@ body.light-mode .modal-content th {
     letter-spacing: 0.02em;
     text-transform: uppercase;
 }
-.sc-pill {
+.sc-pill,
+.region-pill {
     background: transparent;
     border: 1px solid var(--border);
     color: var(--text-secondary);
@@ -2158,18 +2159,31 @@ body.light-mode .modal-content th {
     transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
     user-select: none;
 }
-.sc-pill:hover:not(.active) {
+.sc-pill:hover:not(.active),
+.region-pill:hover:not(.active) {
     color: var(--text-primary);
     border-color: var(--text-secondary);
 }
-.sc-pill.active {
+.sc-pill.active,
+.region-pill.active {
     background: var(--accent);
     border-color: var(--accent);
     color: #ffffff;
 }
-.sc-pill.active:hover {
+.sc-pill.active:hover,
+.region-pill.active:hover {
     /* keep the active state visually stable on hover */
     background: var(--accent);
+}
+/* Thin separator between the SuperCycle pills and the Region pills on
+   desktop. Hidden on mobile, where the centered "Region" filter-label
+   (flex-basis:100%) already breaks the groups onto separate rows. */
+.sc-divider {
+    width: 1px;
+    align-self: stretch;
+    min-height: 1.1rem;
+    background: var(--border);
+    margin: 0 0.3rem;
 }
 
 /* === Deep-dive search input + result dropdown ==================
@@ -2293,9 +2307,13 @@ body.light-mode .sc-search-input:focus {
         text-align: center;
         margin-bottom: 0.1rem;
     }
-    .sc-pill {
+    .sc-pill,
+    .region-pill {
         padding: 0.25rem 0.55rem;
         font-size: 0.72rem;
+    }
+    .sc-divider {
+        display: none;   /* groups already split onto separate rows when stacked */
     }
 }
 

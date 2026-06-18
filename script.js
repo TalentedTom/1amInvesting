@@ -163,6 +163,10 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: 'Close deep dive',
             hint_dismiss_label: 'Dismiss tip',
             sc_label: 'SuperCycle',
+            region_label: 'Region',
+            region_all: 'All',
+            region_china: '🇨🇳 China',
+            region_exchina: 'Ex-China',
             modal_chart_suffix: '— Chart',
             modal_chart_close_label: 'Close chart',
             chart_btn_label: 'Open chart',
@@ -220,6 +224,10 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: '关闭深度分析',
             hint_dismiss_label: '关闭提示',
             sc_label: '超级周期',
+            region_label: '地区',
+            region_all: '全部',
+            region_china: '🇨🇳 中国',
+            region_exchina: '非中国',
             modal_chart_suffix: '— 行情',
             modal_chart_close_label: '关闭行情',
             chart_btn_label: '打开行情',
@@ -327,6 +335,20 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (_) {}
         return new Set(DEFAULT_SUPERCYCLES);
     })();
+
+    // Region filter (single-select): 'all' | 'china' | 'exchina'. Composes
+    // (AND) with the position-type and SuperCycle filters. Persisted in
+    // localStorage; defaults to 'all'.
+    const REGION_STORAGE_KEY = 'regionFilter_v1';
+    let regionFilter = (() => {
+        const stored = localStorage.getItem(REGION_STORAGE_KEY);
+        return (stored === 'china' || stored === 'exchina') ? stored : 'all';
+    })();
+    // "Chinese" = mainland + Hong Kong listings only: Hong Kong (.HK),
+    // Shanghai (.SS / .SSE) and Shenzhen (.SZ / .SZSE). Taiwan (.TW/.TWO),
+    // Korea (.KS/.KQ) and Japan (.T) are deliberately NOT counted as China.
+    const CHINA_SUFFIX_RE = /\.(HK|SS|SSE|SZ|SZSE)$/i;
+    const isChineseTicker = (ticker) => CHINA_SUFFIX_RE.test(String(ticker || '').trim());
 
     // Columns Dropdown Logic
     const columnsBtn = document.getElementById('columns-btn');
@@ -467,6 +489,21 @@ document.addEventListener('DOMContentLoaded', () => {
         p.addEventListener('click', () => toggleSupercycle(p.getAttribute('data-sc')));
     });
     syncSupercyclePillsUI();
+
+    // Region filter (All / China / Ex-China) — single-select, persists in
+    // localStorage. Mirrors the position-type handler pattern.
+    const regionPills = document.querySelectorAll('.region-pill');
+    const applyRegionFilter = (val) => {
+        regionFilter = (val === 'china' || val === 'exchina') ? val : 'all';
+        regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
+        try { localStorage.setItem(REGION_STORAGE_KEY, regionFilter); } catch (_) {}
+        renderData();
+    };
+    regionPills.forEach(btn => {
+        btn.addEventListener('click', () => applyRegionFilter(btn.getAttribute('data-region')));
+    });
+    // Reflect the persisted choice on the pills (no re-render — initial render handles it).
+    regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
@@ -1281,6 +1318,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         tags = scRaw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
                     }
                     if (!tags.some(t => activeSupercycles.has(t))) return false;
+                }
+
+                // Region filter — China = HK/Shanghai/Shenzhen listings only.
+                if (regionFilter !== 'all') {
+                    const isCN = isChineseTicker((enData[i] && enData[i]['Ticker']) || '');
+                    if (regionFilter === 'china' && !isCN) return false;
+                    if (regionFilter === 'exchina' && isCN) return false;
                 }
 
                 return true;
