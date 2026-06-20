@@ -103,20 +103,38 @@ def load_tickers():
 
 
 def find_match(ticker, artifacts):
-    """Return (path, source_filename) or (None, None)."""
-    # Try alphanum-equal match against filename prefix first — best signal.
+    """Return (path, source_filename) or (None, None).
+
+    When several artifacts match the same ticker — a filename-prefix collision,
+    e.g. 1888HK_Kingboard_... vs 1888HK_KingboardLaminates_... — prefer the
+    most-recently-modified file and print a WARNING. glob() order is not stable
+    across filesystems, so "first match wins" would ship a non-deterministic
+    (and, in practice, often stale) deep-dive. This has bitten several times
+    (the Samsung stub, then stale Kingboard/PCL analyses).
+    """
     ticker_an = alphanum(ticker)
-    for fname, path in artifacts.items():
-        prefix = fname.split("_", 1)[0]
-        if alphanum(prefix) == ticker_an:
-            return path, fname
-    # Fall back to candidate-prefix match (handles ALRIB -> ALRIBPA, BESI.AS -> BESI).
-    for cand in candidate_prefixes(ticker):
-        wanted = cand + "_"
-        for fname, path in artifacts.items():
-            if fname.startswith(wanted):
-                return path, fname
-    return None, None
+    # 1. Alphanum-equal prefix match — best signal. Collect ALL candidates.
+    matches = [(path, fname) for fname, path in artifacts.items()
+               if alphanum(fname.split("_", 1)[0]) == ticker_an]
+    # 2. Fall back to candidate-prefix matches (ALRIB -> ALRIBPA, BESI.AS -> BESI).
+    if not matches:
+        for cand in candidate_prefixes(ticker):
+            wanted = cand + "_"
+            matches = [(path, fname) for fname, path in artifacts.items()
+                       if fname.startswith(wanted)]
+            if matches:
+                break
+    if not matches:
+        return None, None
+    if len(matches) > 1:
+        # Newest mtime wins, deterministically; surface the losers so stale
+        # duplicate sources in Artifacts/ get noticed instead of silently
+        # shipping the wrong analysis.
+        matches.sort(key=lambda pf: pf[0].stat().st_mtime, reverse=True)
+        losers = ", ".join(fn for _, fn in matches[1:])
+        print(f"  WARNING: {ticker}: {len(matches)} colliding artifacts - "
+              f"using newest '{matches[0][1]}' (ignored: {losers})")
+    return matches[0]
 
 
 def main():
