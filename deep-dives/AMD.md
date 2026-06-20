@@ -1,10 +1,10 @@
 # AMD — Advanced Micro Devices | Deep Dive
 
-**Date:** May 20, 2026 (prior) | June 11, 2026 (FULL REBUILD — FY model constructed, Excel populated for the first time) | **June 11, 2026 late (V2 agentic-CPU TAM revision — authorized)**
-**Framework Version:** v4.1
+**Date:** May 20, 2026 (prior) | June 11, 2026 (FULL REBUILD) | June 11 late (V2 agentic-CPU revision) | **June 17, 2026 (V2 TAM revision — Bernstein $223B / UBS-BofA $170B convergence)**
+**Framework Version:** v4.2
 **Status:** NOT HELD (📊 BENEFICIARY — system layer, not bottleneck: the customer of our chokepoints) | **Base 78% (47/60)**
-**Price at revision:** $488.56 | ~1.63B shares basic (diluted rises to ~1.95B on full warrant vest — modeled per-year below) | MC ~$796B
-**Ceiling:** FY2028 $444 (FY-column standard, diluted)
+**Price at revision:** $512.48 | ~1.63B shares basic (diluted rises to ~1.95B on full warrant vest — modeled per-year below) | MC ~$835B
+**Ceiling:** FY2028 $536 (FY-column standard, diluted — $223B CPU TAM at 25x)
 
 ---
 
@@ -45,17 +45,17 @@ Company revenue CAGR >35% over 3-5 years; non-GAAP OP margin >35%; non-GAAP EPS 
 
 **V1 Data Center AI (Instinct + Helios racks) — AH-7: HIGH** (12 GW contracted, named customers, per-GW revenue guided): deployment-curve model at ~$15-17B/GW — FY27 ~2 GW-equivalents shipped, FY28 ~3.3, FY29 ~5, FY30 ~6.5:
 $30B / $52B / $80B / $105B (2027-30)
-**V2 Server CPU (EPYC Venice/Verano) — AH-7: HIGH** (REVISED Jun 11: mgmt TAM doubled to $120B+ at >35% CAGR; share trajectory toward the >50% target; UBS $41B / Su-implied ~$50B 2030 cross-checks; +70% YoY Q2 guide as the near-term anchor): $23B / $31B / $41B / $52B
+**V2 Server CPU (EPYC Venice/Verano) — AH-7: HIGH** (REVISED Jun 17: TAM re-anchored to $223B by 2030 (Bernstein base case, Jensen "more or less in line"; AMD's own $120B+ is now the bear case). Share trajectory toward >50% target at 35→43% conservative; +70% YoY Q2 guide as the near-term anchor): $28B / $51B / $74B / $96B
 **V3 Client + Gaming + Embedded — AH-7: HIGH** (FAD >10% CAGR): $16B / $14B / $14B / $14B
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
 | 1. DC AI (GW-grounded) | $30B | $52B | $80B | $105B |
-| 2. Server CPU (revised) | $23B | $31B | $41B | $52B |
+| 2. Server CPU (revised) | $28B | $51B | $74B | $96B |
 | 3. Client/Gaming/Embedded | $16B | $14B | $14B | $14B |
-| **TOTAL** | **$69B** | **$97B** | **$135B** | **$171B** |
+| **TOTAL** | **$74B** | **$117B** | **$168B** | **$215B** |
 
-(Total curve from FY2026 ~$50B: +38% / +41% / +39% / +27% — the two pillars now compound instead of one carrying a flat other.)
+(Total curve from FY2026 ~$50B: +48% / +58% / +44% / +28% — the $223B CPU TAM creates a steeper mid-curve inflection where the agentic CPU:GPU ratio shift compounds with the GPU GW ramp simultaneously.)
 
 ### Share count — dilution scales WITH the revenue (program first)
 
@@ -65,16 +65,16 @@ The warrants vest as the GW deploy; the revenue the model counts cannot arrive w
 
 | Year | Revenue | OP Margin | OP | × 25x | Diluted Shares | Per Share |
 |------|---------|-----------|-----|-------|----------------|-----------|
-| 2027 | $69B | 29% | $20.0B | $500B | 1.72B | **$291** |
-| 2028 | $97B | 33% | $32.0B | $800B | 1.80B | **$444** |
-| 2029 | $135B | 35% | $47.3B | $1,181B | 1.88B | **$628** |
-| 2030 | $171B | 36% | $61.6B | $1,539B | 1.95B | **$789** |
+| 2027 | $74B | 29% | $21.5B | $537B | 1.72B | **$312** |
+| 2028 | $117B | 33% | $38.6B | $965B | 1.80B | **$536** |
+| 2029 | $168B | 35% | $58.8B | $1,470B | 1.88B | **$782** |
+| 2030 | $215B | 36% | $77.4B | $1,935B | 1.95B | **$992** |
 
-**Internal consistency check (AH-5, updated):** FY2029 implies EPS ≈ $47.3B × 0.87 / 1.88B ≈ **$21.9** — the revised model now runs slightly *ahead* of management's ">$20 in 3-5 years" target, which is internally consistent: the $20 target was set in November against the old $60B CPU TAM, and management's own May TAM doubling implies upside to their own EPS curve. The prior model ($19.1) reproduced the November target; the revised model reproduces the May regime.
+**Internal consistency check (AH-5, updated):** FY2029 implies EPS ≈ $58.8B × 0.87 / 1.88B ≈ **$27.2** — running well ahead of management's ">$20 in 3-5 years" target, internally consistent: $20 was set against $60B CPU TAM in November, management doubled to $120B+ in May, Bernstein base case is $223B. The model prices the Bernstein base, not the management bear.
 
-  FY2028: $97B × 33% OP = $32.0B × 25x = $800B / 1.80B diluted = **$444**
+  FY2028: $117B × 33% OP = $38.6B × 25x = $965B / 1.80B diluted = **$536**
 
-CEILING: $444 (FY2028 column standard, diluted; rolling FY28/FY29 blend applied in Excel — V2 revision Jun 11, snapshot AMD_artifact_pre_V2revision_2026-06-11.md)
+CEILING: $536 (FY2028 column standard, diluted; revised from $477 on $223B CPU TAM (Bernstein base case). AMD is now essentially AT ceiling at $512.)
 
 ## Cross-Book Relevance (why this artifact exists at negative EV)
 

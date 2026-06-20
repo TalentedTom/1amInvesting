@@ -1,10 +1,10 @@
 # INTC — Intel Corporation | Deep Dive
 
-**Date:** May 2026 (dive) | Jun 8, 2026 (re-audit: Google 6M TPU + Jeff Pu yields) | **June 11, 2026 (restructured — single generation; Base lattice-harmonized)**
-**Framework Version:** v4.1
+**Date:** May 2026 (dive) | Jun 8, 2026 (re-audit: Google 6M TPU + Jeff Pu yields) | June 11, 2026 (restructured) | **June 17, 2026 (V2 TAM revision $170B + multiple 25x)**
+**Framework Version:** v4.2
 **Status:** NOT HELD (watchlist — Path B sovereign foundry/platform turnaround, not a bottleneck) | **Base 80% (48/60)**
-**Price at restructure:** $117.73 | ~5.08B shares | MC ~$598B
-**Ceiling:** FY2028 $90 (FY-column standard)
+**Price at revision:** $121.10 | ~5.08B shares | MC ~$615B
+**Ceiling:** FY2028 $108 (FY-column standard, 25x, $223B CPU TAM — FY28 flat vs $170B; outer years improve)
 
 ---
 
@@ -32,40 +32,40 @@ Q1 2026: $13.6B (+7%, beat by $1.4B), non-GAAP EPS $0.29 vs $0.01 consensus; GAA
 |----------|-------|---------|
 | Core Thesis | 16/20 | x86 duopoly; foundry PROVEN at 80%/90-95% yields; EMIB overflow position with prepaying customers; sovereign backing. Penalties: Path B turnaround/platform, not a bottleneck (-2); TSMC remains the benchmark and AMD takes share on both fronts (-2). |
 | Cycle Stage | 9/10 | Six consecutive beats; 18A above the mass-production threshold; DCAI accelerating to +39% 2026E; "confirmed execution, no longer early turnaround." |
-| TAM | 9/10 | $120B server CPU + $100B+ external foundry pipeline (Google/Apple/NVIDIA/MRVL) + the packaging overflow. |
+| TAM | 9/10 | $223B server CPU (Bernstein base case, Jensen confirmed) + $100B+ external foundry pipeline (Google/Apple/NVIDIA/MRVL) + the packaging overflow. |
 | Catalysts | 5/5 | Google TPU revenue 2027 (dated); Clearwater Forest Q3 2026; first GAAP-positive print (~Jul); IFS profitability H2 2027; Apple 14A confirmation pending. |
 | Macro | 9/10 | CHIPS Act + national-security foundry designation + administration support; the CoWoS-sold-out overflow regime; CPU-renaissance macro. |
 | Alpha | 2/5 | 48 analysts — the most-covered turnaround in semi history; the residual edge is the Asian-channel reads (Jukan TPU clarification, yield data) acted on days before broad circulation. |
 | Risks | -2 | 14A execution + yield claims unverified in revenue; capex strain (CHIPS + prepayments fund, cash flow must hold) (-1). AMD share losses + Apple/NVIDIA modeled as inferences, not signatures (-1). |
 | **Base** | **48/60 (80%)** | Harmonized Jun 11 from 81 (not n/60-representable) per the LITE/Win Semi rounding-lattice precedent; EV unchanged. |
 
-## Ceiling — v4.1 AH-1 Full Derivation (Jun 8 model preserved; 20-22x, ~5.08B shares, FY-column standard)
+## Ceiling — v4.2 AH-1 Full Derivation (Jun 17 TAM revision; 25x, ~5.08B shares, FY-column standard)
 
-### Revenue Vectors (AH-9, consolidated net of intersegment)
+### Revenue Vectors (AH-9, consolidated net of intersegment — V2 revised for $223B CPU TAM)
 
 | Vector | FY2027 | FY2028 | FY2029 | FY2030 | AH-7 |
 |--------|--------|--------|--------|--------|------|
 | Client + Other (CCG) | $34.5B | $36.5B | $38.0B | $39.0B | MEDIUM |
-| DCAI / Server CPU | $31.0B | $39.0B | $47.0B | $55.0B | MEDIUM |
+| DCAI / Server CPU (revised) | $34.0B | $44.0B | $58.0B | $76.0B | MEDIUM |
 | External Foundry + Packaging | $8.0B | $19.0B | $32.0B | $49.0B | LOW-MEDIUM |
-| **TOTAL** | **$73.5B** | **$94.5B** | **$117.0B** | **$143.0B** | |
+| **TOTAL** | **$76.5B** | **$99.5B** | **$128.0B** | **$164.0B** | |
+
+**V2 TAM revision (Jun 17):** Server CPU TAM re-anchored to $223B by 2030 (Bernstein base case, Jensen confirmed). Intel share declining 55%→34% as AMD and ARM-based grow. The $223B ramp is back-loaded: 2028 TAM (~$109B) is similar regardless of 2030 endpoint — the divergence hits FY2029-2030. Intel's share loss partially offsets the larger TAM in near years, but absolute dollars grow in outer years where the $223B vs $170B gap widens. Old V2 $33/44/56/67B → new $34/44/58/76B.
 
 **External vector detail (FY2028):** Google TPU fab+packaging ~4M units × ~$3K = $12.0B; Apple/Tesla/14A/EMIB pipeline $3.0B; **NVIDIA Feynman EMIB probability-weighted at 25% = $0.5B** (testing phase; escalates to 40% on testing confirmation per Rule 16b); MediaTek/custom packaging $2.5B; other $1.0B.
 
-**Content-per-TPU sensitivity (FY2028):** $1K → $88B revenue → $83/sh; **$3K (base) → $94.5B → $90/sh**; $5K → $101B → $97/sh.
+### Valuation (25x framework standard, margin ramp on de-risked yields)
 
-### Valuation (margin ramp on the de-risked yields; 20x FY27 → 22x thereafter, below TSMC's 30x for execution risk)
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
+|------|---------|-----------|-----|-------|-----------|
+| 2027 | $76.5B | 15% | $11.5B | $288B | **$57** |
+| 2028 | $99.5B | 22% | $21.9B | $548B | **$108** |
+| 2029 | $128.0B | 26% | $33.3B | $833B | **$164** |
+| 2030 | $164.0B | 28% | $45.9B | $1,148B | **$226** |
 
-| Year | Revenue | OP Margin | OP | Multiple | MC | Per Share |
-|------|---------|-----------|-----|---------|-----|-----------|
-| 2027 | $73.5B | 15% | $11.0B | 20x | $220B | **$43** |
-| 2028 | $94.5B | 22% | $20.8B | 22x | $458B | **$90** |
-| 2029 | $117.0B | 26% | $30.4B | 22x | $669B | **$132** |
-| 2030 | $143.0B | 28% | $40.0B | 22x | $881B | **$173** |
+  FY2028: $99.5B × 22% OP = $21.9B × 25x = $548B / 5.08B shares = **$108**
 
-  FY2028: $94.5B × 22% OP = $20.8B × 22x = $458B / 5.08B shares = **$90**
-
-CEILING: $90 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
+CEILING: $108 (FY2028 column standard; FY2028 flat vs prior revision — $223B ramp is back-loaded and Intel's share loss offsets near-term TAM growth. FY2029-2030 columns improve as the larger TAM compounds against a stabilizing share floor.)
 
 ## Cross-Book Relevance
 

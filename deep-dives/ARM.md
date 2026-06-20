@@ -1,10 +1,10 @@
 # ARM — Arm Holdings plc | Deep Dive
 
-**Date:** June 11, 2026 (NEW DIVE — re-screen after dismissal error; first net-new position post-restructure-program)
-**Framework Version:** v4.1
+**Date:** June 11, 2026 (NEW DIVE) | **June 17, 2026 (V1/V3 TAM revision — $170B CPU TAM + multiple 40x→25x)**
+**Framework Version:** v4.2
 **Status:** NOT HELD (watchlist, 🔒 CHOKEPOINT — instruction-set architecture monopoly; the deepest switching-cost moat in computing) | **Base 75% (45/60)**
-**Price at dive:** $311.00 (Jun 10 close; next bulk update refreshes) | ~1.05B shares | MC ~$327B
-**Ceiling:** FY2028 $170 (FY-column standard)
+**Price at revision:** $418.88 | ~1.05B shares | MC ~$440B
+**Ceiling:** FY2028 $128 (FY-column standard, 25x, $223B CPU TAM)
 
 ---
 
@@ -41,31 +41,31 @@ The informal prior dismissed ARM as "fully covered, 70-90x, fails" — sector-be
 
 ### Vectors (AH-9)
 
-**V1 Royalty — AH-7: HIGH** (Armv9/CSS mix + DC doubling; the installed-base annuity): $3.1B / $3.9B / $4.9B / $6.1B (FY27-30)
+**V1 Royalty — AH-7: HIGH** (Armv9/CSS mix + DC doubling; $223B server CPU TAM by 2030 (Bernstein base case, Jensen confirmed); AI-CPU ASPs +56% lifts royalty per chip; Vera adds pure royalty stream; ~85% ARM server architecture share by 2030): $3.5B / $4.8B / $6.5B / $8.8B (FY27-30)
 **V2 Licensing — AH-7: HIGH** (CSS upfront bookings ~20% near-term, normalizing high-single-digit per CFO): $2.7B / $3.1B / $3.5B / $3.9B
-**V3 AGI CPU / merchant silicon — AH-7: MEDIUM** (management $15B target; first silicon shipping; ramp curve modeled well short of target): $0.8B / $2.5B / $5.5B / $9.0B
+**V3 AGI CPU / merchant silicon — AH-7: MEDIUM** (management $15B target; $223B TAM makes $15B = ~6.7% share — conservative for ISA monopolist; modeled below target): $1.2B / $3.5B / $7.5B / $13.0B
 
 | Vector | FY2027 | FY2028 | FY2029 | FY2030 |
 |--------|--------|--------|--------|--------|
-| 1. Royalty | $3.1B | $3.9B | $4.9B | $6.1B |
+| 1. Royalty | $3.5B | $4.8B | $6.5B | $8.8B |
 | 2. Licensing | $2.7B | $3.1B | $3.5B | $3.9B |
-| 3. AGI CPU (merchant) | $0.8B | $2.5B | $5.5B | $9.0B |
-| **TOTAL** | **$6.6B** | **$9.5B** | **$13.9B** | **$19.0B** |
+| 3. AGI CPU (merchant) | $1.2B | $3.5B | $7.5B | $13.0B |
+| **TOTAL** | **$7.4B** | **$11.4B** | **$17.5B** | **$25.7B** |
 
-### Valuation (40x — the framework's equipment/IP-monopoly ceiling tier; OP blends DOWN as merchant silicon grows)
+### Valuation (25x — framework standard; OP blends DOWN as merchant silicon grows)
 
-| Year | Revenue | OP Margin | OP | × 40x | Per Share |
+| Year | Revenue | OP Margin | OP | × 25x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | $6.6B | 48% | $3.17B | $127B | **$121** |
-| 2028 | $9.5B | 47% | $4.47B | $179B | **$170** |
-| 2029 | $13.9B | 46% | $6.39B | $256B | **$244** |
-| 2030 | $19.0B | 45% | $8.55B | $385B | **$366** |
+| 2027 | $7.4B | 48% | $3.55B | $88.8B | **$85** |
+| 2028 | $11.4B | 47% | $5.36B | $134B | **$128** |
+| 2029 | $17.5B | 46% | $8.05B | $201B | **$192** |
+| 2030 | $25.7B | 45% | $11.57B | $289B | **$275** |
 
-**AH-5 cross-check:** FY2030 OP $8.55B less ~15% tax ≈ $7.3B / 1.05B ≈ **$6.9 EPS**, tracking toward management's ">$9 by FY2031" one year later — the model independently approaches the company target on a conservative ramp. **The market trades well above the FY2028 column — it pre-pays the FY2030-31 model today; the Excel computes the live gap, and the framework's entry condition is mechanical.**
+**AH-5 cross-check:** FY2030 OP $11.57B less ~15% tax ≈ $9.8B / 1.05B ≈ **$9.4 EPS** — now matching management's ">$9 by FY2031" one year early on the $223B TAM. The model and the management target converge. The market at $419 trades at ~45x this FY2030 EPS; the framework at 25x says fair value is $275. The gap remains the ISA-monopoly premium the market assigns and the framework doesn't pay.
 
-  FY2028: $9.5B × 47% OP = $4.47B × 40x = $179B / 1.05B shares = **$170**
+  FY2028: $11.4B × 47% OP = $5.36B × 25x = $134B / 1.05B shares = **$128**
 
-CEILING: $170 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
+CEILING: $128 (FY2028 column standard; revised from $119 on $223B CPU TAM (Bernstein base case). The thesis strengthens with every TAM revision; the price required to act on it remains far below the market.)
 
 ## Cross-Book Relevance — the Three-Way CPU Cross-Watch
 
