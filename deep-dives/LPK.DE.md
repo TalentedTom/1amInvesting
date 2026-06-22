@@ -1,10 +1,10 @@
 # LPK.DE — LPKF Laser & Electronics | Deep Dive
 
-**Date:** May 5, 2026 (dive) | May 21, 2026 (audit → Base 80) | June 10, 2026 (restructured) | **June 17, 2026 (meeting notes → Base 83 + ceiling rebuild)**
+**Date:** May 5, 2026 (dive) | May 21, 2026 (audit → Base 80) | June 10, 2026 (restructured) | June 17, 2026 (meeting notes → Base 83 + ceiling rebuild) | **June 19, 2026 (V6-V9 expansion vectors added at 30% — SPHBM4/singulation/glass interposer/CPO scale)**
 **Framework Version:** v4.2
 **Status:** HELD (✓) | **Base 83% (50/60)**
 **Price at last update:** €25.60 | MC ~€627M | 24.5M shares
-**Ceiling:** FY2028 €118 (5-vector build, revised from €96)
+**Ceiling:** FY2028 €125 (9-vector build: V1-V5 base + V6-V9 expansion at 30%)
 
 ---
 
@@ -133,29 +133,45 @@ Source: CEO meeting notes: "LIDE is only the entry ticket, there are many other 
 |------|------|------|------|
 | €5M | €15M | €30M | €60M |
 
-### Combined
+### Combined (V1-V5 confirmed + V6-V9 expansion at 30% probability)
 
-| Vector | 2027 | 2028 | 2029 | 2030 |
-|--------|------|------|------|------|
-| 1. LIDE Equipment | €120M | €300M | €600M | €900M |
-| 2. CPO Waveguide | €20M | €60M | €100M | €150M |
-| 3. Space & Defense | €15M | €30M | €50M | €50M |
-| 4. Legacy | €60M | €55M | €45M | €40M |
-| 5. Adjacent Adv Pkg | €5M | €15M | €30M | €60M |
-| **TOTAL** | **€220M** | **€460M** | **€825M** | **€1,200M** |
+| Vector | 2027 | 2028 | 2029 | 2030 | Prob |
+|--------|------|------|------|------|------|
+| 1. LIDE Equipment (compute) | €120M | €300M | €600M | €900M | BASE |
+| 2. CPO Waveguide | €20M | €60M | €100M | €150M | BASE |
+| 3. Space & Defense | €15M | €30M | €50M | €50M | BASE |
+| 4. Legacy | €60M | €55M | €45M | €40M | BASE |
+| 5. Adjacent Adv Pkg | €5M | €15M | €30M | €60M | BASE |
+| **Subtotal V1-V5** | **€220M** | **€460M** | **€825M** | **€1,200M** | |
+| 6. SPHBM4 Memory Glass | €0 | €6M | €24M | €60M | 30% |
+| 7. Singulation Scale-up | €3M | €12M | €30M | €45M | 30% |
+| 8. Glass Interposer | €0 | €3M | €15M | €60M | 30% |
+| 9. CPO Waveguide Scale-up | €0 | €6M | €15M | €45M | 30% |
+| **Subtotal V6-V9 (30% wtd)** | **€3M** | **€27M** | **€84M** | **€210M** | |
+| **TOTAL** | **€223M** | **€487M** | **€909M** | **€1,410M** | |
 
-Legacy ~€60M at 10% OP; LIDE/glass/CPO equipment at 35% OP (monopoly-equipment economics); Space at 30%; Adjacent at 25%. Blended OP expands 28%→33% as advanced packaging grows from 73% to 97% of revenue.
+V6 SPHBM4 Memory Glass (30%): JEDEC ratified SPHBM4 Jun 2026 — 20mm interconnect distance requires glass substrate for thermal/flatness at scale. If Samsung/SKH confirm glass for SPHBM4 packaging, memory substrates ship in hundreds of millions of units. Lower TGV density per substrate but 1000x compute volume. Raw: €0/€20M/€80M/€200M. Trigger: memory maker technology forum confirmation → 50%.
+
+V7 Singulation Scale-up (30%): CEO confirmed singulation machines ship EOY 2026. Once customers have LIDE installed, adjacent tools follow (qualification done, process integration proven). Daniel Romero confirms SHMD InfinityLine + Atotech/Okuno chemistry workflow = multi-tool platform per customer. Raw: €10M/€40M/€100M/€150M. Trigger: first singulation order disclosed → 50%.
+
+V8 Glass Interposer (30%): Glass is cheaper than silicon at 510×515mm panel format. If TSMC/Intel qualify glass interposers for chiplet integration (replacing InFO-S silicon interposer), every advanced package becomes a LIDE customer. Tighter via pitch than substrate TGVs. Raw: €0/€10M/€50M/€200M. Trigger: TSMC/Intel glass interposer qualification → 50%.
+
+V9 CPO Waveguide Volume Scale-up (30%): Incremental over V2 base. If CPO ports exceed LightCounting's 100M+ within 5 years, waveguide demand scales proportionally. Zephyr data: 300-400K CPO switches by 2030. At 200 ports/switch = 60-80M ports, each needing waveguide writing. Raw: €0/€20M/€50M/€150M. Trigger: CPO switch orders exceeding 500K annual → 50%.
+
+**SELL/HOLD FRAMEWORK:** V1-V5 alone justify €118 FY2028 / €328 FY2030. V6-V9 at 30% add €27M/€210M. If ANY of V6-V9 triggers fire (memory maker confirms glass, singulation order, glass interposer qual, CPO acceleration), that vector upgrades 30%→50% and the outer-year ceiling steps up significantly. The CEO's "equity story" presentation later this year is the catalyst that likely reveals which vectors are real.
+
+Legacy ~€60M at 10% OP; LIDE/glass/CPO equipment at 35% OP (monopoly-equipment economics); Space at 30%; Adjacent + expansion vectors at 25%. Blended OP expands 30%→34% as advanced packaging grows and expansion vectors contribute.
 
 | Year | Revenue | Blended OP | × 20x | Per Share |
 |------|---------|-----------|-------|-----------|
-| 2027 | €220M | €61M (28%) | €1.22B | **€50** |
-| 2028 | €460M | €144M (31%) | €2.88B | **€118** |
-| 2029 | €825M | €272M (33%) | €5.44B | **€222** |
-| 2030 | €1,200M | €402M (33%) | €8.03B | **€328** |
+| 2027 | €223M | €66M (30%) | €1.32B | **€54** |
+| 2028 | €487M | €153M (31%) | €3.06B | **€125** |
+| 2029 | €909M | €298M (33%) | €5.96B | **€243** |
+| 2030 | €1,410M | €473M (34%) | €9.46B | **€386** |
 
-  FY2028: €460M revenue → blended OP €144M × 20x = €2.88B / 24.5M shares = **€118**
+  FY2028: €487M revenue → blended OP €153M × 20x = €3.06B / 24.5M shares = **€125**
 
-CEILING: €118 (FY2028 column standard; revised from €96, +23%, on meeting-notes-driven TAM expansion + 4-5 buyer confirmation + metallization gate clearing + V5 adjacent revenue added)
+CEILING: €125 (FY2028 column standard; 9-vector model. V1-V5 base = €118. V6-V9 at 30% probability add €7. Outer years are where expansion vectors compound: FY2030 €328→€386 (+18%). As triggers fire and probabilities upgrade 30%→50%→75%, the FY2030 ceiling approaches €500+.)
 
 ## The ASML Parallel
 

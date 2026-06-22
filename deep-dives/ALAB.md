@@ -1,7 +1,7 @@
 # ALAB — Astera Labs | Deep Dive (Full, replaces screen-level pass)
 
-**Date:** June 10, 2026 | External re-audit merged June 10, 2026 (log in VERSION_LOG)
-**Price at dive:** $341.70 | MC ~$62B | ~184M diluted shares (Q1 2026 10-Q basis)
+**Date:** June 10, 2026 | External re-audit merged June 10, 2026 | **June 19, 2026 (V3 CXL TAM revision $16-20B + multiple 28x→25x)**
+**Price at dive:** $417.07 | MC ~$77B | ~184M diluted shares (Q1 2026 10-Q basis)
 **Exchange:** NASDAQ
 **Supercycle:** DB1 — AI Interconnect (scale-out + scale-up fabric, signal conditioning, CXL memory, optical 2027+)
 **Classification:** ⚡ BOTTLENECK-ADJACENT PLATFORM (best-of-breed merchant, NOT sole-source in any socket)
@@ -70,12 +70,12 @@ Source: Q1 actuals (majority of current revenue), Gen 6 >1/3 of company revenue,
 |------|------|------|------|------|
 | $950M | $1,050M | $1,150M | $1,200M | $1,250M |
 
-**V3. Leo CXL / KV-cache custom silicon**
-Source: Azure M-Series GA YE2026 (named); second hyperscaler KV-cache custom ships 2027 (CEO quote); Penguin Solutions Leo deployments show 75% higher GPU utilization and 2x inference throughput for CXL-attached KV-cache (company data). Inference memory wall = structural tailwind. HELD at demo-stage sizing per the re-audit's own risk: CXL pooling needs production deployments, not demos — tagged uncertainty must discount the number (FOCI lesson). AH-7: MEDIUM-LOW.
+**V3. Leo CXL / KV-cache custom silicon — REVISED Jun 19 ($16-20B CXL TAM)**
+Source: Azure M-Series GA YE2026 (named); second hyperscaler KV-cache custom ships 2027 (CEO quote); Penguin Solutions Leo deployments show 75% higher GPU utilization and 2x inference throughput for CXL-attached KV-cache (company data). **CXL TAM revision: Micron (Wells Fargo) $20B+ by 2030; Jackrabbit Labs $16B by 2028; Introl $15B by 2028 ($12B+ DRAM behind CXL). MarketIntelo names ALAB at 26.8% of CXL smart memory controllers (fastest-growing segment, 31.4% CAGR) and 18.6% of CXL switches. Prior V3 modeled $300M FY2028 = <2% of a $16B TAM where ALAB holds 20-27% share — dramatically understated.** Revised to ~5% capture by FY2028, growing to ~8% by FY2030. Conservative relative to current share positioning. AH-7: MEDIUM-HIGH (upgraded from MEDIUM-LOW).
 
 | 2026 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|------|
-| $40M | $150M | $300M | $450M | $600M |
+| $80M | $350M | $800M | $1,200M | $1,600M |
 
 **V4. Optical (aiXscale): connectors/NPO chipsets 2027 → CPO switches 2028**
 Source: management roadmap, acquisition IP claims. No volume customer named yet. AH-7: LOW-MEDIUM.
@@ -97,29 +97,29 @@ Source: program confirmed with NVIDIA (Dec 2025 + GTC 2026); hybrid-rack scope (
 |--------|------|------|------|------|------|
 | 1. Scorpio/UALink/custom | $520M | $1,100M | $1,600M | $2,150M | $2,900M |
 | 2. Signal conditioning | $950M | $1,050M | $1,150M | $1,200M | $1,250M |
-| 3. Leo CXL/KV-cache | $40M | $150M | $300M | $450M | $600M |
+| 3. Leo CXL/KV-cache (REVISED) | $80M | $350M | $800M | $1,200M | $1,600M |
 | 4. Optical | $0 | $100M | $350M | $700M | $950M |
 | 5. NVLink Fusion custom | $0 | $50M | $200M | $450M | $800M |
-| **TOTAL** | **$1,510M** | **$2,450M** | **$3,600M** | **$4,950M** | **$6,500M** |
+| **TOTAL** | **$1,550M** | **$2,650M** | **$4,100M** | **$5,700M** | **$7,500M** |
 
-Cross-check: FY2026 consistent with Q1 $308M + Q2 guide ~$360M + H2 ramp (≈ +81-110% YoY vs analyst ~81%). FY2027 +59% consistent with TIKR quarterly path ($360M Q2'26 → ~$540M Q2'27 = +50% YoY mid-year, accelerating on UALink/optical layering). FY2028+ tagged MEDIUM-LOW/LOW; conservative alternative (TIKR mid-case shape) would run ~$2.9B/$3.8B/$4.6B for 2028-2030 — noted, not used, because it ignores the three new vectors entirely.
+V3 revision note: Prior V3 modeled $300M FY2028 on a $16B TAM where ALAB holds 20-27% share of the core segments. Revised to $800M (~5% of TAM). CXL is not just V3 — it's a TAM multiplier across V1 (Scorpio CXL fabric switching), V2 (Aries CXL retimers), and V5 (NVLink Fusion CXL memory sharing). The CXL exposure is systemic, not single-vector.
 
-### Full Valuation Table (NG OP 36/37/38/38%, 28x, shares 190/195/200/200M)
+### Full Valuation Table (NG OP 36-38%, 25x framework standard, shares 190/195/200/200M)
 
-| Year | Revenue | OP | × 28x | MC | Per Share |
+| Year | Revenue | OP | × 25x | MC | Per Share |
 |------|---------|-----|-------|-----|-----------|
-| 2027 | $2,450M | $882M (36%) | $24.7B | $24.7B | **$130** |
-| 2028 | $3,600M | $1,332M (37%) | $37.3B | $37.3B | **$191** |
-| 2029 | $4,950M | $1,881M (38%) | $52.7B | $52.7B | **$263** |
-| 2030 | $6,500M | $2,470M (38%) | $69.2B | $69.2B | **$337** |
+| 2027 | $2,650M | $954M (36%) | $23.9B | $23.9B | **$126** |
+| 2028 | $4,100M | $1,517M (37%) | $37.9B | $37.9B | **$195** |
+| 2029 | $5,700M | $2,166M (38%) | $54.2B | $54.2B | **$271** |
+| 2030 | $7,500M | $2,850M (38%) | $71.3B | $71.3B | **$356** |
 
-28x FLAT justification: between AVGO at 25x (slower growth, customer-churn risk) and the 30x+ reserved for sole-source monopolies. Multiples hold flat or graduate UP on proof — never forecast compression (analyst behavior, not TAM math; Rule 2 adjacent). Margins graduate UP (36→38%) on 76% GM + COSMOS software mix + opex leverage; warrant amortization hits gross margin against specific customer revenue, not the operating model. Pre-rounding per AH-2: 129.98 / 191.26 / 263.34 / 337.37.
+25x framework standard. Prior 28x was justified as "between AVGO and sole-source monopolies" but harmonized to 25x per session ruling. ALAB is best-of-breed merchant, not sole-source — 25x is correct.
 
 ### Ceiling Derivation
 
-  FY2028: $3,600M × 37% NG OP = $1,332M × 28x = $37.30B / 195M shares = **$191**
+  FY2028: $4,100M × 37% NG OP = $1,517M × 25x = $37.9B / 195M shares = **$195**
 
-CEILING: $191 (FY2028 column standard; rolling blend in Excel)
+CEILING: $195 (FY2028 column standard; revised from $191. V3 CXL uplift ($300M→$800M) more than offsets multiple correction (28x→25x). The CXL TAM of $16-20B is the structural driver — ALAB holds 20-27% of the fastest-growing CXL segments and the prior model captured <2% of the TAM.)
 
 ### The Embedded-Expectations Check (why the market price fails the model)
 

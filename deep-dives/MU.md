@@ -1,8 +1,8 @@
 # MU — Micron Technology | Deep Dive
 
-**Date:** Q2 FY2026 rescore (Mar) | Jun 3 (margin harmonization, 20x) | **Jun 10, 2026 (restructured — single generation; Base reconciled to evidence)**
-**Framework Version:** v4.1
-**Status:** HELD (✓) | **Base 83% (50/60)**
+**Date:** Q2 FY2026 rescore (Mar) | Jun 3 (margin harmonization, 20x) | Jun 10, 2026 (restructured) | **Jun 19, 2026 (TAM 9→10 + CXL DRAM/NAND vector added)**
+**Framework Version:** v4.2
+**Status:** HELD (✓) | **Base 85% (51/60)**
 **Price at restructure:** $935.89 | ~1.14B shares | MC ~$1.07T (Hard Filters suspended — memory oligopoly exception)
 **Ceiling:** FY2028 $3,316 (FY-column standard)
 
@@ -34,14 +34,14 @@ Structural position: the US memory champion — CHIPS-funded fabs (Idaho mid-202
 |----------|-------|---------|
 | Core Thesis | 16/20 | HBM4 shipping to Vera Rubin; share gaining; US champion with CHIPS capacity; "strategic asset" + LTA regime. Penalties: China ban (-2), #3 in HBM (-1), commodity perception (-1). |
 | Cycle Stage | 10/10 | Every metric a record; Q3 guided +40% QoQ at 81% GM. Cannot score higher. |
-| TAM | 9/10 | HBM $62B doubling; memory $896B by 2030 (MS); DC DRAM+NAND >50% of industry TAM for the first time. |
+| TAM | 10/10 | HBM $62B doubling; CXL TAM $16-20B by 2028-2030 ($12B+ DRAM behind CXL + NAND pools — MU is the ONLY company producing BOTH CXL DRAM and CXL NAND, dual beneficiary); MU literally sourced the $20B+ CXL TAM (Wells Fargo/Rakers = Layer 0 evidence); CPU DRAM 4x; memory $896B by 2030 (MS); DC DRAM+NAND >50% of industry TAM. Every expansion vector firing. Same 10/10 logic as SKH/SNDK. |
 | Catalysts | 5/5 | Q3 print (~June, days away); HBM4E CY2027 ramp; 16-high qualification; Idaho fab mid-2027; LTA expansions. |
 | Macro | 10/10 | Supply substantially short; 50-67% allocation fills; floors + pass-through proven downstream — same evidence class as the Korean names' 10s. |
 | Alpha | 1/5 | $1T+ mega-cap, 30+ analysts, universally owned. No informational edge; the position is conviction-at-fair-discovery, not discovery. |
 | Risks | -2 | China-ban escalation and export-policy exposure (-1). Cyclical perception + eventual capacity response compressing the multiple (-1). |
 | Subtotal | 49/60 | |
 | Rule 16c-2 | **+1** | Hyperscaler prepayment regime (Microsoft $10B+ precedent; 15-30% advances; supplier-floor LTAs) — oligopoly-wide. |
-| **Base** | **50/60 (83%)** | Strict evidence read. The 84th point is available via Alpha 2 (residual US-listing/flow edge) — flagged for Tom, not applied. |
+| **Base** | **51/60 (85%)** | Strict evidence read. TAM 9→10 Jun 19 (CXL dual beneficiary — only company with both CXL DRAM and CXL NAND + management sourced the $20B TAM). |
 
 ## Ceiling — v4.1 AH-1 Full Derivation (consensus-anchored revenue, margin curve, 20x, 1.14B shares, FY-column standard)
 
@@ -52,15 +52,17 @@ Structural position: the US memory champion — CHIPS-funded fabs (Idaho mid-202
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
 | 2027 | $207B | 70% | $145B | $2.90T | **$2,544** |
-| 2028 | $290B | 65% | $189B | $3.77T | **$3,316** |
-| 2029 | $362B | 60% | $217B | $4.34T | **$3,807** |
-| 2030 | $435B | 55% | $239B | $4.79T | **$4,193** |
+| 2028 | $295B | 65% | $192B | $3.84T | **$3,368** |
+| 2029 | $370B | 60% | $222B | $4.44T | **$3,895** |
+| 2030 | $442B | 55% | $243B | $4.86T | **$4,263** |
+
+CXL increment (Jun 19): ~$5B FY2028 (~$3.5B CXL DRAM at 28% share + ~$1.5B CXL NAND at 10-15% share). ~$7B by FY2030. Modest vs MU's revenue base (~1.7%) but directionally correct and likely not in consensus. MU is the only dual CXL beneficiary (DRAM + NAND).
 
 20x rationale: HBM is contracted infrastructure on hyperscaler LTAs at near-sovereign credit; CHIPS subsidizes capex; US listing and champion status earn the premium over the Koreans' 15x while staying re-rated off cyclical 8-12x.
 
-  FY2028: $290B × 65% OP = $189B × 20x = $3.77T / 1.14B shares = **$3,316**
+  FY2028: $295B × 65% OP = $192B × 20x = $3.84T / 1.14B shares = **$3,368**
 
-CEILING: $3,316 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel — single-generation convention Jun 10)
+CEILING: $3,368 (FY2028 column standard; revised from $3,316 on CXL DRAM/NAND increment + TAM 10/10)
 
 ## Key Risks
 

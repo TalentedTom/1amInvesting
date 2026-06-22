@@ -361,5 +361,27 @@ WHY WE DON'T MODEL $60B:
 - CPO timeline could delay (ASE confirmed H2 2026 but risk exists)
 - SATCOM Gen 2 BFIC development timeline uncertain
 - LITE/COHR vertically integrated — could squeeze independent suppliers (mitigated by 4-platform fragmentation)
-- **InP substrate supply chain exposure (added Jun 13, corrected Jun 13).** SIVE's lasers are fabbed at Win Semi, which sources InP substrates from undisclosed suppliers. InP substrate market (Reuters): Sumitomo ~40%, AXT ~35%, JX ~10% — AXT+Sumitomo = ~80%, but Sumitomo consumes much internally so the *available* external market is heavily AXT-dependent. Win Semi likely has at least partial AXT exposure at that concentration. Win Semi's GM acknowledged supply chains "relatively tight" (May 3, 2026). **China's indium export control policy expires November 10, 2026** — renewal/tightening = another leg of scarcity (bullish for SIVE's laser pricing power, but potentially constraining output); lapse = scarcity premium compresses. 6-inch InP wafer price +250% to ~$5,000 since controls began. Net effect for SIVE is mixed: pricing power WIDENS but production ceiling could LOWER. Watch policy signals from Q3 2026.
+- **InP substrate supply chain exposure (added Jun 13, corrected Jun 13).** SIVE's lasers are fabbed at Win Semi, which sources InP substrates from undisclosed suppliers. InP substrate market (Reuters): Sumitomo ~40%, AXT ~35%, JX ~10% — AXT+Sumitomo = ~80%, but Sumitomo consumes much internally so the *available* external market is heavily AXT-dependent. Win Semi likely has at least partial AXT exposure at that concentration. Win Semi's GM acknowledged supply chains "relatively tight" (May 3, 2026). **China's indium export control policy expires November 10, 2026** — renewal/tightening = another leg of scarcity (bullish for SIVE's laser pricing power, but potentially constraining output); lapse = scarcity premium compresses. 6-inch InP wafer price +250% to ~$5,000 since controls began. Net effect for SIVE is mixed: pricing power WIDENS but production ceiling could LOWER. Watch policy signals from Q3 2026. **UPDATE Jun 19: SemiAnalysis ChipBook shows China indium exports at ALL-TIME HIGHS (~2,500kg/month, ~$15M/month). Supply is flowing, not restricted. Risk remains at November 10 expiry but current data contradicts the "rugpull" narrative.**
+
+---
+
+## Serenity Intelligence Block (Jun 19, 2026 — @aleabitoreddit supply chain mapping)
+
+Source: Serenity's public X thread (Jun 19), independent supply chain analysis. Not scored — documented for future probability upgrades.
+
+**1. V2 Expansion: Pluggable makers beyond Jabil are qualifying.** "After Jabil's announcement, other pluggable players reached out, and SIVE is working with them now (prob codevelopment, qualification stage)." If InnoLight, Eoptolink, or other non-vertically-integrated module makers qualify SIVE CW lasers for their own 1.6T pluggables, V2 transforms from "Jabil-only" ($75M FY2028) to "industry-wide CW pluggable supply" ($150-250M). **Trigger:** any non-Jabil pluggable maker names SIVE as laser source → V2 ceiling doubles.
+
+**2. O-Net Asian Hyperscaler Vector.** O-Net building ELS modules with SIVE lasers, "likely for the Asian hyperscaler supply chains" (Alibaba, Tencent, ByteDance). Geographic expansion beyond Western hyperscalers. Currently embedded in V7 (Celestial AI / O-Net) but the Asian hyperscaler angle is not explicitly modeled. If O-Net volume ramps for Asian DC buildout, V7 has significant upside beyond the current $75M FY2028.
+
+**3. EML Bypass Architectural Framing.** The Jabil 1.6T is not just a CW-laser-based transceiver — it DESIGNED AROUND the EML bottleneck. While LITE and COHR fight over EML supply (COHR buying EMLs from LITE because they can't make enough), SIVE/Jabil built the only 1.6T that doesn't need the constrained component. Jabil management: "relatively dramatic moat." This reframes V2 from "a transceiver partnership" to "an architectural bypass of the industry's binding constraint." The moat is that every competitor's 1.6T design depends on EMLs they can't source, while SIVE/Jabil's doesn't.
+
+**4. Independent Timeline Confirmation.** Serenity's staged timeline independently matches the artifact's three-stage model:
+- NOW → H1 2027: 1.6T pluggable (V2 Jabil, revenue flowing) ← **Stage 1**
+- H2 2026 onward: CPO scale-out (POET and others as CW laser customers) ← **Stage 1→2 transition**
+- H2 2027: Scale-up CPO (Ayar/NVIDIA NVLink ecosystem, primary volume) ← **Stage 2**
+- 2027+: Foundry reference designs (GF), Marvell/Celestial, Lightmatter, Lightelligence ← **Stage 2 breadth**
+
+**5. "Designed In Since They Were Small."** Marvell/Celestial AI, Lightmatter, Lightelligence all worked with SIVE when they were startups. The relationships predate the companies' scale-up. This is the deepest form of lock-in — co-design through multiple product generations creates switching costs that exceed the component cost. Serenity: "they've likely been working + designed in with these players since they were small way back when." This is the golden retriever thesis quantified: the partnerships are 3-5 years deep, not transactional.
+
+**Net assessment:** Serenity's independent mapping confirms all 13 vectors and adds V2 expansion breadcrumbs not yet public. The "everywhere in new optical architectures" observation from an independent analyst matches the golden retriever thesis. No scoring changes — but items 1 and 2 are pre-registered escalation paths: any press release confirming non-Jabil pluggable qualification or O-Net volume triggers a ceiling revision.
 

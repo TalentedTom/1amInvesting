@@ -49,12 +49,12 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 |----------|-------|---------|
 | Core Thesis | 16/20 | AEC first-mover with 100x reliability. SerDes IP moat. DustPhotonics CLOSED = full stack SerDes→DSP→SiPho PIC→system→telemetry ("foundational network architecture partner" — mgmt, Q4 call). Robin/Cardinal DSP traction. CW-laser-based PICs = insulated from EML shortage (validated by Jun 2026 EML-constraint evidence). Rebellions design partnership. BUT: concentration (-2), copper distance ceiling (-1), AVGO/MRVL/ALAB/Montage compete (-1). |
 | Cycle Stage | 10/10 | FY2026 tripled to $1.3B — 2x management's own initial expectation. Book-to-bill >4x, orders into CY2028, LTAs to end of decade. Every quarter a record. |
-| TAM | 8/10 | Multi-sector SerDes: AI DC $10-20B + robots $5B + auto $5B + custom chip IP $5B + edge $3B. AEC + optical + retimers + IP licensing. |
+| TAM | 9/10 | Multi-sector SerDes: AI DC $10-20B + robots $5B + auto $5B + custom chip IP $5B + edge $3B. CXL expansion (Jun 19): CXL retimers (V5, every CXL link needs signal conditioning at 128GT/s), ALC for CXL scale-in (Mizuho: "micro-LED optical from Credo for XPU-to-HBM"), Weaver + CXL memory fabric connectivity. More memory tiers = more interconnect = more CRDO sockets. |
 | Catalysts | 4/5 | Q4 FY2026 earnings. 5th/6th hyperscaler. PCIe Gen6 production. ZeroFlap Optics ramp. Robot/auto design wins. |
 | Macro | 8/10 | 120-150 GW compute. Every GPU cluster needs connectivity. Multi-sector SerDes demand. |
 | Alpha | 1/5 | 15+ analysts. ~$34B MC. Thesis well-known. |
 | Risks | -3 | Customer concentration (-1). Copper distance limits (-1). AEC socket competition now live: ALAB Taurus inside a $62B platform push + Montage PCIe 6.x AECs launched (-1). |
-| **Base** | **44/60 (73%)** | Jun 10 follow-through: Core +1 (Dust closed, Robin/Cardinal, full-stack), Cycle +1 (book-to-bill >4x, LTAs), Risks -1 (ALAB/Montage AEC entry). |
+| **Base** | **45/60 (75%)** | Jun 10: Core +1, Cycle +1, Risks -1. Jun 19: TAM 8→9 (CXL retimers + ALC scale-in + Weaver memory fabric). |
 
 ## Ceiling — v4.2 AH-1 Full Derivation (explicit vector model with 16b probability-weighted breadcrumbs, 48% OP, 25x, ~199M shares)
 
@@ -70,7 +70,7 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 
 **V4 SiPh PICs (DustPhotonics, acquired) — AH-7: MEDIUM** (400G-3.2T roadmap; L3C architecture uses CW lasers = EML-shortage-immune; mgmt: >$100M FY2027): $0.15B / $0.50B / $1.00B / $1.50B. 16b: 65% (acquisition closed, products in development, revenue nascent).
 
-**V5 Retimers (Blue Heron PCIe Gen6, production Q3 FY2027) — AH-7: MEDIUM** (first scale-up-market exposure): $0.05B / $0.30B / $0.60B / $0.90B. 16b: 70% (design wins confirmed, production dated).
+**V5 Retimers (Blue Heron PCIe Gen6, production Q3 FY2027 + CXL retiming) — AH-7: MEDIUM** (first scale-up-market exposure + CXL 4.0 at 128GT/s needs retiming at distance): $0.05B / $0.40B / $0.80B / $1.20B. 16b: 70% (design wins confirmed, production dated, CXL uplift Jun 19).
 
 | Vector | FY2027 | FY2028 | FY2029 | FY2030 |
 |--------|--------|--------|--------|--------|
@@ -78,14 +78,16 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 | V2 Optical DSPs | $0.35B | $0.70B | $1.10B | $1.50B |
 | V3 ZeroFlap Optics | $0.25B | $0.60B | $1.00B | $1.40B |
 | V4 SiPh PICs | $0.15B | $0.50B | $1.00B | $1.50B |
-| V5 Retimers | $0.05B | $0.30B | $0.60B | $0.90B |
-| **CONFIRMED BASE** | **$2.40B** | **$4.10B** | **$6.00B** | **$7.80B** |
+| V5 Retimers + CXL | $0.05B | $0.40B | $0.80B | $1.20B |
+| **CONFIRMED BASE** | **$2.40B** | **$4.20B** | **$6.20B** | **$8.10B** |
 
 **PROBABILITY-WEIGHTED BREADCRUMB VECTORS (Rule 16b — priced at probability, not certainty):**
 
 **V6 OmniConnect Weaver ($2,000-3,000 revenue per GPU, CEO-guided, CEO performance awards tied to revenue milestones) — AH-7: MEDIUM** (FY2028 ramp; at $2,500 midpoint × deployment scale): $0.0B / $0.5B / $1.2B / $2.0B. 16b: **50%** (management hint + performance awards = credible but unverified at scale).
 
 **V7 NPO/CPO initial revenue — AH-7: LOW** (industry timeline dependent; mgmt flagged FY2028): $0.0B / $0.2B / $0.5B / $1.0B. 16b: **40%** (industry-dependent, not CRDO-specific).
+
+**V8 ALC / CXL Physical Layer (NEW Jun 19) — AH-7: LOW** (Mizuho Jun 16: "micro-LED optical from Credo in ALC for scale-in XPU-to-HBM." CXL 4.0 at 128GT/s may exceed copper for rack-scale memory pooling distances. Hyperlume acquisition provides micro-LED tech. ALAB makes the CXL controller, CRDO makes the physical connection.): $0.0B / $0.15B / $0.40B / $0.80B. 16b: **30%**.
 
 | Breadcrumb Vector | Full Value | × Probability | Weighted Add |
 |-------------------|-----------|---------------|-------------|
@@ -95,30 +97,33 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 | V7 NPO/CPO FY28 | $0.20B | × 40% | $0.08B |
 | V7 NPO/CPO FY29 | $0.50B | × 40% | $0.20B |
 | V7 NPO/CPO FY30 | $1.00B | × 40% | $0.40B |
+| V8 ALC/CXL FY28 | $0.15B | × 30% | $0.05B |
+| V8 ALC/CXL FY29 | $0.40B | × 30% | $0.12B |
+| V8 ALC/CXL FY30 | $0.80B | × 30% | $0.24B |
 
 | | FY2027 | FY2028 | FY2029 | FY2030 |
 |--|--------|--------|--------|--------|
-| Confirmed base | $2.40B | $4.10B | $6.00B | $7.80B |
-| + Weighted adds | $0.00B | $0.33B | $0.80B | $1.40B |
-| **TOTAL REVENUE** | **$2.40B** | **$4.43B** | **$6.80B** | **$9.20B** |
+| Confirmed base | $2.40B | $4.20B | $6.20B | $8.10B |
+| + Weighted adds | $0.00B | $0.38B | $0.92B | $1.64B |
+| **TOTAL REVENUE** | **$2.40B** | **$4.58B** | **$7.12B** | **$9.74B** |
 
 ### Valuation (48% OP per Q4 FY2026 actual + mgmt ~50% net margin guide; 25x; 199M diluted shares)
 
 | Year | Revenue | OP (48%) | × 25x | Per Share |
 |------|---------|----------|-------|-----------|
 | 2027 | $2.40B | $1.15B | $28.8B | **$145** |
-| 2028 | $4.43B | $2.13B | $53.2B | **$267** |
-| 2029 | $6.80B | $3.26B | $81.6B | **$410** |
-| 2030 | $9.20B | $4.42B | $110.4B | **$555** |
+| 2028 | $4.58B | $2.20B | $55.0B | **$276** |
+| 2029 | $7.12B | $3.42B | $85.4B | **$429** |
+| 2030 | $9.74B | $4.68B | $116.9B | **$587** |
 
-  FY2028: $4.43B × 48% OP = $2.13B × 25x = $53.2B / 199M shares = **$267**
+  FY2028: $4.58B × 48% OP = $2.20B × 25x = $55.0B / 199M shares = **$276**
 
-CEILING: $267 (FY2028 column standard; rolling FY28/FY29 blend applied in Excel)
+CEILING: $276 (FY2028 column standard; revised from $267 on V5 CXL retimer uplift + V8 ALC/CXL breadcrumb at 30%)
 
 **Model change note (Jun 13):** replaced the prior "mgmt +40% beat" single-multiplier approach with explicit vector decomposition. The 40% beat was a proxy standing in for five product ramps, each with different timelines and probabilities. Decomposing it via Rule 16b reveals the confirmed base ($2.40B FY2027 = management's own guide) plus probability-weighted upside from Weaver and NPO/CPO. The result is lower than the prior model but structurally honest — each number traces to a named product, a management source, and a probability weight. Escalation paths pre-registered: Weaver deployment confirmation → 50%→75%; NPO/CPO order → 40%→60%; each escalation lifts the weighted adds and re-derives the ceiling.
 
 ### Per-share values for Excel:
-FY2027: $145 | FY2028: $267 | FY2029: $410 | FY2030: $555
+FY2027: $145 | FY2028: $276 | FY2029: $429 | FY2030: $587
 
 ## Jun 10, 2026 — Follow-Through Audit (full pass, post-architecture-week)
 

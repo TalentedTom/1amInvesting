@@ -2,9 +2,9 @@
 
 **Date:** May 2026 (dive + May 31 prepayment bump) | June 10, 2026 (restructured) | June 15, 2026 (AI inference NAND fold + Core 15 ruling) | **June 17, 2026 (Base 82→83 cyclical-reversal softened + ceiling vectors rebuilt)**
 **Framework Version:** v4.2
-**Status:** HELD (✓) | **Base 83% (50/60)**
+**Status:** HELD (✓) | **Base 85% (51/60)**
 **Price at restructure:** $1,646.54 | ~157M shares
-**Ceiling:** FY2028 $4,618 (7-vector build, 20x, FY-column standard)
+**Ceiling:** FY2028 $4,720 (7-vector build, 20x, V6 CXL at 65%, TAM 10/10)
 
 ---
 
@@ -34,14 +34,14 @@ EPS revision trajectory: $81 → $110 → $175 → high $218 within 90 days — 
 |----------|-------|---------|
 | Core Thesis | 16/20 | G3.5/ICMS net-new demand validated; Kioxia allocation control to 2034; HBF with SKH; US champion. **AI inference NAND now an industry-wide architectural tier** — three independent Layer 0/1 validations: NVIDIA CMX (datacenter KV cache in flash), AMD MEXT (system memory hierarchy with flash warm tier), Apple AFM (inactive MoE experts stored in flash, loaded to DRAM on demand). NAND transitions from storage to active AI memory tier. **KV cache sizing (management Q2 FY2026): 75-100 additional EB in 2027, doubling in 2028, NOT YET in current demand figures.** $42B in 5-year LTA deals locked. Core 15 ruling applied: oligopoly penalty softened from -2 to -1. Cyclical-reversal risk softened from -2 to -1 (Jun 17): NAND-as-memory is architectural, not cyclical — 9 independent detour tracks (Damnang framework) structurally increase NAND consumption; software changes (CMX/MEXT/AFM) are permanent once deployed; same logic that re-rated DRAM from cyclical to structural. Remaining penalties: oligopoly (-1), consumer/mobile mix shrinking but still >50% (-1), cyclical-reversal softened (-1). |
 | Cycle Stage | 10/10 | +251% revenue, 60% EPS beat, GM 30%→78.4% in a year, revisions vertical. Block-maximal. |
-| TAM | 9/10 | NAND $184B annualized (Counterpoint Q1) tracking $300B+ by 2028; eSSD mix 43%→60%; G3.5 a genuinely new category; HBF optionality. |
+| TAM | 10/10 | The strongest TAM case in the book. 7 independent revenue vectors + Damnang's 9-track framework ALL structurally increase NAND consumption. NAND $184B annualized tracking $300B+ by 2028; eSSD mix 43%→60%; G3.5 new category; HBF optionality; CXL TAM $16-20B ($12B+ is memory behind CXL); KV cache 75-100 EB "not in forecasts" (management); $42B in 5-year LTAs. Architectural shift from storage to active AI memory tier = permanent TAM expansion, not cyclical. |
 | Catalysts | 5/5 | Q4 print (~July): $7.75-8.25B test; BiCS10 ramp; hyperscaler quals converting; Rubin ICMS deployments. |
 | Macro | 10/10 | Wafer limits, shortage past 2028, IDC permanent reallocation, buyer LTA regime — same evidence class as the rest of the memory block. |
 | Alpha | 1/5 | 20+ analysts, $250B+ class market cap, thesis extremely well-known. Conviction-at-discovery, not edge. |
 | Risks | -2 | Supply response: Samsung P5 + SK Hynix China fabs landing from H1 2027 (-1). Magnitude uncertainty — the model's own note: "likely wrong in magnitude, directionally correct"; ASP normalization is the swing (-1). |
 | Subtotal | 49/60 | |
 | Rule 16c-2 | **+1** | Hyperscaler prepayment regime industry-wide; supplier-floor LTAs with upward adjusters. $42B in 5-year deals. |
-| **Base** | **50/60 (83%)** | Core 15 ruling RESOLVED: YES (Jun 15). Cyclical-reversal softened Jun 17 (Damnang structural thesis + consistency with DRAM re-rating). |
+| **Base** | **51/60 (85%)** | Core 15 ruling RESOLVED: YES (Jun 15). Cyclical-reversal softened Jun 17. TAM 9→10 Jun 19 (7 vectors + 9 Damnang tracks + $16-20B CXL TAM + management EB disclosure = strongest TAM case in the book). |
 
 ## Ceiling — v4.2 AH-1 Full Derivation (50% peak OP, 18x, 157M shares, FY-column standard)
 
@@ -82,12 +82,12 @@ Source: SK Hynix partnership to standardize HBF for AI inference. Flash in the H
 |------|------|------|------|
 | $0B | $1.0B | $3.0B | $5.0B |
 
-### Vector 6: CXL Memory Pooling (flash-backed) — AH-7: LOW-MEDIUM (25% probability-weighted)
-Source: CXL 4.0 released Nov 2025. Samsung Jun 2026 white paper demonstrates CXL switch-based KV cache offloading to flash. XConn + MemVerge demonstrated at SC25/OCP 2025. Production deployment 2026-2027. NAND as CXL-attached pooled memory = new consumption vector. Damnang Track 5.
+### Vector 6: CXL Memory Pooling (flash-backed) — AH-7: MEDIUM-HIGH (65% probability-weighted)
+Source: CXL 4.0 released Nov 2025. Samsung Jun 2026 white paper demonstrates CXL switch-based KV cache offloading to flash. SKH building CXL since 2022. Zephyr "CXL goes bananas" (Jun 19). Azure M-Series GA = production deployment confirmed. CXL TAM: Micron/Wells Fargo $20B+ by 2030, Jackrabbit $16B by 2028, $12B+ is DRAM/NAND behind CXL. The memory medium IS the bulk of the CXL TAM. ALAB holds 26.8% of CXL controllers — the ecosystem is real. Upgraded 25%→50% (ecosystem maturity) → 65% (TAM data + production deployments + narrative inflection).
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $0.3B | $1.0B | $2.5B | $4.0B |
+| $0.8B | $2.6B | $6.5B | $10.4B |
 
 ### Vector 7: Nanya DRAM Partnership — AH-7: LOW (20% probability-weighted)
 Source: $1B investment in Nanya for DRAM capability. Positions SanDisk for memory-hierarchy convergence. Pre-revenue.
@@ -105,11 +105,11 @@ Source: $1B investment in Nanya for DRAM capability. Positions SanDisk for memor
 | 3. Stargate QLC | $5.0B | $8.0B | $10.0B | $12.0B |
 | 4. Consumer/Client/Mobile | $26.0B | $28.0B | $30.0B | $32.0B |
 | 5. HBF (30%) | $0B | $1.0B | $3.0B | $5.0B |
-| 6. CXL Pooling (25%) | $0.3B | $1.0B | $2.5B | $4.0B |
+| 6. CXL Pooling (65%) | $0.8B | $2.6B | $6.5B | $10.4B |
 | 7. Nanya DRAM (20%) | $0B | $0.5B | $1.5B | $3.0B |
-| **TOTAL** | **$50.8B** | **$72.5B** | **$91.0B** | **$106.0B** |
+| **TOTAL** | **$51.3B** | **$74.1B** | **$95.0B** | **$112.4B** |
 
-Note: FY2027 total ($50.8B) is slightly below Yahoo HIGH ($52B) — the vector build independently validates the consensus range. FY2028 ($72.5B) matches the prior model ($72.8B) but the COMPOSITION is now explicit, with KV Cache, CXL, and HBF as identified growth vectors vs the prior "Yahoo HIGH extrapolation."
+Note: V6 CXL upgraded 50%→65% Jun 19 on $16-20B TAM data. TAM scored 10/10, Base 51/60 (85%).
 
 **Margin curve:** 55%→50%→47%→45% terminal as capacity responds — Kioxia's printed 60% OPM validates the near end. *Standing revisit trigger (NAND-flavored): if NAND LTA floors confirm at structurally higher levels through the Samsung P5 / SKH China capacity arrivals, the 45% terminal is too conservative — revisit alongside any memory-block margin pass.*
 
@@ -117,16 +117,16 @@ Note: FY2027 total ($50.8B) is slightly below Yahoo HIGH ($52B) — the vector b
 
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | $50.8B | 55% | $27.9B | $559B | **$3,559** |
-| 2028 | $72.5B | 50% | $36.3B | $725B | **$4,618** |
-| 2029 | $91.0B | 47% | $42.8B | $855B | **$5,449** |
-| 2030 | $106.0B | 45% | $47.7B | $954B | **$6,076** |
+| 2027 | $51.3B | 55% | $28.2B | $564B | **$3,592** |
+| 2028 | $74.1B | 50% | $37.1B | $741B | **$4,720** |
+| 2029 | $95.0B | 47% | $44.7B | $893B | **$5,688** |
+| 2030 | $112.4B | 45% | $50.6B | $1,012B | **$6,446** |
 
-20x rationale: US-listed pure-play memory, harmonized with MU at 20x. Structural re-rate from cyclical justified by: $42B in 5-year LTAs with floors, Kioxia allocation control to 2034, shortage projected past 2028, and NAND's architectural shift from storage to active AI memory tier. Prior 18x discount ("wider supplier set") removed — MU also has NAND exposure and carries 20x; consistency requires parity.
+20x rationale: US-listed pure-play memory, harmonized with MU at 20x. Structural re-rate from cyclical justified by: $42B in 5-year LTAs with floors, Kioxia allocation control to 2034, shortage projected past 2028, and NAND's architectural shift from storage to active AI memory tier.
 
-  FY2028: $72.5B × 50% OP = $36.3B × 20x = $725B / 157M shares = **$4,618**
+  FY2028: $74.1B × 50% OP = $37.1B × 20x = $741B / 157M shares = **$4,720**
 
-CEILING: $4,618 (FY2028 column standard; 7-vector build at 20x)
+CEILING: $4,720 (FY2028 column standard; 7-vector build at 20x. TAM 10/10. V6 CXL at 65%.)
 
 ## Rare-Earth Optionality (flagged, not priced)
 
