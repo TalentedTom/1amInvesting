@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Cycle: 'Cycle',
             col_Ticker: 'Ticker',
             col_Total: 'Total',
-            col_EVUp: 'EV Up',
+            col_EVUp: 'EV Upside',
             col_Base: 'Base',
             col_Entry: 'Entry',
             col_Price: 'Price',
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: 'Markets price ~12 months ahead — fair value today',
             caption_FY28: 'Implied fair value ~1 year from now',
-            caption_EVUp: 'EV Upside = Base (conviction, as a probability) × upside beyond 1x to the 1-year target. e.g. Base 80 × 2.0x surplus = 160%. Negative = price already above target — avoid.',
+            caption_EVUp: 'EV Upside = probability-weighted upside to the 1-year target (Base × upside beyond 1x), shown as a return multiple. e.g. 4.3x ≈ 331% expected upside. Below 1.0x = price already above target — avoid.',
             archive_show: 'Show research archive ({n})',
             archive_hide: 'Hide research archive',
             modal_updated: 'Analysis updated {date}',
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
-            caption_EVUp: 'EV 上涨 = 基础分（视为概率）× 距 1 年目标价的超额涨幅。例：80 × 2.0 = 160%。负值 = 股价已高于目标价 — 回避。',
+            caption_EVUp: 'EV 上涨 = 距 1 年目标价的概率加权回报倍数（基础分 × 超额涨幅）。例：4.3x ≈ 331% 预期涨幅。低于 1.0x = 股价已高于目标价 — 回避。',
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
@@ -2105,11 +2105,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const v = parseFloat(value);
             if (isNaN(v)) return `<span style="color:#64748b;">-</span>`;
             const t = evUpsideStyle(v);
-            // Display as a percentage ('472%') so the meaning — "472%
-            // expected-value upside" — is obvious at a glance. The '%' is
-            // display-only; data.js stores the bare number, so sorting
-            // (which strips %) is unaffected.
-            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${v}%</span>`;
+            // Display as a return multiple ('4.3x') rather than a raw percent:
+            // multiplier = 1 + v/100 (so 331 -> 4.3x, 0 -> 1.0x, -50 -> 0.5x).
+            // The color tiers (evUpsideStyle) still key off the raw score v, and
+            // data.js stores the bare number, so sorting (which reads the raw
+            // value) is unaffected.
+            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${(1 + v / 100).toFixed(1)}x</span>`;
         }
 
         // Score Badge Styling (Base, Entry) — continuous red → yellow → green gradient
