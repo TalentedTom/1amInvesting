@@ -715,6 +715,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 37,
+            "Ticker": "CRDO",
+            "Name": "Credo Technology",
+            "EV Upside": 5,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 271.83,
+            "Upside": "1.1x",
+            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 151,
+            "FY2028": 291,
+            "FY2029": 448,
+            "FY2030": 599,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 38,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "EV Upside": 0,
@@ -731,26 +751,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": 992,
             "Entry": 0,
             "Total": 47
-        },
-        {
-            "Rank": 38,
-            "Ticker": "CRDO",
-            "Name": "Credo Technology",
-            "EV Upside": 1,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 271.83,
-            "Upside": "1.0x",
-            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": 145,
-            "FY2028": 276,
-            "FY2029": 429,
-            "FY2030": 587,
-            "Change %": "-8.79%",
-            "Entry": 0,
-            "Total": 45
         },
         {
             "Rank": 39,
@@ -892,6 +892,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 46,
+            "Ticker": "SMTC",
+            "Name": "Semtech Corporation",
+            "EV Upside": -14,
+            "Base": 72,
+            "Port": "",
+            "Current Price": 138.0,
+            "Upside": "0.8x",
+            "Position Type": "⚡ BOTTLENECK-ADJACENT | 224G optical ICs",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, CPO, 800G, 1.6T",
+            "FY2027": 65,
+            "FY2028": 111,
+            "FY2029": 160,
+            "FY2030": 208,
+            "Entry": 0,
+            "Total": 43
+        },
+        {
+            "Rank": 47,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -23,
@@ -910,7 +929,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 48,
             "Ticker": "300408.SZ",
             "Name": "Three-Circle Group",
             "EV Upside": -25,
@@ -929,7 +948,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 48,
+            "Rank": 49,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -26,
@@ -948,7 +967,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 49,
+            "Rank": 50,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "EV Upside": -40,
@@ -968,7 +987,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 50,
+            "Rank": 51,
             "Ticker": "SHMD",
             "Name": "SCHMID Group",
             "EV Upside": -15,
@@ -987,7 +1006,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 51,
+            "Rank": 52,
             "Ticker": "1888.HK",
             "Name": "建滔積層板 Kingboard Laminates",
             "EV Upside": -32,
@@ -1007,7 +1026,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 52,
+            "Rank": 53,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -42,
@@ -1026,7 +1045,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 53,
+            "Rank": 54,
             "Ticker": "ARM",
             "Name": "Arm Holdings",
             "EV Upside": -53,
@@ -1046,7 +1065,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 54,
+            "Rank": 55,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "EV Upside": -50,
@@ -1066,7 +1085,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 55,
+            "Rank": 56,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "EV Upside": -62,
@@ -1086,7 +1105,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 56,
+            "Rank": 57,
             "Ticker": "WOLF",
             "Name": "Wolfspeed",
             "EV Upside": -43,
@@ -1105,7 +1124,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 57,
+            "Rank": 58,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
@@ -1122,132 +1141,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": 18.7,
             "Entry": 0,
             "Total": 34
-        },
-        {
-            "Rank": "—",
-            "Ticker": "3081.TWO",
-            "Name": "LandMark Optoelectronics",
-            "EV Upside": -21,
-            "Base": 69,
-            "Port": "",
-            "Current Price": 2490.0,
-            "Upside": "0.5x-0.9x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: Purest InP epi play — but P/S >60x destroys Entry. Valuation extreme. 1-2yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO, 1.6T",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+2.07%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "300476.SZSE",
-            "Name": "Victory Giant (胜宏科技)",
-            "EV Upside": -23,
-            "Base": 67,
-            "Port": "",
-            "Current Price": 342.55,
-            "Upside": "0.5x-0.8x",
-            "Position Type": "⚡ BOTTLENECK\nTemporal: #1 AI PCB, sole-source NVIDIA GB300/Rubin. 8+ layer HDI tech lead. But PCB manufacturing replicable. 70% NVIDIA concentration. 1-2yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+1.82%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "3037.TW",
-            "Name": "Unimicron",
-            "EV Upside": 0,
-            "Base": 66,
-            "Port": "",
-            "Current Price": 969.0,
-            "Upside": "0.8x-1.2x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: ABF substrate oligopoly #1 — capacity additions coming 2027. Pricing power temporary. 2-3yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-0.61%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "AXTI",
-            "Name": "AXT Inc",
-            "EV Upside": -6,
-            "Base": 65,
-            "Port": "",
-            "Current Price": 78.36,
-            "Upside": "0.9x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: InP substrate capacity constraint. Clears when China permits flow + capacity doubles. 1-2yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-10.65%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "CLF",
-            "Name": "Cleveland-Cliffs",
-            "EV Upside": 26,
-            "Base": 52,
-            "Port": "",
-            "Current Price": 12.72,
-            "Upside": "1.4x-1.6x",
-            "Position Type": "⚡ BOTTLENECK\nRule 10: GOES monopoly <5% of revenue inside cyclical steel. Stock trades on HRC. 1-2yr window.",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "Other",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+1.25%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "FORM",
-            "Name": "FormFactor",
-            "EV Upside": 19,
-            "Base": 63,
-            "Port": "",
-            "Current Price": 120.62,
-            "Upside": "1.0x-1.6x",
-            "Position Type": "⚡ BOTTLENECK\nCapacity: Optical probing — duopoly with Advantest. Semi-specialized. 2-3yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-7.42%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "VIAV",
-            "Name": "VIAV Solutions",
-            "EV Upside": 3,
-            "Base": 60,
-            "Port": "",
-            "Current Price": 46.43,
-            "Upside": "0.9x-1.2x",
-            "Position Type": "⚡ BOTTLENECK\nCapacity: Optical test — competitive market, many players. Legacy position. 1-2yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.90%"
         },
         {
             "Rank": "—",
@@ -1302,24 +1195,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "",
             "FY2030": "",
             "Change %": "-4.90%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "1888.HK",
-            "Name": "Kingboard Laminates",
-            "EV Upside": -16,
-            "Base": 62,
-            "Port": "",
-            "Current Price": 63.0,
-            "Upside": "0.6x-0.9x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: CCL/laminates for PCB. Competitive. 1-2yr window.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+2.48%"
         },
         {
             "Rank": "—",
@@ -1464,24 +1339,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "",
             "FY2030": "",
             "Change %": "+9.92%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "BESI.AS",
-            "Name": "BE Semiconductor Industries",
-            "EV Upside": -10,
-            "Base": 70,
-            "Port": "",
-            "Current Price": 287.1,
-            "Upside": "0.6x-1.1x",
-            "Position Type": "🔒 CHOKEPOINT (in hybrid bonding)\nHybrid bonding leader <10nm. 20 customers. EVG competes. Non-hybrid biz (die attach, flip chip) is competitive.",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.25%"
         },
         {
             "Rank": "—",
@@ -2505,6 +2362,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 37,
+            "Ticker": "CRDO",
+            "Name": "信条科技",
+            "EV Upside": 5,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 271.83,
+            "Upside": "1.1x",
+            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 151,
+            "FY2028": 291,
+            "FY2029": 448,
+            "FY2030": 599,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 38,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "EV Upside": 0,
@@ -2521,26 +2398,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": 992,
             "Entry": 0,
             "Total": 47
-        },
-        {
-            "Rank": 38,
-            "Ticker": "CRDO",
-            "Name": "信条科技",
-            "EV Upside": 1,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 271.83,
-            "Upside": "1.0x",
-            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": 145,
-            "FY2028": 276,
-            "FY2029": 429,
-            "FY2030": 587,
-            "Change %": "-8.79%",
-            "Entry": 0,
-            "Total": 45
         },
         {
             "Rank": 39,
@@ -2682,6 +2539,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 46,
+            "Ticker": "SMTC",
+            "Name": "森泰克公司",
+            "EV Upside": -14,
+            "Base": 72,
+            "Port": "",
+            "Current Price": 138.0,
+            "Upside": "0.8x",
+            "Position Type": "⚡ 瓶颈-相邻| 224G光IC",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, CPO, 800G, 1.6T",
+            "FY2027": 65,
+            "FY2028": 111,
+            "FY2029": 160,
+            "FY2030": 208,
+            "Entry": 0,
+            "Total": 43
+        },
+        {
+            "Rank": 47,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -23,
@@ -2700,7 +2576,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 48,
             "Ticker": "300408.SZ",
             "Name": "三环集团",
             "EV Upside": -25,
@@ -2719,7 +2595,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 48,
+            "Rank": 49,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -26,
@@ -2738,7 +2614,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 49,
+            "Rank": 50,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "EV Upside": -40,
@@ -2758,7 +2634,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 50,
+            "Rank": 51,
             "Ticker": "SHMD",
             "Name": "施密德集团",
             "EV Upside": -15,
@@ -2777,7 +2653,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 51,
+            "Rank": 52,
             "Ticker": "1888.HK",
             "Name": "建滔积层板",
             "EV Upside": -32,
@@ -2797,7 +2673,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 52,
+            "Rank": 53,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -42,
@@ -2816,7 +2692,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 53,
+            "Rank": 54,
             "Ticker": "ARM",
             "Name": "安谋控股",
             "EV Upside": -53,
@@ -2836,7 +2712,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 54,
+            "Rank": 55,
             "Ticker": "PL",
             "Name": "星球实验室",
             "EV Upside": -50,
@@ -2856,7 +2732,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 55,
+            "Rank": 56,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "EV Upside": -62,
@@ -2876,7 +2752,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 56,
+            "Rank": 57,
             "Ticker": "WOLF",
             "Name": "狼速",
             "EV Upside": -43,
@@ -2895,7 +2771,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 57,
+            "Rank": 58,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
@@ -2912,132 +2788,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": 18.7,
             "Entry": 0,
             "Total": 34
-        },
-        {
-            "Rank": "—",
-            "Ticker": "3081.TWO",
-            "Name": "地标光电",
-            "EV Upside": -21,
-            "Base": 69,
-            "Port": "",
-            "Current Price": 2490.0,
-            "Upside": "0.5倍-0.9倍",
-            "Position Type": "⚡ 瓶颈\n供应：最纯粹的 InP Epi 游戏 — 但 P/S >60x 会破坏 Entry。估值极端。 1-2年窗口期。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO, 1.6T",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+2.07%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "300476.SZSE",
-            "Name": "Victory Giant (胜宏科技)",
-            "EV Upside": -23,
-            "Base": 67,
-            "Port": "",
-            "Current Price": 342.55,
-            "Upside": "0.5倍-0.8倍",
-            "Position Type": "⚡ 瓶颈\nTemporal：#1 AI PCB，独家来源 NVIDIA GB300/Rubin。 8+层HDI技术负责人。但PCB制造可复制。 70% NVIDIA 集中度。 1-2年窗口期。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+1.82%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "3037.TW",
-            "Name": "欣兴微光",
-            "EV Upside": 0,
-            "Base": 66,
-            "Port": "",
-            "Current Price": 969.0,
-            "Upside": "0.8倍-1.2倍",
-            "Position Type": "⚡ 瓶颈\n供应：ABF 基板寡头垄断 #1 — 2027 年产能增加。定价权暂时。 2-3年的窗口。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-0.61%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "AXTI",
-            "Name": "AXT公司",
-            "EV Upside": -6,
-            "Base": 65,
-            "Port": "",
-            "Current Price": 78.36,
-            "Upside": "0.9倍",
-            "Position Type": "⚡ 瓶颈\n供应：InP衬底产能限制。当中国允许流量+运力翻倍时清除。 1-2年窗口期。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-10.65%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "CLF",
-            "Name": "克利夫兰悬崖",
-            "EV Upside": 26,
-            "Base": 52,
-            "Port": "",
-            "Current Price": 12.72,
-            "Upside": "1.4倍-1.6倍",
-            "Position Type": "⚡ 瓶颈\n规则 10：GOES 垄断<循环钢铁收入的 5%。股票在 HRC 上交易。 1-2年窗口期。",
-            "Artifact Updated": "Apr 24",
-            "SuperCycle": "Other",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+1.25%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "FORM",
-            "Name": "外形尺寸",
-            "EV Upside": 19,
-            "Base": 63,
-            "Port": "",
-            "Current Price": 120.62,
-            "Upside": "1.0倍-1.6倍",
-            "Position Type": "⚡ 瓶颈\n能力：光学探测——与 Advantest 的双头垄断。半专业化。 2-3年的窗口。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-7.42%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "VIAV",
-            "Name": "维亚夫解决方案",
-            "EV Upside": 3,
-            "Base": 60,
-            "Port": "",
-            "Current Price": 46.43,
-            "Upside": "0.9倍-1.2倍",
-            "Position Type": "⚡ 瓶颈\n能力：光学测试——市场竞争激烈，参与者众多。传统地位。 1-2年窗口期。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.90%"
         },
         {
             "Rank": "—",
@@ -3092,24 +2842,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "",
             "FY2030": "",
             "Change %": "-4.90%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "1888.HK",
-            "Name": "建滔积层板",
-            "EV Upside": -16,
-            "Base": 62,
-            "Port": "",
-            "Current Price": 63.0,
-            "Upside": "0.6倍-0.9倍",
-            "Position Type": "⚡ 瓶颈\n供应：PCB用覆铜板/层压板。竞争的。 1-2年窗口期。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "+2.48%"
         },
         {
             "Rank": "—",
@@ -3254,24 +2986,6 @@ window.PORTFOLIO_DATA = {
             "FY2029": "",
             "FY2030": "",
             "Change %": "+9.92%"
-        },
-        {
-            "Rank": "—",
-            "Ticker": "BESI.AS",
-            "Name": "BE半导体工业公司",
-            "EV Upside": -10,
-            "Base": 70,
-            "Port": "",
-            "Current Price": 287.1,
-            "Upside": "0.6倍-1.1倍",
-            "Position Type": "🔒 CHOKEPOINT（混合键合中）\n混合键合领先者<10nm。 20 名客户。 EVG 参加比赛。非混合业务（芯片贴装、倒装芯片）具有竞争力。",
-            "Artifact Updated": "",
-            "SuperCycle": "AI",
-            "FY2027": "",
-            "FY2028": "",
-            "FY2029": "",
-            "FY2030": "",
-            "Change %": "-2.25%"
         },
         {
             "Rank": "—",
