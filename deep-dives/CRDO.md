@@ -66,7 +66,7 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 
 **V2 Optical DSPs (Cardinal) — AH-7: HIGH** (mgmt: >$100M in FY2027 within $600M optical; ramping with 800G/1.6T): $0.35B / $0.70B / $1.10B / $1.50B. 16b: 80% (shipping, guided breakdown).
 
-**V3 ZeroFlap Optics (optical transceivers) — AH-7: HIGH** (mgmt: >$100M in FY2027; ZF reliability extends to optical): $0.25B / $0.60B / $1.00B / $1.40B. 16b: 75% (guided, qualification in progress).
+**V3 ZeroFlap Optics (optical transceivers) — AH-7: HIGH** (mgmt: >$100M in FY2027; ZF reliability extends to optical; **Jun 19: Google chose MediaTek 336G linear over Broadcom 448G DSP because DSP needs 2nm (delayed to 2028-2029). Linear architecture wins 2026-2027 window by default. ZeroFlap removes the DSP — validated by Google's own timeline failure**): $0.35B / $0.85B / $1.20B / $1.50B. 16b: 75% (guided, architecture validated by Google downspec).
 
 **V4 SiPh PICs (DustPhotonics, acquired) — AH-7: MEDIUM** (400G-3.2T roadmap; L3C architecture uses CW lasers = EML-shortage-immune; mgmt: >$100M FY2027): $0.15B / $0.50B / $1.00B / $1.50B. 16b: 65% (acquisition closed, products in development, revenue nascent).
 
@@ -76,10 +76,10 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 |--------|--------|--------|--------|--------|
 | V1 AECs (88% share) | $1.60B | $2.00B | $2.30B | $2.50B |
 | V2 Optical DSPs | $0.35B | $0.70B | $1.10B | $1.50B |
-| V3 ZeroFlap Optics | $0.25B | $0.60B | $1.00B | $1.40B |
+| V3 ZeroFlap Optics | $0.35B | $0.85B | $1.20B | $1.50B |
 | V4 SiPh PICs | $0.15B | $0.50B | $1.00B | $1.50B |
 | V5 Retimers + CXL | $0.05B | $0.40B | $0.80B | $1.20B |
-| **CONFIRMED BASE** | **$2.40B** | **$4.20B** | **$6.20B** | **$8.10B** |
+| **CONFIRMED BASE** | **$2.50B** | **$4.45B** | **$6.50B** | **$8.30B** |
 
 **PROBABILITY-WEIGHTED BREADCRUMB VECTORS (Rule 16b — priced at probability, not certainty):**
 
@@ -103,27 +103,27 @@ But there's a ceiling: AECs are copper-based and limited by distance. For scale-
 
 | | FY2027 | FY2028 | FY2029 | FY2030 |
 |--|--------|--------|--------|--------|
-| Confirmed base | $2.40B | $4.20B | $6.20B | $8.10B |
+| Confirmed base | $2.50B | $4.45B | $6.50B | $8.30B |
 | + Weighted adds | $0.00B | $0.38B | $0.92B | $1.64B |
-| **TOTAL REVENUE** | **$2.40B** | **$4.58B** | **$7.12B** | **$9.74B** |
+| **TOTAL REVENUE** | **$2.50B** | **$4.83B** | **$7.42B** | **$9.94B** |
 
 ### Valuation (48% OP per Q4 FY2026 actual + mgmt ~50% net margin guide; 25x; 199M diluted shares)
 
 | Year | Revenue | OP (48%) | × 25x | Per Share |
 |------|---------|----------|-------|-----------|
-| 2027 | $2.40B | $1.15B | $28.8B | **$145** |
-| 2028 | $4.58B | $2.20B | $55.0B | **$276** |
-| 2029 | $7.12B | $3.42B | $85.4B | **$429** |
-| 2030 | $9.74B | $4.68B | $116.9B | **$587** |
+| 2027 | $2.50B | $1.20B | $30.0B | **$151** |
+| 2028 | $4.83B | $2.32B | $57.9B | **$291** |
+| 2029 | $7.42B | $3.56B | $89.1B | **$448** |
+| 2030 | $9.94B | $4.77B | $119.3B | **$599** |
 
-  FY2028: $4.58B × 48% OP = $2.20B × 25x = $55.0B / 199M shares = **$276**
+  FY2028: $4.83B × 48% OP = $2.32B × 25x = $57.9B / 199M shares = **$291**
 
-CEILING: $276 (FY2028 column standard; revised from $267 on V5 CXL retimer uplift + V8 ALC/CXL breadcrumb at 30%)
+CEILING: $291 (FY2028 column standard; revised from $276 on V3 ZeroFlap pullforward — Google/MediaTek 336G validates linear over DSP for 2026-2027 window)
 
 **Model change note (Jun 13):** replaced the prior "mgmt +40% beat" single-multiplier approach with explicit vector decomposition. The 40% beat was a proxy standing in for five product ramps, each with different timelines and probabilities. Decomposing it via Rule 16b reveals the confirmed base ($2.40B FY2027 = management's own guide) plus probability-weighted upside from Weaver and NPO/CPO. The result is lower than the prior model but structurally honest — each number traces to a named product, a management source, and a probability weight. Escalation paths pre-registered: Weaver deployment confirmation → 50%→75%; NPO/CPO order → 40%→60%; each escalation lifts the weighted adds and re-derives the ceiling.
 
 ### Per-share values for Excel:
-FY2027: $145 | FY2028: $276 | FY2029: $429 | FY2030: $587
+FY2027: $151 | FY2028: $291 | FY2029: $448 | FY2030: $599
 
 ## Jun 10, 2026 — Follow-Through Audit (full pass, post-architecture-week)
 

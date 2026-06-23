@@ -84,21 +84,21 @@ window.PORTFOLIO_DATA = {
             "Rank": 5,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
-            "EV Upside": 230,
+            "EV Upside": 244,
             "Base": 88,
             "Port": "✓",
             "Current Price": 354000.0,
-            "Upside": "3.6x",
+            "Upside": "3.8x",
             "Position Type": "🔒 CHOKEPOINT\nArchitectural: Only non-US foundry+memory for China. Samsung = default Chinese AI partner. 2026-2030+",
             "Artifact Updated": "Jun 19",
             "SuperCycle": "AI",
             "FY2027": 1113000,
-            "FY2028": 1279000,
-            "FY2029": 1357000,
-            "FY2030": 1392000,
+            "FY2028": 1337000,
+            "FY2029": 1505000,
+            "FY2030": 1618000,
             "Change %": "+3.88%",
-            "Entry": 90,
-            "Total": 89
+            "Entry": 94,
+            "Total": 90
         },
         {
             "Rank": 6,
@@ -122,6 +122,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 7,
+            "Ticker": "000660.KS",
+            "Name": "SK Hynix",
+            "EV Upside": 185,
+            "Base": 90,
+            "Port": "✓",
+            "Current Price": 2760000.0,
+            "Upside": "3.1x",
+            "Position Type": "🔒 CHOKEPOINT\nArchitectural: #1 HBM — 4nm logic base die lead widens each gen. Memory architecture permanent. 2026-2030+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI",
+            "FY2027": 7068000,
+            "FY2028": 8425000,
+            "FY2029": 9869000,
+            "FY2030": 10885000,
+            "Change %": "+1.15%",
+            "Entry": 76,
+            "Total": 84
+        },
+        {
+            "Rank": 8,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "EV Upside": 200,
@@ -141,7 +161,7 @@ window.PORTFOLIO_DATA = {
             "Total": 80
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "XFAB",
             "Name": "X-Fab Silicon Foundries",
             "EV Upside": 193,
@@ -160,27 +180,27 @@ window.PORTFOLIO_DATA = {
             "Total": 81
         },
         {
-            "Rank": 9,
-            "Ticker": "000660.KS",
-            "Name": "SK Hynix",
-            "EV Upside": 172,
-            "Base": 90,
+            "Rank": 10,
+            "Ticker": "MU",
+            "Name": "Micron Technology",
+            "EV Upside": 167,
+            "Base": 85,
             "Port": "✓",
-            "Current Price": 2760000.0,
-            "Upside": "2.9x",
-            "Position Type": "🔒 CHOKEPOINT\nArchitectural: #1 HBM — 4nm logic base die lead widens each gen. Memory architecture permanent. 2026-2030+",
+            "Current Price": 1133.99,
+            "Upside": "3.0x",
+            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
             "Artifact Updated": "Jun 19",
             "SuperCycle": "AI",
-            "FY2027": 7068000,
-            "FY2028": 8034000,
-            "FY2029": 8815000,
-            "FY2030": 9205000,
-            "Change %": "+1.15%",
-            "Entry": 73,
-            "Total": 83
+            "FY2027": 2544,
+            "FY2028": 3368,
+            "FY2029": 4219,
+            "FY2030": 5039,
+            "Change %": "-2.99%",
+            "Entry": 74,
+            "Total": 81
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "AAOI",
             "Name": "Applied Optoelectronics",
             "EV Upside": 171,
@@ -198,26 +218,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-11.85%",
             "Entry": 83,
             "Total": 78
-        },
-        {
-            "Rank": 11,
-            "Ticker": "MU",
-            "Name": "Micron Technology",
-            "EV Upside": 167,
-            "Base": 85,
-            "Port": "✓",
-            "Current Price": 1133.99,
-            "Upside": "3.0x",
-            "Position Type": "⚡ BOTTLENECK\nSupply: #3 HBM — supply/demand imbalance temporary. China banned limits TAM. 1-3yr window.",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI",
-            "FY2027": 2544,
-            "FY2028": 3368,
-            "FY2029": 3895,
-            "FY2030": 4263,
-            "Change %": "-2.99%",
-            "Entry": 74,
-            "Total": 81
         },
         {
             "Rank": 12,
@@ -241,6 +241,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 13,
+            "Ticker": "NBIS",
+            "Name": "Nebius Group",
+            "EV Upside": 147,
+            "Base": 83,
+            "Port": "",
+            "Current Price": 286.69,
+            "Upside": "2.8x",
+            "Position Type": "⚡ Bottleneck",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI",
+            "FY2027": 291,
+            "FY2028": 795,
+            "FY2029": 1252,
+            "FY2030": 1685,
+            "Change %": "-9.42%",
+            "Entry": 69,
+            "Total": 77
+        },
+        {
+            "Rank": 14,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "EV Upside": 124,
@@ -260,7 +280,7 @@ window.PORTFOLIO_DATA = {
             "Total": 77
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "EV Upside": 120,
@@ -280,7 +300,7 @@ window.PORTFOLIO_DATA = {
             "Total": 71
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
             "EV Upside": 99,
@@ -300,7 +320,7 @@ window.PORTFOLIO_DATA = {
             "Total": 73
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "EV Upside": 74,
@@ -320,7 +340,7 @@ window.PORTFOLIO_DATA = {
             "Total": 67
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "4078.T",
             "Name": "Sakai Chemical (堺化学)",
             "EV Upside": 83,
@@ -339,7 +359,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "BRUN",
             "Name": "Boost Run",
             "EV Upside": 73,
@@ -358,7 +378,7 @@ window.PORTFOLIO_DATA = {
             "Total": 62
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "AEHR",
             "Name": "Aehr Test Systems",
             "EV Upside": 50,
@@ -378,7 +398,7 @@ window.PORTFOLIO_DATA = {
             "Total": 64
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 60,
@@ -398,7 +418,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "EV Upside": 54,
@@ -415,26 +435,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": "1,242",
             "Change %": "-6.20%",
             "Entry": 30,
-            "Total": 60
-        },
-        {
-            "Rank": 22,
-            "Ticker": "NBIS",
-            "Name": "Nebius Group",
-            "EV Upside": 53,
-            "Base": 82,
-            "Port": "",
-            "Current Price": 286.69,
-            "Upside": "1.6x",
-            "Position Type": "⚡ Bottleneck",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI",
-            "FY2027": "173",
-            "FY2028": "472",
-            "FY2029": "772",
-            "FY2030": "1,063",
-            "Change %": "-9.42%",
-            "Entry": 28,
             "Total": 60
         },
         {
@@ -734,6 +734,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 38,
+            "Ticker": "CRDO",
+            "Name": "Credo Technology",
+            "EV Upside": 1,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 271.83,
+            "Upside": "1.0x",
+            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 145,
+            "FY2028": 276,
+            "FY2029": 429,
+            "FY2030": 587,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 39,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "EV Upside": 18,
@@ -753,7 +773,7 @@ window.PORTFOLIO_DATA = {
             "Total": 37
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "EV Upside": -9,
@@ -771,26 +791,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": 40,
-            "Ticker": "CRDO",
-            "Name": "Credo Technology",
-            "EV Upside": 1,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 271.83,
-            "Upside": "1.0x",
-            "Position Type": "🔒 CHOKEPOINT\nIP: SerDes IP + ZeroFlap AEC — 100x reliability = must-have for training. Multi-sector. 2026-2032+",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": 145,
-            "FY2028": 276,
-            "FY2029": 429,
-            "FY2030": 587,
-            "Change %": "-8.79%",
-            "Entry": 0,
-            "Total": 45
         },
         {
             "Rank": 41,
@@ -1874,21 +1874,21 @@ window.PORTFOLIO_DATA = {
             "Rank": 5,
             "Ticker": "005930.KS",
             "Name": "三星电子",
-            "EV Upside": 230,
+            "EV Upside": 244,
             "Base": 88,
             "Port": "✓",
             "Current Price": 354000.0,
-            "Upside": "3.6x",
+            "Upside": "3.8x",
             "Position Type": "🔒 阻塞点\n建筑：中国唯一的非美国代工厂+存储器。三星=默认的中国人工智能合作伙伴。 2026-2030+",
             "Artifact Updated": "Jun 19",
             "SuperCycle": "AI",
             "FY2027": 1113000,
-            "FY2028": 1279000,
-            "FY2029": 1357000,
-            "FY2030": 1392000,
+            "FY2028": 1337000,
+            "FY2029": 1505000,
+            "FY2030": 1618000,
             "Change %": "+3.88%",
-            "Entry": 90,
-            "Total": 89
+            "Entry": 94,
+            "Total": 90
         },
         {
             "Rank": 6,
@@ -1912,6 +1912,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 7,
+            "Ticker": "000660.KS",
+            "Name": "SK海力士",
+            "EV Upside": 185,
+            "Base": 90,
+            "Port": "✓",
+            "Current Price": 2760000.0,
+            "Upside": "3.1x",
+            "Position Type": "🔒 阻塞点\n架构：#1 HBM — 4nm 逻辑基芯片引线加宽了每一代。内存架构永久。 2026-2030+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI",
+            "FY2027": 7068000,
+            "FY2028": 8425000,
+            "FY2029": 9869000,
+            "FY2030": 10885000,
+            "Change %": "+1.15%",
+            "Entry": 76,
+            "Total": 84
+        },
+        {
+            "Rank": 8,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "EV Upside": 200,
@@ -1931,7 +1951,7 @@ window.PORTFOLIO_DATA = {
             "Total": 80
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "XFAB",
             "Name": "X-Fab 硅铸造厂",
             "EV Upside": 193,
@@ -1950,27 +1970,27 @@ window.PORTFOLIO_DATA = {
             "Total": 81
         },
         {
-            "Rank": 9,
-            "Ticker": "000660.KS",
-            "Name": "SK海力士",
-            "EV Upside": 172,
-            "Base": 90,
+            "Rank": 10,
+            "Ticker": "MU",
+            "Name": "美光科技",
+            "EV Upside": 167,
+            "Base": 85,
             "Port": "✓",
-            "Current Price": 2760000.0,
-            "Upside": "2.9x",
-            "Position Type": "🔒 阻塞点\n架构：#1 HBM — 4nm 逻辑基芯片引线加宽了每一代。内存架构永久。 2026-2030+",
+            "Current Price": 1133.99,
+            "Upside": "3.0x",
+            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
             "Artifact Updated": "Jun 19",
             "SuperCycle": "AI",
-            "FY2027": 7068000,
-            "FY2028": 8034000,
-            "FY2029": 8815000,
-            "FY2030": 9205000,
-            "Change %": "+1.15%",
-            "Entry": 73,
-            "Total": 83
+            "FY2027": 2544,
+            "FY2028": 3368,
+            "FY2029": 4219,
+            "FY2030": 5039,
+            "Change %": "-2.99%",
+            "Entry": 74,
+            "Total": 81
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "AAOI",
             "Name": "应用光电",
             "EV Upside": 171,
@@ -1988,26 +2008,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-11.85%",
             "Entry": 83,
             "Total": 78
-        },
-        {
-            "Rank": 11,
-            "Ticker": "MU",
-            "Name": "美光科技",
-            "EV Upside": 167,
-            "Base": 85,
-            "Port": "✓",
-            "Current Price": 1133.99,
-            "Upside": "3.0x",
-            "Position Type": "⚡ 瓶颈\n供应：#3 HBM — 暂时的供需失衡。中国禁止限制TAM。 1-3年窗口期。",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI",
-            "FY2027": 2544,
-            "FY2028": 3368,
-            "FY2029": 3895,
-            "FY2030": 4263,
-            "Change %": "-2.99%",
-            "Entry": 74,
-            "Total": 81
         },
         {
             "Rank": 12,
@@ -2031,6 +2031,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 13,
+            "Ticker": "NBIS",
+            "Name": "尼比斯集团",
+            "EV Upside": 147,
+            "Base": 83,
+            "Port": "",
+            "Current Price": 286.69,
+            "Upside": "2.8x",
+            "Position Type": "⚡ 瓶颈",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI",
+            "FY2027": 291,
+            "FY2028": 795,
+            "FY2029": 1252,
+            "FY2030": 1685,
+            "Change %": "-9.42%",
+            "Entry": 69,
+            "Total": 77
+        },
+        {
+            "Rank": 14,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "EV Upside": 124,
@@ -2050,7 +2070,7 @@ window.PORTFOLIO_DATA = {
             "Total": 77
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "EV Upside": 120,
@@ -2070,7 +2090,7 @@ window.PORTFOLIO_DATA = {
             "Total": 71
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
             "EV Upside": 99,
@@ -2090,7 +2110,7 @@ window.PORTFOLIO_DATA = {
             "Total": 73
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "EV Upside": 74,
@@ -2110,7 +2130,7 @@ window.PORTFOLIO_DATA = {
             "Total": 67
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "4078.T",
             "Name": "堺化学",
             "EV Upside": 83,
@@ -2129,7 +2149,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "BRUN",
             "Name": "加速跑",
             "EV Upside": 73,
@@ -2148,7 +2168,7 @@ window.PORTFOLIO_DATA = {
             "Total": 62
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "AEHR",
             "Name": "空气测试系统",
             "EV Upside": 50,
@@ -2168,7 +2188,7 @@ window.PORTFOLIO_DATA = {
             "Total": 64
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 60,
@@ -2188,7 +2208,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "COHR",
             "Name": "相干公司",
             "EV Upside": 54,
@@ -2205,26 +2225,6 @@ window.PORTFOLIO_DATA = {
             "FY2030": "1,242",
             "Change %": "-6.20%",
             "Entry": 30,
-            "Total": 60
-        },
-        {
-            "Rank": 22,
-            "Ticker": "NBIS",
-            "Name": "尼比斯集团",
-            "EV Upside": 53,
-            "Base": 82,
-            "Port": "",
-            "Current Price": 286.69,
-            "Upside": "1.6x",
-            "Position Type": "⚡ 瓶颈",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI",
-            "FY2027": "173",
-            "FY2028": "472",
-            "FY2029": "772",
-            "FY2030": "1,063",
-            "Change %": "-9.42%",
-            "Entry": 28,
             "Total": 60
         },
         {
@@ -2524,6 +2524,26 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 38,
+            "Ticker": "CRDO",
+            "Name": "信条科技",
+            "EV Upside": 1,
+            "Base": 75,
+            "Port": "",
+            "Current Price": 271.83,
+            "Upside": "1.0x",
+            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
+            "Artifact Updated": "Jun 19",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "FY2027": 145,
+            "FY2028": 276,
+            "FY2029": 429,
+            "FY2030": 587,
+            "Change %": "-8.79%",
+            "Entry": 0,
+            "Total": 45
+        },
+        {
+            "Rank": 39,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "EV Upside": 18,
@@ -2543,7 +2563,7 @@ window.PORTFOLIO_DATA = {
             "Total": 37
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "VICR",
             "Name": "维科公司",
             "EV Upside": -9,
@@ -2561,26 +2581,6 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%",
             "Entry": 0,
             "Total": 49
-        },
-        {
-            "Rank": 40,
-            "Ticker": "CRDO",
-            "Name": "信条科技",
-            "EV Upside": 1,
-            "Base": 75,
-            "Port": "",
-            "Current Price": 271.83,
-            "Upside": "1.0x",
-            "Position Type": "🔒 阻塞点\nIP：SerDes IP + ZeroFlap AEC — 100 倍可靠性 = 培训必备。多部门。 2026-2032+",
-            "Artifact Updated": "Jun 19",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "FY2027": 145,
-            "FY2028": 276,
-            "FY2029": 429,
-            "FY2030": 587,
-            "Change %": "-8.79%",
-            "Entry": 0,
-            "Total": 45
         },
         {
             "Rank": 41,
