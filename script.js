@@ -520,16 +520,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // styling vs. plain text. Tickers not in this set are non-interactive
     // (no underline, no chevron, default cursor) — implicitly signalling
     // that no deep-dive exists for them yet.
+    // Deep dives are currently DISABLED site-wide: tickers render as plain,
+    // non-clickable text and the deep-dive search box + discovery hint are
+    // hidden. Set this back to true to restore the feature — the manifest and
+    // the per-ticker deep-dives/*.md files are left untouched.
+    const DEEP_DIVES_ENABLED = false;
     let deepDiveAvailable = new Set();
     // Prev/next navigation order for the deep-dive modal — rebuilt by
     // buildTable to mirror the table's current sort/filter order.
     let diveOrder = [];
     let diveIndex = -1;
     function loadDeepDiveManifest() {
+        // Feature off → leave deepDiveAvailable empty, so formatCell adds no
+        // .has-deep-dive class (no link styling / no ↗) and the tbody click
+        // handler never opens a dive — clicks just fall through to row-expand.
+        if (!DEEP_DIVES_ENABLED) return Promise.resolve();
         return fetch('deep-dives/index.json', { cache: 'no-cache' })
             .then((r) => (r.ok ? r.json() : []))
             .then((arr) => { deepDiveAvailable = new Set(arr); })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
+    }
+    // With deep dives off, hide the (now functionless) "Search deep-dives" box.
+    if (!DEEP_DIVES_ENABLED) {
+        const scSearchEl = document.getElementById('sc-search');
+        if (scSearchEl) scSearchEl.style.display = 'none';
     }
 
     // === Deep-Dive Search ===
@@ -665,8 +679,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const HINT_STORAGE_KEY = 'deepDiveHintDismissed';
     const hintBanner = document.getElementById('deep-dive-hint');
     if (hintBanner) {
-        if (localStorage.getItem(HINT_STORAGE_KEY) === '1') {
-            hintBanner.classList.add('dismissed');
+        if (!DEEP_DIVES_ENABLED || localStorage.getItem(HINT_STORAGE_KEY) === '1') {
+            hintBanner.classList.add('dismissed');   // feature off, or already dismissed
         }
         const hintDismissBtn = hintBanner.querySelector('.hint-dismiss');
         if (hintDismissBtn) {
