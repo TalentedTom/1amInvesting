@@ -8,6 +8,12 @@
 # Older artifact, no longer referenced by the site
 data.json
 
+# Deep-dive analyses — generated locally by scripts/sync_deep_dives.py but
+# NOT published. Kept out of the repo so they aren't served by Netlify or
+# browsable on the public GitHub repo. (Deep dives are also disabled in the
+# frontend via DEEP_DIVES_ENABLED.) Source .md files live in ../Artifacts/.
+deep-dives/
+
 # Python
 __pycache__/
 *.pyc
