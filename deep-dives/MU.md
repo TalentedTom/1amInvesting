@@ -1,8 +1,8 @@
 # MU — Micron Technology | Deep Dive
 
-**Date:** Q2 FY2026 rescore (Mar) | Jun 3 (margin harmonization, 20x) | Jun 10, 2026 (restructured) | **Jun 19, 2026 (TAM 9→10 + CXL DRAM/NAND vector added)**
+**Date:** Q2 FY2026 rescore (Mar) | Jun 3 (margin harmonization, 20x) | Jun 10, 2026 (restructured) | Jun 19 (TAM 10, CXL, flat margin) | **Jun 24, 2026 (FQ3 earnings — armed memory pass triggered)**
 **Framework Version:** v4.2
-**Status:** HELD (✓) | **Base 85% (51/60)**
+**Status:** HELD (✓) | **Base 88% (53/60)**
 **Price at restructure:** $935.89 | ~1.14B shares | MC ~$1.07T (Hard Filters suspended — memory oligopoly exception)
 **Ceiling:** FY2028 $3,316 (FY-column standard)
 
@@ -41,7 +41,7 @@ Structural position: the US memory champion — CHIPS-funded fabs (Idaho mid-202
 | Risks | -2 | China-ban escalation and export-policy exposure (-1). Cyclical perception + eventual capacity response compressing the multiple (-1). |
 | Subtotal | 49/60 | |
 | Rule 16c-2 | **+1** | Hyperscaler prepayment regime (Microsoft $10B+ precedent; 15-30% advances; supplier-floor LTAs) — oligopoly-wide. |
-| **Base** | **51/60 (85%)** | Strict evidence read. TAM 9→10 Jun 19 (CXL dual beneficiary — only company with both CXL DRAM and CXL NAND + management sourced the $20B TAM). |
+| **Base** | **53/60 (88%)** | TAM 10 (CXL dual beneficiary, Jun 19). Cycle 9→10 (FQ3 record rev/GM/EPS all exceeded high guidance, 346% YoY, $100B DC annualized run rate). Catalysts 4→5 (SCA business model transformation, HBM4 >$1B shipped, ID1/Tongluo accelerated). Armed memory pass Jun 24. |
 
 ## Ceiling — v4.1 AH-1 Full Derivation (consensus-anchored revenue, margin curve, 20x, 1.14B shares, FY-column standard)
 
@@ -51,18 +51,70 @@ Structural position: the US memory champion — CHIPS-funded fabs (Idaho mid-202
 
 | Year | Revenue | OP Margin | OP | × 20x | Per Share |
 |------|---------|-----------|-----|-------|-----------|
-| 2027 | $207B | 70% | $145B | $2.90T | **$2,544** |
-| 2028 | $295B | 65% | $192B | $3.84T | **$3,368** |
-| 2029 | $370B | 60% | $222B | $4.44T | **$3,895** |
-| 2030 | $442B | 55% | $243B | $4.86T | **$4,263** |
+| 2027 | $240B | 67.5% | $162B | $3.24T | **$2,842** |
+| 2028 | $330B | 67.5% | $223B | $4.45T | **$3,908** |
+| 2029 | $410B | 67.5% | $277B | $5.54T | **$4,855** |
+| 2030 | $480B | 67.5% | $324B | $6.48T | **$5,684** |
 
-CXL increment (Jun 19): ~$5B FY2028 (~$3.5B CXL DRAM at 28% share + ~$1.5B CXL NAND at 10-15% share). ~$7B by FY2030. Modest vs MU's revenue base (~1.7%) but directionally correct and likely not in consensus. MU is the only dual CXL beneficiary (DRAM + NAND).
+**Revenue revision (Jun 24):** FQ3 actual $41.46B, FQ4 guide $50B = $200B annualized EXIT RATE already at FY2027 prior model. Old $207B/$295B/$370B/$442B → new $240B/$330B/$410B/$480B. Revenue uplift reflects FQ4 $50B run-rate + ID1 mid-CY2027 + Tongluo mid-CY2027 (quarter early) + SCAs locking volume.
 
-20x rationale: HBM is contracted infrastructure on hyperscaler LTAs at near-sovereign credit; CHIPS subsidizes capex; US listing and champion status earn the premium over the Koreans' 15x while staying re-rated off cyclical 8-12x.
+**Margin model: FLAT 67.5% OP (Jun 24 revision).** Actual FQ3 OP margin: 81.2%. FQ4 implied: ~83%. The 67.5% is a conservative annual average that accounts for potential outer-year normalization. Even this FLOOR is protected by SCA structure (see below). Evidence stack:
+- FQ3 actual OP: 81.2% (every BU running 75-86% OP — not just HBM, ALL segments)
+- Commodity DRAM margins exceed HBM by 15+pp (Daishin Securities)
+- 8+ demand categories vs 2 in prior cycles
+- Oligopoly discipline + SCA price floors eliminate the commodity crash mechanism
+- SemiAnalysis: undersupply through 2028 even with all capacity additions modeled
+- CEO Sanjay Mehrotra: "supply is STRUCTURALLY constrained" (FQ3 earnings deck p.7)
+- CEO: "do not have line of sight as to when memory supply will be able to catch up with increasing demand" (p.6)
+- CEO: "tight conditions to persist BEYOND calendar 2027" (p.4, p.16)
+- Blended DRAM cost per bit projected to RISE from current levels (p.12) = even if ASPs flatten, costs rising together support margins
 
-  FY2028: $295B × 65% OP = $192B × 20x = $3.84T / 1.14B shares = **$3,368**
+**STRATEGIC CUSTOMER AGREEMENTS (SCAs) — BUSINESS MODEL TRANSFORMATION (Jun 24, FQ3 earnings):**
 
-CEILING: $3,368 (FY2028 column standard; revised from $3,316 on CXL DRAM/NAND increment + TAM 10/10)
+This is the single biggest structural change in Micron's 47-year history. Memory is no longer a commodity — it's a contracted strategic asset.
+
+- 16 SCAs signed across data center, consumer, and auto
+- TAKE-OR-PAY: binding commitments to purchase specific volumes over multi-year terms
+- 5-year terms (CY2026 through CY2030); auto agreements 3-year
+- Cover 20% of DRAM volume, 33% of NAND volume; targeting 50%+ of total revenue when complete
+- **$100 BILLION cumulative minimum revenue** at floor prices across 14 of 16 SCAs
+- **$22 BILLION in customer cash deposits** and related financial commitments
+- Floor prices that enable gross margin **"well above our peak quarterly margins in any past cycle"** (p.10)
+- Ceiling prices at current CQ2 market prices for existing products
+- ~40% of revenue will have fixed or ceilinged pricing near current levels
+- SCAs provide for price premiums on new products (LP6, DDR6, new HBM generations) to be negotiated
+- 4 very large customers + 3 medium + automotive agreements
+
+The SCA structure contractually prevents the cycle-crash mechanism. Take-or-pay means customers can't walk away when pricing normalizes. Floor prices above historical peak margins mean even the MINIMUM outcome exceeds any prior cycle's best quarter. $22B in deposits = customers prepaying for the right to buy memory. This is the transformation from commodity supplier to contracted infrastructure partner — the same pattern as LNG (spot commodity → LTA-contracted strategic asset).
+
+CXL increment (Jun 19): ~$5B FY2028 (~$3.5B CXL DRAM at 28% share + ~$1.5B CXL NAND at 10-15% share). ~$7B by FY2030. MU is the only dual CXL beneficiary (DRAM + NAND).
+
+**HBM4 update (Jun 24):** HBM4 12-high volume ramp tracking 2x faster than HBM3E 12-high. >$1B HBM4 revenue already shipped. Mature yields on HBM4 12-high expected "significantly faster" than HBM3E 12-high. HBM is now part of the SCA framework ("committed DRAM, including HBM as appropriate").
+
+**Management-named demand drivers (Jun 24 earnings deck):** Sanjay explicitly named and quantified:
+- Agentic AI restructuring DC infrastructure: "CPU racks for agent control plane and program execution, storage racks for rapidly expanding context store" (p.13)
+- Server unit growth RAISED: high-teens % for CY2026 (up from low double digits prior)
+- DC SSD >$5B in FQ3, more than DOUBLING sequentially (AI context memory + HDD displacement)
+- Humanoid robots: "10 times the amount of memory as an average L2+ vehicle... sustained, substantial multi-decade memory demand cycle" (p.15)
+- L2+ vehicles: 5x memory content vs average vehicle, mix doubling to >20% in 2026, >40% by 2030
+- Edge AI on smartphones/PCs: "pent-up unit replacement demand"
+
+**Capex / Supply Timeline (Jun 24):**
+- ID1 Idaho: first wafer mid-CY2027 (on track)
+- ID2 Idaho: late CY2028
+- Tongluo Taiwan: meaningful shipments mid-CY2027 (quarter EARLY vs prior)
+- Singapore: HBM advanced packaging, meaningful contribution H1 CY2027
+- New York: broke ground Jan 2026
+- Manassas VA: 1α DDR4 production started (legacy/auto/defense)
+- FY2026 capex ~$27B; FY2027 quarterly capex above FQ4 levels
+- Multi-year EUV supply agreement with ASML (1δ and beyond)
+- Capital return to increase after Dec 9, 2026 (CHIPS Act 2yr anniversary); target 100% excess cash return to shareholders over time
+
+20x rationale: HBM is contracted infrastructure on hyperscaler LTAs at near-sovereign credit; CHIPS subsidizes capex; US listing and champion status earn the premium over the Koreans' 15x while staying re-rated off cyclical 8-12x. The SCA transformation further justifies 20x as the floor multiple — contracted, take-or-pay revenue with price floors is infrastructure-grade earnings quality.
+
+  FY2028: $330B × 67.5% OP = $223B × 20x = $4.45T / 1.14B shares = **$3,908**
+
+CEILING: $3,908 (FY2028 column standard. Revenue revised to reflect $50B/qtr FQ4 exit rate + capacity additions. Margin 67.5% flat — conservative vs 81.2% actual, protected by SCA floors "above any past cycle peak." Armed memory pass confirmed Jun 24.)
 
 ## Key Risks
 
