@@ -870,26 +870,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 45,
-            "Ticker": "MRVL",
-            "Name": "Marvell Technology",
-            "EV Upside": 1,
-            "Base": 78,
-            "Port": "",
-            "Current Price": 266.77,
-            "Upside": "1.0x",
-            "Position Type": "🔒 CHOKEPOINT\nDuopoly: Custom ASIC — only MRVL + Broadcom design hyperscaler AI chips. 2-3yr design cycle = lock-in. Amazon, Google, Microsoft, Meta. 2026-2035+",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": "151",
-            "FY2028": "269",
-            "FY2029": "406",
-            "FY2030": "577",
-            "Change %": "-3.18%",
-            "Entry": 0,
-            "Total": 47
-        },
-        {
-            "Rank": 46,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV Upside": -4,
@@ -908,7 +888,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 46,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "EV Upside": 16,
@@ -928,7 +908,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 48,
+            "Rank": 47,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "EV Upside": -8,
@@ -946,6 +926,25 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%",
             "Entry": 0,
             "Total": 49
+        },
+        {
+            "Rank": 48,
+            "Ticker": "ACMR",
+            "Name": "ACM Research",
+            "EV Upside": -6,
+            "Base": 78,
+            "Port": "",
+            "Current Price": 116.34,
+            "Upside": "0.9x",
+            "Position Type": "⚡ BOTTLENECK\nChina WFE: wet-clean + ECP + adv pkg + glass substrate",
+            "Artifact Updated": "Jun 27 (new dive, China WFE localization + panel-level ECP)",
+            "SuperCycle": "AI, WFE, 国産替代, Glass Substrate",
+            "FY2027": 68,
+            "FY2028": 107,
+            "FY2029": 149,
+            "FY2030": 183,
+            "Entry": 0,
+            "Total": 47
         },
         {
             "Rank": 49,
@@ -1044,6 +1043,45 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 54,
+            "Ticker": "MRVL",
+            "Name": "Marvell Technology",
+            "EV Upside": -30,
+            "Base": 82,
+            "Port": "",
+            "Current Price": 252.04,
+            "Upside": "0.6x",
+            "Position Type": "🔒 CHOKEPOINT\nDuopoly: Custom ASIC — only MRVL + Broadcom design hyperscaler AI chips. 2-3yr design cycle = lock-in. Amazon, Google, Microsoft, Meta. 2026-2035+",
+            "Artifact Updated": "Jun 27 (v4.2: 30x→20x, Base 78→82%, CXL/TPU vectors)",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "FY2027": 88,
+            "FY2028": 159,
+            "FY2029": 248,
+            "FY2030": 347,
+            "Change %": "-3.18%",
+            "Entry": 0,
+            "Total": 49
+        },
+        {
+            "Rank": 55,
+            "Ticker": "688008.SH",
+            "Name": "澜起科技 Montage Technology",
+            "EV Upside": -31,
+            "Base": 82,
+            "Port": "",
+            "Current Price": 296.06,
+            "Upside": "0.6x",
+            "Position Type": "⚡ BOTTLENECK\nChina memory-interface / CXL / PCIe interconnect platform",
+            "Artifact Updated": "Jun 27 (new dive, China MRVL/ALAB analogue for memory-wall)",
+            "SuperCycle": "AI, CXL, Memory Interface, 国産替代",
+            "FY2027": 110,
+            "FY2028": 185,
+            "FY2029": 261,
+            "FY2030": 327,
+            "Entry": 0,
+            "Total": 49
+        },
+        {
+            "Rank": 56,
             "Ticker": "002484.SZ",
             "Name": "江海股份 Jianghai Capacitor",
             "EV Upside": -23,
@@ -1062,7 +1100,7 @@ window.PORTFOLIO_DATA = {
             "Total": 41
         },
         {
-            "Rank": 55,
+            "Rank": 57,
             "Ticker": "300408.SZ",
             "Name": "Three-Circle Group",
             "EV Upside": -28,
@@ -1081,7 +1119,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 56,
+            "Rank": 58,
             "Ticker": "GLW",
             "Name": "Corning",
             "EV Upside": -16,
@@ -1100,7 +1138,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 57,
+            "Rank": 59,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -30,
@@ -1119,7 +1157,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 58,
+            "Rank": 60,
             "Ticker": "SHMD",
             "Name": "SCHMID Group",
             "EV Upside": -9,
@@ -1138,7 +1176,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 59,
+            "Rank": 61,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -34,
@@ -1157,7 +1195,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 60,
+            "Rank": 62,
             "Ticker": "1888.HK",
             "Name": "建滔積層板 Kingboard Laminates",
             "EV Upside": -35,
@@ -1177,7 +1215,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 61,
+            "Rank": 63,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "EV Upside": -45,
@@ -1197,7 +1235,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 62,
+            "Rank": 64,
             "Ticker": "ARM",
             "Name": "Arm Holdings",
             "EV Upside": -46,
@@ -1217,7 +1255,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 63,
+            "Rank": 65,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -41,
@@ -1236,7 +1274,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 64,
+            "Rank": 66,
             "Ticker": "OUST",
             "Name": "Ouster Inc",
             "EV Upside": -49,
@@ -1256,7 +1294,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 65,
+            "Rank": 67,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "EV Upside": -49,
@@ -1276,7 +1314,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 66,
+            "Rank": 68,
             "Ticker": "WOLF",
             "Name": "Wolfspeed",
             "EV Upside": -39,
@@ -1295,7 +1333,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 67,
+            "Rank": 69,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
@@ -2185,26 +2223,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 45,
-            "Ticker": "MRVL",
-            "Name": "迈维尔科技",
-            "EV Upside": 1,
-            "Base": 78,
-            "Port": "",
-            "Current Price": 266.77,
-            "Upside": "1.0x",
-            "Position Type": "🔒 阻塞点\n双头垄断：定制 ASIC——只有 MRVL + Broadcom 设计超大规模人工智能芯片。 2-3年设计周期=锁定。亚马逊、谷歌、微软、Meta。 2026-2035+",
-            "Artifact Updated": "Jun 11 (restructure)",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": "151",
-            "FY2028": "269",
-            "FY2029": "406",
-            "FY2030": "577",
-            "Change %": "-3.18%",
-            "Entry": 0,
-            "Total": 47
-        },
-        {
-            "Rank": 46,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV Upside": -4,
@@ -2223,7 +2241,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 47,
+            "Rank": 46,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "EV Upside": 16,
@@ -2243,7 +2261,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 48,
+            "Rank": 47,
             "Ticker": "VICR",
             "Name": "维科公司",
             "EV Upside": -8,
@@ -2261,6 +2279,25 @@ window.PORTFOLIO_DATA = {
             "Change %": "-9.51%",
             "Entry": 0,
             "Total": 49
+        },
+        {
+            "Rank": 48,
+            "Ticker": "ACMR",
+            "Name": "ACM研究",
+            "EV Upside": -6,
+            "Base": 78,
+            "Port": "",
+            "Current Price": 116.34,
+            "Upside": "0.9x",
+            "Position Type": "⚡ 瓶颈\n中国WFE：湿法清洗+ECP+adv pkg+玻璃基板",
+            "Artifact Updated": "Jun 27 (new dive, China WFE localization + panel-level ECP)",
+            "SuperCycle": "AI, WFE, 国産替代, Glass Substrate",
+            "FY2027": 68,
+            "FY2028": 107,
+            "FY2029": 149,
+            "FY2030": 183,
+            "Entry": 0,
+            "Total": 47
         },
         {
             "Rank": 49,
@@ -2359,6 +2396,45 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 54,
+            "Ticker": "MRVL",
+            "Name": "迈维尔科技",
+            "EV Upside": -30,
+            "Base": 82,
+            "Port": "",
+            "Current Price": 252.04,
+            "Upside": "0.6x",
+            "Position Type": "🔒 阻塞点\n双头垄断：定制 ASIC——只有 MRVL + Broadcom 设计超大规模人工智能芯片。 2-3年设计周期=锁定。亚马逊、谷歌、微软、Meta。 2026-2035+",
+            "Artifact Updated": "Jun 27 (v4.2: 30x→20x, Base 78→82%, CXL/TPU vectors)",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "FY2027": 88,
+            "FY2028": 159,
+            "FY2029": 248,
+            "FY2030": 347,
+            "Change %": "-3.18%",
+            "Entry": 0,
+            "Total": 49
+        },
+        {
+            "Rank": 55,
+            "Ticker": "688008.SH",
+            "Name": "澜起科技 Montage Technology",
+            "EV Upside": -31,
+            "Base": 82,
+            "Port": "",
+            "Current Price": 296.06,
+            "Upside": "0.6x",
+            "Position Type": "⚡ 瓶颈\n中国内存接口/CXL/PCIe互连平台",
+            "Artifact Updated": "Jun 27 (new dive, China MRVL/ALAB analogue for memory-wall)",
+            "SuperCycle": "AI, CXL, Memory Interface, 国産替代",
+            "FY2027": 110,
+            "FY2028": 185,
+            "FY2029": 261,
+            "FY2030": 327,
+            "Entry": 0,
+            "Total": 49
+        },
+        {
+            "Rank": 56,
             "Ticker": "002484.SZ",
             "Name": "江海股份 Jianghai Capacitor",
             "EV Upside": -23,
@@ -2377,7 +2453,7 @@ window.PORTFOLIO_DATA = {
             "Total": 41
         },
         {
-            "Rank": 55,
+            "Rank": 57,
             "Ticker": "300408.SZ",
             "Name": "三环集团",
             "EV Upside": -28,
@@ -2396,7 +2472,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 56,
+            "Rank": 58,
             "Ticker": "GLW",
             "Name": "康宁",
             "EV Upside": -16,
@@ -2415,7 +2491,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 57,
+            "Rank": 59,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -30,
@@ -2434,7 +2510,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 58,
+            "Rank": 60,
             "Ticker": "SHMD",
             "Name": "施密德集团",
             "EV Upside": -9,
@@ -2453,7 +2529,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 59,
+            "Rank": 61,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -34,
@@ -2472,7 +2548,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 60,
+            "Rank": 62,
             "Ticker": "1888.HK",
             "Name": "建滔积层板",
             "EV Upside": -35,
@@ -2492,7 +2568,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 61,
+            "Rank": 63,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "EV Upside": -45,
@@ -2512,7 +2588,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 62,
+            "Rank": 64,
             "Ticker": "ARM",
             "Name": "安谋控股",
             "EV Upside": -46,
@@ -2532,7 +2608,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 63,
+            "Rank": 65,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -41,
@@ -2551,7 +2627,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 64,
+            "Rank": 66,
             "Ticker": "OUST",
             "Name": "驱逐者公司",
             "EV Upside": -49,
@@ -2571,7 +2647,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 65,
+            "Rank": 67,
             "Ticker": "PL",
             "Name": "星球实验室",
             "EV Upside": -49,
@@ -2591,7 +2667,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 66,
+            "Rank": 68,
             "Ticker": "WOLF",
             "Name": "狼速",
             "EV Upside": -39,
@@ -2610,7 +2686,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 67,
+            "Rank": 69,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
