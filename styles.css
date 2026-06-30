@@ -2480,3 +2480,21 @@ body.light-mode .hint-dismiss:hover {
     }
 }
 
+/* === China-region view on phones: show the ticker Code column ============
+   In China view the leftmost column (1) carries the numeric ticker code.
+   The base phone rules (~L1753) already SIZE col 1 as a 3rd sticky column;
+   the per-mode (Basic/ADV) rules hide it and collapse chart/ticker into a
+   2-col sticky block. Here we un-hide col 1 and restore the chart (2) and
+   ticker (3) left offsets to the 3-column layout. This is the LAST
+   @media(480) block in the file, so it wins the equal-specificity tie
+   against the Basic/ADV hide rules. */
+@media (max-width: 480px) {
+    body.region-china th:nth-child(1),
+    body.region-china td:nth-child(1) { display: table-cell; }
+    body.region-china th:nth-child(2),
+    body.region-china td:nth-child(2) { left: 64px; }
+    body.region-china th:nth-child(3),
+    body.region-china td:nth-child(3) { left: 88px; }
+    body.region-china .cn-code { font-size: 0.6rem; letter-spacing: -0.03em; }
+}
+

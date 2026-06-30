@@ -501,6 +501,8 @@ document.addEventListener('DOMContentLoaded', () => {
         regionFilter = (val === 'china' || val === 'exchina') ? val : 'all';
         regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
         try { localStorage.setItem(REGION_STORAGE_KEY, regionFilter); } catch (_) {}
+        // body.region-china lets mobile CSS re-show the Code column (col 1).
+        document.body.classList.toggle('region-china', regionFilter === 'china');
         renderData();
     };
     regionPills.forEach(btn => {
@@ -508,6 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Reflect the persisted choice on the pills (no re-render — initial render handles it).
     regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
+    document.body.classList.toggle('region-china', regionFilter === 'china');
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
