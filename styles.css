@@ -830,6 +830,17 @@ tr.row-expanded td:nth-child(3) {
    typical character widths, AI+CPO fits one row and 800G+1.6T fits the
    next, giving a natural 2x2 layout for the maximum case without forcing
    it visually. */
+/* Ticker code shown in the (repurposed) Cycle column when the Region filter
+   is set to China. Small, monospaced, never wraps. */
+.cn-code {
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+    color: var(--text-secondary);
+}
 .cycle-cell {
     display: flex;
     flex-wrap: wrap;

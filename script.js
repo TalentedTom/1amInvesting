@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explainer_bottleneck: '<strong>Bottleneck</strong> — middle-duration trade, double-check why there\'s a dip.',
             hint_text: 'Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis',
             col_Cycle: 'Cycle',
+            col_Code: 'Code',
             col_Ticker: 'Ticker',
             col_Total: 'Total',
             col_EVUp: 'EV Upside',
@@ -187,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explainer_bottleneck: '<strong>瓶颈</strong> — 中期交易,下跌时核查原因。',
             hint_text: '点击股票代码 <span class="hint-arrow">↗</span> 查看深度分析',
             col_Cycle: '周期',
+            col_Code: '代码',
             col_Ticker: '代码',
             col_Total: '总分',
             col_EVUp: 'EV 上涨',
@@ -1478,6 +1480,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // on mobile-Basic too — the Today/1-year labels are
                 // self-explanatory there.
                 let labelHtml = labelFor(col);
+                // China-region view relabels the repurposed SuperCycle column.
+                if (col === 'SuperCycle' && regionFilter === 'china') {
+                    labelHtml = tr('col_Code');
+                }
                 if (col === 'FY2027') {
                     // .ev-group-float-desktop: the 'Target' banner for the
                     // DESKTOP/tablet layout, anchored in this (FY2027, the
@@ -1959,6 +1965,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // grid. Tags drawn in canonical order regardless of how they're listed
         // in the source string. Empty / dash values render as a hollow cell.
         if (colName === 'SuperCycle') {
+            // China-region view: repurpose this column to show the numeric
+            // ticker code. Chinese rows display the company Name in the Ticker
+            // column, so the code is otherwise hidden. (regionFilter is the
+            // shared filter-state closure variable.)
+            if (regionFilter === 'china') {
+                const code = String((row && row['Ticker']) || '').trim();
+                if (!code) return '';
+                const safe = code.replace(/[<>&]/g, c => ({'<': '&lt;', '>': '&gt;', '&': '&amp;'}[c]));
+                return `<span class="cn-code">${safe}</span>`;
+            }
             const raw = String(value || '').trim();
             if (!raw || raw === '—' || raw === '-') return '';
             // Split on commas OR newlines: most rows are comma-separated
