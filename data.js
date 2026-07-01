@@ -22,26 +22,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 2,
-            "Ticker": "3363.TWO",
-            "Name": "FOCI (上詮)",
-            "EV Upside": 410,
-            "Base": 81,
-            "Port": "✓",
-            "Current Price": 575.0,
-            "Upside": "6.1x",
-            "Position Type": "⚡ Bottleneck",
-            "Artifact Updated": "Jun 10 (scrub)",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "1,307",
-            "FY2028": "3,484",
-            "FY2029": "5,728",
-            "FY2030": "7,963",
-            "Change %": "-4.40%",
-            "Entry": 121,
-            "Total": 97
-        },
-        {
-            "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
             "EV Upside": 409,
@@ -61,7 +41,7 @@ window.PORTFOLIO_DATA = {
             "Total": 97
         },
         {
-            "Rank": 4,
+            "Rank": 3,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "EV Upside": 325,
@@ -81,7 +61,7 @@ window.PORTFOLIO_DATA = {
             "Total": 96
         },
         {
-            "Rank": 5,
+            "Rank": 4,
             "Ticker": "8147.TWO",
             "Name": "Nextronics Engineering",
             "EV Upside": 325,
@@ -99,6 +79,26 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.79%",
             "Entry": 100,
             "Total": 82
+        },
+        {
+            "Rank": 5,
+            "Ticker": "3363.TWO",
+            "Name": "FOCI (上詮)",
+            "EV Upside": 267,
+            "Base": 81,
+            "Port": "",
+            "Current Price": 571.0,
+            "Upside": "4.3x",
+            "Position Type": "⚡ BOTTLENECK\nCPO FAU + passive optical — Glass Bridge risk embedded in ceiling",
+            "Artifact Updated": "Jun 30 (v4.3: 25x→20x + Glass Bridge architecture-risk weighting) — NOT HELD",
+            "SuperCycle": "AI, CPO, FAU, Optical",
+            "FY2027": 924,
+            "FY2028": 2450,
+            "FY2029": 4039,
+            "FY2030": 5618,
+            "Change %": "-4.40%",
+            "Entry": 103,
+            "Total": 90
         },
         {
             "Rank": 6,
@@ -245,12 +245,12 @@ window.PORTFOLIO_DATA = {
             "Name": "ShunSin Technology",
             "EV Upside": 172,
             "Base": 82,
-            "Port": "✓",
+            "Port": "",
             "Current Price": 598.0,
             "Upside": "3.1x",
-            "Position Type": "🔒 CHOKEPOINT\nArchitectural: CPO packaging — Foxconn FAU alignment for optical engines. 2027-2032+",
-            "Artifact Updated": "Jun 27 (v4.2: TSMC COUPE confirmed, Base 88→82%, decomposed margins)",
-            "SuperCycle": "AI, CPO",
+            "Position Type": "⚡ BOTTLENECK\nTSMC COUPE backend optical-engine packaging",
+            "Artifact Updated": "Jun 27 (v4.2: TSMC COUPE confirmed) — NO LONGER HELD",
+            "SuperCycle": "AI, CPO, Optical Packaging",
             "FY2027": 886,
             "FY2028": 1849,
             "FY2029": 2859,
@@ -401,6 +401,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 21,
+            "Ticker": "FLNC",
+            "Name": "Fluence Energy",
+            "EV Upside": 96,
+            "Base": 68,
+            "Port": "",
+            "Current Price": 19.89,
+            "Upside": "2.4x",
+            "Position Type": "📊 BENEFICIARY\nAI data-center BESS / grid-storage / power-quality platform",
+            "Artifact Updated": "Jun 30 (new dive, battery storage in AI factory power stack)",
+            "SuperCycle": "AI, Power, BESS, Grid Storage",
+            "FY2027": 26,
+            "FY2028": 48,
+            "FY2029": 75,
+            "FY2030": 107,
+            "Entry": 60,
+            "Total": 65
+        },
+        {
+            "Rank": 22,
             "Ticker": "688596.SH",
             "Name": "正帆科技 Gentech",
             "EV Upside": 81,
@@ -419,7 +438,7 @@ window.PORTFOLIO_DATA = {
             "Total": 65
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV Upside": 76,
@@ -438,7 +457,7 @@ window.PORTFOLIO_DATA = {
             "Total": 67
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "BRUN",
             "Name": "Boost Run",
             "EV Upside": 83,
@@ -457,7 +476,26 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 24,
+            "Rank": 25,
+            "Ticker": "PENG",
+            "Name": "Penguin Solutions",
+            "EV Upside": 80,
+            "Base": 68,
+            "Port": "",
+            "Current Price": 76.5,
+            "Upside": "2.2x",
+            "Position Type": "📊 BENEFICIARY\nAI Factory integrator + MemoryAI / CXL KV-cache platform",
+            "Artifact Updated": "Jun 30 (new dive, AI Factory + inference memory wedge, Q3 Jul 7)",
+            "SuperCycle": "AI, CXL, Sovereign AI, Inference Memory",
+            "FY2027": 95,
+            "FY2028": 167,
+            "FY2029": 251,
+            "FY2030": 355,
+            "Entry": 55,
+            "Total": 63
+        },
+        {
+            "Rank": 26,
             "Ticker": "4078.T",
             "Name": "Sakai Chemical (堺化学)",
             "EV Upside": 83,
@@ -476,7 +514,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 25,
+            "Rank": 27,
             "Ticker": "AVGO",
             "Name": "Broadcom Inc",
             "EV Upside": 65,
@@ -495,7 +533,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 26,
+            "Rank": 28,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 66,
@@ -515,7 +553,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 27,
+            "Rank": 29,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "EV Upside": 55,
@@ -534,7 +572,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 28,
+            "Rank": 30,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "EV Upside": 57,
@@ -554,7 +592,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 29,
+            "Rank": 31,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "EV Upside": 78,
@@ -574,7 +612,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 30,
+            "Rank": 32,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (汎銓科技)",
             "EV Upside": 35,
@@ -594,7 +632,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 31,
+            "Rank": 33,
             "Ticker": "002371.SZ",
             "Name": "北方华创 NAURA",
             "EV Upside": 36,
@@ -613,7 +651,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 32,
+            "Rank": 34,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "EV Upside": 39,
@@ -633,7 +671,7 @@ window.PORTFOLIO_DATA = {
             "Total": 53
         },
         {
-            "Rank": 33,
+            "Rank": 35,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV Upside": 34,
@@ -653,7 +691,7 @@ window.PORTFOLIO_DATA = {
             "Total": 54
         },
         {
-            "Rank": 34,
+            "Rank": 36,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "EV Upside": 38,
@@ -673,7 +711,7 @@ window.PORTFOLIO_DATA = {
             "Total": 52
         },
         {
-            "Rank": 35,
+            "Rank": 37,
             "Ticker": "EOS.AX",
             "Name": "Electro Optic Systems",
             "EV Upside": 34,
@@ -693,7 +731,7 @@ window.PORTFOLIO_DATA = {
             "Total": 52
         },
         {
-            "Rank": 36,
+            "Rank": 38,
             "Ticker": "JBL",
             "Name": "Jabil Inc",
             "EV Upside": 31,
@@ -712,7 +750,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 37,
+            "Rank": 39,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV Upside": 41,
@@ -731,7 +769,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 38,
+            "Rank": 40,
             "Ticker": "603986.SH",
             "Name": "GigaDevice 兆易创新",
             "EV Upside": 14,
@@ -750,7 +788,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 39,
+            "Rank": 41,
             "Ticker": "002409.SZ",
             "Name": "雅克科技 Yoke Technology",
             "EV Upside": 12,
@@ -769,7 +807,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 40,
+            "Rank": 42,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "EV Upside": 12,
@@ -789,7 +827,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 41,
+            "Rank": 43,
             "Ticker": "CRDO",
             "Name": "Credo Technology",
             "EV Upside": 17,
@@ -809,7 +847,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 42,
+            "Rank": 44,
             "Ticker": "BESI.AS",
             "Name": "BE Semiconductor Industries",
             "EV Upside": 11,
@@ -829,7 +867,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 43,
+            "Rank": 45,
             "Ticker": "2454.TW",
             "Name": "聯發科 MediaTek",
             "EV Upside": 5,
@@ -848,7 +886,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 44,
+            "Rank": 46,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "EV Upside": 16,
@@ -868,7 +906,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 45,
+            "Rank": 47,
             "Ticker": "000725.SZ",
             "Name": "京东方A BOE Technology",
             "EV Upside": 23,
@@ -887,7 +925,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 46,
+            "Rank": 48,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "EV Upside": 17,
@@ -907,7 +945,7 @@ window.PORTFOLIO_DATA = {
             "Total": 46
         },
         {
-            "Rank": 47,
+            "Rank": 49,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "EV Upside": 2,
@@ -926,7 +964,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 48,
+            "Rank": 50,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV Upside": -4,
@@ -945,7 +983,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 49,
+            "Rank": 51,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
             "EV Upside": 16,
@@ -965,7 +1003,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 50,
+            "Rank": 52,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "EV Upside": -8,
@@ -985,7 +1023,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 51,
+            "Rank": 53,
             "Ticker": "ACMR",
             "Name": "ACM Research",
             "EV Upside": -6,
@@ -1004,7 +1042,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 52,
+            "Rank": 54,
             "Ticker": "STM",
             "Name": "STMicroelectronics",
             "EV Upside": 2,
@@ -1023,7 +1061,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 53,
+            "Rank": 55,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "EV Upside": -13,
@@ -1042,7 +1080,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 54,
+            "Rank": 56,
             "Ticker": "300223.SZ",
             "Name": "北京君正 Ingenic",
             "EV Upside": -25,
@@ -1061,7 +1099,7 @@ window.PORTFOLIO_DATA = {
             "Total": 50
         },
         {
-            "Rank": 55,
+            "Rank": 57,
             "Ticker": "300666.SZ",
             "Name": "江丰电子 Konfoong Materials",
             "EV Upside": -26,
@@ -1080,7 +1118,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 56,
+            "Rank": 58,
             "Ticker": "688409.SH",
             "Name": "富创精密 Fortune Precision",
             "EV Upside": -22,
@@ -1099,7 +1137,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 57,
+            "Rank": 59,
             "Ticker": "SMTC",
             "Name": "Semtech Corporation",
             "EV Upside": -19,
@@ -1118,27 +1156,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 58,
-            "Ticker": "MRVL",
-            "Name": "Marvell Technology",
-            "EV Upside": -30,
-            "Base": 82,
-            "Port": "",
-            "Current Price": 252.04,
-            "Upside": "0.6x",
-            "Position Type": "🔒 CHOKEPOINT\nDuopoly: Custom ASIC — only MRVL + Broadcom design hyperscaler AI chips. 2-3yr design cycle = lock-in. Amazon, Google, Microsoft, Meta. 2026-2035+",
-            "Artifact Updated": "Jun 27 (v4.2: 30x→20x, Base 78→82%, CXL/TPU vectors)",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": 88,
-            "FY2028": 159,
-            "FY2029": 248,
-            "FY2030": 347,
-            "Change %": "-3.18%",
-            "Entry": 0,
-            "Total": 49
-        },
-        {
-            "Rank": 59,
+            "Rank": 60,
             "Ticker": "688008.SH",
             "Name": "澜起科技 Montage Technology",
             "EV Upside": -31,
@@ -1157,7 +1175,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 60,
+            "Rank": 61,
             "Ticker": "002484.SZ",
             "Name": "江海股份 Jianghai Capacitor",
             "EV Upside": -23,
@@ -1176,7 +1194,7 @@ window.PORTFOLIO_DATA = {
             "Total": 41
         },
         {
-            "Rank": 61,
+            "Rank": 62,
             "Ticker": "688072.SH",
             "Name": "拓荆科技 Piotech",
             "EV Upside": -29,
@@ -1195,7 +1213,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 62,
+            "Rank": 63,
             "Ticker": "300408.SZ",
             "Name": "Three-Circle Group",
             "EV Upside": -28,
@@ -1214,7 +1232,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 63,
+            "Rank": 64,
             "Ticker": "688120.SH",
             "Name": "华海清科 Hwatsing",
             "EV Upside": -28,
@@ -1233,7 +1251,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 64,
+            "Rank": 65,
             "Ticker": "GLW",
             "Name": "Corning",
             "EV Upside": -16,
@@ -1252,7 +1270,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 65,
+            "Rank": 66,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -30,
@@ -1271,7 +1289,27 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 66,
+            "Rank": 67,
+            "Ticker": "MRVL",
+            "Name": "Marvell Technology",
+            "EV Upside": -38,
+            "Base": 84,
+            "Port": "",
+            "Current Price": 296.08,
+            "Upside": "0.5x",
+            "Position Type": "🔒 CHOKEPOINT\nDuopoly: Custom ASIC — only MRVL + Broadcom design hyperscaler AI chips. 2-3yr design cycle = lock-in. Amazon, Google, Microsoft, Meta. 2026-2035+",
+            "Artifact Updated": "Jun 30 (v4.3.1: Base 82→84%, probability-weighted Google TPU model, stock ran to $296)",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "FY2027": 102,
+            "FY2028": 162,
+            "FY2029": 259,
+            "FY2030": 371,
+            "Change %": "-3.18%",
+            "Entry": 0,
+            "Total": 50
+        },
+        {
+            "Rank": 68,
             "Ticker": "SHMD",
             "Name": "SCHMID Group",
             "EV Upside": -9,
@@ -1290,7 +1328,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 67,
+            "Rank": 69,
             "Ticker": "688012.SH",
             "Name": "中微公司 AMEC",
             "EV Upside": -40,
@@ -1309,7 +1347,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 68,
+            "Rank": 70,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -34,
@@ -1328,7 +1366,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 69,
+            "Rank": 71,
             "Ticker": "1888.HK",
             "Name": "建滔積層板 Kingboard Laminates",
             "EV Upside": -35,
@@ -1348,7 +1386,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 70,
+            "Rank": 72,
             "Ticker": "300136.SZ",
             "Name": "信维通信 Sunway Communication",
             "EV Upside": -30,
@@ -1367,7 +1405,27 @@ window.PORTFOLIO_DATA = {
             "Total": 38
         },
         {
-            "Rank": 71,
+            "Rank": 73,
+            "Ticker": "OUST",
+            "Name": "Ouster Inc",
+            "EV Upside": -46,
+            "Base": 78,
+            "Port": "",
+            "Current Price": 58.18,
+            "Upside": "0.4x",
+            "Position Type": "⚡ BOTTLENECK\nPhysical AI perception platform (was 🔒, downgraded Rule 6)",
+            "Artifact Updated": "Jun 30 (v4.3: Base 75→78%, ceilings up on aggressive rev model, stock ran to $58)",
+            "SuperCycle": "Other",
+            "FY2027": 0,
+            "FY2028": 24,
+            "FY2029": 62,
+            "FY2030": 105,
+            "Change %": "-16.41%",
+            "Entry": 0,
+            "Total": 47
+        },
+        {
+            "Rank": 74,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "EV Upside": -45,
@@ -1387,7 +1445,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 72,
+            "Rank": 75,
             "Ticker": "ARM",
             "Name": "Arm Holdings",
             "EV Upside": -46,
@@ -1407,7 +1465,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 73,
+            "Rank": 76,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -41,
@@ -1426,27 +1484,26 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 74,
-            "Ticker": "OUST",
-            "Name": "Ouster Inc",
-            "EV Upside": -49,
-            "Base": 75,
+            "Rank": 77,
+            "Ticker": "688010.SH",
+            "Name": "福光股份 Forecam Optics",
+            "EV Upside": -34,
+            "Base": 55,
             "Port": "",
-            "Current Price": 42.02,
-            "Upside": "0.3x",
-            "Position Type": "⚡ BOTTLENECK\nPhysical AI perception platform (was 🔒, downgraded Rule 6)",
-            "Artifact Updated": "Jun 27 (v4.2 audit: shares 180M→72M, 30x→20x, Base 82→75%)",
-            "SuperCycle": "Other",
-            "FY2027": 0,
-            "FY2028": 14.6,
-            "FY2029": 44.7,
-            "FY2030": 86.5,
-            "Change %": "-16.41%",
+            "Current Price": 48.63,
+            "Upside": "0.4x",
+            "Position Type": "📊 BENEFICIARY\nChina precision/aerospace optics + lithography-optics optionality",
+            "Artifact Updated": "Jun 30 (new dive, aerospace optics, lithography claim UNVERIFIED)",
+            "SuperCycle": "Aerospace Optics, Lithography Option, 国産替代",
+            "FY2027": 7,
+            "FY2028": 19,
+            "FY2029": 35,
+            "FY2030": 55,
             "Entry": 0,
-            "Total": 45
+            "Total": 33
         },
         {
-            "Rank": 75,
+            "Rank": 78,
             "Ticker": "PL",
             "Name": "Planet Labs",
             "EV Upside": -49,
@@ -1466,7 +1523,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 76,
+            "Rank": 79,
             "Ticker": "WOLF",
             "Name": "Wolfspeed",
             "EV Upside": -39,
@@ -1485,7 +1542,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 77,
+            "Rank": 80,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
@@ -1527,26 +1584,6 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 2,
-            "Ticker": "3363.TWO",
-            "Name": "FOCI (上转)",
-            "EV Upside": 410,
-            "Base": 81,
-            "Port": "✓",
-            "Current Price": 575.0,
-            "Upside": "6.1x",
-            "Position Type": "⚡ 瓶颈",
-            "Artifact Updated": "Jun 10 (scrub)",
-            "SuperCycle": "AI, CPO",
-            "FY2027": "1,307",
-            "FY2028": "3,484",
-            "FY2029": "5,728",
-            "FY2030": "7,963",
-            "Change %": "-4.40%",
-            "Entry": 121,
-            "Total": 97
-        },
-        {
-            "Rank": 3,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
             "EV Upside": 409,
@@ -1566,7 +1603,7 @@ window.PORTFOLIO_DATA = {
             "Total": 97
         },
         {
-            "Rank": 4,
+            "Rank": 3,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "EV Upside": 325,
@@ -1586,7 +1623,7 @@ window.PORTFOLIO_DATA = {
             "Total": 96
         },
         {
-            "Rank": 5,
+            "Rank": 4,
             "Ticker": "8147.TWO",
             "Name": "明思电子工程",
             "EV Upside": 325,
@@ -1604,6 +1641,26 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.79%",
             "Entry": 100,
             "Total": 82
+        },
+        {
+            "Rank": 5,
+            "Ticker": "3363.TWO",
+            "Name": "FOCI (上转)",
+            "EV Upside": 267,
+            "Base": 81,
+            "Port": "",
+            "Current Price": 571.0,
+            "Upside": "4.3x",
+            "Position Type": "⚡ 瓶颈\nCPO FAU + 无源光学 — 嵌入天花板的玻璃桥风险",
+            "Artifact Updated": "Jun 30 (v4.3: 25x→20x + Glass Bridge architecture-risk weighting) — NOT HELD",
+            "SuperCycle": "AI, CPO, FAU, Optical",
+            "FY2027": 924,
+            "FY2028": 2450,
+            "FY2029": 4039,
+            "FY2030": 5618,
+            "Change %": "-4.40%",
+            "Entry": 103,
+            "Total": 90
         },
         {
             "Rank": 6,
@@ -1750,12 +1807,12 @@ window.PORTFOLIO_DATA = {
             "Name": "顺欣科技",
             "EV Upside": 172,
             "Base": 82,
-            "Port": "✓",
+            "Port": "",
             "Current Price": 598.0,
             "Upside": "3.1x",
-            "Position Type": "🔒 阻塞点\n建筑：CPO 封装 — 富士康光学引擎 FAU 对准。 2027-2032+",
-            "Artifact Updated": "Jun 27 (v4.2: TSMC COUPE confirmed, Base 88→82%, decomposed margins)",
-            "SuperCycle": "AI, CPO",
+            "Position Type": "⚡ 瓶颈\nTSMC COUPE 后端光学引擎封装",
+            "Artifact Updated": "Jun 27 (v4.2: TSMC COUPE confirmed) — NO LONGER HELD",
+            "SuperCycle": "AI, CPO, Optical Packaging",
             "FY2027": 886,
             "FY2028": 1849,
             "FY2029": 2859,
@@ -1906,6 +1963,25 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 21,
+            "Ticker": "FLNC",
+            "Name": "流量能量",
+            "EV Upside": 96,
+            "Base": 68,
+            "Port": "",
+            "Current Price": 19.89,
+            "Upside": "2.4x",
+            "Position Type": "📊 受益人\nAI数据中心BESS/电网存储/电能质量平台",
+            "Artifact Updated": "Jun 30 (new dive, battery storage in AI factory power stack)",
+            "SuperCycle": "AI, Power, BESS, Grid Storage",
+            "FY2027": 26,
+            "FY2028": 48,
+            "FY2029": 75,
+            "FY2030": 107,
+            "Entry": 60,
+            "Total": 65
+        },
+        {
+            "Rank": 22,
             "Ticker": "688596.SH",
             "Name": "正帆科技 Gentech",
             "EV Upside": 81,
@@ -1924,7 +2000,7 @@ window.PORTFOLIO_DATA = {
             "Total": 65
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV Upside": 76,
@@ -1943,7 +2019,7 @@ window.PORTFOLIO_DATA = {
             "Total": 67
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "BRUN",
             "Name": "加速跑",
             "EV Upside": 83,
@@ -1962,7 +2038,26 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 24,
+            "Rank": 25,
+            "Ticker": "PENG",
+            "Name": "企鹅解决方案",
+            "EV Upside": 80,
+            "Base": 68,
+            "Port": "",
+            "Current Price": 76.5,
+            "Upside": "2.2x",
+            "Position Type": "📊 受益人\nAI Factory集成商+MemoryAI / CXL KV-cache平台",
+            "Artifact Updated": "Jun 30 (new dive, AI Factory + inference memory wedge, Q3 Jul 7)",
+            "SuperCycle": "AI, CXL, Sovereign AI, Inference Memory",
+            "FY2027": 95,
+            "FY2028": 167,
+            "FY2029": 251,
+            "FY2030": 355,
+            "Entry": 55,
+            "Total": 63
+        },
+        {
+            "Rank": 26,
             "Ticker": "4078.T",
             "Name": "堺化学",
             "EV Upside": 83,
@@ -1981,7 +2076,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 25,
+            "Rank": 27,
             "Ticker": "AVGO",
             "Name": "博通公司",
             "EV Upside": 65,
@@ -2000,7 +2095,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 26,
+            "Rank": 28,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV Upside": 66,
@@ -2020,7 +2115,7 @@ window.PORTFOLIO_DATA = {
             "Total": 63
         },
         {
-            "Rank": 27,
+            "Rank": 29,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "EV Upside": 55,
@@ -2039,7 +2134,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 28,
+            "Rank": 30,
             "Ticker": "COHR",
             "Name": "相干公司",
             "EV Upside": 57,
@@ -2059,7 +2154,7 @@ window.PORTFOLIO_DATA = {
             "Total": 61
         },
         {
-            "Rank": 29,
+            "Rank": 31,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "EV Upside": 78,
@@ -2079,7 +2174,7 @@ window.PORTFOLIO_DATA = {
             "Total": 56
         },
         {
-            "Rank": 30,
+            "Rank": 32,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (泛铨科技)",
             "EV Upside": 35,
@@ -2099,7 +2194,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 31,
+            "Rank": 33,
             "Ticker": "002371.SZ",
             "Name": "北方华创 NAURA",
             "EV Upside": 36,
@@ -2118,7 +2213,7 @@ window.PORTFOLIO_DATA = {
             "Total": 55
         },
         {
-            "Rank": 32,
+            "Rank": 34,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "EV Upside": 39,
@@ -2138,7 +2233,7 @@ window.PORTFOLIO_DATA = {
             "Total": 53
         },
         {
-            "Rank": 33,
+            "Rank": 35,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV Upside": 34,
@@ -2158,7 +2253,7 @@ window.PORTFOLIO_DATA = {
             "Total": 54
         },
         {
-            "Rank": 34,
+            "Rank": 36,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "EV Upside": 38,
@@ -2178,7 +2273,7 @@ window.PORTFOLIO_DATA = {
             "Total": 52
         },
         {
-            "Rank": 35,
+            "Rank": 37,
             "Ticker": "EOS.AX",
             "Name": "光电系统",
             "EV Upside": 34,
@@ -2198,7 +2293,7 @@ window.PORTFOLIO_DATA = {
             "Total": 52
         },
         {
-            "Rank": 36,
+            "Rank": 38,
             "Ticker": "JBL",
             "Name": "捷普公司",
             "EV Upside": 31,
@@ -2217,7 +2312,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 37,
+            "Rank": 39,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV Upside": 41,
@@ -2236,7 +2331,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 38,
+            "Rank": 40,
             "Ticker": "603986.SH",
             "Name": "GigaDevice 兆易创新",
             "EV Upside": 14,
@@ -2255,7 +2350,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 39,
+            "Rank": 41,
             "Ticker": "002409.SZ",
             "Name": "雅克科技 Yoke Technology",
             "EV Upside": 12,
@@ -2274,7 +2369,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 40,
+            "Rank": 42,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "EV Upside": 12,
@@ -2294,7 +2389,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 41,
+            "Rank": 43,
             "Ticker": "CRDO",
             "Name": "信条科技",
             "EV Upside": 17,
@@ -2314,7 +2409,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 42,
+            "Rank": 44,
             "Ticker": "BESI.AS",
             "Name": "BE半导体工业公司",
             "EV Upside": 11,
@@ -2334,7 +2429,7 @@ window.PORTFOLIO_DATA = {
             "Total": 44
         },
         {
-            "Rank": 43,
+            "Rank": 45,
             "Ticker": "2454.TW",
             "Name": "联发科联发科技",
             "EV Upside": 5,
@@ -2353,7 +2448,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 44,
+            "Rank": 46,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "EV Upside": 16,
@@ -2373,7 +2468,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 45,
+            "Rank": 47,
             "Ticker": "000725.SZ",
             "Name": "京东方A BOE Technology",
             "EV Upside": 23,
@@ -2392,7 +2487,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 46,
+            "Rank": 48,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "EV Upside": 17,
@@ -2412,7 +2507,7 @@ window.PORTFOLIO_DATA = {
             "Total": 46
         },
         {
-            "Rank": 47,
+            "Rank": 49,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "EV Upside": 2,
@@ -2431,7 +2526,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 48,
+            "Rank": 50,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV Upside": -4,
@@ -2450,7 +2545,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 49,
+            "Rank": 51,
             "Ticker": "NRGV",
             "Name": "能源库控股",
             "EV Upside": 16,
@@ -2470,7 +2565,7 @@ window.PORTFOLIO_DATA = {
             "Total": 36
         },
         {
-            "Rank": 50,
+            "Rank": 52,
             "Ticker": "VICR",
             "Name": "维科公司",
             "EV Upside": -8,
@@ -2490,7 +2585,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 51,
+            "Rank": 53,
             "Ticker": "ACMR",
             "Name": "ACM研究",
             "EV Upside": -6,
@@ -2509,7 +2604,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 52,
+            "Rank": 54,
             "Ticker": "STM",
             "Name": "意法半导体",
             "EV Upside": 2,
@@ -2528,7 +2623,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 53,
+            "Rank": 55,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "EV Upside": -13,
@@ -2547,7 +2642,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 54,
+            "Rank": 56,
             "Ticker": "300223.SZ",
             "Name": "北京君正 Ingenic",
             "EV Upside": -25,
@@ -2566,7 +2661,7 @@ window.PORTFOLIO_DATA = {
             "Total": 50
         },
         {
-            "Rank": 55,
+            "Rank": 57,
             "Ticker": "300666.SZ",
             "Name": "江丰电子 Konfoong Materials",
             "EV Upside": -26,
@@ -2585,7 +2680,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 56,
+            "Rank": 58,
             "Ticker": "688409.SH",
             "Name": "富创精密 Fortune Precision",
             "EV Upside": -22,
@@ -2604,7 +2699,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 57,
+            "Rank": 59,
             "Ticker": "SMTC",
             "Name": "森泰克公司",
             "EV Upside": -19,
@@ -2623,27 +2718,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 58,
-            "Ticker": "MRVL",
-            "Name": "迈维尔科技",
-            "EV Upside": -30,
-            "Base": 82,
-            "Port": "",
-            "Current Price": 252.04,
-            "Upside": "0.6x",
-            "Position Type": "🔒 阻塞点\n双头垄断：定制 ASIC——只有 MRVL + Broadcom 设计超大规模人工智能芯片。 2-3年设计周期=锁定。亚马逊、谷歌、微软、Meta。 2026-2035+",
-            "Artifact Updated": "Jun 27 (v4.2: 30x→20x, Base 78→82%, CXL/TPU vectors)",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "FY2027": 88,
-            "FY2028": 159,
-            "FY2029": 248,
-            "FY2030": 347,
-            "Change %": "-3.18%",
-            "Entry": 0,
-            "Total": 49
-        },
-        {
-            "Rank": 59,
+            "Rank": 60,
             "Ticker": "688008.SH",
             "Name": "澜起科技 Montage Technology",
             "EV Upside": -31,
@@ -2662,7 +2737,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 60,
+            "Rank": 61,
             "Ticker": "002484.SZ",
             "Name": "江海股份 Jianghai Capacitor",
             "EV Upside": -23,
@@ -2681,7 +2756,7 @@ window.PORTFOLIO_DATA = {
             "Total": 41
         },
         {
-            "Rank": 61,
+            "Rank": 62,
             "Ticker": "688072.SH",
             "Name": "拓荆科技 Piotech",
             "EV Upside": -29,
@@ -2700,7 +2775,7 @@ window.PORTFOLIO_DATA = {
             "Total": 48
         },
         {
-            "Rank": 62,
+            "Rank": 63,
             "Ticker": "300408.SZ",
             "Name": "三环集团",
             "EV Upside": -28,
@@ -2719,7 +2794,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 63,
+            "Rank": 64,
             "Ticker": "688120.SH",
             "Name": "华海清科 Hwatsing",
             "EV Upside": -28,
@@ -2738,7 +2813,7 @@ window.PORTFOLIO_DATA = {
             "Total": 47
         },
         {
-            "Rank": 64,
+            "Rank": 65,
             "Ticker": "GLW",
             "Name": "康宁",
             "EV Upside": -16,
@@ -2757,7 +2832,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 65,
+            "Rank": 66,
             "Ticker": "300285.SZ",
             "Name": "Sinocera (国瓷材料)",
             "EV Upside": -30,
@@ -2776,7 +2851,27 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 66,
+            "Rank": 67,
+            "Ticker": "MRVL",
+            "Name": "迈维尔科技",
+            "EV Upside": -38,
+            "Base": 84,
+            "Port": "",
+            "Current Price": 296.08,
+            "Upside": "0.5x",
+            "Position Type": "🔒 阻塞点\n双头垄断：定制 ASIC——只有 MRVL + Broadcom 设计超大规模人工智能芯片。 2-3年设计周期=锁定。亚马逊、谷歌、微软、Meta。 2026-2035+",
+            "Artifact Updated": "Jun 30 (v4.3.1: Base 82→84%, probability-weighted Google TPU model, stock ran to $296)",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "FY2027": 102,
+            "FY2028": 162,
+            "FY2029": 259,
+            "FY2030": 371,
+            "Change %": "-3.18%",
+            "Entry": 0,
+            "Total": 50
+        },
+        {
+            "Rank": 68,
             "Ticker": "SHMD",
             "Name": "施密德集团",
             "EV Upside": -9,
@@ -2795,7 +2890,7 @@ window.PORTFOLIO_DATA = {
             "Total": 32
         },
         {
-            "Rank": 67,
+            "Rank": 69,
             "Ticker": "688012.SH",
             "Name": "中微公司 AMEC",
             "EV Upside": -40,
@@ -2814,7 +2909,7 @@ window.PORTFOLIO_DATA = {
             "Total": 49
         },
         {
-            "Rank": 68,
+            "Rank": 70,
             "Ticker": "002428.SZ",
             "Name": "云南锗业 Yunnan Germanium (InP)",
             "EV Upside": -34,
@@ -2833,7 +2928,7 @@ window.PORTFOLIO_DATA = {
             "Total": 43
         },
         {
-            "Rank": 69,
+            "Rank": 71,
             "Ticker": "1888.HK",
             "Name": "建滔积层板",
             "EV Upside": -35,
@@ -2853,7 +2948,7 @@ window.PORTFOLIO_DATA = {
             "Total": 39
         },
         {
-            "Rank": 70,
+            "Rank": 72,
             "Ticker": "300136.SZ",
             "Name": "信威通讯",
             "EV Upside": -30,
@@ -2872,7 +2967,27 @@ window.PORTFOLIO_DATA = {
             "Total": 38
         },
         {
-            "Rank": 71,
+            "Rank": 73,
+            "Ticker": "OUST",
+            "Name": "驱逐者公司",
+            "EV Upside": -46,
+            "Base": 78,
+            "Port": "",
+            "Current Price": 58.18,
+            "Upside": "0.4x",
+            "Position Type": "⚡ 瓶颈\n物理AI感知平台（原🔒，降级规则6）",
+            "Artifact Updated": "Jun 30 (v4.3: Base 75→78%, ceilings up on aggressive rev model, stock ran to $58)",
+            "SuperCycle": "Other",
+            "FY2027": 0,
+            "FY2028": 24,
+            "FY2029": 62,
+            "FY2030": 105,
+            "Change %": "-16.41%",
+            "Entry": 0,
+            "Total": 47
+        },
+        {
+            "Rank": 74,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "EV Upside": -45,
@@ -2892,7 +3007,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 72,
+            "Rank": 75,
             "Ticker": "ARM",
             "Name": "安谋控股",
             "EV Upside": -46,
@@ -2912,7 +3027,7 @@ window.PORTFOLIO_DATA = {
             "Total": 45
         },
         {
-            "Rank": 73,
+            "Rank": 76,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV Upside": -41,
@@ -2931,27 +3046,26 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 74,
-            "Ticker": "OUST",
-            "Name": "驱逐者公司",
-            "EV Upside": -49,
-            "Base": 75,
+            "Rank": 77,
+            "Ticker": "688010.SH",
+            "Name": "福光股份 Forecam Optics",
+            "EV Upside": -34,
+            "Base": 55,
             "Port": "",
-            "Current Price": 42.02,
-            "Upside": "0.3x",
-            "Position Type": "⚡ 瓶颈\n物理AI感知平台（原🔒，降级规则6）",
-            "Artifact Updated": "Jun 27 (v4.2 audit: shares 180M→72M, 30x→20x, Base 82→75%)",
-            "SuperCycle": "Other",
-            "FY2027": 0,
-            "FY2028": 14.6,
-            "FY2029": 44.7,
-            "FY2030": 86.5,
-            "Change %": "-16.41%",
+            "Current Price": 48.63,
+            "Upside": "0.4x",
+            "Position Type": "📊 受益人\n中国精密/航天光学+光刻光学可选",
+            "Artifact Updated": "Jun 30 (new dive, aerospace optics, lithography claim UNVERIFIED)",
+            "SuperCycle": "Aerospace Optics, Lithography Option, 国産替代",
+            "FY2027": 7,
+            "FY2028": 19,
+            "FY2029": 35,
+            "FY2030": 55,
             "Entry": 0,
-            "Total": 45
+            "Total": 33
         },
         {
-            "Rank": 75,
+            "Rank": 78,
             "Ticker": "PL",
             "Name": "星球实验室",
             "EV Upside": -49,
@@ -2971,7 +3085,7 @@ window.PORTFOLIO_DATA = {
             "Total": 40
         },
         {
-            "Rank": 76,
+            "Rank": 79,
             "Ticker": "WOLF",
             "Name": "狼速",
             "EV Upside": -39,
@@ -2990,7 +3104,7 @@ window.PORTFOLIO_DATA = {
             "Total": 33
         },
         {
-            "Rank": 77,
+            "Rank": 80,
             "Ticker": "600330.SH",
             "Name": "天通股份 Tiantong (LN/TFLN)",
             "EV Upside": -44,
