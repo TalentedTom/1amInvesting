@@ -525,11 +525,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // styling vs. plain text. Tickers not in this set are non-interactive
     // (no underline, no chevron, default cursor) — implicitly signalling
     // that no deep-dive exists for them yet.
-    // Deep dives are currently DISABLED site-wide: tickers render as plain,
-    // non-clickable text and the deep-dive search box + discovery hint are
-    // hidden. Set this back to true to restore the feature — the manifest and
-    // the per-ticker deep-dives/*.md files are left untouched.
-    const DEEP_DIVES_ENABLED = false;
+    // Deep dives ENABLED: clicking a ticker opens its deep-dive modal, and the
+    // deep-dive search box + discovery hint are shown. Requires the per-ticker
+    // deep-dives/*.md files (+ index.json manifest) to be published in the repo
+    // (see scripts/sync_deep_dives.py). Set to false to disable the whole
+    // feature site-wide.
+    const DEEP_DIVES_ENABLED = true;
     let deepDiveAvailable = new Set();
     // Prev/next navigation order for the deep-dive modal — rebuilt by
     // buildTable to mirror the table's current sort/filter order.
