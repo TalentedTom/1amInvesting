@@ -49,26 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return n.toFixed(3);
     }
 
-    // Per-row cache: top-2 quarters with the highest QoQ % growth.
-    // Returns a Map of quarterName -> qoqPct for those 2 inflection quarters.
-    const _topQoQCache = new WeakMap();
-    function topQoQGrowth(row) {
-        if (_topQoQCache.has(row)) return _topQoQCache.get(row);
+    // Per-row cache: QoQ % change for every quarter column.
+    // First quarter (Q3'26) = % vs current price; all others = vs prior quarter.
+    const _qPctCache = new WeakMap();
+    function quarterPctChanges(row) {
+        if (_qPctCache.has(row)) return _qPctCache.get(row);
+        const price = parseLooseNumber(row['Current Price']);
         const prices = QUARTER_COLS.map(q => parseLooseNumber(row[q]));
-        const gains = [];
-        for (let i = 1; i < prices.length; i++) {
-            const prev = prices[i - 1], cur = prices[i];
-            if (isFinite(prev) && prev > 0 && isFinite(cur) && cur > 0) {
-                gains.push({ col: QUARTER_COLS[i], pct: (cur / prev - 1) * 100 });
+        const pcts = new Map();
+        for (let i = 0; i < prices.length; i++) {
+            const cur = prices[i];
+            if (!isFinite(cur) || cur <= 0) continue;
+            if (i === 0) {
+                if (isFinite(price) && price > 0)
+                    pcts.set(QUARTER_COLS[i], (cur / price - 1) * 100);
+            } else {
+                const prev = prices[i - 1];
+                if (isFinite(prev) && prev > 0)
+                    pcts.set(QUARTER_COLS[i], (cur / prev - 1) * 100);
             }
         }
-        gains.sort((a, b) => b.pct - a.pct);
-        const top = new Map();
-        for (let i = 0; i < Math.min(2, gains.length); i++) {
-            if (gains[i].pct > 0) top.set(gains[i].col, gains[i].pct);
-        }
-        _topQoQCache.set(row, top);
-        return top;
+        _qPctCache.set(row, pcts);
+        return pcts;
     }
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
@@ -2053,22 +2055,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const out = formatQuarterPrice(value);
             if (!out) return `<span style="color: #64748b;">-</span>`;
-            if (colName === TARGET_QUARTER) {
-                const price = parseLooseNumber(row && row['Current Price']);
-                const target = parseLooseNumber(value);
-                if (isFinite(price) && price > 0 && isFinite(target)) {
-                    const pct = (target / price - 1) * 100;
-                    const cls = pct >= 0 ? 'fy-pct fy-pos' : 'fy-pct fy-neg';
-                    const pctStr = `${pct >= 0 ? '+' : ''}${Math.round(pct)}%`;
-                    return `<span class="${cls}">${pctStr}</span>${out}`;
-                }
-            }
             if (row) {
-                const top2 = topQoQGrowth(row);
-                if (top2.has(colName)) {
-                    const qpct = top2.get(colName);
-                    const cls = 'fy-pct fy-pos qoq-badge';
-                    return `${out}<span class="${cls}">+${Math.round(qpct)}%</span>`;
+                const pcts = quarterPctChanges(row);
+                if (pcts.has(colName)) {
+                    const pct = pcts.get(colName);
+                    const cls = pct >= 0 ? 'fy-pct fy-pos qoq-badge' : 'fy-pct fy-neg qoq-badge';
+                    const pctStr = `${pct >= 0 ? '+' : ''}${Math.round(pct)}%`;
+                    return `${out}<span class="${cls}">${pctStr}</span>`;
                 }
             }
             return out;
