@@ -599,14 +599,21 @@ body.light-mode tr.row-expanded td.q-target {
    left of the value (e.g. '+10% 66'). Rendered at ~0.5× the cell
    font so it barely adds column width. */
 .fy-pct {
-    font-size: 0.72em;   /* ~half the value's size (was 0.5em) */
+    font-size: 0.58em;
     font-weight: 700;
     vertical-align: middle;
     margin-right: 2px;
     letter-spacing: -0.02em;
 }
-.fy-pos { color: #10b981; }   /* target above price — green */
-.fy-neg { color: #ef4444; }   /* target below price — red */
+.fy-pos { color: #10b981; }
+.fy-neg { color: #ef4444; }
+.qoq-badge {
+    display: block;
+    font-size: 0.62em;
+    line-height: 1;
+    margin: 1px 0 0;
+    opacity: 0.85;
+}
 
 /* === Trajectory sparkline (5-point mini chart per row) ===========
    Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,

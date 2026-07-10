@@ -49,6 +49,28 @@ document.addEventListener('DOMContentLoaded', () => {
         return n.toFixed(3);
     }
 
+    // Per-row cache: top-2 quarters with the highest QoQ % growth.
+    // Returns a Map of quarterName -> qoqPct for those 2 inflection quarters.
+    const _topQoQCache = new WeakMap();
+    function topQoQGrowth(row) {
+        if (_topQoQCache.has(row)) return _topQoQCache.get(row);
+        const prices = QUARTER_COLS.map(q => parseLooseNumber(row[q]));
+        const gains = [];
+        for (let i = 1; i < prices.length; i++) {
+            const prev = prices[i - 1], cur = prices[i];
+            if (isFinite(prev) && prev > 0 && isFinite(cur) && cur > 0) {
+                gains.push({ col: QUARTER_COLS[i], pct: (cur / prev - 1) * 100 });
+            }
+        }
+        gains.sort((a, b) => b.pct - a.pct);
+        const top = new Map();
+        for (let i = 0; i < Math.min(2, gains.length); i++) {
+            if (gains[i].pct > 0) top.set(gains[i].col, gains[i].pct);
+        }
+        _topQoQCache.set(row, top);
+        return top;
+    }
+
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
@@ -2039,6 +2061,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     const cls = pct >= 0 ? 'fy-pct fy-pos' : 'fy-pct fy-neg';
                     const pctStr = `${pct >= 0 ? '+' : ''}${Math.round(pct)}%`;
                     return `<span class="${cls}">${pctStr}</span>${out}`;
+                }
+            }
+            if (row) {
+                const top2 = topQoQGrowth(row);
+                if (top2.has(colName)) {
+                    const qpct = top2.get(colName);
+                    const cls = 'fy-pct fy-pos qoq-badge';
+                    return `${out}<span class="${cls}">+${Math.round(qpct)}%</span>`;
                 }
             }
             return out;
