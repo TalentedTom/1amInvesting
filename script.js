@@ -73,6 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return pcts;
     }
 
+    // Top-2 quarters by absolute % change (inflection points) for golden highlight.
+    const _top2Cache = new WeakMap();
+    function topTwoQuarters(row) {
+        if (_top2Cache.has(row)) return _top2Cache.get(row);
+        const pcts = quarterPctChanges(row);
+        const sorted = Array.from(pcts.entries())
+            .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
+        const top = new Set();
+        for (let i = 0; i < Math.min(2, sorted.length); i++) top.add(sorted[i][0]);
+        _top2Cache.set(row, top);
+        return top;
+    }
+
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
@@ -1639,11 +1652,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const rowTicker = String(row.Ticker || '').trim().replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             bodyHtml += `<tr class="${rowClass.trim()}" data-ticker="${rowTicker}" style="animation-delay: ${delay}s">`;
 
+            const top2q = topTwoQuarters(row);
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
-                    // Pass the row through so formatCell can read computed
-                    // fields like _displayRank for the Rank column.
-                    bodyHtml += `<td class="col-simple${colExtraClasses(col)}">${formatCell(col, row[col], row)}</td>`;
+                    const highlight = top2q.has(col) ? ' q-top2' : '';
+                    bodyHtml += `<td class="col-simple${colExtraClasses(col)}${highlight}">${formatCell(col, row[col], row)}</td>`;
                 }
             });
 
