@@ -1805,7 +1805,8 @@
     "Samsung Electro-Mechanics": "三星电机",
     "⚡ BOTTLENECK\nPassives: AI-server MLCC ~40% share + SiCap inside-package + FC-BGA scarcity (3-player). Glass option. Cycle window.": "⚡ 瓶颈\n无源：AI-服务器 MLCC ~40% 份额 + SiCap 内部封装 + FC-BGA 稀缺性（3 人）。玻璃选项。循环窗口。",
     "YOFC 长飞光纤光缆": "YOFC 长飞光纤光缆",
-    "⚡ BOTTLENECK\nFiber: integrated preform/fiber/cable + HCF leader (0.04dB/km) + AI interconnect option (19% econ ownership trap). Cycle window.": "⚡ 瓶颈\n光纤：集成预制棒/光纤/光缆 + HCF 领导者 (0.04dB/km) + AI 互连选项（19% 经济所有权陷阱）。循环窗口。"
+    "⚡ BOTTLENECK\nFiber: integrated preform/fiber/cable + HCF leader (0.04dB/km) + AI interconnect option (19% econ ownership trap). Cycle window.": "⚡ 瓶颈\n光纤：集成预制棒/光纤/光缆 + HCF 领导者 (0.04dB/km) + AI 互连选项（19% 经济所有权陷阱）。循环窗口。",
+    "📊 BENEFICIARY\nAI Factory + MemoryAI / CXL memory-logistics platform": "📊 受益人\nAI Factory + MemoryAI / CXL内存物流平台"
   },
   "pl": {
     "Coherent Corp": "Spójna firma",

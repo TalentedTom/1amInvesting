@@ -1,26 +1,27 @@
 # PENG — Penguin Solutions Inc
 
-**Date:** 2026-06-30 | **Framework:** v4.2 | **Status:** NOT HELD — 📊 BENEFICIARY (AI Factory integrator + MemoryAI / CXL infrastructure platform)
-**Base:** 41/60 (68%) WL | **Price:** $76.50 | **Shares:** 56M diluted (FY2028) | **MC:** ~$4.07B
-**Ceiling:** FY2028 $167
+**Date:** 2026-07-07 | **Framework:** v4.2 | **Status:** NOT HELD — 📊 BENEFICIARY (AI Factory + MemoryAI / CXL memory-logistics platform)
+**Base:** 44/60 (73%) WL+ | **Price:** $67.45 | **Shares:** 62M diluted (FY2028) | **MC:** ~$4.2B diluted
+**Ceiling:** FY2028 $160
 
 ---
 
-## Core Thesis: AI Factory Execution Platform with Inference-Memory Wedge
+## Core Thesis: AI Factory + Memory Logistics Platform for Agentic Inference
 
-Penguin (formerly SGH / SMART Modular) is reframed as an AI Factory execution platform: it designs, builds, deploys, and manages full-stack NVIDIA-based AI infrastructure, with a differentiated CXL KV-cache memory angle for inference. NOT a chokepoint — it integrates around NVIDIA/Dell/SKT/memory/CXL ecosystems, does not own the silicon.
+Penguin is evolving from an AI-infrastructure integrator / SMART Modular memory supplier into an AI Factory execution and memory-logistics platform. It designs, builds, deploys and can manage full-stack AI infrastructure, while the differentiated wedge is MemoryAI: CXL memory expansion, CXL-powered KV-cache servers, and the longer-dated Photonic Memory Appliance with Celestial AI / Marvell.
 
-**Stacked-catalyst rerating:**
-1. FY2026 guide tracking to high end (agentic-AI demand across Integrated Memory + AI Infrastructure)
-2. NVIDIA AI Factory Specialized Partner (invitation-only)
-3. Haein sovereign-AI cluster with SKT: 1,000+ B200 GPUs, 50+ miles fiber, ClusterWareAI
-4. Industry-first production CXL KV-cache server (up to 11TB CXL memory) — inference is memory-bound
-5. Dell Global Alliances Americas AI Partner of the Year
-6. Q3 FY2026 earnings July 7, 2026 — high-expectation event after the run
+This is **not** a hard silicon chokepoint. Penguin does not own the GPU, CXL switch, SerDes, or HBM stack. It is a **deployment-layer beneficiary** sitting at the intersection of enterprise / sovereign AI factories, inference memory pressure, CXL memory tiering, ClusterWareAI orchestration, and managed operations.
 
-**FY2025:** Revenue $1.369B. Q2 FY2026 outlook 12% YoY ±5% (high end ~$1.60B). H1 revenue $686M → large H2 step-up implied. Memory sales guided +65-75% YoY (material availability is the high-end inhibitor).
+**Q3 FY2026 update — thesis validated:**
+1. Record Q3 net sales of **$479M**, up **48% YoY / 40% QoQ**; non-GAAP EPS **$0.84**, up **79% YoY / 62% QoQ**.
+2. AI-driven businesses were **74% of total net sales** and grew **104% YoY**.
+3. Integrated Memory net sales were **$275M**, up **111% YoY / 60% QoQ**, with strong backlog and AI data-center demand outpacing shipments.
+4. Non-hyperscale AI infrastructure within Advanced Computing grew **81% YoY** and reached **58%** of Advanced Computing sales, up from 33% last year — reduces the old hyperscale/Meta lumpiness concern.
+5. MemoryAI moved from concept to customer expansion: a tier-1 financial services customer bought additional **CXL-powered MemoryAI KV-cache servers**, ClusterWareAI, and services; a generative AI customer continues buying CXL memory expansion cards.
+6. Management claims MemoryAI KV cache can deliver up to **2x higher inference performance**, **8x lower time-to-first-token latency**, and CXL memory capacity at **4-5x lower cost** than GPU HBM.
+7. FY2026 guide raised to approximately **22% net-sales growth** and **$2.60 EPS**; preliminary FY2027 planning view calls for roughly **30% revenue and EPS growth**.
 
-**Rule 6/9:** FAIL chokepoint (integration/memory modules, no silicon ownership). 📊 BENEFICIARY with CXL inference-memory wedge.
+**Rule 6/9:** FAIL chokepoint (integration/memory modules; no silicon ownership). 📊 BENEFICIARY with an emerging CXL / MemoryAI / ClusterWareAI platform wedge.
 
 ---
 
@@ -28,14 +29,16 @@ Penguin (formerly SGH / SMART Modular) is reframed as an AI Factory execution pl
 
 | Category | Score | Evidence |
 |----------|-------|----------|
-| Core Thesis | 13/20 | Good AI Factory / MemoryAI thesis, no hard chokepoint, much of business still integration/modules |
-| Cycle Stage | 9/10 | FY2026 guide to high end, agentic demand strong, CXL launched, Q3 catalyst |
-| TAM | 8/10 | Sovereign AI, enterprise AI factories, neoclouds, inference memory, CXL KV cache. Competitive |
-| Catalysts | 5/5 | NVIDIA partner, Dell award, Haein cluster, Q3 print, CXL KV cache, sovereign AI |
-| Macro | 9/10 | AI capex, inference memory wall, sovereign AI, agentic AI |
-| Alpha | 3/5 | Market discovering story but stock already rerated violently |
-| Risks | -6 | Low-margin integration (-1), hardware mix (-1), revenue lumpiness (-1), customer concentration (-1), legacy wind-down (-1), event risk after rally (-1) |
-| **TOTAL** | **41/60 = 68%** | **WL** |
+| Core Thesis | 14/20 | Live MemoryAI/CXL + ClusterWareAI customer expansion validates the inference-memory wedge; still no hard silicon moat |
+| Cycle Stage | 9/10 | Q3 fired positively; FY2026 guide raised; FY2027 initial +30% view; MemoryAI/PMA still early |
+| TAM | 8/10 | Agentic inference, CXL memory tiering, AI factories, sovereign/enterprise AI; competitive and partly module-driven |
+| Catalysts | 5/5 | Full FY2027 guide next call, MemoryAI customer expansion, ClusterWareAI attach, PMA proof, managed-services attach |
+| Macro | 9/10 | AI capex, inference memory wall, sovereign AI, agentic AI, enterprise on-prem AI factories |
+| Alpha | 4/5 | Market may still treat PENG as memory modules/integrator while MemoryAI/ClusterWareAI option is becoming real |
+| Risks | -5 | Low-margin integration/hardware mix (-1), memory pricing + working-capital cyclicality (-1), CXL/MemoryAI still small vs core memory modules (-1), customer/project lumpiness + 3-6mo bookings-to-revenue lag (-1), CFO transition + Penguin Edge wind-down (-1) |
+| **TOTAL** | **44/60 = 73%** | **WL+** |
+
+**Change:** Base **41/60 → 44/60**. Q3 reduced execution risk and validated the MemoryAI/CXL wedge. No High Conviction promotion yet because CXL/MemoryAI remains small relative to the Integrated Memory module base and the model remains working-capital intensive.
 
 ---
 
@@ -43,17 +46,18 @@ Penguin (formerly SGH / SMART Modular) is reframed as an AI Factory execution pl
 
 | Segment | FY2025A | FY2026E | FY2027E | FY2028E | FY2029E | FY2030E |
 |---------|---------|---------|---------|---------|---------|---------|
-| AI Factory / Advanced Computing | 648 | 550 | 900 | 1,250 | 1,650 | 2,100 |
-| Integrated Memory modules | 464 | 780 | 900 | 950 | 1,050 | 1,100 |
-| MemoryAI / CXL KV Cache | 0 | 40 | 180 | 450 | 800 | 1,200 |
-| ClusterWareAI / managed services | 20 | 15 | 60 | 130 | 240 | 400 |
-| Optimized LED | 256 | 220 | 200 | 185 | 175 | 170 |
-| **Total** | **1,370** | **1,610** | **2,240** | **2,970** | **3,920** | **4,970** |
+| Data-center Integrated Memory / CXL cards | 464 | 895 | 1,300 | 1,550 | 1,700 | 1,800 |
+| AI Factory / Advanced Computing platform | 648 | 535 | 590 | 850 | 1,150 | 1,500 |
+| MemoryAI appliances / CXL KV-cache / PMA | 0 | 5 | 60 | 280 | 650 | 1,000 |
+| ClusterWareAI / managed operations overlay | 2 | 0 | 30 | 130 | 280 | 500 |
+| Optimized LED | 256 | 243 | 220 | 210 | 200 | 190 |
+| **Total** | **1,370** | **1,678** | **2,200** | **3,020** | **3,980** | **4,990** |
 
-FY2028 GP: AI Factory $1,250×25% + Memory $950×24% + MemoryAI $450×36% + ClusterWare $130×65% + LED $185×27% = $837M (28.2%)
-Opex $370M → **OP $467M (15.8%)**
-
-The key line is MemoryAI / CXL KV Cache — the differentiated inference-memory wedge. NOT a box-reseller model; assumes mix shift toward higher-margin software/memory.
+**Model notes:**
+- FY2026 total approximates the new **~22% growth** guide from FY2025 revenue.
+- FY2027 total approximates management's initial **~30% revenue growth** planning view from the FY2026 midpoint.
+- CXL / MemoryAI is modeled as a small FY2026 contributor, then a real FY2028+ wedge once customer expansions convert into appliances and deployment standards.
+- ClusterWareAI / managed operations overlay is intentionally separated to avoid treating all services as software; only the high-value orchestration / managed-ops layer is modeled here.
 
 ---
 
@@ -61,34 +65,45 @@ The key line is MemoryAI / CXL KV Cache — the differentiated inference-memory 
 
 | FY | Revenue | OP | OP% | Shares | Per Share |
 |----|---------|-----|------|--------|-----------|
-| 2027 | $2.24B | $261M | 11.7% | 55M | $95 |
-| 2028 | $2.97B | $467M | 15.8% | 56M | **$167** |
-| 2029 | $3.92B | $727M | 18.6% | 58M | $251 |
-| 2030 | $4.97B | $1.07B | 21.4% | 60M | $355 |
+| 2027 | $2.20B | $274M | 12.5% | 62M | $88 |
+| 2028 | $3.02B | $495M | 16.4% | 62M | **$160** |
+| 2029 | $3.98B | $798M | 20.1% | 64M | $249 |
+| 2030 | $4.99B | $1.11B | 22.2% | 66M | $337 |
 
-**CEILING = $167.** At $76.50: 2.18x raw upside. **EV = 2.18 × 68 - 100 = +48.** Positive-EV on FY2028 if execution lands.
+**CEILING = $160.** At $67.45: **2.37x raw upside**. **EV = 2.37 × 73 - 100 = +73.**
 
-FY columns: $95 / $167 / $251 / $355
+FY columns: **$88 / $160 / $249 / $337**
+
+**Ceiling change:** FY2028 **$167 → $160**. The print validates the old trajectory but does not require a higher ceiling; the share-count guide moved higher, and the model now uses a cleaner 62M diluted FY2028 base.
 
 ---
 
 ## Cross-Book Links
 
-**MRVL #65 / ALAB / Montage #56:** CXL KV-cache server validates the same inference-memory-wall thesis. PENG is the deployment/integration layer; MRVL/ALAB/Montage are the silicon. Inference is memory-bound — all confirm it.
+**MRVL / Celestial AI:** PENG's continued PMA work with Celestial AI, now part of Marvell, strengthens the memory-fabric read-through. Penguin is the appliance/deployment layer; Marvell/Celestial is the photonic-memory silicon/fabric layer.
 
-**MU #9 / SKH #6 / Samsung #4:** PENG's Integrated Memory + CXL KV cache consume DRAM. More inference memory = more DRAM demand. "Material availability is the high-end inhibitor" = direct confirmation of the memory shortage.
+**ALAB / RMBS / Montage / CXL layer:** MemoryAI KV-cache traction supports the CXL memory-tiering thesis. PENG is not the switch/controller IP chokepoint, but it can be a system-level adopter and deployment validator.
 
-**NVDA #28:** PENG deploys NVIDIA AI factories. Sovereign AI (Haein/SKT) = another NVIDIA demand channel.
+**MU / SKH / Samsung:** Integrated Memory growth and backlog confirm that AI inference is not just a GPU/HBM story; agentic inference pulls broader DRAM/module capacity into data centers.
+
+**NVDA / Dell / enterprise AI factories:** PENG remains a NVIDIA AI Factory Specialized Partner and Dell AI Partner channel. Value is time-to-production, integration, and operating model, not GPU ownership.
+
+**Neocloud debate:** PENG sits on the better side of the neocloud stress test. It sells design/build/manage, MemoryAI, and ClusterWareAI rather than primarily owning depreciating GPUs.
 
 ---
 
 ## Re-Rate Triggers
 
-1. **Q3 FY2026 print (July 7) above the high bar:** The decision event. Proves narrative is real bookings.
-2. **MemoryAI / CXL KV-cache customer traction:** The differentiated wedge converting. Base +2.
-3. **GM not collapsing from AI hardware/memory mix:** Margin quality. Base +0.
-4. **COUNTER:** Stock ran hard into a high-expectation Q3. Event risk is real — miss or soft Q4 guide and the rerating unwinds.
+1. **Full FY2027 guide next call:** Need confirmation of ~30% revenue/EPS growth with margin and cash-conversion guardrails.
+2. **MemoryAI / CXL revenue visibility:** Named or quantified appliance revenue, more tier-1 financial / generative-AI customer expansion, or repeat orders.
+3. **ClusterWareAI software attach:** Evidence that ClusterWareAI becomes repeatable software/ops revenue rather than bundled integration.
+4. **Managed-services attach:** More 3-5 year AI-factory operations contracts would improve durability and margin quality.
+5. **PMA / Celestial-Marvell proof:** Any customer conversion or technical milestone for the Photonic Memory Appliance would expand the upside path.
+6. **COUNTER:** Gross-margin pressure, higher memory costs slowing customer demand, working-capital drag, CXL adoption delays, or CFO-transition execution noise.
 
 ---
 
-*First artifact. Created Jun 30, 2026. AI Factory + MemoryAI platform. Q3 July 7 is the decision event.*
+## Version Log
+
+- **2026-06-30:** First artifact. AI Factory + MemoryAI platform. Q3 July 7 set as decision event.
+- **2026-07-07:** Q3 FY2026 update. Base **68% → 73%** on record Q3, FY2026 guide raise, preliminary FY2027 +30% view, and live MemoryAI/CXL customer expansion. FY2028 ceiling **$167 → $160** after share-count update and cleaner segment model.

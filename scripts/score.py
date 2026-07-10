@@ -275,33 +275,30 @@ def upside_display(low: float, high: float, price: float) -> str:
 
 
 def ev_upside(base: int, high: float, price: float) -> int:
-    """Expected-value upside score = Base × (high-end multiplier − 1).
+    """Expected-value upside score = Base × (target/price) − 100.
 
-    The headline metric (replaced 'Total'). Uses the HIGH end of the
-    Ceiling Target range — i.e. the same multiplier shown as the top of
-    the Upside column. Unbounded by design:
-        - deeply positive (e.g. SIVE ~475) when a high-conviction name
-          still has multiple-x upside to its ceiling
-        - negative when price is already above ceiling (Upside < 1x →
-          multiplier − 1 < 0), flagging an avoid
+    The headline metric (replaced 'Total'). `high` is the target price (the
+    same multiplier shown in the Upside column). The 2026-07 quarterly model
+    subtracts a flat 100 baseline (breakeven at Base×1x = 100) rather than the
+    old `Base` term, so a name priced AT target scores Base − 100 (i.e. ~0 only
+    when Base is 100). Unbounded; negative flags an avoid.
 
-    Verified against the analyst's xlsx:
-        SIVE  base 99, 5.8x -> 99 × 4.8 = 475
-        NBIS  base 82, 2.5x -> 82 × 1.5 = 123
+    Verified against the analyst's xlsx 'EV Upside Q3'27' column:
+        SIVE  base 90, 4.03x -> 90 × 4.03 − 100 = 263
+        IQE   base 77, 2.52x -> 77 × 2.52 − 100 = 94
     """
-    return int(round(base * (high / price - 1)))
+    return int(round(base * (high / price) - 100))
 
 
-# Column name for the high-end target price that drives Upside + EV Upside.
-# This column has been renamed twice as the model evolved:
-#   'Ceiling Target' (price range)  ->  '1y EV' (single number)  ->  removed,
-# with the 1-year target value now living in the 'FY2028' column.
-# We read the newest source first and fall back through the older names so
-# any xlsx vintage scores correctly. The math is identical regardless of
-# which column supplies it: Upside = target/price,
-# EV Upside = Base * (target/price - 1). Verified FY2028 reproduces the
-# analyst's pre-computed EV Upside exactly (SIVE 356, LPK.DE 268, etc.).
-TARGET_COLS = ("FY2028", "1y EV", "Ceiling Target")
+# Column name for the target price that drives Upside + EV Upside.
+# The model went quarterly (2026-07): the ~1-year-forward target now lives in
+# the 'Q3 2027' column (was 'FY2028'; before that 'Ceiling Target' / '1y EV').
+# We read the newest source first and fall back through the older names so any
+# xlsx vintage scores correctly. The math is identical regardless of which
+# column supplies it: Upside = target/price,
+# EV Upside = Base * (target/price - 1). Verified 'Q3 2027' reproduces the
+# analyst's pre-computed 'Upside Q3'27' / 'EV Upside Q3'27' columns.
+TARGET_COLS = ("Q3 2027", "FY2028", "1y EV", "Ceiling Target")
 
 
 def target_cell(row):

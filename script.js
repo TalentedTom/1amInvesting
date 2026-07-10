@@ -6,11 +6,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // in styles.css. The mobile Cycle/P-E toggle that previously gave
     // phones access to the P/E value is also gone (its source column no
     // longer exists, and FY targets are richer than one toggle can carry).
+    // Quarterly targets (2026-07 restructure): 15 columns Q3'26 -> Q1'30,
+    // replacing the old 4 annual FY columns.
+    const QUARTER_COLS = [
+        "Q3 2026", "Q4 2026", "Q1 2027", "Q2 2027", "Q3 2027", "Q4 2027",
+        "Q1 2028", "Q2 2028", "Q3 2028", "Q4 2028", "Q1 2029", "Q2 2029",
+        "Q3 2029", "Q4 2029", "Q1 2030"
+    ];
+    // The ~1-year-forward quarter that drives Upside + EV Upside (tinted in the UI).
+    const TARGET_QUARTER = "Q3 2027";
     const simpleCols = [
         "SuperCycle", "_chart", "Ticker", "EV Upside", "Base",
         "Change %", "Current Price", "Upside",
-        "FY2027", "FY2028", "FY2029", "FY2030", "_sparkline"
+        ...QUARTER_COLS, "_sparkline"
     ];
+
+    // Responsive tier + tint class for a column (quarter columns only).
+    // Tiers: near (idx 0-5, always shown), mid (6-11, shown >=700px),
+    // far (12-14, shown >=1100px) -> phone 6 quarters, landscape 12, desktop 15.
+    function colExtraClasses(col) {
+        if (col === '_sparkline') return ' col-spark';
+        const qi = QUARTER_COLS.indexOf(col);
+        if (qi === -1) return '';
+        const tier = qi < 6 ? 'q-near' : (qi < 12 ? 'q-mid' : 'q-far');
+        return ` col-q ${tier}${col === TARGET_QUARTER ? ' q-target' : ''}`;
+    }
+
+    // Format a quarterly target-price value for display. These columns hold
+    // raw computed floats (e.g. 168.36706731), so round adaptively by
+    // magnitude — big numbers stay compact (k/m/b), small numbers keep
+    // enough precision — matching the bare, currency-implied Price style.
+    // (parseLooseNumber / compactPriceString are hoisted function decls.)
+    function formatQuarterPrice(value) {
+        const n = parseLooseNumber(value);
+        if (!isFinite(n)) return compactPriceString(value);
+        const a = Math.abs(n);
+        if (a >= 1e5) return compactPriceString(String(Math.round(n)));
+        if (a >= 1000) return Math.round(n).toLocaleString('en-US');
+        if (a >= 100) return String(Math.round(n));
+        if (a >= 10) return n.toFixed(1);
+        if (a >= 1) return n.toFixed(2);
+        return n.toFixed(3);
+    }
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
@@ -19,11 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         "Change %": "Chg%",
         "SuperCycle": "Cycle",
         "EV Upside": "EVUp",
-        "FY2027": "FY27",
-        "FY2028": "FY28",
-        "FY2029": "FY29",
-        "FY2030": "FY30",
     };
+    // Short quarter headers: "Q3 2026" -> "Q3'26".
+    QUARTER_COLS.forEach(q => {
+        const [qq, yy] = q.split(" ");
+        displayNames[q] = `${qq}'${yy.slice(2)}`;
+    });
 
     // Explanatory sub-captions rendered above specific column headers. The
     // first two FY columns get them because the relationship between
@@ -32,8 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // the strings translate alongside the rest of the chrome.
     const COL_CAPTION_KEYS = {
         "EV Upside": "caption_EVUp",
-        "FY2027": "caption_FY27",
-        "FY2028": "caption_FY28",
     };
 
     // Canonical order for SuperCycle tag rendering — keeps rows scannable.
@@ -275,6 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // translates with the rest of the chrome.
     const labelFor = (col) => {
         if (col === '_chart' || col === '_sparkline') return '';
+        // Quarter headers are language-neutral ("Q3'26") — return directly.
+        if (QUARTER_COLS.indexOf(col) !== -1) return displayNames[col];
         const eng = displayNames[col] || col;
         const label = tr(`col_${eng}`);
         const capKey = COL_CAPTION_KEYS[col];
@@ -428,23 +466,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     applyTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
 
-    // Basic/ADV mobile layout toggle. Mobile-only — the button strip is
-    // display:none on desktop. ADV swaps out SuperCycle / Chg% / Upside
-    // for FY27/28/29/30 + sparkline columns. The swap is pure CSS:
-    // toggling `body.adv-mode` flips which columns get display:none.
-    // No table re-render needed.
-    const MODE_STORAGE_KEY = 'mobileMode_v1';
-    const modeBtns = document.querySelectorAll('.mode-btn');
-    const applyMode = (mode) => {
-        const m = mode === 'adv' ? 'adv' : 'basic';
-        document.body.classList.toggle('adv-mode', m === 'adv');
-        modeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-mode') === m));
-        try { localStorage.setItem(MODE_STORAGE_KEY, m); } catch (_) {}
-    };
-    modeBtns.forEach(btn => {
-        btn.addEventListener('click', () => applyMode(btn.getAttribute('data-mode')));
-    });
-    applyMode(localStorage.getItem(MODE_STORAGE_KEY) === 'adv' ? 'adv' : 'basic');
+    // Basic/ADV mobile column toggle — RETIRED (2026-07 quarterly rebuild).
+    // The old toggle swapped the 4 FY columns in/out; with 15 responsive
+    // quarter columns it no longer applies. Strip any stale button strip and
+    // make sure the body never carries the old mode class.
+    document.body.classList.remove('adv-mode');
+    document.querySelectorAll('.mode-selector').forEach(el => el.remove());
 
     // Position Type Filter (All / Chokepoint / Bottleneck) — persists in localStorage.
     const positionToggle = document.getElementById('position-toggle');
@@ -1475,42 +1502,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isSorted = sortState.col === col;
                 const sortClass = isSorted ? (sortState.asc ? 'asc' : 'desc') : '';
                 const icon = isSorted ? (sortState.asc ? '↑' : '↓') : '↕';
-                // FY2027 / FY2028 carry a SECOND label used only in the
-                // mobile-Basic "Expected Value" layout: 'Today' / '1 year'.
-                // Both labels are rendered; CSS shows the right one per
-                // viewport/mode (.lbl-wide = desktop+ADV, .lbl-evbasic =
-                // mobile-Basic). Wrapping the desktop label (which includes
-                // the '?' info button) in .lbl-wide means the '?' is hidden
-                // on mobile-Basic too — the Today/1-year labels are
-                // self-explanatory there.
                 let labelHtml = labelFor(col);
                 // China-region view relabels the repurposed SuperCycle column.
                 if (col === 'SuperCycle' && regionFilter === 'china') {
                     labelHtml = tr('col_Code');
                 }
-                if (col === 'FY2027') {
-                    // .ev-group-float-desktop: the 'Target' banner for the
-                    // DESKTOP/tablet layout, anchored in this (FY2027, the
-                    // leftmost FY) header and spanning rightward across all
-                    // four FY columns (FY27-FY30). Its exact width is set by
-                    // positionDesktopTarget() in JS (auto-width columns make
-                    // a pure-CSS % span imprecise). CSS-gated to >=481px.
-                    labelHtml = `<span class="ev-group-float-desktop">${tr('ev_group')}</span>` +
-                                `<span class="lbl-wide">${labelHtml}</span>` +
-                                `<span class="lbl-evbasic">${tr('ev_today')}</span>`;
-                } else if (col === 'FY2028') {
-                    // The .ev-group-float span renders the 'Target' group
-                    // label as a floating banner anchored in THIS (2027)
-                    // header — the rightmost visible column in Basic mode.
-                    // CSS pins it with right:0 and spans it leftward
-                    // (width:200%) across the Today column, so it never
-                    // spills past the table's right edge (which clips,
-                    // chopping the text to 'TAR'). Mobile-Basic-only.
-                    labelHtml = `<span class="ev-group-float">${tr('ev_group')}</span>` +
-                                `<span class="lbl-wide">${labelHtml}</span>` +
-                                `<span class="lbl-evbasic">${tr('ev_1year')}</span>`;
-                }
-                headHtml += `<th class="col-simple ${sortClass}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
+                headHtml += `<th class="col-simple ${sortClass}${colExtraClasses(col)}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
             }
         });
         thead.innerHTML = headHtml;
@@ -1622,7 +1619,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!hiddenCols.has(col)) {
                     // Pass the row through so formatCell can read computed
                     // fields like _displayRank for the Rank column.
-                    bodyHtml += `<td class="col-simple">${formatCell(col, row[col], row)}</td>`;
+                    bodyHtml += `<td class="col-simple${colExtraClasses(col)}">${formatCell(col, row[col], row)}</td>`;
                 }
             });
 
@@ -1720,38 +1717,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-
-        // Size the desktop 'Target' banner to span FY27..FY30 exactly.
-        positionDesktopTarget();
     }
 
-    // Width the desktop/tablet 'Target' banner so it spans precisely from
-    // the FY2027 column's left edge to the FY2030 column's right edge.
-    // Desktop FY columns are auto-width (content-sized), so a pure-CSS
-    // percentage span would be imprecise — we measure the real layout
-    // instead. No-op below 481px (mobile uses its own fixed-width
-    // Today/2027 banner). The banner is anchored left:0 inside the FY2027
-    // header (CSS), so we only need to set its width here.
-    function positionDesktopTarget() {
-        const headRow = document.getElementById('table-head-row');
-        if (!headRow) return;
-        const banner = headRow.querySelector('.ev-group-float-desktop');
-        if (!banner) return;
-        if (!(window.matchMedia && window.matchMedia('(min-width: 481px)').matches)) {
-            banner.style.width = '';
-            return;
-        }
-        const fy27 = headRow.querySelector('th[data-col="FY2027"]');
-        const fy30 = headRow.querySelector('th[data-col="FY2030"]');
-        if (!fy27 || !fy30) { banner.style.width = ''; return; }
-        const r27 = fy27.getBoundingClientRect();
-        const r30 = fy30.getBoundingClientRect();
-        const w = Math.round(r30.right - r27.left);
-        if (w > 0) banner.style.width = `${w}px`;
-    }
-    // Re-measure on resize — column widths (and thus the span) change with
-    // the viewport. Cheap; only touches one element's width.
-    window.addEventListener('resize', () => positionDesktopTarget());
+    // (Removed positionDesktopTarget + its resize listener — the FY 'Target'
+    // banner they sized was retired in the 2026-07 quarterly rebuild.)
 
     // Maps a 0–100 score to a continuous red → yellow → green color.
     // Anchors: 0 deep red, 50 pure yellow, 70 vivid green, 100 deep green.
@@ -1832,75 +1801,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // lists the exact percentages. Returns '' when no segment is
     // computable — the cell falls back to a blank.
     function renderTrajectorySparkline(row) {
-        const seq = [
-            parseLooseNumber(row['Current Price']),
-            parseLooseNumber(row['FY2027']),
-            parseLooseNumber(row['FY2028']),
-            parseLooseNumber(row['FY2029']),
-            parseLooseNumber(row['FY2030']),
-        ];
-        // 90x26 (was 70x22): the extra room hosts the peak-year % label
-        // along the top. On phones the CSS scales the whole SVG down to
-        // fit the narrower cell (max-width:100%; height:auto).
-        const W = 90, H = 26;
-        const BASE_Y = 19;            // baseline: growth up, decline down
-        const POS_MAX = 12;           // px above baseline at/over the cap
-        const NEG_MAX = 6;            // px below baseline at/over the cap
-        const CAP = 200;              // |%| change that fills the bar
-        const slotW = W / 4;
-        const barW = 14;
+        // 16-point quarterly trajectory: current price anchored at the left,
+        // then the 15 quarterly targets Q3'26 -> Q1'30. Min-max normalized
+        // within the row so the SHAPE of the ramp reads (flat / steady climb
+        // / late hockey-stick). Green when the series ends above where it
+        // starts, red when lower. A small amber dot marks the TARGET_QUARTER
+        // (Q3'27) point since it drives the Upside metric. Missing quarters
+        // are skipped but keep their x-slot, so gaps show as longer segments.
+        // Returns '' when fewer than 2 points are computable.
+        const raw = [parseLooseNumber(row['Current Price'])];
+        for (const q of QUARTER_COLS) raw.push(parseLooseNumber(row[q]));
+        const pts = raw.map((v, i) => ({ i, v })).filter(p => isFinite(p.v) && p.v > 0);
+        if (pts.length < 2) return '';
+        const vals = pts.map(p => p.v);
+        let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+        if (hi <= lo) hi = lo + 1;                 // flat series -> centred line
+        const W = 90, H = 26, PAD = 3;
+        const n = raw.length;                       // 16 fixed x-slots
+        const xOf = (i) => PAD + (W - 2 * PAD) * (i / (n - 1));
+        const yOf = (v) => (H - PAD) - (H - 2 * PAD) * ((v - lo) / (hi - lo));
+        const up = vals[vals.length - 1] >= vals[0];
+        const stroke = up ? '#10b981' : '#ef4444';
+        const coords = pts.map(p => `${xOf(p.i).toFixed(1)},${yOf(p.v).toFixed(1)}`);
         const parts = [];
-        const tips = [];
-        let computable = 0;
-        // Peak year = largest positive YoY. Gets the gold bar + % label so
-        // "which year is the ramp, and how big" is answered at a glance.
-        // All-decline rows get no gold/label — nothing to celebrate.
-        let peakIdx = -1, peakPct = 0;
-        const pcts = [];
-        for (let i = 0; i < 4; i++) {
-            const a = seq[i], b = seq[i + 1];
-            if (!isFinite(a) || !isFinite(b) || a <= 0) { pcts.push(null); continue; }
-            const pct = (b / a - 1) * 100;
-            pcts.push(pct);
-            if (pct > peakPct) { peakPct = pct; peakIdx = i; }
+        // Faint area fill under the line for a little visual weight.
+        const area = `${xOf(pts[0].i).toFixed(1)},${(H - PAD).toFixed(1)} ` +
+                     coords.join(' ') +
+                     ` ${xOf(pts[pts.length - 1].i).toFixed(1)},${(H - PAD).toFixed(1)}`;
+        parts.push(`<polygon points="${area}" fill="${stroke}" opacity="0.10"/>`);
+        parts.push(`<polyline points="${coords.join(' ')}" fill="none" stroke="${stroke}" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>`);
+        // Amber marker on the target quarter (raw index = its QUARTER_COLS pos + 1).
+        const tgtIdx = QUARTER_COLS.indexOf(TARGET_QUARTER) + 1;
+        const tgt = pts.find(p => p.i === tgtIdx);
+        if (tgt) {
+            parts.push(`<circle cx="${xOf(tgt.i).toFixed(1)}" cy="${yOf(tgt.v).toFixed(1)}" r="1.9" fill="#f59e0b"/>`);
         }
-        parts.push(`<line x1="1" y1="${BASE_Y}" x2="${W - 1}" y2="${BASE_Y}" stroke="#94a3b8" stroke-width="0.75" opacity="0.35"/>`);
-        for (let i = 0; i < 4; i++) {
-            const pct = pcts[i];
-            const x = (slotW * i + (slotW - barW) / 2).toFixed(1);
-            if (pct === null) {
-                // Missing endpoint — neutral stub keeps the year's slot
-                // visible so the remaining bars stay aligned.
-                parts.push(`<rect x="${x}" y="${BASE_Y - 1}" width="${barW}" height="2" fill="#94a3b8" opacity="0.25" rx="1"/>`);
-                tips.push('–');
-                continue;
-            }
-            computable++;
-            tips.push(`${pct >= 0 ? '+' : ''}${Math.round(pct)}%`);
-            const mag = Math.sqrt(Math.min(Math.abs(pct), CAP) / CAP);
-            if (pct >= 0) {
-                const h = Math.max(1.5, POS_MAX * mag);
-                const fill = i === peakIdx ? '#fbbf24' : '#10b981';
-                parts.push(`<rect x="${x}" y="${(BASE_Y - h).toFixed(1)}" width="${barW}" height="${h.toFixed(1)}" fill="${fill}" rx="1"/>`);
-            } else {
-                const h = Math.max(1.5, NEG_MAX * mag);
-                parts.push(`<rect x="${x}" y="${BASE_Y}" width="${barW}" height="${h.toFixed(1)}" fill="#ef4444" rx="1"/>`);
-            }
-        }
-        if (!computable) return '';
-        // % label centered over the peak bar, clamped so it never clips at
-        // the cell edges. Theme-aware fill via CSS var (white-on-dark /
-        // dark-on-light both work since it sits on the cell background).
-        if (peakIdx >= 0 && peakPct > 0) {
-            const label = `+${Math.round(peakPct)}%`;
-            const halfW = label.length * 1.85;   // ~3.7px/char at 6.5px font
-            let cx = slotW * peakIdx + slotW / 2;
-            cx = Math.max(halfW + 1, Math.min(cx, W - halfW - 1));
-            parts.push(`<text x="${cx.toFixed(1)}" y="6.5" text-anchor="middle" ` +
-                `font-size="6.5" font-weight="700" font-family="Inter, sans-serif" ` +
-                `style="fill:var(--text-primary)">${label}</text>`);
-        }
-        const tip = `YoY growth →27 →28 →29 →30: ${tips.join('  ')}`;
+        const totalPct = Math.round((vals[vals.length - 1] / vals[0] - 1) * 100);
+        const tip = `Trajectory price -> Q1'30: ${totalPct >= 0 ? '+' : ''}${totalPct}% overall`;
         return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline"><title>${tip}</title>` +
                parts.join('') +
                `</svg>`;
@@ -2050,12 +1987,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 : sym;
             const safeTip = tipSrc.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             const titleAttr = safeTip ? ` title="${safeTip}"` : '';
-            // Trim signal: ranked name trading ABOVE its 1-year target
-            // (FY2028 < price). Same condition the cron's ABOVE CEILING
-            // alerts fire on — surfaced here instead of only in CI logs.
+            // Trim signal: ranked name trading ABOVE its ~1-year target
+            // (TARGET_QUARTER < price). Same condition the cron's ABOVE
+            // CEILING alerts fire on — surfaced here instead of only in CI logs.
             let trimFlag = '';
             if (row && row._displayRank !== '—') {
-                const tgt = parseLooseNumber(row['FY2028']);
+                const tgt = parseLooseNumber(row[TARGET_QUARTER]);
                 const px = parseLooseNumber(row['Current Price']);
                 if (isFinite(tgt) && isFinite(px) && px > 0 && tgt > 0 && tgt < px) {
                     trimFlag = `<span class="trim-flag" title="${tr('trim_flag_tip')}">⚠</span>`;
@@ -2082,25 +2019,19 @@ document.addEventListener('DOMContentLoaded', () => {
             return out || `<span style="color: #64748b;">-</span>`;
         }
 
-        // FY2027 / FY2028 / FY2029 / FY2030: forecast target prices per
-        // fiscal year. Native currency, sometimes with a single-letter
-        // currency prefix (e.g. "A12.50" for AUD). Reuse the price
-        // compactor so big numbers render as "3.82m" instead of
-        // "3,822,000" — keeps the four-column block scannable.
-        if (colName === "FY2027" || colName === "FY2028" ||
-            colName === "FY2029" || colName === "FY2030") {
+        // Quarterly target prices (Q3'26 -> Q1'30). Native currency, sometimes
+        // with a single-letter prefix (e.g. "A12.50" for AUD). Reuse the price
+        // compactor so big numbers render "3.82m" not "3,822,000", keeping the
+        // 15-column block scannable. Only the TARGET_QUARTER (Q3'27) cell
+        // carries a tiny green/red % vs the current price — the actionable
+        // ~1-yr move — so the other 14 quarters stay bare.
+        if (QUARTER_COLS.indexOf(colName) !== -1) {
             if (value === null || value === undefined || value === "") {
                 return `<span style="color: #64748b;">-</span>`;
             }
-            const out = compactPriceString(value);
+            const out = formatQuarterPrice(value);
             if (!out) return `<span style="color: #64748b;">-</span>`;
-            // For the two headline targets — Today (FY2027) and 2027
-            // (FY2028) — prefix a tiny green/red % showing the move from
-            // the current Price to that target (financial-ticker style,
-            // e.g. "+10% 66"). The % is rendered at a fraction of the
-            // cell font so it barely affects column width. FY2029/FY2030
-            // stay bare.
-            if (colName === "FY2027" || colName === "FY2028") {
+            if (colName === TARGET_QUARTER) {
                 const price = parseLooseNumber(row && row['Current Price']);
                 const target = parseLooseNumber(value);
                 if (isFinite(price) && price > 0 && isFinite(target)) {

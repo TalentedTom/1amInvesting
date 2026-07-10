@@ -547,86 +547,51 @@ th {
     transition: color 0.2s, background 0.2s;
 }
 
-/* === FY28 column emphasis =========================================
-   FY28 is the "1-year forward" reference point — most actionable
-   forecast in the table. Highlight it with a faint accent-blue tint
-   on both header and cells so it stays distinct from the surrounding
-   FY columns without being noisy. nth-child(10) maps to FY28 with
-   the current column order (Entry column removed):
-     1 SuperCycle  2 _chart  3 Ticker  4 EV Upside  5 Base
-     6 Price  7 Chg%  8 Upside  9 FY27  10 FY28  11 FY29  12 FY30
-     13 _sparkline */
-th:nth-child(10),
-td:nth-child(10) {
+/* === Target quarter (Q3'27) emphasis =============================
+   Q3'27 is the ~1-year-forward reference that drives Upside +
+   EV Upside. Faint accent-blue tint on header + cells, class-based
+   (.q-target) so it tracks the column wherever the responsive tiers
+   place it — no nth-child position coupling. */
+.q-target {
     background: rgba(59, 130, 246, 0.07);
 }
-/* Keep the highlight visible through hover + expanded states (the
-   global hover/row-expanded rules would otherwise overwrite with
-   --row-hover and obscure the column distinction). */
-tbody tr:hover td:nth-child(10) {
+tbody tr:hover td.q-target {
     background-color: rgba(59, 130, 246, 0.12);
 }
-tr.row-expanded td:nth-child(10) {
+tr.row-expanded td.q-target {
     background-color: rgba(59, 130, 246, 0.10);
 }
-body.light-mode th:nth-child(10),
-body.light-mode td:nth-child(10) {
+body.light-mode .q-target {
     background: rgba(59, 130, 246, 0.06);
 }
-body.light-mode tbody tr:hover td:nth-child(10) {
+body.light-mode tbody tr:hover td.q-target {
     background-color: rgba(59, 130, 246, 0.11);
 }
-body.light-mode tr.row-expanded td:nth-child(10) {
+body.light-mode tr.row-expanded td.q-target {
     background-color: rgba(59, 130, 246, 0.09);
 }
 
-/* === Expected Value group label (mobile-Basic only) ==============
-   FY2027 / FY2028 headers carry two labels: the normal one (.lbl-wide,
-   'FY27' / 'FY28' incl. the '?' button) and a mobile-Basic one
-   (.lbl-evbasic, 'Today' / '2027'). The 'Expected Value' group label
-   (.ev-group-float) is a banner anchored inside the Today header cell
-   that visually spans across the 2027 column. All three are hidden by
-   default; the mobile-Basic media query reveals .lbl-evbasic +
-   .ev-group-float and hides .lbl-wide for these two columns. */
-.lbl-evbasic { display: none; }
-.ev-group-float { display: none; }
-.ev-group-float-desktop { display: none; }
-
-/* === 'Target' group banner — desktop / tablet (>=481px) ==========
-   Mirrors the mobile Target banner but spans all four FY columns
-   (FY27-FY30). Anchored in the FY2027 header's top padding; its exact
-   width is set by positionDesktopTarget() in JS since the desktop FY
-   columns are auto-width. All header labels bottom-align so the FY
-   column labels stay on the shared baseline while the banner floats
-   above the FY block. */
-@media (min-width: 481px) {
-    #table-head-row th { vertical-align: bottom; }
-    #table-head-row th[data-col="FY2027"],
-    #table-head-row th[data-col="FY2028"],
-    #table-head-row th[data-col="FY2029"],
-    #table-head-row th[data-col="FY2030"] {
-        position: relative;
-        padding-top: 20px;   /* room for the banner above the label */
-    }
-    #table-head-row th[data-col="FY2027"] .ev-group-float-desktop {
-        display: block;
-        position: absolute;
-        top: 3px;
-        left: 0;             /* width set by JS (positionDesktopTarget) */
-        text-align: center;
-        font-size: 0.64rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        line-height: 1.1;
-        color: var(--accent);
-        text-transform: uppercase;
-        white-space: nowrap;
-        padding-bottom: 3px;
-        border-bottom: 1px solid rgba(59, 130, 246, 0.45);
-        pointer-events: none;
-        z-index: 5;
-    }
+/* === Quarterly columns: base sizing + responsive tiers ===========
+   15 quarter columns Q3'26..Q1'30. Tier classes control how many are
+   visible so the table stays legible on every device:
+     .q-near (Q3'26..Q4'27, 6)  always shown   -> phone    = 6
+     .q-mid  (Q1'28..Q2'29, 6)  shown >=700px   -> landscape = 12
+     .q-far  (Q3'29..Q1'30, 3)  shown >=1100px  -> desktop  = 15
+   Mobile-first: mid + far are hidden by default and revealed at the
+   breakpoints below. */
+.col-q {
+    width: 56px;
+    min-width: 50px;
+    max-width: 66px;
+    text-align: right;
+    font-size: 0.82rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    white-space: nowrap;
 }
+.q-mid, .q-far { display: none; }
+@media (min-width: 700px)  { .q-mid { display: table-cell; } }
+@media (min-width: 1100px) { .q-far { display: table-cell; } }
 
 /* === Tiny % delta on the Today / 2027 target cells ==============
    Financial-ticker style: a small green/red percentage showing the
@@ -667,7 +632,7 @@ body.light-mode .sparkline {
    columns leftward more than necessary. The SVG is 90x26 (grew from
    70x22 to host the peak-year % label); cell padding + slack puts the
    column at ~102px. nth-child(13) = last column. */
-th:nth-child(13), td:nth-child(13) {
+.col-spark {
     width: 102px;
     min-width: 102px;
     max-width: 102px;
@@ -1606,121 +1571,18 @@ body.table-settled tbody tr {
         padding: 0.3rem 0.2rem;
     }
 
-    /* === Mobile Basic mode (default) ===
-       Column order (Chg% now sits left of Price):
-         1 Cycle  2 Chart  3 Ticker  4 EV Upside  5 Base  6 Chg%
-         7 Price  8 Upside  9 FY2027(Today)  10 FY2028(2027)
-         11 FY29  12 FY30  13 sparkline
-       Layout: Chart / Ticker / EV Upside / Base / Chg% / Price / Today /
-       2027, with an 'Expected Value' group header over Today + 2027.
-       Hides Cycle (1), Upside (8), FY29 (11), FY30 (12), sparkline (13).
-       SHOWS Chg% (6), Price (7), FY2027 (9, 'Today'), FY2028 (10, '2027').
-       Body has no `.adv-mode` class in this state. */
-    body:not(.adv-mode) th:nth-child(1),  body:not(.adv-mode) td:nth-child(1),
-    body:not(.adv-mode) th:nth-child(8),  body:not(.adv-mode) td:nth-child(8),
-    body:not(.adv-mode) th:nth-child(11), body:not(.adv-mode) td:nth-child(11),
-    body:not(.adv-mode) th:nth-child(12), body:not(.adv-mode) td:nth-child(12),
-    body:not(.adv-mode) th:nth-child(13), body:not(.adv-mode) td:nth-child(13) {
-        display: none;
-    }
-    /* Sticky cols in Basic mode: Cycle (1) is now hidden, so Chart (2)
-       is leftmost (left:0) and Ticker (3) sits after it (left:24). */
-    body:not(.adv-mode) th:nth-child(2), body:not(.adv-mode) td:nth-child(2) {
-        left: 0;
-    }
-    body:not(.adv-mode) th:nth-child(3), body:not(.adv-mode) td:nth-child(3) {
-        left: 24px;
-    }
-    /* Today (9) + 2027 (10) column sizing — compact but readable, equal
-       widths so the 'Expected Value' float (width:200% of col 9) spans
-       them symmetrically. */
-    body:not(.adv-mode) th:nth-child(9),  body:not(.adv-mode) td:nth-child(9),
-    body:not(.adv-mode) th:nth-child(10), body:not(.adv-mode) td:nth-child(10) {
-        width: 52px; min-width: 46px; max-width: 60px;
-        padding-left: 0.18rem; padding-right: 0.18rem;
-        font-size: 0.68rem;
-        text-align: right;
-    }
-    /* Swap FY labels for the 'Today' / '2027' wording (Basic mode only). */
-    body:not(.adv-mode) .lbl-wide    { display: none; }
-    body:not(.adv-mode) .lbl-evbasic { display: inline; }
-
-    /* 'Expected Value' floating group label. Anchored in the Today (col 9)
-       header, it spans rightward (width 200% = Today + 2027, equal-width)
-       and centers above both. The two header cells get extra top padding
-       to make vertical room; all header labels bottom-align so the data
-       labels (Today / 2027 / Price / etc.) stay on one baseline while the
-       group banner floats above the EV pair only. */
-    body:not(.adv-mode) #table-head-row th { vertical-align: bottom; }
-    body:not(.adv-mode) th:nth-child(9),
-    body:not(.adv-mode) th:nth-child(10) {
-        position: relative;
-        overflow: visible;
-        padding-top: 17px;
-    }
-    body:not(.adv-mode) th:nth-child(10) .ev-group-float {
-        display: block;
-        position: absolute;
-        top: 2px;
-        right: 0;            /* pin to 2027's right edge (= table edge) */
-        width: 200%;         /* span leftward across Today + 2027 */
-        text-align: center;
-        font-size: 0.52rem;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        line-height: 1.1;
-        color: var(--accent);
-        text-transform: uppercase;
-        white-space: nowrap;
-        padding-bottom: 2px;
-        border-bottom: 1px solid rgba(59, 130, 246, 0.45);
-        pointer-events: none;
-        z-index: 5;
-    }
-
-    /* === Mobile ADV mode ===
-       Hide Cycle (col 1), Chg% (col 6), Upside (col 8). Reveal
-       FY27/28/29/30 + sparkline (cols 9-13). Price stays at col 7.
-       FY columns are visible by default in browsers since they're
-       table-cell, but Basic mode above hides them — ADV doesn't need to
-       re-show explicitly, just not match the Basic hide selector.
-
-       Sticky columns shift: Cycle (col 1) is hidden, so col 2 (Chart)
-       becomes the leftmost sticky and needs left:0. Col 3 (Ticker)
-       moves to left:24 (after the 24px Chart column). No third sticky
-       col in ADV mode — Ticker is the last sticky. */
-    body.adv-mode th:nth-child(1), body.adv-mode td:nth-child(1) { display: none; }
-    body.adv-mode th:nth-child(6), body.adv-mode td:nth-child(6) { display: none; }
-    body.adv-mode th:nth-child(8), body.adv-mode td:nth-child(8) { display: none; }
-    body.adv-mode th:nth-child(2), body.adv-mode td:nth-child(2) {
-        left: 0;
-    }
-    body.adv-mode th:nth-child(3), body.adv-mode td:nth-child(3) {
-        left: 24px;
-    }
-    /* ADV mobile column widths — keep the visible cells compact. FY
-       cols are 9-12, sparkline is 13 (after Entry removal). */
-    body.adv-mode th:nth-child(9),  body.adv-mode td:nth-child(9),
-    body.adv-mode th:nth-child(10), body.adv-mode td:nth-child(10),
-    body.adv-mode th:nth-child(11), body.adv-mode td:nth-child(11),
-    body.adv-mode th:nth-child(12), body.adv-mode td:nth-child(12) {
-        width: 48px; min-width: 44px; max-width: 56px;
-        padding-left: 0.15rem; padding-right: 0.15rem;
-        font-size: 0.65rem;
-    }
-    body.adv-mode th:nth-child(13), body.adv-mode td:nth-child(13) {
-        width: 70px; min-width: 64px; max-width: 78px;
-        padding-left: 2px; padding-right: 2px;
-    }
-    /* Mode toggle visible on mobile; padding tweaked for the tighter
-       header. */
-    .mode-selector {
-        order: -1;   /* push it leftmost in the controls-area flex */
-    }
-    .mode-btn {
-        padding: 0.42rem 0.7rem;
-        font-size: 0.78rem;
-        letter-spacing: 0.06em;
+    /* === Mobile columns (quarterly rebuild — no Basic/ADV modes) ===
+       Column order: 1 Cycle  2 Chart  3 Ticker  4 EVUp  5 Base  6 Chg%
+       7 Price  8 Upside  9-23 quarters (Q3'26..Q1'30)  24 sparkline.
+       Cycle (1) is hidden on phones (China view re-shows it); which
+       quarters appear is handled by the .q-near/.q-mid/.q-far tiers
+       (phones show the 6 near quarters). Sticky-column widths + offsets
+       live in the 'Sticky columns on phone' block below. Compact the
+       quarter cells here so more fit before the horizontal scroll. */
+    .col-q {
+        width: 46px; min-width: 42px; max-width: 54px;
+        font-size: 0.7rem;
+        padding-left: 0.16rem; padding-right: 0.16rem;
     }
 
     /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small
@@ -1744,24 +1606,24 @@ body.table-settled tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns on phone: SuperCycle (1) + Chart (2) + Ticker (3).
-       Tight budget — iPhone 15 Pro Max vertical is ~430px CSS pixels.
-       3 sticky cols claim ~152px, leaving ~278px for the 6 remaining
-       data cols (Total/Base/Entry/Price/Chg%/Upside) at ~46px each.
-       Cumulative left offsets are critical: each col's left = sum of
-       preceding cols' width, so they tile flush during scroll. */
+    /* Sticky columns on phone. Cycle (1) is HIDDEN by default (non-China),
+       so Chart (2) is the leftmost sticky at left:0 and Ticker (3) sits
+       after it at left:24. The China-region view re-shows Cycle and
+       shifts these offsets back to 64/88 (see body.region-china block).
+       Cumulative left offsets must tile flush during horizontal scroll. */
     th:nth-child(1), td:nth-child(1) {
+        display: none;
         width: 64px; max-width: 72px; min-width: 60px;
         padding-left: 0.1rem; padding-right: 0.1rem;
     }
     th:nth-child(2), td:nth-child(2) {
         width: 24px; max-width: 24px; min-width: 22px;
-        left: 64px;
+        left: 0;
         padding-left: 1px; padding-right: 1px;
     }
     th:nth-child(3), td:nth-child(3) {
         width: 64px; max-width: 76px; min-width: 60px;
-        left: 88px;
+        left: 24px;
         padding-left: 0.1rem; padding-right: 0.15rem;
     }
 

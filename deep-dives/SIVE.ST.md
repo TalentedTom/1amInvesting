@@ -1,9 +1,89 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 4, 2026 | Restructured Jun 9, 2026 (stale 6/8-vector sections removed, Golden Dome merged into V12, Base harmonized 92%) | Jun 15, 2026 (305M shares verified, V11 AMD escalation) | Jul 2, 2026 (consolidated pass: architecture-substitution risk class added, 700M SEK raise folded, multiple harmonized 35x→20x standard → Base 90, ceiling SEK 201; same day: 30x SANCTIONED EXCEPTION ruled by Tom → ceiling SEK 301) | **Jul 4, 2026 (share count PR-verified 355,081,317: raise upsize reconciled + Bootstrap $12M conversion → ceiling SEK 269)**
-**Framework Version:** v4.2
+**Date:** May 4, 2026 | Restructured Jun 9, 2026 | Jun 15, 2026 | Jul 2, 2026 | Jul 4, 2026 share-count reconciliation | **Jul 9, 2026 v5.0.1 quarterly FW4Q migration**
+**Framework Version:** **v5.0.1 — Quarterly Forward-4Q Ceiling Standard**
 **Status:** HELD (✓) | **Base 90% (54/60)**
-**Price at last update:** SEK 60.75 | **355,081,317 shares (PR, Jul 3 2026)**
-**Ceiling:** FY2028 SEK 269 (13-vector build, 40% OP, 30x sanctioned exception, 355.08M shares)
+**Price at last update:** SEK 60.75 | **355,081,317 shares** post-directed issue + Bootstrap conversion
+**Ceiling method:** annual FY columns are deprecated. Current model uses rolling quarterly forward-4Q operating profit × **30x sanctioned SIVE exception** / diluted shares.
+**Current quarterly ceiling path:** Q3 2026 SEK 42 → Q4 2026 SEK 66 → Q1 2027 SEK 93 → Q1 2028 SEK 269 → Q1 2029 SEK 441 → Q1 2030 SEK 596.
+
+---
+
+## Latest Earnings Anchor — v5.0.1 Discipline
+
+**Latest reported quarter:** Q1 2026 actual. Sivers reported **SEK 61.9M net sales**, **SEK -41.5M EBIT**, and opportunity pipeline growth to **$799M**. Management said Q1 revenues were impacted by U.S. government shutdown / defense-budget delays and FX, with revenue pushed from Q1/Q2 into H2 2026; multiple product ramps remain on track for 2027.  
+**Next earnings event:** Q2 2026 interim report, now scheduled for **August 27, 2026**. This quarter must be refreshed when reported.
+
+**Important modeling convention:** for SIVE, the v5.0.1 table separates **reported actuals** from **ceiling economics**. Q1 2026 is actual. Future modeled quarters use the legacy **40% normalized OP margin** to preserve comparability with the pre-existing ceiling logic. These are valuation-ceiling earnings, not near-term GAAP profitability estimates.
+
+Sources to verify at refresh:
+- Q1 2026 interim report: https://www.sivers-semiconductors.com/press/sivers-semiconductors-ab-publ-publishes-interim-report-q1-january-march-2026/
+- Updated reporting calendar: https://www.sivers-semiconductors.com/press/sivers-semiconductors-updates-financial-reporting-calendar/
+- Bootstrap conversion / share count: https://www.sivers-semiconductors.com/press/sivers-semiconductors-lender-bootstrap-europe-exercises-conversion-right-under-existing-convertible-loan/
+- Directed issue: https://www.sivers-semiconductors.com/press/sivers-semiconductors-has-resolved-on-a-directed-share-issue-of-shares-amounting-to-approximately-sek-700-million/
+
+---
+
+## Quarterly Ceiling Derivation — v5.0.1
+
+**Formula:**  
+`FW4Q Ceiling = [OP(current quarter) + OP(next 3 quarters)] × 30x × USD/SEK 10.6 ÷ 355.081M diluted shares`
+
+### Quarterly Earnings Forecast
+
+| Quarter | Status | Revenue | OP margin | Key driver |
+|---|---|---:|---:|---|
+| Q1 2026 | Actual | $5.84M | -67% | Latest actual anchor: SEK 61.9M net sales, SEK -41.5M EBIT. |
+| Q2 2026 | Model / unreported | $6M | -50% | Q2 report due Aug 27, 2026; no preliminary result yet. |
+| Q3 2026 | Model | $8M | 40% normalized ceiling OP | Early ramp/samples; not a GAAP profitability estimate. |
+| Q4 2026 | Model | $18M | 40% | LiDAR Q4 production start + initial Jabil/POET/SATCOM ramp. |
+| Q1 2027 | Model | $35M | 40% | Jabil LRO / early pluggable production; deferred defense revenue normalizes. |
+| Q2 2027 | Model | $55M | 40% | Jabil utilization + POET readiness/customer conversion + SATCOM/defense. |
+| Q3 2027 | Model | $75M | 40% | Ayar/GF/Celestial/O-Net early CPO and optical-engine ramps. |
+| Q4 2027 | Model | $95M | 40% | Multi-vector production conversion into 2028 run-rate. |
+| Q1 2028 | Model | $130M | 40% | FY2028 ramp begins: Ayar/CPO, GFS/SCALE, Celestial/O-Net, Jabil, Apple/LiDAR. |
+| Q2 2028 | Model | $170M | 40% | CPO/LPO/GF and hyperscaler optical-engine volume accelerates. |
+| Q3 2028 | Model | $205M | 40% | Apple/LiDAR + CPO + Lightmatter/Celestial mix expands. |
+| Q4 2028 | Model | $246M | 40% | Exit-rate matches legacy FY2028 $751M revenue build. |
+| Q1 2029 | Model | $260M | 40% | FY2029 growth phase: CPO/optical-engine scale expands. |
+| Q2 2029 | Model | $290M | 40% | Ayar/GFS/Celestial/LiDAR/Apple ramps broaden. |
+| Q3 2029 | Model | $325M | 40% | Peak high-growth optical-engine phase. |
+| Q4 2029 | Model | $355M | 40% | Exit-rate matches legacy FY2029 $1.23B revenue build. |
+| Q1 2030 | Model | $385M | 40% | Scale across CPO/LPO/optical I/O optionality; still excludes Stage 3 upside. |
+| Q2 2030 | Model | $405M | 40% | Continued optical-engine and defense/SATCOM expansion. |
+| Q3 2030 | Model | $430M | 40% | Mature high-growth stage; architecture-substitution watch remains active. |
+| Q4 2030 | Model | $445M | 40% | Exit-rate matches legacy FY2030 $1.665B revenue build. |
+
+### Rolling Forward-4Q Ceiling Path
+
+| Quarter | FW4Q Ceiling |
+|---|---:|
+| **Q3 2026** | **SEK 42** |
+| **Q4 2026** | **SEK 66** |
+| **Q1 2027** | **SEK 93** |
+| **Q2 2027** | **SEK 127** |
+| **Q3 2027** | **SEK 168** |
+| **Q4 2027** | **SEK 215** |
+| **Q1 2028** | **SEK 269** |
+| **Q2 2028** | **SEK 316** |
+| **Q3 2028** | **SEK 359** |
+| **Q4 2028** | **SEK 402** |
+| **Q1 2029** | **SEK 441** |
+| **Q2 2029** | **SEK 485** |
+| **Q3 2029** | **SEK 527** |
+| **Q4 2029** | **SEK 564** |
+| **Q1 2030** | **SEK 596** |
+
+### What the quarterly model reveals
+
+The old annual model made SIVE look like a single FY2028 event. The quarterly model shows the path more clearly:
+
+- **Q3 2026:** only SEK 42 of FW4Q ceiling is visible; the stock is still paying for future conversion, not current earnings.
+- **Q4 2026:** ceiling rises to SEK 66 as LiDAR/Jabil/POET/SATCOM begin entering the 4Q window.
+- **Q1 2027:** ceiling reaches SEK 93, matching the old FY2027 annual ceiling.
+- **Q2–Q4 2027:** the real front-run window; ceiling climbs SEK 127 → SEK 215 as the market can begin pricing 2028 production conversion.
+- **Q1 2028:** ceiling reaches SEK 269, matching the old FY2028 annual ceiling.
+
+**No Base change. No multiple change. No share-count change.** This is a timing conversion under v5.0.1, not a new scoring event. The next scoring trigger remains **reported production revenue / orders / shipments / LTAs** from Jabil, LiDAR, POET, GF/SCALE, Ayar, O-Net, or another named production customer.
 
 ---
 
