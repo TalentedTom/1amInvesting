@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const qi = QUARTER_COLS.indexOf(col);
         if (qi === -1) return '';
         const tier = qi < 6 ? 'q-near' : (qi < 12 ? 'q-mid' : 'q-far');
-        return ` col-q ${tier}${col === TARGET_QUARTER ? ' q-target' : ''}`;
+        const extra = qi >= 10 ? ' q-extra' : '';
+        return ` col-q ${tier}${extra}${col === TARGET_QUARTER ? ' q-target' : ''}`;
     }
 
     // Format a quarterly target-price value for display. These columns hold
@@ -538,7 +539,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SuperCycle pill toggle. Click to flip a pill's active state. Refuse
     // to deactivate the last active pill (degenerate empty filter would
     // hide every row).
-    const scPills = document.querySelectorAll('.sc-pill');
+    const scPills = document.querySelectorAll('.sc-pill[data-sc]');
     function syncSupercyclePillsUI() {
         scPills.forEach(p => {
             p.classList.toggle('active', activeSupercycles.has(p.getAttribute('data-sc')));
@@ -577,6 +578,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reflect the persisted choice on the pills (no re-render — initial render handles it).
     regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
     document.body.classList.toggle('region-china', regionFilter === 'china');
+
+    // 2029+ toggle — hide Q1'29-Q1'30 by default, show on click.
+    const extraQBtn = document.getElementById('show-extra-q-btn');
+    if (extraQBtn) {
+        extraQBtn.addEventListener('click', () => {
+            document.body.classList.toggle('show-extra-q');
+            extraQBtn.classList.toggle('active');
+        });
+    }
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
