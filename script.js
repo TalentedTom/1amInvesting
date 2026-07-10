@@ -73,15 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return pcts;
     }
 
-    // Top-2 quarters by absolute % change (inflection points) for golden highlight.
+    // Top-2 quarters by absolute % change (inflection points) for border highlight.
+    // Returns a Map of quarterName -> 'gold' | 'red' (red when that quarter's % is negative).
     const _top2Cache = new WeakMap();
     function topTwoQuarters(row) {
         if (_top2Cache.has(row)) return _top2Cache.get(row);
         const pcts = quarterPctChanges(row);
         const sorted = Array.from(pcts.entries())
             .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
-        const top = new Set();
-        for (let i = 0; i < Math.min(2, sorted.length); i++) top.add(sorted[i][0]);
+        const top = new Map();
+        for (let i = 0; i < Math.min(2, sorted.length); i++)
+            top.set(sorted[i][0], sorted[i][1] >= 0 ? 'gold' : 'red');
         _top2Cache.set(row, top);
         return top;
     }
@@ -1655,7 +1657,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const top2q = topTwoQuarters(row);
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
-                    const highlight = top2q.has(col) ? ' q-top2' : '';
+                    const t2 = top2q.get(col);
+                    const highlight = t2 === 'red' ? ' q-top2-red' : (t2 === 'gold' ? ' q-top2' : '');
                     bodyHtml += `<td class="col-simple${colExtraClasses(col)}${highlight}">${formatCell(col, row[col], row)}</td>`;
                 }
             });
