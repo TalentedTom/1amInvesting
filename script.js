@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const qi = QUARTER_COLS.indexOf(col);
         if (qi === -1) return '';
         const tier = qi < 6 ? 'q-near' : (qi < 12 ? 'q-mid' : 'q-far');
-        const extra = qi >= 10 ? ' q-extra' : '';
-        return ` col-q ${tier}${extra}${col === TARGET_QUARTER ? ' q-target' : ''}`;
+        const year = col.includes('2029') ? ' q-2029' : (col.includes('2030') ? ' q-2030' : '');
+        return ` col-q ${tier}${year}${col === TARGET_QUARTER ? ' q-target' : ''}`;
     }
 
     // Format a quarterly target-price value for display. These columns hold
@@ -579,14 +579,14 @@ document.addEventListener('DOMContentLoaded', () => {
     regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
     document.body.classList.toggle('region-china', regionFilter === 'china');
 
-    // 2029+ toggle — hide Q1'29-Q1'30 by default, show on click.
-    const extraQBtn = document.getElementById('show-extra-q-btn');
-    if (extraQBtn) {
-        extraQBtn.addEventListener('click', () => {
-            document.body.classList.toggle('show-extra-q');
-            extraQBtn.classList.toggle('active');
+    // Year toggles — 2029 and 2030 columns hidden by default, each has its own button.
+    [['show-2029-btn', 'show-2029'], ['show-2030-btn', 'show-2030']].forEach(([id, cls]) => {
+        const btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', () => {
+            document.body.classList.toggle(cls);
+            btn.classList.toggle('active');
         });
-    }
+    });
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.

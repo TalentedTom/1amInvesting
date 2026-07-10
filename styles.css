@@ -590,10 +590,9 @@ body.light-mode tr.row-expanded td.q-target {
     white-space: nowrap;
 }
 .q-mid, .q-far { display: none; }
-.q-extra { display: none !important; }
-body.show-extra-q .q-extra { display: none !important; }
-@media (min-width: 700px)  { .q-mid { display: table-cell; } body.show-extra-q .q-extra.q-mid { display: table-cell !important; } }
-@media (min-width: 1100px) { .q-far { display: table-cell; } body.show-extra-q .q-extra.q-far { display: table-cell !important; } }
+.q-2029, .q-2030 { display: none !important; }
+@media (min-width: 700px)  { .q-mid { display: table-cell; } body.show-2029 .q-2029.q-mid { display: table-cell !important; } }
+@media (min-width: 1100px) { .q-far { display: table-cell; } body.show-2029 .q-2029.q-far { display: table-cell !important; } body.show-2030 .q-2030.q-far { display: table-cell !important; } }
 
 /* === Tiny % delta on the Today / 2027 target cells ==============
    Financial-ticker style: a small green/red percentage showing the
