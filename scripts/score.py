@@ -338,10 +338,8 @@ def score_row(row):
     # text and bucket crossings are reported via alerts instead.
     row["Entry"] = entry
     row["Total"] = total          # kept for bucket/alert logic (not displayed)
-    # Respect the analyst's manually-set Upside and EV Upside when present in
-    # the xlsx. Only compute them when the xlsx left them blank/missing.
-    if not row.get("Upside"):
-        row["Upside"] = upside
+    row["Upside"] = upside
+    # Respect the analyst's manually-set EV Upside when present in the xlsx.
     if not row.get("EV Upside") and row.get("EV Upside") != 0:
         row["EV Upside"] = ev_upside(base, high, price)
 
