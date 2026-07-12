@@ -83,6 +83,18 @@ def load_artifacts():
     return {f.name: f for f in ARTIFACTS.glob("*_DeepDive.md")}
 
 
+# Only sync deep dives for these tickers. Chinese exchanges (.SZ, .SH, .SS,
+# .SSE, .SZSE, .HK) are matched by suffix; explicit names cover non-Chinese.
+DEEP_DIVE_ALLOW_SUFFIXES = (".SZ", ".SH", ".SS", ".SSE", ".SZSE", ".HK")
+DEEP_DIVE_ALLOW_EXPLICIT = {"AAOI", "SIVE.ST"}
+
+
+def _is_allowed(ticker):
+    if ticker in DEEP_DIVE_ALLOW_EXPLICIT:
+        return True
+    return any(ticker.upper().endswith(s) for s in DEEP_DIVE_ALLOW_SUFFIXES)
+
+
 def load_tickers():
     raw = (REPO / "data.js").read_text(encoding="utf-8")
     m = re.match(r"^\s*window\.PORTFOLIO_DATA\s*=\s*", raw)
@@ -98,7 +110,8 @@ def load_tickers():
         t = (row.get("Ticker") or "").strip()
         if not t or "PRE-IPO" in t:
             continue
-        out.append(t)
+        if _is_allowed(t):
+            out.append(t)
     return out
 
 
