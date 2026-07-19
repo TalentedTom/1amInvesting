@@ -1,7 +1,7 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 4, 2026 | Restructured Jun 9, 2026 | Jun 15, 2026 | Jul 2, 2026 | Jul 4, 2026 share-count reconciliation | **Jul 9, 2026 v5.0.1 quarterly FW4Q migration**
+**Date:** May 4, 2026 | Restructured Jun 9, 2026 | Jun 15, 2026 | Jul 2, 2026 | Jul 4, 2026 share-count reconciliation | Jul 9, 2026 v5.0.1 quarterly FW4Q migration | **Jul 19, 2026 Base revision**
 **Framework Version:** **v5.0.1 — Quarterly Forward-4Q Ceiling Standard**
-**Status:** HELD (✓) | **Base 90% (54/60)**
+**Status:** HELD (✓) | **Base 85% (51/60)**
 **Price at last update:** SEK 60.75 | **355,081,317 shares** post-directed issue + Bootstrap conversion
 **Ceiling method:** annual FY columns are deprecated. Current model uses rolling quarterly forward-4Q operating profit × **30x sanctioned SIVE exception** / diluted shares.
 **Current quarterly ceiling path:** Q3 2026 SEK 42 → Q4 2026 SEK 66 → Q1 2027 SEK 93 → Q1 2028 SEK 269 → Q1 2029 SEK 441 → Q1 2030 SEK 596.
@@ -83,7 +83,7 @@ The old annual model made SIVE look like a single FY2028 event. The quarterly mo
 - **Q2–Q4 2027:** the real front-run window; ceiling climbs SEK 127 → SEK 215 as the market can begin pricing 2028 production conversion.
 - **Q1 2028:** ceiling reaches SEK 269, matching the old FY2028 annual ceiling.
 
-**No Base change. No multiple change. No share-count change.** This is a timing conversion under v5.0.1, not a new scoring event. The next scoring trigger remains **reported production revenue / orders / shipments / LTAs** from Jabil, LiDAR, POET, GF/SCALE, Ayar, O-Net, or another named production customer.
+**Base revised Jul 19: 90% → 85%. No multiple or share-count change.** The quarterly timing conversion remains intact, but manufacturing confidence is lower because neither Sivers nor WIN has disclosed qualified CW-laser capacity, Sivers wafer allocation, production yield, backend capacity, or volume revenue. The next positive scoring trigger remains **reported production revenue / orders / shipments / LTAs**, plus explicit manufacturing qualification or capacity disclosure.
 
 ---
 
@@ -128,32 +128,47 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 
 ## Capital Events (Jun–Jul 2026) — Directed Issue + Bootstrap Conversion
 
-**Directed issue (closed Jun 30):** oversubscribed and **upsized** at **SEK 57** (stock ~63 at pricing). Use of proceeds: HVM foundry allocation funding — Jabil CW DFB ramp capacity + **beyond-WIN second-foundry optionality**. Read: institutional floor-set at 57, balance sheet de-risked through the volume ramp, and the fab-light risk class gains a funded mitigation path. **Size reconciliation (Jul 4):** the Jul 3 PR discloses 332,234,273 shares pre-conversion; 332,234,273 − 305,154,751 (Jun-15-verified) = 27,079,522 new shares × SEK 57 ≈ **SEK 1.54B** — the upsize took the raise to roughly double the ~700M in our Jun 30 record. Composition to be confirmed at the H1 report; the endpoint count is PR-hard.
+**Directed issue (closed Jun 30):** oversubscribed and **upsized** at **SEK 57** (stock ~63 at pricing). The financing increases Sivers' ability to fund foundry work, proprietary process steps, working capital, and potential second-source development, but it does **not** prove that a dedicated HVM wafer allocation has been secured. Read: institutional support and a stronger balance sheet partially mitigate the fab-light risk, while qualification and capacity evidence remain outstanding. **Size reconciliation (Jul 4):** the Jul 3 PR discloses 332,234,273 shares pre-conversion; 332,234,273 − 305,154,751 (Jun-15-verified) = 27,079,522 new shares × SEK 57 ≈ **SEK 1.54B** — the upsize took the raise to roughly double the ~700M in our Jun 30 record. Composition to be confirmed at the H1 report; the endpoint count is PR-hard.
 
 **Bootstrap conversion (PR, Jul 3 2026):** Bootstrap Europe IV converted the full $12M fixed-rate secured convertible (from the Feb 24 refinancing of all external debt) at **SEK 4.77** → **22,847,044 new shares**, paid by set-off — debt extinguished, no cash out. Count: 332,234,273 → **355,081,317** (+6.4% dilution). Credit-positive (CFO: substantially reduces outstanding debt, strengthens balance sheet for the three focus segments) at the cost of the dilution now in every per-share column. Cumulative capital-structure tape since Jul 2: **+16.4% shares** (305.15M → 355.08M) — the per-share ceiling paying for the ramp-funding balance sheet.
 
-**Base adjudication (+1 reviewed, WITHHELD):** the Cycle category's missing point is explicitly gated on *first production revenue reported* — a funding event does not clear a revenue gate, and awarding Base points for equity raises (shareholder-funded de-risking) is the wrong incentive. The raise is documented as catalyst evidence and as mitigation depth inside the Risks narrative. Override path: if Tom rules the funded-HVM-allocation reading sufficient, Cycle 9→10 restores Base to 55/60 (92%) — EV recompute only, no ceiling dependency.
+**Base adjudication (Jul 19):** the funding event does not clear the manufacturing gate. The prior artifact treated the WIN relationship too close to secured production capacity. Base is reduced from 54/60 (90%) to 51/60 (85%) until qualification, allocation, yield, backend readiness, or volume revenue becomes visible. The ceiling remains unchanged because this is a probability/timing revision rather than a TAM revision.
 
 ## Scoring Breakdown
 
 | Category | Score | Evidence |
 |----------|-------|---------|
 | Core Thesis | 18/20 | Physics moat (Si can't generate light) protects the InP-laser CATEGORY, not SIVE specifically. Sole INDEPENDENT CW supplier (LITE/COHR vertically integrated competitors also supply). Confirmed across all 4 CPO platforms + 13 vectors. Docked 2: multi-sourced (hyperscalers buy from several), and SIVE owns the IP/design but NOT the manufacturing bottleneck — not an AEHR/ASML-grade own-the-chokepoint monopoly. |
-| Cycle Stage | 9/10 | NRE converting to volume. MRVL "bringing Celestial to high volume manufacturing." Jabil quals 1-4 months, production Aug 2026. CPO H2 2026. 700M SEK raise funds the ramp (Jun 30). -1 held: first production revenue not yet reported — the gate is a revenue print, not a funding event. |
+| Cycle Stage | 7/10 | Technology and customer demand are demonstrated, but Sivers said it was still qualifying lasers for production-ready status in 2027. Neither Sivers nor WIN has disclosed qualified CW-laser wafer capacity, Sivers allocation, production yield, backend capacity, or volume revenue. Initial production remains probable; the slope and timing of HVM remain uncertain. |
 | TAM Expansion | 10/10 | Goldman $193B photonics TAM. EU Chips Act 2.0 photonics pillar. Golden Dome $1.2T. Universal light source primitive across CPO/LRO/FMCW/SATCOM/defense. Demand undisputed (the shortage IS the demand). |
 | Catalysts | 5/5 | Jabil production Aug 2026. H1 report. NASDAQ dual-listing. MRVL Celestial ramp. Raise floor-set at 57 confirmed. |
 | Macro | 10/10 | US CHIPS Act funding received. EU Chips Act 2.0 photonics pillar. NATO defense. Golden Dome. Dual government backing (US + EU). |
 | Alpha | 5/5 | 3 analysts. Swedish media calls "meme stock." OSINT supply chain mapping to Celestial/Ayar/Lightmatter. Deepest asymmetry in portfolio. Market hasn't connected MRVL Celestial ramp to SIVE laser supply. |
-| Risks | −3 | **Class 1 (−2), fab-light bundle:** SIVE owns laser IP but NOT InP fab capacity (Win Semi dependency); IP lead erodes over multi-year horizon; multi-source pricing pressure in a balanced market. PARTIALLY MITIGATED: Win capacity secured, InP shortage (Goldman CW tight through Q3 2028) confers pricing power through the window; raise funds beyond-WIN optionality. **Class 2 (−1), architecture substitution (added Jul 2):** VCSEL-based CPO formally contests the scale-up/on-package tier — ams OSRAM Optical Interconnect BU formed under ex-NVIDIA CPO/pluggable product lead (verified, LinkedIn primary). Mechanism 25-35%; base-case vectors single-mode/long-reach and 2026-28 VCSEL-immune; see Architecture-Substitution Watch. |
-| **Base** | **54/60 (90%)** | Consolidated pass Jul 2: Risks −2→−3 (architecture class); raise +1 withheld (revenue gate). |
+| Risks | −4 | **Class 1 (−3), fab-light/manufacturing bundle:** SIVE owns laser IP but not the complete qualified InP front-end and backend capacity required for the modeled ramp. The public WIN relationship establishes a manufacturing path, not a disclosed dedicated allocation. The circulated 35,000-wafer figure is potential foundry capacity over time, not verified current InP CW-laser output available to Sivers. Qualification timing, yield, test/singulation/ship capacity, foundry pricing power, and further financing remain live risks. The raise partially mitigates funding risk but confirms capital intensity. **Class 2 (−1), architecture substitution:** VCSEL-based CPO contests part of the scale-up/on-package tier; see Architecture-Substitution Watch. |
+| **Base** | **51/60 (85%)** | **Lowered from 90% on Jul 19, 2026; ceiling, multiple, and share count unchanged.** |
 
 ### Bear-case re-examination (May 28, 2026)
 
 Substantive bear case (Moody @MoodyWriter13): SIVE is "well connected but irreplaceable nowhere" — multi-sourced, lacks pricing power, and the real chokepoint is fab CAPACITY (which SIVE doesn't own), not laser design. SIVE benefits now (Lumentum buying open-market because its capacity is NVIDIA-prioritized) but that's a Phase 1 effect; IP lead erodes before the fab chokepoint resolves.
 
-What the bear gets right (cost Base 59→55): (1) multi-sourcing caps pricing power in a balanced market; (2) fab-light vulnerability is real — SIVE depends on partner InP capacity; (3) IP leads erode over 5-year horizons. These are genuine and were under-priced at 99%.
+What the bear gets right (cost Base 59→55 in May; 54→51 in July): (1) multi-sourcing caps pricing power in a balanced market; (2) fab-light vulnerability is real; (3) the WIN relationship does not quantify qualified capacity, allocation, yield, or backend throughput; (4) the manufacturing ramp may require additional capital; and (5) IP leads erode over five-year horizons. These risks were under-priced in the prior Base.
 
-What the bear gets wrong (why ceiling unchanged): (1) in a 67%-undersupplied market, multi-sourcing is customers securing volume, not commoditizing the supplier — pricing power survives shortage; (2) SIVE SECURED Win capacity while competitors reach into the open market, suggesting SIVE is ahead in the fab line, not behind; (3) "Phase 1" lasts through 2030 (Rosenblatt InP shortage, Goldman CW tight through Q3 2028 = 14 quarters) — SIVE's entire FY2027-2030 revenue ramp happens INSIDE the window the bear concedes SIVE wins; (4) no evidence IP catch-up outpaces capacity addition. Ceiling (SEK 405 at the May build; superseded by later rebuilds) survives the bear's own timeline; only the certainty (Base) was overstated.
+What preserves the ceiling despite the Base reduction: (1) in a structurally undersupplied market, multi-sourcing primarily reflects customers securing volume; (2) Sivers has demonstrated DFB-array technology and has a real WIN manufacturing relationship, even though allocation and qualified output remain undisclosed; (3) the shortage window spans the proposed FY2027-2030 monetization period; and (4) no evidence shows competitor IP catch-up will precede Sivers' manufacturing qualification. The ceiling remains attainable, but now requires explicit manufacturing gates rather than assumed capacity.
+
+### Manufacturing Gate Revision (Jul 19, 2026)
+
+| Gate | Current assessment |
+|---|---|
+| Sivers DFB/array technology works | High — demonstrated with Ayar Labs at >65mW per channel |
+| Customer/platform demand exists | High |
+| WIN process transfer and qualification succeed | Medium |
+| Production-ready status during 2027 | Medium |
+| Meaningful Sivers wafer allocation plus qualified backend capacity | Low-medium |
+| 3,500 Sivers wafers/year (10% of the circulated 35,000 figure) by 2028 | Low; ceiling scenario only |
+
+The circulated calculation `35,000 wafers × 10% allocation × arrays per wafer × yield × ASP` is mathematically valid but industrially unverified. It skips wafer diameter/line configuration, Sivers allocation, front-end and array yield, facet/coating yield, testing, singulation, packaging, reliability qualification, and customer-qualified product mix. It must not anchor Base revenue.
+
+**Model treatment:** retain probabilistic FY2027 initial production; shift the steepest manufacturing S-curve toward FY2028-2030; keep the 10% WIN-allocation case in the ceiling with a low current probability. Re-rate upward when Sivers or WIN discloses qualification completion, wafer allocation/capacity, production yield, backend readiness, or volume revenue.
 
 ## Ceiling — v4.2 AH-1 Full Derivation (13-Vector, 40% OP, 30x sanctioned exception, per Rule AH-9)
 
