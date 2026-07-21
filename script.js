@@ -1495,6 +1495,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         return sortState.asc ? aR - bR : bR - aR;
                     }
 
+                    // For quarter columns, sort by the QoQ % change badge — the
+                    // number the analyst actually cares about — rather than the
+                    // raw share price. Rows with no % for that quarter sink to
+                    // the bottom regardless of sort direction.
+                    if (QUARTER_COLS.indexOf(col) !== -1) {
+                        const aPct = quarterPctChanges(a).get(col);
+                        const bPct = quarterPctChanges(b).get(col);
+                        const aHas = aPct !== undefined;
+                        const bHas = bPct !== undefined;
+                        if (!aHas && !bHas) return 0;
+                        if (!aHas) return 1;
+                        if (!bHas) return -1;
+                        return sortState.asc ? aPct - bPct : bPct - aPct;
+                    }
+
                     const rawA = a[col];
                     const rawB = b[col];
                     const emptyA = isMissing(rawA);
@@ -1605,7 +1620,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     sortState.asc = !sortState.asc;
                 } else {
                     sortState.col = col;
-                    sortState.asc = true; // default to ascending when clicking new column
+                    // Quarter columns open highest-%-first (descending); every
+                    // other new column defaults to ascending.
+                    sortState.asc = QUARTER_COLS.indexOf(col) === -1;
                 }
                 renderData();
             });
