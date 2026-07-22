@@ -50,43 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return n.toFixed(3);
     }
 
-    // Per-row cache: QoQ % change for every quarter column.
-    // First quarter (Q3'26) = % vs current price; all others = vs prior quarter.
-    const _qPctCache = new WeakMap();
+    // Per-row cache: % change vs TODAY'S price for every quarter column.
+    // Every quarter compares its target price to the current price, so sorting
+    // any quarter ranks stocks by total upside from here to that point in time.
+    // Because every badge now depends on Current Price, the live-price poll
+    // must reset this cache when it patches prices (see applyLiveData) — else
+    // the badges would freeze at their page-load values. Hence `let`, not const.
+    let _qPctCache = new WeakMap();
     function quarterPctChanges(row) {
         if (_qPctCache.has(row)) return _qPctCache.get(row);
         const price = parseLooseNumber(row['Current Price']);
         const prices = QUARTER_COLS.map(q => parseLooseNumber(row[q]));
         const pcts = new Map();
-        for (let i = 0; i < prices.length; i++) {
-            const cur = prices[i];
-            if (!isFinite(cur) || cur <= 0) continue;
-            if (i === 0) {
-                if (isFinite(price) && price > 0)
-                    pcts.set(QUARTER_COLS[i], (cur / price - 1) * 100);
-            } else {
-                const prev = prices[i - 1];
-                if (isFinite(prev) && prev > 0)
-                    pcts.set(QUARTER_COLS[i], (cur / prev - 1) * 100);
+        if (isFinite(price) && price > 0) {
+            for (let i = 0; i < prices.length; i++) {
+                const cur = prices[i];
+                if (!isFinite(cur) || cur <= 0) continue;
+                pcts.set(QUARTER_COLS[i], (cur / price - 1) * 100);
             }
         }
         _qPctCache.set(row, pcts);
         return pcts;
-    }
-
-    // Top-2 quarters by absolute % change (inflection points) for border highlight.
-    // Returns a Map of quarterName -> 'gold' | 'red' (red when that quarter's % is negative).
-    const _top2Cache = new WeakMap();
-    function topTwoQuarters(row) {
-        if (_top2Cache.has(row)) return _top2Cache.get(row);
-        const pcts = quarterPctChanges(row);
-        const sorted = Array.from(pcts.entries())
-            .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
-        const top = new Map();
-        for (let i = 0; i < Math.min(2, sorted.length); i++)
-            top.set(sorted[i][0], sorted[i][1] >= 0 ? 'gold' : 'red');
-        _top2Cache.set(row, top);
-        return top;
     }
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
@@ -1165,6 +1149,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             touched = true;
         }
+        // Live prices just changed, so every quarter's %-vs-price badge is now
+        // stale. The cache is keyed on the (reused) row objects, so drop it
+        // wholesale to force a recompute on the re-render that follows.
+        if (touched) _qPctCache = new WeakMap();
         return touched;
     }
 
@@ -1681,12 +1669,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const rowTicker = String(row.Ticker || '').trim().replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             bodyHtml += `<tr class="${rowClass.trim()}" data-ticker="${rowTicker}" style="animation-delay: ${delay}s">`;
 
-            const top2q = topTwoQuarters(row);
             simpleCols.forEach(col => {
                 if (!hiddenCols.has(col)) {
-                    const t2 = top2q.get(col);
-                    const highlight = t2 === 'red' ? ' q-top2-red' : (t2 === 'gold' ? ' q-top2' : '');
-                    bodyHtml += `<td class="col-simple${colExtraClasses(col)}${highlight}">${formatCell(col, row[col], row)}</td>`;
+                    bodyHtml += `<td class="col-simple${colExtraClasses(col)}">${formatCell(col, row[col], row)}</td>`;
                 }
             });
 
