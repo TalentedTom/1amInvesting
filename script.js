@@ -18,14 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const simpleCols = [
         "SuperCycle", "_chart", "Ticker", "EV Upside", "Base",
         "Change %", "Current Price", "Upside",
-        ...QUARTER_COLS, "_sparkline"
+        ...QUARTER_COLS
     ];
 
     // Responsive tier + tint class for a column (quarter columns only).
     // Tiers: near (idx 0-5, always shown), mid (6-11, shown >=700px),
     // far (12-14, shown >=1100px) -> phone 6 quarters, landscape 12, desktop 15.
     function colExtraClasses(col) {
-        if (col === '_sparkline') return ' col-spark';
         const qi = QUARTER_COLS.indexOf(col);
         if (qi === -1) return '';
         const tier = qi < 6 ? 'q-near' : (qi < 12 ? 'q-mid' : 'q-far');
@@ -334,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // without needing the click. Caption text is i18n-keyed so it
     // translates with the rest of the chrome.
     const labelFor = (col) => {
-        if (col === '_chart' || col === '_sparkline') return '';
+        if (col === '_chart') return '';
         // Quarter headers are language-neutral ("Q3'26") — return directly.
         if (QUARTER_COLS.indexOf(col) !== -1) return displayNames[col];
         const eng = displayNames[col] || col;
@@ -1804,8 +1803,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Parse a price-like string ('TWD 175.50', 'A12.50', '3,822,000',
     // 'SEK 1.2K') to a raw float. Returns NaN on anything unparseable.
-    // Used by the sparkline renderer to compare current price + FY
-    // targets on a single normalized axis.
+    // Used wherever prices and quarterly targets need to be compared
+    // numerically — quarterPctChanges, the sort comparator, formatCell.
     function parseLooseNumber(value) {
         if (value === null || value === undefined || value === '') return NaN;
         let s = String(value).trim();
@@ -1831,68 +1830,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const n = parseFloat(s);
         return isFinite(n) ? n : NaN;
-    }
-
-    // Render a 4-bar year-over-year growth chart: % change for each hop
-    // Price→FY27, FY27→FY28, FY28→FY29, FY29→FY30.
-    //
-    // This replaced a min-max-normalized line sparkline. The line version
-    // stretched every row to fill the same box, so a steady +20%/yr name
-    // and a +300%-ramp-year name produced near-identical pictures. Bars
-    // fix that with two properties the line couldn't have:
-    //   1. FIXED CROSS-ROW SCALE — a bar's height means the same thing in
-    //      every row (full height = +200% YoY, the cap), so monster ramp
-    //      years visibly tower and rows are directly comparable.
-    //   2. PER-YEAR ATTRIBUTION — each bar IS one year's growth, so "the
-    //      big year is FY29" is readable at a glance.
-    // Heights are sqrt-compressed (h ∝ √(pct/cap)) so modest years (+20%)
-    // stay visible next to capped monsters instead of vanishing to 1px.
-    //
-    // Green bar = growth, red = decline (drawn below the baseline), faint
-    // grey stub = segment endpoint missing. Hover tooltip (SVG <title>)
-    // lists the exact percentages. Returns '' when no segment is
-    // computable — the cell falls back to a blank.
-    function renderTrajectorySparkline(row) {
-        // 16-point quarterly trajectory: current price anchored at the left,
-        // then the 15 quarterly targets Q3'26 -> Q1'30. Min-max normalized
-        // within the row so the SHAPE of the ramp reads (flat / steady climb
-        // / late hockey-stick). Green when the series ends above where it
-        // starts, red when lower. A small amber dot marks the TARGET_QUARTER
-        // (Q3'27) point since it drives the Upside metric. Missing quarters
-        // are skipped but keep their x-slot, so gaps show as longer segments.
-        // Returns '' when fewer than 2 points are computable.
-        const raw = [parseLooseNumber(row['Current Price'])];
-        for (const q of QUARTER_COLS) raw.push(parseLooseNumber(row[q]));
-        const pts = raw.map((v, i) => ({ i, v })).filter(p => isFinite(p.v) && p.v > 0);
-        if (pts.length < 2) return '';
-        const vals = pts.map(p => p.v);
-        let lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
-        if (hi <= lo) hi = lo + 1;                 // flat series -> centred line
-        const W = 90, H = 26, PAD = 3;
-        const n = raw.length;                       // 16 fixed x-slots
-        const xOf = (i) => PAD + (W - 2 * PAD) * (i / (n - 1));
-        const yOf = (v) => (H - PAD) - (H - 2 * PAD) * ((v - lo) / (hi - lo));
-        const up = vals[vals.length - 1] >= vals[0];
-        const stroke = up ? '#10b981' : '#ef4444';
-        const coords = pts.map(p => `${xOf(p.i).toFixed(1)},${yOf(p.v).toFixed(1)}`);
-        const parts = [];
-        // Faint area fill under the line for a little visual weight.
-        const area = `${xOf(pts[0].i).toFixed(1)},${(H - PAD).toFixed(1)} ` +
-                     coords.join(' ') +
-                     ` ${xOf(pts[pts.length - 1].i).toFixed(1)},${(H - PAD).toFixed(1)}`;
-        parts.push(`<polygon points="${area}" fill="${stroke}" opacity="0.10"/>`);
-        parts.push(`<polyline points="${coords.join(' ')}" fill="none" stroke="${stroke}" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>`);
-        // Amber marker on the target quarter (raw index = its QUARTER_COLS pos + 1).
-        const tgtIdx = QUARTER_COLS.indexOf(TARGET_QUARTER) + 1;
-        const tgt = pts.find(p => p.i === tgtIdx);
-        if (tgt) {
-            parts.push(`<circle cx="${xOf(tgt.i).toFixed(1)}" cy="${yOf(tgt.v).toFixed(1)}" r="1.9" fill="#f59e0b"/>`);
-        }
-        const totalPct = Math.round((vals[vals.length - 1] / vals[0] - 1) * 100);
-        const tip = `Trajectory price -> Q1'30: ${totalPct >= 0 ? '+' : ''}${totalPct}% overall`;
-        return `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" class="sparkline"><title>${tip}</title>` +
-               parts.join('') +
-               `</svg>`;
     }
 
     // Strips currency codes/symbols and compacts any large numeric tokens in the string.
@@ -1943,15 +1880,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 `<polyline points="15,7 21,7 21,13"/>` +
                 `</svg>` +
                 `</button>`;
-        }
-
-        // _sparkline pseudo-column: 4-bar year-over-year growth chart
-        // (Price→FY27, FY27→28, FY28→29, FY29→30) on a FIXED cross-row
-        // scale — see renderTrajectorySparkline for the design rationale.
-        // Empty / unparseable rows render a blank cell — no broken-chart
-        // noise.
-        if (colName === '_sparkline') {
-            return row ? renderTrajectorySparkline(row) : '';
         }
 
         // SuperCycle column: render up to 4 tiny colored boxes in a 2-column

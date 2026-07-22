@@ -54,7 +54,7 @@ body {
 /* === Mobile Basic/ADV layout toggle ===
    Phone-only control sitting at the left edge of the controls-area
    (before the language flags). ADV mode hides Cycle / Chg% / Upside
-   and exposes the FY27-30 + sparkline columns. Desktop has room for
+   and exposes the quarterly target columns. Desktop has room for
    all columns so the toggle is hidden there. */
 .mobile-only {
     display: none;
@@ -614,38 +614,6 @@ body.light-mode tr.row-expanded td.q-target {
     line-height: 1;
     margin: 1px 0 0;
     opacity: 0.85;
-}
-/* === Trajectory sparkline (5-point mini chart per row) ===========
-   Renders Current Price + FY2027/28/29/30 as a tiny SVG polyline,
-   normalized per-row so the SHAPE of the trend is readable across
-   tickers with very different price magnitudes. Sits in the right-
-   most column on desktop; hidden on phones (see media query). */
-.sparkline {
-    display: block;
-    /* Vertically center inside the cell */
-    margin: 0 auto;
-    /* Subtle backdrop so the chart stands off the row background */
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 3px;
-    /* The SVG is authored at 90x26; in narrower cells (mobile ADV's
-       ~70px column) it scales down proportionally instead of clipping. */
-    max-width: 100%;
-    height: auto;
-}
-body.light-mode .sparkline {
-    background: rgba(0, 0, 0, 0.02);
-}
-/* Sparkline column sizing — keep it tight so it doesn't push the FY
-   columns leftward more than necessary. The SVG is 90x26 (grew from
-   70x22 to host the peak-year % label); cell padding + slack puts the
-   column at ~102px. nth-child(13) = last column. */
-.col-spark {
-    width: 102px;
-    min-width: 102px;
-    max-width: 102px;
-    text-align: center;
-    padding-left: 4px;
-    padding-right: 4px;
 }
 
 /* === Column-header info "?" button + popover ====================
@@ -1580,7 +1548,7 @@ body.table-settled tbody tr {
 
     /* === Mobile columns (quarterly rebuild — no Basic/ADV modes) ===
        Column order: 1 Cycle  2 Chart  3 Ticker  4 EVUp  5 Base  6 Chg%
-       7 Price  8 Upside  9-23 quarters (Q3'26..Q1'30)  24 sparkline.
+       7 Price  8 Upside  9-23 quarters (Q3'26..Q1'30).
        Cycle (1) is hidden on phones (China view re-shows it); which
        quarters appear is handled by the .q-near/.q-mid/.q-far tiers
        (phones show the 6 near quarters). Sticky-column widths + offsets
