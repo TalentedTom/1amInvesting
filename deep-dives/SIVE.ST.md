@@ -1,19 +1,19 @@
 # SIVE.ST — Sivers Semiconductors | Deep Dive
-**Date:** May 4, 2026 | Restructured Jun 9, 2026 | Jun 15, 2026 | Jul 2, 2026 | Jul 4, 2026 share-count reconciliation | Jul 9, 2026 v5.0.1 quarterly FW4Q migration | **Jul 19, 2026 Base revision**
-**Framework Version:** **v5.0.1 — Quarterly Forward-4Q Ceiling Standard**
-**Status:** HELD (✓) | **Base 85% (51/60)**
+**As of:** July 25, 2026  
+**Framework Version:** **v6.0 — Consolidated Framework**  
+**Status:** HELD (✓) | **Base 51/60 (85%)**
 **Price at last update:** SEK 60.75 | **355,081,317 shares** post-directed issue + Bootstrap conversion
 **Ceiling method:** annual FY columns are deprecated. Current model uses rolling quarterly forward-4Q operating profit × **30x sanctioned SIVE exception** / diluted shares.
 **Current quarterly ceiling path:** Q3 2026 SEK 42 → Q4 2026 SEK 66 → Q1 2027 SEK 93 → Q1 2028 SEK 269 → Q1 2029 SEK 441 → Q1 2030 SEK 596.
 
 ---
 
-## Latest Earnings Anchor — v5.0.1 Discipline
+## Latest Earnings Anchor
 
 **Latest reported quarter:** Q1 2026 actual. Sivers reported **SEK 61.9M net sales**, **SEK -41.5M EBIT**, and opportunity pipeline growth to **$799M**. Management said Q1 revenues were impacted by U.S. government shutdown / defense-budget delays and FX, with revenue pushed from Q1/Q2 into H2 2026; multiple product ramps remain on track for 2027.  
 **Next earnings event:** Q2 2026 interim report, now scheduled for **August 27, 2026**. This quarter must be refreshed when reported.
 
-**Important modeling convention:** for SIVE, the v5.0.1 table separates **reported actuals** from **ceiling economics**. Q1 2026 is actual. Future modeled quarters use the legacy **40% normalized OP margin** to preserve comparability with the pre-existing ceiling logic. These are valuation-ceiling earnings, not near-term GAAP profitability estimates.
+**Important modeling convention:** Q1 2026 is actual. Future modeled quarters use a **40% normalized OP margin as a ceiling assumption**, not a near-term GAAP forecast. The margin is aggressive and must be earned through product gross margin, manufacturing yield, volume conversion, and operating leverage.
 
 Sources to verify at refresh:
 - Q1 2026 interim report: https://www.sivers-semiconductors.com/press/sivers-semiconductors-ab-publ-publishes-interim-report-q1-january-march-2026/
@@ -23,7 +23,7 @@ Sources to verify at refresh:
 
 ---
 
-## Quarterly Ceiling Derivation — v5.0.1
+## Quarterly Ceiling Derivation
 
 **Formula:**  
 `FW4Q Ceiling = [OP(current quarter) + OP(next 3 quarters)] × 30x × USD/SEK 10.6 ÷ 355.081M diluted shares`
@@ -38,20 +38,20 @@ Sources to verify at refresh:
 | Q4 2026 | Model | $18M | 40% | LiDAR Q4 production start + initial Jabil/POET/SATCOM ramp. |
 | Q1 2027 | Model | $35M | 40% | Jabil LRO / early pluggable production; deferred defense revenue normalizes. |
 | Q2 2027 | Model | $55M | 40% | Jabil utilization + POET readiness/customer conversion + SATCOM/defense. |
-| Q3 2027 | Model | $75M | 40% | Ayar/GF/Celestial/O-Net early CPO and optical-engine ramps. |
+| Q3 2027 | Model | $75M | 40% | Early CPO, NPO, pluggable, and optical-engine ramps across multiple customers; Ayar exposure remains OSINT-linked rather than contract-proven. |
 | Q4 2027 | Model | $95M | 40% | Multi-vector production conversion into 2028 run-rate. |
-| Q1 2028 | Model | $130M | 40% | FY2028 ramp begins: Ayar/CPO, GFS/SCALE, Celestial/O-Net, Jabil, Apple/LiDAR. |
+| Q1 2028 | Model | $130M | 40% | FY2028 ramp begins across CPO/NPO, GFS/SCALE, optical engines, Jabil, and LiDAR. |
 | Q2 2028 | Model | $170M | 40% | CPO/LPO/GF and hyperscaler optical-engine volume accelerates. |
 | Q3 2028 | Model | $205M | 40% | Apple/LiDAR + CPO + Lightmatter/Celestial mix expands. |
-| Q4 2028 | Model | $246M | 40% | Exit-rate matches legacy FY2028 $751M revenue build. |
+| Q4 2028 | Model | $246M | 40% | Exit-rate supports the FY2028 $751M revenue build. |
 | Q1 2029 | Model | $260M | 40% | FY2029 growth phase: CPO/optical-engine scale expands. |
-| Q2 2029 | Model | $290M | 40% | Ayar/GFS/Celestial/LiDAR/Apple ramps broaden. |
+| Q2 2029 | Model | $290M | 40% | GFS, optical-engine, LiDAR, consumer, and datacenter ramps broaden. |
 | Q3 2029 | Model | $325M | 40% | Peak high-growth optical-engine phase. |
-| Q4 2029 | Model | $355M | 40% | Exit-rate matches legacy FY2029 $1.23B revenue build. |
+| Q4 2029 | Model | $355M | 40% | Exit-rate supports the FY2029 $1.23B revenue build. |
 | Q1 2030 | Model | $385M | 40% | Scale across CPO/LPO/optical I/O optionality; still excludes Stage 3 upside. |
 | Q2 2030 | Model | $405M | 40% | Continued optical-engine and defense/SATCOM expansion. |
 | Q3 2030 | Model | $430M | 40% | Mature high-growth stage; architecture-substitution watch remains active. |
-| Q4 2030 | Model | $445M | 40% | Exit-rate matches legacy FY2030 $1.665B revenue build. |
+| Q4 2030 | Model | $445M | 40% | Exit-rate supports the FY2030 $1.665B revenue build. |
 
 ### Rolling Forward-4Q Ceiling Path
 
@@ -75,56 +75,51 @@ Sources to verify at refresh:
 
 ### What the quarterly model reveals
 
-The old annual model made SIVE look like a single FY2028 event. The quarterly model shows the path more clearly:
+The quarterly model shows when modeled earnings enter the rolling valuation window:
 
 - **Q3 2026:** only SEK 42 of FW4Q ceiling is visible; the stock is still paying for future conversion, not current earnings.
 - **Q4 2026:** ceiling rises to SEK 66 as LiDAR/Jabil/POET/SATCOM begin entering the 4Q window.
-- **Q1 2027:** ceiling reaches SEK 93, matching the old FY2027 annual ceiling.
+- **Q1 2027:** ceiling reaches SEK 93 as the full FY2027 revenue build enters view.
 - **Q2–Q4 2027:** the real front-run window; ceiling climbs SEK 127 → SEK 215 as the market can begin pricing 2028 production conversion.
-- **Q1 2028:** ceiling reaches SEK 269, matching the old FY2028 annual ceiling.
+- **Q1 2028:** ceiling reaches SEK 269 as the FY2028 production ramp enters view.
 
-**Base revised Jul 19: 90% → 85%. No multiple or share-count change.** The quarterly timing conversion remains intact, but manufacturing confidence is lower because neither Sivers nor WIN has disclosed qualified CW-laser capacity, Sivers wafer allocation, production yield, backend capacity, or volume revenue. The next positive scoring trigger remains **reported production revenue / orders / shipments / LTAs**, plus explicit manufacturing qualification or capacity disclosure.
+The quarterly timing conversion remains intact, but manufacturing confidence is constrained because neither Sivers nor WIN has disclosed qualified CW-laser capacity, Sivers wafer allocation, production yield, backend capacity, or volume revenue. The next positive scoring trigger is **reported production revenue / orders / shipments / LTAs**, plus explicit manufacturing qualification or capacity disclosure.
 
 ---
 
-## Supercycle: DB1 Photonics/CPO (PRIMARY) + DB8 Defense (SATCOM) + Lightmatter Optical Fabric
+## Supercycle: DB1 Photonics/CPO + DB8 Defense/SATCOM
 
 ## TAM Expansion Lens
 
-**Q1 (Today — Phase 1 Datacenter):** CW/DFB laser arrays for silicon photonics CPO. External Laser Source (ELS) for all 4 CPO integration platforms. 16-wavelength WDM arrays for Ayar Labs SuperNova. Each AI rack with CPO needs 1,024 InP CW lasers (64 SuperNova × 16 lasers each). Anders Storm math: $1.0-1.4B InP laser array SAM by 2030.
+**Q1 (Today — Phase 1 Datacenter):** CW/DFB lasers and arrays for silicon-photonics pluggables, NPO, and CPO. Sivers is technically positioned for external-laser architectures, but platform-specific source allocation and production content per rack are not publicly disclosed.
 
-**Q2 (3-5 Years — Phase 2 Physical AI):** LiDAR light sources ($56M contract signed). SATCOM beamforming ICs (Gen 2 BFICs: +6-12dB power AND 3-5x efficiency vs ALL competitors). Defense phased array for Raytheon, Ericsson, US Army (qualified).
+**Q2 (3-5 Years — Phase 2 Physical AI):** LiDAR light sources and optical amplifiers. Sivers disclosed a strategic customer production ramp beginning Q4 2026 with **$53M-$138M cumulative revenue potential over the product lifecycle**. SATCOM beamforming ICs and defense phased-array programs provide a separate demand vector.
 
 **Q3 (New Markets — Phase 3):** Medical OCT imaging. Quantum photonics. Free-space optical comms. Universal light source primitive for all post-electrical data transport.
 
 **Ford Principle:** SIVE isn't selling "laser chips." It's selling the universal light source primitive. Silicon cannot generate light — permanent physics truth.
 
-## Ten Confirmed Partnership/Customer Relationships
+## Ecosystem Relationships — Evidence Classified
 
-1. **Jabil** → 1.6T LRO (PUBLIC LinkedIn confirmation, shipping)
-2. **Ayar Labs** → CW laser arrays for SuperNova (CPO ecosystem)
-3. **NVIDIA** → Qualified on CPO platform
-4. **Broadcom** → Qualified on CPO platform
-5. **Marvell** → Qualified on CPO platform
-6. **MediaTek** → Qualified on CPO platform
-7. **Raytheon (RTX)** → Beamformers using SIVE chip IP (CHIPS Act funded)
-8. **BAE Systems** → STAR duplex arrays using SIVE chip IP (CHIPS Act funded)
-9. **GlobalFoundries** → SIVE laser arrays integrated into GF reference designs (CPO + LPO + SCALE™). Jun 2, 2026 strategic collaboration (Reuters).
-10. **Lightmatter** → CW lasers for photonic interconnect (Serenity discovery, $4.4B+ private)
-Plus: Amazon (8-K warrant, $87 strike through Dec 2030), Apple (breadcrumb), Ericsson (beamformers), US Army (qualified), Intel (Jabil LRO SiPh PIC chain)
+| Relationship | Current evidence class | Model treatment |
+|---|---|---|
+| **Jabil** | Public co-development / product relationship | Included; exclusivity is not disclosed. |
+| **GlobalFoundries** | Public strategic collaboration and reference-design integration | Included as a route to customer qualification, not as guaranteed wafer allocation or end-customer revenue. |
+| **Strategic LiDAR customer** | Sivers disclosed production ramp from Q4 2026 and $53M-$138M lifecycle revenue potential | Included; customer identity and quarterly phasing remain undisclosed. |
+| **Defense / SATCOM programs** | Public awards, orders, and program disclosures | Included where order or program evidence exists; classified-program timing remains uncertain. |
+| **Ayar Labs, Lightmatter, Celestial, O-Net, POET and other optical-engine links** | Public ecosystem material plus OSINT supply-chain mapping of varying strength | Breadcrumb-weighted. No sole-source, primary-source, or fixed allocation is assumed without direct disclosure. |
+| **NVIDIA, Broadcom, Marvell, MediaTek, AMD and hyperscalers** | Platform/end-market exposure through foundry, ODM, or optical-engine ecosystems | Treated as downstream demand exposure, not automatically as direct Sivers customers. |
+| **Apple / consumer wearable** | Unnamed-customer and OSINT inference | Optionality only until customer identity and production award are confirmed. |
 
-**Zero failed partnerships. Zero cancelled contracts. Zero NDA breaches.**
-Management discipline on confidentiality (Apple silence) = hyperscaler trust.
-POET's NDA breach and -65% crash proves the value of SIVE's silence.
+The artifact does not infer exclusivity, cancellation history, or customer trust from silence. Website changes and ecosystem diagrams are breadcrumbs, not proof of supplier displacement or purchase commitments.
 
 ## Pipeline Data
 
-- Total pipeline: $453M (+64% YoY)
-- Design-in/Win+: $218M (+172% YoY)
-- Product pipeline: +90% YoY
-- Tier-1 (undisclosed) high-volume laser arrays MoU
-- LiDAR: $56M over 4 years from Q4 2026
-- WIN Semi: InP manufacturing partner qualifying production
+- Latest disclosed opportunity pipeline: **$799M** at Q1 2026
+- Pipeline is an opportunity measure, not backlog or contracted revenue
+- Tier-1 high-volume laser-array opportunity remains unnamed and must not be treated as a production award
+- LiDAR: **$53M-$138M cumulative revenue potential over the customer's product lifecycle**, with production ramp disclosed from Q4 2026
+- WIN Semi: external manufacturing path under qualification; dedicated allocation, qualified CW output, yield, backend throughput, and volume revenue are not disclosed
 
 ## Capital Events (Jun–Jul 2026) — Directed Issue + Bootstrap Conversion
 
@@ -132,64 +127,72 @@ POET's NDA breach and -65% crash proves the value of SIVE's silence.
 
 **Bootstrap conversion (PR, Jul 3 2026):** Bootstrap Europe IV converted the full $12M fixed-rate secured convertible (from the Feb 24 refinancing of all external debt) at **SEK 4.77** → **22,847,044 new shares**, paid by set-off — debt extinguished, no cash out. Count: 332,234,273 → **355,081,317** (+6.4% dilution). Credit-positive (CFO: substantially reduces outstanding debt, strengthens balance sheet for the three focus segments) at the cost of the dilution now in every per-share column. Cumulative capital-structure tape since Jul 2: **+16.4% shares** (305.15M → 355.08M) — the per-share ceiling paying for the ramp-funding balance sheet.
 
-**Base adjudication (Jul 19):** the funding event does not clear the manufacturing gate. The prior artifact treated the WIN relationship too close to secured production capacity. Base is reduced from 54/60 (90%) to 51/60 (85%) until qualification, allocation, yield, backend readiness, or volume revenue becomes visible. The ceiling remains unchanged because this is a probability/timing revision rather than a TAM revision.
+The funding event does not clear the manufacturing gate. Capital supports foundry work, proprietary process steps, working capital, and potential second-source development, but production qualification, allocation, yield, backend readiness, and volume revenue remain the evidence gates.
 
 ## Scoring Breakdown
 
 | Category | Score | Evidence |
 |----------|-------|---------|
-| Core Thesis | 18/20 | Physics moat (Si can't generate light) protects the InP-laser CATEGORY, not SIVE specifically. Sole INDEPENDENT CW supplier (LITE/COHR vertically integrated competitors also supply). Confirmed across all 4 CPO platforms + 13 vectors. Docked 2: multi-sourced (hyperscalers buy from several), and SIVE owns the IP/design but NOT the manufacturing bottleneck — not an AEHR/ASML-grade own-the-chokepoint monopoly. |
+| Core Thesis | 18/20 | Physics moat protects the InP-laser category, not SIVE specifically. Sivers has differentiated DFB-array, high-power laser, and SOA capability with broad ecosystem exposure, but LITE, COHR, and other suppliers compete for the same optical budgets. Sivers owns IP/design and some proprietary process steps, not the full manufacturing bottleneck. |
 | Cycle Stage | 7/10 | Technology and customer demand are demonstrated, but Sivers said it was still qualifying lasers for production-ready status in 2027. Neither Sivers nor WIN has disclosed qualified CW-laser wafer capacity, Sivers allocation, production yield, backend capacity, or volume revenue. Initial production remains probable; the slope and timing of HVM remain uncertain. |
 | TAM Expansion | 10/10 | Goldman $193B photonics TAM. EU Chips Act 2.0 photonics pillar. Golden Dome $1.2T. Universal light source primitive across CPO/LRO/FMCW/SATCOM/defense. Demand undisputed (the shortage IS the demand). |
 | Catalysts | 5/5 | Jabil production Aug 2026. H1 report. NASDAQ dual-listing. MRVL Celestial ramp. Raise floor-set at 57 confirmed. |
 | Macro | 10/10 | US CHIPS Act funding received. EU Chips Act 2.0 photonics pillar. NATO defense. Golden Dome. Dual government backing (US + EU). |
 | Alpha | 5/5 | 3 analysts. Swedish media calls "meme stock." OSINT supply chain mapping to Celestial/Ayar/Lightmatter. Deepest asymmetry in portfolio. Market hasn't connected MRVL Celestial ramp to SIVE laser supply. |
 | Risks | −4 | **Class 1 (−3), fab-light/manufacturing bundle:** SIVE owns laser IP but not the complete qualified InP front-end and backend capacity required for the modeled ramp. The public WIN relationship establishes a manufacturing path, not a disclosed dedicated allocation. The circulated 35,000-wafer figure is potential foundry capacity over time, not verified current InP CW-laser output available to Sivers. Qualification timing, yield, test/singulation/ship capacity, foundry pricing power, and further financing remain live risks. The raise partially mitigates funding risk but confirms capital intensity. **Class 2 (−1), architecture substitution:** VCSEL-based CPO contests part of the scale-up/on-package tier; see Architecture-Substitution Watch. |
-| **Base** | **51/60 (85%)** | **Lowered from 90% on Jul 19, 2026; ceiling, multiple, and share count unchanged.** |
+| **Base** | **51/60 (85%)** | Manufacturing execution, customer conversion, and architecture allocation are probability-weighted; ceiling, multiple, and share count remain unchanged. |
 
-### Bear-case re-examination (May 28, 2026)
+### Bear-case re-examination
 
 Substantive bear case (Moody @MoodyWriter13): SIVE is "well connected but irreplaceable nowhere" — multi-sourced, lacks pricing power, and the real chokepoint is fab CAPACITY (which SIVE doesn't own), not laser design. SIVE benefits now (Lumentum buying open-market because its capacity is NVIDIA-prioritized) but that's a Phase 1 effect; IP lead erodes before the fab chokepoint resolves.
 
-What the bear gets right (cost Base 59→55 in May; 54→51 in July): (1) multi-sourcing caps pricing power in a balanced market; (2) fab-light vulnerability is real; (3) the WIN relationship does not quantify qualified capacity, allocation, yield, or backend throughput; (4) the manufacturing ramp may require additional capital; and (5) IP leads erode over five-year horizons. These risks were under-priced in the prior Base.
+What the bear gets right: (1) multi-sourcing caps pricing power in a balanced market; (2) fab-light vulnerability is real; (3) the WIN relationship does not quantify qualified capacity, allocation, yield, or backend throughput; (4) the manufacturing ramp may require additional capital; and (5) IP leads can erode over five-year horizons.
 
-What preserves the ceiling despite the Base reduction: (1) in a structurally undersupplied market, multi-sourcing primarily reflects customers securing volume; (2) Sivers has demonstrated DFB-array technology and has a real WIN manufacturing relationship, even though allocation and qualified output remain undisclosed; (3) the shortage window spans the proposed FY2027-2030 monetization period; and (4) no evidence shows competitor IP catch-up will precede Sivers' manufacturing qualification. The ceiling remains attainable, but now requires explicit manufacturing gates rather than assumed capacity.
+What preserves the ceiling: (1) in a structurally undersupplied market, multi-sourcing can reflect customers securing volume; (2) Sivers has demonstrated DFB-array and SOA capability and has a real WIN manufacturing relationship, even though allocation and qualified output remain undisclosed; (3) the shortage window overlaps the proposed FY2027-2030 monetization period; and (4) no public evidence shows that competitor capacity will satisfy all qualified demand before Sivers can ramp. The ceiling remains attainable, but it requires explicit manufacturing gates rather than assumed capacity.
 
-### Manufacturing Gate Revision (Jul 19, 2026)
+### Manufacturing Gate
 
 | Gate | Current assessment |
 |---|---|
-| Sivers DFB/array technology works | High — demonstrated with Ayar Labs at >65mW per channel |
+| Sivers DFB/array and SOA capability exists | High — product/platform disclosures support the technology; customer-specific HVM yield is not disclosed |
 | Customer/platform demand exists | High |
 | WIN process transfer and qualification succeed | Medium |
 | Production-ready status during 2027 | Medium |
 | Meaningful Sivers wafer allocation plus qualified backend capacity | Low-medium |
 | 3,500 Sivers wafers/year (10% of the circulated 35,000 figure) by 2028 | Low; ceiling scenario only |
 
-The circulated calculation `35,000 wafers × 10% allocation × arrays per wafer × yield × ASP` is mathematically valid but industrially unverified. It skips wafer diameter/line configuration, Sivers allocation, front-end and array yield, facet/coating yield, testing, singulation, packaging, reliability qualification, and customer-qualified product mix. It must not anchor Base revenue.
+The circulated calculation `35,000 wafers × 10% allocation × arrays per wafer × yield × ASP` is mathematically valid but industrially unverified. The cited capacity was presented as potential capacity over time, not verified current Sivers CW output. It skips line configuration, allocation, front-end and array yield, facet/coating yield, testing, singulation, packaging, reliability qualification, and customer-qualified product mix. It must not anchor Base revenue.
+
+Sivers' InP100 platform is a **4-inch** wafer platform. Coherent is ramping **6-inch** InP across multiple fabs. Pure wafer geometry gives a 6-inch wafer **2.25x** the area of a 4-inch wafer, not 4x; actual die-cost advantage also depends on yield, die size, utilization, equipment, and backend. Coherent's scale and 6-inch ramp are a structural cost and capacity risk for Sivers, but the exact gap cannot be quantified from public data.
+
+### Aeva / High-Power SOA Read-Through
+
+Aeva publicly disclosed a high-power SOA exceeding 28 dBm with greater than 20% wall-plug efficiency at up to 50°C for CPO/ELSFP and LiDAR applications. Sivers publicly states that its InP100 platform supports booster SOAs and that its strategic LiDAR customer uses Sivers CW DFB lasers and optical amplifiers.
+
+This is a **positive technology-path breadcrumb**, not confirmed incremental datacenter revenue for Sivers. The third-party "stranded InP" model illustrates an alternative ELS architecture that seeds multiple SOAs from a smaller CW laser, but its device costs, yields, assembly losses, and margins are hypothetical. It cannot validate Sivers consolidated gross margin, prove that Aeva is the disclosed LiDAR customer, or establish a datacenter production award.
+
+**Model treatment:** the disclosed LiDAR lifecycle opportunity already captures the known production vector. No incremental Aeva/datacenter SOA revenue is added until a Sivers-linked production award or customer disclosure proves that it is separate from the existing remote-sensing program.
 
 **Model treatment:** retain probabilistic FY2027 initial production; shift the steepest manufacturing S-curve toward FY2028-2030; keep the 10% WIN-allocation case in the ceiling with a low current probability. Re-rate upward when Sivers or WIN discloses qualification completion, wafer allocation/capacity, production yield, backend readiness, or volume revenue.
 
-## Ceiling — v4.2 AH-1 Full Derivation (13-Vector, 40% OP, 30x sanctioned exception, per Rule AH-9)
+## Ceiling Derivation — 14 Vectors, 40% OP, 30x Sanctioned Exception
 
-### Vector 1: Ayar Labs / CPO CW Lasers (PRIMARY)
-Confirmed on ALL 4 CPO platforms: NVIDIA COUPE, Broadcom Davisson, Marvell/Celestial, MediaTek.
-Qualified in BOTH foundry ecosystems: TSMC + GlobalFoundries.
-NVIDIA lock-up of COHR+LITE capacity makes SIVE the ONLY independent CW supplier for non-NVIDIA CPO.
-Ayar Labs ($500M fundraise, NVIDIA/AMD/Intel backed) elevated SIVE to PRIMARY laser source after removing LITE/MACOM.
-Source: Serenity supply chain mapping (April-May 2026), PhotonCap 4-platform confirmation, GFS ecosystem slide.
-AH-7 confidence: HIGH — confirmed shipping, multiple platform qualifications.
+### Vector 1: Ayar Labs / CPO CW Lasers (OSINT-Linked)
+Sivers' laser-array products are technically relevant to Ayar-style external-light-source architectures, and public ecosystem material supports a credible commercial pathway. However, direct customer allocation, exclusivity, production volume, and foundry-qualified output are not disclosed. Removal of companies from a partner webpage is not proof that Ayar displaced Lumentum or MACOM, nor that Sivers became a primary or sole source.
+
+Source: public ecosystem material, GFS collaboration, and OSINT supply-chain mapping.  
+AH-7 confidence: **MEDIUM** — credible architecture and relationship breadcrumbs; HVM supplier allocation remains unverified.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
-| $92M | $248M | $432M | $605M |
+| $82M | $223M | $397M | $565M |
 
-### Vector 2: Jabil 1.6T LRO (PULLED FORWARD 9 MONTHS)
-Jabil EVP Crowley at JPM: quals 1-4 months, production as early as August 2026 (was H2 2027).
+### Vector 2: Jabil 1.6T LRO
+Jabil EVP Crowley at JPM: qualifications can take 1-4 months, with production discussed as early as August 2026.
 "Dramatic moat" — 11kW power, dramatically lower than current 1.6T profiles.
-SIVE likely SOLE SOURCE given architectural uniqueness (co-designed laser + PIC = 12-18 month switching cost).
+Co-design can create switching costs, but exclusivity has not been disclosed.
 Demand uncapped: "It's not about share. It's about keeping up with organic growth of the entire market."
-Source: Jabil JPM Fireside Chat (May 2026), Serenity sole-source analysis.
+Source: Jabil JPM Fireside Chat (May 2026) and public product commentary.
 AH-7 confidence: HIGH — Jabil executive public statements, quals timeline confirmed.
 
 | 2027 | 2028 | 2029 | 2030 |
@@ -197,12 +200,10 @@ AH-7 confidence: HIGH — Jabil executive public statements, quals timeline conf
 | $50M | $75M | $100M | $120M |
 
 ### Vector 3: Apple Blood-Glucose Consumer Wearable
-50M unit RfQ from "US Fortune 100." 135-wavelength hyper-customized laser architecture.
-DigiTimes + Serenity confirm timeline H2 2027/2028. Management silence = NDA discipline.
-Revenue per unit estimated $2.50-3.00 for laser array.
-Consumer wearable TAM optionality beyond Apple: Samsung 15M + Huawei 10M + Fitbit 8M = $240-300M potential (not modeled, Apple only in base).
-Source: DigiTimes (April 2026), Serenity confirmation, RfQ analysis.
-AH-7 confidence: MEDIUM-HIGH — 70-80% probability. RfQ confirmed, timeline uncertain.
+An unnamed U.S. Fortune 100 wearable opportunity has been linked by OSINT to Apple and blood-glucose sensing. Customer identity, unit volume, production award, timing, and content are not publicly confirmed. Management silence is not evidence of an NDA or customer identity.
+
+Source: industry reporting and OSINT inference.  
+AH-7 confidence: **LOW-MEDIUM** — retained as a probability-weighted vector, not a confirmed Apple program.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
@@ -220,33 +221,30 @@ AH-7 confidence: HIGH — government-funded, contracted.
 | $5M | $10M | $15M | $20M |
 
 ### Vector 5: Defense Primes (RTX, BAE, Ericsson)
-Raytheon beamformers for space/telecom. BAE STAR duplex arrays for radar jamming/EW.
-Ericsson beamformers. Revenue appears "randomly in financial statements" due to classified nature.
-Gen 2 BFICs: +6 to 12dB power AND 3-5x efficiency vs ALL competitors.
-Source: Serenity defense prime mapping, CHIPS Act context.
-AH-7 confidence: MEDIUM — confirmed customers, revenue timing uncertain due to classified programs.
+Public program, award, and ecosystem evidence supports defense and telecom beamformer exposure. Exact prime-level content, competitive performance, and revenue timing are not fully disclosed.
+
+Source: public awards, company materials, and industry mapping.  
+AH-7 confidence: **MEDIUM** — real program exposure; customer-specific production timing remains uncertain.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $10M | $20M | $30M | $40M |
 
 ### Vector 6: Lightmatter (Photonic Interconnect)
-$4.4B private, backed by MSFT/GOOG/NVDA. Uses SIVE CW lasers via GFS fabrication.
-Chain: SIVE → GFS → Lightmatter → Hyperscalers. Distinct from Lightelligence (V8): Lightmatter = photonic INTERCONNECT.
-Source: GFS ecosystem slide, Serenity discovery (April 2026).
-AH-7 confidence: MEDIUM — GFS confirmed, Lightmatter-specific volume uncertain.
+Lightmatter's optical-I/O architecture expands the addressable market for external light sources. Sivers and Lightmatter both appear in the broader GFS ecosystem, but a direct Sivers supply award and production volume are not publicly disclosed.
+
+Source: GFS ecosystem material and OSINT mapping.  
+AH-7 confidence: **LOW-MEDIUM** — architecture demand is credible; Sivers-specific content is unverified.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $20M | $48M | $75M | $105M |
 
 ### Vector 7: Celestial AI / O-Net (Chinese Hyperscaler Demand)
-Celestial: acquired by Marvell, became their CPO growth vector. Would be $10B+ standalone.
-O-Net: Tier-1 optical packager for Huawei/ZTE. SIVE supplies to Chinese hyperscaler demand via O-Net.
-Lightelligence (V8) is separate — this vector covers Celestial/Marvell + O-Net/Huawei channels.
-China 3nm breakthrough (if real) accelerates Chinese datacenter buildout = upside to this vector.
-Source: Serenity customer mapping, O-Net/Enablence confirmed.
-AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncertain.
+Celestial/Marvell and O-Net represent credible optical-engine and Asian-datacenter channels. Public evidence supports the end-market ramp, but Sivers-specific production share and direct customer status remain OSINT-linked.
+
+Source: company commentary and OSINT customer mapping.  
+AH-7 confidence: **MEDIUM** — market ramp is visible; supplier allocation is not.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
@@ -255,52 +253,52 @@ AH-7 confidence: MEDIUM — customers confirmed, China demand trajectory uncerta
 ### Vector 8: Lightelligence (Photonic COMPUTE)
 88.3% share of China's independent optical interconnect. Chinese hyperscalers (Tencent, Baidu, Biren) flow through Lightelligence to SIVE.
 Distinct from Lightmatter (V6): Lightelligence = photonic COMPUTE (processing data with light).
-$250M funded. SIVE supplies lasers to BOTH approaches (interconnect + compute).
-Source: Serenity 13-vector mapping, Lightelligence confirmed.
-AH-7 confidence: HIGH — MRVL CEO confirmed Celestial volume ramp on earnings call (May 2026). Scale-up optics revenue >2x prior $150M outlook. "Bringing Celestial to high volume manufacturing."
+$250M funded. The architecture is relevant to Sivers' laser portfolio, but a direct production supply relationship is not publicly confirmed.
+Source: OSINT ecosystem mapping.
+AH-7 confidence: **LOW-MEDIUM** — the photonic-compute pathway is relevant, but Sivers-specific customer allocation and production volume remain unverified. Marvell/Celestial evidence belongs to Vector 7 and does not independently validate Lightelligence revenue.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $12M | $35M | $58M | $75M |
 
 ### Vector 9: Nokia (Telecom Infrastructure)
-Finland revenue 268x YoY growth confirmed. Nokia is a direct customer.
-Telecom infrastructure modernization (5G/6G) driving demand.
-Source: SIVE financial reports (Finland geographic revenue), Serenity confirmation.
-AH-7 confidence: MEDIUM-HIGH — revenue already flowing, growth trajectory confirmed.
+Finland geographic revenue and telecom-sector exposure support a Nokia-related inference, but geographic revenue alone does not identify the customer or future run-rate.
+
+Source: Sivers financial reports and OSINT mapping.  
+AH-7 confidence: **MEDIUM** — telecom revenue is real; customer identity and scaling remain partly inferred.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $8M | $20M | $30M | $35M |
 
 ### Vector 10: LIGHTIUM / TFLN (Thin-Film Lithium Niobate)
-TFLN modulators on Chinese supply chains. Emerging technology with SIVE as laser source.
-Source: Serenity 13-vector mapping.
-AH-7 confidence: LOW-MEDIUM — early stage, technology pathway confirmed but commercial scale uncertain.
+TFLN modulators create a relevant external-laser opportunity, but no disclosed Sivers production award anchors this vector.
+
+Source: OSINT ecosystem mapping.  
+AH-7 confidence: **LOW** — technology pathway is credible; commercial linkage is unverified.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $5M | $15M | $25M | $35M |
 
-### Vector 11: GFS SiPh Platform — CPO + LPO + SCALE (expanded Jun 2, 2026; AMD fold Jun 15)
-**Jun 2, 2026: SIVE × GlobalFoundries strategic collaboration (Reuters).** SIVE's laser arrays integrated into GF's reference designs across ALL optical architectures: CPO, LPO (linear pluggable optics), and SCALE™ platform. This is reference design INTEGRATION — not supplier list, not qualification. SIVE is the DEFAULT laser route for every design prototyped on GF's SiPh platform. GF customers include Broadcom, NVIDIA, Marvell, AMD, Lightmatter.
+### Vector 11: GFS SiPh Platform — CPO + LPO + SCALE
+**Jun 2, 2026: SIVE × GlobalFoundries strategic collaboration (Reuters).** SIVE's laser arrays are integrated into GF reference-design work across CPO, LPO, and SCALE™. This is an important route to qualification, but it does not make Sivers the default laser for every GF design and does not disclose end-customer awards, wafer allocation, or revenue.
 
-**Jun 15, 2026: AMD negotiating large-scale CW laser POs (TrendForce via Serenity).** AMD "actively ordering materials for its external laser solutions and negotiating large-scale purchase orders for high-power CW laser chips to ensure its future production capacity is not constrained by NVIDIA." SIVE is one of only two laser suppliers on the GFS SCALE slide (SIVE + LITE). LITE is sold out through 2028. **Two GPU companies (NVIDIA and AMD) are now competing for CW laser supply from the same constrained supplier base — bidding-war dynamic for SIVE's output.** This is the V11 trigger firing: AMD's MI500 CPO via GFS needs CW lasers, and SIVE is the available independent source.
+**Jun 15, 2026: AMD was reported to be negotiating large-scale CW-laser procurement.** This supports the market-wide demand thesis. It does not identify Sivers as the award recipient. A GFS ecosystem slide showing Sivers and Lumentum establishes relevance, not a two-supplier market or a bidding war for Sivers output.
 
-Prior Vector 11 was AMD MI500 CPO only at 25% probability. Expanded Jun 2 to full GF SiPh platform at 80%. **Escalated Jun 15 to 85%** on TrendForce AMD procurement confirmation:
+Current vector scope:
 - CPO: AMD MI500 + all other GF CPO customers (AMD actively securing supply)
 - LPO: next-gen SiPh-based pluggable transceivers ($25B pluggable market by 2030)
 - SCALE: GF's co-packaged advanced light engine platform
 
-Source: Reuters/PRNewswire Jun 2 2026, GFS ecosystem slide, Jefferies Taiwan channel checks, **TrendForce Jun 15 2026 (AMD CW laser POs)**.
-AH-7 confidence: **HIGH** — reference design integration confirmed + AMD procurement action confirmed.
-Probability: **85%** (was 80%; escalated on TrendForce AMD evidence)
+Source: Reuters/PRNewswire Jun 2 2026, GFS ecosystem material, and reported AMD procurement activity.  
+AH-7 confidence: **MEDIUM-HIGH** — Sivers/GF integration is confirmed; customer conversion and revenue allocation are not.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $15M | $95M | $175M | $250M |
 
-### Vector 12: YSS (York Space Systems) / All.Space — Golden Dome SATCOM (MERGED + REBUILT Jun 9, 2026)
+### Vector 12: YSS (York Space Systems) / All.Space — Golden Dome SATCOM
 
 **The chain:** York Space Systems (Golden Dome prime contractor, $237M+ IDIQs) → acquired All.Space ($355M) → SIVE is SINGLE-SOURCE BFIC supplier inside the Hydra tactical SATCOM terminal → chips fabricated at GFS (DoD trusted foundry, Vermont/NY).
 
@@ -333,7 +331,7 @@ Probability: **85%** (was 80%; escalated on TrendForce AMD evidence)
 **Rule 16b weighting:** $8.2M confirmed flowing 2026-2027. Follow-on stream (prime-wide YSS adoption) at 50-55% probability on 2-4x run-rate expansion by 2028, plus misc defense. Hydra standalone unit math supports ~$60M by 2030 — our $45M is the conservative take.
 
 Source: allspace volume order announcement (Jun 9 2026), Anders Storm Substack (May 23 2026), CBO report, York Q1 2026 earnings call, Sweden-USA MoU, Serenity supply-chain analysis.
-AH-7 confidence: **MEDIUM-HIGH** (was LOW) — confirmed volume PO + named prime + MIL-STD certified product + funded program.
+AH-7 confidence: **MEDIUM-HIGH** — confirmed volume PO + named prime + MIL-STD certified product + funded program.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
@@ -346,34 +344,47 @@ AH-7 confidence: **MEDIUM-HIGH** (was LOW) — confirmed volume PO + named prime
 
 ---
 
-### MRVL Earnings Confirmation (May 27, 2026)
+### Marvell / Celestial Market Confirmation
 
-MRVL CEO on earnings call: "Scale-up optics revenue next year should be more than 2x prior ~$150M outlook" based on Celestial. "Multiple CPO and NPO engagements accelerating." "Bringing Celestial to high volume manufacturing." Celestial selected by T1 hyperscaler (likely Amazon). Serenity confirms OSINT maps SIVE directly to Celestial as laser supplier.
+Marvell management confirmed accelerating scale-up optics, multiple CPO/NPO engagements, and a Celestial HVM path. This confirms the end market, not Sivers' supplier allocation. The hyperscaler identity and Sivers linkage remain inferred.
 
-Impact: Vector 7 (Celestial) upgraded MEDIUM→HIGH confidence, revenue doubled. Vectors 1, 6, 8, 11 all receive 10-15% probability uplift from "market adoption accelerate" macro confirmation.
+Impact: supports the TAM and timing behind Vector 7. No automatic probability uplift is assigned to other Sivers vectors without company-specific evidence.
 
-### Vector 13: POET Technologies (NEW May 2026)
+### Vector 13: POET Technologies
 
-POET optical interposer platform. $50M → $500M order signals volume trajectory. POET H2 2026 volume ramp with SIVE as the light source. SIVE captures laser/light-source content of POET's optical engine BOM.
+POET's optical-interposer platform and volume ambitions increase demand for external light sources. Sivers-specific BOM content and production allocation are not publicly disclosed.
 
-Source: Serenity supply chain mapping (May 28, 2026).
-AH-7 confidence: MEDIUM — SIVE→POET light source confirmed, POET $50M→$500M order confirmed, POET execution adds uncertainty.
+Source: OSINT supply-chain mapping.  
+AH-7 confidence: **LOW-MEDIUM** — platform demand is credible; direct content is unverified.
 
 | 2027 | 2028 | 2029 | 2030 |
 |------|------|------|------|
 | $8M | $20M | $35M | $45M |
 
-### Ayar/Wiwynn Rack-Scale Commercialization (May 28, 2026)
+### Vector 14: Strategic LiDAR Customer / Optical Amplifiers
 
-Ayar Labs + Wiwynn partnership for CPO rack-scale AI systems. Wiwynn clients: Amazon, Meta, Microsoft + in talks for Google TPU servers. Reference architecture ~512+ Supernova light sources per rack. Macom + Lumentum REMOVED from Ayar's partner site — confirms SIVE as primary/sole laser array supplier.
+Sivers disclosed that a strategic LiDAR customer incorporated its CW DFB lasers and optical amplifiers across product platforms, with production ramping from Q4 2026. The company estimates **$53M-$138M of cumulative revenue potential over the customer's product lifecycle**. The modeled four-year contribution below totals $110M, inside that disclosed range.
 
-Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commercialization channel reaching all 4 hyperscalers. Commercialization path now concrete, not theoretical.
+The customer is unnamed. Aeva is a plausible but unconfirmed identity because Aeva has publicly disclosed a >28 dBm high-power SOA for LiDAR and datacenter applications, while third-party industry analysis links Aeva manufacturing to Sivers. Neither company has confirmed the link. Datacenter SOA revenue is therefore excluded unless shown to be incremental to the disclosed LiDAR lifecycle opportunity.
+
+Source: Sivers March 11, 2026 press release; Aeva January 15, 2026 SOA release; third-party technical analysis.  
+AH-7 confidence: **MEDIUM-HIGH for the disclosed LiDAR program; LOW for Aeva identity and datacenter extension.**
+
+| 2027 | 2028 | 2029 | 2030 |
+|------|------|------|------|
+| $10M | $25M | $35M | $40M |
+
+### Ayar/Wiwynn Rack-Scale Commercialization
+
+Ayar Labs + Wiwynn validates a rack-scale optical-I/O commercialization path. The architecture is relevant to high-density external light sources, but production configuration, light-source count, Sivers content, supplier allocation, and deployment timing remain open. Partner-page changes do not confirm supplier displacement or exclusivity.
+
+**Impact:** supports the TAM and architecture pathway; it does not independently raise Vector 1 probability or revenue.
 
 ### Combined Revenue Table:
 
 | Vector | 2027 | 2028 | 2029 | 2030 |
 |--------|------|------|------|------|
-| 1. Ayar/CPO | $92M | $248M | $432M | $605M |
+| 1. Ayar/CPO | $82M | $223M | $397M | $565M |
 | 2. Jabil LRO | $50M | $75M | $100M | $120M |
 | 3. Apple | $0 | $65M | $100M | $130M |
 | 4. Defense NEMC | $5M | $10M | $15M | $20M |
@@ -386,15 +397,16 @@ Impact: Vector 1 (Ayar/CPO) +8% on sole-source confirmation + Wiwynn commerciali
 | 11. GFS SiPh Platform | $15M | $95M | $175M | $250M |
 | 12. YSS/allspace | $10M | $25M | $35M | $45M |
 | 13. POET | $8M | $20M | $35M | $45M |
+| 14. Strategic LiDAR / optical amplifiers | $10M | $25M | $35M | $40M |
 | **TOTAL** | **$260M** | **$751M** | **$1,230M** | **$1,665M** |
 
 ### Full Valuation Table (40% OP, 30x sanctioned exception, 355.08M shares):
 
 **Share count (PR-verified Jul 4, 2026):** 305,154,751 (IR, Jun 15) → 332,234,273 (post-raise, per Jul 3 PR — upsize reconciliation in Capital Events) → **355,081,317** (post-Bootstrap conversion, Jul 3 PR). Convention: dilution modeled when shares are actually created. The Nasdaq authorization (53.8M shares) remains approved but NOT issued — applied only on issuance (**~409M envelope** at that point).
 
-**Margin note:** 40% OP is HELD — DB1-sanctioned BOM pricing-power band (35-40%, "may be conservative"; memory names proved 66-72% possible in shortage). Not flagged as aggressive; the multiple, not the margin, was the non-standard element.
+**Margin note:** 40% OP is a **ceiling assumption and explicitly aggressive**. A third-party SOA device model showing roughly 49% gross margin for a hypothetical 650mW device is not evidence of Sivers consolidated economics. At the Q3 2027 FW4Q revenue level of $470M, 40% OP implies $188M of operating profit and roughly $42M of annual operating expense if gross margin were 49%. That is materially above the current opex run-rate but still requires exceptional operating leverage, favorable mix, qualified yields, and limited foundry pricing leakage. The August 27 report must be used to re-anchor gross margin and opex.
 
-**Multiple note (Jul 2, 2026 — two rulings same day):** 35x → 20x standard (batch adjudication, first name off the 27-name list) → **30x SANCTIONED EXCEPTION ruled by Tom, same day, on presented exact numbers.** This is the book's first above-standard exception (Samsung 15x and Hammond 18x are discounts). Candidate rationale offered at presentation: sole independent CW supplier inside a 14-quarter verified shortage, highest-Base held name, Nasdaq re-rate pending. Recorded like Samsung's 15x — dated, named, never "corrected." Threat pricing lives in Base (Risks −3), not the columns; adjudicated in-chat Jul 2. **Open consistency item:** TSEM's 30x (self-flagged "aggressive OP ramp") carries the same multiple — rationale comparison pending on the flagged-but-live register.
+**Multiple note:** **30x is a sanctioned SIVE exception**, reflecting high expected growth, scarce photonics exposure, and possible U.S.-listing liquidity. It is not justified by sole-source status, which is unproven. The multiple remains a deliberate ceiling input and should be revisited if volume conversion, margins, or financing fail to support the growth profile.
 
 | Year | Revenue | OP (40%) | × 30x | Shares | Per Share |
 |------|---------|----------|-------|--------|-----------|
@@ -416,7 +428,7 @@ WHY WE DON'T MODEL $60B:
 
 ---
 
-## ⚠️ FLAG: Stage 3 Optical I/O — Unmodeled TAM Add-On (Jun 6, 2026)
+## Stage 3 Optical I/O — Unmodeled TAM Add-On
 
 **Source:** Anders Storm Substack (Jun 6, 2026) cross-referencing Goldman Sachs "Optical Networking: The Next Mega Trend in AI Infrastructure" (April 2026) + Wiwynn/Ayar Labs Computex 2026 rack-scale demonstration.
 
@@ -428,25 +440,24 @@ WHY WE DON'T MODEL $60B:
 **What Goldman does NOT model (Stage 3 — XPU-to-XPU Optical I/O):**
 - Goldman labels this "CPO with XPU" with note: "Adoption schedule still unclear"
 - This stage replaces copper NVLink-type interconnect with optical I/O directly at the compute layer
-- Goldman's $154B TAM EXCLUDES this architecture entirely — it is a 100% add-on
+- Goldman's cited TAM does not explicitly model this architecture; the amount of genuinely additive demand depends on substitution versus new deployment
 
 **What Computex 2026 revealed (Wiwynn + Ayar Labs demo):**
 - Full rack solution: 32 AI compute trays, 64 AI ASICs, 800+ TB/s optical bandwidth
 - Up to 16 SuperNova light source assemblies per compute tray × 32 trays = **512 SuperNova assemblies per rack**
-- Each SuperNova contains SIVE CW laser arrays (16 wavelengths per assembly)
-- 512 vs Goldman's 30-60 = **8-15x more ELS per rack than currently modeled**
+- SuperNova requires a multi-wavelength external light source; Sivers content and supplier share are not publicly confirmed
+- 512 vs Goldman's 30-60 implies **8-15x more light-source assemblies per rack at the theoretical reference maximum**, not 8-15x more Sivers revenue
 - Wiwynn is ODM for Meta, Microsoft, Amazon — the hyperscalers who would deploy this
 
-**Supporting signals since flag creation:**
+**Supporting signals:**
 - **Jun 7, 2026 — Ayar Labs joins NVIDIA NVLink Fusion ecosystem.** CEO Mark Wade: making Ayar's CPO technology compatible with NVLink Fusion enables "hyperscalers, system innovators, and silicon partners to connect into NVLink AI fabrics with optical I/O... as AI clusters grow beyond what copper can support." Charles Wuischpard — the former Ayar CEO who BUILT the optical I/O technology, now at NVIDIA — publicly endorsed it: "Tremendous! This will open up a trillion dollar market opportunity." NVIDIA hired the architect of Stage 3 and he is calling the TAM from inside the company. Anders Storm explicitly connected this to Goldman's unmodeled third stage.
 - **Jun 9, 2026 — SemiAnalysis InferenceX GB300 benchmark data.** GB300 NVL72 dominates all inference systems on DeepSeek V4; "the rack-scale advantage is fundamentally a scale-up domain story" — 72 GPUs in one NVLink domain keeps MoE all-to-all traffic on fast interconnect while 8-GPU islands hit the wall early. Wide expert parallelism is THE performance lever. This is the empirical demand driver for ever-larger scale-up domains (NVL576 → NVL1152) that copper physically cannot span — the precise economic forcing function for optical I/O at the compute layer.
 
-**What this means for SIVE ceiling if Stage 3 deploys:**
-- Our FY2028 Vector 1 (Ayar): $248M — built on Stage 2 switch-CPO economics
-- If Ayar's optical I/O architecture deploys at 512 ELS/rack instead of 30-60, Vector 1 revenue scales 8-15x
-- Even at conservative 3-5x (partial deployment, mixed architectures): Vector 1 could be $750M-$1.25B FY2029-2030
-- This would raise total FY2030 revenue from $1.6B to potentially $2.5-3.5B
-- Per share impact at current model assumptions (40% OP, 35x, 305M shares): SEK 1,200-1,700 per share (vs current SEK 810)
+**What this could mean if Stage 3 deploys:**
+- Our FY2028 Vector 1 (Ayar): $223M — built on probability-weighted Stage 2 switch-CPO economics
+- A production architecture with materially more ELS content per rack could expand the addressable light-source pool.
+- The 512-unit figure is a theoretical reference-architecture maximum, not a confirmed production bill of materials.
+- No incremental per-share value is assigned until production configuration, Sivers content, ASP, and deployment volume are disclosed.
 
 **Data needed to model this add-on:**
 1. First hyperscaler production order for optical I/O racks (not demo — volume PO)
@@ -461,45 +472,60 @@ WHY WE DON'T MODEL $60B:
 **Three-stage revenue timeline for SIVE:**
 - Stage 1 (Pluggable — NOW): Vector 2 (Jabil LRO) + Vector 11 (GFS pluggable/LPO). Revenue flowing.
 - Stage 2 (Switch CPO — 2027-2028): Vectors 1, 3, 6, 7, 8, 11 (CPO portion). Goldman's $91B TAM. IN OUR MODEL.
-- Stage 3 (Optical I/O — 2028-2030): 8-15x more ELS per rack. Goldman acknowledges but cannot model. NOT IN OUR MODEL. Free option at current scoring.
+- Stage 3 (Optical I/O — 2028-2030): potentially much higher ELS density per rack. NOT IN THE CEILING until production evidence exists.
 
 ---
 
 ## Key Risks
 
 - NRE-to-volume conversion must execute (72% NRE today)
-- WIN Semi InP qualification must deliver
+- WIN and any other external manufacturing paths must complete qualification and disclose enough output to support the modeled ramp
+- **Manufacturing scale and cost:** Sivers' InP100 is a 4-inch platform, while Coherent is ramping 6-inch InP across several fabs. The geometry advantage is 2.25x wafer area before yield and process effects. Sivers must offset the incumbent's scale through design value, yield, pricing, and flexible foundry access.
+- **Aeva/SOA pathway:** a seeded-SOA ELS architecture could expand demand for Sivers optical amplifiers, but it can also introduce lower device yield, more optical interfaces, and assembly loss. No incremental datacenter revenue is modeled without a Sivers-linked production award.
+- **Ayar allocation:** the architecture is relevant, but sole-source or primary-source status is not established. A customer shift, second source, or weak monolithic-array yield would directly pressure the largest modeled vector.
 - CPO timeline could delay (ASE confirmed H2 2026 but risk exists)
 - SATCOM Gen 2 BFIC development timeline uncertain
 - LITE/COHR vertically integrated — could squeeze independent suppliers (mitigated by 4-platform fragmentation)
-- **Architecture substitution — VCSEL CPO (added Jul 2, 2026).** ams OSRAM formed an Optical Interconnect Business Line under M. Ashkan Seyedi (ex-NVIDIA Director, Networking — CPO/pluggable product marketing), mandate: "Enable next-gen interconnects for scale-up and on-package links for AI Systems." Contests the scale-up/on-package tier (Stage 3, NOT in our base model) at 25-35% mechanism probability. Base-case vectors are single-mode/long-reach or non-datacom — VCSEL-immune 2026-28 (no WDM density, 200G/lane at lab edge, ecosystem sunk into SiPh+ELS). Most-likely branch is copper displacement (TAM-additive for photonics, CRDO-adjacent). Full analysis + four pre-registered tells in the Architecture-Substitution Watch section.
-- **InP substrate supply chain exposure (added Jun 13, corrected Jun 13).** SIVE's lasers are fabbed at Win Semi, which sources InP substrates from undisclosed suppliers. InP substrate market (Reuters): Sumitomo ~40%, AXT ~35%, JX ~10% — AXT+Sumitomo = ~80%, but Sumitomo consumes much internally so the *available* external market is heavily AXT-dependent. Win Semi likely has at least partial AXT exposure at that concentration. Win Semi's GM acknowledged supply chains "relatively tight" (May 3, 2026). **China's indium export control policy expires November 10, 2026** — renewal/tightening = another leg of scarcity (bullish for SIVE's laser pricing power, but potentially constraining output); lapse = scarcity premium compresses. 6-inch InP wafer price +250% to ~$5,000 since controls began. Net effect for SIVE is mixed: pricing power WIDENS but production ceiling could LOWER. Watch policy signals from Q3 2026. **UPDATE Jun 19: SemiAnalysis ChipBook shows China indium exports at ALL-TIME HIGHS (~2,500kg/month, ~$15M/month). Supply is flowing, not restricted. Risk remains at November 10 expiry but current data contradicts the "rugpull" narrative.**
+- **Architecture substitution — VCSEL CPO.** ams OSRAM has formed an Optical Interconnect Business Line targeting scale-up and on-package AI links. VCSEL-based solutions could contest part of Stage 3. The nearer-term base vectors still favor single-mode InP where reach, WDM density, or external-light-source architecture requires it, but no vector is treated as permanently immune to substitution.
+- **InP substrate exposure.** Sivers' external foundries source from undisclosed substrate suppliers. A concentrated substrate market and China-related indium policy create both availability risk and potential pricing power. No specific substrate supplier exposure is assumed without disclosure.
+
+## August 27 Validation Checklist
+
+The next interim report should be tested against the following pre-registered gates:
+
+1. **LiDAR timing:** is the Q4 2026 production ramp reaffirmed, delayed, or accelerated?
+2. **Photonics gross margin and mix:** does reported product mix support a path toward the ceiling margin?
+3. **Opex scaling:** is operating expense growing materially slower than revenue while qualification activity expands?
+4. **Manufacturing readiness:** any disclosure on external-fab qualification, wafer allocation, yield, backend/test capacity, or second-source progress?
+5. **Datacenter conversion:** named production orders, shipments, LTAs, or recognized product revenue beyond NRE?
+6. **SOA optionality:** is datacenter optical-amplifier demand incremental to the disclosed LiDAR lifecycle program?
+7. **Ayar and optical-engine allocation:** any direct evidence of supplier share, exclusivity, or production content?
+
+**Pre-registered model action:** timing or manufacturing slippage moves Base first. A disclosed production award or incremental SOA program can move the ceiling. Gross margin and opex evidence determine whether the 40% OP ceiling assumption survives.
+
+## Primary Sources for the Current Refresh
+
+- Sivers strategic LiDAR customer and $53M-$138M lifecycle opportunity: https://www.sivers-semiconductors.com/press/strategic-lidar-customer-ramps-remote-sensing-production-with-sivers-semiconductors-technology/
+- Sivers InP100 4-inch platform and supported DFB/SOA devices: https://www.sivers-semiconductors.com/photonics/
+- Aeva high-power SOA disclosure: https://www.aeva.com/press/aeva-unveils-industry-leading-high-power-semiconductor-optical-amplifier-for-ai-data-center-and-physical-ai-applications/
+- Coherent 6-inch InP production ramp: https://www.coherent.com/news/press-releases/coherent-demonstrates-inp-technology-innovation
 
 ---
 
-## Serenity Intelligence Block (Jun 19, 2026 — @aleabitoreddit supply chain mapping)
+## OSINT Breadcrumb Register
 
-Source: Serenity's public X thread (Jun 19), independent supply chain analysis. Not scored — documented for future probability upgrades.
+The following items are useful leads but are not treated as confirmed customer awards:
 
-**1. V2 Expansion: Pluggable makers beyond Jabil are qualifying.** "After Jabil's announcement, other pluggable players reached out, and SIVE is working with them now (prob codevelopment, qualification stage)." If InnoLight, Eoptolink, or other non-vertically-integrated module makers qualify SIVE CW lasers for their own 1.6T pluggables, V2 transforms from "Jabil-only" ($75M FY2028) to "industry-wide CW pluggable supply" ($150-250M). **Trigger:** any non-Jabil pluggable maker names SIVE as laser source → V2 ceiling doubles.
+- Additional pluggable vendors may be evaluating Sivers CW lasers after the Jabil engagement.
+- O-Net may provide a route into Asian hyperscaler supply chains.
+- Sivers may have long-running design relationships with Ayar, Celestial, Lightmatter, Lightelligence, and POET.
+- CW-laser pluggables can bypass part of the constrained EML supply chain, but Sivers/Jabil is not proven to be the only such design.
 
-**2. O-Net Asian Hyperscaler Vector.** O-Net building ELS modules with SIVE lasers, "likely for the Asian hyperscaler supply chains" (Alibaba, Tencent, ByteDance). Geographic expansion beyond Western hyperscalers. Currently embedded in V7 (Celestial AI / O-Net) but the Asian hyperscaler angle is not explicitly modeled. If O-Net volume ramps for Asian DC buildout, V7 has significant upside beyond the current $75M FY2028.
-
-**3. EML Bypass Architectural Framing.** The Jabil 1.6T is not just a CW-laser-based transceiver — it DESIGNED AROUND the EML bottleneck. While LITE and COHR fight over EML supply (COHR buying EMLs from LITE because they can't make enough), SIVE/Jabil built the only 1.6T that doesn't need the constrained component. Jabil management: "relatively dramatic moat." This reframes V2 from "a transceiver partnership" to "an architectural bypass of the industry's binding constraint." The moat is that every competitor's 1.6T design depends on EMLs they can't source, while SIVE/Jabil's doesn't.
-
-**4. Independent Timeline Confirmation.** Serenity's staged timeline independently matches the artifact's three-stage model:
-- NOW → H1 2027: 1.6T pluggable (V2 Jabil, revenue flowing) ← **Stage 1**
-- H2 2026 onward: CPO scale-out (POET and others as CW laser customers) ← **Stage 1→2 transition**
-- H2 2027: Scale-up CPO (Ayar/NVIDIA NVLink ecosystem, primary volume) ← **Stage 2**
-- 2027+: Foundry reference designs (GF), Marvell/Celestial, Lightmatter, Lightelligence ← **Stage 2 breadth**
-
-**5. "Designed In Since They Were Small."** Marvell/Celestial AI, Lightmatter, Lightelligence all worked with SIVE when they were startups. The relationships predate the companies' scale-up. This is the deepest form of lock-in — co-design through multiple product generations creates switching costs that exceed the component cost. Serenity: "they've likely been working + designed in with these players since they were small way back when." This is the golden retriever thesis quantified: the partnerships are 3-5 years deep, not transactional.
-
-**Net assessment:** Serenity's independent mapping confirms all 13 vectors and adds V2 expansion breadcrumbs not yet public. The "everywhere in new optical architectures" observation from an independent analyst matches the golden retriever thesis. No scoring changes — but items 1 and 2 are pre-registered escalation paths: any press release confirming non-Jabil pluggable qualification or O-Net volume triggers a ceiling revision.
+**Upgrade triggers:** a named non-Jabil pluggable qualification; a named O-Net production award; a direct customer statement identifying Sivers content; foundry-qualified volume output; or recognized production revenue. Until then, these remain breadcrumbs and do not independently change Base or ceiling.
 
 ---
 
-## Architecture-Substitution Watch — VCSEL CPO (added Jul 2, 2026)
+## Architecture-Substitution Watch — VCSEL CPO
 
 **Verified facts (LinkedIn primary source, Jul 2026):** M. Ashkan Seyedi is VP/GM of a formal **Optical Interconnect Business Line** at ams OSRAM (Santa Clara), role live Jul 2026. His own mandate text: *"Enable next-gen interconnects for scale-up and on-package links for AI Systems."* NVIDIA history: Director, Networking (Jun 2024–Jun 2026) — technical product marketing for **co-packaged and pluggable interconnect**; Principal, Silicon Photonics Products (2023-24); SiPh Product Architect (2021-23); HPE Labs SiPh before that. Second credible voice: Irrational Analysis (@insane_analyst) — "VCSEL CPO is gaining momentum." LIWEI disclosed trimming photonics names on the signal.
 
