@@ -1821,7 +1821,18 @@
     "Meta Platforms": "元平台",
     "AI platform / advertising\nCore ads fund frontier-model and infrastructure investment": "AI平台/广告\n核心广告基金前沿模型和基础设施投资",
     "Microsoft": "微软",
-    "🔒 PLATFORM\nAzure + enterprise data, identity, security and workflow": "🔒 平台\nAzure + 企业数据、身份、安全性和工作流程"
+    "🔒 PLATFORM\nAzure + enterprise data, identity, security and workflow": "🔒 平台\nAzure + 企业数据、身份、安全性和工作流程",
+    "⚡ BOTTLENECK\nMaterials: InP substrate oligopoly — the externally-available supplier (~36% share, ~300k wafers). Three named prepayments totalling ~$134.7M (Casela RMB173M, Coherent $22.3M, Lumentum $87M to Dec 2031). Capacity 2x in 2026, 2x again 2027 → largest InP producer by units. Export-permit gated.": "⚡ 瓶颈\n材料：InP 衬底寡头垄断——外部供应商（约 36% 份额，约 30 万片晶圆）。到 2031 年 12 月，三项指定预付款总额约为 1.347 亿美元（Casela 1.73 亿人民币、Coherent 2230 万美元、Lumentum 8700 万美元）。 2026 年产能增加 2 倍，2027 年再增加 2 倍 → 按单位计算最大的 InP 生产商。出口许可证门禁。",
+    "Amazon.com, Inc.": "亚马逊公司",
+    "📊 BENEFICIARY\nCloud + custom silicon + ads platform. AWS $42.2B +36.7% @ 39.4% OP, slowest of big three (GCP +82%, Azure +43%). Capex $220B, capacity-constrained into 2028. $53.4B Anthropic gain excluded from model.": "📊 受益人\n云+定制芯片+广告平台。 AWS $42.2B +36.7% @ 39.4% OP，三巨头中最慢的（GCP +82%，Azure +43%）。资本支出 $220B，到 2028 年产能受到限制。 $53.4B 模型中排除人为收益。",
+    "Apple Inc.": "苹果公司",
+    "📊 BENEFICIARY (demand-side)\nConsumer platform, ~3B device installed base. NOT an AI bottleneck: Apple BUYS the constrained inputs. Cook: price rises forced by exponential memory cost increases; advanced-node availability constrained.": "📊 受益人（需求方）\n消费者平台，~3B 设备安装基础。不是人工智能瓶颈：苹果购买了受限的输入。库克：存储器成本指数级增长迫使价格上涨；高级节点可用性受到限制。",
+    "Reddit, Inc.": "雷迪特公司",
+    "📊 BENEFICIARY (AI data scarcity)\n26B-post human corpus licensed to OpenAI and Google; 91.3% gross margin. But data licensing is only 5.3% of revenue and the slowest-growing line, and user acquisition depends on Google search referrals.": "📊 受益者（AI 数据稀缺）\n26B-post 人类语料库授权给 OpenAI 和 Google；毛利率91.3%。但数据许可仅占收入的 5.3%，也是增长最慢的一条，用户获取依赖于 Google 搜索推荐。",
+    "Amkor Technology, Inc.": "安靠科技有限公司",
+    "⚡ BOTTLENECK\nAdvanced packaging capacity. #2 OSAT globally. TSMC 10-year agreement, NVIDIA USD 1.5B multi-year, Arizona is the only US advanced packaging at scale. Structurally low margin: 16.8% GM, capex ~36% of revenue, FCF negative.": "⚡ 瓶颈\n先进的封装能力。全球排名第二的 OSAT。台积电10年协议，NVIDIA USD 1.5B多年，Arizona是美国唯一大规模先进封装。结构性低利润率：毛利率为 16.8%，资本支出约占收入的 36%，自由现金流为负。",
+    "长鑫科技 CXMT": "长鑫科技 CXMT",
+    "❌ FAIL band\nChina #1 / global #4 DRAM, one of only four IDM makers. But a 3-generation technology gap, no EUV, >30% cost disadvantage, HBM 8-high yield ~25%. FY2024 gross margin was 5.00%. Growth is price-driven: Q1 capacity +11% seq, ASP +57% seq.": "❌ 失败带\n中国排名第一/全球排名第四的 DRAM，仅有的四家 IDM 制造商之一。但有3代技术差距，无EUV，>30%成本劣势，HBM 8-高良率~25%。 2024 财年毛利率为 5.00%。增长由价格驱动：第一季度产能增长 11%，平均售价增长 57%。"
   },
   "pl": {
     "Coherent Corp": "Spójna firma",
