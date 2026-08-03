@@ -213,8 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ev_group: 'Target',
             ev_today: 'Today',
             ev_1year: '2027',
-            wechat_scan: 'Scan with WeChat to add me',
-            wechat_close: 'Close',
             modal_loading: 'Loading…',
             modal_dive_suffix: '— Deep Dive',
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
@@ -275,8 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ev_group: '目标',
             ev_today: '今日',
             ev_1year: '2027',
-            wechat_scan: '微信扫一扫加我',
-            wechat_close: '关闭',
             modal_loading: '加载中…',
             modal_dive_suffix: '— 深度分析',
             modal_no_dive: '尚未提供 {ticker} 的深度分析。',
@@ -1214,67 +1210,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // detached from its anchor when the table scrolls.
     window.addEventListener('scroll', closeColInfoPopover, true);
     window.addEventListener('resize', closeColInfoPopover);
-
-    // === WeChat QR popover =============================================
-    // Click the WeChat contact button → small floating panel with the
-    // QR code (assets/wechat-qr.png). Same dismiss model as the column
-    // info popover: outside click, Escape, scroll, or resize all close.
-    let activeWeChatPopover = null;
-    function closeWeChatPopover() {
-        if (activeWeChatPopover) {
-            activeWeChatPopover.remove();
-            activeWeChatPopover = null;
-        }
-    }
-    function showWeChatPopover(anchorBtn) {
-        if (activeWeChatPopover) {
-            closeWeChatPopover();
-            return;   // toggle: re-clicking the same button dismisses
-        }
-        const pop = document.createElement('div');
-        pop.className = 'wechat-popover';
-        pop.setAttribute('role', 'dialog');
-        pop.setAttribute('aria-modal', 'false');
-        pop.innerHTML =
-            `<button class="wechat-popover-close" type="button" aria-label="${tr('wechat_close')}">×</button>` +
-            `<img src="assets/wechat-qr.png" alt="WeChat QR code">` +
-            `<p>${tr('wechat_scan')}</p>`;
-        pop.style.visibility = 'hidden';
-        document.body.appendChild(pop);
-        // Position below the WeChat button, right-aligned so it stays
-        // on-screen on narrow viewports.
-        const aRect = anchorBtn.getBoundingClientRect();
-        const pRect = pop.getBoundingClientRect();
-        const margin = 8;
-        let left = aRect.right + window.scrollX - pRect.width;
-        left = Math.max(margin, Math.min(left, window.innerWidth - pRect.width - margin));
-        const top = aRect.bottom + window.scrollY + 8;
-        pop.style.left = `${left}px`;
-        pop.style.top = `${top}px`;
-        pop.style.visibility = '';
-        pop._anchor = anchorBtn;
-        activeWeChatPopover = pop;
-        // Close button inside the popover
-        pop.querySelector('.wechat-popover-close').addEventListener('click', closeWeChatPopover);
-    }
-    const wechatBtn = document.getElementById('wechat-btn');
-    if (wechatBtn) {
-        wechatBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            showWeChatPopover(wechatBtn);
-        });
-    }
-    document.addEventListener('click', (e) => {
-        if (!activeWeChatPopover) return;
-        if (e.target.closest('.wechat-popover')) return;
-        if (e.target.closest('.wechat-btn')) return;
-        closeWeChatPopover();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && activeWeChatPopover) closeWeChatPopover();
-    });
-    window.addEventListener('scroll', closeWeChatPopover, true);
-    window.addEventListener('resize', closeWeChatPopover);
 
     async function pollLiveData(initial = false) {
         const live = await fetchLiveData();
