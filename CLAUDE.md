@@ -115,6 +115,29 @@ fed it 500s), re-enable it + "Execute now". The hourly GitHub schedule is the
 backup. The dispatch endpoint:
 `https://api.github.com/repos/TalentedTom/1amInvesting/actions/workflows/refresh-live-prices.yml/dispatches`
 
+### fetch_live.py runtime guards (added 2026-08-06 after a 70-min stall)
+Yahoo throttles datacenter IPs much harder than home connections. The same
+fetch that took ~50 s locally intermittently **hung for 15 min** on GitHub's
+runners, blew the job timeout, and left live.json stale for over an hour
+(during market hours). yfinance retries internally with no ceiling, so one
+throttled ticker blocked the whole sequential loop. Three guards now:
+- **Parallel fetch** (`--workers`, default 8) — 98 tickers in ~6 s, was ~50 s.
+  Keep this modest; high concurrency from one IP is what provokes throttling.
+- **Hard deadline** (`--deadline-seconds`, default 180) — publishes whatever
+  arrived and drops stragglers. Payload gains `"partial": true` +
+  `expected_count` so partial runs are identifiable. Bounds the bad case at
+  ~3 min instead of an open-ended hang.
+- **Success floor** (`--min-success-ratio`, default 0.5) — if under half the
+  book was fetched, **exit 1 and write nothing**, so the previous good
+  live.json survives on the branch. An `ABORT:` line in a failed run is this
+  guard working as designed, NOT a bug — a near-empty payload with a fresh
+  timestamp is worse than a stale one (the freshness pill would read green
+  while most rows silently sat on xlsx values).
+
+`__main__` calls `os._exit()` deliberately: ThreadPoolExecutor threads are
+non-daemon, so the default atexit join would wait on a wedged yfinance worker
+and reintroduce the exact hang the deadline exists to prevent.
+
 ---
 
 ## Key frontend pieces (script.js, ~1900 lines, one big DOMContentLoaded)
