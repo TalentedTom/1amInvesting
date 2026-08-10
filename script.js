@@ -225,6 +225,16 @@ document.addEventListener('DOMContentLoaded', () => {
             region_all: 'All',
             region_china: '🇨🇳 China',
             region_exchina: 'Ex-China',
+            watchlist_label: 'Watchlist',
+            watchlist_btn: 'Starred',
+            watchlist_add: 'Add to watchlist',
+            watchlist_remove: 'Remove from watchlist',
+            watchlist_show: 'Show only starred stocks',
+            watchlist_showing: 'Showing starred only — click to show all',
+            watchlist_empty_tip: 'Star a stock to build your watchlist',
+            watchlist_empty: 'No starred stocks yet — tap the ☆ next to any ticker to add it.',
+            watchlist_no_match: 'None of your starred stocks match the other active filters.',
+            no_rows: 'No stocks match the current filters.',
             modal_chart_suffix: '— Chart',
             modal_chart_close_label: 'Close chart',
             chart_btn_label: 'Open chart',
@@ -285,6 +295,16 @@ document.addEventListener('DOMContentLoaded', () => {
             region_all: '全部',
             region_china: '🇨🇳 中国',
             region_exchina: '非中国',
+            watchlist_label: '自选',
+            watchlist_btn: '自选股',
+            watchlist_add: '加入自选',
+            watchlist_remove: '移出自选',
+            watchlist_show: '只看自选股',
+            watchlist_showing: '正在只看自选股 — 点击显示全部',
+            watchlist_empty_tip: '点击 ☆ 添加自选股',
+            watchlist_empty: '尚未添加自选股 — 点击代码旁的 ☆ 即可添加。',
+            watchlist_no_match: '您的自选股均不符合其他筛选条件。',
+            no_rows: '没有符合当前筛选条件的股票。',
             modal_chart_suffix: '— 行情',
             modal_chart_close_label: '关闭行情',
             chart_btn_label: '打开行情',
@@ -410,6 +430,63 @@ document.addEventListener('DOMContentLoaded', () => {
     // up in the xlsx alongside the canonical Yahoo .SS — accept both.)
     const CHINA_SUFFIX_RE = /\.(HK|SS|SSE|SH|SZ|SZSE)$/i;
     const isChineseTicker = (ticker) => CHINA_SUFFIX_RE.test(String(ticker || '').trim());
+
+    // === Watchlist ======================================================
+    // Per-visitor starred tickers, persisted as a JSON array in
+    // localStorage. Keyed on the CANONICAL symbol (data-ticker), never the
+    // visible label — Asian rows display the company Name, so keying on
+    // display text would break starring for a third of the book and desync
+    // on language switch.
+    const WATCHLIST_STORAGE_KEY = 'watchlist_v1';
+    const WATCHLIST_ONLY_KEY = 'watchlistOnly_v1';
+    let watchlist = (() => {
+        try {
+            const raw = JSON.parse(localStorage.getItem(WATCHLIST_STORAGE_KEY) || '[]');
+            if (Array.isArray(raw)) return new Set(raw.map(String).filter(Boolean));
+        } catch (_) {}
+        return new Set();
+    })();
+    // Filter state persists too, but an empty watchlist forces it OFF at
+    // load: restoring "watchlist only" with nothing starred would greet the
+    // visitor with a blank table and no obvious cause.
+    let watchlistOnly = localStorage.getItem(WATCHLIST_ONLY_KEY) === '1' && watchlist.size > 0;
+
+    const saveWatchlist = () => {
+        try {
+            localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify([...watchlist]));
+            localStorage.setItem(WATCHLIST_ONLY_KEY, watchlistOnly ? '1' : '0');
+        } catch (_) {}   // private mode / quota — feature degrades, page doesn't
+    };
+
+    // Reflects count + active state onto the toolbar button. Called after
+    // every star toggle and on first paint.
+    const syncWatchlistButton = () => {
+        const btn = document.getElementById('watchlist-btn');
+        if (!btn) return;
+        btn.classList.toggle('active', watchlistOnly);
+        btn.setAttribute('aria-pressed', watchlistOnly ? 'true' : 'false');
+        const countEl = btn.querySelector('.watchlist-count');
+        if (countEl) {
+            countEl.textContent = watchlist.size ? String(watchlist.size) : '';
+            countEl.style.display = watchlist.size ? '' : 'none';
+        }
+        btn.title = watchlist.size
+            ? tr(watchlistOnly ? 'watchlist_showing' : 'watchlist_show')
+            : tr('watchlist_empty_tip');
+    };
+
+    const toggleWatchlist = (ticker) => {
+        const sym = String(ticker || '').trim();
+        if (!sym) return;
+        if (watchlist.has(sym)) watchlist.delete(sym);
+        else watchlist.add(sym);
+        // Un-starring the last name while filtering would strand the visitor
+        // on an empty table — drop back to the full list instead.
+        if (watchlistOnly && watchlist.size === 0) watchlistOnly = false;
+        saveWatchlist();
+        syncWatchlistButton();
+        renderData();
+    };
 
     // Columns Dropdown Logic
     const columnsBtn = document.getElementById('columns-btn');
@@ -557,6 +634,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reflect the persisted choice on the pills (no re-render — initial render handles it).
     regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
     document.body.classList.toggle('region-china', regionFilter === 'china');
+
+    // Watchlist toggle — show only starred tickers. Refuses to engage with an
+    // empty watchlist (nothing to show); briefly pulses the button instead so
+    // the click still feels acknowledged.
+    const watchlistBtn = document.getElementById('watchlist-btn');
+    if (watchlistBtn) {
+        watchlistBtn.addEventListener('click', () => {
+            if (!watchlistOnly && watchlist.size === 0) {
+                watchlistBtn.classList.remove('nudge');
+                void watchlistBtn.offsetWidth;      // restart the CSS animation
+                watchlistBtn.classList.add('nudge');
+                return;
+            }
+            watchlistOnly = !watchlistOnly;
+            saveWatchlist();
+            syncWatchlistButton();
+            renderData();
+        });
+    }
+    syncWatchlistButton();
 
     // Year toggles — 2029 and 2030 columns hidden by default, each has its own button.
     [['show-2029-btn', 'show-2029'], ['show-2030-btn', 'show-2030']].forEach(([id, cls]) => {
@@ -1340,6 +1437,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!tags.some(t => activeSupercycles.has(t))) return false;
                 }
 
+                // Watchlist filter — starred tickers only. Keyed off the
+                // English row's canonical Ticker so it survives language
+                // switches, same as the filters above.
+                if (watchlistOnly) {
+                    const sym = String((enData[i] && enData[i]['Ticker']) || '').trim();
+                    if (!watchlist.has(sym)) return false;
+                }
+
                 // Region filter — China = HK/Shanghai/Shenzhen listings only.
                 if (regionFilter !== 'all') {
                     const isCN = isChineseTicker((enData[i] && enData[i]['Ticker']) || '');
@@ -1622,6 +1727,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 .filter(Boolean)
         );
 
+        // Filtering to an empty set reads as a broken table unless we say
+        // why. Only the watchlist can strand a visitor with zero rows while
+        // every other control still looks normal, so name that case.
+        if (!data.length) {
+            // Three distinct dead ends, and conflating them misleads:
+            //   - starred nothing yet            -> tell them how to star
+            //   - starred names, but another
+            //     filter excludes all of them    -> point at the conflict,
+            //                                       NOT at an empty watchlist
+            //   - ordinary over-filtering        -> generic
+            let msg;
+            if (watchlistOnly && watchlist.size === 0) msg = tr('watchlist_empty');
+            else if (watchlistOnly) msg = tr('watchlist_no_match');
+            else msg = tr('no_rows');
+            bodyHtml = `<tr class="empty-row"><td colspan="100%">${msg}</td></tr>`;
+        }
+
         tbody.innerHTML = bodyHtml;
 
         // Re-apply expansion state by ticker.
@@ -1679,6 +1801,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Archive divider has its own button handler; clicks on the
                 // divider row shouldn't fall through to row-expand.
                 if (e.target.closest('.archive-divider')) return;
+                // Star must be tested BEFORE .ticker-symbol below: it lives
+                // inside the ticker cell, so without this the click would
+                // fall through and open the deep-dive modal.
+                const starBtn = e.target.closest('.star-btn');
+                if (starBtn) {
+                    e.stopPropagation();
+                    toggleWatchlist(starBtn.getAttribute('data-star-ticker'));
+                    return;
+                }
                 const chartBtn = e.target.closest('.chart-btn');
                 if (chartBtn) {
                     const ticker = chartBtn.getAttribute('data-chart-ticker');
@@ -1913,7 +2044,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     trimFlag = `<span class="trim-flag" title="${tr('trim_flag_tip')}">⚠</span>`;
                 }
             }
-            return `<span class="ticker-cell"${titleAttr}><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span>${trimFlag}</span>`;
+            // Watchlist star. Keyed on the canonical symbol (data-star-ticker),
+            // matching how deep-dive routing and the live.json merge key off
+            // data-ticker rather than the visible label.
+            const starred = watchlist.has(sym);
+            const starBtn = `<button class="star-btn${starred ? ' starred' : ''}" type="button"`
+                + ` data-star-ticker="${safeSym}"`
+                + ` title="${tr(starred ? 'watchlist_remove' : 'watchlist_add')}"`
+                + ` aria-label="${tr(starred ? 'watchlist_remove' : 'watchlist_add')}"`
+                + ` aria-pressed="${starred ? 'true' : 'false'}">${starred ? '★' : '☆'}</button>`;
+            return `<span class="ticker-cell"${titleAttr}><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span>${trimFlag}${starBtn}</span>`;
         }
 
         if (value === null || value === undefined || value === "") {

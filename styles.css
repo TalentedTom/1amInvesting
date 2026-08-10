@@ -619,7 +619,10 @@ td {
    so the chart icon and symbol are always reachable on phones. */
 th:nth-child(1), td:nth-child(1) { width: 95px; max-width: 105px; min-width: 88px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
 th:nth-child(2), td:nth-child(2) { width: 36px; max-width: 36px; min-width: 32px; text-align: center; position: sticky; left: 95px; z-index: 20; background: var(--bg-panel); padding-left: 2px; padding-right: 2px; }
-th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 130px; min-width: 100px; position: sticky; left: 131px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+/* Width bumped +16px when the watchlist star moved into this cell.
+   Safe to resize: column 3 is the LAST sticky column, so no other
+   rule's `left:` offset is measured against its width. */
+th:nth-child(3), td:nth-child(3) { width: 126px; max-width: 146px; min-width: 116px; position: sticky; left: 131px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
 th:nth-child(1), th:nth-child(2), th:nth-child(3) {
@@ -1243,6 +1246,96 @@ body.archive-open .archive-toggle::before {
     flex-shrink: 0;
 }
 
+/* === Watchlist star (inside the ticker cell) ======================
+   Deliberately NOT a new column: the first three columns are sticky
+   via nth-child(1..3) with hard-coded left offsets, so inserting a
+   column would shift every one of those rules across four media
+   queries. Living inside the ticker cell costs only width, and only
+   on column 3 — which nothing else is positioned against.
+   `margin-left: auto` parks it on the right edge of the cell so the
+   stars form a clean vertical rail down the table. */
+.star-btn {
+    margin-left: auto;
+    padding: 0 1px;
+    background: none;
+    border: none;
+    font-size: 0.95em;
+    line-height: 1;
+    color: var(--text-secondary);
+    opacity: 0.35;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+.star-btn:hover,
+.star-btn:focus-visible {
+    opacity: 1;
+    color: #f59e0b;
+    transform: scale(1.2);
+    outline: none;
+}
+.star-btn.starred {
+    opacity: 1;
+    color: #f59e0b;
+}
+/* Touch devices have no hover to reveal the affordance, so resting
+   opacity is lifted — an always-dim star reads as disabled on phones. */
+@media (hover: none) {
+    .star-btn { opacity: 0.55; }
+}
+
+/* === Watchlist toolbar button ===================================== */
+.watchlist-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.28rem;
+}
+.watchlist-star {
+    color: #f59e0b;
+    font-size: 0.95em;
+    line-height: 1;
+}
+.watchlist-btn.active .watchlist-star {
+    color: inherit;   /* active pill already carries the accent fill */
+}
+.watchlist-count {
+    min-width: 1.1em;
+    padding: 0 0.28em;
+    border-radius: 999px;
+    background: rgba(245, 158, 11, 0.18);
+    color: #f59e0b;
+    font-size: 0.82em;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+.watchlist-btn.active .watchlist-count {
+    background: rgba(255, 255, 255, 0.22);
+    color: inherit;
+}
+/* Clicking the button with nothing starred can't do anything useful.
+   Rather than silently ignoring the tap, shake the button so the
+   click is acknowledged and the tooltip explains what to do. */
+@keyframes watchlist-nudge {
+    0%, 100% { transform: translateX(0); }
+    25%      { transform: translateX(-3px); }
+    75%      { transform: translateX(3px); }
+}
+.watchlist-btn.nudge {
+    animation: watchlist-nudge 0.28s ease;
+}
+
+/* Empty-result row (all filters, but in practice the watchlist). */
+.empty-row td {
+    padding: 1.6rem 1rem !important;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+.empty-row:hover td {
+    background: transparent !important;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
@@ -1360,7 +1453,16 @@ body.table-settled tbody tr {
        horizontal scroll without overlap. */
     th:nth-child(1), td:nth-child(1) { width: 80px; max-width: 90px; min-width: 76px; }
     th:nth-child(2), td:nth-child(2) { width: 30px; max-width: 30px; min-width: 28px; left: 80px; }
-    th:nth-child(3), td:nth-child(3) { width: 96px; max-width: 110px; min-width: 88px; left: 110px; }
+    th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 126px; min-width: 102px; left: 110px; }
+
+    /* The star renders ~11px at phone font sizes — accurate enough to see,
+       too small to tap. Pad the button to roughly a 22px hit area without
+       growing the glyph or the (tight) sticky ticker column. */
+    .star-btn {
+        font-size: 1.05em;
+        padding: 5px 3px;
+        margin-right: -2px;
+    }
 }
 
 /* Phone-portrait optimization (iPhone 16 Pro Max ≈ 440px CSS, smaller phones
@@ -1476,7 +1578,7 @@ body.table-settled tbody tr {
         padding-left: 1px; padding-right: 1px;
     }
     th:nth-child(3), td:nth-child(3) {
-        width: 64px; max-width: 76px; min-width: 60px;
+        width: 78px; max-width: 92px; min-width: 74px;
         left: 24px;
         padding-left: 0.1rem; padding-right: 0.15rem;
     }

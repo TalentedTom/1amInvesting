@@ -171,6 +171,16 @@
                     <button class="region-pill" data-region="exchina" data-i18n="region_exchina">Ex-China</button>
                 </div>
                 <span class="sc-divider" aria-hidden="true"></span>
+                <!-- Watchlist: shows only tickers the visitor has starred.
+                     Selection lives in localStorage (per-browser, no account),
+                     so it survives reloads but doesn't sync across devices.
+                     The count badge is populated by JS. -->
+                <div class="filter-group">
+                    <button class="sc-pill watchlist-btn" id="watchlist-btn" type="button" aria-pressed="false">
+                        <span class="watchlist-star" aria-hidden="true">★</span><span data-i18n="watchlist_btn">Starred</span><span class="watchlist-count"></span>
+                    </button>
+                </div>
+                <span class="sc-divider" aria-hidden="true"></span>
                 <div class="filter-group">
                     <button class="sc-pill q-toggle-btn" id="show-2029-btn">2029</button>
                     <button class="sc-pill q-toggle-btn" id="show-2030-btn">2030</button>
