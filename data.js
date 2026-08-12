@@ -68,6 +68,39 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 3,
+            "Ticker": "AAOI",
+            "Name": "Applied Optoelectronics",
+            "EV (Base% x Upside)": 2.66,
+            "Base": 72,
+            "Port": "✓",
+            "Current Price": 135.63,
+            "Upside (Q3 2027)": 3.7,
+            "Position Type": "TEMPORAL BOTTLENECK - US-anchored 800G / 1.6T pluggable ramp\nQ2 2026: revenue 191.9M +86%, data center 107.7M +140%, CATV 80.6M +44%. Non-GAAP OPERATING LOSS 10.3M; opex 35% of revenue. Capacity completely booked through Q2 2027 and demand runs 20-40% above it. Q4 guided above 500M. Laser GM 55-65% but AOI cannot serve first-generation CPO on capacity. Fourth qualified 1.6T supplier at one hyperscaler. Diluted shares rising 88.1M to 92.8M on the ATM.",
+            "Artifact Updated": "Aug 12 v6.0: AH-11 eight-line decomposition, ceiling built to management stated trajectory. DC transceivers reach the mid-2027 target of 1,413/qtr at Q3 2027 with every line matching: 100G+400G 271 vs 270, 800G 651 vs 651, 1.6T 492 vs 492. Q3/Q4 2026 held at hard guidance. Probability lives in Base 72, not in a second revenue haircut. ELSFP at the management 400k pcs/mo figure, LOW confidence. Calibrated to the disclosed Q2 actual exactly.",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "Q3 2026": 108.701422413793,
+            "Q4 2026": 196.124916666667,
+            "Q1 2027": 297.47002020202,
+            "Q2 2027": 401.200514851485,
+            "Q3 2027": 495.36732038835,
+            "Q4 2027": 562.739695238095,
+            "Q1 2028": 606.018754716981,
+            "Q2 2028": 634.582635514019,
+            "Q3 2028": 648.641814814815,
+            "Q4 2028": 655.108201834863,
+            "Q1 2029": 656.904109090909,
+            "Q2 2029": 644.033297297297,
+            "Q3 2029": 620.250313901345,
+            "Q4 2029": 585.757839285714,
+            "Q1 2030": 542.069493333333,
+            "Change %": "-11.85%",
+            "Entry": 91,
+            "Total": 80,
+            "Upside": "3.7x",
+            "EV Upside": 163
+        },
+        {
+            "Rank": 4,
             "Ticker": "XFAB",
             "Name": "X-Fab Silicon Foundries",
             "EV (Base% x Upside)": 2.46,
@@ -99,7 +132,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 146
         },
         {
-            "Rank": 4,
+            "Rank": 5,
             "Ticker": "8147.TWO",
             "Name": "Nextronics Engineering",
             "EV (Base% x Upside)": 2.45,
@@ -132,7 +165,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 142
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Ticker": "6451.TW",
             "Name": "ShunSin Technology",
             "EV (Base% x Upside)": 2.3,
@@ -165,7 +198,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 133
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "EV (Base% x Upside)": 2.3,
@@ -198,7 +231,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 131
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "3363.TWO",
             "Name": "FOCI (上詮)",
             "EV (Base% x Upside)": 2.27,
@@ -231,7 +264,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 129
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
             "EV (Base% x Upside)": 2.25,
@@ -264,7 +297,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 125
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Ticker": "000660.KS",
             "Name": "SK Hynix",
             "EV (Base% x Upside)": 2.14,
@@ -297,7 +330,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 118
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "NBIS",
             "Name": "Nebius Group",
             "EV (Base% x Upside)": 2.08,
@@ -330,7 +363,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 111
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Ticker": "BRUN",
             "Name": "Boost Run",
             "EV (Base% x Upside)": 1.9,
@@ -362,7 +395,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 88
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "EV (Base% x Upside)": 1.8,
@@ -395,7 +428,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 82
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "MU",
             "Name": "Micron Technology",
             "EV (Base% x Upside)": 1.76,
@@ -428,7 +461,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 74
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AMKR",
             "Name": "Amkor Technology, Inc.",
             "EV (Base% x Upside)": 1.75,
@@ -460,7 +493,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "EV (Base% x Upside)": 1.74,
@@ -493,7 +526,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 71
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.68,
@@ -523,39 +556,6 @@ window.PORTFOLIO_DATA = {
             "Total": 65,
             "Upside": "2.5x",
             "EV Upside": 69
-        },
-        {
-            "Rank": 17,
-            "Ticker": "AAOI",
-            "Name": "Applied Optoelectronics",
-            "EV (Base% x Upside)": 1.58,
-            "Base": 72,
-            "Port": "✓",
-            "Current Price": 135.63,
-            "Upside (Q3 2027)": 2.2,
-            "Position Type": "TEMPORAL BOTTLENECK - US-anchored 800G / 1.6T pluggable ramp\nQ2 2026: revenue 191.9M +86%, data center 107.7M +140%, CATV 80.6M +44%. Non-GAAP OPERATING LOSS 10.3M; opex 35% of revenue. Capacity completely booked through Q2 2027 and demand runs 20-40% above it. Q4 guided above 500M. Laser GM 55-65% but AOI cannot serve first-generation CPO on capacity. Fourth qualified 1.6T supplier at one hyperscaler. Diluted shares rising 88.1M to 92.8M on the ATM.",
-            "Artifact Updated": "Aug 6 (Q2 2026 full transcript - corrected)",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "Q3 2026": 82.4242995689655,
-            "Q4 2026": 140.145833333333,
-            "Q1 2027": 199.210101010101,
-            "Q2 2027": 256.125742574257,
-            "Q3 2027": 300.202912621359,
-            "Q4 2027": 324.720952380952,
-            "Q1 2028": 337.719811320755,
-            "Q2 2028": 349.866355140187,
-            "Q3 2028": 362.973148148148,
-            "Q4 2028": 376.646788990826,
-            "Q1 2029": 387.351818181818,
-            "Q2 2029": 387.635294117647,
-            "Q3 2029": 375.318018018018,
-            "Q4 2029": 355.505829596413,
-            "Q1 2030": 327.734821428572,
-            "Change %": "-11.85%",
-            "Entry": 55,
-            "Total": 65,
-            "Upside": "2.2x",
-            "EV Upside": 59
         },
         {
             "Rank": 18,
@@ -1311,28 +1311,28 @@ window.PORTFOLIO_DATA = {
             "Current Price": 817.06,
             "Upside (Q3 2027)": 1.1,
             "Position Type": "🔒 CHOKEPOINT\nPhysics: EML laser near-monopoly — capacity sold out to 2029. 2026-2030+",
-            "Artifact Updated": "Aug 11 v6.0: AH-11 nine-line decomposition, margins reshaped to PEAK in the 2027-2028 shortage then fade back to current levels (Tom ruling). Laser lines peak EML 72.0 / CW 67.5 / UHP-ELS 78.0 / pump 64.0 around Q1-Q3 2028, returning to FQ4 FY2026 actual levels by 2030; Systems lines end higher on 1.6T ASP, OCS yield and scale. Calibrated to the disclosed FQ4 exactly. Diluted shares 102M. ABOVE GUIDANCE per AH-15.5: Q4 2027 OM 47.8% vs the raised 43-44% target model.",
+            "Artifact Updated": "Aug 11 v6.0: AH-11 TEN-LINE decomposition. Ultra-high-power split into laser CHIPS and ELS MODULES; margins set at the MIDPOINT of the independent BOM ranges per Tom ruling — chips 85% anchor rising to 90% peak in the 2027-2028 shortage then fading to 85%, modules 55% anchor rising to 59% then fading to 55%. First ELS module order is for 2H CY2027 delivery so the line is all chip until then. Calibrated to the disclosed FQ4 blend of 50.4% exactly. Diluted shares 102M. ABOVE GUIDANCE per AH-15.5.",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Q3 2026": 522.082647058824,
-            "Q4 2026": 610.7936,
-            "Q1 2027": 700.812854368932,
-            "Q2 2027": 789.378125603865,
-            "Q3 2027": 874.511807692308,
-            "Q4 2027": 953.476440191388,
-            "Q1 2028": 1022.95996190476,
-            "Q2 2028": 1080.25774407583,
-            "Q3 2028": 1127.70677358491,
-            "Q4 2028": 1165.90214084507,
-            "Q1 2029": 1198.52893457944,
-            "Q2 2029": 1226.04355348837,
-            "Q3 2029": 1249.17668518519,
-            "Q4 2029": 1270.16988018433,
-            "Q1 2030": 1289.68702752294,
+            "Q3 2026": 528.387549019608,
+            "Q4 2026": 620.263453658537,
+            "Q1 2027": 712.914796116505,
+            "Q2 2027": 802.700830917874,
+            "Q3 2027": 888.154115384616,
+            "Q4 2027": 966.748784688995,
+            "Q1 2028": 1036.21424761905,
+            "Q2 2028": 1093.87935545024,
+            "Q3 2028": 1141.81035849057,
+            "Q4 2028": 1180.55472300469,
+            "Q1 2029": 1213.52725233645,
+            "Q2 2029": 1241.4487627907,
+            "Q3 2029": 1265.09668518519,
+            "Q4 2029": 1286.83292165899,
+            "Q1 2030": 1307.22574311927,
             "Change %": "-8.61%",
             "Entry": 0,
             "Total": 49,
             "Upside": "1.1x",
-            "EV Upside": -12
+            "EV Upside": -11
         },
         {
             "Rank": 42,
@@ -3374,6 +3374,39 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 3,
+            "Ticker": "AAOI",
+            "Name": "应用光电",
+            "EV (Base% x Upside)": 2.66,
+            "Base": 72,
+            "Port": "✓",
+            "Current Price": 135.63,
+            "Upside (Q3 2027)": 3.7,
+            "Position Type": "临时瓶颈 - 美国锚定 800G / 1.6T 可插拔坡道\n2026 年第二季度：收入 1.919 亿 +86%，数据中心 1.077 亿 +140%，有线电视 8060 万 +44%。非 GAAP 运营亏损 1030 万；运营支出占收入的 35%。到 2027 年第二季度，运力已被完全预订，需求量将高出 20-40%。 Q4引导500M以上。激光GM 55-65%，但AOI在产能上无法服务第一代CPO。一家超大规模企业的第四家合格 1.6T 供应商。 ATM 上的稀释股票从 8810 万股上升至 9280 万股。",
+            "Artifact Updated": "Aug 12 v6.0: AH-11 eight-line decomposition, ceiling built to management stated trajectory. DC transceivers reach the mid-2027 target of 1,413/qtr at Q3 2027 with every line matching: 100G+400G 271 vs 270, 800G 651 vs 651, 1.6T 492 vs 492. Q3/Q4 2026 held at hard guidance. Probability lives in Base 72, not in a second revenue haircut. ELSFP at the management 400k pcs/mo figure, LOW confidence. Calibrated to the disclosed Q2 actual exactly.",
+            "SuperCycle": "AI, 1.6T, 800G",
+            "Q3 2026": 108.701422413793,
+            "Q4 2026": 196.124916666667,
+            "Q1 2027": 297.47002020202,
+            "Q2 2027": 401.200514851485,
+            "Q3 2027": 495.36732038835,
+            "Q4 2027": 562.739695238095,
+            "Q1 2028": 606.018754716981,
+            "Q2 2028": 634.582635514019,
+            "Q3 2028": 648.641814814815,
+            "Q4 2028": 655.108201834863,
+            "Q1 2029": 656.904109090909,
+            "Q2 2029": 644.033297297297,
+            "Q3 2029": 620.250313901345,
+            "Q4 2029": 585.757839285714,
+            "Q1 2030": 542.069493333333,
+            "Change %": "-11.85%",
+            "Entry": 91,
+            "Total": 80,
+            "Upside": "3.7x",
+            "EV Upside": 163
+        },
+        {
+            "Rank": 4,
             "Ticker": "XFAB",
             "Name": "X-Fab 硅铸造厂",
             "EV (Base% x Upside)": 2.46,
@@ -3405,7 +3438,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 146
         },
         {
-            "Rank": 4,
+            "Rank": 5,
             "Ticker": "8147.TWO",
             "Name": "明思电子工程",
             "EV (Base% x Upside)": 2.45,
@@ -3438,7 +3471,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 142
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Ticker": "6451.TW",
             "Name": "顺欣科技",
             "EV (Base% x Upside)": 2.3,
@@ -3471,7 +3504,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 133
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "EV (Base% x Upside)": 2.3,
@@ -3504,7 +3537,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 131
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "3363.TWO",
             "Name": "FOCI (上转)",
             "EV (Base% x Upside)": 2.27,
@@ -3537,7 +3570,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 129
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
             "EV (Base% x Upside)": 2.25,
@@ -3570,7 +3603,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 125
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Ticker": "000660.KS",
             "Name": "SK海力士",
             "EV (Base% x Upside)": 2.14,
@@ -3603,7 +3636,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 118
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "NBIS",
             "Name": "尼比斯集团",
             "EV (Base% x Upside)": 2.08,
@@ -3636,7 +3669,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 111
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Ticker": "BRUN",
             "Name": "加速跑",
             "EV (Base% x Upside)": 1.9,
@@ -3668,7 +3701,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 88
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "EV (Base% x Upside)": 1.8,
@@ -3701,7 +3734,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 82
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "MU",
             "Name": "美光科技",
             "EV (Base% x Upside)": 1.76,
@@ -3734,7 +3767,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 74
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "AMKR",
             "Name": "安靠科技有限公司",
             "EV (Base% x Upside)": 1.75,
@@ -3766,7 +3799,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "EV (Base% x Upside)": 1.74,
@@ -3799,7 +3832,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 71
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.68,
@@ -3829,39 +3862,6 @@ window.PORTFOLIO_DATA = {
             "Total": 65,
             "Upside": "2.5x",
             "EV Upside": 69
-        },
-        {
-            "Rank": 17,
-            "Ticker": "AAOI",
-            "Name": "应用光电",
-            "EV (Base% x Upside)": 1.58,
-            "Base": 72,
-            "Port": "✓",
-            "Current Price": 135.63,
-            "Upside (Q3 2027)": 2.2,
-            "Position Type": "临时瓶颈 - 美国锚定 800G / 1.6T 可插拔坡道\n2026 年第二季度：收入 1.919 亿 +86%，数据中心 1.077 亿 +140%，有线电视 8060 万 +44%。非 GAAP 运营亏损 1030 万；运营支出占收入的 35%。到 2027 年第二季度，运力已被完全预订，需求量将高出 20-40%。 Q4引导500M以上。激光GM 55-65%，但AOI在产能上无法服务第一代CPO。一家超大规模企业的第四家合格 1.6T 供应商。 ATM 上的稀释股票从 8810 万股上升至 9280 万股。",
-            "Artifact Updated": "Aug 6 (Q2 2026 full transcript - corrected)",
-            "SuperCycle": "AI, 1.6T, 800G",
-            "Q3 2026": 82.4242995689655,
-            "Q4 2026": 140.145833333333,
-            "Q1 2027": 199.210101010101,
-            "Q2 2027": 256.125742574257,
-            "Q3 2027": 300.202912621359,
-            "Q4 2027": 324.720952380952,
-            "Q1 2028": 337.719811320755,
-            "Q2 2028": 349.866355140187,
-            "Q3 2028": 362.973148148148,
-            "Q4 2028": 376.646788990826,
-            "Q1 2029": 387.351818181818,
-            "Q2 2029": 387.635294117647,
-            "Q3 2029": 375.318018018018,
-            "Q4 2029": 355.505829596413,
-            "Q1 2030": 327.734821428572,
-            "Change %": "-11.85%",
-            "Entry": 55,
-            "Total": 65,
-            "Upside": "2.2x",
-            "EV Upside": 59
         },
         {
             "Rank": 18,
@@ -4617,28 +4617,28 @@ window.PORTFOLIO_DATA = {
             "Current Price": 817.06,
             "Upside (Q3 2027)": 1.1,
             "Position Type": "🔒 阻塞点\n物理学：EML 激光器近乎垄断——产能到 2029 年就已售罄。2026-2030+",
-            "Artifact Updated": "Aug 11 v6.0: AH-11 nine-line decomposition, margins reshaped to PEAK in the 2027-2028 shortage then fade back to current levels (Tom ruling). Laser lines peak EML 72.0 / CW 67.5 / UHP-ELS 78.0 / pump 64.0 around Q1-Q3 2028, returning to FQ4 FY2026 actual levels by 2030; Systems lines end higher on 1.6T ASP, OCS yield and scale. Calibrated to the disclosed FQ4 exactly. Diluted shares 102M. ABOVE GUIDANCE per AH-15.5: Q4 2027 OM 47.8% vs the raised 43-44% target model.",
+            "Artifact Updated": "Aug 11 v6.0: AH-11 TEN-LINE decomposition. Ultra-high-power split into laser CHIPS and ELS MODULES; margins set at the MIDPOINT of the independent BOM ranges per Tom ruling — chips 85% anchor rising to 90% peak in the 2027-2028 shortage then fading to 85%, modules 55% anchor rising to 59% then fading to 55%. First ELS module order is for 2H CY2027 delivery so the line is all chip until then. Calibrated to the disclosed FQ4 blend of 50.4% exactly. Diluted shares 102M. ABOVE GUIDANCE per AH-15.5.",
             "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Q3 2026": 522.082647058824,
-            "Q4 2026": 610.7936,
-            "Q1 2027": 700.812854368932,
-            "Q2 2027": 789.378125603865,
-            "Q3 2027": 874.511807692308,
-            "Q4 2027": 953.476440191388,
-            "Q1 2028": 1022.95996190476,
-            "Q2 2028": 1080.25774407583,
-            "Q3 2028": 1127.70677358491,
-            "Q4 2028": 1165.90214084507,
-            "Q1 2029": 1198.52893457944,
-            "Q2 2029": 1226.04355348837,
-            "Q3 2029": 1249.17668518519,
-            "Q4 2029": 1270.16988018433,
-            "Q1 2030": 1289.68702752294,
+            "Q3 2026": 528.387549019608,
+            "Q4 2026": 620.263453658537,
+            "Q1 2027": 712.914796116505,
+            "Q2 2027": 802.700830917874,
+            "Q3 2027": 888.154115384616,
+            "Q4 2027": 966.748784688995,
+            "Q1 2028": 1036.21424761905,
+            "Q2 2028": 1093.87935545024,
+            "Q3 2028": 1141.81035849057,
+            "Q4 2028": 1180.55472300469,
+            "Q1 2029": 1213.52725233645,
+            "Q2 2029": 1241.4487627907,
+            "Q3 2029": 1265.09668518519,
+            "Q4 2029": 1286.83292165899,
+            "Q1 2030": 1307.22574311927,
             "Change %": "-8.61%",
             "Entry": 0,
             "Total": 49,
             "Upside": "1.1x",
-            "EV Upside": -12
+            "EV Upside": -11
         },
         {
             "Rank": 42,

@@ -1,42 +1,57 @@
 # AAOI — Applied Optoelectronics | Deep Dive
 
-**Date:** 2026-08-06 | Q2 2026 anchor (reported 2026-08-06)
-**Framework:** v6.0 (AH-15 latest-earnings anchor, AH-16 rolling forward-4Q ceiling)
+**Date:** 2026-08-11 | Q2 2026 anchor (reported 2026-08-06)
+**Framework:** v6.0 (AH-11 decomposed vectors, AH-14 clean state, AH-15 latest-earnings anchor, AH-16 rolling forward-4Q ceiling)
 **Status:** **HELD** ✓ | ⚡ TEMPORAL BOTTLENECK — US-anchored 800G and 1.6T pluggable ramp
-**Base:** **72%**
-**Multiple:** 20× operating profit | 85M diluted shares
-**Price:** $92.50 (2026-07-27 refresh; post-print price not confirmed)
-**Q3 2027 ceiling (ranking cell):** **$361.76** | Upside **3.91×** | **EV 2.81** | ranks **3 of 99**
+**Base:** **72%** (42/60)
+**Multiple:** 20× operating profit
+**Diluted shares:** 92.8M at Q3 2026, rising to 113.5M by 2030 on the ATM
+**Price:** $135.63
+**Q3 2027 ceiling (ranking cell):** **$495.37** | Upside **3.7×** | **EV 2.66** | rank **3 of 102**
+**Model tab:** `AAOI_Q_Model`
 
 ---
 
-## 1. Core Thesis
+## 1. Core thesis
 
-AAOI is the US-anchored, vertically integrated 800G and 1.6T pluggable transceiver ramp.
+AAOI is the US-anchored, vertically integrated 800G and 1.6T pluggable transceiver ramp, with a CPO laser and ELSFP module option layered on top.
 
-The thesis is temporal rather than monopolistic. Demand exceeds qualified supply, AAOI is expanding US module and laser capacity, and the company has a window to convert capacity into revenue before the standardized module layer normalizes.
+The thesis is temporal rather than monopolistic. Demand exceeds qualified supply, AAOI is expanding US module and laser capacity, and the company has a window to convert capacity into revenue before the standardised module layer normalises.
 
-**What this quarter added to the thesis:** a hard laser gross margin figure of **55–65%**, management's statement that the laser market must be **10× larger** to serve CPO demand, and secured substrate supply into next year with a possible joint venture across two or three suppliers.
+The strongest evidence is vertical integration into lasers, where gross margin is 55–65% against a roughly 40% blended corporate objective. The weakest is competitive position: AAOI is the fourth supplier qualified at one large hyperscaler for 1.6T, which buys allocation rather than pricing power.
 
-**What this quarter took away:** AAOI is the **fourth** supplier qualified at one large hyperscaler for 1.6T, and the memory shortage is now suppressing 100G demand through the switch layer.
-
-## 2. Latest Earnings Anchor (AH-15)
+## 2. Latest earnings anchor (AH-15)
 
 Q2 2026, reported 2026-08-06.
 
-| Metric | Value | Note |
-|---|---:|---|
-| Revenue | **$191.9M** | vs $190.5M consensus; **+86% YoY, +27% sequential** |
-| EPS | **$0.06** | vs $0.02 estimated; +138% YoY, +186% sequential |
-| **Data center revenue** | **$108M** | **+140% YoY** |
-| 800G revenue | $12.8M | 11.9% of data center revenue; **up more than 10× YoY**, more than doubled sequentially |
-| Profitability | Returned to non-GAAP profitability | Fifth consecutive record revenue quarter |
+| Metric | Value |
+|---|---:|
+| Revenue | **$191.9M** (+86% YoY, +27% sequential) |
+| Data center | **$107.7M** (56%), +140.4% YoY |
+| CATV | **$80.6M** (42%), +43.8% YoY |
+| FTTH, telecom, other | ~$3.6M (2%) |
+| Non-GAAP gross margin | **29.8%** (guide 29–30%) |
+| Non-GAAP operating expenses | **$67.6M**, 35% of revenue |
+| **Non-GAAP operating loss** | **$(10.3)M**, −5.4% margin |
+| Non-GAAP EPS | $0.06 |
+| GAAP net loss | $(22.8)M |
+| Weighted diluted shares | 88.1M |
 
-**Q3 2026 guidance:** revenue **$255M–$290M**, EPS **$0.11–$0.26**.
+**Data center mix:** 100G 38.3%, 200G/400G 45.0%, 800G 11.9%, 10G/40G 4.4%. 400G revenue $48.4M (+27.4% sequential). 800G revenue $12.8M, up more than tenfold year over year.
 
-**FY2026:** management reiterated revenue of **around $1.1 billion**.
+Concentration is extreme: top 10 customers are 99% of revenue, with one CATV customer at 42% and two data center customers at 26% and 24%.
 
-### The capacity ramp, as disclosed
+### Guidance
+
+**Q3 2026:** revenue $255–290M, EPS $0.11–0.26, non-GAAP gross margin 29–30.5%, opex $70–80M per quarter. CATV $100–110M. 800G to grow nearly 5× sequentially. 100G to decline $20–25M on the memory shortage.
+
+**Q4 2026:** more than $500M of revenue, roughly 60% growth. 800G plus 1.6T around $330M, of which 1.6T is $70–80M. Exit gross margin 32–33%.
+
+**FY2026:** around $1.1B, explicitly limited by production capacity and supply chain rather than demand.
+
+**Q1 2027:** 1.6T revenue doubles or more versus Q4 2026.
+
+### Capacity, as disclosed
 
 | Point | 800G + 1.6T units per month |
 |---|---:|
@@ -45,9 +60,11 @@ Q2 2026, reported 2026-08-06.
 | End of 2026 | 650,000 |
 | End of 2027 | **930,000**, over half from Texas |
 
-The Q1-to-Q2 doubling was delivered as promised. Texas begins initial production later in Q3 2026.
+Capacity is **completely booked from now until Q2 2027**. That is a bookings disclosure, not a demand forecast. Customer demand runs 20–40% above capacity and forecast demand exceeds capacity through mid-2027.
 
-### Management's mid-2027 revenue target
+Texas footprint is over 1.6 million square feet. The 210,000 sq ft facility begins initial production late in Q3 2026; Pearland and Houston come online in early 2027.
+
+### Management's mid-2027 target
 
 | Product | Monthly revenue by mid-2027 |
 |---|---:|
@@ -56,187 +73,246 @@ The Q1-to-Q2 doubling was delivered as promised. Texas begins initial production
 | 1.6T | ~$164M |
 | **Total data center transceiver** | **~$471M per month** |
 
-That is roughly **$1.413B per quarter**. This model carries $1.10B at Q3 2027, a 22% discount for qualification, utilization, yield and ASP.
+That is roughly $1,413M per quarter, and the model lands on it at Q3 2027. Every line inside it matches:
 
-### Other disclosures from the call
+| Line | Management mid-2027 | Model, Q3 2027 |
+|---|---:|---:|
+| 100G and 400G (incl. 10G/40G) | $270M | $271M |
+| 800G | $651M | $651M |
+| 1.6T | $492M | $492M |
+| **Total** | **$1,413M** | **$1,414M** |
 
-- Demand continues to outpace production capacity **through mid-2027**; customer demand runs **20–40% above** capacity
+**The ceiling is built to management's stated trajectory rather than haircut.** The ceiling is forward TAM math: what the company earns if the thesis works. Probability lives in the Base score, which at 72 already removes 28%. Cutting the revenue path as well for qualification, utilisation, yield and ASP would charge the same risk twice, since those are exactly the categories Base scores. Departures from a stated trajectory are permitted only for mechanical reasons, such as a disclosed capacity cap or an arithmetic constraint, never for probability.
+
+Q3 2026 and Q4 2026 are hard company guidance and are carried at guidance rather than scaled.
+
+### Other disclosures
+
 - A **$200M purchase order for 1.6T**, described as "just the very beginning"
-- 1.6T demand of **more than 500,000 transceivers per month by end of 2027**
-- 1.6T revenue in Q1 2027 to **double or more** versus Q4 2026
-- AAOI expects to have the **largest AI-focused data center transceiver production capacity in the United States**
-- **Laser gross margin 55–65%**, with CPO laser and ELSFP modules higher still
-- To serve CPO demand, **the laser market needs to be 10× bigger than today**
-- Long-term non-GAAP gross margin objective of **around 40%**
-- **Substrate supply secured into next year**; not currently limited by substrate capacity; "very aggressive" on partnership with two or three suppliers, possibly a joint venture
-- Not concerned about Chinese laser competition, on the view that China cannot make lasers powerful enough for two to three years
-- **AAOI will be the fourth supplier qualified by one large hyperscaler for 1.6T**
+- 1.6T demand of more than 500,000 transceivers per month by end of 2027
+- AAOI expects the largest AI-focused data center transceiver production capacity in the United States
+- **Laser gross margin 55–65%**; ELSFP above 50%
+- **ELSFP ramping later in 2026 toward about 400,000 pieces per month in 2028**
+- To serve CPO demand, the laser market must grow **8–10×**; equipment lead times of 21–24 months mean the industry cannot respond quickly
+- Long-term non-GAAP gross margin objective of around 40%
+- Substrate supply secured into next year across two suppliers in Europe, two in Japan and three in China; now at four-inch volume manufacturing; pursuing partnership or possible joint venture with two or three
+- The current bottleneck is **DSP and TIA**, not lasers
+- AAOI will be the **fourth** supplier qualified by one large hyperscaler for 1.6T
 
-## 3. The Memory Read-Through
+## 3. CPO laser physics, as disclosed
 
-Management attributed the switch shortage directly to the memory shortage, and said 100G weakness will persist until memory supply recovers.
+| Application | Laser power |
+|---|---:|
+| 800G transceiver | 70mW |
+| 1.6T transceiver | 100mW |
+| **CPO / ELSFP** | **300mW** |
+
+Next-generation ELSFP moves from 1310nm single-wavelength to DWDM, where tight wavelength spacing makes yield loss "easily 40–50%" relative to 1310nm. CPO laser die size is about six times larger or higher.
+
+Chinese suppliers manage maybe 70mW, very few reach 100mW, and are two to three years from 300mW DWDM.
+
+## 4. The memory read-through
+
+Management attributed the switch shortage directly to the memory shortage and said 100G weakness persists until memory supply recovers.
 
 | | |
 |---|---|
 | 100G revenue impact | **$20–25M** in the quarter |
-| Effect on Q3 guidance | Growth would exceed **50%** rather than the guided 35–45% |
-| Expected recovery | "Within a few months, either by the end of this year or early next year" |
+| Effect on Q3 guidance | Growth would exceed 50% rather than the guided 35–45% |
+| Management's expected recovery | Within a few months, by end of this year or early next |
 
-**This is the first negative memory pass-through this book has recorded.** Every prior instance — Amazon's capex, Apple's price increases, Amkor's communications decline, AMD's locked 2027 allocation — showed memory scarcity as a cost or a confirmation of pricing power. Here it is suppressing end demand two layers downstream: memory shortage constrains switch production, which constrains 100G transceiver demand.
+This is memory scarcity suppressing end demand two layers downstream: memory shortage constrains switch production, which constrains 100G transceiver demand. It is supportive of the memory positions and a genuine, quantified headwind to AAOI.
 
-It reads as supportive of the memory positions and as a genuine, quantified headwind to AAOI.
+## 5. Eight-line decomposed model (AH-11)
 
-## 4. What the Quarter Proved, and What It Did Not
+AAOI discloses data center revenue **by data rate**, so the model carries eight lines each with its own gross margin. Blended gross margin and operating margin are derived by formula and never entered. Opex is modelled as a percentage of revenue with explicit leverage.
 
-### Proved
+The lines move in opposite directions: 100G is declining $20–25M a quarter on the memory shortage while 800G grew more than tenfold year over year and 1.6T starts from zero. A blended margin reports that mix shift as flat.
 
-1. **Capacity conversion is real.** 100,000 to 200,000 units a month delivered exactly as guided in Q1.
-2. **800G is inflecting.** Up more than tenfold year over year and more than doubling sequentially.
-3. **Profitability returned.** Non-GAAP positive with EPS beating by 200%.
-4. **The substrate risk is closed for now.** Supply secured into next year, with the company exploring a joint venture.
-5. **Laser economics are far better than module economics.** 55–65% gross margin against a roughly 40% blended target.
+### Revenue by line, $M
 
-### Not proved
+| Quarter | 10G/40G | 100G | 200G/400G | 800G | 1.6T | ELSFP | CATV | Other | Revenue |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Q3 2026 | 4 | 19 | 60 | 64 | 18 | 0 | 105 | 2.5 | 272.5 |
+| Q4 2026 | 3 | 12 | 45 | 255 | 75 | 6 | 110 | 2 | 508 |
+| Q1 2027 | 4 | 16 | 93 | 325 | 240 | 18 | 85 | 2 | 783 |
+| Q2 2027 | 3 | 16 | 172 | 431 | 367 | 42 | 85 | 2 | 1,118 |
+| **Q3 2027** | 3 | 16 | 252 | 651 | 492 | 84 | 85 | 2 | **1,585** |
+| Q4 2027 | 3 | 14 | 283 | 820 | 647 | 150 | 90 | 2 | 2,009 |
+| Q1 2028 | 3 | 14 | 290 | 848 | 683 | 264 | 85 | 2 | 2,189 |
+| Q2 2028 | 3 | 14 | 294 | 876 | 721 | 384 | 85 | 2 | 2,379 |
+| Q3 2028 | 3 | 14 | 297 | 904 | 760 | 456 | 85 | 2 | 2,521 |
+| Q4 2028 | 3 | 14 | 300 | 933 | 800 | 480 | 90 | 2 | 2,622 |
+| Q1 2029 | 1 | 13 | 300 | 961 | 845 | 492 | 85 | 2 | 2,699 |
+| Q2 2029 | 1 | 13 | 297 | 989 | 904 | 504 | 85 | 2 | 2,795 |
+| Q3 2029 | 1 | 13 | 294 | 1,010 | 971 | 516 | 85 | 2 | 2,892 |
+| Q4 2029 | 1 | 13 | 290 | 1,017 | 1,010 | 528 | 90 | 2 | 2,951 |
+| Q1 2030 | 1 | 11 | 276 | 961 | 941 | 528 | 85 | 2 | 2,805 |
+| Q2 2030 | 1 | 11 | 261 | 904 | 899 | 516 | 85 | 2 | 2,679 |
+| Q3 2030 | 1 | 11 | 247 | 869 | 878 | 504 | 85 | 2 | 2,597 |
+| Q4 2030 | 1 | 11 | 233 | 820 | 842 | 492 | 90 | 2 | 2,491 |
 
-1. **That FY2026 reaches $1.1B.** Q1 through Q3 sums to roughly $615M, so Q4 must be about **$485M, a 78% sequential step**. It is capacity-consistent at 650,000 units a month but it is the single largest execution risk in the model.
-2. **That the 1.6T position is strong.** Fourth qualified supplier at a large hyperscaler is participation, not a bottleneck.
-3. **That the 40% gross margin target is reachable.** Q2 operating margin was low single digit.
-4. **That the memory-driven 100G weakness is temporary.** Management expects a few months. Every memory source in this book says the shortage runs past 2027.
-5. **That the mid-2027 monthly target converts.** $471M a month is a capacity-derived figure from a company that has just guided the current quarter below its own prior trajectory.
+### Gross margin by line, and the derived blend
 
-## 5. Quarterly Operating Model
+| Quarter | 10G/40G | 100G | 200G/400G | 800G | 1.6T | ELSFP | CATV | Other | **Blended** | Opex % | **OP $M** | **OP margin** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Q3 2026 | 12.1% | 20.2% | 31.0% | 26.0% | 24.0% | — | 35.2% | 20.2% | **29.9%** | 27.52%¹ | 6 | 2.3% |
+| Q4 2026 | 12.2% | 20.5% | 32.5% | 33.0% | 30.0% | 50.0% | 35.5% | 20.5% | **32.8%** | 16.14% | 85 | 16.6% |
+| Q1 2027 | 12.3% | 20.8% | 33.5% | 35.0% | 33.0% | 50.5% | 35.8% | 20.8% | **34.2%** | 15.38% | 147 | 18.8% |
+| Q2 2027 | 12.4% | 21.0% | 34.2% | 36.5% | 35.0% | 51.2% | 36.0% | 21.0% | **35.9%** | 12.06% | 266 | 23.8% |
+| **Q3 2027** | 12.4% | 21.0% | 34.8% | 38.0% | 36.8% | 52.2% | 36.2% | 21.2% | **37.5%** | 9.56% | **443** | **28.0%** |
+| Q4 2027 | 12.3% | 20.8% | 35.0% | 39.2% | 38.2% | 53.2% | 36.5% | 21.3% | **39.0%** | 8.38% | 616 | 30.6% |
+| Q1 2028 | 12.2% | 20.5% | 34.8% | 39.8% | 39.2% | 54.2% | 36.6% | 21.4% | **40.4%** | 8.36% | 701 | 32.0% |
+| Q2 2028 | 12.1% | 20.2% | 34.4% | **40.0%** | 39.8% | 55.0% | 36.7% | 21.3% | **41.4%** | 8.13% | 791 | 33.3% |
+| Q3 2028 | 12.0% | 20.0% | 34.0% | 39.7% | 39.6% | 55.6% | 36.6% | 21.2% | **41.6%** | 8.03% | 847 | 33.6% |
+| Q4 2028 | 11.9% | 19.8% | 33.5% | 39.2% | 39.1% | **55.8%** | 36.4% | 21.0% | **41.3%** | 8.01% | 873 | 33.3% |
+| Q1 2029 | 11.8% | 19.6% | 33.0% | 38.5% | 38.4% | 55.6% | 36.2% | 20.8% | **40.8%** | 8.03% | 884 | 32.8% |
+| Q2 2029 | 11.7% | 19.4% | 32.6% | 37.7% | 37.7% | 55.2% | 36.0% | 20.6% | **40.2%** | 8.00% | 899 | 32.2% |
+| Q3 2029 | 11.6% | 19.2% | 32.2% | 37.0% | 37.0% | 54.7% | 35.8% | 20.5% | **39.5%** | 7.92% | 914 | 31.6% |
+| Q4 2029 | 11.5% | 19.0% | 32.0% | 36.3% | 36.3% | 54.2% | 35.6% | 20.4% | **39.0%** | 7.93% | 916 | 31.0% |
+| Q1 2030 | 11.4% | 18.9% | 31.8% | 35.6% | 35.7% | 53.8% | 35.4% | 20.3% | **38.6%** | 8.45% | 846 | 30.1% |
+| Q2 2030 | 11.3% | 18.8% | 31.6% | 35.0% | 35.1% | 53.4% | 35.3% | 20.2% | **38.2%** | 8.97% | 782 | 29.2% |
+| Q3 2030 | 11.2% | 18.7% | 31.4% | 34.5% | 34.6% | 53.0% | 35.2% | 20.1% | **37.8%** | 9.40% | 737 | 28.4% |
+| Q4 2030 | 11.1% | 18.6% | 31.2% | 34.0% | 34.1% | 52.7% | 35.1% | 20.0% | **37.4%** | 9.93% | 685 | 27.5% |
 
-Revenue and operating profit in USD billions.
+¹ Q3 2026 opex of $75M sits inside the guided $70–80M range; the percentage falls sharply as revenue scales.
 
-| Quarter | Status | Revenue | OP margin | OP | Main driver |
-|---|---|---:|---:|---:|---|
-| Q2 2026 | **Actual** | 0.192 | ~3% | — | +86% YoY, data center +140% |
-| Q3 2026 | **Guidance** | 0.2725 | 8.0% | 0.022 | Guide midpoint; >50% growth but for the memory-driven 100G weakness |
-| Q4 2026 | **Guide-implied** | 0.4845 | 14.0% | 0.068 | Residual to the reiterated ~$1.1B; **requires +78% sequential** |
-| Q1 2027 | Model | 0.600 | 17.0% | 0.102 | 1.6T revenue doubling or more versus Q4 |
-| Q2 2027 | Model | 0.850 | 21.0% | 0.178 | Texas ramping; 800G at full capacity, ELSFP beginning |
-| **Q3 2027** | Model | **1.100** | **25.0%** | **0.275** | Demand still guided above capacity through mid-2027 |
-| Q4 2027 | Model | 1.400 | 28.0% | 0.392 | 1.6T bigger ramp; capacity toward 930k units/mo |
-| Q1 2028 | Model | 1.450 | 29.0% | 0.420 | Laser and ELSFP mix lifting margin |
-| Q2 2028 | Model | 1.500 | 30.0% | 0.450 | Run-rate |
-| Q3 2028 | Model | 1.550 | 30.5% | 0.473 | Run-rate |
-| Q4 2028 | Model | 1.600 | 31.0% | 0.496 | Run-rate |
-| Q1 2029 | Model | 1.700 | 31.0% | 0.527 | Peak 1.6T and pluggable mix begins |
-| Q2 2029 | Model | 1.800 | 31.0% | 0.558 | Peak 1.6T / ELSFP mix |
-| Q3 2029 | Model | 1.900 | 31.0% | 0.589 | Peak cycle |
-| Q4 2029 | Model | 1.950 | 31.0% | 0.605 | Peak cycle |
-| Q1 2030 | Model | 1.800 | 30.5% | 0.549 | CPO and NPO cannibalization starts |
-| Q2 2030 | Model | 1.700 | 30.0% | 0.510 | ASP and mix pressure |
-| Q3 2030 | Model | 1.650 | 30.0% | 0.495 | Pluggable S-curve rolls |
-| Q4 2030 | Model | 1.550 | 29.5% | 0.457 | Lower exit rate |
+### Margin shape
 
-**Terminal operating margin capped at 31%, not 33%.** Management's stated long-term objective is roughly 40% non-GAAP gross margin. A 33% operating margin on 40% gross requires operating expenses below 7% of revenue, which is not consistent with a company building out Texas manufacturing.
+Every laser and transceiver line rises into the 2027–2028 shortage and peaks around Q2 to Q4 2028. **800G and 1.6T end above their starting margins** because those starts are ramp margins and yield learning is permanent, while the shortage premium is not.
 
-## 6. Rolling Forward-4Q Ceiling (AH-16)
+The two declining legacy lines are deliberately allowed to fade **below** their starting margins. The shortage-peak treatment protects bottlenecks, and 100G and 10G/40G are commoditising products being actively cannibalised.
 
-> Ceiling = [OP(Q) + OP(Q+1) + OP(Q+2) + OP(Q+3)] × 20 ÷ 85M shares
+Blended gross margin peaks at 41.6% in Q3 2028, against management's stated long-term objective of around 40%. The model sits modestly above that objective for five quarters at the shortage peak and returns below it by 2030.
 
-| Ceiling quarter | Earnings window | Forward-4Q OP | **Ceiling** | Key inflection |
-|---|---|---:|---:|---|
-| Q3 2026 | Q3 2026 → Q2 2027 | 0.370 | **$87.09** | Guided quarter anchors the window |
-| Q4 2026 | Q4 2026 → Q3 2027 | 0.623 | **$146.67** | The $485M Q4 step enters |
-| Q1 2027 | Q1 2027 → Q4 2027 | 0.948 | **$222.94** | Full 2027 path visible |
-| Q2 2027 | Q2 2027 → Q1 2028 | 1.266 | **$297.88** | ELSFP and 1.6T ramp in window |
-| **Q3 2027** | **Q3 2027 → Q2 2028** | **1.538** | **$361.76** | **Ranking cell** |
-| Q4 2027 | Q4 2027 → Q3 2028 | 1.735 | **$408.29** | 2028 run-rate mostly visible |
-| Q1 2028 | Q1 2028 → Q4 2028 | 1.839 | **$432.76** | Run-rate durability test |
-| Q2 2028 | Q2 2028 → Q1 2029 | 1.946 | **$457.82** | Peak-cycle buildup begins |
-| Q3 2028 | Q3 2028 → Q2 2029 | 2.054 | **$483.24** | |
-| Q4 2028 | Q4 2028 → Q3 2029 | 2.170 | **$510.59** | |
-| Q1 2029 | Q1 2029 → Q4 2029 | 2.279 | **$536.12** | |
-| **Q2 2029** | Q2 2029 → Q1 2030 | **2.300** | **$541.29** | **Peak ceiling** |
-| Q3 2029 | Q3 2029 → Q2 2030 | 2.252 | $530.00 | Cycle begins rolling down |
-| Q4 2029 | Q4 2029 → Q3 2030 | 2.159 | $507.88 | CPO cannibalization weighs |
-| Q1 2030 | Q1 2030 → Q4 2030 | 2.011 | $473.24 | Lower exit-rate window |
+### Calibration to the disclosed actual
 
-**AH-1 chain, ranking cell:** OP(Q3 2027) = 1.100 × 25.0% = 0.275. Window = 0.275 + 0.392 + 0.420 + 0.450 = **1.538**. Ceiling = 1.538 × 20 ÷ 85 = **$361.76**.
+| | Model | Disclosed |
+|---|---:|---:|
+| Revenue | $191.9M | $191.9M |
+| Data center | $107.3M | $107.7M |
+| CATV | $80.6M | $80.6M |
+| 100G share of DC | 38.5% | 38.3% |
+| 200G/400G share of DC | 45.2% | 45.0% |
+| 800G share of DC | 12.0% | 11.9% |
+| 10G/40G share of DC | 4.4% | 4.4% |
+| Blended gross margin | 29.80% | 29.8% |
+| Non-GAAP operating loss | $(10.41)M | $(10.3)M |
 
-### What changed against the prior model
+### Guidance validation
 
-| Quarter | Prior ceiling | New ceiling | Change |
-|---|---:|---:|---:|
-| Q3 2026 | $138.47 | $87.09 | −$51.38 |
-| Q4 2026 | $210.00 | $146.67 | −$63.33 |
-| Q1 2027 | $295.88 | $222.94 | −$72.94 |
-| Q2 2027 | $373.53 | $297.88 | −$75.65 |
-| **Q3 2027** | **$434.12** | **$361.76** | **−$72.35** |
-| Q4 2027 | $465.88 | $408.29 | −$57.59 |
-| Q1 2028 | $465.88 | $432.76 | −$33.12 |
+| Guidance | Model |
+|---|---|
+| Q3 revenue $255–290M | $272.5M, the midpoint |
+| Q3 gross margin 29–30.5% | 29.85% |
+| Q3 opex $70–80M | $75M |
+| Q3 800G "nearly 5× sequential" | $64M |
+| Q3 100G down $20–25M | $19M |
+| Q4 revenue "more than $500M" | $508M |
+| Q4 800G plus 1.6T ~$330M | $330M |
+| Q4 1.6T $70–80M | $75M |
+| Q4 exit gross margin 32–33% | 32.79% |
+| Q1 2027 1.6T "doubles or more" | $240M |
+| Mid-2027 DC transceivers $1,413M/qtr | $1,414M, line by line |
+| ELSFP 400k pcs/mo in 2028 | $480M/qtr at a $400 ASP |
 
-Calendar 2026 revenue falls 24%, 2027 falls 10%, and 2028 rises 2%. **The near-term model was too steep and the mid-term was too shallow.** The prior build carried $350M for a quarter now guided to $272.5M, and a 16% operating margin for a quarter tracking mid-single-digit.
+### Confidence
 
-## 7. Base Score
+AAOI discloses the data center mix by data rate for the anchor quarter only. The forward line-level splits and every per-line gross margin are modelled, constrained to reproduce the disclosed segment totals and the disclosed blend.
+
+**Line-level revenue and margin carry LOW confidence individually. The segment sums and the blend carry HIGH confidence because they are calibrated to disclosure.** No single line figure should be quoted as if it were reported.
+
+The 200G/400G line dips in Q4 2026 and recovers through 2027. That is deliberate: capacity is completely booked until Q2 2027 and scarce capacity goes to 800G and 1.6T first, so 400G volume only returns as the Texas footprint comes online.
+
+## 6. Rolling forward-4Q ceiling (AH-16)
+
+> Ceiling = [OP(Q) + OP(Q+1) + OP(Q+2) + OP(Q+3)] × 20 ÷ diluted shares
+
+| Ceiling quarter | Window priced | Forward-4Q OP $M | Shares M | **Ceiling** |
+|---|---|---:|---:|---:|
+| Q3 2026 | Q3 26 → Q2 27 | 504 | 92.8 | **$108.70** |
+| Q4 2026 | Q4 26 → Q3 27 | 941 | 96.0 | **$196.12** |
+| Q1 2027 | Q1 27 → Q4 27 | 1,472 | 99.0 | **$297.47** |
+| Q2 2027 | Q2 27 → Q1 28 | 2,026 | 101.0 | **$401.20** |
+| **Q3 2027** | **Q3 27 → Q2 28** | **2,551** | **103.0** | **$495.37** |
+| Q4 2027 | Q4 27 → Q3 28 | 2,954 | 105.0 | **$562.74** |
+| Q1 2028 | Q1 28 → Q4 28 | 3,212 | 106.0 | **$606.02** |
+| Q2 2028 | Q2 28 → Q1 29 | 3,395 | 107.0 | $634.58 |
+| Q3 2028 | Q3 28 → Q2 29 | 3,503 | 108.0 | $648.64 |
+| Q4 2028 | Q4 28 → Q3 29 | 3,570 | 109.0 | $655.11 |
+| **Q1 2029** | Q1 29 → Q4 29 | 3,613 | 110.0 | **$656.90** — peak |
+| Q2 2029 | Q2 29 → Q1 30 | 3,574 | 111.0 | $644.03 |
+| Q3 2029 | Q3 29 → Q2 30 | 3,458 | 111.5 | $620.25 |
+| Q4 2029 | Q4 29 → Q3 30 | 3,280 | 112.0 | $585.76 |
+| Q1 2030 | Q1 30 → Q4 30 | 3,049 | 112.5 | $542.07 |
+
+**AH-1 chain, ranking cell:** 443 + 616 + 701 + 791 = 2,551. Ceiling = 2,551 × 20 ÷ 103.0 = **$495.37**.
+
+The ceiling peaks in Q1 2029 and declines afterward as pluggable cannibalisation by CPO and NPO begins while the share count continues rising.
+
+## 7. Base score — 42/60 = 72%
 
 | Category | Score | Evidence |
 |---|---:|---|
-| Core Thesis | 13/20 | Vertically integrated from laser to module, US-anchored with a Texas footprint, laser gross margin 55–65%, and the claim to the largest AI-focused transceiver capacity in the US. But this is a **temporal bottleneck by the artifact's own framing**, not a monopoly, and AAOI is the **fourth** qualified 1.6T supplier at one large hyperscaler |
-| Cycle Stage | 9/10 | Fifth consecutive record quarter, revenue +86%, data center +140%, 800G up more than tenfold, capacity doubled as promised, return to non-GAAP profitability |
-| TAM Expansion | 8/10 | Management's mid-2027 target of ~$471M monthly of data center transceiver revenue, plus a CPO laser market that must grow 10× and carries 55–65% gross margin |
-| Catalysts | 5/5 | Texas initial production in Q3 2026, the Q4 step to ~$485M, 1.6T qualification, the $200M purchase order scaling, ELSFP contribution |
+| Cycle Stage | 10/10 | Capacity completely booked through Q2 2027, a bookings disclosure rather than demand commentary, and the Q1-to-Q2 capacity doubling was delivered |
+| Core Thesis | 13/20 | Vertically integrated from laser to module, US-anchored with a Texas footprint, laser gross margin 55–65%, and the claim to the largest AI-focused transceiver capacity in the US. This is a temporal bottleneck rather than a monopoly, and AAOI is the **fourth** qualified 1.6T supplier at one large hyperscaler |
+| TAM Expansion | 8/10 | Mid-2027 target of ~$471M monthly of data center transceiver revenue, plus a CPO laser market that must grow 8–10× and carries 55–65% gross margin |
+| Catalysts | 5/5 | Texas initial production in Q3 2026, the Q4 revenue step, 1.6T qualification, the $200M purchase order scaling, ELSFP first shipments |
 | Macro | 9/10 | Optical interconnect is a genuine constraint, and demand runs 20–40% above capacity through mid-2027 |
-| Alpha | 2/5 | Widely followed and heavily traded. The edge here is the ceiling-ladder timing, not discovery |
-| Risks | −4 | Four classes below |
-| **Base** | **42/60 = 72%** | Unchanged. Positives and negatives roughly offset |
+| Alpha | 2/5 | Widely followed and heavily traded. The edge is ceiling-ladder timing rather than discovery |
+| Risks | −5 | Five classes below |
+| **Base** | **42/60 = 72%** | |
 
-The prior artifact asserted Base 72 with no category breakdown. This derives it, and it lands at the same number.
+## 8. Key risks (each scored)
 
-## 8. Key Risks (each scored)
+1. **The Q4 2026 step (−1).** Reaching around $1.1B for the year requires roughly $500M in Q4, a large sequential increase. It is capacity-consistent and it is unproven. **Kill switch:** Q4 revenue below $400M.
+2. **Fourth-supplier position in 1.6T (−1).** Being the fourth qualified supplier at a large hyperscaler means allocation, not pricing power, and it invites ASP pressure as the module layer standardises. **Kill switch:** 1.6T gross margin below the corporate average when disclosed.
+3. **ELSFP conversion (−1).** The ELSFP line carries the largest single contribution to the ceiling and the weakest evidence. Management states AAOI **cannot** serve first-generation CPO because lasers must go to its own transceivers first, and that next-generation DWDM ELSFP carries 40–50% yield loss. Independent technical assessment holds that AAOI cannot meet the 300mW DWDM spec and is two to three years away. **Kill switch:** no ELSFP revenue disclosed by Q4 2027, or a stated slip of the 400k/month target beyond 2028.
+4. **Dilution (−1).** Diluted shares went from 88.1M to a guided 92.8M in one quarter. The ATM has raised $538.8M net, Q2 capital investment was $565.5M, and management expects higher second-half capex funded partly by equity. **Kill switch:** share count rising more than 10% in any twelve-month period.
+5. **Memory-driven 100G weakness (−1).** Quantified at $20–25M this quarter, with management expecting recovery within months while every memory source in this book points past 2027. **Kill switch:** the 100G drag persisting into H2 2027.
 
-1. **The Q4 2026 step (−1).** Reaching ~$1.1B for the year requires roughly $485M in Q4, a 78% sequential increase. It is capacity-consistent and it is unproven. **Kill switch:** Q4 revenue below $400M.
-2. **Fourth-supplier position in 1.6T (−1).** Being the fourth qualified supplier at a large hyperscaler means allocation, not pricing power, and it invites ASP pressure as the module layer standardizes. **Kill switch:** 1.6T gross margin below the corporate average when disclosed.
-3. **Margin durability (−1).** The path to 31% operating margin depends on the laser and ELSFP mix and on the roughly 40% gross margin objective. Q2 ran low single digit. **Kill switch:** non-GAAP gross margin failing to exceed 30% by mid-2027.
-4. **Memory-driven 100G weakness (−1).** Quantified at $20–25M this quarter, with management expecting recovery within months while every memory source in this book points past 2027. **Kill switch:** the 100G drag persisting into H2 2027.
+*Not scored:* substrate supply. Management states supply is secured into next year across seven suppliers in three regions, the company is not currently constrained, and it is pursuing a partnership or possible joint venture.
 
-*Retired:* substrate supply was previously a live risk. Management states supply is secured into next year and the company is not currently constrained, with a possible joint venture across two or three suppliers.
+## 9. ELSFP sensitivity
 
-## 9. Inflection Watch
+ELSFP contributes **$478M of gross profit inside the ranking-cell window**, out of $2,551M of forward-4Q operating profit. It is the single largest discretionary input in the model.
+
+| ELSFP assumption | Q3 2027 ceiling | Upside | EV | Rank |
+|---|---:|---:|---:|---:|
+| Line at zero | ~$418 | 3.1 | ~2.23 | ~6 |
+| Half the management figure | ~$457 | 3.4 | ~2.45 | ~4 |
+| **Management's 400k/month at a $400 ASP** | **$495.37** | **3.7** | **2.66** | **3** |
+
+Scale check: 400,000 modules a month is roughly 2.5× the peak ELS module volume this book models for Lumentum in 2030, two years earlier, and Lumentum holds a single ELS module order. That comparison is model against claim rather than disclosure against disclosure, and the gap is large.
+
+Against that, the 400k figure is management-stated, Chinese suppliers manage maybe 70mW with very few at 100mW, and AAOI is vertically integrated in lasers in a way pure assemblers are not.
+
+**Rank 3 is conditional on ELSFP. Rank 6 is the floor.**
+
+## 10. Inflection watch
 
 | Quarter | What must happen |
 |---|---|
 | Q3 2026 | Revenue within $255–290M; Texas initial production begins |
-| **Q4 2026** | **~$485M delivered.** The single most important test in the model |
-| Q1 2027 | 1.6T revenue doubles or more versus Q4; utilization rises without margin compression |
+| **Q4 2026** | **More than $500M delivered.** The single most important test in the model |
+| Q1 2027 | 1.6T revenue doubles or more versus Q4; utilisation rises without margin compression |
 | Q2 2027 | 800G at full capacity, ELSFP contributing, gross margin above 30% |
 | Mid-2027 | Progress toward the ~$471M monthly data center run rate |
-| Q1–Q2 2028 | The $1.5B quarterly run rate proves durable |
+| Q4 2027 | First disclosed ELSFP revenue. The gate on the entire ELSFP vector |
+| Q1–Q2 2028 | The $2.2B quarterly run rate proves durable |
 | Q1–Q2 2029 | Peak-cycle check: does 1.6T offset 800G ASP erosion |
 
-## 10. Cross-Book
+## 11. Cross-book
 
-| Name | Read-through |
-|---|---|
-| **Samsung, SK Hynix, MU, SNDK** (all held) | **The first negative memory pass-through in the book.** Memory shortage constrains switch production, which suppresses 100G transceiver demand, quantified at $20–25M. Supportive of the memory positions and a real headwind here |
-| **AXTI** (rank 28) | AAOI has secured substrate into next year and is "very aggressive" about partnership or a joint venture with two or three suppliers. AXT is one of three merchant InP substrate suppliers and the only one adding capacity |
-| **SIVE.ST** (rank 1, held) | AAOI states the laser market must be **10× bigger** to serve CPO, and that laser gross margin is 55–65%. That is a competitor sizing the same opportunity Sivers is positioned on, with better disclosed economics and its own laser fab |
-| **LITE** (rank 33), **COHR** (rank 28) | The competing laser and module suppliers. AAOI's view that China cannot make sufficiently powerful lasers for two to three years applies to all three |
-| **6451.TW, 8147.TWO, 3363.TWO** | Downstream packaging and passive optics for the same module ramp |
+- **Memory complex (SNDK, MU, Samsung, SK Hynix, all held).** AAOI is the clearest quantified case of memory scarcity destroying downstream demand, at $20–25M a quarter in 100G.
+- **LITE and COHR.** Direct competitors in the high-power CPO laser and ELS module layer. Lumentum holds a first ELS module order for 2H 2027 delivery; AAOI's ELSFP target is larger and later-evidenced.
+- **AXTI, IQE.L.** InP substrate and epitaxy into the same chain. AAOI's seven-supplier substrate arrangement and possible joint venture is a demand-side signal for both.
+- **TSEM.** Silicon photonics foundry capacity, an alternative architecture to AAOI's InP-anchored approach.
 
-## 11. Position and Price
+## 12. Open rulings
 
-| | Value |
-|---|---:|
-| Q3 2027 ceiling | $361.76 |
-| Price | $92.50 |
-| Upside | **3.91×** |
-| Base | 72 |
-| **EV** | **2.81** |
-| Rank | **3 of 99** (from 2) |
+1. **Base holds at 72.** Core Thesis at 13/20 is the line to challenge: the fourth-supplier position in 1.6T is what holds it there.
+2. **ELSFP inclusion.** The line moves the rank from 6 to 3 and rests on a management capacity statement contradicted by independent technical assessment. Confirm whether it stays at the full management figure, at half, or at zero.
+3. **Blended gross margin exceeds management's stated long-term objective** of around 40% for five quarters at the shortage peak, reaching 41.6%. That is the shortage-peak treatment applied to a company that has published a ceiling on its own ambition.
 
-**The price is from the 2026-07-27 refresh and predates this print.** The prior artifact carried $139.16 as of 2026-07-09, so the stock fell materially between those dates and has since reported a beat. The post-print price is not confirmed here.
-
-## 12. Open Rulings for Tom
-
-1. **Base holds at 72**, now with a derived scoring table rather than an assertion. Core Thesis at 13/20 is the line to challenge: the fourth-supplier position in 1.6T is what holds it there.
-2. **The Q4 2026 figure of ~$485M is a residual**, not company guidance. It is what the reiterated ~$1.1B requires. If management is soft on the full year, the whole 2027 path shifts right.
-3. **Mid-2027 is modelled 22% below management's own $471M monthly target.** That discount is deliberate and consistent with the artifact's stated method, but it is a judgment.
-4. **The price needs refreshing** and predates the print.
-5. **The AAOI tab had no ceiling machinery.** The Master Portfolio was carrying hardcoded ceiling values from the v5.0 pilot rather than computing from the model. That is now fixed, with forward-4Q, multiple, share and ceiling columns added and the portfolio row relinked.
-
----
-
-*Provenance: built by Claude 2026-08-06 from Applied Optoelectronics' Q2 2026 results and earnings call (2026-08-06), Q3 2026 guidance, the reiterated FY2026 revenue figure, and management capacity and revenue targets disclosed on the call. Multiple 20× on operating profit, 85M diluted shares. Ceiling verified against workbook v5.0.42: (0.275 + 0.392 + 0.420 + 0.450) × 20 ÷ 85 = 361.76.*
+**Footer:** snapshot `/mnt/user-data/outputs/v5.0.61_AAOI_ceiling_at_target.xlsx`, tab `AAOI_Q_Model`.
