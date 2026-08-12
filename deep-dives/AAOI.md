@@ -7,7 +7,7 @@
 **Multiple:** 20× operating profit
 **Diluted shares:** 92.8M at Q3 2026, rising to 113.5M by 2030 on the ATM
 **Price:** $135.63
-**Q3 2027 ceiling (ranking cell):** **$495.37** | Upside **3.7×** | **EV 2.66** | rank **3 of 102**
+**Q3 2027 ceiling (ranking cell):** **$559.45** | Upside **4.1×** | **EV 2.95** | rank **2 of 102**
 **Model tab:** `AAOI_Q_Model`
 
 ---
@@ -156,34 +156,34 @@ The lines move in opposite directions: 100G is declining $20–25M a quarter on 
 
 | Quarter | 10G/40G | 100G | 200G/400G | 800G | 1.6T | ELSFP | CATV | Other | **Blended** | Opex % | **OP $M** | **OP margin** |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Q3 2026 | 12.1% | 20.2% | 31.0% | 26.0% | 24.0% | — | 35.2% | 20.2% | **29.9%** | 27.52%¹ | 6 | 2.3% |
+| Q3 2026 | 12.1% | 20.2% | 31.0% | 26.0% | 24.0% | — | 35.2% | 20.2% | **29.9%** | 27.52% | 6 | 2.3% |
 | Q4 2026 | 12.2% | 20.5% | 32.5% | 33.0% | 30.0% | 50.0% | 35.5% | 20.5% | **32.8%** | 16.14% | 85 | 16.6% |
-| Q1 2027 | 12.3% | 20.8% | 33.5% | 35.0% | 33.0% | 50.5% | 35.8% | 20.8% | **34.2%** | 15.38% | 147 | 18.8% |
-| Q2 2027 | 12.4% | 21.0% | 34.2% | 36.5% | 35.0% | 51.2% | 36.0% | 21.0% | **35.9%** | 12.06% | 266 | 23.8% |
-| **Q3 2027** | 12.4% | 21.0% | 34.8% | 38.0% | 36.8% | 52.2% | 36.2% | 21.2% | **37.5%** | 9.56% | **443** | **28.0%** |
-| Q4 2027 | 12.3% | 20.8% | 35.0% | 39.2% | 38.2% | 53.2% | 36.5% | 21.3% | **39.0%** | 8.38% | 616 | 30.6% |
-| Q1 2028 | 12.2% | 20.5% | 34.8% | 39.8% | 39.2% | 54.2% | 36.6% | 21.4% | **40.4%** | 8.36% | 701 | 32.0% |
-| Q2 2028 | 12.1% | 20.2% | 34.4% | **40.0%** | 39.8% | 55.0% | 36.7% | 21.3% | **41.4%** | 8.13% | 791 | 33.3% |
-| Q3 2028 | 12.0% | 20.0% | 34.0% | 39.7% | 39.6% | 55.6% | 36.6% | 21.2% | **41.6%** | 8.03% | 847 | 33.6% |
-| Q4 2028 | 11.9% | 19.8% | 33.5% | 39.2% | 39.1% | **55.8%** | 36.4% | 21.0% | **41.3%** | 8.01% | 873 | 33.3% |
-| Q1 2029 | 11.8% | 19.6% | 33.0% | 38.5% | 38.4% | 55.6% | 36.2% | 20.8% | **40.8%** | 8.03% | 884 | 32.8% |
-| Q2 2029 | 11.7% | 19.4% | 32.6% | 37.7% | 37.7% | 55.2% | 36.0% | 20.6% | **40.2%** | 8.00% | 899 | 32.2% |
-| Q3 2029 | 11.6% | 19.2% | 32.2% | 37.0% | 37.0% | 54.7% | 35.8% | 20.5% | **39.5%** | 7.92% | 914 | 31.6% |
-| Q4 2029 | 11.5% | 19.0% | 32.0% | 36.3% | 36.3% | 54.2% | 35.6% | 20.4% | **39.0%** | 7.93% | 916 | 31.0% |
-| Q1 2030 | 11.4% | 18.9% | 31.8% | 35.6% | 35.7% | 53.8% | 35.4% | 20.3% | **38.6%** | 8.45% | 846 | 30.1% |
-| Q2 2030 | 11.3% | 18.8% | 31.6% | 35.0% | 35.1% | 53.4% | 35.3% | 20.2% | **38.2%** | 8.97% | 782 | 29.2% |
-| Q3 2030 | 11.2% | 18.7% | 31.4% | 34.5% | 34.6% | 53.0% | 35.2% | 20.1% | **37.8%** | 9.40% | 737 | 28.4% |
-| Q4 2030 | 11.1% | 18.6% | 31.2% | 34.0% | 34.1% | 52.7% | 35.1% | 20.0% | **37.4%** | 9.93% | 685 | 27.5% |
+| Q1 2027 | 12.3% | 20.8% | 33.5% | 35.0% | 36.0% | 50.5% | 35.8% | 20.8% | **35.1%** | 15.38% | 155 | 19.7% |
+| Q2 2027 | 12.4% | 21.0% | 34.2% | 36.5% | 42.0% | 51.2% | 36.0% | 21.0% | **38.2%** | 12.06% | 292 | 26.1% |
+| **Q3 2027** | 12.4% | 21.0% | 34.8% | 38.0% | 47.0% | 52.2% | 36.2% | 21.2% | **40.7%** | 9.56% | **494** | **31.1%** |
+| Q4 2027 | 12.3% | 20.8% | 35.0% | 39.2% | 50.5% | 53.2% | 36.5% | 21.3% | **43.0%** | 8.38% | 695 | 34.6% |
+| Q1 2028 | 12.2% | 20.5% | 34.8% | 39.8% | 53.0% | 54.2% | 36.6% | 21.4% | **44.7%** | 8.36% | 795 | 36.3% |
+| Q2 2028 | 12.1% | 20.2% | 34.4% | **40.0%** | 54.5% | 55.0% | 36.7% | 21.3% | **45.8%** | 8.13% | 897 | 37.7% |
+| Q3 2028 | 12.0% | 20.0% | 34.0% | 39.7% | **55.0%** | 55.6% | 36.6% | 21.2% | **46.3%** | 8.03% | 964 | 38.2% |
+| Q4 2028 | 11.9% | 19.8% | 33.5% | 39.2% | **55.0%** | 55.8% | 36.4% | 21.0% | **46.2%** | 8.01% | 1,000 | 38.2% |
+| Q1 2029 | 11.8% | 19.6% | 33.0% | 38.5% | 54.5% | 55.6% | 36.2% | 20.8% | **45.8%** | 8.03% | 1,020 | 37.8% |
+| Q2 2029 | 11.7% | 19.4% | 32.6% | 37.7% | 53.7% | 55.2% | 36.0% | 20.6% | **45.3%** | 8.00% | 1,043 | 37.3% |
+| Q3 2029 | 11.6% | 19.2% | 32.2% | 37.0% | 52.7% | 54.7% | 35.8% | 20.5% | **44.8%** | 7.92% | 1,067 | 36.9% |
+| Q4 2029 | 11.5% | 19.0% | 32.0% | 36.3% | 51.7% | 54.2% | 35.6% | 20.4% | **44.2%** | 7.93% | 1,071 | 36.3% |
+| Q1 2030 | 11.4% | 18.9% | 31.8% | 35.6% | 50.7% | 53.8% | 35.4% | 20.3% | **43.6%** | 8.45% | 987 | 35.2% |
+| Q2 2030 | 11.3% | 18.8% | 31.6% | 35.0% | 49.9% | 53.4% | 35.3% | 20.2% | **43.1%** | 8.97% | 915 | 34.2% |
+| Q3 2030 | 11.2% | 18.7% | 31.4% | 34.5% | 49.1% | 53.0% | 35.2% | 20.1% | **42.7%** | 9.40% | 864 | 33.3% |
+| Q4 2030 | 11.1% | 18.6% | 31.2% | 34.0% | 48.4% | 52.7% | 35.1% | 20.0% | **42.3%** | 9.93% | 805 | 32.3% |
 
-¹ Q3 2026 opex of $75M sits inside the guided $70–80M range; the percentage falls sharply as revenue scales.
+Q3 2026 opex of $75M sits inside the guided $70–80M range at 27.52% of revenue; the percentage falls sharply as revenue scales.
 
 ### Margin shape
 
-Every laser and transceiver line rises into the 2027–2028 shortage and peaks around Q2 to Q4 2028. **800G and 1.6T end above their starting margins** because those starts are ramp margins and yield learning is permanent, while the shortage premium is not.
+Every laser and transceiver line rises into the 2027–2028 shortage and peaks around Q2 to Q4 2028. **800G and 1.6T end above their starting margins** because those starts are ramp margins and yield learning is permanent, while the shortage premium is not. **1.6T carries the widest margin of any transceiver line and by a wide distance — see section 5b.**
 
 The two declining legacy lines are deliberately allowed to fade **below** their starting margins. The shortage-peak treatment protects bottlenecks, and 100G and 10G/40G are commoditising products being actively cannibalised.
 
-Blended gross margin peaks at 41.6% in Q3 2028, against management's stated long-term objective of around 40%. The model sits modestly above that objective for five quarters at the shortage peak and returns below it by 2030.
+Blended gross margin peaks at **46.3%** in Q3 2028, against management's stated long-term objective of around 40%. The model sits above that objective from Q2 2027 through the end of the ladder, and the excess is the mix effect of 1.6T growing to become the largest line in the company at a 55% margin. Disclosed per AH-15.5.
 
 ### Calibration to the disclosed actual
 
@@ -224,29 +224,53 @@ AAOI discloses the data center mix by data rate for the anchor quarter only. The
 
 The 200G/400G line dips in Q4 2026 and recovers through 2027. That is deliberate: capacity is completely booked until Q2 2027 and scarce capacity goes to 800G and 1.6T first, so 400G volume only returns as the Texas footprint comes online.
 
+## 5b. The 1.6T margin ruling (2026-08-12)
+
+**1.6T carries a materially higher gross margin than 800G and is not modelled at parity with it.**
+
+| | 800G | 1.6T | Spread |
+|---|---:|---:|---:|
+| Q3 2026 | 26.0% | 24.0% | −2.0 pts |
+| Q4 2026 | 33.0% | 30.0% | −3.0 pts |
+| Q3 2027 | 38.0% | 47.0% | **+9.0 pts** |
+| Q3 2028 | 39.7% | **55.0%** | **+15.3 pts** |
+| Q4 2030 | 34.0% | 48.4% | +14.4 pts |
+
+800G peaks at 40.0%. 1.6T peaks at **55.0%** across Q3–Q4 2028, inside the 50–60% range, fading to 48.4% by 2030.
+
+Three reasons the spread is real rather than assumed:
+
+1. **1.6T is the newer product with fewer qualified suppliers.** AAOI is only the fourth supplier qualified at one large hyperscaler, but the qualified field at 1.6T is narrower than at 800G, and a narrower field prices better.
+2. **AAOI is vertically integrated into its own lasers.** Management states laser gross margin is 55–65%. A vertically integrated maker captures that inside the transceiver rather than paying it away, and the laser content per unit is higher at 1.6T.
+3. **The ASP step is larger than the cost step.** 1.6T carries roughly double the 800G ASP on considerably less than double the bill of materials.
+
+**The near-term quarters are deliberately unchanged.** Q3 2026 stays at 24.0% and Q4 2026 at 30.0%, so the model still reproduces the guided Q3 gross margin of 29–30.5% at 29.85% and the guided Q4 exit gross margin of 32–33% at 32.79%, both exactly. The divergence begins in Q1 2027, the first quarter with no company gross-margin guidance against it.
+
+Blended gross margin now peaks at 46.3% in Q3 2028 against management's stated long-term objective of around 40%. That is the mix effect of a 55%-margin line growing to become the largest in the company, and it is disclosed here per AH-15.5.
+
 ## 6. Rolling forward-4Q ceiling (AH-16)
 
 > Ceiling = [OP(Q) + OP(Q+1) + OP(Q+2) + OP(Q+3)] × 20 ÷ diluted shares
 
 | Ceiling quarter | Window priced | Forward-4Q OP $M | Shares M | **Ceiling** |
 |---|---|---:|---:|---:|
-| Q3 2026 | Q3 26 → Q2 27 | 504 | 92.8 | **$108.70** |
-| Q4 2026 | Q4 26 → Q3 27 | 941 | 96.0 | **$196.12** |
-| Q1 2027 | Q1 27 → Q4 27 | 1,472 | 99.0 | **$297.47** |
-| Q2 2027 | Q2 27 → Q1 28 | 2,026 | 101.0 | **$401.20** |
-| **Q3 2027** | **Q3 27 → Q2 28** | **2,551** | **103.0** | **$495.37** |
-| Q4 2027 | Q4 27 → Q3 28 | 2,954 | 105.0 | **$562.74** |
-| Q1 2028 | Q1 28 → Q4 28 | 3,212 | 106.0 | **$606.02** |
-| Q2 2028 | Q2 28 → Q1 29 | 3,395 | 107.0 | $634.58 |
-| Q3 2028 | Q3 28 → Q2 29 | 3,503 | 108.0 | $648.64 |
-| Q4 2028 | Q4 28 → Q3 29 | 3,570 | 109.0 | $655.11 |
-| **Q1 2029** | Q1 29 → Q4 29 | 3,613 | 110.0 | **$656.90** — peak |
-| Q2 2029 | Q2 29 → Q1 30 | 3,574 | 111.0 | $644.03 |
-| Q3 2029 | Q3 29 → Q2 30 | 3,458 | 111.5 | $620.25 |
-| Q4 2029 | Q4 29 → Q3 30 | 3,280 | 112.0 | $585.76 |
-| Q1 2030 | Q1 30 → Q4 30 | 3,049 | 112.5 | $542.07 |
+| Q3 2026 | Q3 26 → Q2 27 | 537 | 92.8 | **$115.79** |
+| Q4 2026 | Q4 26 → Q3 27 | 1,024 | 96.0 | **$213.43** |
+| Q1 2027 | Q1 27 → Q4 27 | 1,635 | 99.0 | **$330.33** |
+| Q2 2027 | Q2 27 → Q1 28 | 2,276 | 101.0 | **$450.65** |
+| **Q3 2027** | **Q3 27 → Q2 28** | **2,881** | **103.0** | **$559.45** |
+| Q4 2027 | Q4 27 → Q3 28 | 3,351 | 105.0 | **$638.33** |
+| Q1 2028 | Q1 28 → Q4 28 | 3,656 | 106.0 | **$689.88** |
+| Q2 2028 | Q2 28 → Q1 29 | 3,881 | 107.0 | $725.47 |
+| Q3 2028 | Q3 28 → Q2 29 | 4,026 | 108.0 | $745.85 |
+| Q4 2028 | Q4 28 → Q3 29 | 4,131 | 109.0 | $757.92 |
+| **Q1 2029** | Q1 29 → Q4 29 | 4,202 | 110.0 | **$763.94** — peak |
+| Q2 2029 | Q2 29 → Q1 30 | 4,168 | 111.0 | $751.02 |
+| Q3 2029 | Q3 29 → Q2 30 | 4,040 | 111.5 | $724.68 |
+| Q4 2029 | Q4 29 → Q3 30 | 3,838 | 112.0 | $685.23 |
+| Q1 2030 | Q1 30 → Q4 30 | 3,571 | 112.5 | $634.85 |
 
-**AH-1 chain, ranking cell:** 443 + 616 + 701 + 791 = 2,551. Ceiling = 2,551 × 20 ÷ 103.0 = **$495.37**.
+**AH-1 chain, ranking cell:** 470 + 641 + 780 + 990 = 2,881. Ceiling = 2,881 × 20 ÷ 103.0 = **$559.45**.
 
 The ceiling peaks in Q1 2029 and declines afterward as pluggable cannibalisation by CPO and NPO begins while the share count continues rising.
 
@@ -275,19 +299,19 @@ The ceiling peaks in Q1 2029 and declines afterward as pluggable cannibalisation
 
 ## 9. ELSFP sensitivity
 
-ELSFP contributes **$478M of gross profit inside the ranking-cell window**, out of $2,551M of forward-4Q operating profit. It is the single largest discretionary input in the model.
+ELSFP contributes **$478M of gross profit inside the ranking-cell window**, out of $2,881M of forward-4Q operating profit. It is the single largest discretionary input in the model.
 
 | ELSFP assumption | Q3 2027 ceiling | Upside | EV | Rank |
 |---|---:|---:|---:|---:|
-| Line at zero | ~$418 | 3.1 | ~2.23 | ~6 |
-| Half the management figure | ~$457 | 3.4 | ~2.45 | ~4 |
-| **Management's 400k/month at a $400 ASP** | **$495.37** | **3.7** | **2.66** | **3** |
+| Line at zero | ~$482 | 3.6 | ~2.59 | ~4 |
+| Half the management figure | ~$521 | 3.8 | ~2.74 | ~3 |
+| **Management's 400k/month at a $400 ASP** | **$559.45** | **4.1** | **2.95** | **2** |
 
 Scale check: 400,000 modules a month is roughly 2.5× the peak ELS module volume this book models for Lumentum in 2030, two years earlier, and Lumentum holds a single ELS module order. That comparison is model against claim rather than disclosure against disclosure, and the gap is large.
 
 Against that, the 400k figure is management-stated, Chinese suppliers manage maybe 70mW with very few at 100mW, and AAOI is vertically integrated in lasers in a way pure assemblers are not.
 
-**Rank 3 is conditional on ELSFP. Rank 6 is the floor.**
+**Rank 2 is conditional on ELSFP. Rank 4 is the floor.**
 
 ## 10. Inflection watch
 
@@ -312,7 +336,7 @@ Against that, the 400k figure is management-stated, Chinese suppliers manage may
 ## 12. Open rulings
 
 1. **Base holds at 72.** Core Thesis at 13/20 is the line to challenge: the fourth-supplier position in 1.6T is what holds it there.
-2. **ELSFP inclusion.** The line moves the rank from 6 to 3 and rests on a management capacity statement contradicted by independent technical assessment. Confirm whether it stays at the full management figure, at half, or at zero.
-3. **Blended gross margin exceeds management's stated long-term objective** of around 40% for five quarters at the shortage peak, reaching 41.6%. That is the shortage-peak treatment applied to a company that has published a ceiling on its own ambition.
+2. **ELSFP inclusion.** The line moves the rank from 4 to 2 and rests on a management capacity statement contradicted by independent technical assessment. Confirm whether it stays at the full management figure, at half, or at zero.
+3. **Blended gross margin exceeds management's stated long-term objective** of around 40%, peaking at 46.3% in Q3 2028 on the 1.6T mix. That is the shortage-peak treatment applied to a company that has published a ceiling on its own ambition.
 
-**Footer:** snapshot `/mnt/user-data/outputs/v5.0.61_AAOI_ceiling_at_target.xlsx`, tab `AAOI_Q_Model`.
+**Footer:** snapshot `/mnt/user-data/outputs/v5.0.70_AAOI_16T_margin.xlsx`, tab `AAOI_Q_Model`.
