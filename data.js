@@ -980,6 +980,39 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 31,
+            "Ticker": "COHR",
+            "Name": "Coherent Corp",
+            "EV (Base% x Upside)": 1.14,
+            "Base": 95,
+            "Port": "",
+            "Current Price": 379.13,
+            "Upside (Q3 2027)": 1.2,
+            "Position Type": "🔒 CHOKEPOINT\nVertical: Most advanced InP lines globally — doubling capacity TWICE still not enough. 2026-2030+",
+            "Artifact Updated": "Aug 14 2026: rebuilt v6.0 AH-11 TWO-SEGMENT (Datacenter & Communications / Industrial) on the FQ4 FY2026 actual reported 2026-08-12, from the COHR artifact. Multiple 20x, replacing 25x. Diluted shares 204M rising to 223M, replacing 196.4M flat. Ladder LINKED to COHR_Q_Model. | Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived 80.",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "Q3 2026": 278.926470588235,
+            "Q4 2026": 321.536893203884,
+            "Q1 2027": 365.375961538462,
+            "Q2 2027": 409.844976076555,
+            "Q3 2027": 453.168571428571,
+            "Q4 2027": 493.726066350711,
+            "Q1 2028": 531.064150943396,
+            "Q2 2028": 565.606103286385,
+            "Q3 2028": 597.523831775701,
+            "Q4 2028": 627.306511627907,
+            "Q1 2029": 654.352777777778,
+            "Q2 2029": 679.189861751152,
+            "Q3 2029": 701.490825688073,
+            "Q4 2029": 721.355707762557,
+            "Q1 2030": 739.473181818182,
+            "Change %": "-6.20%",
+            "Entry": 0,
+            "Total": 57,
+            "Upside": "1.2x",
+            "EV Upside": 14
+        },
+        {
+            "Rank": 32,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV (Base% x Upside)": 1.12,
@@ -1012,7 +1045,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 13
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "GOOGL",
             "Name": "Alphabet Inc.",
             "EV (Base% x Upside)": 1.09,
@@ -1044,7 +1077,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "MSFT",
             "Name": "Microsoft",
             "EV (Base% x Upside)": 1.09,
@@ -1076,7 +1109,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMZN",
             "Name": "Amazon.com, Inc.",
             "EV (Base% x Upside)": 1.09,
@@ -1108,7 +1141,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "EV (Base% x Upside)": 1.09,
@@ -1141,7 +1174,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "AVGO",
             "Name": "Broadcom Inc",
             "EV (Base% x Upside)": 1.09,
@@ -1173,7 +1206,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 10
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "DELL",
             "Name": "Dell Technologies",
             "EV (Base% x Upside)": 1.08,
@@ -1203,39 +1236,6 @@ window.PORTFOLIO_DATA = {
             "Total": 54,
             "Upside": "1.2x",
             "EV Upside": 8
-        },
-        {
-            "Rank": 38,
-            "Ticker": "COHR",
-            "Name": "Coherent Corp",
-            "EV (Base% x Upside)": 1.05,
-            "Base": 95,
-            "Port": "",
-            "Current Price": 379.13,
-            "Upside (Q3 2027)": 1.1,
-            "Position Type": "🔒 CHOKEPOINT\nVertical: Most advanced InP lines globally — doubling capacity TWICE still not enough. 2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10 | Aug 14 2026: Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived summing table.",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Q3 2026": 183.19516293279,
-            "Q4 2026": 251.976018329939,
-            "Q1 2027": 330.677189409369,
-            "Q2 2027": 360.225050916497,
-            "Q3 2027": 399.006619144603,
-            "Q4 2027": 450.715376782077,
-            "Q1 2028": 515.35132382892,
-            "Q2 2028": 553.990835030549,
-            "Q3 2028": 604.705193482688,
-            "Q4 2028": 672.32433808554,
-            "Q1 2029": 756.848268839104,
-            "Q2 2029": 792.58350305499,
-            "Q3 2029": 839.48599796334,
-            "Q4 2029": 902.02265784114,
-            "Q1 2030": 980.193482688391,
-            "Change %": "-6.20%",
-            "Entry": 0,
-            "Total": 57,
-            "Upside": "1.1x",
-            "EV Upside": 0
         },
         {
             "Rank": 39,
@@ -4286,6 +4286,39 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 31,
+            "Ticker": "COHR",
+            "Name": "相干公司",
+            "EV (Base% x Upside)": 1.14,
+            "Base": 95,
+            "Port": "",
+            "Current Price": 379.13,
+            "Upside (Q3 2027)": 1.2,
+            "Position Type": "🔒 阻塞点\n垂直：全球最先进的 InP 生产线——产能翻倍仍然不够。 2026-2030+",
+            "Artifact Updated": "Aug 14 2026: rebuilt v6.0 AH-11 TWO-SEGMENT (Datacenter & Communications / Industrial) on the FQ4 FY2026 actual reported 2026-08-12, from the COHR artifact. Multiple 20x, replacing 25x. Diluted shares 204M rising to 223M, replacing 196.4M flat. Ladder LINKED to COHR_Q_Model. | Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived 80.",
+            "SuperCycle": "AI, CPO, 1.6T, 800G",
+            "Q3 2026": 278.926470588235,
+            "Q4 2026": 321.536893203884,
+            "Q1 2027": 365.375961538462,
+            "Q2 2027": 409.844976076555,
+            "Q3 2027": 453.168571428571,
+            "Q4 2027": 493.726066350711,
+            "Q1 2028": 531.064150943396,
+            "Q2 2028": 565.606103286385,
+            "Q3 2028": 597.523831775701,
+            "Q4 2028": 627.306511627907,
+            "Q1 2029": 654.352777777778,
+            "Q2 2029": 679.189861751152,
+            "Q3 2029": 701.490825688073,
+            "Q4 2029": 721.355707762557,
+            "Q1 2030": 739.473181818182,
+            "Change %": "-6.20%",
+            "Entry": 0,
+            "Total": 57,
+            "Upside": "1.2x",
+            "EV Upside": 14
+        },
+        {
+            "Rank": 32,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV (Base% x Upside)": 1.12,
@@ -4318,7 +4351,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 13
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "GOOGL",
             "Name": "字母表公司",
             "EV (Base% x Upside)": 1.09,
@@ -4350,7 +4383,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "MSFT",
             "Name": "微软",
             "EV (Base% x Upside)": 1.09,
@@ -4382,7 +4415,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AMZN",
             "Name": "亚马逊公司",
             "EV (Base% x Upside)": 1.09,
@@ -4414,7 +4447,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "EV (Base% x Upside)": 1.09,
@@ -4447,7 +4480,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "AVGO",
             "Name": "博通公司",
             "EV (Base% x Upside)": 1.09,
@@ -4479,7 +4512,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 10
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "DELL",
             "Name": "戴尔科技公司",
             "EV (Base% x Upside)": 1.08,
@@ -4509,39 +4542,6 @@ window.PORTFOLIO_DATA = {
             "Total": 54,
             "Upside": "1.2x",
             "EV Upside": 8
-        },
-        {
-            "Rank": 38,
-            "Ticker": "COHR",
-            "Name": "相干公司",
-            "EV (Base% x Upside)": 1.05,
-            "Base": 95,
-            "Port": "",
-            "Current Price": 379.13,
-            "Upside (Q3 2027)": 1.1,
-            "Position Type": "🔒 阻塞点\n垂直：全球最先进的 InP 生产线——产能翻倍仍然不够。 2026-2030+",
-            "Artifact Updated": "Jun 11 (restructure) +Jun12 InP fold +Nov10 | Aug 14 2026: Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived summing table.",
-            "SuperCycle": "AI, CPO, 1.6T, 800G",
-            "Q3 2026": 183.19516293279,
-            "Q4 2026": 251.976018329939,
-            "Q1 2027": 330.677189409369,
-            "Q2 2027": 360.225050916497,
-            "Q3 2027": 399.006619144603,
-            "Q4 2027": 450.715376782077,
-            "Q1 2028": 515.35132382892,
-            "Q2 2028": 553.990835030549,
-            "Q3 2028": 604.705193482688,
-            "Q4 2028": 672.32433808554,
-            "Q1 2029": 756.848268839104,
-            "Q2 2029": 792.58350305499,
-            "Q3 2029": 839.48599796334,
-            "Q4 2029": 902.02265784114,
-            "Q1 2030": 980.193482688391,
-            "Change %": "-6.20%",
-            "Entry": 0,
-            "Total": 57,
-            "Upside": "1.1x",
-            "EV Upside": 0
         },
         {
             "Rank": 39,
