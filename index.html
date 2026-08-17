@@ -38,6 +38,10 @@
                     <div class="logo-text">
                         <h1 data-i18n="title_html">1am<span>Investing</span></h1>
                         <p class="subtitle" data-i18n="subtitle">Investing in the generational AI buildout</p>
+                        <!-- Kept OUTSIDE the [data-i18n] subtitle: applyTranslations
+                             assigns innerHTML wholesale, which would delete this span
+                             on every language switch. -->
+                        <span class="mult-banner" id="mult-banner"></span>
                         <!-- Live-status pill: green dot + "Live · Xs ago" — updates
                              on every successful poll AND every 5 s via heartbeat,
                              so the visible counter ticks. If the counter stops
@@ -127,36 +131,38 @@
             </div>
         </section>
 
-        <!-- SuperCycle multi-select filter + deep-dive search.
+        <!-- Filter bar + deep-dive search.
              3-column grid: empty spacer | centered pill group | right-aligned search.
              On phones the grid collapses to one column and the search drops
              to its own full-width row below the pills.
 
-             SuperCycle pills are independent of (and composed with) the
-             All/Chokepoint/Bottleneck slider above. A row matches if at
-             least one of its SuperCycle tags is currently active.
+             Holds the valuation-multiple selector, Region filter, Watchlist
+             toggle and the 2029/2030 column toggles. The filters here compose
+             (AND) with the All/Chokepoint/Bottleneck slider above; the
+             multiple is not a filter at all — it re-prices rows in place.
 
              Search input matches against ticker symbol AND company name
              (case-insensitive substring), but only over tickers that have
              a deep-dive on file — selecting a result opens its deep-dive
              modal directly. -->
-        <section class="supercycle-bar" id="supercycle-bar">
+        <section class="filter-bar" id="filter-bar">
             <div class="sc-spacer" aria-hidden="true"></div>
             <div class="sc-controls">
                 <!-- Each filter is wrapped in its own .filter-group so the two
                      can sit side-by-side (SuperCycle | Region) on mobile rather
                      than stacking. On desktop they flow inline as one row. -->
+                <!-- Valuation multiple. NOT a filter — it re-prices every row
+                     rather than hiding any. data.js targets are modelled at
+                     20x, so 25x scales them x1.25 and 30x x1.5, with Upside
+                     and EV Upside re-derived to match. Default 20x is the
+                     unscaled baseline; JS reads the active choice from
+                     localStorage, so this initial class is only the pre-JS
+                     paint state. -->
                 <div class="filter-group">
-                    <span class="filter-label" data-i18n="sc_label">SuperCycle</span>
-                    <button class="sc-pill active" data-sc="AI">AI</button>
-                    <button class="sc-pill active" data-sc="CPO">CPO</button>
-                    <button class="sc-pill active" data-sc="800G">800G</button>
-                    <button class="sc-pill active" data-sc="1.6T">1.6T</button>
-                    <!-- 'Other' is ON by default now (catches uncategorized
-                         rows). JS reads the active state from localStorage /
-                         DEFAULT_SUPERCYCLES, so this initial class is only the
-                         pre-JS paint state. -->
-                    <button class="sc-pill active" data-sc="Other" data-i18n="cycle_Other">Other</button>
+                    <span class="filter-label" data-i18n="mult_label">Multiple</span>
+                    <button class="sc-pill mult-pill active" data-mult="20">20x</button>
+                    <button class="sc-pill mult-pill" data-mult="25">25x</button>
+                    <button class="sc-pill mult-pill" data-mult="30">30x</button>
                 </div>
                 <span class="sc-divider" aria-hidden="true"></span>
                 <!-- Region filter (single-select): All / China / Ex-China.

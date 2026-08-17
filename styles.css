@@ -612,20 +612,22 @@ td {
     max-width: 200px;
 }
 
-/* Sticky left columns: SuperCycle (1), Chart button (2), and Ticker (3).
-   SuperCycle uses content-sized wrapping boxes (widest 4-tag layout needs
-   ~92px). Chart column is a narrow strip for the icon button. Ticker
-   carries a logo + symbol. All three stay pinned during horizontal scroll
-   so the chart icon and symbol are always reachable on phones. */
-th:nth-child(1), td:nth-child(1) { width: 95px; max-width: 105px; min-width: 88px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); }
-th:nth-child(2), td:nth-child(2) { width: 36px; max-width: 36px; min-width: 32px; text-align: center; position: sticky; left: 95px; z-index: 20; background: var(--bg-panel); padding-left: 2px; padding-right: 2px; }
+/* Sticky left columns: Chart button (1) and Ticker (2).
+   Chart column is a narrow strip for the icon button; Ticker carries a
+   logo + symbol + watchlist star. Both stay pinned during horizontal
+   scroll so the chart icon and symbol are always reachable on phones.
+   Each col's `left:` equals the cumulative width of the sticky columns
+   before it, so they tile flush.
+   (The SuperCycle column used to occupy slot 1 at left:0 — removing it
+   shifted these down one and dropped every offset by its 95px width.) */
+th:nth-child(1), td:nth-child(1) { width: 36px; max-width: 36px; min-width: 32px; text-align: center; position: sticky; left: 0; z-index: 20; background: var(--bg-panel); padding-left: 2px; padding-right: 2px; }
 /* Width bumped +16px when the watchlist star moved into this cell.
-   Safe to resize: column 3 is the LAST sticky column, so no other
+   Safe to resize: column 2 is the LAST sticky column, so no other
    rule's `left:` offset is measured against its width. */
-th:nth-child(3), td:nth-child(3) { width: 126px; max-width: 146px; min-width: 116px; position: sticky; left: 131px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
+th:nth-child(2), td:nth-child(2) { width: 126px; max-width: 146px; min-width: 116px; position: sticky; left: 36px; z-index: 20; background: var(--bg-panel); border-right: 1px solid var(--border); }
 
 /* Fix header z-index for sticky cols */
-th:nth-child(1), th:nth-child(2), th:nth-child(3) {
+th:nth-child(1), th:nth-child(2) {
     z-index: 30;
     background: var(--sticky-bg);
 }
@@ -652,71 +654,39 @@ tr.row-expanded td {
 /* Ensure sticky columns maintain their background in expanded/hover states */
 /* But also get the hover/expanded background mix */
 tbody tr:hover td:nth-child(1),
-tbody tr:hover td:nth-child(2),
-tbody tr:hover td:nth-child(3) {
+tbody tr:hover td:nth-child(2) {
     background-color: var(--sticky-bg);
 }
 tr.row-expanded td:nth-child(1),
-tr.row-expanded td:nth-child(2),
-tr.row-expanded td:nth-child(3) {
+tr.row-expanded td:nth-child(2) {
     background-color: var(--sticky-bg);
 }
 
-/* === SuperCycle column: tiny color-coded pills =====
-   Each box is content-sized (not forced to 50% column width), so labels
-   like "800G" and "Other" never get truncated. flex-wrap lets boxes flow
-   onto a second row when needed. Up to 4 tags per row in the data; with
-   typical character widths, AI+CPO fits one row and 800G+1.6T fits the
-   next, giving a natural 2x2 layout for the maximum case without forcing
-   it visually. */
-/* Ticker code shown in the (repurposed) Cycle column when the Region filter
-   is set to China. Small, monospaced, never wraps. */
-.cn-code {
-    display: inline-block;
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    white-space: nowrap;
-    color: var(--text-secondary);
+/* === Valuation-multiple pills (20x / 25x / 30x) ====================
+   Share the .sc-pill chrome with the region/watchlist/year controls, but
+   carry an amber tint when off the 20x baseline so a re-priced table is
+   never mistaken for the modelled one. */
+.mult-pill.active:not([data-mult="20"]) {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    color: #0f172a;
 }
-.cycle-cell {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
-    width: 100%;
-    line-height: 1;
-}
-.cycle-box {
-    flex: 0 0 auto;
-    font-size: 0.6rem;
+/* Standing reminder in the header while the table is scaled — the pill
+   alone is easy to miss after scrolling into the quarters. */
+.mult-banner {
+    display: none;
+    margin-left: 0.5rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(245, 158, 11, 0.16);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    color: #f59e0b;
+    font-size: 0.68rem;
     font-weight: 700;
-    padding: 2px 5px;
-    border-radius: 3px;
-    text-align: center;
-    color: #ffffff;
-    letter-spacing: 0;
     white-space: nowrap;
+    vertical-align: middle;
 }
-.cycle-box[data-cycle="AI"]     { background: #3b82f6; }
-.cycle-box[data-cycle="CPO"]    { background: #8b5cf6; }
-.cycle-box[data-cycle="800G"]   { background: #10b981; }
-.cycle-box[data-cycle="1.6T"]   { background: #06b6d4; }
-.cycle-box[data-cycle="Other"]  { background: #6b7280; }
-
-/* Mobile: tighter padding + smaller font */
-@media (max-width: 480px) {
-    .cycle-box {
-        font-size: 0.5rem;
-        padding: 1px 3px;
-        border-radius: 2px;
-    }
-    .cycle-cell {
-        gap: 1px;
-    }
-}
+body.mult-scaled .mult-banner { display: inline-block; }
 
 /* === Chart-icon button (between Cycle and Ticker) ===
    Small icon-only affordance that opens the TradingView modal. Sits in its
@@ -1451,9 +1421,8 @@ body.table-settled tbody tr {
        Chart button (2), Ticker (3). Each col's `left:` matches the cumulative
        `width:` of the preceding sticky cols, so they tile flush during
        horizontal scroll without overlap. */
-    th:nth-child(1), td:nth-child(1) { width: 80px; max-width: 90px; min-width: 76px; }
-    th:nth-child(2), td:nth-child(2) { width: 30px; max-width: 30px; min-width: 28px; left: 80px; }
-    th:nth-child(3), td:nth-child(3) { width: 110px; max-width: 126px; min-width: 102px; left: 110px; }
+    th:nth-child(1), td:nth-child(1) { width: 30px; max-width: 30px; min-width: 28px; left: 0; }
+    th:nth-child(2), td:nth-child(2) { width: 110px; max-width: 126px; min-width: 102px; left: 30px; }
 
     /* The star renders ~11px at phone font sizes — accurate enough to see,
        too small to tap. Pad the button to roughly a 22px hit area without
@@ -1528,10 +1497,11 @@ body.table-settled tbody tr {
     }
 
     /* === Mobile columns (quarterly rebuild — no Basic/ADV modes) ===
-       Column order: 1 Cycle  2 Chart  3 Ticker  4 EVUp  5 Base  6 Chg%
-       7 Price  8 Upside  9-23 quarters (Q3'26..Q1'30).
-       Cycle (1) is hidden on phones (China view re-shows it); which
-       quarters appear is handled by the .q-near/.q-mid/.q-far tiers
+       Column order: 1 Chart  2 Ticker  3 EVUp  4 Base  5 Chg%
+       6 Price  7 Upside  8-22 quarters (Q3'26..Q1'30) — 22 columns total.
+       (Was 23 with Cycle at slot 1; that column and its China-view
+       special-case are gone, so every index shifted down one.)
+       Which quarters appear is handled by the .q-near/.q-mid/.q-far tiers
        (phones show the 6 near quarters). Sticky-column widths + offsets
        live in the 'Sticky columns on phone' block below. Compact the
        quarter cells here so more fit before the horizontal scroll. */
@@ -1562,22 +1532,16 @@ body.table-settled tbody tr {
         max-width: 110px;
     }
 
-    /* Sticky columns on phone. Cycle (1) is HIDDEN by default (non-China),
-       so Chart (2) is the leftmost sticky at left:0 and Ticker (3) sits
-       after it at left:24. The China-region view re-shows Cycle and
-       shifts these offsets back to 64/88 (see body.region-china block).
-       Cumulative left offsets must tile flush during horizontal scroll. */
+    /* Sticky columns on phone: Chart (1) at left:0, Ticker (2) after it at
+       left:24. Cumulative left offsets must tile flush during horizontal
+       scroll. (Previously Cycle held slot 1, hidden on phones except in the
+       China view — that column and its special-casing are both gone.) */
     th:nth-child(1), td:nth-child(1) {
-        display: none;
-        width: 64px; max-width: 72px; min-width: 60px;
-        padding-left: 0.1rem; padding-right: 0.1rem;
-    }
-    th:nth-child(2), td:nth-child(2) {
         width: 24px; max-width: 24px; min-width: 22px;
         left: 0;
         padding-left: 1px; padding-right: 1px;
     }
-    th:nth-child(3), td:nth-child(3) {
+    th:nth-child(2), td:nth-child(2) {
         width: 78px; max-width: 92px; min-width: 74px;
         left: 24px;
         padding-left: 0.1rem; padding-right: 0.15rem;
@@ -1948,7 +1912,7 @@ body.light-mode .modal-content th {
    centered. Composes with the position-toggle (All/Chokepoint/
    Bottleneck) above. Each pill is independently toggleable. Active
    pill = filled accent, inactive = outlined. */
-.supercycle-bar {
+.filter-bar {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
@@ -1975,7 +1939,7 @@ body.light-mode .modal-content th {
     /* empty mirror of the search column — keeps the pill group optically
        centered between equal-width side columns */
 }
-.supercycle-bar .filter-label {
+.filter-bar .filter-label {
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--text-secondary);
@@ -2025,7 +1989,7 @@ body.light-mode .modal-content th {
 }
 
 /* === Deep-dive search input + result dropdown ==================
-   Lives in the right column of the supercycle-bar grid. Dropdown
+   Lives in the right column of the filter-bar grid. Dropdown
    floats absolutely below the input so its height doesn't bump the
    filter row. */
 .sc-search {
@@ -2125,7 +2089,7 @@ body.light-mode .sc-search-input:focus {
 
 /* Mobile: tighter pills, smaller font */
 @media (max-width: 480px) {
-    .supercycle-bar {
+    .filter-bar {
         /* Collapse to single column: pills row above, search row below */
         grid-template-columns: 1fr;
         gap: 0.3rem;
@@ -2153,7 +2117,7 @@ body.light-mode .sc-search-input:focus {
         gap: 0.25rem;
         align-content: flex-start;
     }
-    .supercycle-bar .filter-label {
+    .filter-bar .filter-label {
         font-size: 0.66rem;
         margin: 0 0 0.12rem;
         flex-basis: 100%;
@@ -2298,21 +2262,4 @@ body.light-mode .hint-dismiss:hover {
     }
 }
 
-/* === China-region view on phones: show the ticker Code column ============
-   In China view the leftmost column (1) carries the numeric ticker code.
-   The base phone rules (~L1753) already SIZE col 1 as a 3rd sticky column;
-   the per-mode (Basic/ADV) rules hide it and collapse chart/ticker into a
-   2-col sticky block. Here we un-hide col 1 and restore the chart (2) and
-   ticker (3) left offsets to the 3-column layout. This is the LAST
-   @media(480) block in the file, so it wins the equal-specificity tie
-   against the Basic/ADV hide rules. */
-@media (max-width: 480px) {
-    body.region-china th:nth-child(1),
-    body.region-china td:nth-child(1) { display: table-cell; }
-    body.region-china th:nth-child(2),
-    body.region-china td:nth-child(2) { left: 64px; }
-    body.region-china th:nth-child(3),
-    body.region-china td:nth-child(3) { left: 88px; }
-    body.region-china .cn-code { font-size: 0.6rem; letter-spacing: -0.03em; }
-}
 

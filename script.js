@@ -16,10 +16,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // The ~1-year-forward quarter that drives Upside + EV Upside (tinted in the UI).
     const TARGET_QUARTER = "Q3 2027";
     const simpleCols = [
-        "SuperCycle", "_chart", "Ticker", "EV Upside", "Base",
+        "_chart", "Ticker", "EV Upside", "Base",
         "Change %", "Current Price", "Upside",
         ...QUARTER_COLS
     ];
+
+    // === Valuation multiple ============================================
+    // The book is modelled at a 20x baseline: every quarterly target in
+    // data.js is a 20x number. The selector lets a visitor re-price the
+    // whole table at 25x or 30x, which is simply a proportional scaling of
+    // every target (25/20 = 1.25, 30/20 = 1.5).
+    //
+    // Scaling is applied at RENDER time, never to the stored rows. That
+    // matters because the live-price poll rewrites Current Price / Upside /
+    // EV Upside in place every ~30s; if we mutated the rows the poll would
+    // fight the multiple (and compound it on every tick). Keeping data.js
+    // as the immutable 20x baseline means the poll refreshes the baseline
+    // and the multiple is re-derived cleanly on each render.
+    const MULTIPLE_STORAGE_KEY = 'targetMultiple_v1';
+    const BASE_MULTIPLE = 20;                 // what data.js targets represent
+    const MULTIPLE_CHOICES = [20, 25, 30];
+    let targetMultiple = (() => {
+        const stored = parseInt(localStorage.getItem(MULTIPLE_STORAGE_KEY), 10);
+        return MULTIPLE_CHOICES.indexOf(stored) !== -1 ? stored : BASE_MULTIPLE;
+    })();
+    // 20x -> 1.0, 25x -> 1.25, 30x -> 1.5
+    const multipleFactor = () => targetMultiple / BASE_MULTIPLE;
 
     // Responsive tier + tint class for a column (quarter columns only).
     // Tiers: near (idx 0-5, always shown), mid (6-11, shown >=700px),
@@ -54,12 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // any quarter ranks stocks by total upside from here to that point in time.
     // Because every badge now depends on Current Price, the live-price poll
     // must reset this cache when it patches prices (see applyLiveData) — else
-    // the badges would freeze at their page-load values. Hence `let`, not const.
+    // the badges would freeze at their page-load values. The valuation-multiple
+    // selector invalidates it for the same reason. Hence `let`, not const.
     let _qPctCache = new WeakMap();
     function quarterPctChanges(row) {
         if (_qPctCache.has(row)) return _qPctCache.get(row);
         const price = parseLooseNumber(row['Current Price']);
-        const prices = QUARTER_COLS.map(q => parseLooseNumber(row[q]));
+        const k = multipleFactor();
+        const prices = QUARTER_COLS.map(q => parseLooseNumber(row[q]) * k);
         const pcts = new Map();
         if (isFinite(price) && price > 0) {
             for (let i = 0; i < prices.length; i++) {
@@ -72,12 +96,46 @@ document.addEventListener('DOMContentLoaded', () => {
         return pcts;
     }
 
+    // === Multiple-aware metric derivation ===============================
+    // Upside and EV Upside are stored at the 20x baseline. At 25x/30x we
+    // re-derive them rather than scaling the stored figure, because only
+    // Upside is proportional to the target:
+    //
+    //   Upside(k) = k·T/P                      -> scales linearly
+    //   EV(k)     = Base × (k·T/P − 1)         -> does NOT scale linearly
+    //
+    // Subtracting the two EV forms gives the exact increment:
+    //   EV(k) − EV(1) = Base × (k−1) × T/P
+    //
+    // Adding that delta to the stored value preserves the analyst's own
+    // EV figure exactly at 20x (it sits slightly below the textbook formula
+    // by design) while moving it correctly at higher multiples.
+    function scaledUpside(row) {
+        const k = multipleFactor();
+        if (k === 1) return row['Upside'];
+        const price = parseLooseNumber(row['Current Price']);
+        const tgt = parseLooseNumber(row[TARGET_QUARTER]);
+        if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0) return row['Upside'];
+        return `${(k * tgt / price).toFixed(1)}x`;
+    }
+    function scaledEvUpside(row) {
+        const stored = parseFloat(row['EV Upside']);
+        const k = multipleFactor();
+        if (k === 1 || isNaN(stored)) return row['EV Upside'];
+        const price = parseLooseNumber(row['Current Price']);
+        const tgt = parseLooseNumber(row[TARGET_QUARTER]);
+        const base = parseFloat(row['Base']);
+        if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0 || isNaN(base)) {
+            return row['EV Upside'];
+        }
+        return Math.round(stored + base * (k - 1) * (tgt / price));
+    }
+
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
         "Current Price": "Price",
         "Change %": "Chg%",
-        "SuperCycle": "Cycle",
         "EV Upside": "EVUp",
     };
     // Short quarter headers: "Q3 2026" -> "Q3'26".
@@ -94,9 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const COL_CAPTION_KEYS = {
         "EV Upside": "caption_EVUp",
     };
-
-    // Canonical order for SuperCycle tag rendering — keeps rows scannable.
-    const SUPERCYCLE_ORDER = ["AI", "CPO", "800G", "1.6T", "Other"];
 
     // === Logo URL overrides for non-US tickers ===
     // FMP's /image-stock/ endpoint that we use by default for ticker logos
@@ -184,8 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
             explainer_chokepoint: '<strong>Chokepoint</strong> — long-term holding, always buy dips.',
             explainer_bottleneck: '<strong>Bottleneck</strong> — middle-duration trade, double-check why there\'s a dip.',
             hint_text: 'Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis',
-            col_Cycle: 'Cycle',
-            col_Code: 'Code',
             col_Ticker: 'Ticker',
             col_Total: 'Total',
             col_EVUp: 'EV Upside',
@@ -217,10 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_dive_suffix: '— Deep Dive',
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
             modal_more_coming: 'More tickers will be added soon.',
-            cycle_Other: 'Other',
             modal_close_label: 'Close deep dive',
             hint_dismiss_label: 'Dismiss tip',
-            sc_label: 'SuperCycle',
+            mult_label: 'Multiple',
+            mult_tip_20: 'Baseline valuation — targets as modelled',
+            mult_tip_25: 'Re-price every target 25% higher (25x vs 20x)',
+            mult_tip_30: 'Re-price every target 50% higher (30x vs 20x)',
+            mult_banner: 'Targets shown at {m}x — {p}% above the 20x baseline',
             region_label: 'Region',
             region_all: 'All',
             region_china: '🇨🇳 China',
@@ -254,8 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
             explainer_chokepoint: '<strong>关键节点</strong> — 长期持有,逢低买入。',
             explainer_bottleneck: '<strong>瓶颈</strong> — 中期交易,下跌时核查原因。',
             hint_text: '点击股票代码 <span class="hint-arrow">↗</span> 查看深度分析',
-            col_Cycle: '周期',
-            col_Code: '代码',
             col_Ticker: '代码',
             col_Total: '总分',
             col_EVUp: 'EV 上涨',
@@ -287,10 +341,13 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_dive_suffix: '— 深度分析',
             modal_no_dive: '尚未提供 {ticker} 的深度分析。',
             modal_more_coming: '更多代码即将添加。',
-            cycle_Other: '其他',
             modal_close_label: '关闭深度分析',
             hint_dismiss_label: '关闭提示',
-            sc_label: '超级周期',
+            mult_label: '估值倍数',
+            mult_tip_20: '基准估值 — 按模型目标价',
+            mult_tip_25: '所有目标价上调 25%（25x 对比 20x）',
+            mult_tip_30: '所有目标价上调 50%（30x 对比 20x）',
+            mult_banner: '目标价按 {m}x 显示 — 较 20x 基准高 {p}%',
             region_label: '地区',
             region_all: '全部',
             region_china: '🇨🇳 中国',
@@ -387,36 +444,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
     })();
 
-    // SuperCycle multi-select filter. Default: ALL categories active
-    // (including 'Other') — the table opens showing every position;
-    // users narrow down by toggling pills off. Persisted as a JSON
-    // array in localStorage. Composes with the position-type filter —
-    // both filters must accept a row.
-    //
-    // Storage key bumped to v3 because the default changed again
-    // ('Other' was excluded in v2, now re-included). Visitors with a
-    // v2 entry get the fresh all-active default on next load; anyone
-    // who had explicitly toggled pills loses that state on upgrade —
-    // acceptable for a default-behavior change.
-    const SUPERCYCLE_STORAGE_KEY = 'supercycleFilter_v3';
-    const ALL_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];
-    const DEFAULT_SUPERCYCLES = ['AI', 'CPO', '800G', '1.6T', 'Other'];   // all on by default
-    let activeSupercycles = (() => {
-        try {
-            const raw = localStorage.getItem(SUPERCYCLE_STORAGE_KEY);
-            if (raw) {
-                const arr = JSON.parse(raw);
-                if (Array.isArray(arr) && arr.length > 0 &&
-                    arr.every(x => ALL_SUPERCYCLES.includes(x))) {
-                    return new Set(arr);
-                }
-            }
-        } catch (_) {}
-        return new Set(DEFAULT_SUPERCYCLES);
-    })();
-
     // Region filter (single-select): 'all' | 'china' | 'exchina'. Composes
-    // (AND) with the position-type and SuperCycle filters. Persisted in
+    // (AND) with the position-type and watchlist filters. Persisted in
     // localStorage; defaults to 'all'.
     const REGION_STORAGE_KEY = 'regionFilter_v1';
     let regionFilter = (() => {
@@ -543,6 +572,12 @@ document.addEventListener('DOMContentLoaded', () => {
             currentLang = btn.getAttribute('data-lang');
             try { localStorage.setItem(LANG_STORAGE_KEY, currentLang); } catch (_) {}
             applyChromeTranslations();
+            // The multiple banner is built from tr() but carries no data-i18n
+            // (applyChromeTranslations assigns innerHTML, which would fight the
+            // dynamic text), so re-render it here. Called from the click handler
+            // rather than inside applyChromeTranslations because that also runs
+            // at init, before multPills is declared — a TDZ error.
+            syncMultiplePillsUI();
             renderData();
         });
     });
@@ -592,30 +627,45 @@ document.addEventListener('DOMContentLoaded', () => {
     positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === positionFilter));
     setSliderPosition(positionFilter);
 
-    // SuperCycle pill toggle. Click to flip a pill's active state. Refuse
-    // to deactivate the last active pill (degenerate empty filter would
-    // hide every row).
-    const scPills = document.querySelectorAll('.sc-pill[data-sc]');
-    function syncSupercyclePillsUI() {
-        scPills.forEach(p => {
-            p.classList.toggle('active', activeSupercycles.has(p.getAttribute('data-sc')));
+    // Valuation-multiple selector (20x / 25x / 30x) — single-select, persists
+    // in localStorage. Unlike the pills around it this is NOT a filter: it
+    // re-prices every row rather than hiding any, so row counts never change.
+    const multPills = document.querySelectorAll('.mult-pill');
+    function syncMultiplePillsUI() {
+        multPills.forEach(p => {
+            p.classList.toggle('active', parseInt(p.getAttribute('data-mult'), 10) === targetMultiple);
         });
-    }
-    function toggleSupercycle(sc) {
-        if (activeSupercycles.has(sc)) {
-            if (activeSupercycles.size === 1) return;   // keep at least one active
-            activeSupercycles.delete(sc);
-        } else {
-            activeSupercycles.add(sc);
+        // Off-baseline is a non-obvious state to leave the table in — and it
+        // persists across reloads — so badge the body and spell it out in the
+        // header. A visitor returning to a 30x table should never mistake it
+        // for the modelled numbers.
+        const scaled = targetMultiple !== BASE_MULTIPLE;
+        document.body.classList.toggle('mult-scaled', scaled);
+        const banner = document.getElementById('mult-banner');
+        if (banner) {
+            banner.textContent = scaled
+                ? tr('mult_banner', {
+                    m: String(targetMultiple),
+                    p: String(Math.round((multipleFactor() - 1) * 100)),
+                  })
+                : '';
         }
-        try { localStorage.setItem(SUPERCYCLE_STORAGE_KEY, JSON.stringify([...activeSupercycles])); } catch (_) {}
-        syncSupercyclePillsUI();
+    }
+    function applyMultiple(val) {
+        const m = parseInt(val, 10);
+        if (MULTIPLE_CHOICES.indexOf(m) === -1 || m === targetMultiple) return;
+        targetMultiple = m;
+        try { localStorage.setItem(MULTIPLE_STORAGE_KEY, String(m)); } catch (_) {}
+        // Every quarter badge is derived from the scaled targets, so the
+        // per-row cache is stale the moment the multiple changes.
+        _qPctCache = new WeakMap();
+        syncMultiplePillsUI();
         renderData();
     }
-    scPills.forEach(p => {
-        p.addEventListener('click', () => toggleSupercycle(p.getAttribute('data-sc')));
+    multPills.forEach(p => {
+        p.addEventListener('click', () => applyMultiple(p.getAttribute('data-mult')));
     });
-    syncSupercyclePillsUI();
+    syncMultiplePillsUI();
 
     // Region filter (All / China / Ex-China) — single-select, persists in
     // localStorage. Mirrors the position-type handler pattern.
@@ -624,8 +674,6 @@ document.addEventListener('DOMContentLoaded', () => {
         regionFilter = (val === 'china' || val === 'exchina') ? val : 'all';
         regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
         try { localStorage.setItem(REGION_STORAGE_KEY, regionFilter); } catch (_) {}
-        // body.region-china lets mobile CSS re-show the Code column (col 1).
-        document.body.classList.toggle('region-china', regionFilter === 'china');
         renderData();
     };
     regionPills.forEach(btn => {
@@ -633,7 +681,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     // Reflect the persisted choice on the pills (no re-render — initial render handles it).
     regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
-    document.body.classList.toggle('region-china', regionFilter === 'china');
 
     // Watchlist toggle — show only starred tickers. Refuses to engage with an
     // empty watchlist (nothing to show); briefly pulses the button instead so
@@ -705,7 +752,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === Deep-Dive Search ===
-    // Input on the right side of the SuperCycle bar. Filters tickers that
+    // Input on the right side of the filter bar. Filters tickers that
     // have a deep-dive on file (manifest-gated) and matches against ticker
     // symbol OR company Name (case-insensitive substring). Selecting a
     // result opens the deep-dive modal directly.
@@ -1406,13 +1453,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = fullData[currentLang];
             const enData = fullData['en'] || data;
 
-            // Filter out empty rows AND apply both filters (position-type + SuperCycle).
-            // Both keyed off English columns so language switches don't break the
-            // filter logic. SuperCycle = comma-separated tags; row matches if at
-            // least one of its tags is in the active set. Rows with empty/dash
-            // SuperCycle are treated as 'Other'.
+            // Filter out empty rows AND apply the active filters. All are keyed
+            // off English columns so language switches don't break the logic.
             const wanted = positionFilter.toUpperCase();   // "ALL" / "CHOKEPOINT" / "BOTTLENECK"
-            const allSCActive = activeSupercycles.size === ALL_SUPERCYCLES.length;
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
 
@@ -1420,21 +1463,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (positionFilter !== 'all') {
                     const ptEn = String((enData[i] && enData[i]['Position Type']) || '').toUpperCase();
                     if (!ptEn.includes(wanted)) return false;
-                }
-
-                // SuperCycle filter — skip work if every category is active
-                if (!allSCActive) {
-                    const scRaw = String((enData[i] && enData[i]['SuperCycle']) || '').trim();
-                    let tags;
-                    if (!scRaw || scRaw === '—') {
-                        tags = ['Other'];   // unspecified/dash treated as Other
-                    } else {
-                        // Split on commas OR newlines — most rows are
-                        // comma-separated ('AI, CPO') but some xlsx cells
-                        // use line breaks ('AI\nCPO\n800G'). Handle both.
-                        tags = scRaw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
-                    }
-                    if (!tags.some(t => activeSupercycles.has(t))) return false;
                 }
 
                 // Watchlist filter — starred tickers only. Keyed off the
@@ -1537,8 +1565,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         return sortState.asc ? aPct - bPct : bPct - aPct;
                     }
 
-                    const rawA = a[col];
-                    const rawB = b[col];
+                    // EV Upside and Upside are re-derived at 25x/30x. EV's
+                    // increment is Base x (k-1) x T/P — per-row, so scaling is
+                    // NOT order-preserving across rows. Sorting the stored 20x
+                    // figures would silently disagree with the displayed order,
+                    // so sort the same values the table shows.
+                    const rawA = col === 'EV Upside' ? scaledEvUpside(a)
+                               : col === 'Upside'    ? scaledUpside(a)
+                               : a[col];
+                    const rawB = col === 'EV Upside' ? scaledEvUpside(b)
+                               : col === 'Upside'    ? scaledUpside(b)
+                               : b[col];
                     const emptyA = isMissing(rawA);
                     const emptyB = isMissing(rawB);
                     if (emptyA && emptyB) return 0;
@@ -1593,12 +1630,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const isSorted = sortState.col === col;
                 const sortClass = isSorted ? (sortState.asc ? 'asc' : 'desc') : '';
                 const icon = isSorted ? (sortState.asc ? '↑' : '↓') : '↕';
-                let labelHtml = labelFor(col);
-                // China-region view relabels the repurposed SuperCycle column.
-                if (col === 'SuperCycle' && regionFilter === 'china') {
-                    labelHtml = tr('col_Code');
-                }
-                headHtml += `<th class="col-simple ${sortClass}${colExtraClasses(col)}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
+                const labelHtml = labelFor(col);
+                headHtml +=`<th class="col-simple ${sortClass}${colExtraClasses(col)}" data-col="${col}">${labelHtml} <span class="sort-icon">${icon}</span></th>`;
             }
         });
         thead.innerHTML = headHtml;
@@ -1948,40 +1981,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 `</button>`;
         }
 
-        // SuperCycle column: render up to 4 tiny colored boxes in a 2-column
-        // grid. Tags drawn in canonical order regardless of how they're listed
-        // in the source string. Empty / dash values render as a hollow cell.
-        if (colName === 'SuperCycle') {
-            // China-region view: repurpose this column to show the numeric
-            // ticker code. Chinese rows display the company Name in the Ticker
-            // column, so the code is otherwise hidden. (regionFilter is the
-            // shared filter-state closure variable.)
-            if (regionFilter === 'china') {
-                const code = String((row && row['Ticker']) || '').trim();
-                if (!code) return '';
-                const safe = code.replace(/[<>&]/g, c => ({'<': '&lt;', '>': '&gt;', '&': '&amp;'}[c]));
-                return `<span class="cn-code">${safe}</span>`;
-            }
-            const raw = String(value || '').trim();
-            if (!raw || raw === '—' || raw === '-') return '';
-            // Split on commas OR newlines: most rows are comma-separated
-            // ('AI, CPO') but some xlsx cells use line breaks instead
-            // ('AI\nCPO\n800G' — e.g. XFAB). Both must parse to tags.
-            const tags = raw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
-            const sorted = SUPERCYCLE_ORDER.filter(c => tags.includes(c));
-            if (!sorted.length) return '';
-            const cls = `cycle-cell cycle-n${sorted.length}`;
-            // The English tag name stays in data-cycle for CSS color targeting,
-            // but the visible label runs through the I18N dict. Currently only
-            // 'Other' has a non-trivial translation; the rest (AI/CPO/800G/1.6T)
-            // are universal technical terms that read the same in either language.
-            const boxes = sorted.map(tag => {
-                const label = tag === 'Other' ? tr('cycle_Other') : tag;
-                return `<span class="cycle-box" data-cycle="${tag}">${label}</span>`;
-            }).join('');
-            return `<span class="${cls}">${boxes}</span>`;
-        }
-
         // Ticker column: render with a logo to the left of the symbol.
         // Tries financialmodelingprep's free image endpoint first; if it 404s
         // (common for non-US tickers), the colored letter avatar shows
@@ -2036,9 +2035,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Trim signal: ranked name trading ABOVE its ~1-year target
             // (TARGET_QUARTER < price). Same condition the cron's ABOVE
             // CEILING alerts fire on — surfaced here instead of only in CI logs.
+            //
+            // MUST honour the valuation multiple, like every other read of
+            // TARGET_QUARTER. Comparing the raw 20x target against price while
+            // the row displays 25x/30x figures put a sell warning next to a
+            // positive target and Upside on ~1 in 5 ranked rows at 30x (NVDA
+            // among them) — the flag contradicting its own row.
             let trimFlag = '';
             if (row && row._displayRank !== '—') {
-                const tgt = parseLooseNumber(row[TARGET_QUARTER]);
+                const tgt = parseLooseNumber(row[TARGET_QUARTER]) * multipleFactor();
                 const px = parseLooseNumber(row['Current Price']);
                 if (isFinite(tgt) && isFinite(px) && px > 0 && tgt > 0 && tgt < px) {
                     trimFlag = `<span class="trim-flag" title="${tr('trim_flag_tip')}">⚠</span>`;
@@ -2084,7 +2089,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (value === null || value === undefined || value === "") {
                 return `<span style="color: #64748b;">-</span>`;
             }
-            const out = formatQuarterPrice(value);
+            // Re-price at the selected multiple. data.js holds 20x figures;
+            // 25x/30x scale them by 1.25/1.5 for display only.
+            const k = multipleFactor();
+            const scaled = k === 1 ? value : parseLooseNumber(value) * k;
+            const out = formatQuarterPrice(scaled);
             if (!out) return `<span style="color: #64748b;">-</span>`;
             if (row) {
                 const pcts = quarterPctChanges(row);
@@ -2096,6 +2105,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
             return out;
+        }
+
+        // Upside ('4.2x') — stored at the 20x baseline, re-derived when the
+        // visitor picks a higher multiple. Purely proportional: k x T/P.
+        if (colName === "Upside" && row) {
+            return scaledUpside(row);
         }
 
         // Ratings Badge Styling
@@ -2121,7 +2136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     0- 50   neutral grey
         //     < 0     red (price above ceiling — avoid)
         if (colName === "EV Upside") {
-            const v = parseFloat(value);
+            const v = parseFloat(row ? scaledEvUpside(row) : value);
             if (isNaN(v)) return `<span style="color:#64748b;">-</span>`;
             const t = evUpsideStyle(v);
             // Display as a return multiple ('4.3x') rather than a raw percent:
