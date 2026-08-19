@@ -205,12 +205,14 @@ document.addEventListener('DOMContentLoaded', () => {
         '2337.TW':   'https://s3-symbol-logo.tradingview.com/macronix-international--big.svg',
         '3037.TW':   'https://s3-symbol-logo.tradingview.com/unimicron-technology--big.svg',
         '3105.TW':   'https://s3-symbol-logo.tradingview.com/win-semiconductors--big.svg',
+        '2492.TW':   'https://s3-symbol-logo.tradingview.com/walsin-technology--big.svg',
         '4977.TW':   'https://s3-symbol-logo.tradingview.com/pcl--big.svg',                   // PCL Technologies (PCL-KY)
         '3163.TWO':  'https://s3-symbol-logo.tradingview.com/browave--big.svg',
         '3363.TWO':  'https://s3-symbol-logo.tradingview.com/foci-fiber-optic-communications--big.svg',
         '5289.TWO':  'https://s3-symbol-logo.tradingview.com/innodisk--big.svg',
         '6830.TWO':  'https://s3-symbol-logo.tradingview.com/msscorps-co-ltd--big.svg',       // MSScorps
         '8147.TWO':  'https://s3-symbol-logo.tradingview.com/nextronics-engineering--big.svg',
+        '285A.T':    'https://s3-symbol-logo.tradingview.com/kioxia--big.svg',
 
         // === Clearbit (fallback — couldn't find TradingView slug) ===
         '000660.KS': 'https://logo.clearbit.com/skhynix.com',
