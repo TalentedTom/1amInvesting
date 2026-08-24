@@ -32,3 +32,11 @@
 
 /deep-dives/index.json
   Cache-Control: no-store
+
+# alerts.js and sw.js change on deploy and are tiny. A stale service worker is
+# especially bad: it would keep running the old push handler indefinitely.
+/alerts.js
+  Cache-Control: no-store
+
+/sw.js
+  Cache-Control: no-store
