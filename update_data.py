@@ -23,9 +23,19 @@ PRESERVE_FROM_PRIOR = ("Change %",)
 #      (this script lives at the repo root; Artifacts/ sits beside the repo).
 # sync_deep_dives.py already resolves Artifacts/ the same relative way, so a
 # fresh `git clone` + an Artifacts/ sibling folder Just Works — no path edits.
+#
+# FILENAME USES UNDERSCORES: v3_2_..., not v3.2_...
+# Two near-identically-named workbooks coexisted in Artifacts/ until
+# 2026-08-27 and the analyst had been editing the underscore one for about a
+# week (its deep dives cite it as the live workbook) while this script read
+# the dot one — so a whole ticker, IREN, was silently missing from the site.
+# The dot-named copy was verified to be a strict subset (identical Base,
+# price, Position Type and all 15 quarterly targets across every shared
+# ticker; only the recomputed Rank column differed) and was then removed.
+# Keep exactly one workbook here.
 _REPO_ROOT = Path(__file__).resolve().parent
 EXCEL_PATH = os.environ.get("PORTFOLIO_XLSX") or str(
-    _REPO_ROOT.parent / "Artifacts" / "v3.2_master_portfolio.xlsx"
+    _REPO_ROOT.parent / "Artifacts" / "v3_2_master_portfolio.xlsx"
 )
 OUTPUT_PATH = "data.js"
 CACHE_PATH = "translation_cache.json"

@@ -37,12 +37,24 @@ Base moves and any new tickers. The idiom that's worked: diff `data.js` against
 the prior commit and list tickers whose Base changed or EV Upside moved ≥15-20
 points, plus bucket distribution (HC/WL/FAIL counts from score.py's stdout).
 
-**Before regenerating, sanity-check the xlsx mtime** (`ls -l ../Artifacts/v3.2_master_portfolio.xlsx`).
+**Before regenerating, sanity-check the xlsx mtime** (`ls -l ../Artifacts/v3_2_master_portfolio.xlsx`).
 The owner has, several times, said "I updated it" when the file wasn't actually
 re-saved (saved to a different copy, or editor didn't flush). If mtime is older
 than the last commit and the regen yields 0 changes, tell them — the canonical
-path the pipeline reads is `../Artifacts/v3.2_master_portfolio.xlsx` (or
+path the pipeline reads is `../Artifacts/v3_2_master_portfolio.xlsx` (or
 `$PORTFOLIO_XLSX`), and their edits probably didn't land there.
+
+**Note the UNDERSCORES in the filename** (`v3_2_`, not `v3.2_`). Two workbooks
+whose names differed by that one character sat in `Artifacts/` until 2026-08-27:
+the owner had been editing the underscore one for ~a week (his deep dives cite
+it as the live workbook) while this pipeline read the dot one, so a whole added
+ticker (IREN) never reached the site and several "I updated it" runs came back
+as no-ops. The dot copy was verified a strict subset — identical Base, price,
+Position Type and all 15 quarterly targets on every shared ticker, differing
+only in the Rank column, which the frontend recomputes anyway — and deleted
+(recoverable from Google Drive trash). **Keep exactly one workbook in
+`Artifacts/`.** If a second ever appears, diff them before assuming which is
+canonical; the newer mtime is not automatically the right one.
 
 Each push to `main` triggers ONE Netlify build (~15 credits). That's the only
 thing that should cost credits — see the live-prices architecture below.
