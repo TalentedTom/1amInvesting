@@ -56,6 +56,31 @@ def save_cache(cache):
     with open(CACHE_PATH, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2)
 
+# Fingerprints of an HTTP error page returned as a "translation". Matched
+# case-insensitively against the returned string. Deliberately narrow so a
+# legitimate translation containing the word "error" isn't discarded.
+_TRANSLATION_ERROR_MARKERS = (
+    "error 500",
+    "server error",
+    "that’s an error",   # curly apostrophe — what Google actually emits
+    "that's an error",
+    "that’s all we know",
+    "that's all we know",
+    "<html",
+    "<!doctype",
+)
+
+
+def _looks_like_translation_error(value):
+    """True when the translator handed back an error page instead of a
+    translation. These come through as ordinary successful strings, so the
+    caller's try/except cannot catch them."""
+    if not isinstance(value, str):
+        return False
+    low = value.lower()
+    return any(m in low for m in _TRANSLATION_ERROR_MARKERS)
+
+
 def get_translation(text, target_lang, translator, cache):
     if not text or not isinstance(text, str):
         return text
@@ -69,6 +94,17 @@ def get_translation(text, target_lang, translator, cache):
         
     try:
         translated = translator.translate(text_str)
+        # Google intermittently returns an ERROR PAGE BODY as a successful
+        # string rather than raising — e.g. "Error 500 (Server Error)!!1500.
+        # That's an error...". The except below never sees it, so without this
+        # guard the error text is cached PERMANENTLY and rendered as the
+        # ticker's Chinese name (this is how '晶豪科技 ESMT' and five other
+        # entries got poisoned). Reject those and fall back to the source
+        # text, and crucially do NOT cache the failure.
+        if _looks_like_translation_error(translated):
+            print(f"Translation returned an error page ({target_lang}) for "
+                  f"'{text_str[:30]}...' — keeping source text, not caching.")
+            return text
         cache[target_lang][text_str] = translated
         # small sleep to avoid rate limiting
         time.sleep(0.3)
