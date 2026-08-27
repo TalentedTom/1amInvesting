@@ -4420,7 +4420,7 @@ window.PORTFOLIO_DATA = {
             "Port": "",
             "Current Price": 269.5,
             "Upside (Q3 2027)": 2.0,
-            "Position Type": "⚡ TEMPORAL — legacy DRAM allocation window, monopoly-with-countdown class",
+            "Position Type": "⚡ TEMPORAL — 传统 DRAM 分配窗口，具有倒计时类的垄断",
             "Artifact Updated": "Aug 26 2026: NEW deep dive. v6.0 AH-11 FOUR-VECTOR on the Q2 2026 actual reported 2026-07-31. Rule 0 build from Traditional Chinese sources. FABLESS legacy memory on PSMC allocation; chairman states capacity meets only 60-70% of orders, so revenue is ALLOCATION-CAPPED. Q2 gross margin 68.70% is a cycle peak that MANAGEMENT ITSELF attributes partly to low-cost inventory with H2 wafer costs stepping up, so the model decays the blend to 28.24% by 2030 and THE LADDER PEAKS AT Q3 2026 AND DECLINES — that shape is the thesis, not an error. ALPHA IS A MEASURABLE STALE-CONSENSUS GAP: institutional consensus is FY2026 EPS 24.03-40.00 against an H1 ACTUAL of 27.58, i.e. the low end sits below the half-year print. A circulating monthly net-income series could not be verified against any Level 1-3 Chinese source and is EXCLUDED. Ladder LINKED to 3006_TW_Q_Model.",
             "SuperCycle": "DB6 memory structural / Rule 5 abandoned-commodity",
             "Q3 2026": 667.330071843996,
