@@ -526,6 +526,38 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 17,
+            "Ticker": "NVDA",
+            "Name": "NVIDIA Corporation",
+            "EV (Base% x Upside)": 1.78,
+            "Base": 99,
+            "Port": "",
+            "Current Price": 223.96,
+            "Upside (Q3 2027)": 1.8,
+            "Position Type": "",
+            "Artifact Updated": "Aug 26 2026: REBUILT v6.0 AH-11 FIVE-VECTOR on the FQ2 FY2027 actual reported 2026-08-26. Ladder LINKED to NVDA_Q_Model, replacing a hardcoded Master ladder and a v5.0.1 stub tab that held only reported values. CORRECTS AN AH-15 CLAUSE 4 FAULT: the prior artifact carried FY2028 revenue of 500 against management's stated approximately 70% growth, which implies ~690 on a 405.6 FY2027 base, so the model sat 27.5% BELOW explicit guidance. The 70% is a DISCLOSED SUPPLY CAP, not a demand forecast: management states growth would be 100% unconstrained and that supply remains a bottleneck at least through the end of FY2028. Reproduces the FQ3 guide of 108 revenue and 74% gross margin, the guided 71-72% FQ4 margin trough, and the 72-73% FY2028 margin band. CPU broken out as its own vector on management's statement that CPU revenue more than doubles in FY2028. BASE LEFT AT 99: the artifact's table sums to 49/60 = 82 and the two have disagreed since June; moving it is a CUT and awaits a ruling.",
+            "SuperCycle": "AI, CPO, 800G, 1.6T",
+            "Q3 2026": 246.037959183673,
+            "Q4 2026": 282.475020475021,
+            "Q1 2027": 323.905505341003,
+            "Q2 2027": 367.297197032152,
+            "Q3 2027": 410.645161290323,
+            "Q4 2027": 456.81244813278,
+            "Q1 2028": 502.323896752706,
+            "Q2 2028": 548.125678496869,
+            "Q3 2028": 590.592546063652,
+            "Q4 2028": 630.170012599748,
+            "Q1 2029": 666.941136842105,
+            "Q2 2029": 701.027057830308,
+            "Q3 2029": 730.87900973339,
+            "Q4 2029": 755.171034775233,
+            "Q1 2030": 775.687590310242,
+            "Entry": 40,
+            "Total": 75,
+            "Upside": "1.8x",
+            "EV Upside": 82
+        },
+        {
+            "Rank": 18,
             "Ticker": "AMKR",
             "Name": "Amkor Technology, Inc.",
             "EV (Base% x Upside)": 1.75,
@@ -557,7 +589,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "EV (Base% x Upside)": 1.74,
@@ -590,7 +622,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 71
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.68,
@@ -622,7 +654,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 69
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "SKHY",
             "Name": "SK Hynix U.S. ADS",
             "EV (Base% x Upside)": 1.67,
@@ -654,7 +686,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 64
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV (Base% x Upside)": 1.52,
@@ -686,7 +718,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 51
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "4078.T",
             "Name": "Sakai Chemical (堺化学)",
             "EV (Base% x Upside)": 1.51,
@@ -718,7 +750,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 53
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "SOI.PA",
             "Name": "Soitec SA",
             "EV (Base% x Upside)": 1.42,
@@ -751,7 +783,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 39
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV (Base% x Upside)": 1.4,
@@ -784,7 +816,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 43
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "EV (Base% x Upside)": 1.39,
@@ -817,7 +849,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 37
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "PENG",
             "Name": "Penguin Solutions",
             "EV (Base% x Upside)": 1.39,
@@ -849,7 +881,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 37
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV (Base% x Upside)": 1.32,
@@ -881,7 +913,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 34
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "FLNC",
             "Name": "Fluence Energy",
             "EV (Base% x Upside)": 1.32,
@@ -913,7 +945,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 32
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "EV (Base% x Upside)": 1.24,
@@ -946,7 +978,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "603986.SH",
             "Name": "GigaDevice 兆易创新",
             "EV (Base% x Upside)": 1.23,
@@ -978,7 +1010,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 25
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "AEHR",
             "Name": "Aehr Test Systems",
             "EV (Base% x Upside)": 1.21,
@@ -1011,7 +1043,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 22
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "META",
             "Name": "Meta Platforms",
             "EV (Base% x Upside)": 1.2,
@@ -1043,7 +1075,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 23
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "EV (Base% x Upside)": 1.14,
@@ -1076,7 +1108,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV (Base% x Upside)": 1.12,
@@ -1109,7 +1141,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 13
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "SMTC",
             "Name": "Semtech Corporation",
             "EV (Base% x Upside)": 1.09,
@@ -1141,7 +1173,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 5
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "GOOGL",
             "Name": "Alphabet Inc.",
             "EV (Base% x Upside)": 1.09,
@@ -1173,7 +1205,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "MSFT",
             "Name": "Microsoft",
             "EV (Base% x Upside)": 1.09,
@@ -1205,7 +1237,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "AMZN",
             "Name": "Amazon.com, Inc.",
             "EV (Base% x Upside)": 1.09,
@@ -1237,7 +1269,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "EV (Base% x Upside)": 1.09,
@@ -1270,7 +1302,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "AVGO",
             "Name": "Broadcom Inc",
             "EV (Base% x Upside)": 1.09,
@@ -1302,7 +1334,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 10
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "DELL",
             "Name": "Dell Technologies",
             "EV (Base% x Upside)": 1.08,
@@ -1334,7 +1366,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "688596.SH",
             "Name": "正帆科技 Gentech",
             "EV (Base% x Upside)": 1.02,
@@ -1366,7 +1398,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 2
         },
         {
-            "Rank": 43,
+            "Rank": 44,
             "Ticker": "000938.SZ",
             "Name": "Unisplendour (紫光股份)",
             "EV (Base% x Upside)": 1.01,
@@ -1395,38 +1427,6 @@ window.PORTFOLIO_DATA = {
             "Entry": 16,
             "Total": 47,
             "Upside": "1.5x",
-            "EV Upside": -2
-        },
-        {
-            "Rank": 44,
-            "Ticker": "NVDA",
-            "Name": "NVIDIA Corporation",
-            "EV (Base% x Upside)": 0.99,
-            "Base": 99,
-            "Port": "",
-            "Current Price": 223.96,
-            "Upside (Q3 2027)": 1.0,
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure) | Aug 14 2026: Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived summing table.",
-            "SuperCycle": "AI, CPO, 800G, 1.6T",
-            "Q3 2026": 136.284467532468,
-            "Q4 2026": 162.624,
-            "Q1 2027": 193.6,
-            "Q2 2027": 206.4,
-            "Q3 2027": 221.12,
-            "Q4 2027": 238.4,
-            "Q1 2028": 257.6,
-            "Q2 2028": 271.84,
-            "Q3 2028": 288.216,
-            "Q4 2028": 307.44,
-            "Q1 2029": 328.8,
-            "Q2 2029": 342.72,
-            "Q3 2029": 358.728,
-            "Q4 2029": 377.52,
-            "Q1 2030": 398.4,
-            "Entry": 0,
-            "Total": 59,
-            "Upside": "1.0x",
             "EV Upside": -2
         },
         {
@@ -3928,6 +3928,38 @@ window.PORTFOLIO_DATA = {
         },
         {
             "Rank": 17,
+            "Ticker": "NVDA",
+            "Name": "英伟达公司",
+            "EV (Base% x Upside)": 1.78,
+            "Base": 99,
+            "Port": "",
+            "Current Price": 223.96,
+            "Upside (Q3 2027)": 1.8,
+            "Position Type": "",
+            "Artifact Updated": "Aug 26 2026: REBUILT v6.0 AH-11 FIVE-VECTOR on the FQ2 FY2027 actual reported 2026-08-26. Ladder LINKED to NVDA_Q_Model, replacing a hardcoded Master ladder and a v5.0.1 stub tab that held only reported values. CORRECTS AN AH-15 CLAUSE 4 FAULT: the prior artifact carried FY2028 revenue of 500 against management's stated approximately 70% growth, which implies ~690 on a 405.6 FY2027 base, so the model sat 27.5% BELOW explicit guidance. The 70% is a DISCLOSED SUPPLY CAP, not a demand forecast: management states growth would be 100% unconstrained and that supply remains a bottleneck at least through the end of FY2028. Reproduces the FQ3 guide of 108 revenue and 74% gross margin, the guided 71-72% FQ4 margin trough, and the 72-73% FY2028 margin band. CPU broken out as its own vector on management's statement that CPU revenue more than doubles in FY2028. BASE LEFT AT 99: the artifact's table sums to 49/60 = 82 and the two have disagreed since June; moving it is a CUT and awaits a ruling.",
+            "SuperCycle": "AI, CPO, 800G, 1.6T",
+            "Q3 2026": 246.037959183673,
+            "Q4 2026": 282.475020475021,
+            "Q1 2027": 323.905505341003,
+            "Q2 2027": 367.297197032152,
+            "Q3 2027": 410.645161290323,
+            "Q4 2027": 456.81244813278,
+            "Q1 2028": 502.323896752706,
+            "Q2 2028": 548.125678496869,
+            "Q3 2028": 590.592546063652,
+            "Q4 2028": 630.170012599748,
+            "Q1 2029": 666.941136842105,
+            "Q2 2029": 701.027057830308,
+            "Q3 2029": 730.87900973339,
+            "Q4 2029": 755.171034775233,
+            "Q1 2030": 775.687590310242,
+            "Entry": 40,
+            "Total": 75,
+            "Upside": "1.8x",
+            "EV Upside": 82
+        },
+        {
+            "Rank": 18,
             "Ticker": "AMKR",
             "Name": "安靠科技有限公司",
             "EV (Base% x Upside)": 1.75,
@@ -3959,7 +3991,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "EV (Base% x Upside)": 1.74,
@@ -3992,7 +4024,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 71
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.68,
@@ -4024,7 +4056,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 69
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "SKHY",
             "Name": "SK海力士美国ADS",
             "EV (Base% x Upside)": 1.67,
@@ -4056,7 +4088,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 64
         },
         {
-            "Rank": 21,
+            "Rank": 22,
             "Ticker": "000636.SZ",
             "Name": "Fenghua Advanced (风华高科)",
             "EV (Base% x Upside)": 1.52,
@@ -4088,7 +4120,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 51
         },
         {
-            "Rank": 22,
+            "Rank": 23,
             "Ticker": "4078.T",
             "Name": "堺化学",
             "EV (Base% x Upside)": 1.51,
@@ -4120,7 +4152,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 53
         },
         {
-            "Rank": 23,
+            "Rank": 24,
             "Ticker": "SOI.PA",
             "Name": "索伊泰克公司",
             "EV (Base% x Upside)": 1.42,
@@ -4153,7 +4185,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 39
         },
         {
-            "Rank": 24,
+            "Rank": 25,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV (Base% x Upside)": 1.4,
@@ -4186,7 +4218,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 43
         },
         {
-            "Rank": 25,
+            "Rank": 26,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "EV (Base% x Upside)": 1.39,
@@ -4219,7 +4251,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 37
         },
         {
-            "Rank": 26,
+            "Rank": 27,
             "Ticker": "PENG",
             "Name": "企鹅解决方案",
             "EV (Base% x Upside)": 1.39,
@@ -4251,7 +4283,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 37
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV (Base% x Upside)": 1.32,
@@ -4283,7 +4315,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 34
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "FLNC",
             "Name": "流量能量",
             "EV (Base% x Upside)": 1.32,
@@ -4315,7 +4347,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 32
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "EV (Base% x Upside)": 1.24,
@@ -4348,7 +4380,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "603986.SH",
             "Name": "GigaDevice 兆易创新",
             "EV (Base% x Upside)": 1.23,
@@ -4380,7 +4412,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 25
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "AEHR",
             "Name": "空气测试系统",
             "EV (Base% x Upside)": 1.21,
@@ -4413,7 +4445,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 22
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "META",
             "Name": "元平台",
             "EV (Base% x Upside)": 1.2,
@@ -4445,7 +4477,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 23
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "COHR",
             "Name": "相干公司",
             "EV (Base% x Upside)": 1.14,
@@ -4478,7 +4510,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV (Base% x Upside)": 1.12,
@@ -4511,7 +4543,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 13
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "SMTC",
             "Name": "森泰克公司",
             "EV (Base% x Upside)": 1.09,
@@ -4543,7 +4575,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 5
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "GOOGL",
             "Name": "字母表公司",
             "EV (Base% x Upside)": 1.09,
@@ -4575,7 +4607,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 37,
+            "Rank": 38,
             "Ticker": "MSFT",
             "Name": "微软",
             "EV (Base% x Upside)": 1.09,
@@ -4607,7 +4639,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 9
         },
         {
-            "Rank": 38,
+            "Rank": 39,
             "Ticker": "AMZN",
             "Name": "亚马逊公司",
             "EV (Base% x Upside)": 1.09,
@@ -4639,7 +4671,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 39,
+            "Rank": 40,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "EV (Base% x Upside)": 1.09,
@@ -4672,7 +4704,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 40,
+            "Rank": 41,
             "Ticker": "AVGO",
             "Name": "博通公司",
             "EV (Base% x Upside)": 1.09,
@@ -4704,7 +4736,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 10
         },
         {
-            "Rank": 41,
+            "Rank": 42,
             "Ticker": "DELL",
             "Name": "戴尔科技公司",
             "EV (Base% x Upside)": 1.08,
@@ -4736,7 +4768,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 42,
+            "Rank": 43,
             "Ticker": "688596.SH",
             "Name": "正帆科技 Gentech",
             "EV (Base% x Upside)": 1.02,
@@ -4768,7 +4800,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 2
         },
         {
-            "Rank": 43,
+            "Rank": 44,
             "Ticker": "000938.SZ",
             "Name": "Unisplendour (紫光股份)",
             "EV (Base% x Upside)": 1.01,
@@ -4797,38 +4829,6 @@ window.PORTFOLIO_DATA = {
             "Entry": 16,
             "Total": 47,
             "Upside": "1.5x",
-            "EV Upside": -2
-        },
-        {
-            "Rank": 44,
-            "Ticker": "NVDA",
-            "Name": "英伟达公司",
-            "EV (Base% x Upside)": 0.99,
-            "Base": 99,
-            "Port": "",
-            "Current Price": 223.96,
-            "Upside (Q3 2027)": 1.0,
-            "Position Type": "",
-            "Artifact Updated": "Jun 11 (restructure) | Aug 14 2026: Base is a workbook conviction override carrying the ranking judgment; it deliberately differs from the artifact's derived summing table.",
-            "SuperCycle": "AI, CPO, 800G, 1.6T",
-            "Q3 2026": 136.284467532468,
-            "Q4 2026": 162.624,
-            "Q1 2027": 193.6,
-            "Q2 2027": 206.4,
-            "Q3 2027": 221.12,
-            "Q4 2027": 238.4,
-            "Q1 2028": 257.6,
-            "Q2 2028": 271.84,
-            "Q3 2028": 288.216,
-            "Q4 2028": 307.44,
-            "Q1 2029": 328.8,
-            "Q2 2029": 342.72,
-            "Q3 2029": 358.728,
-            "Q4 2029": 377.52,
-            "Q1 2030": 398.4,
-            "Entry": 0,
-            "Total": 59,
-            "Upside": "1.0x",
             "EV Upside": -2
         },
         {
