@@ -67,7 +67,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 204
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
             "EV (Base% x Upside)": 1.79,
@@ -100,7 +100,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "SNDK",
             "Name": "SanDisk Corp",
             "EV (Base% x Upside)": 2.38,
@@ -133,7 +133,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 140
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "005930.KS",
             "Name": "Samsung Electronics",
             "EV (Base% x Upside)": 2.28,
@@ -199,7 +199,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 160
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Ticker": "XFAB",
             "Name": "X-Fab Silicon Foundries",
             "EV (Base% x Upside)": 2.23,
@@ -231,7 +231,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 124
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "8147.TWO",
             "Name": "Nextronics Engineering",
             "EV (Base% x Upside)": 1.89,
@@ -264,7 +264,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 88
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "NBIS",
             "Name": "Nebius Group",
             "EV (Base% x Upside)": 2.38,
@@ -297,7 +297,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 141
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "2492.TW",
             "Name": "Walsin Technology",
             "EV (Base% x Upside)": 2.33,
@@ -329,7 +329,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 132
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Ticker": "6451.TW",
             "Name": "ShunSin Technology",
             "EV (Base% x Upside)": 2.3,
@@ -395,7 +395,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 165
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Ticker": "MU",
             "Name": "Micron Technology",
             "EV (Base% x Upside)": 2.08,
@@ -428,7 +428,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 111
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "BRUN",
             "Name": "Boost Run",
             "EV (Base% x Upside)": 1.9,
@@ -460,7 +460,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 94
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "DELL",
             "Name": "Dell Technologies",
             "EV (Base% x Upside)": 1.8,
@@ -492,7 +492,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 81
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "285A.T",
             "Name": "Kioxia Holdings",
             "EV (Base% x Upside)": 1.76,
@@ -524,7 +524,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 80
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "EV (Base% x Upside)": 1.8,
@@ -557,7 +557,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 82
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "NVDA",
             "Name": "NVIDIA Corporation",
             "EV (Base% x Upside)": 1.78,
@@ -686,36 +686,36 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 35
         },
         {
-            "Rank": 21,
+            "Rank": 5,
             "Ticker": "SKHY",
             "Name": "SK Hynix U.S. ADS",
-            "EV (Base% x Upside)": 1.67,
+            "EV (Base% x Upside)": 2.51,
             "Base": 93,
             "Port": "",
             "Current Price": 137.91,
-            "Upside (Q3 2027)": 1.8,
+            "Upside (Q3 2027)": 2.7,
             "Position Type": "↔ WRAPPER / BASIS\nNasdaq ADS: 1 ADS = 0.1 SK Hynix common. Same HBM economics; premium is a trading variable, not incremental enterprise value.",
-            "Artifact Updated": "USER BASE 93% RETAINED. Artifact recommendation 88% is advisory only. 2026-09-06 | Framework 6.0 | Linked parent rescore and depositary-wrapper refresh. Inherits the parent’s Base 88 and updated cancellation scenario through live formulas. Retains the fixed 1,489.44 KRW/USD assumption and verified 0.1-share ADS ratio; no separate company valuation or ADS premium. Verified ADS terms; conditional parent operating path and cancellation assumption inherited. See Selected Updates, Review Scores and Review Sources.",
+            "Artifact Updated": "2026-09-09: User-approved SKHY multiple 9x forward-four-quarter operating profit, matching MU. Portfolio Base 93 retained; analytical recommendations do not overwrite user Base scores. Parent operating assumptions, shares and fixed FX inherited; 000660.KS multiple remains 6x.",
             "SuperCycle": "AI",
-            "Q3 2026": 191.6725136020791,
-            "Q4 2026": 215.88307529532958,
-            "Q1 2027": 230.95644159227388,
-            "Q2 2027": 242.3260469048936,
-            "Q3 2027": 250.33118881373875,
-            "Q4 2027": 254.94592103323797,
-            "Q1 2028": 256.14287165773334,
-            "Q2 2028": 254.86494581233353,
-            "Q3 2028": 251.9806312536401,
-            "Q4 2028": 248.34872152166722,
-            "Q1 2029": 244.44252248508153,
-            "Q2 2029": 240.5625548580846,
-            "Q3 2029": 237.25796749793665,
-            "Q4 2029": 234.21797522581423,
-            "Q1 2030": 231.81152852006366,
-            "Entry": 38,
-            "Total": 71,
-            "Upside": "1.8x",
-            "EV Upside": 69
+            "Q3 2026": 287.5087704031186,
+            "Q4 2026": 323.8246129429943,
+            "Q1 2027": 346.43466238841074,
+            "Q2 2027": 363.4890703573402,
+            "Q3 2027": 375.4967832206081,
+            "Q4 2027": 382.4188815498569,
+            "Q1 2028": 384.2143074865999,
+            "Q2 2028": 382.29741871850035,
+            "Q3 2028": 377.9709468804601,
+            "Q4 2028": 372.52308228250087,
+            "Q1 2029": 366.6637837276223,
+            "Q2 2029": 360.84383228712693,
+            "Q3 2029": 355.88695124690497,
+            "Q4 2029": 351.3269628387214,
+            "Q1 2030": 347.71729278009553,
+            "Entry": 68,
+            "Total": 83,
+            "Upside": "2.7x",
+            "EV Upside": 153
         },
         {
             "Rank": 24,
@@ -815,7 +815,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 65
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV (Base% x Upside)": 2.42,
@@ -1204,7 +1204,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV (Base% x Upside)": 1.84,
@@ -3565,7 +3565,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 204
         },
         {
-            "Rank": 18,
+            "Rank": 19,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
             "EV (Base% x Upside)": 1.79,
@@ -3598,7 +3598,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 76
         },
         {
-            "Rank": 6,
+            "Rank": 7,
             "Ticker": "SNDK",
             "Name": "闪迪公司",
             "EV (Base% x Upside)": 2.38,
@@ -3631,7 +3631,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 140
         },
         {
-            "Rank": 10,
+            "Rank": 11,
             "Ticker": "005930.KS",
             "Name": "三星电子",
             "EV (Base% x Upside)": 2.28,
@@ -3697,7 +3697,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 160
         },
         {
-            "Rank": 11,
+            "Rank": 12,
             "Ticker": "XFAB",
             "Name": "X-Fab 硅铸造厂",
             "EV (Base% x Upside)": 2.23,
@@ -3729,7 +3729,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 124
         },
         {
-            "Rank": 14,
+            "Rank": 15,
             "Ticker": "8147.TWO",
             "Name": "明思电子工程",
             "EV (Base% x Upside)": 1.89,
@@ -3762,7 +3762,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 88
         },
         {
-            "Rank": 7,
+            "Rank": 8,
             "Ticker": "NBIS",
             "Name": "尼比斯集团",
             "EV (Base% x Upside)": 2.38,
@@ -3795,7 +3795,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 141
         },
         {
-            "Rank": 8,
+            "Rank": 9,
             "Ticker": "2492.TW",
             "Name": "华新科技",
             "EV (Base% x Upside)": 2.33,
@@ -3827,7 +3827,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 132
         },
         {
-            "Rank": 9,
+            "Rank": 10,
             "Ticker": "6451.TW",
             "Name": "顺欣科技",
             "EV (Base% x Upside)": 2.3,
@@ -3893,7 +3893,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 165
         },
         {
-            "Rank": 12,
+            "Rank": 13,
             "Ticker": "MU",
             "Name": "美光科技",
             "EV (Base% x Upside)": 2.08,
@@ -3926,7 +3926,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 111
         },
         {
-            "Rank": 13,
+            "Rank": 14,
             "Ticker": "BRUN",
             "Name": "加速跑",
             "EV (Base% x Upside)": 1.9,
@@ -3958,7 +3958,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 94
         },
         {
-            "Rank": 16,
+            "Rank": 17,
             "Ticker": "DELL",
             "Name": "戴尔科技公司",
             "EV (Base% x Upside)": 1.8,
@@ -3990,7 +3990,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 81
         },
         {
-            "Rank": 20,
+            "Rank": 21,
             "Ticker": "285A.T",
             "Name": "铠侠控股",
             "EV (Base% x Upside)": 1.76,
@@ -4022,7 +4022,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 80
         },
         {
-            "Rank": 17,
+            "Rank": 18,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "EV (Base% x Upside)": 1.8,
@@ -4055,7 +4055,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 82
         },
         {
-            "Rank": 19,
+            "Rank": 20,
             "Ticker": "NVDA",
             "Name": "英伟达公司",
             "EV (Base% x Upside)": 1.78,
@@ -4184,36 +4184,36 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 35
         },
         {
-            "Rank": 21,
+            "Rank": 5,
             "Ticker": "SKHY",
             "Name": "SK海力士美国ADS",
-            "EV (Base% x Upside)": 1.67,
+            "EV (Base% x Upside)": 2.51,
             "Base": 93,
             "Port": "",
             "Current Price": 137.91,
-            "Upside (Q3 2027)": 1.8,
+            "Upside (Q3 2027)": 2.7,
             "Position Type": "↔ 包装/基础\n纳斯达克 ADS：1 ADS = 0.1 SK 海力士普通股。相同的 HBM 经济学；溢价是一个交易变量，而不是增量企业价值。",
-            "Artifact Updated": "USER BASE 93% RETAINED. Artifact recommendation 88% is advisory only. 2026-09-06 | Framework 6.0 | Linked parent rescore and depositary-wrapper refresh. Inherits the parent’s Base 88 and updated cancellation scenario through live formulas. Retains the fixed 1,489.44 KRW/USD assumption and verified 0.1-share ADS ratio; no separate company valuation or ADS premium. Verified ADS terms; conditional parent operating path and cancellation assumption inherited. See Selected Updates, Review Scores and Review Sources.",
+            "Artifact Updated": "2026-09-09: User-approved SKHY multiple 9x forward-four-quarter operating profit, matching MU. Portfolio Base 93 retained; analytical recommendations do not overwrite user Base scores. Parent operating assumptions, shares and fixed FX inherited; 000660.KS multiple remains 6x.",
             "SuperCycle": "AI",
-            "Q3 2026": 191.6725136020791,
-            "Q4 2026": 215.88307529532958,
-            "Q1 2027": 230.95644159227388,
-            "Q2 2027": 242.3260469048936,
-            "Q3 2027": 250.33118881373875,
-            "Q4 2027": 254.94592103323797,
-            "Q1 2028": 256.14287165773334,
-            "Q2 2028": 254.86494581233353,
-            "Q3 2028": 251.9806312536401,
-            "Q4 2028": 248.34872152166722,
-            "Q1 2029": 244.44252248508153,
-            "Q2 2029": 240.5625548580846,
-            "Q3 2029": 237.25796749793665,
-            "Q4 2029": 234.21797522581423,
-            "Q1 2030": 231.81152852006366,
-            "Entry": 38,
-            "Total": 71,
-            "Upside": "1.8x",
-            "EV Upside": 69
+            "Q3 2026": 287.5087704031186,
+            "Q4 2026": 323.8246129429943,
+            "Q1 2027": 346.43466238841074,
+            "Q2 2027": 363.4890703573402,
+            "Q3 2027": 375.4967832206081,
+            "Q4 2027": 382.4188815498569,
+            "Q1 2028": 384.2143074865999,
+            "Q2 2028": 382.29741871850035,
+            "Q3 2028": 377.9709468804601,
+            "Q4 2028": 372.52308228250087,
+            "Q1 2029": 366.6637837276223,
+            "Q2 2029": 360.84383228712693,
+            "Q3 2029": 355.88695124690497,
+            "Q4 2029": 351.3269628387214,
+            "Q1 2030": 347.71729278009553,
+            "Entry": 68,
+            "Total": 83,
+            "Upside": "2.7x",
+            "EV Upside": 153
         },
         {
             "Rank": 24,
@@ -4313,7 +4313,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 65
         },
         {
-            "Rank": 5,
+            "Rank": 6,
             "Ticker": "2337.TW",
             "Name": "Macronix (旺宏)",
             "EV (Base% x Upside)": 2.42,
@@ -4702,7 +4702,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 15,
+            "Rank": 16,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV (Base% x Upside)": 1.84,
