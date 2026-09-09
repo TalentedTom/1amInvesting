@@ -119,34 +119,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // re-derive them rather than scaling the stored figure, because only
     // Upside is proportional to the target:
     //
-    //   Upside(k) = k·T/P                      -> scales linearly
-    //   EV(k)     = Base × (k·T/P − 1)         -> does NOT scale linearly
+    //   Upside(k) = k·T/P                       -> scales linearly
+    //   EV(k)     = Base × k·T/P − 100          -> risk-adjusted multiple
     //
-    // Subtracting the two EV forms gives the exact increment:
-    //   EV(k) − EV(1) = Base × (k−1) × T/P
-    //
-    // Adding that delta to the stored value preserves the analyst's own
-    // EV figure exactly at 20x (it sits slightly below the textbook formula
-    // by design) while moving it correctly at higher multiples.
+    // Always derive both displayed values from the row's CURRENT target,
+    // Base, and price. A main-branch deploy can publish a new quarterly
+    // target several minutes before the live-prices branch refreshes. Using
+    // live.json's previously derived Upside/EV fields during that window
+    // made rows contradict themselves (SKHY showed target 375 and price 199,
+    // but stale 1.3x Upside based on its former target 250).
     function scaledUpside(row) {
         const k = multipleFactor();
-        if (k === 1) return row['Upside'];
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
         if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0) return row['Upside'];
-        return `${(k * tgt / price).toFixed(1)}x`;
+        return (k * tgt / price).toFixed(1) + 'x';
     }
     function scaledEvUpside(row) {
-        const stored = parseFloat(row['EV Upside']);
         const k = multipleFactor();
-        if (k === 1 || isNaN(stored)) return row['EV Upside'];
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
         const base = parseFloat(row['Base']);
         if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0 || isNaN(base)) {
             return row['EV Upside'];
         }
-        return Math.round(stored + base * (k - 1) * (tgt / price));
+        return Math.round(base * (k * tgt / price) - 100);
     }
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
