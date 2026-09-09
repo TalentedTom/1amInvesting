@@ -21,6 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         ...QUARTER_COLS
     ];
 
+    // Taiwan listings use numeric exchange codes, so show stable English
+    // company names in the English table instead of mixed Chinese/English
+    // workbook labels. Canonical tickers remain unchanged for quotes,
+    // charts, watchlists, sorting, and deep-dive routing.
+    const TAIWAN_ENGLISH_NAMES = Object.freeze({
+        '8147.TWO': 'Nextronics Engineering',
+        '2492.TW': 'Walsin Technology',
+        '6451.TW': 'ShunSin Technology',
+        '3363.TWO': 'FOCI',
+        '2337.TW': 'Macronix',
+        '3105.TW': 'Win Semiconductors',
+        '3006.TW': 'Elite Semiconductor Microelectronics Technology',
+        '4977.TW': 'PCL Technologies',
+        '3711.TW': 'ASE Technology',
+        '6830.TWO': 'MSScorps',
+        '2454.TW': 'MediaTek'
+    });
+
     // === Valuation multiple ============================================
     // The book is modelled at a 20x baseline: every quarterly target in
     // data.js is a 20x number. The selector lets a visitor re-price the
@@ -2018,7 +2036,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // all continue to key off the canonical symbol.
             const NAME_OVER_TICKER_SUFFIXES = /\.(TW|TWO|KS|KQ|SS|SSE|SH|SZ|SZSE|HK|T)$/i;
             let displayText = sym;
-            if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
+            const taiwanEnglishName = currentLang === 'en'
+                ? TAIWAN_ENGLISH_NAMES[sym.toUpperCase()]
+                : '';
+            if (taiwanEnglishName) {
+                displayText = taiwanEnglishName;
+            } else if (NAME_OVER_TICKER_SUFFIXES.test(sym) && row && row.Name) {
                 const name = String(row.Name).trim();
                 if (name) displayText = name;
             }
