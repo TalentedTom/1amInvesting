@@ -1,3 +1,4 @@
+import argparse
 import pandas as pd
 import json
 import os
@@ -101,7 +102,12 @@ def get_translation(text, target_lang, translator, cache):
         
     if text_str in cache[target_lang]:
         return cache[target_lang][text_str]
-        
+
+    # Cache-only updates never send notes to an external translation service.
+    # Keep new text in English without caching it as a completed translation.
+    if translator is None:
+        return text
+
     try:
         translated = translator.translate(text_str)
         # Google intermittently returns an ERROR PAGE BODY as a successful
@@ -155,6 +161,12 @@ def load_prior_cron_fields():
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Refresh website data from the master portfolio.")
+    parser.add_argument(
+        "--cached-translations-only", action="store_true",
+        help="Use cached Chinese translations and English for new notes; make no translation requests.",
+    )
+    args = parser.parse_args()
     # score.py emits emoji alerts (🟢 🟠 🔴 ⚫) which crash Windows cp1252
     # stdout when forwarded through subprocess capture. Force UTF-8 here so
     # the forwarded output renders cleanly.
@@ -169,7 +181,7 @@ def main():
         print(f"Will preserve cron-populated fields ({', '.join(PRESERVE_FROM_PRIOR)}) "
               f"for {len(prior)} tickers from existing data.js.")
 
-    translator_zh = GoogleTranslator(source='auto', target='zh-CN')
+    translator_zh = None if args.cached_translations_only else GoogleTranslator(source='auto', target='zh-CN')
 
     try:
         df = pd.read_excel(EXCEL_PATH, sheet_name="Master Portfolio")
@@ -193,7 +205,10 @@ def main():
 
         data_zh = []
 
-        print("Translating data... This may take a minute if cache is empty.")
+        if args.cached_translations_only:
+            print("Using cached Chinese translations; new notes stay in English. No translation requests.")
+        else:
+            print("Translating data... This may take a minute if cache is empty.")
 
         for idx, row in enumerate(data_en):
             row_zh = dict(row)
@@ -207,9 +222,11 @@ def main():
 
             if (idx + 1) % 5 == 0:
                 print(f"Processed {idx + 1}/{len(data_en)} rows...")
-                save_cache(cache)
+                if not args.cached_translations_only:
+                    save_cache(cache)
 
-        save_cache(cache)
+        if not args.cached_translations_only:
+            save_cache(cache)
 
         final_data = {
             "en": data_en,

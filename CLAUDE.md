@@ -27,7 +27,7 @@ run this exact pipeline from the repo root:
 
 ```bash
 git pull --rebase                      # pick up cron commits first (see below)
-python update_data.py                  # xlsx -> data.js (+ zh-CN translate + score)
+python update_data.py --cached-translations-only  # xlsx -> data.js + cached zh-CN + score
 python scripts/sync_deep_dives.py      # copy/rename deep-dive .md -> deep-dives/
 git add -A && git commit -m "..." && git push
 ```
@@ -36,6 +36,12 @@ Then **report what changed** — the owner values a summary of notable EV Upside
 Base moves and any new tickers. The idiom that's worked: diff `data.js` against
 the prior commit and list tickers whose Base changed or EV Upside moved ≥15-20
 points, plus bucket distribution (HC/WL/FAIL counts from score.py's stdout).
+
+Routine Excel refreshes use `python update_data.py --cached-translations-only`
+so publishing fresh numbers does not depend on Google Translate.
+It reuses cached Chinese translations, leaves new notes in English, and does
+not cache those fallbacks. All workbook data and scoring still refresh normally.
+The default invocation remains available for a later Google translation retry.
 
 **Before regenerating, sanity-check the xlsx mtime** (`ls -l ../Artifacts/v3_2_master_portfolio.xlsx`).
 The owner has, several times, said "I updated it" when the file wasn't actually
