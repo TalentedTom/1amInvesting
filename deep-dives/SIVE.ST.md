@@ -1,12 +1,12 @@
 # SIVE.ST — Sivers Semiconductors | Full investment artifact
 
 **As of:** September 20, 2026  
-**Framework:** v6.0.1 consolidated, the current v6.0 framework including September DB1 optics  
+**Framework:** v6.0.2 consolidated, including September DB1 optics and embedded-image PDF delivery  
 **Status:** HELD; TEMPORAL BOTTLENECK in qualified merchant InP light sources  
 **Analytical Base:** **53/60 = 88% — Elite**  
 **Protected workbook Base:** 85; unchanged, including all other portfolio overrides  
-**Valuation:** sanctioned Sivers **30× modeled operating profit** exception  
-**Active-horizon ceiling:** **Q3 2027: SEK 220.96 per share**  
+**Valuation:** user-selected Sivers **20× modeled operating profit**  
+**Active-horizon ceiling:** **Q3 2027: SEK 147.31 per share**  
 **Share denominator:** 356.740332 million issued ordinary shares, used as the explicit no-further-issuance proxy; dilution sensitivity below  
 **Model FX:** USD/SEK 10.6, retained valuation assumption, not a current FX quote  
 **Operating horizon:** Q3 2026–Q4 2030; complete rolling ceilings through Q1 2030  
@@ -17,7 +17,7 @@
 
 **Model status:** one active, probability-weighted capacity-and-customer model. The exact quarterly loading, allocation, ASP mapping, conversion probabilities and cost paths are analyst assumptions, not Serenity's company forecast. The 300 million annual hybrid-capacity floor implements Tom's clarification: more than 100 million internally plus approximately twice that externally. Every financial output is conditional on these visible assumptions.
 
-**Workbook status:** integrated into `v3_2_master_portfolio.xlsx` on September 20, 2026. `SIVE_Q_Model` implements the quarterly assumptions and drives the linked portfolio ceiling path. All 108 workbook Base scores, saved prices and holdings are preserved, including Sivers Base 85. Portfolio ranks and price-dependent results remain workbook-owned fields. Q3 2026 is marked `neg` because its forward operating-profit window is negative; incomplete later windows are `n.a.`. Workbook Base changes still require Tom’s explicit authorization.
+**Workbook status:** integrated into `v3_2_master_portfolio.xlsx` on September 20, 2026, using the active 20× operating-profit multiple. `SIVE_Q_Model` implements the quarterly assumptions and drives the linked portfolio ceiling path. Sivers Base 85 is protected. This multiple-only revision leaves other portfolio inputs unchanged. Portfolio ranks and price-dependent results remain workbook-owned fields. Q3 2026 is marked `neg` because its forward operating-profit window is negative; incomplete later windows are `n.a.`. Workbook Base changes still require Tom’s explicit authorization.
 
 ## 1. Thesis, bottleneck and S-curve
 
@@ -368,63 +368,63 @@ Profitability is conditional on both volume conversion and product economics. A 
 
 ## 9. Rolling forward-four-quarter valuation
 
-The sanctioned Sivers **30× operating-profit multiple** is retained. It is a deliberate framework exception for growth, qualified photonics exposure and potential broader investor access, not evidence of exclusivity and not an EPS multiple. No multiple increase is assigned for a possible Nasdaq listing or acquisition.
+The active Sivers valuation uses **20× modeled operating profit**, as selected by Tom on September 20, 2026. The earnings basis remains operating profit, not net income or EPS. No multiple increase is assigned for a possible Nasdaq listing or acquisition. Revenue, operating costs, capacity, customer conversion, share count and FX assumptions are retained.
 
-`Ceiling(Q), SEK/share = [OP(Q) + OP(Q+1) + OP(Q+2) + OP(Q+3)] × 30 × 10.6 / 356.740332`
+`Ceiling(Q), SEK/share = [OP(Q) + OP(Q+1) + OP(Q+2) + OP(Q+3)] × 20 × 10.6 / 356.740332`
 
 Each OP is taken directly from section 8 using unrounded inputs. Dollar OP and million shares cancel correctly before conversion to SEK. The share denominator is the starting-quarter issued-share proxy, not the historical weighted-average EPS denominator. No Base probability is applied again.
 
 | Ceiling quarter | Exact earnings window | Forward OP $M | Multiple | Shares M | SEK/share | Inflection |
 |---|---|---|---|---|---|---|
-| Q3 2026 | Q3 2026 to Q2 2027 | -2.11 | 30× | 356.740332 | neg | No positive earnings ceiling |
-| Q4 2026 | Q4 2026 to Q3 2027 | 32.94 | 30× | 356.740332 | 29.36 | Pluggable revenue enters window |
-| Q1 2027 | Q1 2027 to Q4 2027 | 77.31 | 30× | 356.740332 | 68.91 | Pluggable revenue enters window |
-| Q2 2027 | Q2 2027 to Q1 2028 | 160.23 | 30× | 356.740332 | 142.83 | Pluggable revenue enters window |
-| Q3 2027 | Q3 2027 to Q2 2028 | 247.88 | 30× | 356.740332 | 220.96 | Glasgow / I/O enters window |
-| Q4 2027 | Q4 2027 to Q3 2028 | 331.62 | 30× | 356.740332 | 295.61 | Glasgow / I/O enters window |
-| Q1 2028 | Q1 2028 to Q4 2028 | 416.99 | 30× | 356.740332 | 371.71 | Glasgow / I/O enters window |
-| Q2 2028 | Q2 2028 to Q1 2029 | 463.18 | 30× | 356.740332 | 412.88 | Glasgow / I/O enters window |
-| Q3 2028 | Q3 2028 to Q2 2029 | 503.10 | 30× | 356.740332 | 448.46 | Loading and mix |
-| Q4 2028 | Q4 2028 to Q3 2029 | 536.35 | 30× | 356.740332 | 478.11 | Loading and mix |
-| Q1 2029 | Q1 2029 to Q4 2029 | 563.34 | 30× | 356.740332 | 502.17 | Loading and mix |
-| Q2 2029 | Q2 2029 to Q1 2030 | 589.24 | 30× | 356.740332 | 525.25 | Loading and mix |
-| Q3 2029 | Q3 2029 to Q2 2030 | 612.27 | 30× | 356.740332 | 545.78 | Loading and mix |
-| Q4 2029 | Q4 2029 to Q3 2030 | 632.84 | 30× | 356.740332 | 564.12 | Loading and mix |
-| Q1 2030 | Q1 2030 to Q4 2030 | 649.00 | 30× | 356.740332 | 578.52 | Loading and mix |
+| Q3 2026 | Q3 2026 to Q2 2027 | -2.11 | 20× | 356.740332 | neg | No positive earnings ceiling |
+| Q4 2026 | Q4 2026 to Q3 2027 | 32.94 | 20× | 356.740332 | 19.57 | Pluggable revenue enters window |
+| Q1 2027 | Q1 2027 to Q4 2027 | 77.31 | 20× | 356.740332 | 45.94 | Pluggable revenue enters window |
+| Q2 2027 | Q2 2027 to Q1 2028 | 160.23 | 20× | 356.740332 | 95.22 | Pluggable revenue enters window |
+| Q3 2027 | Q3 2027 to Q2 2028 | 247.88 | 20× | 356.740332 | 147.31 | Glasgow / I/O enters window |
+| Q4 2027 | Q4 2027 to Q3 2028 | 331.62 | 20× | 356.740332 | 197.07 | Glasgow / I/O enters window |
+| Q1 2028 | Q1 2028 to Q4 2028 | 416.99 | 20× | 356.740332 | 247.81 | Glasgow / I/O enters window |
+| Q2 2028 | Q2 2028 to Q1 2029 | 463.18 | 20× | 356.740332 | 275.25 | Glasgow / I/O enters window |
+| Q3 2028 | Q3 2028 to Q2 2029 | 503.10 | 20× | 356.740332 | 298.98 | Loading and mix |
+| Q4 2028 | Q4 2028 to Q3 2029 | 536.35 | 20× | 356.740332 | 318.74 | Loading and mix |
+| Q1 2029 | Q1 2029 to Q4 2029 | 563.34 | 20× | 356.740332 | 334.78 | Loading and mix |
+| Q2 2029 | Q2 2029 to Q1 2030 | 589.24 | 20× | 356.740332 | 350.17 | Loading and mix |
+| Q3 2029 | Q3 2029 to Q2 2030 | 612.27 | 20× | 356.740332 | 363.85 | Loading and mix |
+| Q4 2029 | Q4 2029 to Q3 2030 | 632.84 | 20× | 356.740332 | 376.08 | Loading and mix |
+| Q1 2030 | Q1 2030 to Q4 2030 | 649.00 | 20× | 356.740332 | 385.68 | Loading and mix |
 
 A negative forward operating-profit sum has no meaningful positive earnings-multiple ceiling. The negative arithmetic is disclosed below as a loss marker, not as a negative tradable share-price target. Q2–Q4 2030 lack 2031 inputs and therefore have no complete rolling ceiling.
 
 ### Full chain for every calculated ceiling quarter
 
-**Q3 2026 (Q3 2026 to Q2 2027):** [(-7.501875) + (-4.992500) + (0.614687) + (9.766844)] = $-2.112844M OP; × 30 × 10.6 / 356.740332 = SEK **-1.883399** (neg; no positive earnings ceiling).
+**Q3 2026 (Q3 2026 to Q2 2027):** [(-7.501875) + (-4.992500) + (0.614687) + (9.766844)] = $-2.112844M OP; × 20 × 10.6 / 356.740332 = SEK **-1.255599** (neg; no positive earnings ceiling).
 
-**Q4 2026 (Q4 2026 to Q3 2027):** [(-4.992500) + (0.614687) + (9.766844) + (27.546250)] = $32.935281M OP; × 30 × 10.6 / 356.740332 = SEK **29.358664** (display 29.36).
+**Q4 2026 (Q4 2026 to Q3 2027):** [(-4.992500) + (0.614687) + (9.766844) + (27.546250)] = $32.935281M OP; × 20 × 10.6 / 356.740332 = SEK **19.572442** (display 19.57).
 
-**Q1 2027 (Q1 2027 to Q4 2027):** [(0.614687) + (9.766844) + (27.546250) + (39.381875)] = $77.309656M OP; × 30 × 10.6 / 356.740332 = SEK **68.914189** (display 68.91).
+**Q1 2027 (Q1 2027 to Q4 2027):** [(0.614687) + (9.766844) + (27.546250) + (39.381875)] = $77.309656M OP; × 20 × 10.6 / 356.740332 = SEK **45.942793** (display 45.94).
 
-**Q2 2027 (Q2 2027 to Q1 2028):** [(9.766844) + (27.546250) + (39.381875) + (83.539469)] = $160.234438M OP; × 30 × 10.6 / 356.740332 = SEK **142.833727** (display 142.83).
+**Q2 2027 (Q2 2027 to Q1 2028):** [(9.766844) + (27.546250) + (39.381875) + (83.539469)] = $160.234438M OP; × 20 × 10.6 / 356.740332 = SEK **95.222485** (display 95.22).
 
-**Q3 2027 (Q3 2027 to Q2 2028):** [(27.546250) + (39.381875) + (83.539469) + (97.412250)] = $247.879844M OP; × 30 × 10.6 / 356.740332 = SEK **220.961252** (display 220.96).
+**Q3 2027 (Q3 2027 to Q2 2028):** [(27.546250) + (39.381875) + (83.539469) + (97.412250)] = $247.879844M OP; × 20 × 10.6 / 356.740332 = SEK **147.307501** (display 147.31).
 
-**Q4 2027 (Q4 2027 to Q3 2028):** [(39.381875) + (83.539469) + (97.412250) + (111.285031)] = $331.618625M OP; × 30 × 10.6 / 356.740332 = SEK **295.606393** (display 295.61).
+**Q4 2027 (Q4 2027 to Q3 2028):** [(39.381875) + (83.539469) + (97.412250) + (111.285031)] = $331.618625M OP; × 20 × 10.6 / 356.740332 = SEK **197.070929** (display 197.07).
 
-**Q1 2028 (Q1 2028 to Q4 2028):** [(83.539469) + (97.412250) + (111.285031) + (124.757813)] = $416.994563M OP; × 30 × 10.6 / 356.740332 = SEK **371.710903** (display 371.71).
+**Q1 2028 (Q1 2028 to Q4 2028):** [(83.539469) + (97.412250) + (111.285031) + (124.757813)] = $416.994563M OP; × 20 × 10.6 / 356.740332 = SEK **247.807269** (display 247.81).
 
-**Q2 2028 (Q2 2028 to Q1 2029):** [(97.412250) + (111.285031) + (124.757813) + (129.722380)] = $463.177473M OP; × 30 × 10.6 / 356.740332 = SEK **412.878566** (display 412.88).
+**Q2 2028 (Q2 2028 to Q1 2029):** [(97.412250) + (111.285031) + (124.757813) + (129.722380)] = $463.177473M OP; × 20 × 10.6 / 356.740332 = SEK **275.252377** (display 275.25).
 
-**Q3 2028 (Q3 2028 to Q2 2029):** [(111.285031) + (124.757813) + (129.722380) + (137.331541)] = $503.096764M OP; × 30 × 10.6 / 356.740332 = SEK **448.462808** (display 448.46).
+**Q3 2028 (Q3 2028 to Q2 2029):** [(111.285031) + (124.757813) + (129.722380) + (137.331541)] = $503.096764M OP; × 20 × 10.6 / 356.740332 = SEK **298.975205** (display 298.98).
 
-**Q4 2028 (Q4 2028 to Q3 2029):** [(124.757813) + (129.722380) + (137.331541) + (144.540702)] = $536.352434M OP; × 30 × 10.6 / 356.740332 = SEK **478.107068** (display 478.11).
+**Q4 2028 (Q4 2028 to Q3 2029):** [(124.757813) + (129.722380) + (137.331541) + (144.540702)] = $536.352434M OP; × 20 × 10.6 / 356.740332 = SEK **318.738045** (display 318.74).
 
-**Q1 2029 (Q1 2029 to Q4 2029):** [(129.722380) + (137.331541) + (144.540702) + (151.749863)] = $563.344484M OP; × 30 × 10.6 / 356.740332 = SEK **502.167907** (display 502.17).
+**Q1 2029 (Q1 2029 to Q4 2029):** [(129.722380) + (137.331541) + (144.540702) + (151.749863)] = $563.344484M OP; × 20 × 10.6 / 356.740332 = SEK **334.778605** (display 334.78).
 
-**Q2 2029 (Q2 2029 to Q1 2030):** [(137.331541) + (144.540702) + (151.749863) + (155.614077)] = $589.236182M OP; × 30 × 10.6 / 356.740332 = SEK **525.247888** (display 525.25).
+**Q2 2029 (Q2 2029 to Q1 2030):** [(137.331541) + (144.540702) + (151.749863) + (155.614077)] = $589.236182M OP; × 20 × 10.6 / 356.740332 = SEK **350.165258** (display 350.17).
 
-**Q3 2029 (Q3 2029 to Q2 2030):** [(144.540702) + (151.749863) + (155.614077) + (160.364453)] = $612.269094M OP; × 30 × 10.6 / 356.740332 = SEK **545.779533** (display 545.78).
+**Q3 2029 (Q3 2029 to Q2 2030):** [(144.540702) + (151.749863) + (155.614077) + (160.364453)] = $612.269094M OP; × 20 × 10.6 / 356.740332 = SEK **363.853022** (display 363.85).
 
-**Q4 2029 (Q4 2029 to Q3 2030):** [(151.749863) + (155.614077) + (160.364453) + (165.114828)] = $632.843220M OP; × 30 × 10.6 / 356.740332 = SEK **564.119405** (display 564.12).
+**Q4 2029 (Q4 2029 to Q3 2030):** [(151.749863) + (155.614077) + (160.364453) + (165.114828)] = $632.843220M OP; × 20 × 10.6 / 356.740332 = SEK **376.079604** (display 376.08).
 
-**Q1 2030 (Q1 2030 to Q4 2030):** [(155.614077) + (160.364453) + (165.114828) + (167.905016)] = $648.998373M OP; × 30 × 10.6 / 356.740332 = SEK **578.520185** (display 578.52).
+**Q1 2030 (Q1 2030 to Q4 2030):** [(155.614077) + (160.364453) + (165.114828) + (167.905016)] = $648.998373M OP; × 20 × 10.6 / 356.740332 = SEK **385.680123** (display 385.68).
 
 ### Share-count and unit-economics sensitivities
 
@@ -432,11 +432,11 @@ These are one-variable checks around the single active model, not alternative fu
 
 | Q3 2027 share sensitivity | Shares M | SEK/share |
 |---|---|---|
-| Current issued-share proxy | 356.74 | 220.96 |
-| 10% more shares | 392.41 | 200.87 |
-| 20% more shares | 428.09 | 184.13 |
+| Current issued-share proxy | 356.74 | 147.31 |
+| 10% more shares | 392.41 | 133.92 |
+| 20% more shares | 428.09 | 122.76 |
 
-At the Q3 2027 earnings window, one percentage point of consolidated OP margin is approximately SEK 5.58 per share. An additional $10M of operating cost in that four-quarter window reduces the ceiling by SEK 8.91. These simple checks expose the importance of the cost assumptions without changing the sanctioned multiple.
+At the Q3 2027 earnings window, one percentage point of consolidated OP margin is approximately SEK 3.72 per share. An additional $10M of operating cost in that four-quarter window reduces the ceiling by SEK 5.94. These simple checks expose the importance of the cost assumptions without changing the sanctioned multiple.
 
 Component ASP, laser count per array, usable capacity, loading and customer conversion each require re-running revenue and gross profit, not applying a blanket percentage to the final ceiling. A Glasgow or qualification delay must be moved through the calendar and the exact four-quarter windows.
 
@@ -597,15 +597,15 @@ The user-provided post text and images were read directly; live X access is not 
 
 ![Goldman module ASP chart](sive_sources/Goldman_Exhibit4_Optical_ASP_user_supplied.png)
 
-The portable ZIP includes these original image files unchanged. Numerical chart readings, modeled probabilities and derived capacity implications are labeled in the main text. No screenshot instruction has been treated as permission to act outside this Sivers update.
+The full PDF embeds all six original images. It opens without separate image files. Numerical chart readings, modeled probabilities and derived capacity implications are labeled in the main text. No screenshot instruction has been treated as permission to act outside this Sivers update.
 
 ## 15. Current model controls and file location
 
-This is the complete current Sivers artifact under Framework v6.0.1, including the supplied evidence, the source-ranking override, one quarterly operating model, exact rolling earnings windows, the analytical score, risk classes, counters and cross-book watches. No superseded Sivers score, target ladder or legacy market baseline is retained as a competing active model.
+This is the complete current Sivers artifact under Framework v6.0.2, including the supplied evidence, the source-ranking override, one quarterly operating model, exact rolling earnings windows, the analytical score, risk classes, counters and cross-book watches. No superseded Sivers score, target ladder or legacy market baseline is retained as a competing active model.
 
-The model must be revised together when any of these change: hybrid output units, availability date, customer conversion, allocation mix, discrete/array ASP mapping, margins, operating costs, capex depreciation, shares or FX. Tables use unrounded calculations; displayed rounding is not an additional valuation allowance.
+The model must be revised together when any of these change: hybrid output units, availability date, customer conversion, allocation mix, discrete/array ASP mapping, margins, operating costs, capex depreciation, shares, FX or valuation multiple. Tables use unrounded calculations; displayed rounding is not an additional valuation allowance.
 
-**Canonical artifact:** `G:/My Drive/1amInvesting/Artifacts/SIVE.ST_SiversSemiconductors_DeepDive.md`  
-**Review copy:** `G:/My Drive/1amInvesting/Artifacts/Artifact Rescore Sept 6 2026/SIVE.ST_SiversSemiconductors_DeepDive.md`  
-**Pre-update snapshot:** `G:/My Drive/1amInvesting/Artifacts/Artifact Rescore Sept 6 2026/versions/SIVE_2026-09-20_before_update/`  
-**Framework reference:** `FRAMEWORK_v6.0.1_CONSOLIDATED.md` in the review folder. Tom's Serenity source ruling in this artifact controls this company's source weighting.
+**Canonical artifact:** `G:/My Drive/1amInvesting/Artifacts/SIVE.ST_SiversSemiconductors_DeepDive.pdf`  
+**Review copy:** `G:/My Drive/1amInvesting/Artifacts/Artifact Rescore Sept 6 2026/SIVE.ST_SiversSemiconductors_DeepDive.pdf`  
+**Pre-update snapshot:** `G:/My Drive/1amInvesting/Artifacts/Artifact Rescore Sept 6 2026/versions/SIVE_2026-09-20_before_20x/`  
+**Framework reference:** `FRAMEWORK_v6.0.2_CONSOLIDATED.pdf` in the review folder. Tom's Serenity source ruling in this artifact controls this company's source weighting.
