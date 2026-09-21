@@ -119,13 +119,17 @@
         </header>
 
         <!-- Bulletin ceilings are a dated 20x model snapshot, not live-price upside.
-             Source: Q3 2027 in 1189e8b:data.js -> ff25933:data.js.
+             Original Q3 2027 ceilings: 1189e8b:data.js. Corrected ceilings:
+             canonical master workbook recalculated on 21 Sep 2026.
              Keep this history unchanged when prices or valuation multiples move. -->
         <details class="news-bulletin" open>
             <summary class="news-summary">
                 <span class="news-label" data-i18n="news_label">News bulletin</span>
                 <span class="news-title" data-i18n="news_title">Higher NAND forecasts lift model ceilings</span>
-                <time datetime="2026-09-20T22:52:00-04:00" data-i18n="news_date" title="Toronto time (UTC-04:00)">Posted 20 Sep 2026, 10:52 pm EDT</time>
+                <span class="news-timestamps">
+                    <time datetime="2026-09-20T22:52:00-04:00" data-i18n="news_date" title="Toronto time (UTC-04:00)">Posted 20 Sep 2026, 10:52 pm EDT</time>
+                    <time datetime="2026-09-21T00:38:00-04:00" data-i18n="news_updated" title="Toronto time (UTC-04:00)">Updated 21 Sep 2026, 12:38 am EDT</time>
+                </span>
                 <span class="news-chevron" aria-hidden="true"></span>
             </summary>
             <div class="news-content">
@@ -136,34 +140,34 @@
                 </div>
                 <div class="news-ceilings" role="region" tabindex="0" aria-label="Five company ceiling revisions" data-i18n-attr="aria-label:news_region">
                     <article class="news-ceiling-card">
-                        <div class="news-company"><h3>SanDisk</h3><span class="news-revision">+35.8%</span></div>
+                        <div class="news-company"><h3>SanDisk</h3><span class="news-revision">+53.7%</span></div>
                         <p class="news-ticker">SNDK &middot; USD</p>
-                        <p class="news-values"><span>$3,062.55</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$4,160.35</strong></p>
+                        <p class="news-values"><span>$3,062.55</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$4,707.36</strong></p>
                     </article>
                     <article class="news-ceiling-card">
-                        <div class="news-company"><h3 data-i18n="news_kioxia">Kioxia</h3><span class="news-revision">+25.9%</span></div>
+                        <div class="news-company"><h3 data-i18n="news_kioxia">Kioxia</h3><span class="news-revision">+47.3%</span></div>
                         <p class="news-ticker">285A.T &middot; JPY</p>
-                        <p class="news-values"><span>&yen;137,140</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&yen;172,654</strong></p>
+                        <p class="news-values"><span>&yen;137,140</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&yen;201,939</strong></p>
                     </article>
                     <article class="news-ceiling-card">
-                        <div class="news-company"><h3 data-i18n="news_samsung">Samsung</h3><span class="news-revision">+7.4%</span></div>
+                        <div class="news-company"><h3 data-i18n="news_samsung">Samsung</h3><span class="news-revision">+13.4%</span></div>
                         <p class="news-ticker">005930.KS &middot; KRW</p>
-                        <p class="news-values"><span>&#8361;542,145</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;582,009</strong></p>
+                        <p class="news-values"><span>&#8361;542,145</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;614,881</strong></p>
                     </article>
                     <article class="news-ceiling-card">
-                        <div class="news-company"><h3 data-i18n="news_hynix">SK Hynix</h3><span class="news-revision">+4.6%</span></div>
+                        <div class="news-company"><h3 data-i18n="news_hynix">SK Hynix</h3><span class="news-revision">+8.5%</span></div>
                         <p class="news-ticker">000660.KS &middot; KRW</p>
-                        <p class="news-values"><span>&#8361;3,728,533</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;3,901,341</strong></p>
-                        <p class="news-ads">SKHY &middot; USD: $375.50 &rarr; $392.90</p>
+                        <p class="news-values"><span>&#8361;3,728,533</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;4,043,836</strong></p>
+                        <p class="news-ads">SKHY &middot; USD: $375.50 &rarr; $407.25</p>
                     </article>
                     <article class="news-ceiling-card">
-                        <div class="news-company"><h3 data-i18n="news_micron">Micron</h3><span class="news-revision">+6.3%</span></div>
+                        <div class="news-company"><h3 data-i18n="news_micron">Micron</h3><span class="news-revision">+11.5%</span></div>
                         <p class="news-ticker">MU &middot; USD</p>
-                        <p class="news-values"><span>$1,872.15</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$1,990.11</strong></p>
+                        <p class="news-values"><span>$1,872.15</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$2,087.37</strong></p>
                     </article>
                 </div>
                 <p class="news-scroll-hint" data-i18n="news_scroll">Swipe or scroll to see all five companies &rarr;</p>
-                <p class="news-note" data-i18n="news_note">Percentages show the ceiling increase versus the previous model, not upside versus today's share price. This dated snapshot stays at 20&times;.</p>
+                <p class="news-note" data-i18n="news_note">Ceilings corrected after model recalculation. Percentages compare with the original pre-news ceilings, not live prices. Fixed at 20&times;.</p>
             </div>
         </details>
 
