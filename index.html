@@ -118,6 +118,55 @@
             </div>
         </header>
 
+        <!-- Bulletin ceilings are a dated 20x model snapshot, not live-price upside.
+             Source: Q3 2027 in 1189e8b:data.js -> ff25933:data.js.
+             Keep this history unchanged when prices or valuation multiples move. -->
+        <details class="news-bulletin" open>
+            <summary class="news-summary">
+                <span class="news-label" data-i18n="news_label">News bulletin</span>
+                <span class="news-title" data-i18n="news_title">Higher NAND forecasts lift model ceilings</span>
+                <time datetime="2026-09-20T22:52:00-04:00" data-i18n="news_date" title="Toronto time (UTC-04:00)">Posted 20 Sep 2026, 10:52 pm EDT</time>
+                <span class="news-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="news-content">
+                <p class="news-story" data-i18n="news_story">TrendForce has updated its NAND price forecast. <strong>3Q26 up 18&ndash;23%</strong> (vs up 10&ndash;15% prior); <strong>4Q26 up 15&ndash;20%</strong> (vs up 0&ndash;5% prior). These higher NAND forecasts drive the increases in our model ceilings below.</p>
+                <div class="news-ceilings-heading">
+                    <h2 data-i18n="news_ceilings">Resulting Q3 2027 ceiling revisions</h2>
+                    <span data-i18n="news_basis">20&times; baseline &middot; Previous &rarr; Updated</span>
+                </div>
+                <div class="news-ceilings" role="region" tabindex="0" aria-label="Five company ceiling revisions" data-i18n-attr="aria-label:news_region">
+                    <article class="news-ceiling-card">
+                        <div class="news-company"><h3>SanDisk</h3><span class="news-revision">+35.8%</span></div>
+                        <p class="news-ticker">SNDK &middot; USD</p>
+                        <p class="news-values"><span>$3,062.55</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$4,160.35</strong></p>
+                    </article>
+                    <article class="news-ceiling-card">
+                        <div class="news-company"><h3 data-i18n="news_kioxia">Kioxia</h3><span class="news-revision">+25.9%</span></div>
+                        <p class="news-ticker">285A.T &middot; JPY</p>
+                        <p class="news-values"><span>&yen;137,140</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&yen;172,654</strong></p>
+                    </article>
+                    <article class="news-ceiling-card">
+                        <div class="news-company"><h3 data-i18n="news_samsung">Samsung</h3><span class="news-revision">+7.4%</span></div>
+                        <p class="news-ticker">005930.KS &middot; KRW</p>
+                        <p class="news-values"><span>&#8361;542,145</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;582,009</strong></p>
+                    </article>
+                    <article class="news-ceiling-card">
+                        <div class="news-company"><h3 data-i18n="news_hynix">SK Hynix</h3><span class="news-revision">+4.6%</span></div>
+                        <p class="news-ticker">000660.KS &middot; KRW</p>
+                        <p class="news-values"><span>&#8361;3,728,533</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>&#8361;3,901,341</strong></p>
+                        <p class="news-ads">SKHY &middot; USD: $375.50 &rarr; $392.90</p>
+                    </article>
+                    <article class="news-ceiling-card">
+                        <div class="news-company"><h3 data-i18n="news_micron">Micron</h3><span class="news-revision">+6.3%</span></div>
+                        <p class="news-ticker">MU &middot; USD</p>
+                        <p class="news-values"><span>$1,872.15</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>$1,990.11</strong></p>
+                    </article>
+                </div>
+                <p class="news-scroll-hint" data-i18n="news_scroll">Swipe or scroll to see all five companies &rarr;</p>
+                <p class="news-note" data-i18n="news_note">Percentages show the ceiling increase versus the previous model, not upside versus today's share price. This dated snapshot stays at 20&times;.</p>
+            </div>
+        </details>
+
         <section class="position-filter-bar">
             <div class="position-toggle" id="position-toggle" role="group" aria-label="Position type filter">
                 <button class="position-btn active" data-position="all" data-i18n="pos_all">All</button>
