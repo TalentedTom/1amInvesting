@@ -44,7 +44,9 @@ def refresh_synthetic_rows(rows):
                 or len({h["ticker"] for h in holdings}) != len(holdings)):
             raise ValueError(f"Invalid weights for {row['Ticker']}; must sum to 100%")
         price = number(row.get("Current Price"))
-        row["Base"] = model["base"]
+        bases = [number(by_ticker.get(h["ticker"], {}).get("Base")) for h in holdings]
+        row["Base"] = (round(sum(h["weight"] * base for h, base in zip(holdings, bases)), 8)
+                       if all(base is not None for base in bases) else "")
         for quarter in quarters:
             weighted_return = 0.0
             complete = price is not None and price > 0
@@ -86,11 +88,11 @@ def add_synthetic_rows(rows, prior_path):
         price = number(old.get("Current Price")) or seed["price"]
         rows.append({
             "Rank": 1, "Ticker": ticker, "Name": config["name"],
-            "Base": config["base"], "Current Price": price,
+            "Base": "", "Current Price": price,
             "Change %": old.get("Change %", f"{seed['change_pct']:+.2f}%"),
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "", "Port": "",
-            "_synthetic": {k: config[k] for k in ("base", "holdings", "note")},
+            "_synthetic": {k: config[k] for k in ("base_method", "holdings", "note")},
         })
     refresh_synthetic_rows(rows)
     print("Added custom ETF models: " + ", ".join(sorted(configured)))

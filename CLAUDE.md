@@ -191,13 +191,15 @@ don't rebind it per render.
 
 ## Custom DRAM ETF model (September 2026)
 
-- `synthetic_portfolios.json` defines the website-only DRAM row: Base 100,
+- `synthetic_portfolios.json` defines the website-only DRAM row: weighted Base,
   fixed weights MU/Samsung/SK Hynix 25% each, CXMT/SNDK/STX 5% each,
   WDC/Kioxia/Nanya 3% each, Winbond 1%. Do not add it to the workbook.
 - Each quarter's return is `sum(weight * (company target/company price - 1))`.
   The displayed ETF target is `DRAM price * (1 + weighted return)`.
-  Use native-currency ratios, not raw prices, rounded badges or company Base
-  scores. CXMT maps to 688825.SH as the company-model proxy for its swap.
+  Use native-currency ratios, not raw prices or rounded badges. Base is
+  `sum(weight * component Base)`, retaining fractional precision in EV and
+  scoring. Quarterly returns do not use component Base scores. CXMT maps to
+  688825.SH as the company-model proxy for its swap.
 - `update_data.py` appends the row via `scripts/synthetic_portfolios.py`
   before translation/scoring, so ordinary Excel regens retain it. Its quote
   seed is an observed Yahoo snapshot; routine live polling refreshes it.
@@ -213,6 +215,10 @@ don't rebind it per render.
   has no public deep dive. It is an ETF, not classified as an individual
   Chokepoint/Bottleneck stock. Its hover explanation identifies the custom
   forecast and exclusions (fees, FX, tracking and future rebalancing).
+  Clicking the DRAM symbol opens a native dialog with the ETF explanation,
+  weights read from the same `_synthetic.holdings` used by calculations,
+  and the forecast methodology. It supports mobile, Escape, backdrop/close,
+  keyboard focus and English/Chinese; it is not a published deep-dive file.
 - Checks: `python -m unittest discover -s tests -p 'test_synthetic*.py'`
   and `node --test tests/synthetic-portfolios.test.js`.
 

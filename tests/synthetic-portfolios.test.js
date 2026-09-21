@@ -3,11 +3,18 @@ const assert = require('node:assert/strict');
 const {refresh} = require('../synthetic-portfolios.js');
 const parse = value => value === '' || value == null ? NaN : Number(value);
 const fixture = () => [
-    ...[200, 180, 100, 100].map((target, i) => ({Ticker: 'ABCD'[i], 'Current Price': 100, 'Q3 2027': target})),
+    ...[200, 180, 100, 100].map((target, i) => ({Ticker: 'ABCD'[i], Base: 100, 'Current Price': 100, 'Q3 2027': target})),
     {Ticker: 'DRAM', Base: 100, 'Current Price': 50, _synthetic: {base: 100,
         holdings: [...'ABCD'].map(ticker => ({ticker, weight: .25}))}}
 ];
 const update = rows => refresh(rows, ['Q3 2027'], parse);
+test('fractional weighted Base and EV, not a fixed or truncated Base', () => {
+    const rows = fixture();
+    [99, 80, 62, 70].forEach((base, i) => rows[i].Base = base);
+    update(rows);
+    assert.equal(rows[4].Base, 77.75);
+    assert.equal(rows[4]['EV Upside'], 13);
+});
 test('weighted percentages, Base100, and source rows unchanged', () => {
     const rows = fixture(), before = structuredClone(rows.slice(0, -1));
     update(rows);

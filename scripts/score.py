@@ -49,6 +49,7 @@ Idempotent: running it twice in a row is a no-op when prices haven't moved.
 """
 
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -312,11 +313,22 @@ def target_cell(row):
     return ""
 
 
+def base_for_row(row):
+    """Keep fractional weighted ETF Bases; ordinary workbook scores unchanged."""
+    if not row.get("_synthetic"):
+        return parse_int(row.get("Base"))
+    try:
+        base = float(row.get("Base"))
+    except (TypeError, ValueError):
+        return None
+    return base if math.isfinite(base) and base >= 0 else None
+
+
 def score_row(row):
     """Return a summary dict if the row was scored, or None if skipped.
     Mutates `row` in-place when scoring succeeds.
     """
-    base = parse_int(row.get("Base"))
+    base = base_for_row(row)
     if base is None:
         return None
     price = parse_price(row.get("Current Price"))

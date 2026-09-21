@@ -2052,6 +2052,51 @@ body.light-mode .modal-content th {
     opacity: 1;
 }
 
+/* DRAM's model explanation uses a native dialog, independent of deep dives. */
+.ticker-symbol.has-etf-info {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+}
+.ticker-symbol.has-etf-info:hover { text-decoration-style: solid; }
+.ticker-symbol.has-etf-info:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.etf-info-modal {
+    margin: auto;
+    padding: 0;
+    width: min(600px, calc(100% - 24px));
+    max-height: 90vh;
+    max-height: 90dvh;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--bg-panel);
+    color: var(--text-primary);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+.etf-info-modal[open] { display: flex; flex-direction: column; }
+.etf-info-modal::backdrop { background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); }
+.etf-info-modal .modal-content { min-height: 0; overscroll-behavior: contain; }
+.etf-info-modal .modal-header h2 { margin: 0; }
+.etf-info-modal .etf-model-note { color: var(--text-secondary); font-size: 0.85em; }
+.etf-info-modal .etf-weights { list-style: none; padding: 0; margin: 12px 0 0; }
+.etf-info-modal .etf-weights li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+}
+.etf-weights small { display: block; color: var(--text-secondary); font-size: 0.75em; }
+.etf-weights strong { flex-shrink: 0; font-variant-numeric: tabular-nums; }
+.etf-weight-total { text-align: right; font-weight: 600; }
+
 /* === SuperCycle multi-select filter + deep-dive search ==========
    3-column grid keeps the pill group visually centered while the
    search input pins to the far right. Spacer column on the left

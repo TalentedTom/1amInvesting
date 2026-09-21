@@ -91,6 +91,7 @@ from synthetic_portfolios import refresh_synthetic_rows  # noqa: E402
 from score import (  # noqa: E402
     parse_range,
     parse_int,
+    base_for_row,
     entry_score,
     total_score,
     upside_display,
@@ -267,7 +268,7 @@ def build_live_payload(data, workers=DEFAULT_WORKERS,
         # Score: Entry / Total / Upside. Requires Base + parseable Ceiling
         # Target. Skipped silently for PRE-IPO and unscorable rows — the
         # frontend keeps whatever data.js had for those tickers.
-        base = parse_int(row.get("Base"))
+        base = base_for_row(row)
         low, high = parse_range(target_cell(row))
         if base is not None and low is not None and high is not None and price > 0:
             midpoint = (low + high) / 2

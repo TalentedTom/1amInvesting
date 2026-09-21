@@ -1127,6 +1127,86 @@ document.addEventListener('DOMContentLoaded', () => {
     // readers describe the right surface.
     const modalCloseBtn = deepDiveModal.querySelector('.modal-close');
 
+    // Native dialog keeps ETF information separate from research/chart loading,
+    // traps keyboard focus, and supports Escape without changing other modals.
+    const etfInfoModal = document.getElementById('etf-info-modal');
+    const etfInfoContent = document.getElementById('etf-info-content');
+    const etfInfoClose = document.getElementById('etf-info-close');
+    let etfInfoPreviousOverflow = '';
+    function openEtfInfo() {
+        const rows = (window.PORTFOLIO_DATA || {}).en || [];
+        const row = rows.find(r => r.Ticker === 'DRAM');
+        if (!row || !row._synthetic || etfInfoModal.open) return;
+        const zh = currentLang === 'zh-CN';
+        const copy = zh ? {
+            intro: 'DRAM \u662f Roundhill Memory ETF\uff08\u4ea4\u6613\u6240\u4ea4\u6613\u57fa\u91d1\uff09\uff0c\u6295\u8d44\u4e8e\u4e00\u7bee\u5b50\u5185\u5b58\u548c\u5b58\u50a8\u516c\u53f8\uff0c\u800c\u4e0d\u662f\u5355\u4e00\u516c\u53f8\u3002',
+            weights: '\u672c\u7ad9\u6a21\u578b\u6743\u91cd',
+            custom: '\u4ee5\u4e0b\u4e3a\u672c\u7ad9\u9884\u6d4b\u4f7f\u7528\u7684\u56fa\u5b9a\u6743\u91cd\uff0c\u5e76\u975e\u57fa\u91d1\u53d1\u884c\u65b9\u7684\u5b9e\u65f6\u6301\u4ed3\u3002',
+            total: '\u5408\u8ba1', how: '\u5b63\u5ea6\u4e0a\u6da8\u7a7a\u95f4\u5982\u4f55\u8ba1\u7b97',
+            formula: '\u6bcf\u4e2a\u5b63\u5ea6\uff1a\u5c06\u5404\u516c\u53f8\u76f8\u5bf9\u5f53\u524d\u4ef7\u683c\u7684\u4e0a\u6da8\u767e\u5206\u6bd4\u4e58\u4ee5\u5176\u6743\u91cd\uff0c\u518d\u6c47\u603b\u3002DRAM \u76ee\u6807\u4ef7 = DRAM \u5f53\u524d\u4ef7\u683c \u00d7\uff081 + \u52a0\u6743\u4e0a\u6da8\u7a7a\u95f4\uff09\u3002',
+            base: '\u52a0\u6743 Base\uff08\u5404\u516c\u53f8 Base \u00d7 \u6743\u91cd\u4e4b\u548c\uff09\uff1a',
+            note: 'CXMT \u4f7f\u7528 688825.SH \u516c\u53f8\u6a21\u578b\u4ee3\u8868 BTMTQT8 TRS 052427 GS \u4e92\u6362\u655e\u53e3\u3002\u9884\u6d4b\u4e0d\u5305\u542b\u8d39\u7528\u3001\u6c47\u7387\u53d8\u52a8\u3001\u8ddf\u8e2a\u8bef\u5dee\u6216\u672a\u6765\u8c03\u4ed3\uff0c\u5e76\u975e\u53d1\u884c\u65b9\u7684\u9884\u6d4b\u3002',
+            link: '\u57fa\u91d1\u53d1\u884c\u65b9\u7f51\u7ad9', close: '\u5173\u95ed ETF \u8bf4\u660e'
+        } : {
+            intro: 'DRAM is the Roundhill Memory ETF (exchange-traded fund). It provides exposure to a basket of memory and storage companies, rather than one individual company.',
+            weights: 'Model weights',
+            custom: 'These are the fixed weights used for forecasts on this website, not a live holdings feed from the ETF issuer.',
+            total: 'Total', how: 'How quarterly upside is calculated',
+            formula: "For each quarter, multiply each company's upside percentage versus its current price by its weight, then add the results. DRAM target price = DRAM current price \u00d7 (1 + weighted upside).",
+            base: 'Weighted Base (sum of each component Base x its weight):',
+            note: "CXMT uses the 688825.SH company model to represent the BTMTQT8 TRS 052427 GS swap exposure. Forecasts exclude fees, FX moves, tracking differences and future rebalancing, and are not the issuer's forecasts.",
+            link: 'ETF issuer website', close: 'Close ETF information'
+        };
+        etfInfoContent.replaceChildren();
+        function textElement(tag, text, parent = etfInfoContent) {
+            const element = document.createElement(tag);
+            element.textContent = text;
+            parent.appendChild(element);
+            return element;
+        }
+        textElement('p', copy.intro);
+        textElement('h3', copy.weights);
+        textElement('p', copy.custom).className = 'etf-model-note';
+        const list = document.createElement('ul');
+        list.className = 'etf-weights';
+        etfInfoContent.appendChild(list);
+        for (const holding of row._synthetic.holdings) {
+            const company = rows.find(r => r.Ticker === holding.ticker);
+            const name = holding.ticker === '688825.SH' ? 'CXMT' : (company && company.Name) || holding.ticker;
+            const item = document.createElement('li');
+            const label = textElement('span', name, item);
+            textElement('small', holding.ticker, label);
+            textElement('strong', `${+(holding.weight * 100).toFixed(2)}%`, item);
+            list.appendChild(item);
+        }
+        const total = row._synthetic.holdings.reduce((sum, h) => sum + h.weight, 0);
+        textElement('p', `${copy.total}: ${+(total * 100).toFixed(2)}%`).className = 'etf-weight-total';
+        textElement('h3', copy.how);
+        textElement('p', copy.formula);
+        textElement('p', `${copy.base} ${+Number(row.Base).toFixed(2)}`);
+        textElement('p', copy.note).className = 'etf-model-note';
+        const link = textElement('a', copy.link);
+        link.href = 'https://www.roundhillinvestments.com/etf/dram/';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        etfInfoClose.setAttribute('aria-label', copy.close);
+        etfInfoPreviousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        etfInfoModal.showModal();
+        etfInfoContent.scrollTop = 0;
+    }
+    etfInfoClose.addEventListener('click', () => etfInfoModal.close());
+    etfInfoModal.addEventListener('click', e => {
+        const rect = etfInfoModal.getBoundingClientRect();
+        if (e.target === etfInfoModal && (e.clientX < rect.left || e.clientX > rect.right
+                || e.clientY < rect.top || e.clientY > rect.bottom)) etfInfoModal.close();
+    });
+    etfInfoModal.addEventListener('close', () => {
+        document.body.style.overflow = etfInfoPreviousOverflow;
+        // Live-price refreshes may have replaced the original opener node.
+        document.querySelector('.ticker-symbol.has-etf-info')?.focus({preventScroll: true});
+    });
+
     function openDeepDive(ticker) {
         if (!ticker) return;
         // First successful open dismisses the discovery hint permanently —
@@ -2077,6 +2157,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     openChart(ticker);
                     return;
                 }
+                if (e.target.closest('.ticker-symbol.has-etf-info')) {
+                    e.stopPropagation();
+                    openEtfInfo();
+                    return;
+                }
                 const tickerEl = e.target.closest('.ticker-symbol.has-deep-dive');
                 if (tickerEl) {
                     // Use data-ticker (the canonical symbol) rather than the
@@ -2254,7 +2339,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const safeDisplay = displayText.replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
             const safeSym = sym.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
-            const tickerClass = deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
+            const hasEtfInfo = sym === 'DRAM' && row && row._synthetic;
+            const tickerClass = hasEtfInfo ? 'ticker-symbol has-etf-info'
+                : deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
+            const tickerTag = hasEtfInfo ? 'button' : 'span';
+            const tickerAttrs = hasEtfInfo ? ' type="button" aria-haspopup="dialog" aria-controls="etf-info-modal"' : '';
             // Hover tooltip shows whichever identity ISN'T displayed:
             // rows showing the bare ticker (US/EU) reveal the company
             // name; rows showing the name (Asian numeric tickers) reveal
@@ -2290,7 +2379,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 + ` title="${tr(starred ? 'watchlist_remove' : 'watchlist_add')}"`
                 + ` aria-label="${tr(starred ? 'watchlist_remove' : 'watchlist_add')}"`
                 + ` aria-pressed="${starred ? 'true' : 'false'}">${starred ? '★' : '☆'}</button>`;
-            return `<span class="ticker-cell"${titleAttr}><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><span class="${tickerClass}" data-ticker="${safeSym}">${safeDisplay}</span>${trimFlag}${starBtn}</span>`;
+            return `<span class="ticker-cell"${titleAttr}><span class="ticker-logo" data-initial="${initial}"><img src="${logoSrc}" alt="" loading="lazy" onerror="this.style.display='none'"></span><${tickerTag} class="${tickerClass}" data-ticker="${safeSym}"${tickerAttrs}>${safeDisplay}</${tickerTag}>${trimFlag}${starBtn}</span>`;
         }
 
         if (value === null || value === undefined || value === "") {

@@ -13,7 +13,7 @@ import fetch_live
 
 
 def fixture():
-    sources = [dict(Ticker=t, Base=1, **{'Current Price': 100, 'Q3 2027': target})
+    sources = [dict(Ticker=t, Base=100, **{'Current Price': 100, 'Q3 2027': target})
                for t, target in [('A', 200), ('B', 180), ('C', 100), ('D', 100)]]
     return sources + [dict(Ticker='DRAM', Base=100, **{
         'Current Price': 50,
@@ -22,6 +22,18 @@ def fixture():
 
 
 class SyntheticTests(unittest.TestCase):
+    def test_weighted_base_keeps_fractional_precision(self):
+        rows = fixture()
+        for row, base in zip(rows, [99, 80, 62, 70]):
+            row['Base'] = base
+        refresh_synthetic_rows(rows)
+        self.assertEqual(rows[-1]['Base'], 77.75)
+        self.assertEqual(rows[-1]['EV Upside'], 13)
+        quotes = {r['Ticker']: (r['Current Price'], 'USD', 0) for r in rows}
+        with patch.object(fetch_live, 'fetch_all', return_value=(quotes, [], [])):
+            payload, _ = fetch_live.build_live_payload({'en': rows})
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], 13)
+
     def test_percent_units_and_base(self):
         rows = fixture()
         before = copy.deepcopy(rows[:-1])
