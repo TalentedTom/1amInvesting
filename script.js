@@ -1675,6 +1675,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = fullData[currentLang];
             const enData = fullData['en'] || data;
 
+            // Rebuild ETF forecasts after live quotes and before filtering/sorting.
+            // Only synthetic rows change; ordinary Excel targets stay untouched.
+            window.SyntheticPortfolios.refresh(data, QUARTER_COLS, parseLooseNumber);
+            data.filter(row => row._synthetic).forEach(row => _qPctCache.delete(row));
+
             // Filter out empty rows AND apply the active filters. All are keyed
             // off English columns so language switches don't break the logic.
             const wanted = positionFilter.toUpperCase();   // "ALL" / "CHOKEPOINT" / "BOTTLENECK"
@@ -2254,7 +2259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // rows showing the bare ticker (US/EU) reveal the company
             // name; rows showing the name (Asian numeric tickers) reveal
             // the symbol.
-            const tipSrc = displayText === sym
+            const tipSrc = row && row._synthetic ? row._synthetic.note : displayText === sym
                 ? String((row && row.Name) || '').trim()
                 : sym;
             const safeTip = tipSrc.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));

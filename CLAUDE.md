@@ -189,6 +189,33 @@ don't rebind it per render.
 
 ---
 
+## Custom DRAM ETF model (September 2026)
+
+- `synthetic_portfolios.json` defines the website-only DRAM row: Base 100,
+  fixed weights MU/Samsung/SK Hynix 25% each, CXMT/SNDK/STX 5% each,
+  WDC/Kioxia/Nanya 3% each, Winbond 1%. Do not add it to the workbook.
+- Each quarter's return is `sum(weight * (company target/company price - 1))`.
+  The displayed ETF target is `DRAM price * (1 + weighted return)`.
+  Use native-currency ratios, not raw prices, rounded badges or company Base
+  scores. CXMT maps to 688825.SH as the company-model proxy for its swap.
+- `update_data.py` appends the row via `scripts/synthetic_portfolios.py`
+  before translation/scoring, so ordinary Excel regens retain it. Its quote
+  seed is an observed Yahoo snapshot; routine live polling refreshes it.
+- `fetch_live.py` fetches DRAM like any other US ticker, patches ALL prices
+  before deriving its score, and still publishes only to `live-prices`.
+- `synthetic-portfolios.js` recomputes targets from the current page's
+  constituent data before rendering. No stale live.json targets are used.
+  Ordinary 20x/25x/30x display scaling then applies once, without compounding.
+- Missing constituent targets/prices leave that quarter blank, never silently
+  remove the holding or renormalize weights. Existing failed-quote fallback
+  to the last available workbook price remains unchanged.
+- DRAM appears under All (and Ex-China), is watchlist/chart compatible, and
+  has no public deep dive. It is an ETF, not classified as an individual
+  Chokepoint/Bottleneck stock. Its hover explanation identifies the custom
+  forecast and exclusions (fees, FX, tracking and future rebalancing).
+- Checks: `python -m unittest discover -s tests -p 'test_synthetic*.py'`
+  and `node --test tests/synthetic-portfolios.test.js`.
+
 ## Working style / preferences (learned over many sessions)
 
 - The owner says "update the website" ~daily; just run the pipeline and report

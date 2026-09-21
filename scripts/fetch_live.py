@@ -87,6 +87,7 @@ DEFAULT_MIN_SUCCESS_RATIO = 0.5
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 from fetch_yahoo import yahoo_candidates, is_sane_price, SKIP_TICKER_SUBSTRINGS  # noqa: E402
+from synthetic_portfolios import refresh_synthetic_rows  # noqa: E402
 from score import (  # noqa: E402
     parse_range,
     parse_int,
@@ -240,6 +241,15 @@ def build_live_payload(data, workers=DEFAULT_WORKERS,
     t0 = time.monotonic()
     quotes, failures, timed_out = fetch_all(yf, wanted, workers, deadline_seconds)
     fetch_secs = time.monotonic() - t0
+
+    # Apply ALL fresh constituent quotes before calculating custom ETF targets.
+    # Work on copies so the caller's structural data remains unchanged.
+    rows = [dict(row) for row in rows]
+    for row in rows:
+        ticker = str(row.get("Ticker") or "").strip()
+        if ticker in quotes:
+            row["Current Price"] = fmt_price(*quotes[ticker][:2])
+    refresh_synthetic_rows(rows)
 
     for row in rows:
         ticker = (row.get("Ticker") or "").strip()

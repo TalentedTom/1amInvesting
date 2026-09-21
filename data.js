@@ -3975,6 +3975,82 @@ window.PORTFOLIO_DATA = {
             "Total": 106,
             "Upside": "8.6x",
             "EV Upside": 585
+        },
+        {
+            "Rank": 1,
+            "Ticker": "DRAM",
+            "Name": "Roundhill Memory ETF - custom weighted model",
+            "Base": 100,
+            "Current Price": 61.58,
+            "Change %": "+3.12%",
+            "Position Type": "ETF - custom weighted memory basket",
+            "Artifact Updated": "",
+            "Port": "",
+            "_synthetic": {
+                "base": 100,
+                "holdings": [
+                    {
+                        "ticker": "MU",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "005930.KS",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "000660.KS",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "688825.SH",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "SNDK",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "STX",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "WDC",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "285A.T",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "2408.TW",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "2344.TW",
+                        "weight": 0.01
+                    }
+                ],
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing. Base 100 is a user-set modelling input, not a guarantee."
+            },
+            "Q1 2027": 155.0195160825393,
+            "Q1 2028": 175.485983208421,
+            "Q1 2029": 181.7775501735159,
+            "Q1 2030": 189.3531175513377,
+            "Q2 2027": 162.98159232652466,
+            "Q2 2028": 177.5850793811268,
+            "Q2 2029": 183.2049477695017,
+            "Q3 2026": 127.0212606461603,
+            "Q3 2027": 168.59984925842627,
+            "Q3 2028": 179.09729573747097,
+            "Q3 2029": 184.9213282377368,
+            "Q4 2026": 142.9238374111678,
+            "Q4 2027": 172.8159990562601,
+            "Q4 2028": 180.43915839470864,
+            "Q4 2029": 186.93154067046993,
+            "Upside": "2.7x",
+            "EV Upside": 174,
+            "Entry": 68,
+            "Total": 87
         }
     ],
     "zh-CN": [
@@ -7953,6 +8029,82 @@ window.PORTFOLIO_DATA = {
             "Total": 106,
             "Upside": "8.6x",
             "EV Upside": 585
+        },
+        {
+            "Rank": 1,
+            "Ticker": "DRAM",
+            "Name": "Roundhill Memory ETF - custom weighted model",
+            "Base": 100,
+            "Current Price": 61.58,
+            "Change %": "+3.12%",
+            "Position Type": "ETF - custom weighted memory basket",
+            "Artifact Updated": "",
+            "Port": "",
+            "_synthetic": {
+                "base": 100,
+                "holdings": [
+                    {
+                        "ticker": "MU",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "005930.KS",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "000660.KS",
+                        "weight": 0.25
+                    },
+                    {
+                        "ticker": "688825.SH",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "SNDK",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "STX",
+                        "weight": 0.05
+                    },
+                    {
+                        "ticker": "WDC",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "285A.T",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "2408.TW",
+                        "weight": 0.03
+                    },
+                    {
+                        "ticker": "2344.TW",
+                        "weight": 0.01
+                    }
+                ],
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing. Base 100 is a user-set modelling input, not a guarantee."
+            },
+            "Q1 2027": 155.0195160825393,
+            "Q1 2028": 175.485983208421,
+            "Q1 2029": 181.7775501735159,
+            "Q1 2030": 189.3531175513377,
+            "Q2 2027": 162.98159232652466,
+            "Q2 2028": 177.5850793811268,
+            "Q2 2029": 183.2049477695017,
+            "Q3 2026": 127.0212606461603,
+            "Q3 2027": 168.59984925842627,
+            "Q3 2028": 179.09729573747097,
+            "Q3 2029": 184.9213282377368,
+            "Q4 2026": 142.9238374111678,
+            "Q4 2027": 172.8159990562601,
+            "Q4 2028": 180.43915839470864,
+            "Q4 2029": 186.93154067046993,
+            "Upside": "2.7x",
+            "EV Upside": 174,
+            "Entry": 68,
+            "Total": 87
         }
     ]
 };

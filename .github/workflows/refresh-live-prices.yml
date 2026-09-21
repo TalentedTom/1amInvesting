@@ -48,6 +48,8 @@ on:
       - 'scripts/fetch_live.py'
       - 'scripts/fetch_yahoo.py'
       - 'scripts/score.py'
+      - 'scripts/synthetic_portfolios.py'
+      - 'synthetic_portfolios.json'
       - 'scripts/requirements.txt'
 
 permissions:

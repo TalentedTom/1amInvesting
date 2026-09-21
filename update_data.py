@@ -9,6 +9,7 @@ import time
 from pathlib import Path
 
 from deep_translator import GoogleTranslator
+from scripts.synthetic_portfolios import add_synthetic_rows
 
 # Fields populated by the cron pipeline that are NOT a function of any xlsx
 # field — preserve them across regens so they don't blank out during off-hours.
@@ -203,6 +204,8 @@ def main():
                     if v not in (None, ""):
                         row[k] = v
 
+        # Website-only ETF rows survive every Excel refresh; workbook untouched.
+        add_synthetic_rows(data_en, Path(OUTPUT_PATH))
         data_zh = []
 
         if args.cached_translations_only:
