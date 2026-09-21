@@ -654,7 +654,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -44
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.34,
@@ -913,7 +913,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "AVGO",
             "Name": "Broadcom Inc",
             "EV (Base% x Upside)": 1.39,
@@ -945,7 +945,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 38
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV (Base% x Upside)": 1.32,
@@ -1009,7 +1009,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -7
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "HPS-A.TO",
             "Name": "Hammond Power Solutions",
             "EV (Base% x Upside)": 1.24,
@@ -1042,7 +1042,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 26
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "3006.TW",
             "Name": "晶豪科技 ESMT",
             "EV (Base% x Upside)": 1.24,
@@ -1106,7 +1106,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 55
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "AEHR",
             "Name": "Aehr Test Systems",
             "EV (Base% x Upside)": 1.21,
@@ -1139,16 +1139,16 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 22
         },
         {
-            "Rank": 37,
+            "Rank": 27,
             "Ticker": "META",
             "Name": "Meta Platforms",
-            "EV (Base% x Upside)": 1.2,
-            "Base": 80,
+            "EV (Base% x Upside)": 1.49,
+            "Base": 99,
             "Port": "",
             "Current Price": 592.1,
             "Upside (Q3 2027)": 1.5,
             "Position Type": "AI platform / advertising\nCore ads fund frontier-model and infrastructure investment",
-            "Artifact Updated": "Jul 29 (new post-earnings deep dive)",
+            "Artifact Updated": "Jul 29 (new post-earnings deep dive). 2026-09-21: Excel Base 99 user override; artifact unchanged.",
             "SuperCycle": "AI, Digital Advertising, Agents",
             "Q3 2026": 746.2890625,
             "Q4 2026": 784.98046875,
@@ -1166,9 +1166,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1442.03125,
             "Q1 2030": 1516.9921875,
             "Entry": 21,
-            "Total": 56,
+            "Total": 68,
             "Upside": "1.5x",
-            "EV Upside": 23
+            "EV Upside": 53
         },
         {
             "Rank": 38,
@@ -1624,7 +1624,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "300223.SZ",
             "Name": "北京君正 Ingenic",
             "EV (Base% x Upside)": 1.24,
@@ -2402,7 +2402,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "1888.HK",
             "Name": "建滔積層板 Kingboard Laminates",
             "EV (Base% x Upside)": 1.3,
@@ -3625,7 +3625,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -11
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "SHLS",
             "Name": "Shoals Technologies Group",
             "EV (Base% x Upside)": 1.47,
@@ -3657,7 +3657,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 47
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "MITK",
             "Name": "Mitek Systems",
             "EV (Base% x Upside)": 1.31,
@@ -4472,7 +4472,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -44
         },
         {
-            "Rank": 29,
+            "Rank": 30,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV (Base% x Upside)": 1.34,
@@ -4731,7 +4731,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 28,
+            "Rank": 29,
             "Ticker": "AVGO",
             "Name": "博通公司",
             "EV (Base% x Upside)": 1.39,
@@ -4763,7 +4763,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 38
         },
         {
-            "Rank": 30,
+            "Rank": 31,
             "Ticker": "600363.SH",
             "Name": "联创光电 Lianchuang",
             "EV (Base% x Upside)": 1.32,
@@ -4827,7 +4827,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -7
         },
         {
-            "Rank": 33,
+            "Rank": 34,
             "Ticker": "HPS-A.TO",
             "Name": "哈蒙德电力解决方案",
             "EV (Base% x Upside)": 1.24,
@@ -4860,7 +4860,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 26
         },
         {
-            "Rank": 34,
+            "Rank": 35,
             "Ticker": "3006.TW",
             "Name": "晶豪科技 ESMT",
             "EV (Base% x Upside)": 1.24,
@@ -4924,7 +4924,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 55
         },
         {
-            "Rank": 36,
+            "Rank": 37,
             "Ticker": "AEHR",
             "Name": "空气测试系统",
             "EV (Base% x Upside)": 1.21,
@@ -4957,16 +4957,16 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 22
         },
         {
-            "Rank": 37,
+            "Rank": 27,
             "Ticker": "META",
             "Name": "元平台",
-            "EV (Base% x Upside)": 1.2,
-            "Base": 80,
+            "EV (Base% x Upside)": 1.49,
+            "Base": 99,
             "Port": "",
             "Current Price": 592.1,
             "Upside (Q3 2027)": 1.5,
             "Position Type": "AI平台/广告\n核心广告基金前沿模型和基础设施投资",
-            "Artifact Updated": "Jul 29 (new post-earnings deep dive)",
+            "Artifact Updated": "Jul 29 (new post-earnings deep dive). 2026-09-21: Excel Base 99 user override; artifact unchanged.",
             "SuperCycle": "AI, Digital Advertising, Agents",
             "Q3 2026": 746.2890625,
             "Q4 2026": 784.98046875,
@@ -4984,9 +4984,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1442.03125,
             "Q1 2030": 1516.9921875,
             "Entry": 21,
-            "Total": 56,
+            "Total": 68,
             "Upside": "1.5x",
-            "EV Upside": 23
+            "EV Upside": 53
         },
         {
             "Rank": 38,
@@ -5442,7 +5442,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 35,
+            "Rank": 36,
             "Ticker": "300223.SZ",
             "Name": "北京君正 Ingenic",
             "EV (Base% x Upside)": 1.24,
@@ -6220,7 +6220,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 32,
+            "Rank": 33,
             "Ticker": "1888.HK",
             "Name": "建滔积层板",
             "EV (Base% x Upside)": 1.3,
@@ -7443,7 +7443,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -11
         },
         {
-            "Rank": 27,
+            "Rank": 28,
             "Ticker": "SHLS",
             "Name": "Shoals Technologies Group",
             "EV (Base% x Upside)": 1.47,
@@ -7475,7 +7475,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 47
         },
         {
-            "Rank": 31,
+            "Rank": 32,
             "Ticker": "MITK",
             "Name": "Mitek Systems",
             "EV (Base% x Upside)": 1.31,

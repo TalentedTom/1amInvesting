@@ -247,6 +247,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // and live under fullData['zh-CN'] etc. — those don't go through here.
     const I18N = {
         'en': {
+            portfolio_news_label: "Portfolio update",
+            portfolio_news_title: "10 new stocks; Kioxia Base 90, META Base 99",
+            portfolio_news_date: "Posted 21 Sep 2026, 2:13 pm EDT",
+            portfolio_news_story: "Coverage has expanded from <strong>108 to 118 stocks</strong>, with quarterly forecasts added for the 10 companies below. Kioxia and META also have updated Base scores.",
+            portfolio_news_scores: "Base-score changes",
+            portfolio_news_score_basis: "Previous &rarr; Updated",
+            portfolio_news_kioxia: "Kioxia",
+            portfolio_news_meta: "Meta Platforms",
+            portfolio_news_added: "10 newly added stocks",
+            portfolio_news_note: "Scores shown are the values recorded for this announcement.",
             news_label: "News bulletin",
             news_title: "Higher NAND forecasts lift model ceilings",
             news_date: "Posted 20 Sep 2026, 10:52 pm EDT",
@@ -332,6 +342,16 @@ document.addEventListener('DOMContentLoaded', () => {
             live_label: 'Live',
         },
         'zh-CN': {
+            portfolio_news_label: "\u80a1\u7968\u8986\u76d6\u66f4\u65b0",
+            portfolio_news_title: "\u65b0\u589e10\u53ea\u80a1\u7968\uff1b\u94e0\u4fa0\u57fa\u7840\u520690\uff0cMETA\u57fa\u7840\u520699",
+            portfolio_news_date: "\u53d1\u5e03\uff1a2026\u5e749\u670821\u65e5 14:13 EDT",
+            portfolio_news_story: "\u80a1\u7968\u8986\u76d6\u8303\u56f4\u4ece <strong>108\u53ea\u6269\u5927\u81f3118\u53ea</strong>\uff0c\u4e0b\u65b910\u5bb6\u516c\u53f8\u5747\u5df2\u52a0\u5165\u5b63\u5ea6\u9884\u6d4b\u3002\u94e0\u4fa0\u548c META \u7684\u57fa\u7840\u5206\u4e5f\u5df2\u66f4\u65b0\u3002",
+            portfolio_news_scores: "\u57fa\u7840\u5206\u8c03\u6574",
+            portfolio_news_score_basis: "\u539f\u503c &rarr; \u66f4\u65b0\u503c",
+            portfolio_news_kioxia: "\u94e0\u4fa0",
+            portfolio_news_meta: "Meta Platforms",
+            portfolio_news_added: "\u65b0\u589e\u768410\u53ea\u80a1\u7968",
+            portfolio_news_note: "\u6b64\u5904\u5c55\u793a\u672c\u6b21\u516c\u544a\u53d1\u5e03\u65f6\u7684\u8bc4\u5206\u3002",
             news_label: "\u65b0\u95fb\u516c\u544a",
             news_title: "NAND \u4ef7\u683c\u9884\u6d4b\u4e0a\u8c03\uff0c\u63a8\u52a8\u6a21\u578b\u76ee\u6807\u4ef7\u4e0a\u5347",
             news_date: "\u53d1\u5e03\uff1a2026\u5e749\u670820\u65e5 22:52 EDT",
