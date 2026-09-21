@@ -247,6 +247,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // and live under fullData['zh-CN'] etc. — those don't go through here.
     const I18N = {
         'en': {
+            news_carousel_label: "News bulletins",
+            news_browse: "Swipe left or right to browse news",
+            news_previous: "Previous bulletin",
+            news_next: "Next bulletin",
+            news_pause: "Pause automatic rotation",
+            news_play: "Start automatic rotation",
+            news_collapse: "Collapse news",
+            news_expand: "Expand news",
+            news_position: "Bulletin {n} of {total}",
+            news_slide: "slide",
             portfolio_news_label: "Portfolio update",
             portfolio_news_title: "10 new stocks; Kioxia Base 90, META Base 99",
             portfolio_news_date: "Posted 21 Sep 2026, 2:13 pm EDT",
@@ -342,6 +352,16 @@ document.addEventListener('DOMContentLoaded', () => {
             live_label: 'Live',
         },
         'zh-CN': {
+            news_carousel_label: "\u65b0\u95fb\u516c\u544a",
+            news_browse: "\u5de6\u53f3\u6ed1\u52a8\u6d4f\u89c8\u65b0\u95fb",
+            news_previous: "\u4e0a\u4e00\u6761\u516c\u544a",
+            news_next: "\u4e0b\u4e00\u6761\u516c\u544a",
+            news_pause: "\u6682\u505c\u81ea\u52a8\u8f6e\u64ad",
+            news_play: "\u5f00\u59cb\u81ea\u52a8\u8f6e\u64ad",
+            news_collapse: "\u6536\u8d77\u65b0\u95fb",
+            news_expand: "\u5c55\u5f00\u65b0\u95fb",
+            news_position: "\u7b2c {n} \u6761\uff0c\u5171 {total} \u6761",
+            news_slide: "\u5e7b\u706f\u7247",
             portfolio_news_label: "\u80a1\u7968\u8986\u76d6\u66f4\u65b0",
             portfolio_news_title: "\u65b0\u589e10\u53ea\u80a1\u7968\uff1b\u94e0\u4fa0\u57fa\u7840\u520690\uff0cMETA\u57fa\u7840\u520699",
             portfolio_news_date: "\u53d1\u5e03\uff1a2026\u5e749\u670821\u65e5 14:13 EDT",
@@ -457,6 +477,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         document.documentElement.lang = currentLang === 'zh-CN' ? 'zh-CN' : 'en';
+        document.dispatchEvent(new Event('portfolio:languagechange'));
     }
     // Header label for a column. Looks up the English display name first
     // (handles 'Current Price' -> 'Price', etc.) then runs that through the
@@ -649,6 +670,142 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reflect persisted language on the active flag at startup.
     langBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-lang') === currentLang));
     applyChromeTranslations();
+
+    // One fixed-height news slot. Native horizontal scroll gives touch/trackpad
+    // browsing; the inner ceiling rail remains independently scrollable.
+    // Set up once, outside the portfolio's recurring live-data renders.
+    (() => {
+        const carousel = document.getElementById('news-carousel');
+        if (!carousel) return;
+        const viewport = document.getElementById('news-viewport');
+        const slides = Array.from(viewport.querySelectorAll('[data-news-slide]'));
+        const previous = document.getElementById('news-prev');
+        const next = document.getElementById('news-next');
+        const autoplay = document.getElementById('news-autoplay');
+        const collapse = document.getElementById('news-collapse');
+        const position = document.getElementById('news-position');
+        const announcement = document.getElementById('news-announcement');
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let index = 0;
+        let paused = false;
+        let hovered = false;
+        let touching = false;
+        let rotationTimer;
+        let settleTimer;
+        let lastWidth = 0;
+        let pendingAnnouncement = false;
+
+        function updateControls() {
+            position.textContent = (index + 1) + ' / ' + slides.length;
+            position.setAttribute('aria-label', tr('news_position', { n: index + 1, total: slides.length }));
+            previous.disabled = next.disabled = slides.length < 2 || viewport.hidden;
+            autoplay.disabled = slides.length < 2 || viewport.hidden;
+            autoplay.textContent = paused ? '\u25b6' : '\u23f8';
+            autoplay.setAttribute('aria-label', tr(paused ? 'news_play' : 'news_pause'));
+            autoplay.title = tr(paused ? 'news_play' : 'news_pause');
+            collapse.textContent = viewport.hidden ? '\u2304' : '\u2303';
+            collapse.setAttribute('aria-expanded', String(!viewport.hidden));
+            collapse.setAttribute('aria-label', tr(viewport.hidden ? 'news_expand' : 'news_collapse'));
+            collapse.title = tr(viewport.hidden ? 'news_expand' : 'news_collapse');
+            slides.forEach((slide, i) => {
+                slide.inert = i !== index;
+                slide.setAttribute('aria-hidden', String(i !== index));
+                slide.setAttribute('role', 'group');
+                slide.setAttribute('aria-roledescription', tr('news_slide'));
+                slide.setAttribute('aria-label', tr('news_position', { n: i + 1, total: slides.length }));
+            });
+        }
+
+        function scheduleRotation() {
+            clearTimeout(rotationTimer);
+            // Focus on the explicit Play control may resume rotation on mouseleave.
+            const focused = carousel.contains(document.activeElement) && document.activeElement !== autoplay;
+            if (paused || hovered || touching || focused || document.hidden || viewport.hidden || slides.length < 2) return;
+            rotationTimer = setTimeout(() => goTo(index + 1), 5000);
+        }
+
+        function goTo(target, manual = false) {
+            if (viewport.hidden || !slides.length) return;
+            index = (target + slides.length) % slides.length;
+            pendingAnnouncement = manual;
+            updateControls();
+            viewport.scrollTo({ left: index * viewport.clientWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+            scheduleRotation();
+        }
+
+        // Restart a full five seconds after the slide has settled, including
+        // manual swipes. The active index follows the actual scroll position.
+        viewport.addEventListener('scroll', () => {
+            clearTimeout(rotationTimer);
+            clearTimeout(settleTimer);
+            settleTimer = setTimeout(() => {
+                if (!viewport.clientWidth) return;
+                index = Math.max(0, Math.min(slides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
+                updateControls();
+                if (pendingAnnouncement) {
+                    announcement.textContent = tr('news_position', { n: index + 1, total: slides.length }) + ': ' +
+                        slides[index].querySelector('.news-title').textContent;
+                    pendingAnnouncement = false;
+                }
+                scheduleRotation();
+            }, 150);
+        });
+        previous.addEventListener('click', () => goTo(index - 1, true));
+        next.addEventListener('click', () => goTo(index + 1, true));
+        autoplay.addEventListener('click', () => {
+            paused = !paused;
+            updateControls();
+            scheduleRotation();
+        });
+        collapse.addEventListener('click', () => {
+            viewport.hidden = !viewport.hidden;
+            updateControls();
+            if (!viewport.hidden) viewport.scrollTo({ left: index * viewport.clientWidth, behavior: 'auto' });
+            scheduleRotation();
+        });
+        carousel.addEventListener('pointerenter', e => {
+            if (e.pointerType !== 'mouse') return;
+            hovered = true;
+            scheduleRotation();
+        });
+        carousel.addEventListener('pointerleave', e => {
+            if (e.pointerType !== 'mouse') return;
+            hovered = false;
+            scheduleRotation();
+        });
+        carousel.addEventListener('pointerdown', () => {
+            touching = true;
+            scheduleRotation();
+        });
+        const releasePointer = () => {
+            if (!touching) return;
+            touching = false;
+            scheduleRotation();
+        };
+        window.addEventListener('pointerup', releasePointer);
+        window.addEventListener('pointercancel', releasePointer);
+        carousel.addEventListener('focusin', scheduleRotation);
+        carousel.addEventListener('focusout', () => setTimeout(scheduleRotation, 0));
+        carousel.addEventListener('wheel', scheduleRotation, { passive: true });
+        carousel.addEventListener('keydown', e => {
+            // Arrow keys inside the NAND ceiling rail scroll its cards, not news.
+            if (e.target.closest('.news-ceilings') || viewport.hidden) return;
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                goTo(index + (e.key === 'ArrowLeft' ? -1 : 1), true);
+            }
+        });
+        document.addEventListener('visibilitychange', scheduleRotation);
+        document.addEventListener('portfolio:languagechange', updateControls);
+        new ResizeObserver(() => {
+            const width = viewport.clientWidth;
+            if (!width || width === lastWidth) return;
+            lastWidth = width;
+            viewport.scrollTo({ left: index * width, behavior: 'auto' });
+        }).observe(viewport);
+        updateControls();
+        scheduleRotation();
+    })();
 
     // Theme Toggle Listener — persists choice in localStorage.
     const themeBtns = document.querySelectorAll('.theme-btn');

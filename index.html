@@ -118,20 +118,31 @@
             </div>
         </header>
 
+        <section class="news-carousel" id="news-carousel" role="region" aria-roledescription="carousel" aria-label="News bulletins" data-i18n-attr="aria-label:news_carousel_label">
+            <div class="news-carousel-toolbar">
+                <span class="news-carousel-label" data-i18n="news_carousel_label">News bulletins</span>
+                <div class="news-carousel-controls">
+                    <button type="button" id="news-prev" aria-controls="news-viewport" aria-label="Previous bulletin" data-i18n-attr="aria-label:news_previous,title:news_previous">&lsaquo;</button>
+                    <span id="news-position">1 / 2</span>
+                    <button type="button" id="news-next" aria-controls="news-viewport" aria-label="Next bulletin" data-i18n-attr="aria-label:news_next,title:news_next">&rsaquo;</button>
+                    <button type="button" id="news-autoplay" aria-label="Pause automatic rotation" title="Pause automatic rotation">&#9208;</button>
+                    <button type="button" id="news-collapse" aria-controls="news-viewport" aria-expanded="true" aria-label="Collapse news" title="Collapse news">&#8963;</button>
+                </div>
+            </div>
+            <div class="news-viewport" id="news-viewport" tabindex="0" aria-label="Swipe left or right to browse news" data-i18n-attr="aria-label:news_browse">
         <!-- Bulletin ceilings are a dated 20x model snapshot, not live-price upside.
              Original Q3 2027 ceilings: 1189e8b:data.js. Corrected ceilings:
              canonical master workbook recalculated on 21 Sep 2026.
              Keep this history unchanged when prices or valuation multiples move. -->
-        <details class="news-bulletin" open>
-            <summary class="news-summary">
+        <article class="news-bulletin" id="nand-news" data-news-slide>
+            <header class="news-summary">
                 <span class="news-label" data-i18n="news_label">News bulletin</span>
                 <span class="news-title" data-i18n="news_title">Higher NAND forecasts lift model ceilings</span>
                 <span class="news-timestamps">
                     <time datetime="2026-09-20T22:52:00-04:00" data-i18n="news_date" title="Toronto time (UTC-04:00)">Posted 20 Sep 2026, 10:52 pm EDT</time>
                     <time datetime="2026-09-21T00:38:00-04:00" data-i18n="news_updated" title="Toronto time (UTC-04:00)">Updated 21 Sep 2026, 12:38 am EDT</time>
                 </span>
-                <span class="news-chevron" aria-hidden="true"></span>
-            </summary>
+            </header>
             <div class="news-content">
                 <p class="news-story" data-i18n="news_story">TrendForce has updated its NAND price forecast. <strong>3Q26 up 18&ndash;23%</strong> (vs up 10&ndash;15% prior); <strong>4Q26 up 15&ndash;20%</strong> (vs up 0&ndash;5% prior). These higher NAND forecasts drive the increases in our model ceilings below.</p>
                 <div class="news-ceilings-heading">
@@ -169,24 +180,21 @@
                 <p class="news-scroll-hint" data-i18n="news_scroll">Swipe or scroll to see all five companies &rarr;</p>
                 <p class="news-note" data-i18n="news_note">Ceilings corrected after model recalculation. Percentages compare with the original pre-news ceilings, not live prices. Fixed at 20&times;.</p>
             </div>
-        </details>
+        </article>
 
-
-        <!-- Keep NAND first and expanded. This dated announcement is secondary,
-             with a compact headline until the visitor opens it.
+        <!-- Keep NAND as the first carousel slide. New announcements go after it.
              New-stock cohort: 795f977 -> 262193e. Base-score baseline: 795f977. -->
-        <details class="news-bulletin news-secondary" id="portfolio-news">
-            <summary class="news-summary">
+        <article class="news-bulletin news-secondary" id="portfolio-news" data-news-slide>
+            <header class="news-summary">
                 <span class="news-label" data-i18n="portfolio_news_label">Portfolio update</span>
                 <span class="news-title" data-i18n="portfolio_news_title">10 new stocks; Kioxia Base 90, META Base 99</span>
                 <span class="news-timestamps">
                     <time datetime="2026-09-21T14:13:00-04:00" data-i18n="portfolio_news_date" title="Toronto time (UTC-04:00)">Posted 21 Sep 2026, 2:13 pm EDT</time>
                 </span>
-                <span class="news-chevron" aria-hidden="true"></span>
-            </summary>
+            </header>
             <div class="news-content">
                 <p class="news-story" data-i18n="portfolio_news_story">Coverage has expanded from <strong>108 to 118 stocks</strong>, with quarterly forecasts added for the 10 companies below. Kioxia and META also have updated Base scores.</p>
-                <div class="news-ceilings-heading">
+                <div class="news-ceilings-heading news-base-heading">
                     <h2 data-i18n="portfolio_news_scores">Base-score changes</h2>
                     <span data-i18n="portfolio_news_score_basis">Previous &rarr; Updated</span>
                 </div>
@@ -202,7 +210,7 @@
                         <p class="news-values"><span>80</span><span class="news-arrow" aria-hidden="true">&rarr;</span><strong>99</strong></p>
                     </article>
                 </div>
-                <div class="news-ceilings-heading">
+                <div class="news-ceilings-heading news-added-heading">
                     <h2 data-i18n="portfolio_news_added">10 newly added stocks</h2>
                 </div>
                 <ul class="news-stock-list">
@@ -219,7 +227,10 @@
                 </ul>
                 <p class="news-note" data-i18n="portfolio_news_note">Scores shown are the values recorded for this announcement.</p>
             </div>
-        </details>
+        </article>
+            </div>
+            <span class="news-announcement" id="news-announcement" role="status" aria-live="polite"></span>
+        </section>
 
         <section class="position-filter-bar">
             <div class="position-toggle" id="position-toggle" role="group" aria-label="Position type filter">
