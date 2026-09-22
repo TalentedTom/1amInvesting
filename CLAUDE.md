@@ -227,19 +227,31 @@ don't rebind it per render.
 ## Portfolio Simulator
 
 - `portfolio-simulator.js` / `.css`: standalone native dialog opened by the
-  Portfolio Simulator button beside the filter bar. Inputs are starting
-  amount, display currency, tickers, percentage weights and 20x/25x/30x.
-- Calculates each quarter independently as `amount * (cashWeight +
-  sum(stockWeight * multiple/20 * target/currentPrice))`. No quarterly
-  compounding, rebalancing, Base adjustment or currency mixing. FX is held
-  constant; currency changes denomination only. Unallocated cash returns 0%.
-- More than 100%, negative/non-numeric weights and duplicate tickers are
-  rejected. Missing targets leave that quarter blank, never reweighted.
+  Portfolio Simulator button beside the filter bar. Inputs are own capital,
+  portfolio currency, tickers, weights OR shares, 20x/25x/30x and margin APR.
+- Allocations over 100% are allowed. Initial invested value is either
+  `capital * weight/100` or `shares * native price * quote-to-portfolio FX`.
+  Cash is max(capital - invested, 0); debt is max(invested - capital, 0).
+  Each quarter's net equity is `cash + sum(initial position value *
+  multiple/20 * target/currentPrice) - debt - margin interest`.
+  Debt stays fixed within a projection. Interest is simple APR to quarter
+  end, actual days / 365; default 0% is explicitly disclosed when borrowing.
+  Negative equity is allowed. No margin calls or forced liquidation modeled.
+- Share mode infers quote units from price prefixes/ticker exchanges, allows
+  correction and REQUIRES user-entered FX for foreign holdings. Same currency
+  is 1; GBp to GBP is 0.01. Rates are saved per holding/base currency and held
+  constant for projections. No automatic FX feed. Changing currency reinterprets
+  own capital; switching input modes converts quantities where price/FX exist.
+- No quarterly compounding, rebalancing or Base adjustment. Unallocated cash
+  returns 0%. Negative/non-numeric inputs and duplicate tickers are rejected.
+  Missing targets leave that quarter blank, never reweighted. Equal weights
+  preserves the existing total allocation, including leveraged allocations.
 - Includes all portfolio tickers (even filtered-out stocks), including DRAM
   with its freshly recomputed unscaled targets. It never modifies data.js.
 - `portfolio-prices-updated` event refreshes results and SVG chart without
   disturbing input focus. No added polling or external calls.
-- Persists only visitor settings under localStorage `portfolioSimulator_v1`;
+- Persists visitor settings (including mode, share counts, FX and APR) under
+  localStorage `portfolioSimulator_v1`; old weight-only settings still load;
   no account, server storage or cross-device synchronization.
 - Test math with `node --test tests/portfolio-simulator.test.js`; verify
   desktop/mobile dialog, local persistence, light/dark and English/Chinese.

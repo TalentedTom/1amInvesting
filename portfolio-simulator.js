@@ -1,7 +1,7 @@
 /* Browser-only what-if portfolio; nothing is sent to a server or written to Excel. */
 (function (root) {
     const STORAGE_KEY = 'portfolioSimulator_v1';
-    const CURRENCIES = ['USD', 'CAD', 'EUR', 'GBP', 'CNY', 'HKD', 'TWD', 'KRW', 'JPY', 'AUD'];
+    const CURRENCIES = ['USD', 'CAD', 'EUR', 'GBP', 'CNY', 'HKD', 'TWD', 'KRW', 'JPY', 'AUD', 'SEK', 'CHF', 'DKK'];
     function marketNumber(value) {
         if (value == null || value === '') return NaN;
         const text = String(value).replace(/\bGBp\b|\b[A-Z]{3}\b/g, '')
@@ -12,6 +12,34 @@
     }
     function inputNumber(value) { return value === '' || value == null ? NaN : Number(value); }
 
+    function quoteCurrency(row) {
+        const price = String(row?.['Current Price'] ?? '');
+        if (/\bGBp\b/.test(price)) return 'GBp';
+        const explicit = price.match(/\b(USD|CAD|EUR|GBP|CNY|HKD|TWD|KRW|JPY|AUD|SEK|CHF|DKK)\b/);
+        if (explicit) return explicit[1];
+        const ticker = row?.Ticker || '';
+        if (['XFAB', 'ALRIB'].includes(ticker)) return 'EUR';
+        if (ticker === 'NKT') return 'DKK';
+        const suffix = ticker.includes('.') ? ticker.split('.').at(-1) : '';
+        return ({'': 'USD', TW: 'TWD', TWO: 'TWD', KS: 'KRW', KQ: 'KRW', SH: 'CNY', SS: 'CNY', SSE: 'CNY', SZ: 'CNY', SZSE: 'CNY',
+            HK: 'HKD', T: 'JPY', L: 'GBp', DE: 'EUR', PA: 'EUR', AS: 'EUR', SW: 'CHF', ST: 'SEK', CO: 'DKK', AX: 'AUD', TO: 'CAD', V: 'CAD'})[suffix] || '';
+    }
+    function fxRate(holding, row, currency) {
+        const unit = holding.quoteCurrency || quoteCurrency(row);
+        if (unit === currency) return 1;
+        if (unit === 'GBp' && currency === 'GBP') return .01;
+        if (!unit) return NaN;
+        return inputNumber(holding.fx?.[currency]); // Base-currency units per ONE quote unit.
+    }
+    function quarterYears(quarter, asOf = Date.now()) {
+        const match = /^Q([1-4]) (20\d{2})$/.exec(quarter);
+        const date = new Date(asOf);
+        if (!match || !Number.isFinite(date.getTime())) return NaN;
+        const start = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+        const end = Date.UTC(Number(match[2]), Number(match[1]) * 3, 0);
+        return Math.max(0, (end - start) / (365 * 86400000));
+    }
+
     // Buy-and-hold model: initial capital allocations, no quarterly compounding
     // or rebalancing. Native-currency target/price ratios cancel the units.
     function project(state, rows, quarters, parse = marketNumber) {
@@ -19,47 +47,87 @@
         if (!Number.isFinite(amount) || amount <= 0) return {error: 'amount'};
         if (![20, 25, 30].includes(multiple)) return {error: 'multiple'};
         if (!Array.isArray(state.holdings) || !state.holdings.length) return {error: 'empty'};
-        const holdings = state.holdings.map(h => ({ticker: String(h.ticker || '').trim(), weight: inputNumber(h.weight)}));
-        if (holdings.some(h => !h.ticker || !Number.isFinite(h.weight) || h.weight < 0 || h.weight > 100)) return {error: 'weights'};
+        const mode = state.mode === 'shares' ? 'shares' : 'weights';
+        const rate = inputNumber(state.marginRate ?? 0);
+        if (!Number.isFinite(rate) || rate < 0) return {error: 'rate'};
+        const holdings = state.holdings.map(h => ({...h, ticker: String(h.ticker || '').trim(), weight: inputNumber(h.weight), shares: inputNumber(h.shares)}));
+        const field = mode === 'shares' ? 'shares' : 'weight';
+        if (holdings.some(h => !h.ticker || !Number.isFinite(h[field]) || h[field] < 0)) return {error: mode === 'shares' ? 'shares' : 'weights'};
         if (new Set(holdings.map(h => h.ticker)).size !== holdings.length) return {error: 'duplicate'};
-        const total = holdings.reduce((sum, h) => sum + h.weight, 0);
-        if (total > 100 + 1e-8) return {error: 'overweight', total};
-        const cash = Math.max(0, 100 - total), lookup = new Map(rows.map(r => [r.Ticker, r]));
+        const lookup = new Map(rows.map(r => [r.Ticker, r]));
+        const positions = [], invalid = [];
+        for (const h of holdings) {
+            const row = lookup.get(h.ticker), price = parse(row?.['Current Price']);
+            const fx = mode === 'shares' ? fxRate(h, row, state.currency || 'USD') : 1;
+            if (mode === 'shares' && h.shares > 0 && (!Number.isFinite(price) || price <= 0)) invalid.push(h.ticker);
+            if (mode === 'shares' && h.shares > 0 && (!Number.isFinite(fx) || fx <= 0)) return {error: 'fx', ticker: h.ticker};
+            const cost = mode === 'shares' ? h.shares === 0 ? 0 : h.shares * price * fx : amount * h.weight / 100;
+            positions.push({...h, price, fx, cost});
+        }
+        if (invalid.length) return {error: 'price', tickers: invalid};
+        const invested = positions.reduce((sum, h) => sum + h.cost, 0);
+        if (!Number.isFinite(invested)) return {error: 'weights'};
+        const total = invested / amount * 100, cashValue = Math.max(0, amount - invested);
+        const borrowed = Math.max(0, invested - amount), cash = cashValue / amount * 100;
         const points = quarters.map(quarter => {
-            let ratio = cash / 100;
+            let gross = cashValue;
             const missing = [];
-            for (const h of holdings) {
-                if (h.weight === 0) continue;
-                const row = lookup.get(h.ticker), price = parse(row && row['Current Price']);
+            for (const h of positions) {
+                if (h.cost === 0) continue;
+                const row = lookup.get(h.ticker), price = h.price;
                 const target = parse(row && row[quarter]);
                 if (!Number.isFinite(price) || price <= 0 || !Number.isFinite(target) || target < 0) {
                     missing.push(h.ticker);
                     continue;
                 }
-                ratio += h.weight / 100 * (multiple / 20) * target / price;
+                gross += h.cost * (multiple / 20) * target / price;
             }
-            const value = amount * ratio;
+            const interest = borrowed * rate / 100 * quarterYears(quarter, state.asOf);
+            const value = gross - borrowed - interest;
             if (!Number.isFinite(value)) missing.push('overflow');
             return {quarter, value: missing.length ? null : value,
                 gain: missing.length ? null : value - amount,
-                pct: missing.length ? null : (ratio - 1) * 100, missing};
+                pct: missing.length ? null : (value / amount - 1) * 100,
+                gross: missing.length ? null : gross, interest, missing};
         });
-        return {amount, total, cash, points};
+        return {amount, total, cash, cashValue, invested, borrowed, leverage: invested / amount, points};
+    }
+
+    function switchMode(state, mode, rows, parse = marketNumber) {
+        if (mode === state.mode) return;
+        const lookup = new Map(rows.map(r => [r.Ticker, r]));
+        for (const h of state.holdings) {
+            const row = lookup.get(h.ticker), price = parse(row?.['Current Price']);
+            const fx = fxRate(h, row, state.currency || 'USD'), amount = inputNumber(state.amount);
+            const source = inputNumber(mode === 'shares' ? h.weight : h.shares);
+            const valid = Number.isFinite(source) && source >= 0 && Number.isFinite(price) && price > 0
+                && Number.isFinite(fx) && fx > 0 && Number.isFinite(amount) && amount > 0;
+            const value = source === 0 ? 0 : !valid ? NaN
+                : mode === 'shares' ? amount * source / 100 / price / fx : source * price * fx / amount * 100;
+            h[mode === 'shares' ? 'shares' : 'weight'] = Number.isFinite(value) ? String(+value.toFixed(8)) : '';
+        }
+        state.mode = mode;
     }
 
     const EN = {
         title: 'Portfolio Simulator', subtitle: 'Build a portfolio. Explore its quarterly potential.', close: 'Close simulator',
-        amount: 'Starting amount', currency: 'Display currency', multiple: 'Valuation multiple',
+        amount: 'Own capital (before borrowing)', currency: 'Portfolio currency', multiple: 'Valuation multiple',
+        mode: 'Enter allocations as', weights: 'Weights (%)', shares: 'Shares', marginRate: 'Annual margin rate (%)',
+        borrowed: 'Borrowed', invested: 'Invested', leverage: 'Exposure', interest: 'Interest', quoteUnit: 'Quote unit',
+        fx: 'FX rate', sharesError: 'Enter a non-negative share count for each stock.',
+        fxError: 'Enter a positive FX rate for each foreign holding (portfolio currency per 1 quote unit).',
+        rateError: 'Enter a non-negative annual margin rate.', priceError: 'A current price is needed to value these shares.',
+        zeroRate: '0% margin rate selected: borrowing costs are not included.',
         picker: 'Add a stock', placeholder: 'Type a ticker or company name', add: 'Add stock', equal: 'Equal weights',
         remove: 'Remove', weight: 'Weight (%)', allocation: 'Allocated', cash: 'Cash',
         saved: 'Saved on this browser only. No account needed.', unsaved: 'Browser storage is unavailable; this setup will not survive a reload.',
-        empty: 'Add stocks and set their weights to see a projection.', amountError: 'Enter a positive starting amount.',
-        weightError: 'Each weight must be a number from 0 to 100%.', overError: 'Weights exceed 100%. Reduce an allocation to continue.',
+        empty: 'Add stocks and enter weights or share counts to see a projection.', amountError: 'Enter a positive starting amount.',
+        weightError: 'Weights must be non-negative numbers. Above 100% is allowed using margin.',
         duplicate: 'That stock is already in your portfolio.', unknown: 'Choose a ticker or company from the suggestions.',
         missing: 'Some forecasts are unavailable. Incomplete quarters are left blank, not reweighted.',
-        unavailable: 'Unavailable', now: 'Today', starting: 'Starting value', oneYear: "Q3'27 projection", last: 'Final-quarter projection',
-        chart: 'Projected portfolio value', quarter: 'Quarter', value: 'Portfolio value', gain: 'Gain / loss', return: 'Return',
-        note: 'Model projections, not guaranteed returns or historical performance. Uses the latest available site prices and quarterly targets, not Base-adjusted EV scores. No rebalancing or compounding between quarter targets. Unallocated cash earns 0%. FX rates are held constant; changing display currency only changes the denomination. Taxes, dividends, fees and trading costs are excluded.'
+        unavailable: 'Unavailable', now: 'Today', starting: 'Starting equity', oneYear: "Q3'27 equity", last: 'Final-quarter equity',
+        chart: 'Projected equity after debt and interest', quarter: 'Quarter', value: 'Net equity', gain: 'Gain / loss', return: 'Return',
+        note: 'A buy-today model, not guaranteed returns or historical performance. Equity = projected assets + cash - borrowed principal - interest. Borrowing stays fixed for each projection; interest is simple annual interest to quarter end (actual days / 365). No rebalancing, margin calls or forced liquidation are simulated; equity can be negative. Prices refresh from the site. Share quantities require quote-to-portfolio FX rates, held constant into the future. Changing portfolio currency reinterprets the capital amount. Unallocated cash earns 0%. Taxes, dividends, fees and trading costs are excluded.'
     };
     const ZH = {
         title: '\u6295\u8d44\u7ec4\u5408\u6a21\u62df\u5668', subtitle: '\u9009\u62e9\u80a1\u7968\u4e0e\u6743\u91cd\uff0c\u67e5\u770b\u5b63\u5ea6\u9884\u6d4b\u3002', close: '\u5173\u95ed\u6a21\u62df\u5668',
@@ -76,6 +144,20 @@
         note: '\u6a21\u578b\u9884\u6d4b\u5e76\u975e\u4fdd\u8bc1\u6536\u76ca\u6216\u5386\u53f2\u8868\u73b0\u3002\u4f7f\u7528\u672c\u7ad9\u6700\u65b0\u53ef\u7528\u4ef7\u683c\u548c\u5b63\u5ea6\u76ee\u6807\uff0c\u975e Base \u8c03\u6574\u540e\u7684 EV \u8bc4\u5206\u3002\u4e0d\u8c03\u4ed3\uff0c\u4e0d\u5c06\u5404\u5b63\u5ea6\u76ee\u6807\u590d\u5229\u53e0\u52a0\u3002\u672a\u5206\u914d\u73b0\u91d1\u6536\u76ca\u4e3a\u96f6\u3002\u5047\u8bbe\u6c47\u7387\u4e0d\u53d8\uff1b\u663e\u793a\u8d27\u5e01\u4ec5\u6539\u53d8\u8ba1\u4ef7\u5355\u4f4d\u3002\u4e0d\u542b\u7a0e\u3001\u80a1\u606f\u3001\u8d39\u7528\u548c\u4ea4\u6613\u6210\u672c\u3002'
     };
 
+    Object.assign(ZH, {
+        amount: '\u81ea\u6709\u672c\u91d1\uff08\u4e0d\u542b\u501f\u6b3e\uff09', currency: '\u7ec4\u5408\u5e01\u79cd',
+        mode: '\u8f93\u5165\u65b9\u5f0f', weights: '\u6743\u91cd (%)', shares: '\u80a1\u6570', marginRate: '\u878d\u8d44\u5e74\u5229\u7387 (%)',
+        borrowed: '\u501f\u6b3e', invested: '\u5df2\u6295\u8d44', leverage: '\u655e\u53e3', interest: '\u5229\u606f', quoteUnit: '\u62a5\u4ef7\u5355\u4f4d', fx: '\u6c47\u7387',
+        sharesError: '\u8bf7\u4e3a\u6bcf\u53ea\u80a1\u7968\u8f93\u5165\u975e\u8d1f\u80a1\u6570\u3002',
+        fxError: '\u8bf7\u4e3a\u5916\u5e01\u6301\u4ed3\u586b\u5199\u6b63\u6c47\u7387\uff08\u6bcf1\u62a5\u4ef7\u5355\u4f4d\u5bf9\u5e94\u7684\u7ec4\u5408\u5e01\u79cd\u91d1\u989d\uff09\u3002',
+        rateError: '\u8bf7\u8f93\u5165\u975e\u8d1f\u7684\u878d\u8d44\u5e74\u5229\u7387\u3002', priceError: '\u8ba1\u7b97\u80a1\u6570\u9700\u8981\u5f53\u524d\u4ef7\u683c\u3002',
+        zeroRate: '\u5f53\u524d\u878d\u8d44\u5229\u7387\u4e3a0%\uff0c\u672a\u8ba1\u5165\u501f\u6b3e\u6210\u672c\u3002',
+        weightError: '\u6743\u91cd\u5fc5\u987b\u4e3a\u975e\u8d1f\u6570\uff1b\u5141\u8bb8\u901a\u8fc7\u878d\u8d44\u8d85\u8fc7100%\u3002',
+        starting: '\u521d\u59cb\u51c0\u503c', oneYear: "Q3'27 \u51c0\u503c", last: '\u6700\u540e\u5b63\u5ea6\u51c0\u503c',
+        chart: '\u6263\u9664\u501f\u6b3e\u53ca\u5229\u606f\u540e\u7684\u51c0\u503c\u9884\u6d4b', value: '\u51c0\u503c',
+        note: '\u5047\u8bbe\u4eca\u5929\u4e70\u5165\uff0c\u975e\u4fdd\u8bc1\u6536\u76ca\u6216\u5386\u53f2\u8868\u73b0\u3002\u51c0\u503c=\u9884\u6d4b\u8d44\u4ea7+\u73b0\u91d1-\u501f\u6b3e\u672c\u91d1-\u5229\u606f\u3002\u501f\u6b3e\u5728\u6bcf\u6b21\u9884\u6d4b\u4e2d\u4fdd\u6301\u4e0d\u53d8\uff0c\u4ee5\u5b9e\u9645\u5929\u6570/365\u8ba1\u7b97\u81f3\u5b63\u672b\u7684\u5e74\u5355\u5229\u3002\u4e0d\u6a21\u62df\u8c03\u4ed3\u3001\u8ffd\u52a0\u4fdd\u8bc1\u91d1\u6216\u5f3a\u5236\u5e73\u4ed3\uff1b\u51c0\u503c\u53ef\u4e3a\u8d1f\u3002\u80a1\u6570\u6a21\u5f0f\u9700\u8981\u62a5\u4ef7\u5e01\u79cd\u81f3\u7ec4\u5408\u5e01\u79cd\u7684\u6c47\u7387\uff0c\u9884\u6d4b\u671f\u95f4\u6c47\u7387\u4e0d\u53d8\u3002\u73b0\u91d1\u6536\u76ca\u4e3a\u96f6\uff0c\u4e0d\u542b\u7a0e\u3001\u80a1\u606f\u53ca\u4ea4\u6613\u8d39\u7528\u3002'
+    });
+
     function init(options) {
         const opener = document.getElementById('portfolio-simulator-btn');
         if (!opener) return;
@@ -84,7 +166,7 @@
         dialog.className = 'sim-dialog';
         dialog.setAttribute('aria-labelledby', 'sim-title');
         document.body.appendChild(dialog);
-        let state = {version: 1, amount: '10000', currency: 'USD', multiple: options.getMultiple(), holdings: []};
+        let state = {version: 1, amount: '10000', currency: 'USD', multiple: options.getMultiple(), mode: 'weights', marginRate: '0', holdings: []};
         let copy = EN, previousOverflow = '', canSave = true, currentRows = [];
         try {
             const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -92,8 +174,11 @@
                 state = {version: 1, amount: String(saved.amount ?? '10000'),
                     currency: CURRENCIES.includes(saved.currency) ? saved.currency : 'USD',
                     multiple: [20, 25, 30].includes(Number(saved.multiple)) ? Number(saved.multiple) : 20,
+                    mode: saved.mode === 'shares' ? 'shares' : 'weights', marginRate: String(saved.marginRate ?? '0'),
                     holdings: saved.holdings.slice(0, 250).filter(h => h && typeof h.ticker === 'string')
-                        .map(h => ({ticker: h.ticker, weight: String(h.weight ?? '')}))};
+                        .map(h => ({ticker: h.ticker, weight: String(h.weight ?? ''), shares: String(h.shares ?? ''),
+                            quoteCurrency: [...CURRENCIES, 'GBp'].includes(h.quoteCurrency) ? h.quoteCurrency : '',
+                            fx: h.fx && typeof h.fx === 'object' && !Array.isArray(h.fx) ? h.fx : {}}))};
             }
         } catch (_) { /* Corrupt/blocked storage must not break the dashboard. */ }
         const el = id => dialog.querySelector('#' + id);
@@ -121,16 +206,37 @@
                 const item = node('li', null, list, 'sim-holding');
                 const name = node('div', row ? options.getName(row) : copy.unavailable, item, 'sim-stock-name');
                 node('small', holding.ticker, name);
-                const label = node('label', copy.weight, item, 'sim-weight-label');
+                const unit = holding.quoteCurrency || quoteCurrency(row);
+                if (state.mode === 'shares') node('small', '', name).dataset.priceIndex = index;
+                const label = node('label', state.mode === 'shares' ? copy.shares : copy.weight, item, 'sim-weight-label');
                 const weight = node('input', null, label);
-                Object.assign(weight, {type: 'number', min: '0', max: '100', step: '0.01', inputMode: 'decimal', value: holding.weight});
+                Object.assign(weight, {type: 'number', min: '0', step: 'any', inputMode: 'decimal', value: state.mode === 'shares' ? holding.shares ?? '' : holding.weight});
                 weight.dataset.weightIndex = index;
-                weight.setAttribute('aria-label', `${holding.ticker} ${copy.weight}`);
+                weight.setAttribute('aria-label', `${holding.ticker} ${state.mode === 'shares' ? copy.shares : copy.weight}`);
                 const remove = node('button', '\u00d7', item, 'sim-remove');
                 remove.type = 'button'; remove.dataset.removeIndex = index;
                 remove.setAttribute('aria-label', `${copy.remove} ${holding.ticker}`);
+                if (state.mode === 'shares') {
+                    const fxBox = node('div', null, item, 'sim-fx-row');
+                    const unitLabel = node('label', copy.quoteUnit, fxBox);
+                    const unitSelect = node('select', null, unitLabel);
+                    const unknown = node('option', copy.unavailable, unitSelect); unknown.value = '';
+                    for (const currency of [...CURRENCIES, 'GBp']) {
+                        const option = node('option', currency === 'GBp' ? 'GBp (pence)' : currency, unitSelect); option.value = currency;
+                    }
+                    unitSelect.value = unit; unitSelect.dataset.quoteIndex = index;
+                    unitSelect.setAttribute('aria-label', `${holding.ticker} ${copy.quoteUnit}`);
+                    const fxLabel = node('label', `1 ${unit || '?'} = ${state.currency}`, fxBox);
+                    const fxInput = node('input', null, fxLabel);
+                    const same = unit === state.currency || (unit === 'GBp' && state.currency === 'GBP');
+                    Object.assign(fxInput, {type: 'number', min: '0', step: 'any', inputMode: 'decimal',
+                        value: same ? fxRate(holding, row, state.currency) : holding.fx?.[state.currency] ?? '', readOnly: same});
+                    fxInput.dataset.fxIndex = index;
+                    fxInput.setAttribute('aria-label', `${holding.ticker} ${copy.fx}: 1 ${unit} in ${state.currency}`);
+                }
             });
             el('sim-equal').disabled = state.holdings.length === 0;
+            el('sim-equal').hidden = state.mode === 'shares';
         }
         function renderChart(result) {
             const chart = el('sim-chart'); chart.replaceChildren();
@@ -138,7 +244,7 @@
             const values = points.filter(p => p.value !== null).map(p => p.value);
             const low = Math.min(...values), high = Math.max(...values);
             const pad = Math.max((high - low) * .1, high * .04, 1);
-            const min = Math.max(0, low - pad), max = high + pad;
+            const min = low < 0 ? low - pad : Math.max(0, low - pad), max = high + pad;
             const width = chart.clientWidth > 500 ? 720 : 400, height = 250;
             const left = 70, right = width - 18, top = 20, bottom = 208;
             const x = i => left + i / (points.length - 1) * (right - left);
@@ -160,6 +266,7 @@
                     new Intl.NumberFormat('en-US', {notation: 'compact', maximumFractionDigits: 1}).format(value));
             }
             shape('line', {x1: left, x2: right, y1: y(result.amount), y2: y(result.amount), class: 'sim-baseline'});
+            if (min < 0) shape('line', {x1: left, x2: right, y1: y(0), y2: y(0), class: 'sim-zero-line'});
             let path = '', previousValid = false;
             points.forEach((p, i) => {
                 if (p.value === null) { previousValid = false; return; }
@@ -180,14 +287,22 @@
         }
         function renderResults() {
             currentRows = options.getRows();
+            dialog.querySelectorAll('[data-price-index]').forEach(label => {
+                const h = state.holdings[Number(label.dataset.priceIndex)];
+                const row = currentRows.find(r => r.Ticker === h.ticker);
+                const price = options.parseNumber(row?.['Current Price']);
+                label.textContent = `${Number.isFinite(price) ? price : '\u2014'} ${h.quoteCurrency || quoteCurrency(row)}`;
+            });
             const result = project(state, currentRows, options.quarters, options.parseNumber);
-            const total = state.holdings.reduce((sum, h) => sum + (Number(h.weight) || 0), 0);
-            el('sim-allocation').textContent = `${copy.allocation}: ${+total.toFixed(2)}% / 100% \u00b7 ${copy.cash}: ${+Math.max(0, 100 - total).toFixed(2)}%`;
-            el('sim-allocation').classList.toggle('sim-error', total > 100 + 1e-8);
+            el('sim-allocation').textContent = result.error ? ''
+                : `${copy.allocation}: ${+result.total.toFixed(2)}% (${result.leverage.toFixed(2)}x) \u00b7 ${copy.invested}: ${money(result.invested)} \u00b7 ${copy.cash}: ${money(result.cashValue)} \u00b7 ${copy.borrowed}: ${money(result.borrowed)}`;
+            el('sim-allocation').classList.toggle('sim-margin', result.borrowed > 0);
             const messages = {amount: copy.amountError, empty: copy.empty, weights: copy.weightError,
-                overweight: copy.overError, duplicate: copy.duplicate, multiple: copy.weightError};
+                shares: copy.sharesError, fx: copy.fxError, rate: copy.rateError, price: copy.priceError,
+                duplicate: copy.duplicate, multiple: copy.weightError};
             el('sim-status').textContent = result.error ? messages[result.error]
-                : result.points.some(p => p.value === null) ? copy.missing : '';
+                : result.points.some(p => p.value === null) ? copy.missing
+                : result.borrowed > 0 && Number(state.marginRate) === 0 ? copy.zeroRate : '';
             el('sim-results').hidden = !!result.error;
             if (result.error) return;
             const summary = el('sim-summary'); summary.replaceChildren();
@@ -206,6 +321,7 @@
                 node('td', point.value === null ? '\u2014' : money(point.value), row);
                 node('td', point.gain === null ? '\u2014' : money(point.gain), row);
                 node('td', point.pct === null ? '\u2014' : percent(point.pct), row, point.pct >= 0 ? 'sim-positive' : 'sim-negative');
+                node('td', money(point.interest), row);
                 if (point.missing.length) row.title = `${copy.unavailable}: ${point.missing.join(', ')}`;
             });
         }
@@ -215,7 +331,7 @@
             if (!found) { el('sim-picker-status').textContent = copy.unknown; return; }
             if (state.holdings.some(h => h.ticker === found.Ticker)) { el('sim-picker-status').textContent = copy.duplicate; return; }
             const total = state.holdings.reduce((sum, h) => sum + (Number(h.weight) || 0), 0);
-            state.holdings.push({ticker: found.Ticker, weight: String(+Math.max(0, 100 - total).toFixed(2))});
+            state.holdings.push({ticker: found.Ticker, weight: String(+Math.max(0, 100 - total).toFixed(2)), shares: '0', fx: {}});
             input.value = ''; el('sim-picker-status').textContent = '';
             renderHoldings(); renderResults(); save(); input.focus();
         }
@@ -228,13 +344,16 @@
                 <div class="sim-body"><div class="sim-controls">
                 <label>${copy.amount}<input id="sim-amount" type="number" min="0.01" step="any" inputmode="decimal"></label>
                 <label>${copy.currency}<select id="sim-currency"></select></label>
-                <label>${copy.multiple}<select id="sim-multiple"><option value="20">20x</option><option value="25">25x</option><option value="30">30x</option></select></label></div>
+                <label>${copy.multiple}<select id="sim-multiple"><option value="20">20x</option><option value="25">25x</option><option value="30">30x</option></select></label>
+                <label>${copy.mode}<select id="sim-mode"><option value="weights">${copy.weights}</option><option value="shares">${copy.shares}</option></select></label>
+                <label>${copy.marginRate}<input id="sim-margin-rate" type="number" min="0" step="any" inputmode="decimal"></label></div>
                 <section class="sim-editor"><label for="sim-picker">${copy.picker}</label><div class="sim-add"><input type="search" id="sim-picker" list="sim-stock-options" autocomplete="off" placeholder="${copy.placeholder}"><button type="button" id="sim-add">${copy.add}</button></div><datalist id="sim-stock-options"></datalist><p id="sim-picker-status" role="status"></p>
                 <ul id="sim-holdings"></ul><div class="sim-allocation-row"><span id="sim-allocation"></span><button type="button" id="sim-equal">${copy.equal}</button></div></section>
                 <p id="sim-status" role="status"></p><section id="sim-results" hidden><div id="sim-summary"></div><h3>${copy.chart}</h3><div id="sim-chart"></div>
-                <div class="sim-table-wrap" tabindex="0" role="region" aria-label="${copy.chart}"><table><thead><tr><th>${copy.quarter}</th><th>${copy.value}</th><th>${copy.gain}</th><th>${copy.return}</th></tr></thead><tbody id="sim-projections"></tbody></table></div></section>
+                <div class="sim-table-wrap" tabindex="0" role="region" aria-label="${copy.chart}"><table><thead><tr><th>${copy.quarter}</th><th>${copy.value}</th><th>${copy.gain}</th><th>${copy.return}</th><th>${copy.interest}</th></tr></thead><tbody id="sim-projections"></tbody></table></div></section>
                 <p class="sim-note">${copy.note}</p><p id="sim-saved" class="sim-note"></p></div>`;
             el('sim-amount').value = state.amount;
+            el('sim-mode').value = state.mode; el('sim-margin-rate').value = state.marginRate;
             for (const currency of CURRENCIES) { const opt = node('option', currency, el('sim-currency')); opt.value = currency; }
             el('sim-currency').value = state.currency; el('sim-multiple').value = state.multiple;
             for (const row of currentRows.slice().sort((a, b) => a.Ticker.localeCompare(b.Ticker))) {
@@ -255,8 +374,9 @@
                 renderHoldings(); renderResults(); save(); el('sim-picker').focus();
             }
             if (target?.id === 'sim-equal' && state.holdings.length) {
-                const units = Math.floor(10000 / state.holdings.length);
-                state.holdings.forEach((h, i) => h.weight = String((i === state.holdings.length - 1 ? 10000 - units * i : units) / 100));
+                const total = state.holdings.reduce((sum, h) => sum + Math.max(0, Number(h.weight) || 0), 0) || 100;
+                const totalUnits = Math.round(total * 100), units = Math.floor(totalUnits / state.holdings.length);
+                state.holdings.forEach((h, i) => h.weight = String((i === state.holdings.length - 1 ? totalUnits - units * i : units) / 100));
                 renderHoldings(); renderResults(); save();
             }
             const rect = dialog.getBoundingClientRect();
@@ -264,10 +384,20 @@
         });
         dialog.addEventListener('input', event => {
             const target = event.target;
-            if (target.dataset.weightIndex !== undefined) state.holdings[Number(target.dataset.weightIndex)].weight = target.value;
+            if (target.dataset.weightIndex !== undefined) state.holdings[Number(target.dataset.weightIndex)][state.mode === 'shares' ? 'shares' : 'weight'] = target.value;
+            else if (target.dataset.fxIndex !== undefined) {
+                const h = state.holdings[Number(target.dataset.fxIndex)];
+                h.fx = {...h.fx, [state.currency]: target.value};
+            }
+            else if (target.dataset.quoteIndex !== undefined) {
+                const h = state.holdings[Number(target.dataset.quoteIndex)];
+                h.quoteCurrency = target.value; h.fx = {}; renderHoldings();
+            }
             else if (target.id === 'sim-amount') state.amount = target.value;
-            else if (target.id === 'sim-currency') state.currency = target.value;
+            else if (target.id === 'sim-currency') { state.currency = target.value; renderHoldings(); }
             else if (target.id === 'sim-multiple') state.multiple = Number(target.value);
+            else if (target.id === 'sim-margin-rate') state.marginRate = target.value;
+            else if (target.id === 'sim-mode') { switchMode(state, target.value, options.getRows(), options.parseNumber); renderHoldings(); }
             else return;
             renderResults(); save();
         });
@@ -278,6 +408,6 @@
         window.addEventListener('portfolio-prices-updated', () => { if (dialog.open) renderResults(); });
         window.addEventListener('resize', () => { if (dialog.open) renderResults(); });
     }
-    if (typeof module !== 'undefined' && module.exports) module.exports = {project, marketNumber};
+    if (typeof module !== 'undefined' && module.exports) module.exports = {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode};
     else root.PortfolioSimulator = {init};
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -1,6 +1,6 @@
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
-const {project, marketNumber} = require('../portfolio-simulator.js');
+const {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode} = require('../portfolio-simulator.js');
 const {refresh} = require('../synthetic-portfolios.js');
 const Q = ['Q3 2026', 'Q3 2027'];
 const rows = [
@@ -21,11 +21,57 @@ test('unallocated cash stays flat; scenario scales investments but not cash', ()
     assert(Math.abs(result.points[0].value - 19250) < 1e-8);
     assert.equal(project(state(0, 0, 30), rows, Q).points[0].value, 10000);
 });
-test('input validation blocks leverage, bad weights, duplicates and bad amount', () => {
-    assert.equal(project(state(60, 50), rows, Q).error, 'overweight');
-    for (const weight of [-1, '', Infinity, 'abc', 101]) assert.equal(project(state(weight, 0), rows, Q).error, 'weights');
+test('input validation allows leverage but blocks bad weights, duplicates and bad amount', () => {
+    assert.equal(project(state(60, 50), rows, Q).borrowed, 1000);
+    for (const weight of [-1, '', Infinity, 'abc']) assert.equal(project(state(weight, 0), rows, Q).error, 'weights');
     assert.equal(project({...state(), amount: 0}, rows, Q).error, 'amount');
     assert.equal(project({...state(), holdings: [{ticker: 'A', weight: 50}, {ticker: 'A', weight: 50}]}, rows, Q).error, 'duplicate');
+});
+test('150% allocation deducts borrowed principal; flat targets preserve own equity', () => {
+    const result = project(state(150, 0), rows, Q);
+    assert.equal(result.invested, 15000); assert.equal(result.borrowed, 5000);
+    assert.equal(result.points[0].value, 25000);
+    assert.equal(result.points[0].pct, 150);
+    const flat = rows.map(r => ({...r, 'Q3 2026': marketNumber(r['Current Price'])}));
+    assert.equal(project(state(120, 80), flat, Q).points[0].value, 10000);
+});
+test('negative equity is preserved and simple margin interest uses quarter end', () => {
+    const zero = rows.map(r => ({...r, 'Q3 2026': 0}));
+    const loss = project(state(150, 0), zero, Q);
+    assert.equal(loss.points[0].value, -5000); assert.equal(loss.points[0].pct, -150);
+    const result = project({...state(150, 0), marginRate: '10', asOf: '2026-09-30'}, rows, Q);
+    assert.equal(quarterYears('Q3 2027', '2026-09-30'), 1);
+    assert.equal(result.points[1].interest, 500);
+    assert.equal(result.points[1].value, 39500);
+    assert.equal(project({...state(), marginRate: -1}, rows, Q).error, 'rate');
+});
+test('share counts match weight portfolios, including fractional shares and margin', () => {
+    const shares = {amount: 10000, multiple: 20, currency: 'USD', mode: 'shares', holdings: [{ticker:'A', shares:150, fx:{}}]};
+    const result = project(shares, rows, Q);
+    assert.equal(result.invested,15000);assert.equal(result.borrowed,5000);
+    assert.equal(result.points[0].value,25000);
+    shares.holdings[0].shares=.5;
+    assert.equal(project(shares,rows,Q).cashValue,9950);
+    shares.holdings[0].shares=-1;
+    assert.equal(project(shares,rows,Q).error,'shares');
+});
+test('foreign shares require an explicit FX rate; pence are not pounds', () => {
+    const s = {amount:10000,multiple:20,currency:'USD',mode:'shares',holdings:[{ticker:'B',shares:100,fx:{}}]};
+    assert.equal(project(s,rows,Q).error,'fx');
+    s.holdings[0].fx.USD=.001;
+    const r=project(s,rows,Q);assert.equal(r.invested,100);assert.equal(r.points[0].value,10080);
+    assert.equal(fxRate({}, {Ticker:'IQE.L','Current Price':'GBp 200'},'GBP'),.01);
+    assert.equal(quoteCurrency({Ticker:'005930.KS','Current Price':200000}),'KRW');
+    assert.equal(quoteCurrency({Ticker:'285A.T','Current Price':60000}),'JPY');
+    const uk=project({amount:1000,multiple:20,currency:'GBP',mode:'shares',holdings:[{ticker:'IQE.L',shares:100}]},
+        [{Ticker:'IQE.L','Current Price':'GBp 200','Q3 2026':400}],['Q3 2026']);
+    assert.equal(uk.invested,200);assert.equal(uk.points[0].value,1200);
+});
+test('switching input modes preserves positions; unknown FX never fabricates shares', () => {
+    const s={...state(150,0),currency:'USD',mode:'weights'};
+    switchMode(s,'shares',rows);assert.equal(s.holdings[0].shares,'150');
+    switchMode(s,'weights',rows);assert.equal(s.holdings[0].weight,'150');
+    s.holdings[1].weight='50';switchMode(s,'shares',rows);assert.equal(s.holdings[1].shares,'');
 });
 test('missing target or removed ticker leaves incomplete quarters blank, not reweighted', () => {
     const missing = structuredClone(rows); delete missing[1]['Q3 2026'];

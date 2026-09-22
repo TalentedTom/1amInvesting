@@ -35,6 +35,13 @@
 .sim-stock-name { font-size: .9rem; overflow-wrap: anywhere; }
 .sim-stock-name small { display: block; color: var(--text-secondary); font-size: .74rem; margin-top: 4px; }
 .sim-weight-label { font-size: .68rem !important; }
+.sim-fx-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-bottom: 4px; }
+.sim-fx-row label { font-size: .7rem; }
+.sim-dialog input[readonly] { opacity: .65; }
+.sim-margin { color: var(--text-primary); line-height: 1.6; }
+.sim-zero-line { stroke: #ef4444; stroke-width: 1; stroke-dasharray: 3 3; }
+.sim-controls label { min-width: 0; }
+.sim-allocation-row button { flex-shrink: 0; }
 .sim-dialog .sim-remove { padding: 8px 0 !important; font-size: 1.2rem !important; }
 .sim-allocation-row { display: flex; justify-content: space-between; gap: 12px; align-items: center; font-size: .8rem; color: var(--text-secondary); }
 #sim-picker-status, #sim-status { font-size: .85rem; color: var(--text-secondary); margin: 10px 0; }
@@ -65,7 +72,7 @@ body.light-mode .sim-positive { color: #047857; }
 }
 .sim-dialog th:first-child { text-align: left; }
 .sim-dialog thead th { color: var(--text-secondary); background: var(--bg-dark); font-weight: 600; white-space: normal; }
-.sim-dialog tr { animation: none !important; }
+.sim-dialog tr { animation: none !important; opacity: 1; }
 .sim-dialog td.sim-positive { color: #10b981; }
 .sim-dialog td.sim-negative { color: #ef4444; }
 body.light-mode .sim-dialog td.sim-positive { color: #047857; }
