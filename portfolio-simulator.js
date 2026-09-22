@@ -1,7 +1,50 @@
-/* Browser-only what-if portfolio; nothing is sent to a server or written to Excel. */
+/* Browser-only what-if portfolio; holdings stay local. Only public FX rates are fetched. */
 (function (root) {
     const STORAGE_KEY = 'portfolioSimulator_v1';
     const CURRENCIES = ['USD', 'CAD', 'EUR', 'GBP', 'CNY', 'HKD', 'TWD', 'KRW', 'JPY', 'AUD', 'SEK', 'CHF', 'DKK'];
+    const FX_URL = 'https://open.er-api.com/v6/latest/USD';
+    const FX_CACHE_KEY = 'portfolioSimulatorFx_v1';
+    const FX_TTL = 6 * 60 * 60 * 1000, FX_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
+    function normalizeFx(payload, now = Date.now()) {
+        const updatedAt = Number(payload?.time_last_update_unix) * 1000;
+        if (payload?.result !== 'success' || payload.base_code !== 'USD' || !Number.isFinite(updatedAt)
+            || updatedAt > now + 300000 || now - updatedAt > FX_MAX_AGE) return null;
+        const rates = {};
+        for (const currency of CURRENCIES) {
+            const rate = payload.rates?.[currency];
+            if (typeof rate !== 'number' || !Number.isFinite(rate) || rate <= 0) return null;
+            rates[currency] = rate;
+        }
+        if (rates.USD !== 1) return null;
+        return {updatedAt, rates};
+    }
+    function createFxClient({fetcher, storage, now = Date.now}) {
+        let cached = null, pending = null, failed = false, lastAttempt = -Infinity;
+        try { cached = JSON.parse(storage?.getItem(FX_CACHE_KEY) || 'null'); } catch (_) {}
+        const peek = () => normalizeFx(cached?.payload, now());
+        function load(force = false) {
+            if (pending) return pending;
+            const age = now() - Number(cached?.fetchedAt);
+            if (!force && ((peek() && age >= 0 && age < FX_TTL) || now() - lastAttempt < 60000)) return Promise.resolve(peek());
+            lastAttempt = now();
+            pending = (async () => {
+                const controller = new AbortController(), timer = setTimeout(() => controller.abort(), 8000);
+                try {
+                    const response = await fetcher(FX_URL, {signal: controller.signal, credentials: 'omit', referrerPolicy: 'no-referrer'});
+                    if (!response.ok) throw new Error('FX request failed');
+                    const payload = await response.json(), valid = normalizeFx(payload, now());
+                    if (!valid) throw new Error('Invalid or outdated FX rates');
+                    cached = {fetchedAt: now(), payload: {result: 'success', base_code: 'USD', time_last_update_unix: valid.updatedAt / 1000, rates: valid.rates}};
+                    failed = false;
+                    try { storage?.setItem(FX_CACHE_KEY, JSON.stringify(cached)); } catch (_) {}
+                } catch (_) { failed = true; }
+                finally { clearTimeout(timer); }
+                return peek();
+            })().finally(() => { pending = null; });
+            return pending;
+        }
+        return {load, peek, isLoading: () => !!pending, hasFailed: () => failed};
+    }
     function marketNumber(value) {
         if (value == null || value === '') return NaN;
         const text = String(value).replace(/\bGBp\b|\b[A-Z]{3}\b/g, '')
@@ -24,12 +67,14 @@
         return ({'': 'USD', TW: 'TWD', TWO: 'TWD', KS: 'KRW', KQ: 'KRW', SH: 'CNY', SS: 'CNY', SSE: 'CNY', SZ: 'CNY', SZSE: 'CNY',
             HK: 'HKD', T: 'JPY', L: 'GBp', DE: 'EUR', PA: 'EUR', AS: 'EUR', SW: 'CHF', ST: 'SEK', CO: 'DKK', AX: 'AUD', TO: 'CAD', V: 'CAD'})[suffix] || '';
     }
-    function fxRate(holding, row, currency) {
-        const unit = holding.quoteCurrency || quoteCurrency(row);
+    function fxRate(row, currency, rates) {
+        const unit = quoteCurrency(row);
         if (unit === currency) return 1;
         if (unit === 'GBp' && currency === 'GBP') return .01;
         if (!unit) return NaN;
-        return inputNumber(holding.fx?.[currency]); // Base-currency units per ONE quote unit.
+        const from = rates?.[unit === 'GBp' ? 'GBP' : unit], to = rates?.[currency];
+        if (!Number.isFinite(from) || from <= 0 || !Number.isFinite(to) || to <= 0) return NaN;
+        return to / from * (unit === 'GBp' ? .01 : 1); // Portfolio units per ONE quote unit.
     }
     function quarterYears(quarter, asOf = Date.now()) {
         const match = /^Q([1-4]) (20\d{2})$/.exec(quarter);
@@ -42,7 +87,7 @@
 
     // Buy-and-hold model: initial capital allocations, no quarterly compounding
     // or rebalancing. Native-currency target/price ratios cancel the units.
-    function project(state, rows, quarters, parse = marketNumber) {
+    function project(state, rows, quarters, parse = marketNumber, rates = null) {
         const amount = inputNumber(state.amount), multiple = inputNumber(state.multiple);
         if (!Number.isFinite(amount) || amount <= 0) return {error: 'amount'};
         if (![20, 25, 30].includes(multiple)) return {error: 'multiple'};
@@ -58,7 +103,7 @@
         const positions = [], invalid = [];
         for (const h of holdings) {
             const row = lookup.get(h.ticker), price = parse(row?.['Current Price']);
-            const fx = mode === 'shares' ? fxRate(h, row, state.currency || 'USD') : 1;
+            const fx = mode === 'shares' ? fxRate(row, state.currency || 'USD', rates) : 1;
             if (mode === 'shares' && h.shares > 0 && (!Number.isFinite(price) || price <= 0)) invalid.push(h.ticker);
             if (mode === 'shares' && h.shares > 0 && (!Number.isFinite(fx) || fx <= 0)) return {error: 'fx', ticker: h.ticker};
             const cost = mode === 'shares' ? h.shares === 0 ? 0 : h.shares * price * fx : amount * h.weight / 100;
@@ -93,29 +138,37 @@
         return {amount, total, cash, cashValue, invested, borrowed, leverage: invested / amount, points};
     }
 
-    function switchMode(state, mode, rows, parse = marketNumber) {
-        if (mode === state.mode) return;
+    function switchMode(state, mode, rows, parse = marketNumber, rates = null) {
+        if (mode === state.mode) return true;
         const lookup = new Map(rows.map(r => [r.Ticker, r]));
+        const converted = [];
         for (const h of state.holdings) {
             const row = lookup.get(h.ticker), price = parse(row?.['Current Price']);
-            const fx = fxRate(h, row, state.currency || 'USD'), amount = inputNumber(state.amount);
+            const fx = fxRate(row, state.currency || 'USD', rates), amount = inputNumber(state.amount);
             const source = inputNumber(mode === 'shares' ? h.weight : h.shares);
             const valid = Number.isFinite(source) && source >= 0 && Number.isFinite(price) && price > 0
                 && Number.isFinite(fx) && fx > 0 && Number.isFinite(amount) && amount > 0;
             const value = source === 0 ? 0 : !valid ? NaN
                 : mode === 'shares' ? amount * source / 100 / price / fx : source * price * fx / amount * 100;
-            h[mode === 'shares' ? 'shares' : 'weight'] = Number.isFinite(value) ? String(+value.toFixed(8)) : '';
+            if (!Number.isFinite(value)) return false; // Never discard an existing allocation if FX is unavailable.
+            converted.push(String(+value.toFixed(mode === 'shares' ? 6 : 10)));
         }
+        state.holdings.forEach((h, i) => h[mode === 'shares' ? 'shares' : 'weight'] = converted[i]);
         state.mode = mode;
+        return true;
     }
 
     const EN = {
         title: 'Portfolio Simulator', subtitle: 'Build a portfolio. Explore its quarterly potential.', close: 'Close simulator',
         amount: 'Own capital (before borrowing)', currency: 'Portfolio currency', multiple: 'Valuation multiple',
         mode: 'Enter allocations as', weights: 'Weights (%)', shares: 'Shares', marginRate: 'Annual margin rate (%)',
-        borrowed: 'Borrowed', invested: 'Invested', leverage: 'Exposure', interest: 'Interest', quoteUnit: 'Quote unit',
-        fx: 'FX rate', sharesError: 'Enter a non-negative share count for each stock.',
-        fxError: 'Enter a positive FX rate for each foreign holding (portfolio currency per 1 quote unit).',
+        borrowed: 'Borrowed', invested: 'Invested', leverage: 'Exposure', interest: 'Interest',
+        sharesError: 'Enter a non-negative share count for each stock.',
+        fxError: 'Currency conversion is temporarily unavailable. Please retry; no exchange rates are assumed.',
+        fxLoading: 'Loading automatic currency conversion...', fxReady: 'Automatic currency conversion',
+        fxDate: 'Daily rates as of', fxCached: 'Using saved rates; the latest refresh was unavailable.',
+        fxOld: 'Rates are over 48 hours old.', fxRetry: 'Retry conversion',
+        modeError: 'Could not convert this allocation. Check the amounts and current prices, or retry currency conversion.',
         rateError: 'Enter a non-negative annual margin rate.', priceError: 'A current price is needed to value these shares.',
         zeroRate: '0% margin rate selected: borrowing costs are not included.',
         picker: 'Add a stock', placeholder: 'Type a ticker or company name', add: 'Add stock', equal: 'Equal weights',
@@ -127,7 +180,7 @@
         missing: 'Some forecasts are unavailable. Incomplete quarters are left blank, not reweighted.',
         unavailable: 'Unavailable', now: 'Today', starting: 'Starting equity', oneYear: "Q3'27 equity", last: 'Final-quarter equity',
         chart: 'Projected equity after debt and interest', quarter: 'Quarter', value: 'Net equity', gain: 'Gain / loss', return: 'Return',
-        note: 'A buy-today model, not guaranteed returns or historical performance. Equity = projected assets + cash - borrowed principal - interest. Borrowing stays fixed for each projection; interest is simple annual interest to quarter end (actual days / 365). No rebalancing, margin calls or forced liquidation are simulated; equity can be negative. Prices refresh from the site. Share quantities require quote-to-portfolio FX rates, held constant into the future. Changing portfolio currency reinterprets the capital amount. Unallocated cash earns 0%. Taxes, dividends, fees and trading costs are excluded.'
+        note: 'A buy-today model, not guaranteed returns or historical performance. Equity = projected assets + cash - borrowed principal - interest. Borrowing stays fixed for each projection; interest is simple annual interest to quarter end (actual days / 365). No rebalancing, margin calls or forced liquidation are simulated; equity can be negative. Prices refresh from the site. Share values convert automatically using daily reference exchange rates, held constant into the future, not broker execution rates. Changing portfolio currency reinterprets the capital amount. Unallocated cash earns 0%. Taxes, dividends, fees and trading costs are excluded.'
     };
     const ZH = {
         title: '\u6295\u8d44\u7ec4\u5408\u6a21\u62df\u5668', subtitle: '\u9009\u62e9\u80a1\u7968\u4e0e\u6743\u91cd\uff0c\u67e5\u770b\u5b63\u5ea6\u9884\u6d4b\u3002', close: '\u5173\u95ed\u6a21\u62df\u5668',
@@ -147,15 +200,19 @@
     Object.assign(ZH, {
         amount: '\u81ea\u6709\u672c\u91d1\uff08\u4e0d\u542b\u501f\u6b3e\uff09', currency: '\u7ec4\u5408\u5e01\u79cd',
         mode: '\u8f93\u5165\u65b9\u5f0f', weights: '\u6743\u91cd (%)', shares: '\u80a1\u6570', marginRate: '\u878d\u8d44\u5e74\u5229\u7387 (%)',
-        borrowed: '\u501f\u6b3e', invested: '\u5df2\u6295\u8d44', leverage: '\u655e\u53e3', interest: '\u5229\u606f', quoteUnit: '\u62a5\u4ef7\u5355\u4f4d', fx: '\u6c47\u7387',
+        borrowed: '\u501f\u6b3e', invested: '\u5df2\u6295\u8d44', leverage: '\u655e\u53e3', interest: '\u5229\u606f',
         sharesError: '\u8bf7\u4e3a\u6bcf\u53ea\u80a1\u7968\u8f93\u5165\u975e\u8d1f\u80a1\u6570\u3002',
-        fxError: '\u8bf7\u4e3a\u5916\u5e01\u6301\u4ed3\u586b\u5199\u6b63\u6c47\u7387\uff08\u6bcf1\u62a5\u4ef7\u5355\u4f4d\u5bf9\u5e94\u7684\u7ec4\u5408\u5e01\u79cd\u91d1\u989d\uff09\u3002',
+        fxError: '\u6682\u65f6\u65e0\u6cd5\u81ea\u52a8\u6362\u6c47\uff0c\u8bf7\u91cd\u8bd5\uff1b\u4e0d\u4f1a\u5047\u8bbe\u6c47\u7387\u3002',
+        fxLoading: '\u6b63\u5728\u52a0\u8f7d\u81ea\u52a8\u6362\u6c47...', fxReady: '\u81ea\u52a8\u8d27\u5e01\u6362\u7b97',
+        fxDate: '\u6bcf\u65e5\u6c47\u7387\u65e5\u671f', fxCached: '\u6682\u7528\u5df2\u4fdd\u5b58\u6c47\u7387\uff1b\u6700\u65b0\u5237\u65b0\u5931\u8d25\u3002',
+        fxOld: '\u6c47\u7387\u5df2\u8d85\u8fc748\u5c0f\u65f6\u3002', fxRetry: '\u91cd\u8bd5\u6362\u6c47',
+        modeError: '\u65e0\u6cd5\u6362\u7b97\u6301\u4ed3\uff0c\u8bf7\u68c0\u67e5\u6570\u91cf\u548c\u4ef7\u683c\uff0c\u6216\u91cd\u8bd5\u6362\u6c47\u3002',
         rateError: '\u8bf7\u8f93\u5165\u975e\u8d1f\u7684\u878d\u8d44\u5e74\u5229\u7387\u3002', priceError: '\u8ba1\u7b97\u80a1\u6570\u9700\u8981\u5f53\u524d\u4ef7\u683c\u3002',
         zeroRate: '\u5f53\u524d\u878d\u8d44\u5229\u7387\u4e3a0%\uff0c\u672a\u8ba1\u5165\u501f\u6b3e\u6210\u672c\u3002',
         weightError: '\u6743\u91cd\u5fc5\u987b\u4e3a\u975e\u8d1f\u6570\uff1b\u5141\u8bb8\u901a\u8fc7\u878d\u8d44\u8d85\u8fc7100%\u3002',
         starting: '\u521d\u59cb\u51c0\u503c', oneYear: "Q3'27 \u51c0\u503c", last: '\u6700\u540e\u5b63\u5ea6\u51c0\u503c',
         chart: '\u6263\u9664\u501f\u6b3e\u53ca\u5229\u606f\u540e\u7684\u51c0\u503c\u9884\u6d4b', value: '\u51c0\u503c',
-        note: '\u5047\u8bbe\u4eca\u5929\u4e70\u5165\uff0c\u975e\u4fdd\u8bc1\u6536\u76ca\u6216\u5386\u53f2\u8868\u73b0\u3002\u51c0\u503c=\u9884\u6d4b\u8d44\u4ea7+\u73b0\u91d1-\u501f\u6b3e\u672c\u91d1-\u5229\u606f\u3002\u501f\u6b3e\u5728\u6bcf\u6b21\u9884\u6d4b\u4e2d\u4fdd\u6301\u4e0d\u53d8\uff0c\u4ee5\u5b9e\u9645\u5929\u6570/365\u8ba1\u7b97\u81f3\u5b63\u672b\u7684\u5e74\u5355\u5229\u3002\u4e0d\u6a21\u62df\u8c03\u4ed3\u3001\u8ffd\u52a0\u4fdd\u8bc1\u91d1\u6216\u5f3a\u5236\u5e73\u4ed3\uff1b\u51c0\u503c\u53ef\u4e3a\u8d1f\u3002\u80a1\u6570\u6a21\u5f0f\u9700\u8981\u62a5\u4ef7\u5e01\u79cd\u81f3\u7ec4\u5408\u5e01\u79cd\u7684\u6c47\u7387\uff0c\u9884\u6d4b\u671f\u95f4\u6c47\u7387\u4e0d\u53d8\u3002\u73b0\u91d1\u6536\u76ca\u4e3a\u96f6\uff0c\u4e0d\u542b\u7a0e\u3001\u80a1\u606f\u53ca\u4ea4\u6613\u8d39\u7528\u3002'
+        note: '\u5047\u8bbe\u4eca\u5929\u4e70\u5165\uff0c\u975e\u4fdd\u8bc1\u6536\u76ca\u3002\u51c0\u503c=\u9884\u6d4b\u8d44\u4ea7+\u73b0\u91d1-\u501f\u6b3e-\u5229\u606f\u3002\u501f\u6b3e\u4fdd\u6301\u4e0d\u53d8\uff0c\u6309\u5b9e\u9645\u5929\u6570/365\u8ba1\u7b97\u81f3\u5b63\u672b\u7684\u5355\u5229\u3002\u4e0d\u6a21\u62df\u8c03\u4ed3\u3001\u8ffd\u52a0\u4fdd\u8bc1\u91d1\u6216\u5f3a\u5236\u5e73\u4ed3\uff1b\u51c0\u503c\u53ef\u4e3a\u8d1f\u3002\u80a1\u6570\u6a21\u5f0f\u4f7f\u7528\u6bcf\u65e5\u53c2\u8003\u6c47\u7387\u81ea\u52a8\u6362\u7b97\uff0c\u9884\u6d4b\u671f\u95f4\u6c47\u7387\u4e0d\u53d8\uff0c\u975e\u5238\u5546\u5b9e\u9645\u6210\u4ea4\u6c47\u7387\u3002\u5207\u6362\u5e01\u79cd\u5c06\u91cd\u65b0\u89e3\u91ca\u672c\u91d1\u6570\u503c\u3002\u73b0\u91d1\u6536\u76ca\u4e3a\u96f6\uff0c\u4e0d\u542b\u7a0e\u3001\u80a1\u606f\u53ca\u4ea4\u6613\u8d39\u7528\u3002'
     });
 
     function init(options) {
@@ -167,7 +224,10 @@
         dialog.setAttribute('aria-labelledby', 'sim-title');
         document.body.appendChild(dialog);
         let state = {version: 1, amount: '10000', currency: 'USD', multiple: options.getMultiple(), mode: 'weights', marginRate: '0', holdings: []};
-        let copy = EN, previousOverflow = '', canSave = true, currentRows = [];
+        let copy = EN, previousOverflow = '', canSave = true, currentRows = [], modeLoading = false;
+        let fxStorage;
+        try { fxStorage = localStorage; } catch (_) {}
+        const fxClient = createFxClient({fetcher: (...args) => root.fetch(...args), storage: fxStorage});
         try {
             const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
             if (saved && saved.version === 1 && Array.isArray(saved.holdings)) {
@@ -176,9 +236,7 @@
                     multiple: [20, 25, 30].includes(Number(saved.multiple)) ? Number(saved.multiple) : 20,
                     mode: saved.mode === 'shares' ? 'shares' : 'weights', marginRate: String(saved.marginRate ?? '0'),
                     holdings: saved.holdings.slice(0, 250).filter(h => h && typeof h.ticker === 'string')
-                        .map(h => ({ticker: h.ticker, weight: String(h.weight ?? ''), shares: String(h.shares ?? ''),
-                            quoteCurrency: [...CURRENCIES, 'GBp'].includes(h.quoteCurrency) ? h.quoteCurrency : '',
-                            fx: h.fx && typeof h.fx === 'object' && !Array.isArray(h.fx) ? h.fx : {}}))};
+                        .map(h => ({ticker: h.ticker, weight: String(h.weight ?? ''), shares: String(h.shares ?? '')}))};
             }
         } catch (_) { /* Corrupt/blocked storage must not break the dashboard. */ }
         const el = id => dialog.querySelector('#' + id);
@@ -199,6 +257,32 @@
             catch (_) { canSave = false; }
             el('sim-saved').textContent = canSave ? copy.saved : copy.unsaved;
         }
+        function renderFxInfo() {
+            const info = el('sim-fx-info'), snapshot = fxClient.peek();
+            info.hidden = state.mode !== 'shares' && !modeLoading;
+            info.replaceChildren();
+            if (fxClient.isLoading()) node('span', copy.fxLoading, info);
+            else if (snapshot) {
+                const date = new Date(snapshot.updatedAt).toISOString().slice(0, 10);
+                node('span', `${copy.fxReady} \u00b7 ${copy.fxDate} ${date}. `, info);
+                if (fxClient.hasFailed()) node('span', copy.fxCached + ' ', info);
+                if (Date.now() - snapshot.updatedAt > 48 * 3600000) node('span', copy.fxOld + ' ', info);
+            } else node('span', copy.fxError + ' ', info);
+            if (snapshot) {
+                const link = node('a', 'Rates by Exchange Rate API', info);
+                link.href = 'https://www.exchangerate-api.com'; link.target = '_blank'; link.rel = 'noopener noreferrer';
+            }
+            if (!fxClient.isLoading() && (!snapshot || fxClient.hasFailed())) {
+                const retry = node('button', copy.fxRetry, info);
+                retry.type = 'button'; retry.id = 'sim-fx-retry';
+            }
+        }
+        async function refreshFx(force = false) {
+            const request = fxClient.load(force);
+            if (dialog.open) renderFxInfo();
+            await request;
+            if (dialog.open) { renderResults(); renderFxInfo(); }
+        }
         function renderHoldings() {
             const list = el('sim-holdings'); list.replaceChildren();
             state.holdings.forEach((holding, index) => {
@@ -206,7 +290,6 @@
                 const item = node('li', null, list, 'sim-holding');
                 const name = node('div', row ? options.getName(row) : copy.unavailable, item, 'sim-stock-name');
                 node('small', holding.ticker, name);
-                const unit = holding.quoteCurrency || quoteCurrency(row);
                 if (state.mode === 'shares') node('small', '', name).dataset.priceIndex = index;
                 const label = node('label', state.mode === 'shares' ? copy.shares : copy.weight, item, 'sim-weight-label');
                 const weight = node('input', null, label);
@@ -216,24 +299,6 @@
                 const remove = node('button', '\u00d7', item, 'sim-remove');
                 remove.type = 'button'; remove.dataset.removeIndex = index;
                 remove.setAttribute('aria-label', `${copy.remove} ${holding.ticker}`);
-                if (state.mode === 'shares') {
-                    const fxBox = node('div', null, item, 'sim-fx-row');
-                    const unitLabel = node('label', copy.quoteUnit, fxBox);
-                    const unitSelect = node('select', null, unitLabel);
-                    const unknown = node('option', copy.unavailable, unitSelect); unknown.value = '';
-                    for (const currency of [...CURRENCIES, 'GBp']) {
-                        const option = node('option', currency === 'GBp' ? 'GBp (pence)' : currency, unitSelect); option.value = currency;
-                    }
-                    unitSelect.value = unit; unitSelect.dataset.quoteIndex = index;
-                    unitSelect.setAttribute('aria-label', `${holding.ticker} ${copy.quoteUnit}`);
-                    const fxLabel = node('label', `1 ${unit || '?'} = ${state.currency}`, fxBox);
-                    const fxInput = node('input', null, fxLabel);
-                    const same = unit === state.currency || (unit === 'GBp' && state.currency === 'GBP');
-                    Object.assign(fxInput, {type: 'number', min: '0', step: 'any', inputMode: 'decimal',
-                        value: same ? fxRate(holding, row, state.currency) : holding.fx?.[state.currency] ?? '', readOnly: same});
-                    fxInput.dataset.fxIndex = index;
-                    fxInput.setAttribute('aria-label', `${holding.ticker} ${copy.fx}: 1 ${unit} in ${state.currency}`);
-                }
             });
             el('sim-equal').disabled = state.holdings.length === 0;
             el('sim-equal').hidden = state.mode === 'shares';
@@ -291,14 +356,14 @@
                 const h = state.holdings[Number(label.dataset.priceIndex)];
                 const row = currentRows.find(r => r.Ticker === h.ticker);
                 const price = options.parseNumber(row?.['Current Price']);
-                label.textContent = `${Number.isFinite(price) ? price : '\u2014'} ${h.quoteCurrency || quoteCurrency(row)}`;
+                label.textContent = `${Number.isFinite(price) ? price : '\u2014'} ${quoteCurrency(row)}`;
             });
-            const result = project(state, currentRows, options.quarters, options.parseNumber);
+            const result = project(state, currentRows, options.quarters, options.parseNumber, fxClient.peek()?.rates);
             el('sim-allocation').textContent = result.error ? ''
                 : `${copy.allocation}: ${+result.total.toFixed(2)}% (${result.leverage.toFixed(2)}x) \u00b7 ${copy.invested}: ${money(result.invested)} \u00b7 ${copy.cash}: ${money(result.cashValue)} \u00b7 ${copy.borrowed}: ${money(result.borrowed)}`;
             el('sim-allocation').classList.toggle('sim-margin', result.borrowed > 0);
             const messages = {amount: copy.amountError, empty: copy.empty, weights: copy.weightError,
-                shares: copy.sharesError, fx: copy.fxError, rate: copy.rateError, price: copy.priceError,
+                shares: copy.sharesError, fx: fxClient.isLoading() ? copy.fxLoading : copy.fxError, rate: copy.rateError, price: copy.priceError,
                 duplicate: copy.duplicate, multiple: copy.weightError};
             el('sim-status').textContent = result.error ? messages[result.error]
                 : result.points.some(p => p.value === null) ? copy.missing
@@ -331,7 +396,7 @@
             if (!found) { el('sim-picker-status').textContent = copy.unknown; return; }
             if (state.holdings.some(h => h.ticker === found.Ticker)) { el('sim-picker-status').textContent = copy.duplicate; return; }
             const total = state.holdings.reduce((sum, h) => sum + (Number(h.weight) || 0), 0);
-            state.holdings.push({ticker: found.Ticker, weight: String(+Math.max(0, 100 - total).toFixed(2)), shares: '0', fx: {}});
+            state.holdings.push({ticker: found.Ticker, weight: String(+Math.max(0, 100 - total).toFixed(2)), shares: '0'});
             input.value = ''; el('sim-picker-status').textContent = '';
             renderHoldings(); renderResults(); save(); input.focus();
         }
@@ -349,7 +414,7 @@
                 <label>${copy.marginRate}<input id="sim-margin-rate" type="number" min="0" step="any" inputmode="decimal"></label></div>
                 <section class="sim-editor"><label for="sim-picker">${copy.picker}</label><div class="sim-add"><input type="search" id="sim-picker" list="sim-stock-options" autocomplete="off" placeholder="${copy.placeholder}"><button type="button" id="sim-add">${copy.add}</button></div><datalist id="sim-stock-options"></datalist><p id="sim-picker-status" role="status"></p>
                 <ul id="sim-holdings"></ul><div class="sim-allocation-row"><span id="sim-allocation"></span><button type="button" id="sim-equal">${copy.equal}</button></div></section>
-                <p id="sim-status" role="status"></p><section id="sim-results" hidden><div id="sim-summary"></div><h3>${copy.chart}</h3><div id="sim-chart"></div>
+                <p id="sim-fx-info" class="sim-note sim-fx-note" role="status" hidden></p><p id="sim-status" role="status"></p><section id="sim-results" hidden><div id="sim-summary"></div><h3>${copy.chart}</h3><div id="sim-chart"></div>
                 <div class="sim-table-wrap" tabindex="0" role="region" aria-label="${copy.chart}"><table><thead><tr><th>${copy.quarter}</th><th>${copy.value}</th><th>${copy.gain}</th><th>${copy.return}</th><th>${copy.interest}</th></tr></thead><tbody id="sim-projections"></tbody></table></div></section>
                 <p class="sim-note">${copy.note}</p><p id="sim-saved" class="sim-note"></p></div>`;
             el('sim-amount').value = state.amount;
@@ -361,6 +426,7 @@
             }
             previousOverflow = document.body.style.overflow; document.body.style.overflow = 'hidden';
             dialog.showModal(); renderHoldings(); renderResults();
+            refreshFx();
             el('sim-saved').textContent = canSave ? copy.saved : copy.unsaved;
             el('sim-picker').focus({preventScroll: true});
         }
@@ -369,6 +435,7 @@
             const target = event.target.closest('button');
             if (target?.id === 'sim-close') dialog.close();
             if (target?.id === 'sim-add') addStock();
+            if (target?.id === 'sim-fx-retry') refreshFx(true);
             if (target?.dataset.removeIndex !== undefined) {
                 state.holdings.splice(Number(target.dataset.removeIndex), 1);
                 renderHoldings(); renderResults(); save(); el('sim-picker').focus();
@@ -382,32 +449,41 @@
             const rect = dialog.getBoundingClientRect();
             if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
         });
-        dialog.addEventListener('input', event => {
+        dialog.addEventListener('input', async event => {
             const target = event.target;
             if (target.dataset.weightIndex !== undefined) state.holdings[Number(target.dataset.weightIndex)][state.mode === 'shares' ? 'shares' : 'weight'] = target.value;
-            else if (target.dataset.fxIndex !== undefined) {
-                const h = state.holdings[Number(target.dataset.fxIndex)];
-                h.fx = {...h.fx, [state.currency]: target.value};
-            }
-            else if (target.dataset.quoteIndex !== undefined) {
-                const h = state.holdings[Number(target.dataset.quoteIndex)];
-                h.quoteCurrency = target.value; h.fx = {}; renderHoldings();
-            }
             else if (target.id === 'sim-amount') state.amount = target.value;
             else if (target.id === 'sim-currency') { state.currency = target.value; renderHoldings(); }
             else if (target.id === 'sim-multiple') state.multiple = Number(target.value);
             else if (target.id === 'sim-margin-rate') state.marginRate = target.value;
-            else if (target.id === 'sim-mode') { switchMode(state, target.value, options.getRows(), options.parseNumber); renderHoldings(); }
+            else if (target.id === 'sim-mode') {
+                const mode = target.value;
+                target.disabled = true; modeLoading = true;
+                await refreshFx();
+                modeLoading = false;
+                if (!dialog.open || !target.isConnected) return;
+                target.disabled = false;
+                const converted = switchMode(state, mode, options.getRows(), options.parseNumber, fxClient.peek()?.rates);
+                target.value = state.mode;
+                renderHoldings(); renderResults(); renderFxInfo(); save();
+                if (!converted) {
+                    el('sim-status').textContent = copy.modeError;
+                    el('sim-fx-info').hidden = false;
+                }
+                return;
+            }
             else return;
-            renderResults(); save();
+            renderResults(); renderFxInfo(); save();
         });
         dialog.addEventListener('keydown', event => {
             if (event.target.id === 'sim-picker' && event.key === 'Enter') { event.preventDefault(); addStock(); }
         });
         dialog.addEventListener('close', () => { document.body.style.overflow = previousOverflow; opener.focus({preventScroll: true}); });
-        window.addEventListener('portfolio-prices-updated', () => { if (dialog.open) renderResults(); });
+        window.addEventListener('portfolio-prices-updated', () => {
+            if (dialog.open) { if (state.mode === 'shares') refreshFx(); else renderResults(); }
+        });
         window.addEventListener('resize', () => { if (dialog.open) renderResults(); });
     }
-    if (typeof module !== 'undefined' && module.exports) module.exports = {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode};
+    if (typeof module !== 'undefined' && module.exports) module.exports = {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode, normalizeFx, createFxClient};
     else root.PortfolioSimulator = {init};
 })(typeof window !== 'undefined' ? window : globalThis);

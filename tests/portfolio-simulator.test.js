@@ -1,6 +1,6 @@
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
-const {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode} = require('../portfolio-simulator.js');
+const {project, marketNumber, quoteCurrency, fxRate, quarterYears, switchMode, normalizeFx, createFxClient} = require('../portfolio-simulator.js');
 const {refresh} = require('../synthetic-portfolios.js');
 const Q = ['Q3 2026', 'Q3 2027'];
 const rows = [
@@ -55,12 +55,16 @@ test('share counts match weight portfolios, including fractional shares and marg
     shares.holdings[0].shares=-1;
     assert.equal(project(shares,rows,Q).error,'shares');
 });
-test('foreign shares require an explicit FX rate; pence are not pounds', () => {
+test('foreign shares convert from automatic USD-based rates; pence are not pounds', () => {
     const s = {amount:10000,multiple:20,currency:'USD',mode:'shares',holdings:[{ticker:'B',shares:100,fx:{}}]};
     assert.equal(project(s,rows,Q).error,'fx');
-    s.holdings[0].fx.USD=.001;
-    const r=project(s,rows,Q);assert.equal(r.invested,100);assert.equal(r.points[0].value,10080);
-    assert.equal(fxRate({}, {Ticker:'IQE.L','Current Price':'GBp 200'},'GBP'),.01);
+    const rates={USD:1,KRW:1000,CAD:1.4,GBP:.8};
+    const r=project(s,rows,Q,marketNumber,rates);assert.equal(r.invested,100);assert.equal(r.points[0].value,10080);
+    assert.equal(project({...s,currency:'CAD'},rows,Q,marketNumber,rates).invested,140);
+    s.holdings[0].fx.USD=999;s.holdings[0].quoteCurrency='USD'; // Ignore obsolete manual overrides.
+    assert.equal(project(s,rows,Q,marketNumber,rates).invested,100);
+    assert.equal(fxRate({Ticker:'IQE.L','Current Price':'GBp 200'},'GBP'),.01);
+    assert.equal(fxRate({Ticker:'IQE.L','Current Price':'GBp 200'},'USD',rates),.0125);
     assert.equal(quoteCurrency({Ticker:'005930.KS','Current Price':200000}),'KRW');
     assert.equal(quoteCurrency({Ticker:'285A.T','Current Price':60000}),'JPY');
     const uk=project({amount:1000,multiple:20,currency:'GBP',mode:'shares',holdings:[{ticker:'IQE.L',shares:100}]},
@@ -71,7 +75,52 @@ test('switching input modes preserves positions; unknown FX never fabricates sha
     const s={...state(150,0),currency:'USD',mode:'weights'};
     switchMode(s,'shares',rows);assert.equal(s.holdings[0].shares,'150');
     switchMode(s,'weights',rows);assert.equal(s.holdings[0].weight,'150');
-    s.holdings[1].weight='50';switchMode(s,'shares',rows);assert.equal(s.holdings[1].shares,'');
+    s.holdings[1].weight='50';const before=structuredClone(s);
+    assert.equal(switchMode(s,'shares',rows),false);assert.deepEqual(s,before);
+    assert.equal(switchMode(s,'shares',rows,marketNumber,{USD:1,KRW:1000}),true);
+    assert.equal(s.holdings[1].shares,'5000');
+    const fractional={amount:10000,currency:'CAD',mode:'shares',holdings:[{ticker:'B',shares:'100.123456'}]};
+    const rates={USD:1,CAD:1.402289,KRW:1375.642214};
+    switchMode(fractional,'weights',rows,marketNumber,rates);
+    switchMode(fractional,'shares',rows,marketNumber,rates);
+    assert.equal(fractional.holdings[0].shares,'100.123456');
+});
+
+const fxNow=Date.parse('2026-09-22T12:00:00Z');
+const fxPayload=()=>({result:'success',base_code:'USD',time_last_update_unix:fxNow/1000-3600,
+    rates:{USD:1,CAD:1.4,EUR:.9,GBP:.8,CNY:7,HKD:7.8,TWD:32,KRW:1400,JPY:150,AUD:1.5,SEK:10,CHF:.85,DKK:6.7}});
+test('FX validation rejects partial, invalid, future or over-seven-day-old data',()=>{
+    assert.equal(normalizeFx(fxPayload(),fxNow).rates.TWD,32);
+    for(const bad of [null,{...fxPayload(),result:'error'},{...fxPayload(),base_code:'EUR'},
+        {...fxPayload(),time_last_update_unix:fxNow/1000+86400},
+        {...fxPayload(),time_last_update_unix:fxNow/1000-8*86400},
+        {...fxPayload(),rates:{...fxPayload().rates,KRW:0}},
+        {...fxPayload(),rates:{...fxPayload().rates,TWD:undefined}}]) assert.equal(normalizeFx(bad,fxNow),null);
+});
+test('automatic FX caches one public request, coalesces concurrent calls and safely falls back',async()=>{
+    let time=fxNow,calls=0,fail=false;
+    const data=new Map(),storage={getItem:k=>data.get(k),setItem:(k,v)=>data.set(k,v)};
+    const client=createFxClient({now:()=>time,storage,fetcher:async(url,opts)=>{
+        calls++;assert.equal(url,'https://open.er-api.com/v6/latest/USD');assert.equal(opts.credentials,'omit');
+        if(fail)throw Error('offline');return{ok:true,json:async()=>fxPayload()};
+    }});
+    assert.equal(client.peek(),null);
+    const [a,b]=await Promise.all([client.load(),client.load()]);assert.deepEqual(a,b);assert.equal(calls,1);
+    await client.load();assert.equal(calls,1);
+    const restored=createFxClient({now:()=>time,storage,fetcher:()=>assert.fail('cached rates should be reused')});
+    assert.equal((await restored.load()).rates.KRW,1400);
+    fail=true;time+=7*3600000;assert.equal((await client.load()).rates.KRW,1400);assert(client.hasFailed());
+    await client.load();assert.equal(calls,2); // No request storm during an outage.
+    time+=8*86400000;assert.equal(client.peek(),null);assert.equal(await client.load(),null);
+});
+test('FX failure and blocked browser storage never invent rates or break same-currency shares',async()=>{
+    const blocked={getItem:()=>{throw Error('blocked')},setItem:()=>{throw Error('blocked')}};
+    const client=createFxClient({now:()=>fxNow,storage:blocked,fetcher:async()=>({ok:true,json:async()=>fxPayload()})});
+    assert.equal((await client.load()).rates.USD,1);
+    const offline=createFxClient({now:()=>fxNow,fetcher:async()=>{throw Error('offline')}});
+    assert.equal(await offline.load(),null);assert(offline.hasFailed());
+    assert.equal(fxRate({Ticker:'MU'},'USD',null),1);
+    assert(Number.isNaN(fxRate({Ticker:'2344.TW'},'USD',null)));
 });
 test('missing target or removed ticker leaves incomplete quarters blank, not reweighted', () => {
     const missing = structuredClone(rows); delete missing[1]['Q3 2026'];

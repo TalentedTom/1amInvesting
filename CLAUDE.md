@@ -237,11 +237,22 @@ don't rebind it per render.
   Debt stays fixed within a projection. Interest is simple APR to quarter
   end, actual days / 365; default 0% is explicitly disclosed when borrowing.
   Negative equity is allowed. No margin calls or forced liquidation modeled.
-- Share mode infers quote units from price prefixes/ticker exchanges, allows
-  correction and REQUIRES user-entered FX for foreign holdings. Same currency
-  is 1; GBp to GBP is 0.01. Rates are saved per holding/base currency and held
-  constant for projections. No automatic FX feed. Changing currency reinterprets
-  own capital; switching input modes converts quantities where price/FX exist.
+- Share mode asks ONLY for each stock's share count. It infers quote units
+  from price prefixes/ticker exchanges and converts automatically using
+  `https://open.er-api.com/v6/latest/USD` (daily reference rates, no API key).
+  Cross rates are `rates[portfolioCurrency] / rates[quoteCurrency]`;
+  GBp quotes use GBP and a 0.01 factor. Same-currency conversion needs no feed.
+  Manual FX/quote-unit controls are removed; old saved overrides are ignored.
+- The browser caches FX separately under `portfolioSimulatorFx_v1` for 6 hours.
+  Requests coalesce, time out after 8s and back off after failures. Valid saved
+  rates up to 7 days old can be used during outages with a visible date/warning;
+  older, invalid or missing rates block foreign-share calculations, never assume
+  parity or omit a position. A retry button is shown on failure. Rate attribution
+  links to ExchangeRate-API. Only public rates are requested; holdings never leave
+  the browser. Do not publish this provider's rates in live.json (no redistribution).
+- FX is held constant for projections. Changing portfolio currency reinterprets
+  own capital. Mode switching converts the whole portfolio atomically when
+  prices/FX exist; failures preserve existing allocations.
 - No quarterly compounding, rebalancing or Base adjustment. Unallocated cash
   returns 0%. Negative/non-numeric inputs and duplicate tickers are rejected.
   Missing targets leave that quarter blank, never reweighted. Equal weights
@@ -249,8 +260,9 @@ don't rebind it per render.
 - Includes all portfolio tickers (even filtered-out stocks), including DRAM
   with its freshly recomputed unscaled targets. It never modifies data.js.
 - `portfolio-prices-updated` event refreshes results and SVG chart without
-  disturbing input focus. No added polling or external calls.
-- Persists visitor settings (including mode, share counts, FX and APR) under
+  disturbing input focus. It also checks the FX cache age in share mode; no
+  new polling timer or GitHub Actions/Netlify build is needed for FX updates.
+- Persists visitor settings (including mode, share counts and APR) under
   localStorage `portfolioSimulator_v1`; old weight-only settings still load;
   no account, server storage or cross-device synchronization.
 - Test math with `node --test tests/portfolio-simulator.test.js`; verify

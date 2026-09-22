@@ -35,9 +35,8 @@
 .sim-stock-name { font-size: .9rem; overflow-wrap: anywhere; }
 .sim-stock-name small { display: block; color: var(--text-secondary); font-size: .74rem; margin-top: 4px; }
 .sim-weight-label { font-size: .68rem !important; }
-.sim-fx-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-bottom: 4px; }
-.sim-fx-row label { font-size: .7rem; }
-.sim-dialog input[readonly] { opacity: .65; }
+.sim-fx-note a { color: var(--accent); white-space: nowrap; }
+.sim-fx-note button { margin-left: 8px; }
 .sim-margin { color: var(--text-primary); line-height: 1.6; }
 .sim-zero-line { stroke: #ef4444; stroke-width: 1; stroke-dasharray: 3 3; }
 .sim-controls label { min-width: 0; }
