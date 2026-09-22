@@ -22,6 +22,19 @@ def fixture():
 
 
 class SyntheticTests(unittest.TestCase):
+    def test_fixed_base_overrides_components_in_regen_and_live_scoring(self):
+        rows = fixture()
+        rows[-1]['_synthetic'].update(base_method='fixed', base=100)
+        for row in rows[:-1]:
+            row['Base'] = 50
+        refresh_synthetic_rows(rows)
+        self.assertEqual(rows[-1]['Base'], 100)
+        self.assertEqual(rows[-1]['EV Upside'], 45)
+        quotes = {r['Ticker']: (r['Current Price'], 'USD', 0) for r in rows}
+        with patch.object(fetch_live, 'fetch_all', return_value=(quotes, [], [])):
+            payload, _ = fetch_live.build_live_payload({'en': rows})
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], 45)
+
     def test_weighted_base_keeps_fractional_precision(self):
         rows = fixture()
         for row, base in zip(rows, [99, 80, 62, 70]):

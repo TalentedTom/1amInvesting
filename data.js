@@ -3980,14 +3980,15 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "DRAM",
             "Name": "Roundhill Memory ETF - custom weighted model",
-            "Base": 93.71,
+            "Base": 100.0,
             "Current Price": 61.58,
             "Change %": "+3.12%",
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "",
             "Port": "",
             "_synthetic": {
-                "base_method": "weighted",
+                "base_method": "fixed",
+                "base": 100,
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -4030,7 +4031,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of these component Base scores. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is fixed at 100 by the model author. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 142.7540954863296,
             "Q1 2028": 160.92658924878222,
@@ -4048,9 +4049,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 163.54007237131688,
             "Q4 2029": 166.19497646098924,
             "Upside": "2.5x",
-            "EV Upside": 136,
+            "EV Upside": 152,
             "Entry": 63,
-            "Total": 81
+            "Total": 85
         }
     ],
     "zh-CN": [
@@ -8034,14 +8035,15 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "DRAM",
             "Name": "Roundhill Memory ETF - custom weighted model",
-            "Base": 93.71,
+            "Base": 100.0,
             "Current Price": 61.58,
             "Change %": "+3.12%",
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "",
             "Port": "",
             "_synthetic": {
-                "base_method": "weighted",
+                "base_method": "fixed",
+                "base": 100,
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -8084,7 +8086,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of these component Base scores. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is fixed at 100 by the model author. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 142.7540954863296,
             "Q1 2028": 160.92658924878222,
@@ -8102,9 +8104,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 163.54007237131688,
             "Q4 2029": 166.19497646098924,
             "Upside": "2.5x",
-            "EV Upside": 136,
+            "EV Upside": 152,
             "Entry": 63,
-            "Total": 81
+            "Total": 85
         }
     ]
 };

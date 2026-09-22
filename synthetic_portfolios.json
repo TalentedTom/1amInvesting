@@ -2,9 +2,10 @@
   {
     "ticker": "DRAM",
     "name": "Roundhill Memory ETF - custom weighted model",
-    "base_method": "weighted",
+    "base_method": "fixed",
+    "base": 100,
     "seed_quote": {"price": 61.58, "change_pct": 3.12, "as_of": "2026-09-21T23:36:00Z"},
-    "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of these component Base scores. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing.",
+    "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is fixed at 100 by the model author. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing.",
     "holdings": [
       {"ticker": "MU", "weight": 0.25},
       {"ticker": "005930.KS", "weight": 0.25},

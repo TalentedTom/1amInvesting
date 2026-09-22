@@ -47,6 +47,9 @@ def refresh_synthetic_rows(rows):
         bases = [number(by_ticker.get(h["ticker"], {}).get("Base")) for h in holdings]
         row["Base"] = (round(sum(h["weight"] * base for h, base in zip(holdings, bases)), 8)
                        if all(base is not None for base in bases) else "")
+        if model.get("base_method") == "fixed":
+            fixed_base = number(model.get("base"))
+            row["Base"] = fixed_base if fixed_base is not None else ""
         for quarter in quarters:
             weighted_return = 0.0
             complete = price is not None and price > 0
@@ -92,7 +95,7 @@ def add_synthetic_rows(rows, prior_path):
             "Change %": old.get("Change %", f"{seed['change_pct']:+.2f}%"),
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "", "Port": "",
-            "_synthetic": {k: config[k] for k in ("base_method", "holdings", "note")},
+            "_synthetic": {k: config[k] for k in ("base_method", "base", "holdings", "note") if k in config},
         })
     refresh_synthetic_rows(rows)
     print("Added custom ETF models: " + ", ".join(sorted(configured)))

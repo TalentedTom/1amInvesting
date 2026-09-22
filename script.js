@@ -1144,7 +1144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             custom: '\u4ee5\u4e0b\u4e3a\u672c\u7ad9\u9884\u6d4b\u4f7f\u7528\u7684\u56fa\u5b9a\u6743\u91cd\uff0c\u5e76\u975e\u57fa\u91d1\u53d1\u884c\u65b9\u7684\u5b9e\u65f6\u6301\u4ed3\u3002',
             total: '\u5408\u8ba1', how: '\u5b63\u5ea6\u4e0a\u6da8\u7a7a\u95f4\u5982\u4f55\u8ba1\u7b97',
             formula: '\u6bcf\u4e2a\u5b63\u5ea6\uff1a\u5c06\u5404\u516c\u53f8\u76f8\u5bf9\u5f53\u524d\u4ef7\u683c\u7684\u4e0a\u6da8\u767e\u5206\u6bd4\u4e58\u4ee5\u5176\u6743\u91cd\uff0c\u518d\u6c47\u603b\u3002DRAM \u76ee\u6807\u4ef7 = DRAM \u5f53\u524d\u4ef7\u683c \u00d7\uff081 + \u52a0\u6743\u4e0a\u6da8\u7a7a\u95f4\uff09\u3002',
-            base: '\u52a0\u6743 Base\uff08\u5404\u516c\u53f8 Base \u00d7 \u6743\u91cd\u4e4b\u548c\uff09\uff1a',
+            base: row._synthetic.base_method === 'fixed'
+                ? '\u56fa\u5b9a Base\uff08\u6a21\u578b\u8bbe\u5b9a\uff09\uff1a'
+                : '\u52a0\u6743 Base\uff1a',
             note: 'CXMT \u4f7f\u7528 688825.SH \u516c\u53f8\u6a21\u578b\u4ee3\u8868 BTMTQT8 TRS 052427 GS \u4e92\u6362\u655e\u53e3\u3002\u9884\u6d4b\u4e0d\u5305\u542b\u8d39\u7528\u3001\u6c47\u7387\u53d8\u52a8\u3001\u8ddf\u8e2a\u8bef\u5dee\u6216\u672a\u6765\u8c03\u4ed3\uff0c\u5e76\u975e\u53d1\u884c\u65b9\u7684\u9884\u6d4b\u3002',
             link: '\u57fa\u91d1\u53d1\u884c\u65b9\u7f51\u7ad9', close: '\u5173\u95ed ETF \u8bf4\u660e'
         } : {
@@ -1153,7 +1155,9 @@ document.addEventListener('DOMContentLoaded', () => {
             custom: 'These are the fixed weights used for forecasts on this website, not a live holdings feed from the ETF issuer.',
             total: 'Total', how: 'How quarterly upside is calculated',
             formula: "For each quarter, multiply each company's upside percentage versus its current price by its weight, then add the results. DRAM target price = DRAM current price \u00d7 (1 + weighted upside).",
-            base: 'Weighted Base (sum of each component Base x its weight):',
+            base: row._synthetic.base_method === 'fixed'
+                ? 'Fixed Base score (set by the model author):'
+                : 'Weighted Base (sum of each component Base x its weight):',
             note: "CXMT uses the 688825.SH company model to represent the BTMTQT8 TRS 052427 GS swap exposure. Forecasts exclude fees, FX moves, tracking differences and future rebalancing, and are not the issuer's forecasts.",
             link: 'ETF issuer website', close: 'Close ETF information'
         };

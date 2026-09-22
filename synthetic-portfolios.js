@@ -15,6 +15,10 @@
             const bases = (validWeights ? holdings : []).map(h => parseNumber(byTicker.get(h.ticker)?.Base));
             row.Base = validWeights && bases.every(b => Number.isFinite(b) && b >= 0)
                 ? +holdings.reduce((sum, h, i) => sum + h.weight * bases[i], 0).toFixed(8) : '';
+            if (model.base_method === 'fixed') {
+                const fixedBase = parseNumber(model.base);
+                row.Base = Number.isFinite(fixedBase) && fixedBase >= 0 ? fixedBase : '';
+            }
             const base = parseNumber(row.Base);
             for (const quarter of quarters) {
                 let complete = validWeights && Number.isFinite(price) && price > 0;

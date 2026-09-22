@@ -8,6 +8,14 @@ const fixture = () => [
         holdings: [...'ABCD'].map(ticker => ({ticker, weight: .25}))}}
 ];
 const update = rows => refresh(rows, ['Q3 2027'], parse);
+test('fixed Base remains 100 after component changes and repeated refreshes', () => {
+    const rows = fixture();
+    rows[4]._synthetic.base_method = 'fixed';
+    rows.slice(0, 4).forEach(row => row.Base = 50);
+    update(rows); update(rows);
+    assert.equal(rows[4].Base, 100);
+    assert.equal(rows[4]['EV Upside'], 45);
+});
 test('fractional weighted Base and EV, not a fixed or truncated Base', () => {
     const rows = fixture();
     [99, 80, 62, 70].forEach((base, i) => rows[i].Base = base);
