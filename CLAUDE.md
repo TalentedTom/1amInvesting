@@ -224,6 +224,26 @@ don't rebind it per render.
 - Checks: `python -m unittest discover -s tests -p 'test_synthetic*.py'`
   and `node --test tests/synthetic-portfolios.test.js`.
 
+## Portfolio Simulator
+
+- `portfolio-simulator.js` / `.css`: standalone native dialog opened by the
+  Portfolio Simulator button beside the filter bar. Inputs are starting
+  amount, display currency, tickers, percentage weights and 20x/25x/30x.
+- Calculates each quarter independently as `amount * (cashWeight +
+  sum(stockWeight * multiple/20 * target/currentPrice))`. No quarterly
+  compounding, rebalancing, Base adjustment or currency mixing. FX is held
+  constant; currency changes denomination only. Unallocated cash returns 0%.
+- More than 100%, negative/non-numeric weights and duplicate tickers are
+  rejected. Missing targets leave that quarter blank, never reweighted.
+- Includes all portfolio tickers (even filtered-out stocks), including DRAM
+  with its freshly recomputed unscaled targets. It never modifies data.js.
+- `portfolio-prices-updated` event refreshes results and SVG chart without
+  disturbing input focus. No added polling or external calls.
+- Persists only visitor settings under localStorage `portfolioSimulator_v1`;
+  no account, server storage or cross-device synchronization.
+- Test math with `node --test tests/portfolio-simulator.test.js`; verify
+  desktop/mobile dialog, local persistence, light/dark and English/Chinese.
+
 ## Working style / preferences (learned over many sessions)
 
 - The owner says "update the website" ~daily; just run the pipeline and report

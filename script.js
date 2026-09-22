@@ -247,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // and live under fullData['zh-CN'] etc. — those don't go through here.
     const I18N = {
         'en': {
+            portfolio_simulator: 'Portfolio Simulator',
             news_carousel_label: "News bulletins",
             news_browse: "Swipe left or right to browse news",
             news_previous: "Previous bulletin",
@@ -352,6 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
             live_label: 'Live',
         },
         'zh-CN': {
+            portfolio_simulator: '\u6295\u8d44\u7ec4\u5408\u6a21\u62df\u5668',
             news_carousel_label: "\u65b0\u95fb\u516c\u544a",
             news_browse: "\u5de6\u53f3\u6ed1\u52a8\u6d4f\u89c8\u65b0\u95fb",
             news_previous: "\u4e0a\u4e00\u6761\u516c\u544a",
@@ -1597,7 +1599,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Live prices just changed, so every quarter's %-vs-price badge is now
         // stale. The cache is keyed on the (reused) row objects, so drop it
         // wholesale to force a recompute on the re-render that follows.
-        if (touched) _qPctCache = new WeakMap();
+        if (touched) {
+            _qPctCache = new WeakMap();
+            window.dispatchEvent(new Event('portfolio-prices-updated'));
+        }
         return touched;
     }
 
@@ -2513,6 +2518,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // .has-deep-dive class lands on the right tickers.
     renderData();
     loadDeepDiveManifest().then(() => renderData());
+
+    window.PortfolioSimulator.init({
+        quarters: QUARTER_COLS,
+        parseNumber: parseLooseNumber,
+        getMultiple: () => targetMultiple,
+        getLang: () => currentLang,
+        getName: row => TAIWAN_ENGLISH_NAMES[row.Ticker] || row.Name || row.Ticker,
+        getRows: () => {
+            // Independent snapshot: include every ticker, irrespective of table
+            // filters; derive DRAM once at the unscaled 20x baseline.
+            const rows = (window.PORTFOLIO_DATA.en || []).map(row => ({...row}));
+            window.SyntheticPortfolios.refresh(rows, QUARTER_COLS, parseLooseNumber);
+            return rows;
+        }
+    });
 
     // Live-price polling. Fire the first fetch immediately (so the
     // initial paint upgrades to fresh prices within ~500 ms), then on

@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio-simulator.css">
 </head>
 <body>
     <div class="app-container">
@@ -260,7 +261,12 @@
              a deep-dive on file — selecting a result opens its deep-dive
              modal directly. -->
         <section class="filter-bar" id="filter-bar">
-            <div class="sc-spacer" aria-hidden="true"></div>
+            <div class="sim-launch">
+                <button id="portfolio-simulator-btn" class="sc-pill" type="button" aria-haspopup="dialog" aria-controls="portfolio-simulator">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18M6 15l5-5 4 3 6-8"/></svg>
+                    <span data-i18n="portfolio_simulator">Portfolio Simulator</span>
+                </button>
+            </div>
             <div class="sc-controls">
                 <!-- Each filter is wrapped in its own .filter-group so the two
                      can sit side-by-side (SuperCycle | Region) on mobile rather
@@ -382,6 +388,7 @@
 
     <script src="data.js"></script>
     <script src="synthetic-portfolios.js"></script>
+    <script src="portfolio-simulator.js"></script>
     <script src="script.js"></script>
     <!-- Dilution alert signup. Self-contained: injects its own button, modal and
          styles. Removing this one line removes the feature entirely. -->

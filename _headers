@@ -30,6 +30,12 @@
 /synthetic-portfolios.js
   Cache-Control: no-store
 
+/portfolio-simulator.js
+  Cache-Control: no-store
+
+/portfolio-simulator.css
+  Cache-Control: no-store
+
 /styles.css
   Cache-Control: no-store
 
