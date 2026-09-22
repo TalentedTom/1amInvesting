@@ -1183,7 +1183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textElement('p', `${copy.total}: ${+(total * 100).toFixed(2)}%`).className = 'etf-weight-total';
         textElement('h3', copy.how);
         textElement('p', copy.formula);
-        textElement('p', `${copy.base} ${+Number(row.Base).toFixed(2)}`);
+        textElement('p', `${copy.base} ${Number(row.Base).toFixed(0)}`);
         textElement('p', copy.note).className = 'etf-model-note';
         const link = textElement('a', copy.link);
         link.href = 'https://www.roundhillinvestments.com/etf/dram/';
@@ -2482,7 +2482,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const style = extreme
                     ? `background:${c.bg};color:${c.text};`
                     : `background:${c.bg};color:${c.text};border-color:${c.bg};`;
-                return `<span class="${cls}" style="${style}">${value}</span>`;
+                const displayScore = colName === 'Base' ? scoreNum.toFixed(0) : value;
+                return `<span class="${cls}" style="${style}">${displayScore}</span>`;
             }
             return `<span style="font-weight: 600;">${value}</span>`;
         }
