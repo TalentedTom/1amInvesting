@@ -463,6 +463,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     I18N['zh-CN'].pdf_open = '\u6253\u5f00 PDF';
     I18N['zh-CN'].pdf_hint = '\u5982\u679c\u9884\u89c8\u65e0\u6cd5\u663e\u793a\uff0c\u8bf7\u5728\u65b0\u6807\u7b7e\u9875\u6253\u5f00 PDF\u3002';
+    I18N.en.hint_text = 'Click SIVE.ST to read its public PDF analysis';
+    I18N['zh-CN'].hint_text = '\u70b9\u51fb SIVE.ST \u67e5\u770b\u516c\u5f00\u7684 PDF \u5206\u6790';
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
         let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
@@ -973,11 +975,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return fetch('deep-dives/index.json', { cache: 'no-cache' })
             .then((r) => (r.ok ? r.json() : []))
             .then((manifest) => {
-                // Accept legacy ticker arrays and new format-aware manifests.
+                // Only the Sivers PDF is public, even if an old manifest is cached.
                 const entries = Array.isArray(manifest)
                     ? manifest.map(t => [t, {format: 'md'}]) : Object.entries(manifest || {});
                 deepDiveArtifacts = new Map(entries.filter(([ticker, item]) =>
-                    /^[A-Za-z0-9.^=-]+$/.test(ticker) && ['md', 'pdf'].includes(item?.format)));
+                    ticker === 'SIVE.ST' && item?.format === 'pdf'));
                 deepDiveAvailable = new Set(deepDiveArtifacts.keys());
             })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
@@ -1227,7 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function openDeepDive(ticker) {
-        if (!ticker) return;
+        if (ticker !== 'SIVE.ST' || deepDiveArtifacts.get(ticker)?.format !== 'pdf') return;
         const request = ++deepDiveRequest;
         const artifact = deepDiveArtifacts.get(ticker) || {format: 'md'};
         deepDiveModal.classList.toggle('pdf-mode', artifact.format === 'pdf');

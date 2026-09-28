@@ -15,9 +15,9 @@ and find the first matching artifact. Falls back to alphanum-equal match
 to catch HPSA.TO ↔ HPS-A.TO style mismatches.
 
 Only the SIVE.ST PDF is public (owner restriction, 2026-09-28).
-Other stock PDFs stay private, with no Markdown fallback for those stocks.
-Markdown-only publication retains the original AAOI/Sivers/China allowlist.
-Never copy frameworks or unrelated PDFs.
+ALL Markdown and other stock PDFs stay private, including AAOI and China.
+No Markdown fallback is permitted, even for SIVE.ST.
+Never copy frameworks or unrelated artifacts.
 
 Run from the repo root:
     python scripts/sync_deep_dives.py
@@ -93,18 +93,8 @@ def load_artifacts():
             and (f.suffix.lower() == ".pdf" or f.name.endswith("_DeepDive.md"))}
 
 
-# Separate PDF and Markdown-only publication policies.
-PDF_ALLOW_EXPLICIT = {"SIVE.ST"}
-# Chinese exchanges (.SZ, .SH, .SS,
-# .SSE, .SZSE, .HK) are matched by suffix; explicit names cover non-Chinese.
-DEEP_DIVE_ALLOW_SUFFIXES = (".SZ", ".SH", ".SS", ".SSE", ".SZSE", ".HK")
-DEEP_DIVE_ALLOW_EXPLICIT = {"AAOI", "SIVE.ST"}
-
-
-def _is_allowed(ticker):
-    if ticker in DEEP_DIVE_ALLOW_EXPLICIT:
-        return True
-    return any(ticker.upper().endswith(s) for s in DEEP_DIVE_ALLOW_SUFFIXES)
+# Exact ticker + format allowlist. No exchange-wide or Markdown exceptions.
+PUBLIC_ARTIFACTS = {"SIVE.ST": ".pdf"}
 
 
 def load_tickers():
@@ -162,28 +152,26 @@ def find_match(ticker, artifacts):
 
 
 def select_artifact(ticker, artifacts):
-    """Only Sivers' PDF is public; do not expose a private PDF as Markdown."""
-    pdfs = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".pdf"}
-    match = find_match(ticker, pdfs)
-    if match[0] is not None:
-        return match if ticker in PDF_ALLOW_EXPLICIT else (None, None)
-    if _is_allowed(ticker):
-        markdown = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".md"}
-        return find_match(ticker, markdown)
-    return None, None
+    """Publish only the explicitly allowed ticker and document format."""
+    extension = PUBLIC_ARTIFACTS.get(ticker)
+    if extension is None:
+        return None, None
+    candidates = {name: path for name, path in artifacts.items() if path.suffix.lower() == extension}
+    return find_match(ticker, candidates)
 
 
-def prune_private_pdfs():
+def prune_private_artifacts():
     """Remove generated public copies only, never source Artifacts files."""
     output_root = DEEP_DIVES.resolve()
     if output_root != (REPO / "deep-dives").resolve() or output_root == ARTIFACTS.resolve():
         raise ValueError("Unexpected deep-dives output directory")
     removed = []
+    allowed_names = {ticker + extension for ticker, extension in PUBLIC_ARTIFACTS.items()}
     for path in DEEP_DIVES.iterdir():
-        if path.suffix.lower() != ".pdf" or path.stem in PDF_ALLOW_EXPLICIT:
+        if path.suffix.lower() not in {".pdf", ".md"} or path.name in allowed_names:
             continue
         if path.resolve().parent != output_root or not path.is_file():
-            raise ValueError(f"Unsafe generated PDF path: {path}")
+            raise ValueError(f"Unsafe generated artifact path: {path}")
         path.unlink()
         removed.append(path.name)
     return sorted(removed)
@@ -205,7 +193,7 @@ def main():
     for ticker in tickers:
         path, src_name = select_artifact(ticker, artifacts)
         if path is None:
-            if _is_allowed(ticker):
+            if ticker in PUBLIC_ARTIFACTS:
                 missing.append(ticker)
             continue
         if not re.fullmatch(r"[A-Za-z0-9.^=-]+", ticker):
@@ -227,9 +215,9 @@ def main():
         for t in missing:
             print(f"  {t}")
 
-    removed = prune_private_pdfs()
+    removed = prune_private_artifacts()
     if removed:
-        print(f"\nRemoved {len(removed)} private PDF copies from public output: " + ", ".join(removed))
+        print(f"\nRemoved {len(removed)} private artifact copies from public output: " + ", ".join(removed))
 
     # Write manifest of available deep-dives. The frontend reads this to
     # decide which ticker symbols get clickable styling and which render

@@ -25,11 +25,11 @@ class ArtifactSyncTests(unittest.TestCase):
             result[name] = path
         return result
 
-    def test_private_pdf_blocked_but_markdown_only_allowlist_unchanged(self):
+    def test_all_markdown_and_other_pdfs_are_private(self):
         files = self.artifacts('MU_Micron_DeepDive.md', 'AAOI_DeepDive.md', '300308SZ_DeepDive.md')
         self.assertEqual(sync.select_artifact('MU', files), (None, None))
-        self.assertIsNotNone(sync.select_artifact('AAOI', files)[0])
-        self.assertIsNotNone(sync.select_artifact('300308.SZ', files)[0])
+        self.assertEqual(sync.select_artifact('AAOI', files), (None, None))
+        self.assertEqual(sync.select_artifact('300308.SZ', files), (None, None))
         files.update(self.artifacts('MU_Micron_DeepDive.pdf'))
         self.assertEqual(sync.select_artifact('MU', files), (None, None))
         files.update(self.artifacts('300308SZ_DeepDive.pdf'))
@@ -38,6 +38,10 @@ class ArtifactSyncTests(unittest.TestCase):
     def test_pdf_preferred_over_allowed_markdown(self):
         files = self.artifacts('SIVE.ST_DeepDive.md', 'SIVE.ST_DeepDive.pdf')
         self.assertEqual(sync.select_artifact('SIVE.ST', files)[0].suffix, '.pdf')
+
+    def test_sive_markdown_is_never_a_fallback(self):
+        files = self.artifacts('SIVE.ST_DeepDive.md')
+        self.assertEqual(sync.select_artifact('SIVE.ST', files), (None, None))
 
     def test_aliases_and_versioned_wrappers(self):
         cases = [('6510.TWO', '6510TW_Chunghwa_DeepDive.pdf'),
@@ -69,23 +73,29 @@ class ArtifactSyncTests(unittest.TestCase):
         destination = self.root / 'deep-dives'
         destination.mkdir()
         (destination / 'MU.pdf').write_bytes(files['MU_Micron_DeepDive.pdf'].read_bytes())
+        for name in ['AAOI.md', '300308.SZ.md', 'SIVE.ST.md', 'OLD.md']:
+            (destination / name).write_bytes(b'# Previously public')
         with patch.object(sync, 'REPO', self.root), patch.object(sync, 'DEEP_DIVES', destination), \
                 patch.object(sync, 'load_artifacts', return_value=files), \
                 patch.object(sync, 'load_tickers', return_value=['SIVE.ST', 'MU', 'AAOI', 'NVDA']):
             sync.main()
         manifest = json.loads((destination / 'index.json').read_text())
-        self.assertEqual(set(manifest), {'SIVE.ST', 'AAOI'})
+        self.assertEqual(set(manifest), {'SIVE.ST'})
         for ticker, item in manifest.items():
             content = (destination / f"{ticker}.{item['format']}").read_bytes()
             self.assertEqual(item['version'], hashlib.sha256(content).hexdigest()[:16])
         self.assertEqual((destination / 'SIVE.ST.pdf').read_bytes(), files['SIVE.ST_DeepDive.pdf'].read_bytes())
         self.assertFalse((destination / 'MU.pdf').exists())
         self.assertTrue(files['MU_Micron_DeepDive.pdf'].exists())
+        self.assertTrue(files['AAOI_DeepDive.md'].exists())
+        self.assertEqual({p.name for p in destination.iterdir()}, {'SIVE.ST.pdf', 'index.json'})
+        with patch.object(sync, 'REPO', self.root), patch.object(sync, 'DEEP_DIVES', destination):
+            self.assertEqual(sync.prune_private_artifacts(), [])
 
     def test_pruning_rejects_source_directory(self):
         with patch.object(sync, 'REPO', self.root), patch.object(sync, 'DEEP_DIVES', self.root):
             with self.assertRaises(ValueError):
-                sync.prune_private_pdfs()
+                sync.prune_private_artifacts()
 
 
 if __name__ == '__main__':
