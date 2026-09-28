@@ -25,13 +25,15 @@ class ArtifactSyncTests(unittest.TestCase):
             result[name] = path
         return result
 
-    def test_pdf_public_but_markdown_allowlist_unchanged(self):
+    def test_private_pdf_blocked_but_markdown_only_allowlist_unchanged(self):
         files = self.artifacts('MU_Micron_DeepDive.md', 'AAOI_DeepDive.md', '300308SZ_DeepDive.md')
         self.assertEqual(sync.select_artifact('MU', files), (None, None))
         self.assertIsNotNone(sync.select_artifact('AAOI', files)[0])
         self.assertIsNotNone(sync.select_artifact('300308.SZ', files)[0])
         files.update(self.artifacts('MU_Micron_DeepDive.pdf'))
-        self.assertEqual(sync.select_artifact('MU', files)[1], 'MU_Micron_DeepDive.pdf')
+        self.assertEqual(sync.select_artifact('MU', files), (None, None))
+        files.update(self.artifacts('300308SZ_DeepDive.pdf'))
+        self.assertEqual(sync.select_artifact('300308.SZ', files), (None, None))
 
     def test_pdf_preferred_over_allowed_markdown(self):
         files = self.artifacts('SIVE.ST_DeepDive.md', 'SIVE.ST_DeepDive.pdf')
@@ -46,7 +48,8 @@ class ArtifactSyncTests(unittest.TestCase):
         files = self.artifacts(*(name for _, name in cases))
         for ticker, name in cases:
             with self.subTest(ticker=ticker):
-                self.assertEqual(sync.select_artifact(ticker, files)[1], name)
+                self.assertEqual(sync.find_match(ticker, files)[1], name)
+                self.assertEqual(sync.select_artifact(ticker, files), (None, None))
 
     def test_framework_and_partial_ticker_do_not_match(self):
         files = self.artifacts('FRAMEWORK_v6.0.2_CONSOLIDATED.pdf', 'MU_Micron_DeepDive.pdf')
@@ -57,23 +60,32 @@ class ArtifactSyncTests(unittest.TestCase):
         files = self.artifacts('MU_B_DeepDive.pdf', 'MU_A_DeepDive.pdf')
         for path in files.values():
             os.utime(path, (100, 100))
-        self.assertEqual(sync.select_artifact('MU', files)[1], 'MU_A_DeepDive.pdf')
+        self.assertEqual(sync.find_match('MU', files)[1], 'MU_A_DeepDive.pdf')
         os.utime(files['MU_B_DeepDive.pdf'], (200, 200))
-        self.assertEqual(sync.select_artifact('MU', files)[1], 'MU_B_DeepDive.pdf')
+        self.assertEqual(sync.find_match('MU', files)[1], 'MU_B_DeepDive.pdf')
 
     def test_manifest_versions_match_copied_content(self):
-        files = self.artifacts('MU_Micron_DeepDive.pdf', 'AAOI_DeepDive.md', 'NVDA_DeepDive.md')
+        files = self.artifacts('SIVE.ST_DeepDive.pdf', 'MU_Micron_DeepDive.pdf', 'AAOI_DeepDive.md', 'NVDA_DeepDive.md')
         destination = self.root / 'deep-dives'
+        destination.mkdir()
+        (destination / 'MU.pdf').write_bytes(files['MU_Micron_DeepDive.pdf'].read_bytes())
         with patch.object(sync, 'REPO', self.root), patch.object(sync, 'DEEP_DIVES', destination), \
                 patch.object(sync, 'load_artifacts', return_value=files), \
-                patch.object(sync, 'load_tickers', return_value=['MU', 'AAOI', 'NVDA']):
+                patch.object(sync, 'load_tickers', return_value=['SIVE.ST', 'MU', 'AAOI', 'NVDA']):
             sync.main()
         manifest = json.loads((destination / 'index.json').read_text())
-        self.assertEqual(set(manifest), {'MU', 'AAOI'})
+        self.assertEqual(set(manifest), {'SIVE.ST', 'AAOI'})
         for ticker, item in manifest.items():
             content = (destination / f"{ticker}.{item['format']}").read_bytes()
             self.assertEqual(item['version'], hashlib.sha256(content).hexdigest()[:16])
-        self.assertEqual((destination / 'MU.pdf').read_bytes(), files['MU_Micron_DeepDive.pdf'].read_bytes())
+        self.assertEqual((destination / 'SIVE.ST.pdf').read_bytes(), files['SIVE.ST_DeepDive.pdf'].read_bytes())
+        self.assertFalse((destination / 'MU.pdf').exists())
+        self.assertTrue(files['MU_Micron_DeepDive.pdf'].exists())
+
+    def test_pruning_rejects_source_directory(self):
+        with patch.object(sync, 'REPO', self.root), patch.object(sync, 'DEEP_DIVES', self.root):
+            with self.assertRaises(ValueError):
+                sync.prune_private_pdfs()
 
 
 if __name__ == '__main__':

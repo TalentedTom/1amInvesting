@@ -226,11 +226,13 @@ don't rebind it per render.
 
 ## Public PDF stock artifacts (September 28, 2026)
 
-- The owner explicitly approved publishing PDFs for ALL portfolio stocks, not
-  just AAOI/Sivers/China. Source Excel and framework PDFs remain private.
+- CURRENT POLICY: only the SIVE.ST PDF is public. The owner revoked the earlier
+  all-stock-PDF approval on September 28. Other PDFs, Excel and frameworks stay
+  private; never restore them during a routine refresh.
 - `scripts/sync_deep_dives.py` matches root-level Artifacts PDFs to data.js
   tickers, including versioned names, the SKHY wrapper and exchange aliases.
-  PDFs take precedence; Markdown-only research keeps the existing allowlist.
+  PDFs take precedence only for SIVE.ST. A private PDF has no Markdown fallback;
+  other Markdown-only research keeps the existing allowlist unchanged.
   Newest matching PDF wins, with deterministic tie-breaking. Original source
   documents are copied unchanged, never rewritten or flattened.
 - `deep-dives/index.json` maps tickers to `{format, version}`. The version is a
@@ -239,8 +241,12 @@ don't rebind it per render.
 - PDFs open inside the existing modal with a visible Open PDF link for native
   viewing on phones and other browsers. Close/Escape returns to the portfolio.
   Async responses cannot overwrite a newer viewer or reopen a closed modal.
-- Routine morning publication uses this same sync script, so future matching
-  stock PDFs are included automatically under this updated authorization.
+- The sync script removes non-allowlisted PDF copies from deep-dives/ so direct
+  links cannot serve them on the current website. Local Artifacts originals are
+  untouched. Routine morning publication must preserve this SIVE-only PDF rule.
+- Removing current files does not purge earlier public GitHub history, old
+  deployments or previously downloaded copies. Do not claim retroactive secrecy
+  or rewrite repository history without separate owner authorization.
 - Test matching/privacy rules: `python -m unittest discover -s tests -p 'test_sync_deep_dives.py'`.
 
 ## Portfolio Simulator

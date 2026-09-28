@@ -14,9 +14,10 @@ Strategy: for each ticker in data.js, generate candidate filename prefixes
 and find the first matching artifact. Falls back to alphanum-equal match
 to catch HPSA.TO ↔ HPS-A.TO style mismatches.
 
-PDFs are public for all matching portfolio stocks (owner request, 2026-09-28).
-Prefer PDFs whenever present; Markdown-only publication retains the original
-AAOI/Sivers/China allowlist. Never copy frameworks or unrelated PDFs.
+Only the SIVE.ST PDF is public (owner restriction, 2026-09-28).
+Other stock PDFs stay private, with no Markdown fallback for those stocks.
+Markdown-only publication retains the original AAOI/Sivers/China allowlist.
+Never copy frameworks or unrelated PDFs.
 
 Run from the repo root:
     python scripts/sync_deep_dives.py
@@ -92,7 +93,8 @@ def load_artifacts():
             and (f.suffix.lower() == ".pdf" or f.name.endswith("_DeepDive.md"))}
 
 
-# Markdown-only allowlist. Stock PDFs are public for all matching tickers.
+# Separate PDF and Markdown-only publication policies.
+PDF_ALLOW_EXPLICIT = {"SIVE.ST"}
 # Chinese exchanges (.SZ, .SH, .SS,
 # .SSE, .SZSE, .HK) are matched by suffix; explicit names cover non-Chinese.
 DEEP_DIVE_ALLOW_SUFFIXES = (".SZ", ".SH", ".SS", ".SSE", ".SZSE", ".HK")
@@ -160,15 +162,31 @@ def find_match(ticker, artifacts):
 
 
 def select_artifact(ticker, artifacts):
-    """Prefer stock PDFs without broadening Markdown-only publication."""
+    """Only Sivers' PDF is public; do not expose a private PDF as Markdown."""
     pdfs = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".pdf"}
     match = find_match(ticker, pdfs)
     if match[0] is not None:
-        return match
+        return match if ticker in PDF_ALLOW_EXPLICIT else (None, None)
     if _is_allowed(ticker):
         markdown = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".md"}
         return find_match(ticker, markdown)
     return None, None
+
+
+def prune_private_pdfs():
+    """Remove generated public copies only, never source Artifacts files."""
+    output_root = DEEP_DIVES.resolve()
+    if output_root != (REPO / "deep-dives").resolve() or output_root == ARTIFACTS.resolve():
+        raise ValueError("Unexpected deep-dives output directory")
+    removed = []
+    for path in DEEP_DIVES.iterdir():
+        if path.suffix.lower() != ".pdf" or path.stem in PDF_ALLOW_EXPLICIT:
+            continue
+        if path.resolve().parent != output_root or not path.is_file():
+            raise ValueError(f"Unsafe generated PDF path: {path}")
+        path.unlink()
+        removed.append(path.name)
+    return sorted(removed)
 
 
 def main():
@@ -205,9 +223,13 @@ def main():
     for filename, src in copied:
         print(f"  {filename}   <- {src}")
     if missing:
-        print(f"\nNo artifact found for {len(missing)} tickers:")
+        print(f"\nNo public artifact selected for {len(missing)} tickers:")
         for t in missing:
             print(f"  {t}")
+
+    removed = prune_private_pdfs()
+    if removed:
+        print(f"\nRemoved {len(removed)} private PDF copies from public output: " + ", ".join(removed))
 
     # Write manifest of available deep-dives. The frontend reads this to
     # decide which ticker symbols get clickable styling and which render
