@@ -224,6 +224,25 @@ don't rebind it per render.
 - Checks: `python -m unittest discover -s tests -p 'test_synthetic*.py'`
   and `node --test tests/synthetic-portfolios.test.js`.
 
+## Public PDF stock artifacts (September 28, 2026)
+
+- The owner explicitly approved publishing PDFs for ALL portfolio stocks, not
+  just AAOI/Sivers/China. Source Excel and framework PDFs remain private.
+- `scripts/sync_deep_dives.py` matches root-level Artifacts PDFs to data.js
+  tickers, including versioned names, the SKHY wrapper and exchange aliases.
+  PDFs take precedence; Markdown-only research keeps the existing allowlist.
+  Newest matching PDF wins, with deterministic tie-breaking. Original source
+  documents are copied unchanged, never rewritten or flattened.
+- `deep-dives/index.json` maps tickers to `{format, version}`. The version is a
+  content hash for cache busting. The frontend also accepts the old array format.
+  Stock clicks, search and previous/next navigation support PDFs and Markdown.
+- PDFs open inside the existing modal with a visible Open PDF link for native
+  viewing on phones and other browsers. Close/Escape returns to the portfolio.
+  Async responses cannot overwrite a newer viewer or reopen a closed modal.
+- Routine morning publication uses this same sync script, so future matching
+  stock PDFs are included automatically under this updated authorization.
+- Test matching/privacy rules: `python -m unittest discover -s tests -p 'test_sync_deep_dives.py'`.
+
 ## Portfolio Simulator
 
 - `portfolio-simulator.js` / `.css`: standalone native dialog opened by the

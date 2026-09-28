@@ -1,5 +1,5 @@
 """
-Copy deep-dive markdown files from the user's local Artifacts folder into
+Copy public stock artifacts from the user's local Artifacts folder into
 the repo's deep-dives/ folder, naming each one to match the ticker as it
 appears in data.js (e.g. SIVE.ST.md, HPS-A.TO.md, BESI.AS.md).
 
@@ -14,11 +14,16 @@ Strategy: for each ticker in data.js, generate candidate filename prefixes
 and find the first matching artifact. Falls back to alphanum-equal match
 to catch HPSA.TO ↔ HPS-A.TO style mismatches.
 
+PDFs are public for all matching portfolio stocks (owner request, 2026-09-28).
+Prefer PDFs whenever present; Markdown-only publication retains the original
+AAOI/Sivers/China allowlist. Never copy frameworks or unrelated PDFs.
+
 Run from the repo root:
     python scripts/sync_deep_dives.py
 """
 
 import json
+import hashlib
 import re
 import shutil
 import sys
@@ -63,8 +68,11 @@ def candidate_prefixes(ticker):
         suffix_synonyms = {
             "SZ": ["SZSE"],     # Shenzhen short -> full
             "SZSE": ["SZ"],     # Shenzhen full -> short
-            "SS": ["SSE"],      # Shanghai short -> full
-            "SSE": ["SS"],      # Shanghai full -> short
+            "SS": ["SSE", "SH"],
+            "SSE": ["SS", "SH"],
+            "SH": ["SS", "SSE"],
+            "TW": ["TWO"],
+            "TWO": ["TW"],
         }
         for alt in suffix_synonyms.get(suffix.upper(), []):
             yield from add(f"{base}.{alt}")
@@ -80,10 +88,12 @@ def load_artifacts():
     if not ARTIFACTS.exists():
         print(f"Artifacts folder not found at {ARTIFACTS}", file=sys.stderr)
         sys.exit(1)
-    return {f.name: f for f in ARTIFACTS.glob("*_DeepDive.md")}
+    return {f.name: f for f in ARTIFACTS.iterdir() if f.is_file()
+            and (f.suffix.lower() == ".pdf" or f.name.endswith("_DeepDive.md"))}
 
 
-# Only sync deep dives for these tickers. Chinese exchanges (.SZ, .SH, .SS,
+# Markdown-only allowlist. Stock PDFs are public for all matching tickers.
+# Chinese exchanges (.SZ, .SH, .SS,
 # .SSE, .SZSE, .HK) are matched by suffix; explicit names cover non-Chinese.
 DEEP_DIVE_ALLOW_SUFFIXES = (".SZ", ".SH", ".SS", ".SSE", ".SZSE", ".HK")
 DEEP_DIVE_ALLOW_EXPLICIT = {"AAOI", "SIVE.ST"}
@@ -110,8 +120,7 @@ def load_tickers():
         t = (row.get("Ticker") or "").strip()
         if not t or "PRE-IPO" in t:
             continue
-        if _is_allowed(t):
-            out.append(t)
+        out.append(t)
     return out
 
 
@@ -143,11 +152,23 @@ def find_match(ticker, artifacts):
         # Newest mtime wins, deterministically; surface the losers so stale
         # duplicate sources in Artifacts/ get noticed instead of silently
         # shipping the wrong analysis.
-        matches.sort(key=lambda pf: pf[0].stat().st_mtime, reverse=True)
+        matches.sort(key=lambda pf: (-pf[0].stat().st_mtime, pf[1].casefold()))
         losers = ", ".join(fn for _, fn in matches[1:])
         print(f"  WARNING: {ticker}: {len(matches)} colliding artifacts - "
               f"using newest '{matches[0][1]}' (ignored: {losers})")
     return matches[0]
+
+
+def select_artifact(ticker, artifacts):
+    """Prefer stock PDFs without broadening Markdown-only publication."""
+    pdfs = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".pdf"}
+    match = find_match(ticker, pdfs)
+    if match[0] is not None:
+        return match
+    if _is_allowed(ticker):
+        markdown = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".md"}
+        return find_match(ticker, markdown)
+    return None, None
 
 
 def main():
@@ -162,20 +183,27 @@ def main():
     tickers = load_tickers()
     print(f"Scanning {len(artifacts)} artifact files for {len(tickers)} tickers...\n")
 
-    copied, missing = [], []
+    copied, missing, manifest = [], [], {}
     for ticker in tickers:
-        path, src_name = find_match(ticker, artifacts)
+        path, src_name = select_artifact(ticker, artifacts)
         if path is None:
-            missing.append(ticker)
+            if _is_allowed(ticker):
+                missing.append(ticker)
             continue
-        dst = DEEP_DIVES / f"{ticker}.md"
+        if not re.fullmatch(r"[A-Za-z0-9.^=-]+", ticker):
+            raise ValueError(f"Unsafe artifact ticker: {ticker!r}")
+        content = path.read_bytes()
+        extension = path.suffix.lower()
+        if extension == ".pdf" and not content.startswith(b"%PDF-"):
+            raise ValueError(f"Invalid PDF artifact: {src_name}")
+        dst = DEEP_DIVES / f"{ticker}{extension}"
         shutil.copy2(path, dst)
-        copied.append((ticker, src_name))
+        copied.append((ticker + extension, src_name))
+        manifest[ticker] = {"format": extension[1:], "version": hashlib.sha256(content).hexdigest()[:16]}
 
     print(f"Copied {len(copied)} deep-dives to {DEEP_DIVES.relative_to(REPO)}/:")
-    for ticker, src in copied:
-        tag = "" if src.startswith(ticker + "_") else f"   <- {src}"
-        print(f"  {ticker}.md{tag}")
+    for filename, src in copied:
+        print(f"  {filename}   <- {src}")
     if missing:
         print(f"\nNo artifact found for {len(missing)} tickers:")
         for t in missing:
@@ -184,10 +212,12 @@ def main():
     # Write manifest of available deep-dives. The frontend reads this to
     # decide which ticker symbols get clickable styling and which render
     # as plain text (implicit signal that no deep-dive exists yet).
-    manifest = sorted(t for t, _ in copied)
+    manifest = dict(sorted(manifest.items()))
     manifest_path = DEEP_DIVES / "index.json"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"\nWrote manifest with {len(manifest)} tickers: {manifest_path.relative_to(REPO)}")
+    print(f"Public formats: {sum(v['format'] == 'pdf' for v in manifest.values())} PDFs, "
+          f"{sum(v['format'] == 'md' for v in manifest.values())} Markdown files")
 
 
 if __name__ == "__main__":

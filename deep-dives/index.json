@@ -1,29 +1,206 @@
-[
-  "000636.SZ",
-  "000725.SZ",
-  "000938.SZ",
-  "002371.SZ",
-  "002384.SZ",
-  "002409.SZ",
-  "002428.SZ",
-  "002484.SZ",
-  "1888.HK",
-  "300136.SZ",
-  "300223.SZ",
-  "300285.SZ",
-  "300408.SZ",
-  "300666.SZ",
-  "301308.SZ",
-  "600330.SH",
-  "600363.SH",
-  "600584.SH",
-  "603986.SH",
-  "688008.SH",
-  "688012.SH",
-  "688072.SH",
-  "688120.SH",
-  "688409.SH",
-  "688596.SH",
-  "AAOI",
-  "SIVE.ST"
-]
+{
+  "000636.SZ": {
+    "format": "md",
+    "version": "0cc91110b3ea544d"
+  },
+  "000660.KS": {
+    "format": "pdf",
+    "version": "afef55a6c5f9f0e2"
+  },
+  "000725.SZ": {
+    "format": "md",
+    "version": "6a754f60ba54ef3a"
+  },
+  "000938.SZ": {
+    "format": "md",
+    "version": "7fe0612142fc0eab"
+  },
+  "002371.SZ": {
+    "format": "md",
+    "version": "9b6c918c93711eb9"
+  },
+  "002384.SZ": {
+    "format": "md",
+    "version": "5a509950701c9afc"
+  },
+  "002409.SZ": {
+    "format": "md",
+    "version": "fbe7ca05ec127a91"
+  },
+  "002428.SZ": {
+    "format": "md",
+    "version": "3864a70b2bdf033e"
+  },
+  "002484.SZ": {
+    "format": "md",
+    "version": "147523ed139ffa4d"
+  },
+  "005930.KS": {
+    "format": "pdf",
+    "version": "d163734738ec723d"
+  },
+  "1888.HK": {
+    "format": "md",
+    "version": "dad860460043667f"
+  },
+  "2344.TW": {
+    "format": "pdf",
+    "version": "a625b28690eb69c5"
+  },
+  "2408.TW": {
+    "format": "pdf",
+    "version": "a16ed4a331497d96"
+  },
+  "2409.TW": {
+    "format": "pdf",
+    "version": "10aa6b47fb066a2c"
+  },
+  "285A.T": {
+    "format": "pdf",
+    "version": "741a409f7028aa93"
+  },
+  "300136.SZ": {
+    "format": "md",
+    "version": "f2a299ed49a4c82d"
+  },
+  "300223.SZ": {
+    "format": "md",
+    "version": "5b4e9a454ec76123"
+  },
+  "300285.SZ": {
+    "format": "md",
+    "version": "2f68d9a16d185eac"
+  },
+  "300308.SZ": {
+    "format": "pdf",
+    "version": "6c8b06a80d2764d1"
+  },
+  "300408.SZ": {
+    "format": "md",
+    "version": "b0b1f1848778e4be"
+  },
+  "300502.SZ": {
+    "format": "pdf",
+    "version": "8fd29f7a40d3708a"
+  },
+  "300666.SZ": {
+    "format": "md",
+    "version": "fb510c28f81e18c5"
+  },
+  "301308.SZ": {
+    "format": "md",
+    "version": "2f687c06f7ccbd2a"
+  },
+  "3264.TWO": {
+    "format": "pdf",
+    "version": "b9a07601f4ae9ab1"
+  },
+  "600330.SH": {
+    "format": "md",
+    "version": "c19665da4df3cc5e"
+  },
+  "600363.SH": {
+    "format": "md",
+    "version": "75069089fc9106d4"
+  },
+  "600584.SH": {
+    "format": "md",
+    "version": "8e64fae0286dfc2e"
+  },
+  "603986.SH": {
+    "format": "md",
+    "version": "9b1c63f4756f3731"
+  },
+  "6510.TWO": {
+    "format": "pdf",
+    "version": "db79aaea23a5b8da"
+  },
+  "688008.SH": {
+    "format": "md",
+    "version": "c5a8bbb8a6e5ffea"
+  },
+  "688012.SH": {
+    "format": "md",
+    "version": "6f6d1d35a287d144"
+  },
+  "688072.SH": {
+    "format": "md",
+    "version": "d6044a44763fd6c7"
+  },
+  "688120.SH": {
+    "format": "md",
+    "version": "2c5dc9fab2e0ca8d"
+  },
+  "688409.SH": {
+    "format": "md",
+    "version": "39090b5c608a557c"
+  },
+  "688596.SH": {
+    "format": "md",
+    "version": "e2abc290d2bda2d1"
+  },
+  "AAOI": {
+    "format": "md",
+    "version": "6a3a05348e652cd9"
+  },
+  "ALRIB": {
+    "format": "pdf",
+    "version": "1348112988a912e6"
+  },
+  "ENS": {
+    "format": "pdf",
+    "version": "cd107517446550b6"
+  },
+  "FIVN": {
+    "format": "pdf",
+    "version": "63d19a8afd61750d"
+  },
+  "FSLR": {
+    "format": "pdf",
+    "version": "ce6f7751717e63af"
+  },
+  "M7U.DE": {
+    "format": "pdf",
+    "version": "738ef857368f55b2"
+  },
+  "MITK": {
+    "format": "pdf",
+    "version": "4a0ed5ac7dbdb99c"
+  },
+  "MU": {
+    "format": "pdf",
+    "version": "a2b196da311f7453"
+  },
+  "OSS": {
+    "format": "pdf",
+    "version": "5baf9909661a2159"
+  },
+  "SHLS": {
+    "format": "pdf",
+    "version": "24487204f6559d39"
+  },
+  "SIVE.ST": {
+    "format": "pdf",
+    "version": "b70419e510bf88fd"
+  },
+  "SKHY": {
+    "format": "pdf",
+    "version": "5d0b095dff6238fd"
+  },
+  "SNDK": {
+    "format": "pdf",
+    "version": "e1529ab7aa9b7585"
+  },
+  "STX": {
+    "format": "pdf",
+    "version": "ea1b0e833d953315"
+  },
+  "VRT": {
+    "format": "pdf",
+    "version": "12862d529a368d30"
+  },
+  "WDC": {
+    "format": "pdf",
+    "version": "c839873cda6c701e"
+  }
+}

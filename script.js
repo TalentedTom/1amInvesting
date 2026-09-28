@@ -323,6 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_no_dive: 'No deep-dive on file for {ticker} yet.',
             modal_more_coming: 'More tickers will be added soon.',
             modal_close_label: 'Close deep dive',
+            pdf_open: 'Open PDF',
+            pdf_hint: 'If the preview does not display, open the PDF in a new tab.',
             hint_dismiss_label: 'Dismiss tip',
             mult_label: 'Multiple',
             mult_tip_20: 'Baseline valuation — targets as modelled',
@@ -459,6 +461,8 @@ document.addEventListener('DOMContentLoaded', () => {
             live_label: '实时',
         },
     };
+    I18N['zh-CN'].pdf_open = '\u6253\u5f00 PDF';
+    I18N['zh-CN'].pdf_hint = '\u5982\u679c\u9884\u89c8\u65e0\u6cd5\u663e\u793a\uff0c\u8bf7\u5728\u65b0\u6807\u7b7e\u9875\u6253\u5f00 PDF\u3002';
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
         let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
@@ -955,6 +959,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // feature site-wide.
     const DEEP_DIVES_ENABLED = true;
     let deepDiveAvailable = new Set();
+    let deepDiveArtifacts = new Map();
+    let deepDiveRequest = 0;
     // Prev/next navigation order for the deep-dive modal — rebuilt by
     // buildTable to mirror the table's current sort/filter order.
     let diveOrder = [];
@@ -966,7 +972,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!DEEP_DIVES_ENABLED) return Promise.resolve();
         return fetch('deep-dives/index.json', { cache: 'no-cache' })
             .then((r) => (r.ok ? r.json() : []))
-            .then((arr) => { deepDiveAvailable = new Set(arr); })
+            .then((manifest) => {
+                // Accept legacy ticker arrays and new format-aware manifests.
+                const entries = Array.isArray(manifest)
+                    ? manifest.map(t => [t, {format: 'md'}]) : Object.entries(manifest || {});
+                deepDiveArtifacts = new Map(entries.filter(([ticker, item]) =>
+                    /^[A-Za-z0-9.^=-]+$/.test(ticker) && ['md', 'pdf'].includes(item?.format)));
+                deepDiveAvailable = new Set(deepDiveArtifacts.keys());
+            })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
     }
     // With deep dives off, hide the (now functionless) "Search deep-dives" box.
@@ -1215,6 +1228,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openDeepDive(ticker) {
         if (!ticker) return;
+        const request = ++deepDiveRequest;
+        const artifact = deepDiveArtifacts.get(ticker) || {format: 'md'};
+        deepDiveModal.classList.toggle('pdf-mode', artifact.format === 'pdf');
+        deepDiveContent.classList.remove('modal-chart', 'modal-pdf');
         // First successful open dismisses the discovery hint permanently —
         // the user has clearly figured the feature out.
         dismissHint(true);
@@ -1250,13 +1267,40 @@ document.addEventListener('DOMContentLoaded', () => {
         const scroller = deepDiveContent;
         scroller.scrollTop = 0;
 
-        const url = `deep-dives/${encodeURIComponent(ticker)}.md`;
+        const version = artifact.version ? `?v=${encodeURIComponent(artifact.version)}` : '';
+        const url = `deep-dives/${encodeURIComponent(ticker)}.${artifact.format}${version}`;
+        if (artifact.format === 'pdf') {
+            fetch(url, {method: 'HEAD', cache: 'no-cache'})
+                .then(r => {
+                    if (!r.ok) throw new Error('PDF unavailable');
+                    if (request !== deepDiveRequest) return;
+                    deepDiveContent.replaceChildren();
+                    deepDiveContent.classList.add('modal-pdf');
+                    const toolbar = document.createElement('div');
+                    toolbar.className = 'pdf-toolbar';
+                    const hint = document.createElement('span');
+                    hint.textContent = tr('pdf_hint'); toolbar.appendChild(hint);
+                    const link = document.createElement('a');
+                    link.className = 'pdf-open'; link.textContent = tr('pdf_open');
+                    link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+                    toolbar.appendChild(link); deepDiveContent.appendChild(toolbar);
+                    const frame = document.createElement('iframe');
+                    frame.className = 'pdf-frame'; frame.title = `${ticker} PDF`;
+                    frame.src = url + '#view=FitH';
+                    deepDiveContent.appendChild(frame);
+                }).catch(() => {
+                    if (request !== deepDiveRequest) return;
+                    deepDiveContent.textContent = tr('modal_no_dive', {ticker});
+                });
+            return;
+        }
         fetch(url, { cache: 'no-cache' })
             .then((r) => {
                 if (!r.ok) throw new Error(`No deep-dive on file for ${ticker} yet (HTTP ${r.status}).`);
                 return r.text();
             })
             .then((md) => {
+                if (request !== deepDiveRequest) return;
                 if (typeof marked === 'undefined') {
                     deepDiveContent.textContent = md;   // fallback: raw text
                     return;
@@ -1279,6 +1323,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             })
             .catch(() => {
+                if (request !== deepDiveRequest) return;
                 // Generic friendly fallback (don't surface raw HTTP message).
                 deepDiveContent.innerHTML =
                     `<p style="color:#ef4444">${tr('modal_no_dive', {ticker})}</p>` +
@@ -1290,14 +1335,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // TradingView chart) was active. Same close routine for both — single
     // modal element, single set of dismiss handlers.
     function closeDeepDive() {
+        ++deepDiveRequest;
         deepDiveModal.classList.add('hidden');
-        deepDiveModal.classList.remove('dive-mode');
+        deepDiveModal.classList.remove('dive-mode', 'pdf-mode');
         document.body.style.overflow = '';
         // Wipe any TradingView iframe so it stops fetching market data in
         // the background; clear the chart-mode class so the next deep-dive
         // open gets normal padding back.
         deepDiveContent.innerHTML = '';
-        deepDiveContent.classList.remove('modal-chart');
+        deepDiveContent.classList.remove('modal-chart', 'modal-pdf');
     }
 
     // Prev/next deep-dive navigation. diveOrder mirrors the table's
@@ -1413,6 +1459,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openChart(ticker) {
         if (!ticker) return;
+        ++deepDiveRequest;
+        deepDiveModal.classList.remove('pdf-mode');
+        deepDiveContent.classList.remove('modal-pdf');
         const tvSymbol = toTradingViewSymbol(ticker);
         deepDiveTitle.textContent = `${ticker} ${tr('modal_chart_suffix')}`;
         if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_chart_close_label'));

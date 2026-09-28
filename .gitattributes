@@ -1,0 +1,2 @@
+# Preserve original PDF bytes and override global text-diff handlers.
+*.pdf binary
