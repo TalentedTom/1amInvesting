@@ -1395,6 +1395,27 @@ body.archive-open .archive-toggle::before {
     opacity: 1;
     color: #f59e0b;
 }
+/* Gold frames identify saved stocks without changing row/column dimensions.
+   Cell-level inset edges remain visible over the horizontally sticky cells;
+   the row outline closes the frame at the last currently visible quarter. */
+tbody tr.row-starred {
+    --watchlist-border: #e9ad32;
+    --watchlist-tint: rgba(245, 158, 11, 0.07);
+    outline: 1px solid var(--watchlist-border);
+    outline-offset: -1px;
+}
+body.light-mode tbody tr.row-starred {
+    --watchlist-border: #b77913;
+    --watchlist-tint: rgba(245, 158, 11, 0.10);
+}
+tbody tr.row-starred > td {
+    background-image: linear-gradient(var(--watchlist-tint), var(--watchlist-tint));
+    box-shadow: inset 0 1px var(--watchlist-border), inset 0 -1px var(--watchlist-border);
+}
+tbody tr.row-starred > td:first-child {
+    box-shadow: inset 3px 0 var(--watchlist-border),
+                inset 0 1px var(--watchlist-border), inset 0 -1px var(--watchlist-border);
+}
 /* Touch devices have no hover to reveal the affordance, so resting
    opacity is lifted — an always-dim star reads as disabled on phones. */
 @media (hover: none) {

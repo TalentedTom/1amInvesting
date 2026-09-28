@@ -2101,6 +2101,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
+            // Rebuild from the saved watchlist so highlighting survives sorting,
+            // filters, language changes and live-price refreshes.
+            if (watchlist.has(String(row.Ticker || '').trim())) rowClass += ' row-starred';
+
             // data-ticker on the row lets us re-apply per-row state (e.g.
             // tap-expanded) after the innerHTML rebuild wipes the old DOM.
             const rowTicker = String(row.Ticker || '').trim().replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
