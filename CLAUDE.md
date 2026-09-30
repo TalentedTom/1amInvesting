@@ -259,6 +259,15 @@ don't rebind it per render.
   The stock table, watchlist, DRAM ETF model and live-price feed remain active.
 - Prior simulator code and tests can be recovered from Git history if requested.
 
+## News bulletin order
+
+- Show newest posts first, using each bulletin's first `<time datetime>` in
+  `.news-timestamps`. Later correction timestamps do not change post order.
+- Keep the HTML in the same newest-first order. The carousel also sorts by
+  post timestamp on startup so future bulletins follow this rule automatically.
+- The prior NAND/memory-first override is revoked. No topic is pinned.
+- Preserve five-second rotation, manual navigation and the fixed-height news slot.
+
 ## Working style / preferences (learned over many sessions)
 
 - The owner says "update the website" ~daily; just run the pipeline and report

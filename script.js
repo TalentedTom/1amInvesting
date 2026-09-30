@@ -713,6 +713,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!carousel) return;
         const viewport = document.getElementById('news-viewport');
         const slides = Array.from(viewport.querySelectorAll('[data-news-slide]'));
+        // Newest posted bulletin first. No topic is pinned ahead of newer news.
+        // Use the original post timestamp, not a later correction timestamp.
+        const postedAt = slide => {
+            const timestamp = Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '');
+            return Number.isFinite(timestamp) ? timestamp : 0;
+        };
+        slides.sort((a, b) => postedAt(b) - postedAt(a));
+        slides.forEach(slide => viewport.appendChild(slide));
         const previous = document.getElementById('news-prev');
         const next = document.getElementById('news-next');
         const autoplay = document.getElementById('news-autoplay');
