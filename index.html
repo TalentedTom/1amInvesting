@@ -123,7 +123,7 @@
                 <span class="news-carousel-label" data-i18n="news_carousel_label">News bulletins</span>
                 <div class="news-carousel-controls">
                     <button type="button" id="news-prev" aria-controls="news-viewport" aria-label="Previous bulletin" data-i18n-attr="aria-label:news_previous,title:news_previous">&lsaquo;</button>
-                    <span id="news-position">1 / 2</span>
+                    <span id="news-position">1 / 3</span>
                     <button type="button" id="news-next" aria-controls="news-viewport" aria-label="Next bulletin" data-i18n-attr="aria-label:news_next,title:news_next">&rsaquo;</button>
                     <button type="button" id="news-autoplay" aria-label="Pause automatic rotation" title="Pause automatic rotation">&#9208;</button>
                     <button type="button" id="news-collapse" aria-controls="news-viewport" aria-expanded="true" aria-label="Collapse news" title="Collapse news">&#8963;</button>
@@ -182,8 +182,34 @@
             </div>
         </article>
 
-        <!-- Keep NAND as the first carousel slide. New announcements go after it.
-             New-stock cohort: 795f977 -> 262193e. Base-score baseline: 795f977. -->
+        <!-- Keep NAND first. These owner-supplied September 28-30 revisions are
+             a dated model snapshot, independent of live prices and multiples. -->
+        <article class="news-bulletin news-secondary" id="model-ceiling-news" data-news-slide>
+            <header class="news-summary">
+                <span class="news-label" data-i18n="model_news_label">Model update</span>
+                <span class="news-title" data-i18n="model_news_title">September 28&ndash;30: Q3 2027 model-ceiling changes</span>
+                <span class="news-timestamps">
+                    <time datetime="2026-09-30T11:45:00-04:00" data-i18n="model_news_date" title="Toronto time (UTC-04:00)">Posted 30 Sep 2026, 11:45 am EDT</time>
+                </span>
+            </header>
+            <div class="news-content">
+                <p class="news-note" data-i18n="model_news_note">Scroll within this bulletin for all 10 updates. Percentages are changes to model ceilings, not share-price returns.</p>
+                <ul class="news-model-list">
+                    <li data-news-ticker="LITE" data-i18n="model_news_lite"><strong>LITE <span class="news-revision">+15.15%</span>:</strong> Added a 30% probability-weighted scenario for substantially higher optical circuit switching revenue.</li>
+                    <li data-news-ticker="2454.TW" data-i18n="model_news_mediatek"><strong>MediaTek (2454.TW) <span class="news-revision">+9.34%</span>:</strong> Incorporated a 30% probability-weighted uplift from higher custom AI chip revenue forecasts.</li>
+                    <li data-news-ticker="NRGV" data-i18n="model_news_nrgv"><strong>NRGV <span class="news-revision">+5.96%</span>:</strong> Added probability-weighted earnings from acquired Goshe power projects, allowing for associated costs.</li>
+                    <li data-news-ticker="NBIS" data-i18n="model_news_nbis"><strong>NBIS <span class="news-revision">+5.75%</span>:</strong> Incorporated October&rsquo;s 20% GPU pricing increase and two assumed 15% increases in 2027.</li>
+                    <li data-news-ticker="SIVE.ST" data-i18n="model_news_sivers"><strong>Sivers (SIVE.ST) <span class="news-revision">+2.36%</span>:</strong> Raised customer-conversion probabilities as emerging optical architectures strengthen demand for its lasers.</li>
+                    <li data-news-ticker="LPK.DE" data-i18n="model_news_lpkf"><strong>LPKF (LPK.DE) <span class="news-revision">+2.13%</span>:</strong> Higher probability-weighted glass-substrate tool capture outweighed the modeled production delay.</li>
+                    <li data-news-ticker="AAOI" data-i18n="model_news_aaoi"><strong>AAOI <span class="news-revision">+1.29%</span>:</strong> Added probability-weighted higher 800G/1.6T utilization while retaining existing capacity and pricing assumptions.</li>
+                    <li data-news-ticker="AVGO" data-i18n="model_news_avgo"><strong>Broadcom (AVGO) <span class="news-revision">+1.09%</span>:</strong> Incorporated a 25% probability-weighted uplift from higher AI semiconductor revenue forecasts.</li>
+                    <li data-news-ticker="AMD" data-i18n="model_news_amd"><strong>AMD <span class="news-revision news-revision-negative">&minus;0.96%</span>:</strong> Added estimated acquisition-related share dilution without increasing operating forecasts.</li>
+                    <li data-news-ticker="MU" data-i18n="model_news_micron"><strong>Micron (MU) <span class="news-revision news-revision-neutral">0%</span>:</strong> Stronger supply-agreement coverage raised the artifact Base from 88 to 90, while its ceiling and Excel Base of 99 stayed unchanged.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- New-stock cohort: 795f977 -> 262193e. Base-score baseline: 795f977. -->
         <article class="news-bulletin news-secondary" id="portfolio-news" data-news-slide>
             <header class="news-summary">
                 <span class="news-label" data-i18n="portfolio_news_label">Portfolio update</span>
