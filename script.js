@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // in styles.css. The mobile Cycle/P-E toggle that previously gave
     // phones access to the P/E value is also gone (its source column no
     // longer exists, and FY targets are richer than one toggle can carry).
-    // Quarterly targets (2026-07 restructure): 15 columns Q3'26 -> Q1'30,
-    // replacing the old 4 annual FY columns.
+    // Visible quarterly targets: 14 columns Q4'26 -> Q1'30.
+    // Q3'26 was retired from the website on 2026-10-01; source data is retained.
     const QUARTER_COLS = [
-        "Q3 2026", "Q4 2026", "Q1 2027", "Q2 2027", "Q3 2027", "Q4 2027",
+        "Q4 2026", "Q1 2027", "Q2 2027", "Q3 2027", "Q4 2027",
         "Q1 2028", "Q2 2028", "Q3 2028", "Q4 2028", "Q1 2029", "Q2 2029",
         "Q3 2029", "Q4 2029", "Q1 2030"
     ];
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Responsive tier + tint class for a column (quarter columns only).
     // Tiers: near (idx 0-5, always shown), mid (6-11, shown >=700px),
-    // far (12-14, shown >=1100px) -> phone 6 quarters, landscape 12, desktop 15.
+    // far (12-13, shown >=1100px) -> phone 6 quarters, landscape 12, desktop 14.
     function colExtraClasses(col) {
         const qi = QUARTER_COLS.indexOf(col);
         if (qi === -1) return '';
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "Change %": "Chg%",
         "EV Upside": "EVUp",
     };
-    // Short quarter headers: "Q3 2026" -> "Q3'26".
+    // Short quarter headers: "Q4 2026" -> "Q4'26".
     QUARTER_COLS.forEach(q => {
         const [qq, yy] = q.split(" ");
         displayNames[q] = `${qq}'${yy.slice(2)}`;
@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // translates with the rest of the chrome.
     const labelFor = (col) => {
         if (col === '_chart') return '';
-        // Quarter headers are language-neutral ("Q3'26") — return directly.
+        // Quarter headers are language-neutral ("Q4'26") — return directly.
         if (QUARTER_COLS.indexOf(col) !== -1) return displayNames[col];
         const eng = displayNames[col] || col;
         const label = tr(`col_${eng}`);
@@ -2514,10 +2514,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return out || `<span style="color: #64748b;">-</span>`;
         }
 
-        // Quarterly target prices (Q3'26 -> Q1'30). Native currency, sometimes
+        // Quarterly target prices (Q4'26 -> Q1'30). Native currency, sometimes
         // with a single-letter prefix (e.g. "A12.50" for AUD). Reuse the price
         // compactor so big numbers render "3.82m" not "3,822,000", keeping the
-        // 15-column block scannable. Every quarter carries a tiny green/red
+        // 14-column block scannable. Every quarter carries a tiny green/red
         // percentage vs the current price; TARGET_QUARTER also gets a tint.
         if (QUARTER_COLS.indexOf(colName) !== -1) {
             if (value === null || value === undefined || value === "") {

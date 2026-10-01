@@ -626,11 +626,11 @@ body.light-mode tr.row-expanded td.q-target {
 }
 
 /* === Quarterly columns: base sizing + responsive tiers ===========
-   15 quarter columns Q3'26..Q1'30. Tier classes control how many are
+   14 quarter columns Q4'26..Q1'30. Tier classes control how many are
    visible so the table stays legible on every device:
-     .q-near (Q3'26..Q4'27, 6)  always shown   -> phone    = 6
-     .q-mid  (Q1'28..Q2'29, 6)  shown >=700px   -> landscape = 12
-     .q-far  (Q3'29..Q1'30, 3)  shown >=1100px  -> desktop  = 15
+     .q-near (Q4'26..Q1'28, 6)  always shown   -> phone    = 6
+     .q-mid  (Q2'28..Q3'29, 6)  shown >=700px   -> landscape = 12
+     .q-far  (Q4'29..Q1'30, 2)  shown >=1100px  -> desktop  = 14
    Mobile-first: mid + far are hidden by default and revealed at the
    breakpoints below. */
 .col-q {
@@ -1677,7 +1677,7 @@ body.table-settled tbody tr {
 
     /* === Mobile columns (quarterly rebuild — no Basic/ADV modes) ===
        Column order: 1 Chart  2 Ticker  3 EVUp  4 Base  5 Chg%
-       6 Price  7 Upside  8-22 quarters (Q3'26..Q1'30) — 22 columns total.
+       6 Price  7 Upside  8-21 quarters (Q4'26..Q1'30) — 21 columns total.
        (Was 23 with Cycle at slot 1; that column and its China-view
        special-case are gone, so every index shifted down one.)
        Which quarters appear is handled by the .q-near/.q-mid/.q-far tiers

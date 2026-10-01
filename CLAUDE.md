@@ -80,6 +80,12 @@ through `Q1 2030` (Master Portfolio columns L:Z). (`Change %` is injected by
 the live-price job, not the xlsx.) The owner edits
 columns freely — the xlsx has been restructured many times; the code adapts.
 
+The website displays only Q4 2026 through Q1 2030 (14 quarters). Q3 2026
+was removed from the table and column picker on October 1, 2026. Keep its
+historical values in Excel and generated data; do not restore its visible
+column during routine refreshes. Responsive tiers show the nearest 6/12/14
+quarters, subject to the existing 2029/2030 visibility toggles.
+
 ### Scoring (scripts/score.py) — the heart of it
 - **Active target = Q4 2027** (Master Portfolio column Q). Rolled forward from
   Q3 2027 on September 30, 2026, ahead of October 1. The next planned manual
