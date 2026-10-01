@@ -118,18 +118,21 @@
             </div>
         </header>
 
-        <section class="news-carousel" id="news-carousel" role="region" aria-roledescription="carousel" aria-label="News bulletins" data-i18n-attr="aria-label:news_carousel_label">
+        <section class="news-carousel news-collapsed" id="news-carousel" role="region" aria-roledescription="carousel" aria-label="News bulletins" data-i18n-attr="aria-label:news_carousel_label">
             <div class="news-carousel-toolbar">
                 <span class="news-carousel-label" data-i18n="news_carousel_label">News bulletins</span>
+                <div class="news-ticker" id="news-ticker">
+                    <div class="news-ticker-track" id="news-ticker-track"></div>
+                </div>
                 <div class="news-carousel-controls">
                     <button type="button" id="news-prev" aria-controls="news-viewport" aria-label="Previous bulletin" data-i18n-attr="aria-label:news_previous,title:news_previous">&lsaquo;</button>
                     <span id="news-position">1 / 4</span>
                     <button type="button" id="news-next" aria-controls="news-viewport" aria-label="Next bulletin" data-i18n-attr="aria-label:news_next,title:news_next">&rsaquo;</button>
-                    <button type="button" id="news-autoplay" aria-label="Pause automatic rotation" title="Pause automatic rotation">&#9208;</button>
-                    <button type="button" id="news-collapse" aria-controls="news-viewport" aria-expanded="true" aria-label="Collapse news" title="Collapse news">&#8963;</button>
+                    <button type="button" id="news-autoplay" aria-label="Pause scrolling headlines" title="Pause scrolling headlines">&#9208;</button>
+                    <button type="button" id="news-collapse" aria-controls="news-viewport" aria-expanded="false" aria-label="Expand news" title="Expand news">&#8964;</button>
                 </div>
             </div>
-            <div class="news-viewport" id="news-viewport" tabindex="0" aria-label="Swipe left or right to browse news" data-i18n-attr="aria-label:news_browse">
+            <div class="news-viewport" id="news-viewport" hidden tabindex="0" aria-label="Swipe left or right to browse news" data-i18n-attr="aria-label:news_browse">
         <article class="news-bulletin news-secondary" id="quarter-rollover-news" data-news-slide>
             <header class="news-summary">
                 <span class="news-label" data-i18n="rollover_news_label">Quarterly roll-forward</span>

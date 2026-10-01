@@ -281,7 +281,12 @@ don't rebind it per render.
 - Keep the HTML in the same newest-first order. The carousel also sorts by
   post timestamp on startup so future bulletins follow this rule automatically.
 - The prior NAND/memory-first override is revoked. No topic is pinned.
-- Preserve five-second rotation, manual navigation and the fixed-height news slot.
+- Start minimized on every page load with a continuous, clickable headline strip.
+  Clicking a headline opens that exact bulletin and stops automatic motion.
+  Expanded bulletins stay still; arrows and swiping provide manual navigation.
+  Minimizing resumes scrolling. Keep the pause control and reduced-motion support
+  (a manually scrollable headline strip), English/Chinese headlines, and fixed-height
+  expanded news slot. Headlines are derived from the dated articles, not copied text.
 
 ## Working style / preferences (learned over many sessions)
 

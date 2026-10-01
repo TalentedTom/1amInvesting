@@ -427,6 +427,23 @@ body.light-mode .news-model-list .news-revision-neutral { color: var(--text-seco
 }
 .news-carousel-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-height: 38px; padding: 0.15rem 0.65rem; border-bottom: 1px solid var(--border); }
 .news-carousel-label { color: var(--text-secondary); font-size: 0.7rem; font-weight: 600; }
+.news-carousel-label, .news-carousel-controls { flex-shrink: 0; }
+.news-collapsed .news-carousel-toolbar { border-bottom: 0; }
+.news-collapsed #news-prev, .news-collapsed #news-next, .news-collapsed #news-position,
+.news-carousel-controls [hidden], .news-ticker[hidden] { display: none; }
+.news-ticker { flex: 1; min-width: 0; overflow: hidden; }
+.news-ticker-track { display: flex; width: max-content; animation: news-crawl var(--news-crawl-duration, 60s) linear infinite; }
+.news-ticker-group { display: flex; align-items: center; flex-shrink: 0; gap: 2rem; padding-right: 2rem; box-sizing: border-box; }
+.news-headline { flex-shrink: 0; border: 0; background: transparent; color: var(--text-primary); font: inherit; font-size: 0.8rem; font-weight: 600; white-space: nowrap; padding: 0.6rem 0; cursor: pointer; }
+.news-headline::before { content: '◆'; color: var(--accent); font-size: 0.55rem; margin-right: 0.65rem; }
+.news-headline:hover { color: var(--accent); }
+.news-headline:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+@keyframes news-crawl { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+    .news-ticker { overflow-x: auto; }
+    .news-ticker-track { animation: none; }
+    .news-ticker-copy { display: none; }
+}
 .news-carousel-controls { display: flex; align-items: center; gap: 0.3rem; }
 .news-carousel-controls button { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; padding: 0; border: 1px solid var(--border); border-radius: 6px; background: var(--row-hover); color: var(--text-primary); cursor: pointer; font-size: 1rem; }
 .news-carousel-controls button:hover { background: rgba(59, 130, 246, 0.15); border-color: var(--accent); }

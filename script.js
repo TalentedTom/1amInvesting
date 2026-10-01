@@ -252,8 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
             news_browse: "Swipe left or right to browse news",
             news_previous: "Previous bulletin",
             news_next: "Next bulletin",
-            news_pause: "Pause automatic rotation",
-            news_play: "Start automatic rotation",
+            news_pause: "Pause scrolling headlines",
+            news_play: "Resume scrolling headlines",
             news_collapse: "Collapse news",
             news_expand: "Expand news",
             news_position: "Bulletin {n} of {total}",
@@ -381,8 +381,8 @@ document.addEventListener('DOMContentLoaded', () => {
             news_browse: "\u5de6\u53f3\u6ed1\u52a8\u6d4f\u89c8\u65b0\u95fb",
             news_previous: "\u4e0a\u4e00\u6761\u516c\u544a",
             news_next: "\u4e0b\u4e00\u6761\u516c\u544a",
-            news_pause: "\u6682\u505c\u81ea\u52a8\u8f6e\u64ad",
-            news_play: "\u5f00\u59cb\u81ea\u52a8\u8f6e\u64ad",
+            news_pause: "暂停滚动标题",
+            news_play: "继续滚动标题",
             news_collapse: "\u6536\u8d77\u65b0\u95fb",
             news_expand: "\u5c55\u5f00\u65b0\u95fb",
             news_position: "\u7b2c {n} \u6761\uff0c\u5171 {total} \u6761",
@@ -722,20 +722,15 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-lang') === currentLang));
     applyChromeTranslations();
 
-    // One fixed-height news slot. Native horizontal scroll gives touch/trackpad
-    // browsing; the inner ceiling rail remains independently scrollable.
-    // Set up once, outside the portfolio's recurring live-data renders.
+    // Headlines scroll while minimized; expanded news stays still for reading.
     (() => {
         const carousel = document.getElementById('news-carousel');
         if (!carousel) return;
         const viewport = document.getElementById('news-viewport');
+        const ticker = document.getElementById('news-ticker');
+        const track = document.getElementById('news-ticker-track');
         const slides = Array.from(viewport.querySelectorAll('[data-news-slide]'));
-        // Newest posted bulletin first. No topic is pinned ahead of newer news.
-        // Use the original post timestamp, not a later correction timestamp.
-        const postedAt = slide => {
-            const timestamp = Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '');
-            return Number.isFinite(timestamp) ? timestamp : 0;
-        };
+        const postedAt = slide => Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '') || 0;
         slides.sort((a, b) => postedAt(b) - postedAt(a));
         slides.forEach(slide => viewport.appendChild(slide));
         const previous = document.getElementById('news-prev');
@@ -745,125 +740,127 @@ document.addEventListener('DOMContentLoaded', () => {
         const position = document.getElementById('news-position');
         const announcement = document.getElementById('news-announcement');
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        let index = 0;
-        let paused = false;
-        let hovered = false;
-        let touching = false;
-        let rotationTimer;
-        let settleTimer;
-        let lastWidth = 0;
-        let pendingAnnouncement = false;
+        let index = 0, paused = false, settleTimer;
 
+        function syncMotion() {
+            track.style.animationPlayState = viewport.hidden && !paused && !ticker.contains(document.activeElement)
+                && !document.hidden && !reducedMotion.matches ? 'running' : 'paused';
+        }
         function updateControls() {
+            const collapsed = viewport.hidden;
+            carousel.classList.toggle('news-collapsed', collapsed);
+            ticker.hidden = !collapsed;
             position.textContent = (index + 1) + ' / ' + slides.length;
             position.setAttribute('aria-label', tr('news_position', { n: index + 1, total: slides.length }));
-            previous.disabled = next.disabled = slides.length < 2 || viewport.hidden;
-            autoplay.disabled = slides.length < 2 || viewport.hidden;
+            previous.hidden = next.hidden = position.hidden = collapsed;
+            previous.disabled = next.disabled = slides.length < 2;
+            autoplay.hidden = !collapsed || reducedMotion.matches;
             autoplay.textContent = paused ? '\u25b6' : '\u23f8';
             autoplay.setAttribute('aria-label', tr(paused ? 'news_play' : 'news_pause'));
             autoplay.title = tr(paused ? 'news_play' : 'news_pause');
-            collapse.textContent = viewport.hidden ? '\u2304' : '\u2303';
-            collapse.setAttribute('aria-expanded', String(!viewport.hidden));
-            collapse.setAttribute('aria-label', tr(viewport.hidden ? 'news_expand' : 'news_collapse'));
-            collapse.title = tr(viewport.hidden ? 'news_expand' : 'news_collapse');
+            collapse.textContent = collapsed ? '\u2304' : '\u2303';
+            collapse.setAttribute('aria-expanded', String(!collapsed));
+            collapse.setAttribute('aria-label', tr(collapsed ? 'news_expand' : 'news_collapse'));
+            collapse.title = tr(collapsed ? 'news_expand' : 'news_collapse');
             slides.forEach((slide, i) => {
-                slide.inert = i !== index;
-                slide.setAttribute('aria-hidden', String(i !== index));
+                slide.inert = collapsed || i !== index;
+                slide.setAttribute('aria-hidden', String(collapsed || i !== index));
                 slide.setAttribute('role', 'group');
                 slide.setAttribute('aria-roledescription', tr('news_slide'));
                 slide.setAttribute('aria-label', tr('news_position', { n: i + 1, total: slides.length }));
             });
+            syncMotion();
         }
-
-        function scheduleRotation() {
-            clearTimeout(rotationTimer);
-            // Focus on the explicit Play control may resume rotation on mouseleave.
-            const focused = carousel.contains(document.activeElement) && document.activeElement !== autoplay;
-            if (paused || hovered || touching || focused || document.hidden || viewport.hidden || slides.length < 2) return;
-            rotationTimer = setTimeout(() => goTo(index + 1), 5000);
+        function sizeTicker() {
+            if (!viewport.hidden || !ticker.clientWidth) return;
+            Array.from(track.children).forEach(group => group.style.minWidth = ticker.clientWidth + 'px');
+            const width = track.firstElementChild?.getBoundingClientRect().width || 0;
+            if (width) track.style.setProperty('--news-crawl-duration', (width / 42) + 's');
         }
-
-        function goTo(target, manual = false) {
+        function buildHeadlines() {
+            track.replaceChildren();
+            const group = document.createElement('div');
+            group.className = 'news-ticker-group';
+            slides.forEach((slide, i) => {
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.className = 'news-headline';
+                button.dataset.newsIndex = i;
+                button.textContent = slide.querySelector('.news-title').textContent;
+                button.setAttribute('aria-controls', 'news-viewport');
+                button.setAttribute('aria-expanded', 'false');
+                group.appendChild(button);
+            });
+            // The second copy makes the crawl seamless, without duplicate tab stops.
+            const duplicate = group.cloneNode(true);
+            duplicate.classList.add('news-ticker-copy');
+            duplicate.setAttribute('aria-hidden', 'true');
+            duplicate.querySelectorAll('button').forEach(button => button.tabIndex = -1);
+            track.append(group, duplicate);
+            ticker.scrollLeft = 0;
+            sizeTicker();
+            syncMotion();
+        }
+        function goTo(target, instant = false) {
             if (viewport.hidden || !slides.length) return;
             index = (target + slides.length) % slides.length;
-            pendingAnnouncement = manual;
             updateControls();
-            viewport.scrollTo({ left: index * viewport.clientWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
-            scheduleRotation();
+            viewport.scrollTo({ left: index * viewport.clientWidth, behavior: instant || reducedMotion.matches ? 'instant' : 'smooth' });
+            announcement.textContent = slides[index].querySelector('.news-title').textContent;
         }
-
-        // Restart a full five seconds after the slide has settled, including
-        // manual swipes. The active index follows the actual scroll position.
+        function expand(target = index) {
+            clearTimeout(settleTimer);
+            viewport.hidden = false;
+            goTo(target, true);
+            viewport.focus({ preventScroll: true });
+        }
+        ticker.addEventListener('click', event => {
+            const button = event.target.closest('[data-news-index]');
+            if (button) expand(Number(button.dataset.newsIndex));
+        });
         viewport.addEventListener('scroll', () => {
-            clearTimeout(rotationTimer);
             clearTimeout(settleTimer);
             settleTimer = setTimeout(() => {
-                if (!viewport.clientWidth) return;
+                if (viewport.hidden || !viewport.clientWidth) return;
                 index = Math.max(0, Math.min(slides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
                 updateControls();
-                if (pendingAnnouncement) {
-                    announcement.textContent = tr('news_position', { n: index + 1, total: slides.length }) + ': ' +
-                        slides[index].querySelector('.news-title').textContent;
-                    pendingAnnouncement = false;
-                }
-                scheduleRotation();
             }, 150);
         });
-        previous.addEventListener('click', () => goTo(index - 1, true));
-        next.addEventListener('click', () => goTo(index + 1, true));
-        autoplay.addEventListener('click', () => {
-            paused = !paused;
-            updateControls();
-            scheduleRotation();
-        });
+        previous.addEventListener('click', () => goTo(index - 1));
+        next.addEventListener('click', () => goTo(index + 1));
+        autoplay.addEventListener('click', () => { paused = !paused; updateControls(); });
         collapse.addEventListener('click', () => {
-            viewport.hidden = !viewport.hidden;
+            if (viewport.hidden) { expand(); return; }
+            clearTimeout(settleTimer);
+            viewport.hidden = true;
+            paused = false; // Minimizing resumes the headlines even after an explicit pause.
             updateControls();
-            if (!viewport.hidden) viewport.scrollTo({ left: index * viewport.clientWidth, behavior: 'auto' });
-            scheduleRotation();
+            ticker.scrollLeft = 0;
+            sizeTicker();
         });
-        carousel.addEventListener('pointerenter', e => {
-            if (e.pointerType !== 'mouse') return;
-            hovered = true;
-            scheduleRotation();
-        });
-        carousel.addEventListener('pointerleave', e => {
-            if (e.pointerType !== 'mouse') return;
-            hovered = false;
-            scheduleRotation();
-        });
-        carousel.addEventListener('pointerdown', () => {
-            touching = true;
-            scheduleRotation();
-        });
-        const releasePointer = () => {
-            if (!touching) return;
-            touching = false;
-            scheduleRotation();
-        };
-        window.addEventListener('pointerup', releasePointer);
-        window.addEventListener('pointercancel', releasePointer);
-        carousel.addEventListener('focusin', scheduleRotation);
-        carousel.addEventListener('focusout', () => setTimeout(scheduleRotation, 0));
-        carousel.addEventListener('wheel', scheduleRotation, { passive: true });
-        carousel.addEventListener('keydown', e => {
-            // Arrow keys inside the NAND ceiling rail scroll its cards, not news.
-            if (e.target.closest('.news-ceilings') || viewport.hidden) return;
-            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
-                e.preventDefault();
-                goTo(index + (e.key === 'ArrowLeft' ? -1 : 1), true);
+        ticker.addEventListener('focusin', syncMotion);
+        ticker.addEventListener('focusout', () => setTimeout(() => {
+            if (!ticker.contains(document.activeElement)) ticker.scrollLeft = 0;
+            syncMotion();
+        }, 0));
+        carousel.addEventListener('keydown', event => {
+            if (event.target.closest('.news-ceilings') || viewport.hidden) return;
+            if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+                event.preventDefault();
+                goTo(index + (event.key === 'ArrowLeft' ? -1 : 1));
             }
         });
-        document.addEventListener('visibilitychange', scheduleRotation);
-        document.addEventListener('portfolio:languagechange', updateControls);
+        document.addEventListener('visibilitychange', syncMotion);
+        document.addEventListener('portfolio:languagechange', () => { buildHeadlines(); updateControls(); });
+        reducedMotion.addEventListener('change', updateControls);
         new ResizeObserver(() => {
-            const width = viewport.clientWidth;
-            if (!width || width === lastWidth) return;
-            lastWidth = width;
-            viewport.scrollTo({ left: index * width, behavior: 'auto' });
-        }).observe(viewport);
+            sizeTicker();
+            if (!viewport.hidden) viewport.scrollTo({ left: index * viewport.clientWidth, behavior: 'instant' });
+        }).observe(carousel);
+        viewport.hidden = true;
         updateControls();
-        scheduleRotation();
+        buildHeadlines();
+        document.fonts.ready.then(sizeTicker);
     })();
 
     // Theme Toggle Listener — persists choice in localStorage.
