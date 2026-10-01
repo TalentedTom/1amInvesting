@@ -123,13 +123,32 @@
                 <span class="news-carousel-label" data-i18n="news_carousel_label">News bulletins</span>
                 <div class="news-carousel-controls">
                     <button type="button" id="news-prev" aria-controls="news-viewport" aria-label="Previous bulletin" data-i18n-attr="aria-label:news_previous,title:news_previous">&lsaquo;</button>
-                    <span id="news-position">1 / 3</span>
+                    <span id="news-position">1 / 4</span>
                     <button type="button" id="news-next" aria-controls="news-viewport" aria-label="Next bulletin" data-i18n-attr="aria-label:news_next,title:news_next">&rsaquo;</button>
                     <button type="button" id="news-autoplay" aria-label="Pause automatic rotation" title="Pause automatic rotation">&#9208;</button>
                     <button type="button" id="news-collapse" aria-controls="news-viewport" aria-expanded="true" aria-label="Collapse news" title="Collapse news">&#8963;</button>
                 </div>
             </div>
             <div class="news-viewport" id="news-viewport" tabindex="0" aria-label="Swipe left or right to browse news" data-i18n-attr="aria-label:news_browse">
+        <article class="news-bulletin news-secondary" id="quarter-rollover-news" data-news-slide>
+            <header class="news-summary">
+                <span class="news-label" data-i18n="rollover_news_label">Quarterly roll-forward</span>
+                <span class="news-title" data-i18n="rollover_news_title">Upside &amp; EV Upside now use Q4 2027</span>
+                <span class="news-timestamps">
+                    <time datetime="2026-09-30T22:51:00-04:00" data-i18n="rollover_news_date" title="Toronto time (UTC-04:00)">Posted 30 Sep 2026, 10:51 pm EDT</time>
+                </span>
+            </header>
+            <div class="news-content">
+                <p class="news-story" data-i18n="rollover_news_intro">As Q3 ends and Q4 begins on October 1, we have rolled the reference quarter for <strong>Upside and EV Upside from Q3 2027 to Q4 2027</strong>. This keeps the dashboard focused roughly 12 months ahead. The change was applied on September 30, just ahead of the new quarter.</p>
+                <ul class="news-model-list">
+                    <li data-i18n="rollover_news_upside"><strong>Upside:</strong> Q4 2027 target price divided by the current share price.</li>
+                    <li data-i18n="rollover_news_ev"><strong>EV Upside:</strong> Uses the same Q4 2027 target and current share price, with the existing Base-score weighting.</li>
+                </ul>
+                <p class="news-story" data-i18n="rollover_news_context">Figures can change because we are looking one quarter further ahead, not necessarily because a company&rsquo;s outlook has been upgraded. The roll-forward itself does not change Base scores or quarterly forecasts.</p>
+                <p class="news-note" data-i18n="rollover_news_next">Next planned roll-forward: January 1, 2027.</p>
+            </div>
+        </article>
+
         <!-- These owner-supplied September 28-30 revisions are
              a dated model snapshot, independent of live prices and multiples. -->
         <article class="news-bulletin news-secondary" id="model-ceiling-news" data-news-slide>
