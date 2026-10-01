@@ -1,7 +1,7 @@
 // Custom ETF targets use the CURRENT constituent prices and the latest
 // data.js forecasts. Never consume a stale precomputed target from live.json.
 (function (root) {
-    function refresh(rows, quarters, parseNumber) {
+    function refresh(rows, quarters, parseNumber, targetQuarter) {
         const byTicker = new Map(rows.map(row => [String(row.Ticker || '').trim(), row]));
         for (const row of rows) {
             const model = row._synthetic;
@@ -37,7 +37,7 @@
                 row[quarter] = complete ? price * (1 + weightedReturn) : '';
             }
             // Ranking and stored fallbacks must agree with the synthetic target.
-            const target = parseNumber(row['Q3 2027']);
+            const target = parseNumber(row[targetQuarter]);
             if (Number.isFinite(target) && target > 0 && Number.isFinite(price) && price > 0 && Number.isFinite(base)) {
                 const ratio = target / price;
                 row.Upside = ratio.toFixed(1) + 'x';

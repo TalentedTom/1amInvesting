@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Q3 2029", "Q4 2029", "Q1 2030"
     ];
     // The ~1-year-forward quarter that drives Upside + EV Upside (tinted in the UI).
-    const TARGET_QUARTER = "Q3 2027";
+    // Rolled forward on 2026-09-30; next planned review is 2027-01-01.
+    const TARGET_QUARTER = "Q4 2027";
     const simpleCols = [
         "_chart", "Ticker", "EV Upside", "Base",
         "Change %", "Current Price", "Upside",
@@ -132,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const k = multipleFactor();
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
-        if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0) return row['Upside'];
+        if (!isFinite(price) || price <= 0 || !isFinite(tgt)) return row['Upside'];
         return (k * tgt / price).toFixed(1) + 'x';
     }
     function scaledEvUpside(row) {
@@ -140,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
         const base = parseFloat(row['Base']);
-        if (!isFinite(price) || price <= 0 || !isFinite(tgt) || tgt <= 0 || isNaN(base)) {
+        if (!isFinite(price) || price <= 0 || !isFinite(tgt) || isNaN(base)) {
             return row['EV Upside'];
         }
         return Math.round(base * (k * tgt / price) - 100);
@@ -318,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: 'Markets price ~12 months ahead — fair value today',
             caption_FY28: 'Implied fair value ~1 year from now',
-            caption_EVUp: 'EV Upside = probability-weighted upside to the 1-year target (Base × upside beyond 1x), shown as a return multiple. e.g. 4.3x ≈ 331% expected upside. Below 1.0x = price already above target — avoid.',
+            caption_EVUp: 'EV Upside uses the Q4 2027 target and current price. Displayed multiple = (Base / 100) × (target / price), including the selected valuation multiple. e.g. 4.3x ≈ 330% expected upside. Below 1.0x means a negative probability-weighted return.',
             archive_show: 'Show research archive ({n})',
             archive_hide: 'Hide research archive',
             modal_updated: 'Analysis updated {date}',
@@ -439,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
-            caption_EVUp: 'EV 上涨 = 距 1 年目标价的概率加权回报倍数（基础分 × 超额涨幅）。例：4.3x ≈ 331% 预期涨幅。低于 1.0x = 股价已高于目标价 — 回避。',
+            caption_EVUp: 'EV 上涨使用 2027 年第四季度目标价和当前股价。显示倍数 =（基础分 / 100）×（目标价 / 当前股价），包含所选估值倍数。例：4.3x ≈ 330% 预期涨幅。低于 1.0x 表示概率加权回报为负。',
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
@@ -1850,7 +1851,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Rebuild ETF forecasts after live quotes and before filtering/sorting.
             // Only synthetic rows change; ordinary Excel targets stay untouched.
-            window.SyntheticPortfolios.refresh(data, QUARTER_COLS, parseLooseNumber);
+            window.SyntheticPortfolios.refresh(data, QUARTER_COLS, parseLooseNumber, TARGET_QUARTER);
             data.filter(row => row._synthetic).forEach(row => _qPctCache.delete(row));
 
             // Filter out empty rows AND apply the active filters. All are keyed
@@ -2463,7 +2464,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (row && row._displayRank !== '—') {
                 const tgt = parseLooseNumber(row[TARGET_QUARTER]) * multipleFactor();
                 const px = parseLooseNumber(row['Current Price']);
-                if (isFinite(tgt) && isFinite(px) && px > 0 && tgt > 0 && tgt < px) {
+                if (isFinite(tgt) && isFinite(px) && px > 0 && tgt < px) {
                     trimFlag = `<span class="trim-flag" title="${tr('trim_flag_tip')}">⚠</span>`;
                 }
             }
@@ -2500,9 +2501,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Quarterly target prices (Q3'26 -> Q1'30). Native currency, sometimes
         // with a single-letter prefix (e.g. "A12.50" for AUD). Reuse the price
         // compactor so big numbers render "3.82m" not "3,822,000", keeping the
-        // 15-column block scannable. Only the TARGET_QUARTER (Q3'27) cell
-        // carries a tiny green/red % vs the current price — the actionable
-        // ~1-yr move — so the other 14 quarters stay bare.
+        // 15-column block scannable. Every quarter carries a tiny green/red
+        // percentage vs the current price; TARGET_QUARTER also gets a tint.
         if (QUARTER_COLS.indexOf(colName) !== -1) {
             if (value === null || value === undefined || value === "") {
                 return `<span style="color: #64748b;">-</span>`;

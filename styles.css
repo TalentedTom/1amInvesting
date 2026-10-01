@@ -601,8 +601,8 @@ th {
     transition: color 0.2s, background 0.2s;
 }
 
-/* === Target quarter (Q3'27) emphasis =============================
-   Q3'27 is the ~1-year-forward reference that drives Upside +
+/* === Target quarter emphasis ===================================
+   script.js TARGET_QUARTER is the forward reference that drives Upside +
    EV Upside. Faint accent-blue tint on header + cells, class-based
    (.q-target) so it tracks the column wherever the responsive tiers
    place it — no nth-child position coupling. */

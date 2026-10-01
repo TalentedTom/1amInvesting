@@ -39,7 +39,7 @@ What this script does NOT touch:
   - Anything else in the row.
 
 What it DOES write per row, when computable:
-  - Entry, Total, Upside.
+  - Entry, Total, Upside, EV Upside.
 
 Rows where Current Price or Ceiling Target can't be parsed (PRE-IPO, "TBD
 at IPO", market-cap ceilings like "$20-50B") are left untouched. This keeps
@@ -155,6 +155,10 @@ def parse_range(value):
       "TBD at IPO"             (placeholder)
       "PRE-IPO"                (placeholder)
     """
+    # Quarterly workbook targets are numeric points, not legacy text ranges.
+    # Preserve their sign (and zero): regex extraction would turn -12 into +12.
+    if isinstance(value, (int, float)) and not isinstance(value, bool):
+        return (float(value), float(value)) if math.isfinite(value) else (None, None)
     if value is None:
         return None, None
     s = str(value).strip()
@@ -292,20 +296,18 @@ def ev_upside(base: int, high: float, price: float) -> int:
 
 
 # Column name for the target price that drives Upside + EV Upside.
-# The model went quarterly (2026-07): the ~1-year-forward target now lives in
-# the 'Q3 2027' column (was 'FY2028'; before that 'Ceiling Target' / '1y EV').
-# We read the newest source first and fall back through the older names so any
-# xlsx vintage scores correctly. The math is identical regardless of which
-# column supplies it: Upside = target/price,
-# EV Upside = Base * (target/price - 1). Verified 'Q3 2027' reproduces the
-# analyst's pre-computed 'Upside Q3'27' / 'EV Upside Q3'27' columns.
-TARGET_COLS = ("Q3 2027", "FY2028", "1y EV", "Ceiling Target")
+# Rolled from Q3 2027 to Q4 2027 on 2026-09-30, ahead of October 1.
+# Next planned horizon review: 2027-01-01 (no automatic calendar rollover).
+# Keep in sync with script.js TARGET_QUARTER, which also drives frontend DRAM.
+# Upside = target/price; EV Upside = Base * target/price - 100.
+# Legacy annual/range names remain supported, but Q3 2027 is not a fallback.
+TARGET_COLS = ("Q4 2027", "FY2028", "1y EV", "Ceiling Target")
 
 
 def target_cell(row):
-    """Return the row's target-price cell, trying the current column name
-    ('1y EV') then the legacy one ('Ceiling Target'). Returns '' if neither
-    is present so parse_range yields (None, None) and the row is skipped."""
+    """Return the active quarter's target, then legacy annual/range columns.
+    Returns '' if absent so parse_range yields (None, None) and skips scoring.
+    """
     for col in TARGET_COLS:
         v = row.get(col)
         if v not in (None, ""):
@@ -351,9 +353,8 @@ def score_row(row):
     row["Entry"] = entry
     row["Total"] = total          # kept for bucket/alert logic (not displayed)
     row["Upside"] = upside
-    # Respect the analyst's manually-set EV Upside when present in the xlsx.
-    if not row.get("EV Upside") and row.get("EV Upside") != 0:
-        row["EV Upside"] = ev_upside(base, high, price)
+    # Derived values must use the active horizon, never a stale saved Q3 score.
+    row["EV Upside"] = ev_upside(base, high, price)
 
     return {
         "ticker": str(row.get("Ticker") or ""),

@@ -75,21 +75,29 @@ thing that should cost credits — see the live-prices architecture below.
 runs `scripts/score.py` to compute derived fields.
 
 Columns the site actually uses: `Rank, Ticker, Name, EV Upside, Base,
-Current Price, Upside, Position Type, SuperCycle, FY2027, FY2028, FY2029,
-FY2030`. (`Change %` is injected by the cron, not the xlsx.) The owner edits
+Current Price, Upside, Position Type` and 15 quarterly targets from `Q3 2026`
+through `Q1 2030` (Master Portfolio columns L:Z). (`Change %` is injected by
+the live-price job, not the xlsx.) The owner edits
 columns freely — the xlsx has been restructured many times; the code adapts.
 
 ### Scoring (scripts/score.py) — the heart of it
+- **Active target = Q4 2027** (Master Portfolio column Q). Rolled forward from
+  Q3 2027 on September 30, 2026, ahead of October 1. The next planned manual
+  roll-forward review is January 1, 2027; do not infer automatic date changes.
 - **EV Upside** (headline metric, replaced the old "Total") =
-  `round(Base × (target/price − 1))` where **target = FY2028** (the 1-year
-  fair-value price). This is `TARGET_COLS = ("FY2028", "1y EV", "Ceiling Target")`
-  — it reads the first present column, so older xlsx vintages still score.
-  Verify any scoring change by confirming it reproduces the owner's own
-  pre-computed `EV Upside` column (e.g. SIVE ≈ Base 92 × (336/68.95 − 1) ≈ 356).
+  `round(Base × target/price − 100)`. Displayed as `(1 + EV Upside/100)x`,
+  equivalent to the Base-weighted target/price multiple, subject to rounding.
+  Both derived fields are always recalculated, never preserved from stale
+  workbook or live-feed Q3 values. Base and quarterly forecasts stay untouched.
+- Keep `script.js` `TARGET_QUARTER` and `scripts/score.py` `TARGET_COLS[0]`
+  aligned on each roll. Python live scoring and DRAM import the latter;
+  frontend DRAM receives the former from the table. The target-column tint,
+  trim flag, sorting and 20x/25x/30x display scaling use the same active quarter.
+  Never rewrite historical bulletin dates/targets when rolling the horizon.
 - **Upside** = `target/price` shown as e.g. "4.9x".
 - `Total`/`Entry` are still computed internally for the HC/WL/FAIL bucket
   alerts in the cron log, but are NOT displayed.
-- Rows with no parseable FY2028/price are skipped (unranked → pinned bottom,
+- Rows with no parseable active target/price are skipped (unranked → pinned bottom,
   shown in the collapsible "research archive").
 
 ### Display notes
@@ -173,7 +181,8 @@ and reintroduce the exact hang the deadline exists to prevent.
 - **Live pill**: reports DATA freshness (live.json's `ts`), not fetch time —
   amber "As of Fri 16:59" when >20 min stale.
 - **Research archive**: unranked rows collapse behind a toggle (`body.archive-open`).
-- **Trim ⚠**: ranked names trading above their FY2028 target get an amber flag.
+- **Trim ⚠**: ranked names trading above their active Q4 2027 target get an amber
+  flag, using the visitor's selected valuation multiple.
 - **Deep-dive modal**: marked.js renders `deep-dives/<TICKER>.md`; prev/next
   arrows + ←/→ keys page through in table order; freshness stamp from the xlsx
   `Artifact Updated` field.

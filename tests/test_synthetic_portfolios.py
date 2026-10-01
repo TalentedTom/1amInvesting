@@ -13,7 +13,7 @@ import fetch_live
 
 
 def fixture():
-    sources = [dict(Ticker=t, Base=100, **{'Current Price': 100, 'Q3 2027': target})
+    sources = [dict(Ticker=t, Base=100, **{'Current Price': 100, 'Q3 2027': target / 2, 'Q4 2027': target})
                for t, target in [('A', 200), ('B', 180), ('C', 100), ('D', 100)]]
     return sources + [dict(Ticker='DRAM', Base=100, **{
         'Current Price': 50,
@@ -51,7 +51,8 @@ class SyntheticTests(unittest.TestCase):
         rows = fixture()
         before = copy.deepcopy(rows[:-1])
         refresh_synthetic_rows(rows)
-        self.assertAlmostEqual(rows[-1]['Q3 2027'], 72.5)  # 45% weighted return
+        self.assertAlmostEqual(rows[-1]['Q3 2027'], 36.25)
+        self.assertAlmostEqual(rows[-1]['Q4 2027'], 72.5)  # 45% weighted return
         self.assertEqual(rows[-1]['EV Upside'], 45)
         self.assertEqual(rows[-1]['Base'], 100)
         self.assertEqual(rows[:-1], before)
@@ -60,28 +61,28 @@ class SyntheticTests(unittest.TestCase):
         rows = fixture()
         rows[0]['Current Price'] = 200
         refresh_synthetic_rows(rows)
-        self.assertAlmostEqual(rows[-1]['Q3 2027'], 60)
+        self.assertAlmostEqual(rows[-1]['Q4 2027'], 60)
         refresh_synthetic_rows(rows)
-        self.assertAlmostEqual(rows[-1]['Q3 2027'], 60)
+        self.assertAlmostEqual(rows[-1]['Q4 2027'], 60)
         rows[-1]['Current Price'] = 100
         refresh_synthetic_rows(rows)
-        self.assertAlmostEqual(rows[-1]['Q3 2027'], 120)
+        self.assertAlmostEqual(rows[-1]['Q4 2027'], 120)
         self.assertEqual(rows[-1]['EV Upside'], 20)
 
     def test_missing_data_never_renormalized(self):
         rows = fixture()
-        del rows[0]['Q3 2027']
+        del rows[0]['Q4 2027']
         refresh_synthetic_rows(rows)
-        self.assertEqual(rows[-1]['Q3 2027'], '')
+        self.assertEqual(rows[-1]['Q4 2027'], '')
         self.assertEqual(rows[-1]['Upside'], '')
 
     def test_losses_and_currency_strings(self):
         rows = fixture()
         for r in rows[:-1]:
             r['Current Price'] = 'KRW 1,000'
-            r['Q3 2027'] = 500
+            r['Q4 2027'] = 500
         refresh_synthetic_rows(rows)
-        self.assertEqual(rows[-1]['Q3 2027'], 25)
+        self.assertEqual(rows[-1]['Q4 2027'], 25)
         self.assertEqual(rows[-1]['EV Upside'], -50)
 
     def test_invalid_weights(self):
