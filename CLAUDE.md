@@ -96,7 +96,12 @@ only a display limit. Never restore those columns during routine refreshes.
   forecasts, edit the workbook or publish during an upstream save. Update
   this guide after each roll; do nothing if already rolled.
 
-### Re-rating / Growth column (R / G)
+### Upside Driver column (formerly R / G)
+- Show only the dominant share and a clear name, e.g. `100% Growth` or
+  `82% Re-Rate`, with a proportional ratio bar underneath. Growth is dark
+  green, re-rating bright purple. The bar always places re-rating on the
+  left and growth on the right. A rounded 50/50 split reads `50% Each`.
+  Hover/accessibility text retains both shares. Never hardcode example values.
 - Immediately right of EV Upside, but NOT an EV calculation: no Base score
   or probability weighting. `upside-breakdown.js` computes the display-only
   heuristic from current/live price P, first displayed quarter N (currently

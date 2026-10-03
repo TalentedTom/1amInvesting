@@ -321,9 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Ticker: 'Ticker',
             col_Total: 'Total',
             col_EVUp: 'EV Upside',
-            col_UpsideMix: 'R / G',
-            mix_r: 'Re-rating',
+            col_UpsideMix: 'Upside Driver',
+            mix_r: 'Re-Rate',
             mix_g: 'Growth',
+            mix_balanced: 'Each',
             mix_na: 'No positive target upside, or missing data',
             caption_UpsideMix: 'Re-rating / Growth: price-to-target only; no Base score or EV weighting. A model-implied mix of two sequential percentage moves, not additive shares of total return or a causal earnings attribution. Re-rating = max(0, first displayed quarter / current price − 1); growth = max(0, active target quarter / first quarter − 1). Normalize the two to 100%. Example: 100 → 250 → 375 gives 150% and 50%, hence 75% / 25%. If the first quarter is at/below price but the target is above price: 0% / 100%. No positive target upside or missing data: —. Uses live price and the selected multiple. Sorts by growth share.',
             col_Base: 'Base',
@@ -455,9 +456,10 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Ticker: '代码',
             col_Total: '总分',
             col_EVUp: 'EV 上涨',
-            col_UpsideMix: '重估 / 增长',
+            col_UpsideMix: '上涨驱动',
             mix_r: '重估',
             mix_g: '增长',
+            mix_balanced: '各占',
             mix_na: '目标无正向上涨空间，或数据缺失',
             caption_UpsideMix: '重估 / 增长：仅使用当前股价与季度目标价，不使用基础分或 EV 加权。将两个连续阶段的涨幅归一化，并非总回报的可加贡献或盈利归因。重估 = max(0, 首个显示季度目标价 / 当前价格 − 1)；增长 = max(0, 活跃目标季度价格 / 首季度目标价 − 1)。两者合计归一为 100%。例如 100 → 250 → 375：150% 与 50%，比例为 75% / 25%。首季度不高于现价但远期目标高于现价时：0% / 100%。目标无正向上涨空间或缺少数据时显示 —。随实时价格与所选估值倍数变化，按增长占比排序。',
             col_Base: '基础',
@@ -2389,9 +2391,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (colName === '_upsideMix') {
             const mix = row && upsideMix(row);
             if (!mix) return `<span class="mix-na" title="${tr('mix_na')}">—</span>`;
-            return `<span class="upside-mix" aria-label="${tr('mix_r')} ${mix.rerating}%, ${tr('mix_g')} ${mix.growth}%">` +
-                `<span class="mix-values"><span class="mix-r" title="${tr('mix_r')}">${mix.rerating}%</span>` +
-                `<span class="mix-divider"> / </span><span class="mix-g" title="${tr('mix_g')}">${mix.growth}%</span></span>` +
+            const dominant = window.UpsideBreakdown.dominantDriver(mix);
+            const cls = dominant.driver === 'growth' ? 'mix-g' : dominant.driver === 'rerating' ? 'mix-r' : 'mix-balanced';
+            const label = tr(dominant.driver === 'growth' ? 'mix_g' : dominant.driver === 'rerating' ? 'mix_r' : 'mix_balanced');
+            const detail = `${tr('mix_r')} ${mix.rerating}%, ${tr('mix_g')} ${mix.growth}%`;
+            return `<span class="upside-mix" aria-label="${detail}" title="${detail}">` +
+                `<span class="mix-values ${cls}">${dominant.share}% ${label}</span>` +
                 `<span class="mix-bar" aria-hidden="true"><span style="width:${mix.rerating}%"></span></span></span>`;
         }
         // Rank column: prefer the live, Total-derived rank stamped on the row

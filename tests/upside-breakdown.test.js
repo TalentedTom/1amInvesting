@@ -1,6 +1,13 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { calculate } = require('../upside-breakdown.js');
+const { calculate, dominantDriver } = require('../upside-breakdown.js');
+
+test('show one dominant driver; keep full mix for the ratio bar', () => {
+    assert.deepEqual(dominantDriver({ rerating: 0, growth: 100 }), { driver: 'growth', share: 100 });
+    assert.deepEqual(dominantDriver({ rerating: 82, growth: 18 }), { driver: 'rerating', share: 82 });
+    assert.deepEqual(dominantDriver({ rerating: 50, growth: 50 }), { driver: 'balanced', share: 50 });
+    assert.equal(dominantDriver(null), null);
+});
 
 test('sequential percentage example: 150% rerating and 50% growth => 75/25', () => {
     assert.deepEqual(calculate(100, 250, 375), { rerating: 75, growth: 25 });

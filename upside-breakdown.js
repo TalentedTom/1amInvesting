@@ -13,7 +13,14 @@
         const rerating = Math.round(100 * reratingMove / (reratingMove + growthMove));
         return { rerating, growth: 100 - rerating };
     }
-    const api = { calculate };
+    function dominantDriver(mix) {
+        if (!mix) return null;
+        if (mix.growth === mix.rerating) return { driver: 'balanced', share: mix.growth };
+        return mix.growth > mix.rerating
+            ? { driver: 'growth', share: mix.growth }
+            : { driver: 'rerating', share: mix.rerating };
+    }
+    const api = { calculate, dominantDriver };
     if (typeof module === 'object' && module.exports) module.exports = api;
     else root.UpsideBreakdown = api;
 })(typeof window !== 'undefined' ? window : globalThis);
