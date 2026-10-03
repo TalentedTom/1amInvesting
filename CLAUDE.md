@@ -80,16 +80,43 @@ through `Q1 2030` (Master Portfolio columns L:Z). (`Change %` is injected by
 the live-price job, not the xlsx.) The owner edits
 columns freely — the xlsx has been restructured many times; the code adapts.
 
-The website displays only Q4 2026 through Q1 2030 (14 quarters). Q3 2026
-was removed from the table and column picker on October 1, 2026. Keep its
-historical values in Excel and generated data; do not restore its visible
-column during routine refreshes. Responsive tiers show the nearest 6/12/14
-quarters, subject to the existing 2029/2030 visibility toggles.
+The website displays only Q4 2026 through Q1 2028 (six quarters) on all
+devices. Later quarters and the 2029/2030 reveal buttons are not shown.
+Keep ALL historical/later forecasts in Excel and generated data; this is
+only a display limit. Never restore those columns during routine refreshes.
+
+### Quarterly roll-forward (authorized October 2, 2026)
+- On January 1, April 1, July 1 and October 1, advance the six-quarter
+  display window by one quarter. Next: January 1, 2027, Q1 2027–Q2 2028.
+- Also advance the active Upside/EV Upside horizon to the same quarter next
+  year, keeping frontend/Python/live/DRAM in sync (next target Q1 2028).
+- The recurring thread automation `roll-portfolio-quarter-forward` runs at
+  8:45 a.m. America/Toronto on those dates, starting January 1, 2027.
+- Verify the needed source targets exist before shipping. Do not manufacture
+  forecasts, edit the workbook or publish during an upstream save. Update
+  this guide after each roll; do nothing if already rolled.
+
+### Re-rating / Growth column (R / G)
+- Immediately right of EV Upside, but NOT an EV calculation: no Base score
+  or probability weighting. `upside-breakdown.js` computes the display-only
+  heuristic from current/live price P, first displayed quarter N (currently
+  Q4 2026), and active target T (currently Q4 2027).
+- R = max(0, N/P − 1); G = max(0, T/N − 1). Normalize R and G to 100%.
+  The two percentage moves have different denominators; this is NOT an
+  additive attribution of total return or proof of actual multiple expansion.
+  User's corrected example: 100 → 250 → 375 => 150% R and 50% G => 75% / 25%.
+- If N <= P and T > P (including zero/negative N), show 0% / 100%.
+  If T <= P or a required value is missing, show —. When N > T > P,
+  clamp the negative growth component to zero and show 100% / 0%.
+- Apply the selected 20x/25x/30x factor to both targets, not P; recalculate
+  on each render/live update. Never hardcode a stock's split. Whole-number
+  percentages sum to 100; column sorting uses growth share, descending first.
+- Test: `node --test tests/upside-breakdown.test.js`.
 
 ### Scoring (scripts/score.py) — the heart of it
 - **Active target = Q4 2027** (Master Portfolio column Q). Rolled forward from
-  Q3 2027 on September 30, 2026, ahead of October 1. The next planned manual
-  roll-forward review is January 1, 2027; do not infer automatic date changes.
+  Q3 2027 on September 30, 2026, ahead of October 1. The next authorized
+  quarterly roll is January 1, 2027 (see the scheduled roll-forward above).
 - **EV Upside** (headline metric, replaced the old "Total") =
   `round(Base × target/price − 100)`. Displayed as `(1 + EV Upside/100)x`,
   equivalent to the Base-weighted target/price multiple, subject to rounding.

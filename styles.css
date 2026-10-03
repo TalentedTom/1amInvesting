@@ -642,14 +642,7 @@ body.light-mode tr.row-expanded td.q-target {
     background-color: rgba(59, 130, 246, 0.09);
 }
 
-/* === Quarterly columns: base sizing + responsive tiers ===========
-   14 quarter columns Q4'26..Q1'30. Tier classes control how many are
-   visible so the table stays legible on every device:
-     .q-near (Q4'26..Q1'28, 6)  always shown   -> phone    = 6
-     .q-mid  (Q2'28..Q3'29, 6)  shown >=700px   -> landscape = 12
-     .q-far  (Q4'29..Q1'30, 2)  shown >=1100px  -> desktop  = 14
-   Mobile-first: mid + far are hidden by default and revealed at the
-   breakpoints below. */
+/* Six quarterly columns on every device; the source retains later targets. */
 .col-q {
     width: 56px;
     min-width: 50px;
@@ -660,10 +653,16 @@ body.light-mode tr.row-expanded td.q-target {
     padding-right: 0.3rem;
     white-space: nowrap;
 }
-.q-mid, .q-far { display: none; }
-.q-2029, .q-2030 { display: none !important; }
-@media (min-width: 700px)  { .q-mid { display: table-cell; } body.show-2029 .q-2029.q-mid { display: table-cell !important; } }
-@media (min-width: 1100px) { .q-far { display: table-cell; } body.show-2029 .q-2029.q-far { display: table-cell !important; } body.show-2030 .q-2030.q-far { display: table-cell !important; } }
+.col-upside-mix { min-width: 88px; width: 98px; text-align: center; }
+.upside-mix { display: inline-flex; flex-direction: column; gap: 5px; width: 76px; font-size: 0.75rem; }
+.mix-values { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.mix-r { color: #fbbf24; }
+.mix-g { color: #38bdf8; }
+.mix-divider, .mix-na { color: var(--text-muted); }
+.mix-bar { display: flex; height: 3px; overflow: hidden; border-radius: 3px; background: #38bdf8; }
+.mix-bar > span { background: #fbbf24; }
+body.light-mode .mix-r { color: #92400e; }
+body.light-mode .mix-g { color: #0369a1; }
 
 /* === Tiny % delta on the Today / 2027 target cells ==============
    Financial-ticker style: a small green/red percentage showing the
@@ -1693,12 +1692,9 @@ body.table-settled tbody tr {
     }
 
     /* === Mobile columns (quarterly rebuild — no Basic/ADV modes) ===
-       Column order: 1 Chart  2 Ticker  3 EVUp  4 Base  5 Chg%
-       6 Price  7 Upside  8-21 quarters (Q4'26..Q1'30) — 21 columns total.
-       (Was 23 with Cycle at slot 1; that column and its China-view
-       special-case are gone, so every index shifted down one.)
-       Which quarters appear is handled by the .q-near/.q-mid/.q-far tiers
-       (phones show the 6 near quarters). Sticky-column widths + offsets
+       Column order: 1 Chart  2 Ticker  3 EVUp  4 Re-rating/Growth  5 Base
+       6 Chg%  7 Price  8 Upside  9-14 quarters (Q4'26..Q1'28).
+       All devices show six quarters. Sticky-column widths + offsets
        live in the 'Sticky columns on phone' block below. Compact the
        quarter cells here so more fit before the horizontal scroll. */
     .col-q {
@@ -1706,6 +1702,8 @@ body.table-settled tbody tr {
         font-size: 0.7rem;
         padding-left: 0.16rem; padding-right: 0.16rem;
     }
+    .col-upside-mix { min-width: 74px; width: 78px; }
+    .upside-mix { width: 67px; font-size: 0.65rem; gap: 4px; }
 
     /* Sort glyph (↕ ↑ ↓) eats too much horizontal real estate on small
        screens — every column header gives up ~12px to it. Hidden on phone;

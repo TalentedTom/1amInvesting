@@ -6,18 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // in styles.css. The mobile Cycle/P-E toggle that previously gave
     // phones access to the P/E value is also gone (its source column no
     // longer exists, and FY targets are richer than one toggle can carry).
-    // Visible quarterly targets: 14 columns Q4'26 -> Q1'30.
+    // Six-quarter window; roll on Jan/Apr/Jul/Oct 1 (see CLAUDE.md).
     // Q3'26 was retired from the website on 2026-10-01; source data is retained.
     const QUARTER_COLS = [
         "Q4 2026", "Q1 2027", "Q2 2027", "Q3 2027", "Q4 2027",
-        "Q1 2028", "Q2 2028", "Q3 2028", "Q4 2028", "Q1 2029", "Q2 2029",
-        "Q3 2029", "Q4 2029", "Q1 2030"
+        "Q1 2028"
     ];
     // The ~1-year-forward quarter that drives Upside + EV Upside (tinted in the UI).
     // Rolled forward on 2026-09-30; next planned review is 2027-01-01.
     const TARGET_QUARTER = "Q4 2027";
     const simpleCols = [
-        "_chart", "Ticker", "EV Upside", "Base",
+        "_chart", "Ticker", "EV Upside", "_upsideMix", "Base",
         "Change %", "Current Price", "Upside",
         ...QUARTER_COLS
     ];
@@ -62,15 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 20x -> 1.0, 25x -> 1.25, 30x -> 1.5
     const multipleFactor = () => targetMultiple / BASE_MULTIPLE;
 
-    // Responsive tier + tint class for a column (quarter columns only).
-    // Tiers: near (idx 0-5, always shown), mid (6-11, shown >=700px),
-    // far (12-13, shown >=1100px) -> phone 6 quarters, landscape 12, desktop 14.
+    // Class-based sizing keeps the new split column independent of position.
     function colExtraClasses(col) {
+        if (col === '_upsideMix') return ' col-upside-mix';
         const qi = QUARTER_COLS.indexOf(col);
         if (qi === -1) return '';
-        const tier = qi < 6 ? 'q-near' : (qi < 12 ? 'q-mid' : 'q-far');
-        const year = col.includes('2029') ? ' q-2029' : (col.includes('2030') ? ' q-2030' : '');
-        return ` col-q ${tier}${year}${col === TARGET_QUARTER ? ' q-target' : ''}`;
+        return ` col-q${col === TARGET_QUARTER ? ' q-target' : ''}`;
     }
 
     // Format a quarterly target-price value for display. These columns hold
@@ -147,12 +143,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return Math.round(base * (k * tgt / price) - 100);
     }
 
+    function upsideMix(row) {
+        return window.UpsideBreakdown.calculate(
+            parseLooseNumber(row['Current Price']),
+            parseLooseNumber(row[QUARTER_COLS[0]]),
+            parseLooseNumber(row[TARGET_QUARTER]), multipleFactor());
+    }
+
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
         "Current Price": "Price",
         "Change %": "Chg%",
         "EV Upside": "EVUp",
+        "_upsideMix": "UpsideMix",
     };
     // Short quarter headers: "Q4 2026" -> "Q4'26".
     QUARTER_COLS.forEach(q => {
@@ -167,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // the strings translate alongside the rest of the chrome.
     const COL_CAPTION_KEYS = {
         "EV Upside": "caption_EVUp",
+        "_upsideMix": "caption_UpsideMix",
     };
 
     // === Logo URL overrides for non-US tickers ===
@@ -316,6 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Ticker: 'Ticker',
             col_Total: 'Total',
             col_EVUp: 'EV Upside',
+            col_UpsideMix: 'R / G',
+            mix_r: 'Re-rating',
+            mix_g: 'Growth',
+            mix_na: 'No positive target upside, or missing data',
+            caption_UpsideMix: 'Re-rating / Growth: price-to-target only; no Base score or EV weighting. A model-implied mix of two sequential percentage moves, not additive shares of total return or a causal earnings attribution. Re-rating = max(0, first displayed quarter / current price − 1); growth = max(0, active target quarter / first quarter − 1). Normalize the two to 100%. Example: 100 → 250 → 375 gives 150% and 50%, hence 75% / 25%. If the first quarter is at/below price but the target is above price: 0% / 100%. No positive target upside or missing data: —. Uses live price and the selected multiple. Sorts by growth share.',
             col_Base: 'Base',
             col_Entry: 'Entry',
             col_Price: 'Price',
@@ -445,6 +455,11 @@ document.addEventListener('DOMContentLoaded', () => {
             col_Ticker: '代码',
             col_Total: '总分',
             col_EVUp: 'EV 上涨',
+            col_UpsideMix: '重估 / 增长',
+            mix_r: '重估',
+            mix_g: '增长',
+            mix_na: '目标无正向上涨空间，或数据缺失',
+            caption_UpsideMix: '重估 / 增长：仅使用当前股价与季度目标价，不使用基础分或 EV 加权。将两个连续阶段的涨幅归一化，并非总回报的可加贡献或盈利归因。重估 = max(0, 首个显示季度目标价 / 当前价格 − 1)；增长 = max(0, 活跃目标季度价格 / 首季度目标价 − 1)。两者合计归一为 100%。例如 100 → 250 → 375：150% 与 50%，比例为 75% / 25%。首季度不高于现价但远期目标高于现价时：0% / 100%。目标无正向上涨空间或缺少数据时显示 —。随实时价格与所选估值倍数变化，按增长占比排序。',
             col_Base: '基础',
             col_Entry: '入场',
             col_Price: '价格',
@@ -979,15 +994,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     syncWatchlistButton();
-
-    // Year toggles — 2029 and 2030 columns hidden by default, each has its own button.
-    [['show-2029-btn', 'show-2029'], ['show-2030-btn', 'show-2030']].forEach(([id, cls]) => {
-        const btn = document.getElementById(id);
-        if (btn) btn.addEventListener('click', () => {
-            document.body.classList.toggle(cls);
-            btn.classList.toggle('active');
-        });
-    });
 
     // === Deep-Dive Modal ===
     // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
@@ -1986,9 +1992,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     // so sort the same values the table shows.
                     const rawA = col === 'EV Upside' ? scaledEvUpside(a)
                                : col === 'Upside'    ? scaledUpside(a)
+                               : col === '_upsideMix' ? upsideMix(a)?.growth
                                : a[col];
                     const rawB = col === 'EV Upside' ? scaledEvUpside(b)
                                : col === 'Upside'    ? scaledUpside(b)
+                               : col === '_upsideMix' ? upsideMix(b)?.growth
                                : b[col];
                     const emptyA = isMissing(rawA);
                     const emptyB = isMissing(rawB);
@@ -2096,7 +2104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     sortState.col = col;
                     // Quarter columns open highest-%-first (descending); every
                     // other new column defaults to ascending.
-                    sortState.asc = QUARTER_COLS.indexOf(col) === -1;
+                    sortState.asc = col !== '_upsideMix' && QUARTER_COLS.indexOf(col) === -1;
                 }
                 renderData();
             });
@@ -2378,6 +2386,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function formatCell(colName, value, row) {
+        if (colName === '_upsideMix') {
+            const mix = row && upsideMix(row);
+            if (!mix) return `<span class="mix-na" title="${tr('mix_na')}">—</span>`;
+            return `<span class="upside-mix" aria-label="${tr('mix_r')} ${mix.rerating}%, ${tr('mix_g')} ${mix.growth}%">` +
+                `<span class="mix-values"><span class="mix-r" title="${tr('mix_r')}">${mix.rerating}%</span>` +
+                `<span class="mix-divider"> / </span><span class="mix-g" title="${tr('mix_g')}">${mix.growth}%</span></span>` +
+                `<span class="mix-bar" aria-hidden="true"><span style="width:${mix.rerating}%"></span></span></span>`;
+        }
         // Rank column: prefer the live, Total-derived rank stamped on the row
         // by renderData. Falls back to the raw value for any caller that
         // doesn't pass `row` (defensive — current code always passes it).
