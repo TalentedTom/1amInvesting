@@ -279,24 +279,13 @@
             <span class="news-announcement" id="news-announcement" role="status" aria-live="polite"></span>
         </section>
 
-        <section class="position-filter-bar">
-            <div class="position-toggle" id="position-toggle" role="group" aria-label="Position type filter">
-                <button class="position-btn active" data-position="all" data-i18n="pos_all">All</button>
-                <button class="position-btn" data-position="chokepoint" data-i18n="pos_chokepoint">Chokepoint</button>
-                <button class="position-btn" data-position="bottleneck" data-i18n="pos_bottleneck">Bottleneck</button>
-                <span class="position-toggle-thumb" aria-hidden="true"></span>
-            </div>
-        </section>
-
         <!-- Filter bar + deep-dive search.
              3-column grid: empty spacer | centered pill group | right-aligned search.
              On phones the grid collapses to one column and the search drops
              to its own full-width row below the pills.
 
-             Holds the valuation-multiple selector, Region filter, Watchlist
-             toggle and the 2029/2030 column toggles. The filters here compose
-             (AND) with the All/Chokepoint/Bottleneck slider above; the
-             multiple is not a filter at all — it re-prices rows in place.
+             Holds the valuation-multiple selector, Region filter and Watchlist
+             toggle. Region and Watchlist compose; the multiple re-prices rows.
 
              Search input matches against ticker symbol AND company name
              (case-insensitive substring), but only over tickers that have

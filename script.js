@@ -312,9 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
             title_html: '1am<span>Investing</span>',
             subtitle: 'Investing in the generational AI buildout',
             columns_btn: 'Columns ▼',
-            pos_all: 'All',
-            pos_chokepoint: 'Chokepoint',
-            pos_bottleneck: 'Bottleneck',
             hint_text: 'Click any stock symbol <span class="hint-arrow">↗</span> to see its deep-dive analysis',
             col_Ticker: 'Ticker',
             col_Total: 'Total',
@@ -445,9 +442,6 @@ document.addEventListener('DOMContentLoaded', () => {
             title_html: '1am<span>Investing</span>',  // brand, not translated
             subtitle: '投资于代际级 AI 基建周期',
             columns_btn: '列 ▼',
-            pos_all: '全部',
-            pos_chokepoint: '关键节点',
-            pos_bottleneck: '瓶颈',
             hint_text: '点击股票代码 <span class="hint-arrow">↗</span> 查看深度分析',
             col_Ticker: '代码',
             col_Total: '总分',
@@ -584,18 +578,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // load always lands back on EV Upside desc.
     let sortState = { col: 'EV Upside', asc: false };
     let hiddenCols = new Set();
-    // Default to 'all'. Storage key is intentionally bumped to v2 so any old
-    // 'positionFilter' value from before the All option existed is ignored —
-    // every visitor now lands on All on first open. Subsequent clicks save
-    // under the v2 key and persist normally.
-    const POSITION_STORAGE_KEY = 'positionFilter_v2';
-    let positionFilter = (() => {
-        const stored = localStorage.getItem(POSITION_STORAGE_KEY);
-        return (stored === 'chokepoint' || stored === 'bottleneck' || stored === 'all') ? stored : 'all';
-    })();
-
+    // Retire saved position-type selections so they cannot hide rows.
+    try {
+        localStorage.removeItem('positionFilter');
+        localStorage.removeItem('positionFilter_v2');
+    } catch (_) {}
     // Region filter (single-select): 'all' | 'china' | 'exchina'. Composes
-    // (AND) with the position-type and watchlist filters. Persisted in
+    // (AND) with the watchlist filter. Persisted in
     // localStorage; defaults to 'all'.
     const REGION_STORAGE_KEY = 'regionFilter_v1';
     let regionFilter = (() => {
@@ -894,29 +883,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // make sure the body never carries the old mode class.
     document.body.classList.remove('adv-mode');
     document.querySelectorAll('.mode-selector').forEach(el => el.remove());
-
-    // Position Type Filter (All / Chokepoint / Bottleneck) — persists in localStorage.
-    const positionToggle = document.getElementById('position-toggle');
-    const positionBtns = document.querySelectorAll('.position-btn');
-    const setSliderPosition = (val) => {
-        if (!positionToggle) return;
-        // No class for 'all' — thumb sits at translateX(0%) by default.
-        positionToggle.classList.toggle('chokepoint-active', val === 'chokepoint');
-        positionToggle.classList.toggle('bottleneck-active', val === 'bottleneck');
-    };
-    const applyPositionFilter = (val) => {
-        positionFilter = val;
-        positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === val));
-        setSliderPosition(val);
-        try { localStorage.setItem(POSITION_STORAGE_KEY, val); } catch (_) {}
-        renderData();
-    };
-    positionBtns.forEach(btn => {
-        btn.addEventListener('click', () => applyPositionFilter(btn.getAttribute('data-position')));
-    });
-    // Reflect the loaded filter on the buttons + slider (no re-render — initial render handles it).
-    positionBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-position') === positionFilter));
-    setSliderPosition(positionFilter);
 
     // Valuation-multiple selector (20x / 25x / 30x) — single-select, persists
     // in localStorage. Unlike the pills around it this is NOT a filter: it
@@ -1873,15 +1839,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Filter out empty rows AND apply the active filters. All are keyed
             // off English columns so language switches don't break the logic.
-            const wanted = positionFilter.toUpperCase();   // "ALL" / "CHOKEPOINT" / "BOTTLENECK"
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
-
-                // Position-type filter
-                if (positionFilter !== 'all') {
-                    const ptEn = String((enData[i] && enData[i]['Position Type']) || '').toUpperCase();
-                    if (!ptEn.includes(wanted)) return false;
-                }
 
                 // Watchlist filter — starred tickers only. Keyed off the
                 // English row's canonical Ticker so it survives language

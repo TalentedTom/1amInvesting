@@ -226,8 +226,8 @@ and reintroduce the exact hang the deadline exists to prevent.
   `Artifact Updated` field.
 - **TradingView chart modal**, **search**, **en/zh i18n** (the `I18N` dict +
   `tr()`), **dark/light themes**, **Basic/ADV mobile column modes**.
-- Filters: position-type slider (All/Chokepoint/Bottleneck) + SuperCycle pills
-  (AI/CPO/800G/1.6T/Other), both persisted in localStorage.
+- Controls: 20x/25x/30x valuation selector, Region filter and Starred watchlist.
+  The position-type and SuperCycle filter controls were removed.
 
 The table re-renders on every live poll; the entry fade-in is gated to first
 render only (`body.table-settled`) and tap-expanded rows are preserved by
@@ -331,8 +331,9 @@ don't rebind it per render.
   correct. Several features were added then tuned over 2-3 messages.
 - They review on an **iPhone** often — mobile layout matters; test mentally
   against ~430px width.
-- The Chokepoint/Bottleneck holding-duration and buy-the-dip descriptions
-  were removed October 5, 2026. Keep the filter buttons; do not restore the text.
+- The All/Chokepoint/Bottleneck position filter and its descriptions were
+  removed October 5, 2026. Ignore/clear old saved position selections; do not
+  restore the buttons, filtering or descriptions during routine refreshes.
 - LF→CRLF git warnings on .md files are normal/harmless on Windows; ignore.
 
 ---
