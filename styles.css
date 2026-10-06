@@ -506,7 +506,7 @@ body.light-mode .news-model-list .news-revision-neutral { color: var(--text-seco
     display: none;
 }
 
-/* Filter bar above the list — Chokepoint/Bottleneck slider plus inline explainer */
+/* Filter bar above the list — Chokepoint/Bottleneck slider */
 .position-filter-bar {
     display: flex;
     align-items: center;
@@ -514,19 +514,6 @@ body.light-mode .news-model-list .news-revision-neutral { color: var(--text-seco
     gap: 1.25rem;
     padding: 0.9rem 1.25rem 0.5rem;
     flex-wrap: wrap;
-}
-.position-explainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-    text-align: left;
-}
-.position-explainer strong {
-    color: var(--text-primary);
-    font-weight: 600;
 }
 
 /* Sliding-pill segmented control: a moving accent thumb shows which side is active */
@@ -1677,9 +1664,6 @@ body.table-settled tbody tr {
         min-width: 80px;
         font-size: 0.72rem;
         padding: 0.4rem 0.4rem;
-    }
-    .position-explainer {
-        font-size: 0.68rem;
     }
 
     /* === Table: hide Target on mobile, kill sort icons, collapse padding ===

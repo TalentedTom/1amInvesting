@@ -331,6 +331,8 @@ don't rebind it per render.
   correct. Several features were added then tuned over 2-3 messages.
 - They review on an **iPhone** often — mobile layout matters; test mentally
   against ~430px width.
+- The Chokepoint/Bottleneck holding-duration and buy-the-dip descriptions
+  were removed October 5, 2026. Keep the filter buttons; do not restore the text.
 - LF→CRLF git warnings on .md files are normal/harmless on Windows; ignore.
 
 ---
