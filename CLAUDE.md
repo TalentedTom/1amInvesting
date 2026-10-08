@@ -167,7 +167,7 @@ The owner once burned the whole credit budget by having the price cron push to
   market hours), a `push` trigger on data.js/scripts (so off-hours xlsx commits
   refresh live.json within ~90s), and an hourly `schedule` backup heartbeat.
 - The frontend polls
-  `https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json`
+  `https://raw.githubusercontent.com/TalentedTom/1amInvesting/refs/heads/live-prices/live.json`
   every 30s and patches Price / Change % / EV Upside / Upside / Total / Entry
   in place. (We tried jsdelivr + statically.io first; both had caching
   problems — raw.githubusercontent is the one that works.)
@@ -206,7 +206,9 @@ Live quote recovery: if Yahoo FastInfo fails or returns an invalid price,
 fetch_live.py tries Yahoo's quote endpoint (`get_info`) for the same symbol
 before moving to an exchange alias. This fixes valid names such as AAOI being
 omitted and left at their workbook price. Require a sane price and currency;
-never invent a quote. Both failed requests and deadline omissions mark the
+never invent a quote. The frontend uses the explicit `refs/heads/live-prices`
+raw URL to avoid the stale short-path cache and rejects snapshots older than
+the last applied timestamp. Both failed requests and deadline omissions mark the
 payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quote_fallback.py'`.
 
 ---

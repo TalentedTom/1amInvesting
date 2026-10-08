@@ -1625,7 +1625,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Graceful failure model: if the fetch fails (network blip, CDN
     // hiccup, GHA hasn't run yet), we silently leave whatever data.js
     // currently has in place. The site never looks broken.
-    const LIVE_JSON_URL = 'https://raw.githubusercontent.com/TalentedTom/1amInvesting/live-prices/live.json';
+    const LIVE_JSON_URL = 'https://raw.githubusercontent.com/TalentedTom/1amInvesting/refs/heads/live-prices/live.json';
     const LIVE_POLL_INTERVAL_MS = 30 * 1000;   // 30 s — matches cache-bust bucket; tight enough to feel live
     let lastLiveTs = null;       // de-dupe: skip re-render if the file hasn't changed
     let lastLiveFetchAt = null;  // wall-clock ms when the most recent successful fetch landed
@@ -1751,6 +1751,10 @@ document.addEventListener('DOMContentLoaded', () => {
     async function pollLiveData(initial = false) {
         const live = await fetchLiveData();
         if (!live) return;
+        // CDN edges can return an older snapshot after a newer one arrived.
+        // Never roll quote values or their freshness timestamp backwards.
+        const incomingDataMs = Date.parse(live.ts);
+        if (isFinite(incomingDataMs) && lastLiveDataMs !== null && incomingDataMs < lastLiveDataMs) return;
         // Record successful-fetch wall clock so the "Last updated" UI can
         // age-stamp the most recent data, even when the payload hasn't
         // changed since the previous poll. Also parse the payload's OWN
