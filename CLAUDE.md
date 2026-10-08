@@ -202,6 +202,13 @@ throttled ticker blocked the whole sequential loop. Three guards now:
 non-daemon, so the default atexit join would wait on a wedged yfinance worker
 and reintroduce the exact hang the deadline exists to prevent.
 
+Live quote recovery: if Yahoo FastInfo fails or returns an invalid price,
+fetch_live.py tries Yahoo's quote endpoint (`get_info`) for the same symbol
+before moving to an exchange alias. This fixes valid names such as AAOI being
+omitted and left at their workbook price. Require a sane price and currency;
+never invent a quote. Both failed requests and deadline omissions mark the
+payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quote_fallback.py'`.
+
 ---
 
 ## Key frontend pieces (script.js, ~1900 lines, one big DOMContentLoaded)

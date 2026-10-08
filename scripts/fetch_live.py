@@ -141,26 +141,44 @@ def load_data_js():
 
 
 def fetch_one(yf, xlsx_ticker):
-    """Same Yahoo-fetch logic as fetch_yahoo.fetch_one, copied here so we
-    don't pay the cost of an apply_quotes round-trip. Returns
-    (price, currency, change_pct) on success, or (None, None, None)."""
+    """FastInfo first, then Yahoo's quote endpoint if history/metadata fails.
+
+    FastInfo depends on historical chart data and can fail for a valid ticker
+    even while Yahoo's quote endpoint has a fresh regular-market price.
+    Returns (price, currency, change_pct), or (None, None, None).
+    """
     for yh in yahoo_candidates(xlsx_ticker):
         try:
             tk = yf.Ticker(yh)
+        except Exception:
+            continue
+        try:
             fi = tk.fast_info
             price = fi.last_price
             currency = fi.currency
-            if not is_sane_price(price) or not currency:
+            if is_sane_price(price) and currency:
+                change_pct = None
+                try:
+                    prev = fi.previous_close
+                    if is_sane_price(prev):
+                        change_pct = round((float(price) / float(prev) - 1) * 100, 2)
+                except Exception:
+                    pass
+                return float(price), str(currency), change_pct
+        except Exception:
+            pass
+        # A failed FastInfo request must not immediately omit the ticker.
+        # get_info uses Yahoo's quote data rather than FastInfo's chart history.
+        try:
+            info = tk.get_info()
+            price = next((info.get(k) for k in ('regularMarketPrice', 'currentPrice')
+                          if is_sane_price(info.get(k))), None)
+            currency = info.get('currency')
+            if price is None or not currency:
                 continue
-            change_pct = None
-            try:
-                prev = fi.previous_close
-                if prev and float(prev) > 0:
-                    change_pct = round(
-                        (float(price) - float(prev)) / float(prev) * 100.0, 2
-                    )
-            except Exception:
-                pass
+            prev = next((info.get(k) for k in ('regularMarketPreviousClose', 'previousClose')
+                         if is_sane_price(info.get(k))), None)
+            change_pct = round((float(price) / float(prev) - 1) * 100, 2) if prev is not None else None
             return float(price), str(currency), change_pct
         except Exception:
             continue
@@ -296,7 +314,7 @@ def build_live_payload(data, workers=DEFAULT_WORKERS,
     }
     # Only present when the run was cut short — lets a human (or a future
     # debugging session) tell "Yahoo was slow" from "the book shrank".
-    if timed_out:
+    if failures or timed_out:
         payload["partial"] = True
         payload["expected_count"] = len(wanted)
     stats = {
