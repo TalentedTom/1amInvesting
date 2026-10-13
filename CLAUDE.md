@@ -230,9 +230,10 @@ payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quo
 - **Research archive**: unranked rows collapse behind a toggle (`body.archive-open`).
 - **Trim ⚠**: ranked names trading above their active Q4 2027 target get an amber
   flag, using the visitor's selected valuation multiple.
-- **Deep-dive modal**: marked.js renders `deep-dives/<TICKER>.md`; prev/next
-  arrows + ←/→ keys page through in table order; freshness stamp from the xlsx
-  `Artifact Updated` field.
+- **Research reader**: report-reader.js renders stock PDFs as a full-screen
+  scrollable reading view; previous/next report buttons follow table order.
+  The saved-date stamp uses the source PDF's modification date; Back to list/Escape
+  closes it. Arrow keys are left available for scrolling, not report switching.
 - **TradingView chart modal**, **search**, **en/zh i18n** (the `I18N` dict +
   `tr()`), **dark/light themes**, **Basic/ADV mobile column modes**.
 - Controls: 20x/25x/30x valuation selector, Region filter and Starred watchlist.
@@ -280,32 +281,35 @@ don't rebind it per render.
 - Checks: `python -m unittest discover -s tests -p 'test_synthetic*.py'`
   and `node --test tests/synthetic-portfolios.test.js`.
 
-## Public PDF stock artifacts (September 28, 2026)
+## Public PDF stock artifacts (updated October 13, 2026)
 
-- CURRENT POLICY: only the SIVE.ST PDF is public. The owner revoked the earlier
-  all-stock-PDF approval AND the AAOI/China Markdown exceptions on September 28.
-  ALL Markdown files (including SIVE.ST.md), other PDFs, Excel and frameworks
-  stay private. Never restore them during a routine refresh.
-- `scripts/sync_deep_dives.py` matches root-level Artifacts PDFs to data.js
-  tickers, including versioned names, the SKHY wrapper and exchange aliases.
-  An exact ticker-and-format allowlist publishes ONLY SIVE.ST.pdf. No Markdown
-  fallback and no exchange-wide exceptions are permitted.
-  Newest matching PDF wins, with deterministic tie-breaking. Original source
-  documents are copied unchanged, never rewritten or flattened.
-- `deep-dives/index.json` maps tickers to `{format, version}`. The version is a
-  content hash for cache busting. The frontend also accepts the old array format.
-  Stock links and search explicitly accept only the SIVE.ST PDF, even if a
-  stale manifest still lists other artifacts. Stock table data is NOT filtered.
-- PDFs open inside the existing modal with a visible Open PDF link for native
-  viewing on phones and other browsers. Close/Escape returns to the portfolio.
-  Async responses cannot overwrite a newer viewer or reopen a closed modal.
-- The sync script removes ALL Markdown and other PDF copies from deep-dives/ so direct
-  links cannot serve them on the current website. Local Artifacts originals are
-  untouched. Routine morning publication must preserve this single-artifact rule.
+- CURRENT POLICY: all stocks in the website roster that have a matching PDF
+  may publish that PDF. The owner expanded the former SIVE-only restriction
+  on October 13. ALL Markdown, master Excel and general frameworks remain
+  private. No Markdown fallback or automatic source-folder publication.
+- scripts/sync_deep_dives.py matches root-level Artifacts PDFs to data.js
+  tickers, including company-first filenames, versioned names, the SKHY
+  wrapper and exchange aliases. Newest matching PDF wins, with deterministic
+  tie-breaking. Original PDFs are copied unchanged, never rewritten or flattened.
+- deep-dives/index.json maps tickers to {format, version, updated}, using a content hash
+  for cache busting. Stock links/search accept PDF entries only; old Markdown
+  manifests cannot restore private reports. Stock table data is NOT filtered.
+  updated records source-file modification time; the reader labels it Report
+  saved in America/Toronto, not as an analysis/research-review date.
+- report-reader.js lazily loads pinned Mozilla PDF.js and opens a full-screen
+  research reading screen, not the browser's embedded PDF viewer. Original
+  pages, tables/charts, selectable text and source links are preserved.
+  Pages render as visitors scroll; offscreen canvases are released. Fit/zoom,
+  page progress, previous/next reports, Back to list and Escape are supported.
+  Keyboard focus returns to the opener; a failed load offers the original report.
+  Closing or switching reports/charts cancels old work so it cannot reopen a modal.
+- The sync script removes public Markdown and PDFs no longer selected from
+  deep-dives/. Local Artifacts originals are never deleted or edited. Routine
+  morning refreshes preserve this PDF-only policy and the reading screen.
 - Removing current files does not purge earlier public GitHub history, old
-  deployments or previously downloaded copies. Do not claim retroactive secrecy
-  or rewrite repository history without separate owner authorization.
-- Test matching/privacy rules: `python -m unittest discover -s tests -p 'test_sync_deep_dives.py'`.
+  deployments or downloaded copies. Do not claim retroactive secrecy or
+  rewrite history without separate authorization.
+- Tests: python -m unittest discover -s tests -p 'test_sync_deep_dives.py'.
 
 ## Portfolio Simulator (removed)
 

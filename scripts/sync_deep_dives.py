@@ -14,9 +14,8 @@ Strategy: for each ticker in data.js, generate candidate filename prefixes
 and find the first matching artifact. Falls back to alphanum-equal match
 to catch HPSA.TO ↔ HPS-A.TO style mismatches.
 
-Only the SIVE.ST PDF is public (owner restriction, 2026-09-28).
-ALL Markdown and other stock PDFs stay private, including AAOI and China.
-No Markdown fallback is permitted, even for SIVE.ST.
+All stock PDFs may be public (owner approval, 2026-10-13).
+ALL Markdown stays private. There is no Markdown fallback.
 Never copy frameworks or unrelated artifacts.
 
 Run from the repo root:
@@ -28,6 +27,7 @@ import hashlib
 import re
 import shutil
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -80,7 +80,7 @@ def candidate_prefixes(ticker):
             yield from add(f"{base}{alt}")     # dot-stripped form too
     # 6. Yahoo-concat form for xlsx tickers that drop the exchange suffix
     #    (ALRIB -> ALRIBPA on Paris Euronext, NKT -> NKTCO on Copenhagen)
-    if "." not in ticker and "-" not in ticker:
+    if ticker.upper() in {"ALRIB", "NKT", "XFAB"}:
         for suffix in ("PA", "CO", "AS", "OL", "AX", "KS", "L", "DE", "TO"):
             yield from add(ticker + suffix)
 
@@ -90,11 +90,7 @@ def load_artifacts():
         print(f"Artifacts folder not found at {ARTIFACTS}", file=sys.stderr)
         sys.exit(1)
     return {f.name: f for f in ARTIFACTS.iterdir() if f.is_file()
-            and (f.suffix.lower() == ".pdf" or f.name.endswith("_DeepDive.md"))}
-
-
-# Exact ticker + format allowlist. No exchange-wide or Markdown exceptions.
-PUBLIC_ARTIFACTS = {"SIVE.ST": ".pdf"}
+            and f.suffix.lower() == ".pdf"}
 
 
 def load_tickers():
@@ -126,18 +122,22 @@ def find_match(ticker, artifacts):
     (and, in practice, often stale) deep-dive. This has bitten several times
     (the Samsung stub, then stale Kingboard/PCL analyses).
     """
-    ticker_an = alphanum(ticker)
-    # 1. Alphanum-equal prefix match — best signal. Collect ALL candidates.
-    matches = [(path, fname) for fname, path in artifacts.items()
-               if alphanum(fname.split("_", 1)[0]) == ticker_an]
-    # 2. Fall back to candidate-prefix matches (ALRIB -> ALRIBPA, BESI.AS -> BESI).
-    if not matches:
-        for cand in candidate_prefixes(ticker):
-            wanted = cand + "_"
-            matches = [(path, fname) for fname, path in artifacts.items()
-                       if fname.startswith(wanted)]
-            if matches:
-                break
+    candidates = {alphanum(c) for c in candidate_prefixes(ticker)}
+    matches = []
+    for fname, path in artifacts.items():
+        stem = path.stem
+        # Global frameworks/review batches are not stock research reports.
+        if re.match(r"^(FRAMEWORK|Evidence_Batch|Research_Folder|Serenity_X_Post)(?:_|$)", stem, re.I):
+            continue
+        # Ticker identities can precede or follow the company name, including
+        # split exchange codes: Alchip_3661_TW_Deep_Dive.pdf. Never match a
+        # substring inside a longer ticker or model/version suffix.
+        identity = re.split(r"_(?:Deep_?Dive|Deep_Dive|Wrapper|Source_Verification|Framework)(?:_|$)", stem, flags=re.I)[0]
+        parts = identity.split("_")
+        tokens = {alphanum(part) for part in parts}
+        tokens.update(alphanum(parts[i] + parts[i + 1]) for i in range(len(parts) - 1))
+        if candidates.intersection(tokens):
+            matches.append((path, fname))
     if not matches:
         return None, None
     if len(matches) > 1:
@@ -152,21 +152,18 @@ def find_match(ticker, artifacts):
 
 
 def select_artifact(ticker, artifacts):
-    """Publish only the explicitly allowed ticker and document format."""
-    extension = PUBLIC_ARTIFACTS.get(ticker)
-    if extension is None:
-        return None, None
-    candidates = {name: path for name, path in artifacts.items() if path.suffix.lower() == extension}
+    """Select a PDF for a stock in the website roster; never fall back to MD."""
+    candidates = {name: path for name, path in artifacts.items() if path.suffix.lower() == ".pdf"}
     return find_match(ticker, candidates)
 
 
-def prune_private_artifacts():
+def prune_private_artifacts(public_tickers=()):
     """Remove generated public copies only, never source Artifacts files."""
     output_root = DEEP_DIVES.resolve()
     if output_root != (REPO / "deep-dives").resolve() or output_root == ARTIFACTS.resolve():
         raise ValueError("Unexpected deep-dives output directory")
     removed = []
-    allowed_names = {ticker + extension for ticker, extension in PUBLIC_ARTIFACTS.items()}
+    allowed_names = {ticker + ".pdf" for ticker in public_tickers}
     for path in DEEP_DIVES.iterdir():
         if path.suffix.lower() not in {".pdf", ".md"} or path.name in allowed_names:
             continue
@@ -193,8 +190,7 @@ def main():
     for ticker in tickers:
         path, src_name = select_artifact(ticker, artifacts)
         if path is None:
-            if ticker in PUBLIC_ARTIFACTS:
-                missing.append(ticker)
+            missing.append(ticker)
             continue
         if not re.fullmatch(r"[A-Za-z0-9.^=-]+", ticker):
             raise ValueError(f"Unsafe artifact ticker: {ticker!r}")
@@ -205,7 +201,11 @@ def main():
         dst = DEEP_DIVES / f"{ticker}{extension}"
         shutil.copy2(path, dst)
         copied.append((ticker + extension, src_name))
-        manifest[ticker] = {"format": extension[1:], "version": hashlib.sha256(content).hexdigest()[:16]}
+        manifest[ticker] = {
+            "format": extension[1:],
+            "version": hashlib.sha256(content).hexdigest()[:16],
+            "updated": datetime.fromtimestamp(path.stat().st_mtime, timezone.utc).isoformat(),
+        }
 
     print(f"Copied {len(copied)} deep-dives to {DEEP_DIVES.relative_to(REPO)}/:")
     for filename, src in copied:
@@ -215,7 +215,7 @@ def main():
         for t in missing:
             print(f"  {t}")
 
-    removed = prune_private_artifacts()
+    removed = prune_private_artifacts(manifest)
     if removed:
         print(f"\nRemoved {len(removed)} private artifact copies from public output: " + ", ".join(removed))
 

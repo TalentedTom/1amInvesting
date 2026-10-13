@@ -527,8 +527,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     I18N['zh-CN'].pdf_open = '\u6253\u5f00 PDF';
     I18N['zh-CN'].pdf_hint = '\u5982\u679c\u9884\u89c8\u65e0\u6cd5\u663e\u793a\uff0c\u8bf7\u5728\u65b0\u6807\u7b7e\u9875\u6253\u5f00 PDF\u3002';
-    I18N.en.hint_text = 'Click SIVE.ST to read its public PDF analysis';
-    I18N['zh-CN'].hint_text = '\u70b9\u51fb SIVE.ST \u67e5\u770b\u516c\u5f00\u7684 PDF \u5206\u6790';
+    Object.assign(I18N.en, {
+        hint_text: 'Click a highlighted stock to read its research report',
+        report_title: '{company} · Research', report_back: 'Back to list',
+        report_updated: 'Report saved {date}',
+        report_smaller: 'Zoom out', report_larger: 'Zoom in', report_fit: 'Fit',
+        report_scroll: 'Scroll to read the report', report_page: 'Page {n} of {total}',
+        report_section: 'Go to report section', report_retry: 'Retry page',
+        report_error: 'The report could not be displayed.', report_original: 'Open original report'
+    });
+    Object.assign(I18N['zh-CN'], {
+        hint_text: '点击突出显示的股票，阅读研究报告',
+        report_title: '{company} · 研究报告', report_back: '返回列表',
+        report_updated: '报告保存日期 {date}',
+        report_smaller: '缩小', report_larger: '放大', report_fit: '适应宽度',
+        report_scroll: '滚动阅读报告', report_page: '第 {n} 页，共 {total} 页',
+        report_section: '跳转到报告章节', report_retry: '重新加载此页',
+        report_error: '无法显示报告。', report_original: '打开原始报告'
+    });
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
         let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
@@ -974,7 +990,7 @@ document.addEventListener('DOMContentLoaded', () => {
     syncWatchlistButton();
 
     // === Deep-Dive Modal ===
-    // Click a ticker → fetch /deep-dives/<TICKER>.md → render with marked.js.
+    // Click a stock with a PDF to open the full-screen research reader.
     // Modal can always be dismissed via the close button (sticky at top of
     // the panel), backdrop click, or Escape key.
     const deepDiveModal = document.getElementById('deep-dive-modal');
@@ -988,13 +1004,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // that no deep-dive exists for them yet.
     // Deep dives ENABLED: clicking a ticker opens its deep-dive modal, and the
     // deep-dive search box + discovery hint are shown. Requires the per-ticker
-    // deep-dives/*.md files (+ index.json manifest) to be published in the repo
+    // deep-dives/*.pdf files (+ index.json manifest) to be published in the repo
     // (see scripts/sync_deep_dives.py). Set to false to disable the whole
     // feature site-wide.
     const DEEP_DIVES_ENABLED = true;
     let deepDiveAvailable = new Set();
     let deepDiveArtifacts = new Map();
     let deepDiveRequest = 0;
+    let activeReportReader = null;
+    let activeReportTicker = '';
+    let deepDiveOpener = null;
     // Prev/next navigation order for the deep-dive modal — rebuilt by
     // buildTable to mirror the table's current sort/filter order.
     let diveOrder = [];
@@ -1007,11 +1026,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return fetch('deep-dives/index.json', { cache: 'no-cache' })
             .then((r) => (r.ok ? r.json() : []))
             .then((manifest) => {
-                // Only the Sivers PDF is public, even if an old manifest is cached.
+                // All stock PDFs are public; legacy Markdown entries stay private.
                 const entries = Array.isArray(manifest)
                     ? manifest.map(t => [t, {format: 'md'}]) : Object.entries(manifest || {});
                 deepDiveArtifacts = new Map(entries.filter(([ticker, item]) =>
-                    ticker === 'SIVE.ST' && item?.format === 'pdf'));
+                    /^[A-Za-z0-9.^=-]+$/.test(ticker) && item?.format === 'pdf'));
                 deepDiveAvailable = new Set(deepDiveArtifacts.keys());
             })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
@@ -1261,115 +1280,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function openDeepDive(ticker) {
-        if (ticker !== 'SIVE.ST' || deepDiveArtifacts.get(ticker)?.format !== 'pdf') return;
+        const artifact = deepDiveArtifacts.get(ticker);
+        if (artifact?.format !== 'pdf' || !window.ReportReader) return;
+        if (deepDiveModal.classList.contains('hidden')) deepDiveOpener = document.activeElement;
         const request = ++deepDiveRequest;
-        const artifact = deepDiveArtifacts.get(ticker) || {format: 'md'};
-        deepDiveModal.classList.toggle('pdf-mode', artifact.format === 'pdf');
-        deepDiveContent.classList.remove('modal-chart', 'modal-pdf');
-        // First successful open dismisses the discovery hint permanently —
-        // the user has clearly figured the feature out.
+        activeReportReader?.destroy();
+        activeReportTicker = ticker;
+        deepDiveModal.classList.add('pdf-mode', 'dive-mode');
+        deepDiveContent.classList.remove('modal-chart');
+        deepDiveContent.classList.add('modal-pdf');
         dismissHint(true);
-        deepDiveTitle.textContent = `${ticker} ${tr('modal_dive_suffix')}`;
-        // Freshness stamp: the xlsx 'Artifact Updated' field (e.g.
-        // "May 23 (Audit+GD)") tells readers when the thesis was last
-        // reviewed. Show just the date — the parenthetical is analyst
-        // process shorthand. Appended as a DOM node (not innerHTML) so
-        // ticker/date content needs no escaping.
-        const _updRaw = (() => {
-            try {
-                const rows = (window.PORTFOLIO_DATA || {}).en || [];
-                const r = rows.find(x => String(x.Ticker || '').trim() === ticker);
-                return r ? String(r['Artifact Updated'] || '').trim() : '';
-            } catch (_) { return ''; }
-        })();
-        const _updDate = _updRaw.replace(/\s*\([^)]*\)\s*$/, '').trim();
-        if (_updDate && _updDate !== '—' && _updDate !== '-') {
-            const span = document.createElement('span');
-            span.className = 'modal-updated';
-            span.textContent = `· ${tr('modal_updated', { date: _updDate })}`;
-            deepDiveTitle.appendChild(span);
+        const rows = (window.PORTFOLIO_DATA || {}).en || [];
+        const row = rows.find(r => String(r.Ticker || '').trim() === ticker);
+        deepDiveTitle.textContent = tr('report_title', { company: row?.Name || ticker });
+        const saved = new Date(artifact.updated || '');
+        if (Number.isFinite(saved.getTime())) {
+            const date = new Intl.DateTimeFormat('en-CA', {
+                timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit'
+            }).format(saved);
+            const stamp = document.createElement('span');
+            stamp.className = 'modal-updated';
+            stamp.textContent = tr('report_updated', { date });
+            deepDiveTitle.appendChild(stamp);
         }
-        if (modalCloseBtn) modalCloseBtn.setAttribute('aria-label', tr('modal_close_label'));
-        deepDiveContent.innerHTML = `<p class="modal-loading">${tr('modal_loading')}</p>`;
+        modalCloseBtn.setAttribute('aria-label', tr('report_back'));
         deepDiveModal.classList.remove('hidden');
-        // dive-mode shows the prev/next arrows (hidden in chart mode).
-        deepDiveModal.classList.add('dive-mode');
         diveIndex = diveOrder.indexOf(ticker);
         updateDiveNav();
-        document.body.style.overflow = 'hidden';   // prevent background scroll
-        // Reset scroll position when reopening (in case prior dive scrolled).
-        const scroller = deepDiveContent;
-        scroller.scrollTop = 0;
-
-        const version = artifact.version ? `?v=${encodeURIComponent(artifact.version)}` : '';
-        const url = `deep-dives/${encodeURIComponent(ticker)}.${artifact.format}${version}`;
-        if (artifact.format === 'pdf') {
-            fetch(url, {method: 'HEAD', cache: 'no-cache'})
-                .then(r => {
-                    if (!r.ok) throw new Error('PDF unavailable');
-                    if (request !== deepDiveRequest) return;
-                    deepDiveContent.replaceChildren();
-                    deepDiveContent.classList.add('modal-pdf');
-                    const toolbar = document.createElement('div');
-                    toolbar.className = 'pdf-toolbar';
-                    const hint = document.createElement('span');
-                    hint.textContent = tr('pdf_hint'); toolbar.appendChild(hint);
-                    const link = document.createElement('a');
-                    link.className = 'pdf-open'; link.textContent = tr('pdf_open');
-                    link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
-                    toolbar.appendChild(link); deepDiveContent.appendChild(toolbar);
-                    const frame = document.createElement('iframe');
-                    frame.className = 'pdf-frame'; frame.title = `${ticker} PDF`;
-                    frame.src = url + '#view=FitH';
-                    deepDiveContent.appendChild(frame);
-                }).catch(() => {
-                    if (request !== deepDiveRequest) return;
-                    deepDiveContent.textContent = tr('modal_no_dive', {ticker});
-                });
-            return;
-        }
-        fetch(url, { cache: 'no-cache' })
-            .then((r) => {
-                if (!r.ok) throw new Error(`No deep-dive on file for ${ticker} yet (HTTP ${r.status}).`);
-                return r.text();
-            })
-            .then((md) => {
-                if (request !== deepDiveRequest) return;
-                if (typeof marked === 'undefined') {
-                    deepDiveContent.textContent = md;   // fallback: raw text
-                    return;
-                }
-                deepDiveContent.innerHTML = marked.parse(md);
-                // Open external links in new tab
-                deepDiveContent.querySelectorAll('a[href^="http"]').forEach((a) => {
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                });
-                // Wrap each rendered table in a scrollable container so wide
-                // tables scroll horizontally on phones without breaking the
-                // modal layout. (CSS class .md-table-wrap handles overflow.)
-                deepDiveContent.querySelectorAll('table').forEach((table) => {
-                    if (table.parentElement.classList.contains('md-table-wrap')) return;
-                    const wrap = document.createElement('div');
-                    wrap.className = 'md-table-wrap';
-                    table.parentNode.insertBefore(wrap, table);
-                    wrap.appendChild(table);
-                });
-            })
-            .catch(() => {
-                if (request !== deepDiveRequest) return;
-                // Generic friendly fallback (don't surface raw HTTP message).
-                deepDiveContent.innerHTML =
-                    `<p style="color:#ef4444">${tr('modal_no_dive', {ticker})}</p>` +
-                    `<p style="color:var(--text-secondary);font-size:0.88em">${tr('modal_more_coming')}</p>`;
-            });
+        document.body.style.overflow = 'hidden';
+        const version = artifact.version ? '?v=' + encodeURIComponent(artifact.version) : '';
+        const url = 'deep-dives/' + encodeURIComponent(ticker) + '.pdf' + version;
+        activeReportReader = window.ReportReader.mount(deepDiveContent, url, {
+            translate: tr,
+            isCurrent: () => request === deepDiveRequest
+        });
+        modalCloseBtn.focus({ preventScroll: true });
     }
 
-    // Closes the modal regardless of which mode (deep-dive markdown or
+    // Closes the modal regardless of which mode (research report or
     // TradingView chart) was active. Same close routine for both — single
     // modal element, single set of dismiss handlers.
     function closeDeepDive() {
         ++deepDiveRequest;
+        activeReportReader?.destroy();
+        activeReportReader = null;
         deepDiveModal.classList.add('hidden');
         deepDiveModal.classList.remove('dive-mode', 'pdf-mode');
         document.body.style.overflow = '';
@@ -1378,6 +1332,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // open gets normal padding back.
         deepDiveContent.innerHTML = '';
         deepDiveContent.classList.remove('modal-chart', 'modal-pdf');
+        const opener = deepDiveOpener?.isConnected ? deepDiveOpener
+            : document.querySelector('.ticker-symbol[data-ticker="' + CSS.escape(activeReportTicker) + '"]');
+        opener?.focus({ preventScroll: true });
+        deepDiveOpener = null;
+        activeReportTicker = '';
     }
 
     // Prev/next deep-dive navigation. diveOrder mirrors the table's
@@ -1493,7 +1452,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openChart(ticker) {
         if (!ticker) return;
+        if (deepDiveModal.classList.contains('hidden')) deepDiveOpener = document.activeElement;
         ++deepDiveRequest;
+        activeReportReader?.destroy();
+        activeReportReader = null;
+        activeReportTicker = ticker;
         deepDiveModal.classList.remove('pdf-mode');
         deepDiveContent.classList.remove('modal-pdf');
         const tvSymbol = toTradingViewSymbol(ticker);
@@ -1578,7 +1541,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (deepDiveModal.classList.contains('hidden')) return;
         if (e.key === 'Escape') {
             closeDeepDive();
-        } else if (deepDiveModal.classList.contains('dive-mode')) {
+        } else if (e.key === 'Tab' && deepDiveModal.classList.contains('pdf-mode')) {
+            const focusable = Array.from(deepDiveModal.querySelectorAll('button:not(:disabled), a[href], [tabindex="0"]'))
+                .filter(el => el.getClientRects().length);
+            const first = focusable[0], last = focusable[focusable.length - 1];
+            if (e.shiftKey && (document.activeElement === first || !deepDiveModal.contains(document.activeElement))) {
+                e.preventDefault(); last?.focus();
+            } else if (!e.shiftKey && (document.activeElement === last || !deepDiveModal.contains(document.activeElement))) {
+                e.preventDefault(); first?.focus();
+            }
+        } else if (deepDiveModal.classList.contains('dive-mode') && !deepDiveModal.classList.contains('pdf-mode')) {
             // Arrow keys page through deep-dives in table order.
             if (e.key === 'ArrowLeft') stepDive(-1);
             else if (e.key === 'ArrowRight') stepDive(1);
@@ -2447,8 +2419,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasEtfInfo = sym === 'DRAM' && row && row._synthetic;
             const tickerClass = hasEtfInfo ? 'ticker-symbol has-etf-info'
                 : deepDiveAvailable.has(sym) ? 'ticker-symbol has-deep-dive' : 'ticker-symbol';
-            const tickerTag = hasEtfInfo ? 'button' : 'span';
-            const tickerAttrs = hasEtfInfo ? ' type="button" aria-haspopup="dialog" aria-controls="etf-info-modal"' : '';
+            const hasReport = deepDiveAvailable.has(sym);
+            const tickerTag = hasEtfInfo || hasReport ? 'button' : 'span';
+            const tickerAttrs = hasEtfInfo ? ' type="button" aria-haspopup="dialog" aria-controls="etf-info-modal"'
+                : hasReport ? ' type="button" aria-haspopup="dialog" aria-controls="deep-dive-modal"' : '';
             // Hover tooltip shows whichever identity ISN'T displayed:
             // rows showing the bare ticker (US/EU) reveal the company
             // name; rows showing the name (Asian numeric tickers) reveal

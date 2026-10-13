@@ -1837,13 +1837,41 @@ body.light-mode .modal-close:hover {
     padding: 2rem 0;
 }
 
-/* Original PDF pages stay intact; the direct link also works on mobile. */
-.modal.pdf-mode .modal-panel { max-width: 1040px; height: 90vh; height: 90dvh; }
+/* A full-screen research reader, without the browser's PDF viewer chrome. */
+.modal.pdf-mode { padding: 0; overflow: hidden; }
+.modal.pdf-mode .modal-panel { max-width: none; max-height: none; height: 100vh; height: 100dvh; border: 0; border-radius: 0; }
+.report-back-label { display: none; }
+.modal.pdf-mode .modal-close { order: -1; width: auto; padding: 0 10px; margin: 0 14px 0 0; font-size: .85rem; font-weight: 600; color: var(--text-primary); }
+.modal.pdf-mode .modal-close-icon { display: none; }
+.modal.pdf-mode .report-back-label { display: inline; white-space: nowrap; }
+.modal.pdf-mode .modal-updated { display: block; margin: 2px 0 0; }
 .modal-content.modal-pdf { display: flex; flex-direction: column; min-height: 0; padding: 0; overflow: hidden; }
-.pdf-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 9px 14px; flex-shrink: 0; border-bottom: 1px solid var(--border); }
-.pdf-toolbar span { font-size: .75rem; color: var(--text-secondary); }
-.pdf-toolbar .pdf-open { white-space: nowrap; font-size: .85rem; font-weight: 600; }
-.pdf-frame { display: block; width: 100%; flex: 1; min-height: 0; border: 0; background: #fff; }
+.report-reader { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+.report-tools { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 7px 18px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.report-progress { color: var(--text-secondary); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.report-zoom { display: flex; gap: 6px; }
+.report-zoom button { height: 32px; min-width: 36px; padding: 0 9px; border: 1px solid var(--border); border-radius: 6px; background: transparent; color: var(--text-primary); font: inherit; font-size: .8rem; cursor: pointer; }
+.report-zoom button:disabled { opacity: .35; cursor: default; }
+.report-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; background: #e5e7eb; -webkit-overflow-scrolling: touch; }
+.report-pages { position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; width: max-content; min-width: 100%; padding: 24px; }
+.report-page { position: relative; flex-shrink: 0; background: #fff; color: #111; box-shadow: 0 2px 12px #0002; overflow: hidden; }
+.report-page canvas { display: block; }
+.report-link-layer { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.report-link-layer a { position: absolute; pointer-events: auto; }
+.report-link-layer a:hover, .report-link-layer a:focus-visible { background: #2563eb20; outline: 1px solid #2563eb; }
+.report-page-retry { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; color: #1f2937; cursor: pointer; }
+.report-error { padding: 24px; color: var(--text-primary); }
+.report-error a { color: var(--accent); }
+.report-zoom button:focus-visible, .report-scroll:focus-visible, .modal.pdf-mode .modal-close:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+@media (max-width: 600px) {
+    .modal.pdf-mode .modal-header { padding: 8px; }
+    .modal.pdf-mode .modal-header h2 { font-size: .85rem; }
+    .modal.pdf-mode .modal-close { padding: 0 8px; margin-right: 8px; font-size: .75rem; }
+    .modal.pdf-mode .modal-nav { gap: 4px; margin-left: 4px; }
+    .modal.pdf-mode .modal-nav-btn { width: 28px; height: 32px; }
+    .report-tools { padding: 6px 10px; }
+    .report-pages { padding: 12px 8px; gap: 12px; }
+}
 
 
 /* Markdown content styling — keep readable, not too dense */
@@ -1983,6 +2011,10 @@ body.light-mode .modal-content th {
 
 /* Link affordance, only when a deep-dive exists for this ticker */
 .ticker-symbol.has-deep-dive {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    font: inherit;
     cursor: pointer;
     color: var(--accent);
     text-decoration: underline;
@@ -2007,6 +2039,7 @@ body.light-mode .modal-content th {
 .ticker-symbol.has-deep-dive:hover::after {
     opacity: 1;
 }
+.ticker-symbol.has-deep-dive:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* DRAM's model explanation uses a native dialog, independent of deep dives. */
 .ticker-symbol.has-etf-info {

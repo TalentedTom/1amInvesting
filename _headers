@@ -27,6 +27,9 @@
 /script.js
   Cache-Control: no-store
 
+/report-reader.js
+  Cache-Control: no-store
+
 /synthetic-portfolios.js
   Cache-Control: no-store
 
