@@ -219,6 +219,11 @@
     "version": "b49e22672432d0d1",
     "updated": "2026-10-11T23:30:15.381000+00:00"
   },
+  "3986.HK": {
+    "format": "pdf",
+    "version": "56a605c6cd4b64ee",
+    "updated": "2026-10-14T01:08:52.151000+00:00"
+  },
   "4004.T": {
     "format": "pdf",
     "version": "dfddb162f43910b6",
@@ -263,6 +268,11 @@
     "format": "pdf",
     "version": "517bf9a19108558c",
     "updated": "2026-10-01T12:44:07.738000+00:00"
+  },
+  "603986.SH": {
+    "format": "pdf",
+    "version": "56a605c6cd4b64ee",
+    "updated": "2026-10-14T01:08:52.151000+00:00"
   },
   "6134.T": {
     "format": "pdf",
@@ -451,8 +461,8 @@
   },
   "AMAT": {
     "format": "pdf",
-    "version": "0f66fe87fb1a0c48",
-    "updated": "2026-10-07T15:46:56.022000+00:00"
+    "version": "757c9615009126a5",
+    "updated": "2026-10-13T19:43:19.756000+00:00"
   },
   "AMD": {
     "format": "pdf",
@@ -471,8 +481,8 @@
   },
   "ASML": {
     "format": "pdf",
-    "version": "8d26ec9e25fe130d",
-    "updated": "2026-10-11T17:25:17.936000+00:00"
+    "version": "93fd30f4221eaf36",
+    "updated": "2026-10-14T11:03:54.689000+00:00"
   },
   "ATS.VI": {
     "format": "pdf",
@@ -644,6 +654,11 @@
     "version": "665519919cd357ba",
     "updated": "2026-10-12T01:38:50.579000+00:00"
   },
+  "GLW": {
+    "format": "pdf",
+    "version": "6078dd678a2f993a",
+    "updated": "2026-10-14T11:28:51.927000+00:00"
+  },
   "GLXY": {
     "format": "pdf",
     "version": "7975fe3426dd1ad9",
@@ -784,6 +799,11 @@
     "version": "f50bae16953175a6",
     "updated": "2026-10-11T07:05:47.038000+00:00"
   },
+  "ORCL": {
+    "format": "pdf",
+    "version": "424e6528f7557b8a",
+    "updated": "2026-10-13T17:43:18.397000+00:00"
+  },
   "OSS": {
     "format": "pdf",
     "version": "5baf9909661a2159",
@@ -806,8 +826,8 @@
   },
   "QCOM": {
     "format": "pdf",
-    "version": "09ca3e4cd6e0acd0",
-    "updated": "2026-10-12T07:54:58.923000+00:00"
+    "version": "6db7a9fdb0503181",
+    "updated": "2026-10-13T19:29:14.060000+00:00"
   },
   "RRX": {
     "format": "pdf",
