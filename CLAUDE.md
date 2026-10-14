@@ -127,6 +127,8 @@ only a display limit. Never restore those columns during routine refreshes.
   equivalent to the Base-weighted target/price multiple, subject to rounding.
   Both derived fields are always recalculated, never preserved from stale
   workbook or live-feed Q3 values. Base and quarterly forecasts stay untouched.
+  DRAM is the exception: its EV Upside averages the holdings' individual EV
+  scores with portfolio weights, independently of its weighted Base (see below).
 - Keep `script.js` `TARGET_QUARTER` and `scripts/score.py` `TARGET_COLS[0]`
   aligned on each roll. Python live scoring and DRAM import the latter;
   frontend DRAM receives the former from the table. The target-column tint,
@@ -257,8 +259,15 @@ don't rebind it per render.
   changed Base to the weighted average of its holdings on October 13, 2026;
   `base_method: weighted` persists this in regens, live scoring and the frontend.
   Base = sum(weight * component Base). Keep fractional precision for scoring;
-  display with zero decimals. EV Upside retains Base * target/price - 100,
-  not a weighted average of the individual EV Upside scores. Quarterly returns
+  display with zero decimals. EV Upside is independently averaged from holdings
+  (October 13): sum(weight * component EV Upside), with ev_method: weighted.
+  Derive each component's EV from its active target/Base/current price using its
+  existing whole-point scoring, then preserve fractional average precision.
+  Do not average one-decimal display labels or use stale stored feed scores.
+  It is NOT weighted Base multiplied by weighted target/price. Apply 25x/30x to
+  each component target once, then average those component EV scores. Standalone
+  scoring, live prices, display and sorting must all keep this rule. Missing
+  component inputs leave EV blank, never silently reweight. Quarterly returns
   still use component weights, not Base scores; forecasts are unchanged. CXMT maps to
   688825.SH as the company-model proxy for its swap.
 - `update_data.py` appends the row via `scripts/synthetic_portfolios.py`

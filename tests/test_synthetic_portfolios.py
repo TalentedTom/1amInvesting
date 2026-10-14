@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from synthetic_portfolios import refresh_synthetic_rows, add_synthetic_rows
 import fetch_live
+import score
 
 
 def fixture():
@@ -57,6 +58,61 @@ class SyntheticTests(unittest.TestCase):
         self.assertEqual(rows[-1]['Base'], 100)
         self.assertEqual(rows[:-1], before)
 
+    def test_weighted_ev_is_independent_from_weighted_base_times_target(self):
+        rows = fixture()
+        rows[-1]['_synthetic'].update(base_method='weighted', ev_method='weighted')
+        for row, base in zip(rows[:-1], [99, 80, 62, 70]):
+            row['Base'] = base
+            row['EV Upside'] = 999
+        refresh_synthetic_rows(rows)
+        etf = rows[-1]
+        self.assertEqual(etf['Base'], 77.75)
+        self.assertEqual(etf['Q4 2027'], 72.5)
+        self.assertEqual(etf['EV Upside'], 18.5)
+        lookup = {r['Ticker']: r for r in rows}
+        etf['EV Upside'] = 999
+        score.score_row(etf, lookup)
+        self.assertEqual(etf['EV Upside'], 18.5)
+        self.assertNotEqual(etf['EV Upside'], score.ev_upside(etf['Base'], etf['Q4 2027'], etf['Current Price']))
+        data = {'en': rows, 'zh-CN': copy.deepcopy(rows)}
+        with patch.object(score, 'load_data_js', return_value=('window.PORTFOLIO_DATA = ', data)), \
+                patch.object(score, 'save_data_js'):
+            score.main()
+        self.assertEqual(data['en'][-1]['EV Upside'], 18.5)
+        self.assertEqual(data['zh-CN'][-1]['EV Upside'], 18.5)
+
+    def test_weighted_ev_live_fresh_quotes_and_failed_quote_fallback(self):
+        rows = fixture()
+        rows[-1]['_synthetic'].update(base_method='weighted', ev_method='weighted')
+        for row, base in zip(rows[:-1], [99, 80, 62, 70]): row['Base'] = base
+        original = copy.deepcopy(rows)
+        quotes = {r['Ticker']: (200 if r['Ticker'] == 'A' else r['Current Price'], 'USD', 0) for r in rows}
+        with patch.object(fetch_live, 'fetch_all', return_value=(quotes, [], [])):
+            payload, _ = fetch_live.build_live_payload({'en': rows})
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], -6.25)
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], sum(.25 * payload['tickers'][t]['ev_upside'] for t in 'ABCD'))
+        quotes['A'] = (100.055, 'USD', 0)
+        with patch.object(fetch_live, 'fetch_all', return_value=(quotes, [], [])):
+            payload, _ = fetch_live.build_live_payload({'en': rows})
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], sum(.25 * payload['tickers'][t]['ev_upside'] for t in 'ABCD'))
+        del quotes['A']
+        with patch.object(fetch_live, 'fetch_all', return_value=(quotes, ['A'], [])):
+            payload, _ = fetch_live.build_live_payload({'en': rows})
+        self.assertEqual(payload['tickers']['DRAM']['ev_upside'], 18.5)
+        self.assertEqual(rows, original)
+
+    def test_weighted_ev_missing_inputs_and_roll_forward(self):
+        for missing in ('Base', 'Current Price', 'Q4 2027'):
+            rows = fixture(); rows[-1]['_synthetic']['ev_method'] = 'weighted'
+            del rows[0][missing]; refresh_synthetic_rows(rows)
+            self.assertEqual(rows[-1]['EV Upside'], '')
+        rows = fixture(); rows[-1]['_synthetic']['ev_method'] = 'weighted'
+        for row, base in zip(rows[:-1], [99, 80, 62, 70]):
+            row['Base'] = base; row['Q1 2028'] = 200
+        with patch.object(score, 'TARGET_COLS', ('Q1 2028',)):
+            refresh_synthetic_rows(rows)
+        self.assertEqual(rows[-1]['EV Upside'], 55.5)
+
     def test_live_constituent_price_and_no_compounding(self):
         rows = fixture()
         rows[0]['Current Price'] = 200
@@ -100,6 +156,10 @@ class SyntheticTests(unittest.TestCase):
         etf = next(r for r in rows if r['Ticker'] == 'DRAM')
         lookup = {r['Ticker']: r for r in rows}
         self.assertEqual(etf['_synthetic']['base_method'], 'weighted')
+        self.assertEqual(etf['_synthetic']['ev_method'], 'weighted')
+        expected_ev = sum(h['weight'] * score.ev_for_row(lookup[h['ticker']])
+                          for h in etf['_synthetic']['holdings'])
+        self.assertAlmostEqual(etf['EV Upside'], expected_ev)
         expected_base = sum(h['weight'] * lookup[h['ticker']]['Base']
                             for h in etf['_synthetic']['holdings'])
         self.assertAlmostEqual(etf['Base'], expected_base)

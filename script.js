@@ -134,6 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function scaledEvUpside(row) {
         const k = multipleFactor();
+        if (row._synthetic?.ev_method === 'weighted') {
+            const rows = window.PORTFOLIO_DATA[currentLang] || window.PORTFOLIO_DATA.en;
+            return window.SyntheticPortfolios.evUpside(row, rows, parseLooseNumber, TARGET_QUARTER, k);
+        }
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
         const base = parseFloat(row['Base']);
@@ -340,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: 'Markets price ~12 months ahead — fair value today',
             caption_FY28: 'Implied fair value ~1 year from now',
-            caption_EVUp: 'EV Upside uses the Q4 2027 target and current price. Displayed multiple = (Base / 100) × (target / price), including the selected valuation multiple. e.g. 4.3x ≈ 330% expected upside. Below 1.0x means a negative probability-weighted return.',
+            caption_EVUp: 'EV Upside uses the Q4 2027 target and current price. Displayed multiple = (Base / 100) × (target / price), including the selected valuation multiple. e.g. 4.3x ≈ 330% expected upside. Below 1.0x means a negative probability-weighted return. DRAM instead uses the weighted average of its holdings’ EV Upside scores.',
             archive_show: 'Show research archive ({n})',
             archive_hide: 'Hide research archive',
             modal_updated: 'Analysis updated {date}',
@@ -477,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
-            caption_EVUp: 'EV 上涨使用 2027 年第四季度目标价和当前股价。显示倍数 =（基础分 / 100）×（目标价 / 当前股价），包含所选估值倍数。例：4.3x ≈ 330% 预期涨幅。低于 1.0x 表示概率加权回报为负。',
+            caption_EVUp: 'EV 上涨使用 2027 年第四季度目标价和当前股价。显示倍数 =（基础分 / 100）×（目标价 / 当前股价），包含所选估值倍数。例：4.3x ≈ 330% 预期涨幅。低于 1.0x 表示概率加权回报为负。DRAM 则使用其持仓 EV 上涨分数的加权平均值。',
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
@@ -1256,6 +1260,11 @@ document.addEventListener('DOMContentLoaded', () => {
         textElement('h3', copy.how);
         textElement('p', copy.formula);
         textElement('p', `${copy.base} ${Number(row.Base).toFixed(0)}`);
+        if (row._synthetic.ev_method === 'weighted') {
+            textElement('p', zh
+                ? 'EV Upside 为各持仓 EV Upside 的加权平均值，使用当前价格和有效目标季度。Base 分数单独取加权平均值。'
+                : 'EV Upside is the weighted average of the holdings’ EV Upside scores, using current prices and the active target quarter. Base is averaged separately.');
+        }
         textElement('p', copy.note).className = 'etf-model-note';
         const link = textElement('a', copy.link);
         link.href = 'https://www.roundhillinvestments.com/etf/dram/';

@@ -92,6 +92,7 @@ from score import (  # noqa: E402
     parse_range,
     parse_int,
     base_for_row,
+    ev_for_row,
     entry_score,
     total_score,
     upside_display,
@@ -270,6 +271,13 @@ def build_live_payload(data, workers=DEFAULT_WORKERS,
             row["Current Price"] = fmt_price(*quotes[ticker][:2])
     refresh_synthetic_rows(rows)
 
+    # Match each ordinary holding's live EV inputs, including full quote
+    # precision. Failed quotes retain their last available workbook price.
+    ev_lookup = {str(row.get("Ticker", "")).strip(): dict(row) for row in rows}
+    for ticker, quote in quotes.items():
+        if ticker in ev_lookup:
+            ev_lookup[ticker]["Current Price"] = quote[0]
+
     for row in rows:
         ticker = (row.get("Ticker") or "").strip()
         if ticker not in quotes:
@@ -296,7 +304,12 @@ def build_live_payload(data, workers=DEFAULT_WORKERS,
             entry_payload["entry"] = entry
             entry_payload["total"] = total
             entry_payload["upside"] = upside_display(low, high, price)
-            entry_payload["ev_upside"] = ev_upside(base, high, price)
+            if (row.get("_synthetic") or {}).get("ev_method") == "weighted":
+                ev = ev_for_row(row, ev_lookup)
+                if ev is not None:
+                    entry_payload["ev_upside"] = ev
+            else:
+                entry_payload["ev_upside"] = ev_upside(base, high, price)
             bucket_counts[bucket_for(total)] = bucket_counts.get(bucket_for(total), 0) + 1
         else:
             no_score.append(ticker)

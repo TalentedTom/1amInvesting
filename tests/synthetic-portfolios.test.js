@@ -1,6 +1,6 @@
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
-const {refresh} = require('../synthetic-portfolios.js');
+const {refresh, evUpside} = require('../synthetic-portfolios.js');
 const parse = value => value === '' || value == null ? NaN : Number(value);
 const fixture = () => [
     ...[200, 180, 100, 100].map((target, i) => ({Ticker: 'ABCD'[i], Base: 100, 'Current Price': 100, 'Q3 2027': target / 2, 'Q4 2027': target})),
@@ -24,22 +24,55 @@ test('fractional weighted Base and EV, not a fixed or truncated Base', () => {
     assert.equal(rows[4]['EV Upside'], 13);
 });
 
-test('DRAM configuration uses weighted Base, not fixed Base or averaged component EV', () => {
+test('DRAM averages component Base and EV separately; forecasts remain unchanged', () => {
     const config = require('../synthetic_portfolios.json').find(model => model.ticker === 'DRAM');
     assert.equal(config.base_method, 'weighted');
+    assert.equal(config.ev_method, 'weighted');
     const rows = fixture();
     rows[4]._synthetic.base_method = config.base_method;
+    rows[4]._synthetic.ev_method = config.ev_method;
     [99, 80, 62, 70].forEach((base, i) => rows[i].Base = base);
     update(rows);
     assert.equal(rows[4].Base, 77.75);
     assert.equal(rows[4]['Q4 2027'], 72.5);
-    assert.equal(rows[4]['EV Upside'], Math.round(77.75 * 1.45 - 100));
+    assert.notEqual(rows[4]['EV Upside'], Math.round(77.75 * 1.45 - 100));
     const averageComponentEV = rows.slice(0, 4).reduce((sum, row) =>
         sum + .25 * (row.Base * row['Q4 2027'] / row['Current Price'] - 100), 0);
-    assert.notEqual(rows[4]['EV Upside'], Math.round(averageComponentEV));
+    assert.equal(rows[4]['EV Upside'], averageComponentEV);
+    assert.equal(rows[4]['EV Upside'], 18.5);
     rows[0].Base += 1;
     update(rows);
     assert.equal(rows[4].Base, 78);
+});
+
+test('weighted EV follows live inputs and valuation factors, not stale EV or ETF quote', () => {
+    const rows = fixture();
+    rows[4]._synthetic.ev_method = 'weighted';
+    [99, 80, 62, 70].forEach((base, i) => rows[i].Base = base);
+    rows.slice(0, 4).forEach(row => row['EV Upside'] = 999);
+    for (const factor of [1, 1.25, 1.5]) {
+        const expected = rows.slice(0, 4).reduce((sum, row) => sum
+            + .25 * Math.round(row.Base * factor * row['Q4 2027'] / row['Current Price'] - 100), 0);
+        assert.equal(evUpside(rows[4], rows, parse, 'Q4 2027', factor), expected);
+    }
+    rows[0]['Current Price'] = 200;
+    update(rows); update(rows);
+    assert.equal(rows[4]['EV Upside'], -6.25);
+    rows[4]['Current Price'] = 100;
+    update(rows);
+    assert.equal(rows[4]['EV Upside'], -6.25);
+    rows.slice(0, 4).forEach(row => row['Q1 2028'] = 200);
+    refresh(rows, ['Q4 2027', 'Q1 2028'], parse, 'Q1 2028');
+    assert.equal(rows[4]['EV Upside'], 30.75);
+});
+
+test('missing holding inputs leave weighted EV blank, including Base or active target', () => {
+    for (const missing of ['Base', 'Current Price', 'Q4 2027']) {
+        const rows = fixture(); rows[4]._synthetic.ev_method = 'weighted';
+        delete rows[0][missing]; update(rows);
+        assert.equal(rows[4]['EV Upside'], '');
+        assert.ok(Number.isNaN(evUpside(rows[4], rows, parse, 'Q4 2027')));
+    }
 });
 test('weighted percentages, Base100, and source rows unchanged', () => {
     const rows = fixture(), before = structuredClone(rows.slice(0, -1));

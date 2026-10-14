@@ -326,7 +326,41 @@ def base_for_row(row):
     return base if math.isfinite(base) and base >= 0 else None
 
 
-def score_row(row):
+def ev_for_row(row, by_ticker=None):
+    """Use fresh component EV scores for weighted ETFs, never a stale feed score.
+
+    Components use the existing whole-percentage-point EV formula. Preserve
+    fractional precision in their weighted average; the UI formats the multiple.
+    Missing components stay unavailable; weights are never renormalized.
+    """
+    model = row.get("_synthetic") or {}
+    if model.get("ev_method") == "weighted":
+        holdings = model.get("holdings") or []
+        weights = [h.get("weight") for h in holdings]
+        if (not by_ticker or not weights
+                or any(not isinstance(w, (int, float)) or not math.isfinite(w) or w <= 0 for w in weights)
+                or not math.isclose(sum(weights), 1, abs_tol=1e-9)
+                or len({h.get("ticker") for h in holdings}) != len(holdings)):
+            return None
+        result = 0.0
+        for holding in holdings:
+            source = by_ticker.get(holding.get("ticker"))
+            if not source or source.get("_synthetic"):
+                return None
+            value = ev_for_row(source)
+            if value is None:
+                return None
+            result += holding["weight"] * value
+        return round(result, 8)
+    base = base_for_row(row)
+    price = parse_price(row.get("Current Price"))
+    _, high = parse_range(target_cell(row))
+    if base is None or price is None or price <= 0 or high is None:
+        return None
+    return ev_upside(base, high, price)
+
+
+def score_row(row, by_ticker=None):
     """Return a summary dict if the row was scored, or None if skipped.
     Mutates `row` in-place when scoring succeeds.
     """
@@ -354,7 +388,8 @@ def score_row(row):
     row["Total"] = total          # kept for bucket/alert logic (not displayed)
     row["Upside"] = upside
     # Derived values must use the active horizon, never a stale saved Q3 score.
-    row["EV Upside"] = ev_upside(base, high, price)
+    ev = ev_for_row(row, by_ticker)
+    row["EV Upside"] = ev if ev is not None else ""
 
     return {
         "ticker": str(row.get("Ticker") or ""),
@@ -449,8 +484,9 @@ def main():
 
     summaries = []
     skipped = []
+    by_ticker = {str(row.get("Ticker", "")).strip(): row for row in data["en"]}
     for i, row in enumerate(data["en"]):
-        s = score_row(row)
+        s = score_row(row, by_ticker)
         if s is None:
             skipped.append(str(row.get("Ticker") or f"#{i}"))
             continue

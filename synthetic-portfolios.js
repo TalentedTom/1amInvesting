@@ -1,16 +1,43 @@
 // Custom ETF targets use the CURRENT constituent prices and the latest
 // data.js forecasts. Never consume a stale precomputed target from live.json.
 (function (root) {
+    function validHoldings(holdings) {
+        return Array.isArray(holdings) && holdings.length > 0
+            && holdings.every(h => Number.isFinite(h.weight) && h.weight > 0)
+            && new Set(holdings.map(h => h.ticker)).size === holdings.length
+            && Math.abs(holdings.reduce((sum, h) => sum + h.weight, 0) - 1) < 1e-9;
+    }
+    function evUpside(row, rows, parseNumber, targetQuarter, factor = 1) {
+        function component(source) {
+            const base = parseNumber(source?.Base);
+            const price = parseNumber(source?.['Current Price']);
+            const target = parseNumber(source?.[targetQuarter]);
+            if (!Number.isFinite(base) || base < 0 || !Number.isFinite(price) || price <= 0
+                    || !Number.isFinite(target) || !Number.isFinite(factor) || factor <= 0) return NaN;
+            return Math.round(base * factor * target / price - 100);
+        }
+        const model = row._synthetic;
+        if (model?.ev_method !== 'weighted') return component(row);
+        if (!validHoldings(model.holdings)) return NaN;
+        const lookup = rows instanceof Map ? rows
+            : new Map(rows.map(source => [String(source.Ticker || '').trim(), source]));
+        let total = 0;
+        for (const holding of model.holdings) {
+            const source = lookup.get(holding.ticker);
+            if (!source || source._synthetic) return NaN;
+            const ev = component(source);
+            if (!Number.isFinite(ev)) return NaN;
+            total += holding.weight * ev;
+        }
+        return +total.toFixed(8);
+    }
     function refresh(rows, quarters, parseNumber, targetQuarter) {
         const byTicker = new Map(rows.map(row => [String(row.Ticker || '').trim(), row]));
         for (const row of rows) {
             const model = row._synthetic;
             if (!model) continue;
             const holdings = model.holdings;
-            const validWeights = Array.isArray(holdings) && holdings.length > 0
-                && holdings.every(h => Number.isFinite(h.weight) && h.weight > 0)
-                && new Set(holdings.map(h => h.ticker)).size === holdings.length
-                && Math.abs(holdings.reduce((sum, h) => sum + h.weight, 0) - 1) < 1e-9;
+            const validWeights = validHoldings(holdings);
             const price = parseNumber(row['Current Price']);
             const bases = (validWeights ? holdings : []).map(h => parseNumber(byTicker.get(h.ticker)?.Base));
             row.Base = validWeights && bases.every(b => Number.isFinite(b) && b >= 0)
@@ -50,8 +77,12 @@
             } else {
                 for (const field of ['Upside', 'EV Upside', 'Entry', 'Total']) row[field] = '';
             }
+            if (model.ev_method === 'weighted') {
+                const ev = evUpside(row, byTicker, parseNumber, targetQuarter);
+                row['EV Upside'] = Number.isFinite(ev) ? ev : '';
+            }
         }
     }
-    if (typeof module !== 'undefined' && module.exports) module.exports = { refresh };
-    else root.SyntheticPortfolios = { refresh };
+    if (typeof module !== 'undefined' && module.exports) module.exports = { refresh, evUpside };
+    else root.SyntheticPortfolios = { refresh, evUpside };
 })(typeof window !== 'undefined' ? window : globalThis);

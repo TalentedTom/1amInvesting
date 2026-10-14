@@ -7668,6 +7668,7 @@ window.PORTFOLIO_DATA = {
             "Port": "",
             "_synthetic": {
                 "base_method": "weighted",
+                "ev_method": "weighted",
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -7710,7 +7711,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside uses that weighted Base with the existing weighted quarter target. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside is the weighted average of the holdings' EV Upside scores, recalculated from current prices and the active target quarter. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 144.93429906583148,
             "Q1 2028": 164.5322136366583,
@@ -7728,7 +7729,7 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 167.00640998791147,
             "Q4 2029": 167.40088627382244,
             "Upside": "2.6x",
-            "EV Upside": 122,
+            "EV Upside": 124.57,
             "Entry": 66,
             "Total": 77
         }
@@ -15402,6 +15403,7 @@ window.PORTFOLIO_DATA = {
             "Port": "",
             "_synthetic": {
                 "base_method": "weighted",
+                "ev_method": "weighted",
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -15444,7 +15446,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside uses that weighted Base with the existing weighted quarter target. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside is the weighted average of the holdings' EV Upside scores, recalculated from current prices and the active target quarter. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 144.93429906583148,
             "Q1 2028": 164.5322136366583,
@@ -15462,7 +15464,7 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 167.00640998791147,
             "Q4 2029": 167.40088627382244,
             "Upside": "2.6x",
-            "EV Upside": 122,
+            "EV Upside": 124.57,
             "Entry": 66,
             "Total": 77
         }

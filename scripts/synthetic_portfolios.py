@@ -11,9 +11,9 @@ import re
 from pathlib import Path
 
 try:
-    from .score import parse_price, score_row, ev_upside, target_cell
+    from .score import parse_price, score_row, ev_for_row
 except ImportError:  # fetch_live.py runs directly from scripts/
-    from score import parse_price, score_row, ev_upside, target_cell
+    from score import parse_price, score_row, ev_for_row
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -65,8 +65,10 @@ def refresh_synthetic_rows(rows):
             row[quarter] = price * (1 + weighted_return) if complete else ""
         for field in ("Upside", "EV Upside", "Entry", "Total"):
             row[field] = ""
-        if score_row(row):
-            row["EV Upside"] = ev_upside(row["Base"], number(target_cell(row)), price)
+        score_row(row, by_ticker)
+        if model.get("ev_method") == "weighted":
+            ev = ev_for_row(row, by_ticker)
+            row["EV Upside"] = ev if ev is not None else ""
 
 
 def add_synthetic_rows(rows, prior_path):
@@ -95,7 +97,7 @@ def add_synthetic_rows(rows, prior_path):
             "Change %": old.get("Change %", f"{seed['change_pct']:+.2f}%"),
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "", "Port": "",
-            "_synthetic": {k: config[k] for k in ("base_method", "base", "holdings", "note") if k in config},
+            "_synthetic": {k: config[k] for k in ("base_method", "base", "ev_method", "holdings", "note") if k in config},
         })
     refresh_synthetic_rows(rows)
     print("Added custom ETF models: " + ", ".join(sorted(configured)))
