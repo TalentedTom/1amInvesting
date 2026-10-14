@@ -99,6 +99,14 @@ class SyntheticTests(unittest.TestCase):
         self.assertEqual(sum(r['Ticker'] == 'DRAM' for r in rows), 1)
         etf = next(r for r in rows if r['Ticker'] == 'DRAM')
         lookup = {r['Ticker']: r for r in rows}
+        self.assertEqual(etf['_synthetic']['base_method'], 'weighted')
+        expected_base = sum(h['weight'] * lookup[h['ticker']]['Base']
+                            for h in etf['_synthetic']['holdings'])
+        self.assertAlmostEqual(etf['Base'], expected_base)
+        changed_holding = etf['_synthetic']['holdings'][0]
+        lookup[changed_holding['ticker']]['Base'] += 1
+        refresh_synthetic_rows(rows)
+        self.assertAlmostEqual(etf['Base'], expected_base + changed_holding['weight'])
         quarters = [k for k in etf if re.fullmatch(r'Q[1-4] 20\d{2}', k)]
         self.assertEqual(len(quarters), 15)
         for q in quarters:

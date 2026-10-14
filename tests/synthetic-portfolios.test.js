@@ -23,6 +23,24 @@ test('fractional weighted Base and EV, not a fixed or truncated Base', () => {
     assert.equal(rows[4].Base, 77.75);
     assert.equal(rows[4]['EV Upside'], 13);
 });
+
+test('DRAM configuration uses weighted Base, not fixed Base or averaged component EV', () => {
+    const config = require('../synthetic_portfolios.json').find(model => model.ticker === 'DRAM');
+    assert.equal(config.base_method, 'weighted');
+    const rows = fixture();
+    rows[4]._synthetic.base_method = config.base_method;
+    [99, 80, 62, 70].forEach((base, i) => rows[i].Base = base);
+    update(rows);
+    assert.equal(rows[4].Base, 77.75);
+    assert.equal(rows[4]['Q4 2027'], 72.5);
+    assert.equal(rows[4]['EV Upside'], Math.round(77.75 * 1.45 - 100));
+    const averageComponentEV = rows.slice(0, 4).reduce((sum, row) =>
+        sum + .25 * (row.Base * row['Q4 2027'] / row['Current Price'] - 100), 0);
+    assert.notEqual(rows[4]['EV Upside'], Math.round(averageComponentEV));
+    rows[0].Base += 1;
+    update(rows);
+    assert.equal(rows[4].Base, 78);
+});
 test('weighted percentages, Base100, and source rows unchanged', () => {
     const rows = fixture(), before = structuredClone(rows.slice(0, -1));
     update(rows);

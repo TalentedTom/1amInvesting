@@ -7660,15 +7660,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "DRAM",
             "Name": "Roundhill Memory ETF - custom weighted model",
-            "Base": 100.0,
+            "Base": 84.55,
             "Current Price": 61.58,
             "Change %": "+3.12%",
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "",
             "Port": "",
             "_synthetic": {
-                "base_method": "fixed",
-                "base": 100,
+                "base_method": "weighted",
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -7711,7 +7710,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is fixed at 100 by the model author. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside uses that weighted Base with the existing weighted quarter target. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 144.93429906583148,
             "Q1 2028": 164.5322136366583,
@@ -7729,9 +7728,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 167.00640998791147,
             "Q4 2029": 167.40088627382244,
             "Upside": "2.6x",
-            "EV Upside": 163,
+            "EV Upside": 122,
             "Entry": 66,
-            "Total": 86
+            "Total": 77
         }
     ],
     "zh-CN": [
@@ -15395,15 +15394,14 @@ window.PORTFOLIO_DATA = {
             "Rank": 1,
             "Ticker": "DRAM",
             "Name": "Roundhill Memory ETF - custom weighted model",
-            "Base": 100.0,
+            "Base": 84.55,
             "Current Price": 61.58,
             "Change %": "+3.12%",
             "Position Type": "ETF - custom weighted memory basket",
             "Artifact Updated": "",
             "Port": "",
             "_synthetic": {
-                "base_method": "fixed",
-                "base": 100,
+                "base_method": "weighted",
                 "holdings": [
                     {
                         "ticker": "MU",
@@ -15446,7 +15444,7 @@ window.PORTFOLIO_DATA = {
                         "weight": 0.01
                     }
                 ],
-                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is fixed at 100 by the model author. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
+                "note": "Custom fixed-weight forecast, not the ETF issuer's forecast. MU 25%, Samsung 25%, SK Hynix 25%, CXMT 5%, SNDK 5%, STX 5%, WDC 3%, Kioxia 3%, Nanya 3%, Winbond 1%. Base is the weighted average of the component Base scores, displayed with no decimals. EV Upside uses that weighted Base with the existing weighted quarter target. CXMT uses the 688825.SH company model for the swap exposure. Excludes fees, FX moves, tracking differences and future rebalancing."
             },
             "Q1 2027": 144.93429906583148,
             "Q1 2028": 164.5322136366583,
@@ -15464,9 +15462,9 @@ window.PORTFOLIO_DATA = {
             "Q4 2028": 167.00640998791147,
             "Q4 2029": 167.40088627382244,
             "Upside": "2.6x",
-            "EV Upside": 163,
+            "EV Upside": 122,
             "Entry": 66,
-            "Total": 86
+            "Total": 77
         }
     ]
 };

@@ -248,16 +248,18 @@ don't rebind it per render.
 
 ## Custom DRAM ETF model (September 2026)
 
-- `synthetic_portfolios.json` defines the website-only DRAM row: fixed Base 100,
+- `synthetic_portfolios.json` defines the website-only DRAM row: weighted Base,
   fixed weights MU/Samsung/SK Hynix 25% each, CXMT/SNDK/STX 5% each,
   WDC/Kioxia/Nanya 3% each, Winbond 1%. Do not add it to the workbook.
 - Each quarter's return is `sum(weight * (company target/company price - 1))`.
   The displayed ETF target is `DRAM price * (1 + weighted return)`.
   Use native-currency ratios, not raw prices or rounded badges. The owner
-  restored Base to a fixed 100; `base_method: fixed` persists that override
-  in regens, live scoring and the frontend. Quarterly returns still use the
-  component weights, not component Base scores. Weighted Base remains a
-  supported model option but is NOT DRAM's current setting. CXMT maps to
+  changed Base to the weighted average of its holdings on October 13, 2026;
+  `base_method: weighted` persists this in regens, live scoring and the frontend.
+  Base = sum(weight * component Base). Keep fractional precision for scoring;
+  display with zero decimals. EV Upside retains Base * target/price - 100,
+  not a weighted average of the individual EV Upside scores. Quarterly returns
+  still use component weights, not Base scores; forecasts are unchanged. CXMT maps to
   688825.SH as the company-model proxy for its swap.
 - `update_data.py` appends the row via `scripts/synthetic_portfolios.py`
   before translation/scoring, so ordinary Excel regens retain it. Its quote
