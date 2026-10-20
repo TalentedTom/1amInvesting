@@ -373,6 +373,10 @@ body {
     background: linear-gradient(110deg, rgba(59, 130, 246, 0.06), transparent 65%), var(--bg-panel);
 }
 .news-secondary .news-label { color: #93c5fd; background: rgba(59, 130, 246, 0.12); }
+.news-research .news-story { margin: 0.5rem 0; }
+.news-research section { margin-top: 0.85rem; }
+.news-research-heading { font-size: 0.82rem; line-height: 1.35; color: var(--text-primary); }
+.news-research .news-note { font-size: 0.7rem; }
 .news-score-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; max-width: 440px; }
 .news-score-grid .news-values { font-size: 1rem; }
 .news-stock-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 0.4rem 0.75rem; list-style: none; margin: 0; padding: 0; }

@@ -850,6 +850,15 @@ document.addEventListener('DOMContentLoaded', () => {
             goTo(target, true);
             viewport.focus({ preventScroll: true });
         }
+        // A shared bulletin link opens that article; ordinary visits stay minimized.
+        function openLinkedBulletin() {
+            let id;
+            try { id = decodeURIComponent(window.location.hash.slice(1)); }
+            catch (_) { return; }
+            const target = slides.findIndex(slide => slide.id === id);
+            if (target !== -1) expand(target);
+        }
+        window.addEventListener('hashchange', openLinkedBulletin);
         ticker.addEventListener('click', event => {
             const button = event.target.closest('[data-news-index]');
             if (button) expand(Number(button.dataset.newsIndex));
@@ -896,6 +905,7 @@ document.addEventListener('DOMContentLoaded', () => {
         viewport.hidden = true;
         updateControls();
         buildHeadlines();
+        openLinkedBulletin();
         document.fonts.ready.then(sizeTicker);
     })();
 
