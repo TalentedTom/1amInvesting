@@ -419,6 +419,14 @@ def main():
         )
         return 1
 
+    # Optional, separately bounded metadata. A failure must never block prices.
+    try:
+        from market_caps import fetch_market_caps
+        payload["market_caps"] = fetch_market_caps(data.get("en") or [])
+        print(f"USD market caps: {payload['market_caps']['available_count']} available")
+    except Exception as exc:
+        print(f"Market-cap refresh unavailable; price publication continues: {exc}")
+
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     # Compact JSON — file is served via CDN, every byte counts on mobile.

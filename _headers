@@ -45,6 +45,12 @@
 /company-logos.js
   Cache-Control: no-store
 
+/market-caps.js
+  Cache-Control: no-store
+
+/market-caps.json
+  Cache-Control: no-store
+
 /deep-dives/index.json
   Cache-Control: no-store
 

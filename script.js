@@ -573,6 +573,22 @@ document.addEventListener('DOMContentLoaded', () => {
         cards_ev_explanation: 'EV 上涨空间是基础分加权后的目标价与现价倍数，不是承诺回报。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
         cards_driver_explanation: '增长（绿色）比较首个显示季度目标价与活跃目标价；重估（紫色）比较当前股价与首季度目标价。比例条表示两个阶段涨幅的相对大小，并非因果归因或 EV 计算。'
     });
+    Object.assign(I18N.en, {
+        cap_title: 'Market cap (USD)', cap_minimum: 'Minimum (USD)', cap_maximum: 'Maximum (USD)', cap_any: 'No limit',
+        cap_all: 'All sizes', cap_small: 'Up to $2B', cap_mid: '$2B–$10B', cap_large: '$10B–$100B', cap_mega: '$100B+',
+        cap_include: 'Include unavailable / ETFs', cap_reset: 'Reset', cap_loading: 'Loading USD market caps…',
+        cap_status: '{n} company caps available; {missing} unavailable / ETF. Snapshot retrieved {time}.',
+        cap_note: 'Approximate company-level caps, converted to USD. Quotes/FX may be delayed. ETF assets are not company market cap. Source:',
+        cap_unavailable: 'Market cap unavailable', cap_etf: 'ETF · Company cap N/A'
+    });
+    Object.assign(I18N['zh-CN'], {
+        cap_title: '市值（美元）', cap_minimum: '最低市值（美元）', cap_maximum: '最高市值（美元）', cap_any: '不限',
+        cap_all: '全部市值', cap_small: '低于20亿美元', cap_mid: '20亿–100亿美元', cap_large: '100亿–1000亿美元', cap_mega: '1000亿美元以上',
+        cap_include: '包括暂无市值数据 / ETF', cap_reset: '重置', cap_loading: '正在加载美元市值…',
+        cap_status: '{n}家公司有市值；{missing}项暂无数据 / ETF。快照获取于 {time}。',
+        cap_note: '公司级近似市值，已换算为美元。股价和汇率可能延迟。ETF资产规模不等于公司市值。来源：',
+        cap_unavailable: '暂无市值数据', cap_etf: 'ETF · 公司市值不适用'
+    });
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
         let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
@@ -636,6 +652,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // load always lands back on EV Upside desc.
     let sortState = { col: 'EV Upside', asc: false };
     let cardBrowser = null;
+    let marketCapFilter = null;
+    function marketCapLabels() {
+        return {title: tr('cap_title'), minimum: tr('cap_minimum'), maximum: tr('cap_maximum'), any: tr('cap_any'),
+            all: tr('cap_all'), small: tr('cap_small'), mid: tr('cap_mid'), large: tr('cap_large'), mega: tr('cap_mega'),
+            includeUnknown: tr('cap_include'), reset: tr('cap_reset'), loading: tr('cap_loading'), status: tr('cap_status'), note: tr('cap_note'),
+            locale: currentLang === 'zh-CN' ? 'zh-CN' : 'en-CA'};
+    }
     let companyQuery = '';
     const VIEW_STORAGE_KEY = 'portfolioView_v1';
     let portfolioView = (() => {
@@ -969,7 +992,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeBtns = document.querySelectorAll('.theme-btn');
     const applyTheme = (theme) => {
         document.body.classList.toggle('light-mode', theme === 'light');
-        themeBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-theme') === theme));
+        themeBtns.forEach(b => {
+            b.classList.toggle('active', b.getAttribute('data-theme') === theme);
+            b.setAttribute('aria-pressed', String(b.getAttribute('data-theme') === theme));
+        });
         try { localStorage.setItem('theme', theme); } catch (_) {}
     };
     themeBtns.forEach(btn => {
@@ -1707,7 +1733,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function applyLiveData(live) {
         const full = window.PORTFOLIO_DATA;
         if (!full || !full.en || !live || !live.tickers) return false;
-        let touched = false;
+        let touched = marketCapFilter?.setSnapshot(live.market_caps) || false;
         for (let i = 0; i < full.en.length; i++) {
             const ticker = (full.en[i] && full.en[i].Ticker || '').trim();
             if (!ticker) continue;
@@ -1896,6 +1922,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!fullData || !fullData[currentLang]) return;
             const data = fullData[currentLang];
             const enData = fullData['en'] || data;
+            marketCapFilter?.setLabels(marketCapLabels());
 
             // Rebuild ETF forecasts after live quotes and before filtering/sorting.
             // Only synthetic rows change; ordinary Excel targets stay untouched.
@@ -1906,6 +1933,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // off English columns so language switches don't break the logic.
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
+                if (marketCapFilter && !marketCapFilter.matches(row.Ticker)) return false;
 
                 // Watchlist filter — starred tickers only. Keyed off the
                 // English row's canonical Ticker so it survives language
@@ -2087,11 +2115,12 @@ document.addEventListener('DOMContentLoaded', () => {
             report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
             researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), base: tr('cards_base'),
             upside: tr('cards_upside'), targets: tr('cards_targets'), currency: tr('cards_currency'),
-            evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'),
+            evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
             empty: watchlistOnly ? tr('watchlist_no_match') : tr('no_rows')
         };
         cardBrowser.render(shown.map(row => ({
             ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
+            marketCap: window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr(row._synthetic ? 'cap_etf' : 'cap_unavailable'),
             ev: formatCell('EV Upside', row['EV Upside'], row), driver: formatCell('_upsideMix', null, row),
             price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
             starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
@@ -2704,6 +2733,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (row) { row.classList.add('row-expanded'); row.tabIndex = -1; row.scrollIntoView({block: 'center'}); row.focus({preventScroll: true}); }
         }
     });
+    marketCapFilter = window.MarketCaps.create({container: document.getElementById('market-cap-filter'), onChange: renderData, labels: marketCapLabels()});
+    fetch('market-caps.json', {cache: 'no-store'}).then(r => r.ok ? r.json() : null).then(snapshot => {
+        if (marketCapFilter.setSnapshot(snapshot)) renderData();
+    }).catch(() => { /* Keep the table available; a future live snapshot can recover. */ });
     setPortfolioView(portfolioView, false);
     renderData();
     loadDeepDiveManifest().then(() => renderData());

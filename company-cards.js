@@ -26,7 +26,8 @@
                 `<div><span class="card-label">${escape(labels.driver)}</span>${row.driver}</div></div>` +
                 `<p class="overview-explanation">${escape(labels.evExplanation)}</p>` +
                 `<dl class="overview-facts"><div><dt>${escape(labels.price)}</dt><dd>${row.price}</dd></div>` +
-                `<div><dt>${escape(labels.base)}</dt><dd>${row.base}</dd></div><div><dt>${escape(labels.upside)}</dt><dd>${escape(row.upside)}</dd></div></dl>` +
+                `<div><dt>${escape(labels.base)}</dt><dd>${row.base}</dd></div><div><dt>${escape(labels.upside)}</dt><dd>${escape(row.upside)}</dd></div>` +
+                `<div><dt>${escape(labels.marketCap)}</dt><dd>${escape(row.marketCap)}</dd></div></dl>` +
                 `<h3 class="overview-heading">${escape(labels.targets)}</h3><p class="overview-currency">${escape(labels.currency)}</p>` +
                 `<div class="overview-quarters">${row.quarters.map(q => `<div${q.active ? ' class="overview-target"' : ''}><span class="card-label">${escape(q.label)}</span><strong>${q.html}</strong></div>`).join('')}</div>` +
                 `<h3 class="overview-heading">${escape(labels.driver)}</h3><p class="overview-explanation">${escape(labels.driverExplanation)}</p>` +
@@ -73,7 +74,7 @@
                     const starLabel = (row.starred ? labels.unstar : labels.star) + ': ' + row.name;
                     return `<article class="company-card${row.starred ? ' company-starred' : ''}${row.archived ? ' company-archived' : ''}" data-card-ticker="${escape(row.ticker)}">` +
                         `<button type="button" class="company-card-main" data-company-open="${escape(row.ticker)}" aria-haspopup="dialog" aria-controls="company-overview" aria-describedby="card-ev-${escape(row.ticker)} card-driver-${escape(row.ticker)}" aria-label="${escape(labels.open + ': ' + row.name)}">` +
-                        `<span class="company-identity">${logo(row)}<span class="company-identity-text"><span class="company-name">${escape(row.name)}</span><span class="company-symbol">${escape(row.ticker)}</span></span></span>` +
+                        `<span class="company-identity">${logo(row)}<span class="company-identity-text"><span class="company-name">${escape(row.name)}</span><span class="company-symbol">${escape(row.ticker)}</span><span class="company-cap">${escape(row.marketCap)}</span></span></span>` +
                         `<span class="card-metric" id="card-ev-${escape(row.ticker)}"><span class="card-label">${escape(labels.ev)}</span><span class="card-ev">${row.ev}</span><span class="card-horizon">${escape(labels.horizon)}</span></span>` +
                         `<span class="card-driver" id="card-driver-${escape(row.ticker)}"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</span>` +
                         `<span class="card-bottom"><span>${escape(row.hasReport ? labels.researchAvailable : row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
