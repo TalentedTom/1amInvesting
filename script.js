@@ -558,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cards_sort_ev_low: 'EV Upside: lowest first', cards_sort_upside: 'Upside: highest first', cards_sort_growth: 'Growth share: highest first',
         cards_sort_name: 'Company name: A–Z', cards_sort_table: 'Current table order', cards_disclaimer: 'Model estimates, not guaranteed returns.',
         cards_count: '{n} companies', cards_horizon: 'Model horizon: {quarter}', cards_driver: 'Main upside driver', cards_open: 'View company',
-        cards_close: 'Back to companies ×', cards_ev: 'EV Upside', cards_price: 'Current price', cards_base: 'Base score',
+        cards_close: 'Back to companies ×', cards_ev: 'EV Upside', cards_price: 'Current price', cards_daily_change: 'Daily change', cards_base: 'Base score',
         cards_upside: 'Unweighted upside', cards_targets: 'Quarterly model targets', cards_currency: 'Prices and targets use the stock’s listing currency.',
         cards_report: 'Read research', cards_research_available: 'Research available', cards_overview: 'Model overview', cards_chart: 'Price chart', cards_etf: 'About this ETF',
         cards_ev_explanation: 'EV Upside is the model’s Base-weighted target-to-price multiple, not a promised return. The unweighted upside uses the target price without the Base weighting. DRAM averages its holdings’ EV scores separately.',
@@ -570,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cards_sort: '排序', cards_sort_ev: 'EV 上涨空间：从高到低', cards_sort_ev_low: 'EV 上涨空间：从低到高', cards_sort_upside: '上涨空间：从高到低',
         cards_sort_growth: '增长占比：从高到低', cards_sort_name: '公司名称：A–Z', cards_sort_table: '当前表格排序', cards_disclaimer: '模型估计，并非保证回报。',
         cards_count: '{n} 家公司', cards_horizon: '模型目标期：{quarter}', cards_driver: '主要上涨驱动', cards_open: '查看公司', cards_close: '返回公司列表 ×',
-        cards_ev: 'EV 上涨空间', cards_price: '当前股价', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
+        cards_ev: 'EV 上涨空间', cards_price: '当前股价', cards_daily_change: '当日涨跌幅', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
         cards_currency: '股价和目标价均使用股票上市交易币种。', cards_report: '阅读研究报告', cards_research_available: '提供研究报告', cards_overview: '模型概览', cards_chart: '价格图表', cards_etf: '了解此 ETF',
         cards_ev_explanation: 'EV 上涨空间是基础分加权后的目标价与现价倍数，不是承诺回报。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
         cards_driver_explanation: '增长（绿色）比较首个显示季度目标价与活跃目标价；重估（紫色）比较当前股价与首季度目标价。比例条表示两个阶段涨幅的相对大小，并非因果归因或 EV 计算。'
@@ -857,10 +857,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const position = document.getElementById('news-position');
         const announcement = document.getElementById('news-announcement');
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-        let index = 0, paused = false, settleTimer;
+        let index = 0, paused = false, hovered = false, settleTimer;
 
         function syncMotion() {
-            track.style.animationPlayState = viewport.hidden && !paused && !ticker.contains(document.activeElement)
+            track.style.animationPlayState = viewport.hidden && !paused && !hovered && !ticker.contains(document.activeElement)
                 && !document.hidden && !reducedMotion.matches ? 'running' : 'paused';
         }
         function updateControls() {
@@ -899,14 +899,32 @@ document.addEventListener('DOMContentLoaded', () => {
             const group = document.createElement('div');
             group.className = 'news-ticker-group';
             slides.forEach((slide, i) => {
+              window.NewsHeadlines.fromSlide(slide, currentLang).forEach(entry => {
                 const button = document.createElement('button');
                 button.type = 'button';
                 button.className = 'news-headline';
                 button.dataset.newsIndex = i;
-                button.textContent = slide.querySelector('.news-title').textContent;
+                button.dataset.newsArticle = slide.id;
+                button.innerHTML = window.NewsHeadlines.render(entry);
+                const posted = slide.querySelector('.news-timestamps time[datetime]');
+                if (posted && Number.isFinite(Date.parse(posted.dateTime))) {
+                    const date = document.createElement('time');
+                    date.className = 'news-headline-date';
+                    date.dateTime = posted.dateTime;
+                    date.textContent = new Date(posted.dateTime).toLocaleDateString(currentLang, {
+                        timeZone: 'America/Toronto', month: 'short', day: 'numeric', year: '2-digit'
+                    });
+                    date.title = posted.textContent;
+                    button.querySelector('.news-headline-top').append(date);
+                }
+                const accessible = [entry.company, entry.change, entry.metric, entry.reason, posted?.textContent, tr('news_expand')].filter(Boolean).join('. ');
+                button.title = accessible;
+                button.setAttribute('aria-label', accessible);
+                button.lang = entry.lang || slide.lang || currentLang;
                 button.setAttribute('aria-controls', 'news-viewport');
                 button.setAttribute('aria-expanded', 'false');
                 group.appendChild(button);
+              });
             });
             // The second copy makes the crawl seamless, without duplicate tab stops.
             const duplicate = group.cloneNode(true);
@@ -965,6 +983,8 @@ document.addEventListener('DOMContentLoaded', () => {
             sizeTicker();
         });
         ticker.addEventListener('focusin', syncMotion);
+        ticker.addEventListener('pointerenter', event => { hovered = event.pointerType !== 'touch'; syncMotion(); });
+        ticker.addEventListener('pointerleave', () => { hovered = false; syncMotion(); });
         ticker.addEventListener('focusout', () => setTimeout(() => {
             if (!ticker.contains(document.activeElement)) ticker.scrollLeft = 0;
             syncMotion();
@@ -2120,7 +2140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ev: tr('cards_ev'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
             open: tr('cards_open'), star: tr('watchlist_add'), unstar: tr('watchlist_remove'),
             report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
-            researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), base: tr('cards_base'),
+            researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), dailyChange: tr('cards_daily_change'), base: tr('cards_base'),
             upside: tr('cards_upside'), targets: tr('cards_targets'), currency: tr('cards_currency'),
             evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
             empty: watchlistOnly ? tr('watchlist_no_match') : tr('no_rows')
@@ -2130,6 +2150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
             ev: formatCell('EV Upside', row['EV Upside'], row), driver: formatCell('_upsideMix', null, row),
             price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
+            dailyChange: row['Change %'], quoteCurrency: marketCapFilter?.currency(row.Ticker) || '',
             starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
             quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
         })), labels);

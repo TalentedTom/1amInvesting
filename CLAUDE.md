@@ -344,6 +344,18 @@ don't rebind it per render.
   post timestamp on startup so future bulletins follow this rule automatically.
 - The prior NAND/memory-first override is revoked. No topic is pinned.
 - Start minimized on every page load with a continuous, clickable headline strip.
+  Compact two-line teasers prioritize company + signed, color-coded model-target
+  revision, target quarter, then a short reason. news-headlines.js extracts
+  structured model-change lists and keeps approved historical copy unchanged.
+  Show positive revisions green, negative red and zero neutral; retain supplied
+  precision and qualifiers such as about/less than, probability assumptions and
+  currencies. These are dated model revisions, not live stock-price returns.
+  Dates stay visible; each teaser opens its source article. Never derive news
+  revisions from live prices or publish duplicate bulletins just to improve
+  headline presentation. For new research posts supply a concise company-level
+  summary alongside the full approved article; keep uncertainty in both.
+  No visible section title: keep the accessible region name, not a heading
+  that takes space away from the ticker.
   Clicking a headline opens that exact bulletin and stops automatic motion.
   Expanded bulletins stay still; arrows and swiping provide manual navigation.
   Minimizing resumes scrolling. Keep the pause control and reduced-motion support

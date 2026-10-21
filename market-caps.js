@@ -77,6 +77,7 @@
         sync();
         return {
             amount(ticker) {return snapshot?.tickers[ticker]?.market_cap_usd ?? null;},
+            currency(ticker) {return snapshot?.tickers[ticker]?.listing_currency || '';},
             matches(ticker, isEtf = false) {return (!snapshot && !isEtf) || matches(this.amount(ticker), range, isEtf);},
             setLabels(next) {labels = next; sync();},
             setSnapshot(next) {

@@ -435,11 +435,20 @@ body.light-mode .news-model-list .news-revision-neutral { color: var(--text-seco
 .news-collapsed .news-carousel-toolbar { border-bottom: 0; }
 .news-collapsed #news-prev, .news-collapsed #news-next, .news-collapsed #news-position,
 .news-carousel-controls [hidden], .news-ticker[hidden] { display: none; }
-.news-ticker { flex: 1; min-width: 0; overflow: hidden; }
+.news-ticker { flex: 1; min-width: 0; overflow: hidden; margin: 0; }
 .news-ticker-track { display: flex; width: max-content; animation: news-crawl var(--news-crawl-duration, 60s) linear infinite; }
-.news-ticker-group { display: flex; align-items: center; flex-shrink: 0; gap: 2rem; padding-right: 2rem; box-sizing: border-box; }
-.news-headline { flex-shrink: 0; border: 0; background: transparent; color: var(--text-primary); font: inherit; font-size: 0.8rem; font-weight: 600; white-space: nowrap; padding: 0.6rem 0; cursor: pointer; }
-.news-headline::before { content: '◆'; color: var(--accent); font-size: 0.55rem; margin-right: 0.65rem; }
+.news-ticker-group { display: flex; align-items: center; flex-shrink: 0; gap: 1.15rem; padding-right: 1.15rem; box-sizing: border-box; }
+.news-headline { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1px; flex-shrink: 0; min-height: 40px; border: 0; border-left: 2px solid var(--accent); background: transparent; color: var(--text-primary); font: inherit; font-size: 0.8rem; font-weight: 600; line-height: 1.25; white-space: nowrap; text-align: left; padding: 2px 0 2px 0.6rem; cursor: pointer; }
+.news-headline-top { display: flex; align-items: baseline; gap: 0.5rem; }
+.news-headline-top strong { font-weight: 700; }
+.news-headline-date { color: var(--text-secondary); font-size: 0.65rem; font-weight: 500; }
+.news-headline-context { color: var(--text-secondary); font-size: 0.71rem; font-weight: 500; }
+.news-headline-reason { color: var(--text-secondary); font-size: 0.7rem; font-weight: 400; }
+.news-headline .news-revision { font-size: inherit; }
+.news-headline .news-revision-negative { color: #f87171; }
+.news-headline .news-revision-neutral { color: var(--text-secondary); }
+body.light-mode .news-headline .news-revision-negative { color: #b91c1c; }
+body.light-mode .news-headline .news-revision-neutral { color: var(--text-secondary); }
 .news-headline:hover { color: var(--accent); }
 .news-headline:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 @keyframes news-crawl { to { transform: translateX(-50%); } }

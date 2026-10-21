@@ -39,6 +39,16 @@ body.cards-view .filter-bar .sc-pill, body.cards-view .filter-bar .region-pill {
 .company-name { font-size: .98rem; font-weight: 650; line-height: 1.35; overflow-wrap: anywhere; }
 .company-symbol { display: block; color: var(--text-secondary); font-size: .7rem; font-weight: 500; letter-spacing: .04em; }
 .company-cap { display: block; color: var(--text-secondary); font-size: .68rem; line-height: 1.4; }
+.card-quote { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; width: 100%; margin-top: 20px; font-variant-numeric: tabular-nums; }
+.card-quote-price { display: block; margin-top: 3px; font: 600 1.25rem/1.35 var(--font-heading); }
+.card-quote-price small { color: var(--text-secondary); font: 500 .66rem var(--font-body); }
+.card-quote-daily { text-align: right; }
+.quote-change { display: block; margin-top: 3px; font-size: .95rem; font-weight: 650; line-height: 1.5; font-variant-numeric: tabular-nums; }
+.quote-positive { color: #34d399; }
+.quote-negative { color: #f87171; }
+.quote-neutral { color: var(--text-secondary); }
+body.light-mode .quote-positive { color: #047857; }
+body.light-mode .quote-negative { color: #b91c1c; }
 .card-star { position: absolute; top: 12px; right: 10px; width: 44px; height: 44px; border: 0; border-radius: 10px; background: transparent; font-size: 25px; color: var(--text-secondary); cursor: pointer; }
 .card-star:hover { background: var(--row-hover); }
 .card-star[aria-pressed="true"] { color: #f5b942; }

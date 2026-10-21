@@ -48,6 +48,9 @@
 /market-caps.js
   Cache-Control: no-store
 
+/news-headlines.js
+  Cache-Control: no-store
+
 /market-caps.json
   Cache-Control: no-store
 
