@@ -810,6 +810,12 @@ window.COMPANY_LOGOS = {
     "symbol": "NASDAQ:BRUN",
     "company": "Boost Run Inc. Class A"
   },
+  "BTI": {
+    "src": "assets/company-logos/BTI.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/british-american-tobacco--big.svg",
+    "symbol": "NYSE:BTI",
+    "company": "British American Tobacco PLC Sponsored ADR"
+  },
   "CAMT": {
     "src": "assets/company-logos/CAMT.svg",
     "source": "https://s3-symbol-logo.tradingview.com/camtek--big.svg",
@@ -1120,6 +1126,12 @@ window.COMPANY_LOGOS = {
     "symbol": "NASDAQ:MITK",
     "company": "Mitek Systems, Inc."
   },
+  "MO": {
+    "src": "assets/company-logos/MO.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/altria--big.svg",
+    "symbol": "NYSE:MO",
+    "company": "Altria Group, Inc."
+  },
   "MOD": {
     "src": "assets/company-logos/MOD.svg",
     "source": "https://s3-symbol-logo.tradingview.com/modine-manufacturing--big.svg",
@@ -1245,6 +1257,12 @@ window.COMPANY_LOGOS = {
     "source": "https://s3-symbol-logo.tradingview.com/palantir--big.svg",
     "symbol": "NASDAQ:PLTR",
     "company": "Palantir Technologies Inc. Class A"
+  },
+  "PM": {
+    "src": "assets/company-logos/PM.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/philip-morris--big.svg",
+    "symbol": "NYSE:PM",
+    "company": "Philip Morris International Inc."
   },
   "PNG.V": {
     "src": "assets/company-logos/PNG.V.svg",
