@@ -25,6 +25,10 @@
             `<span><span class="card-quote-label">${escape(labels.price)}</span><span class="card-quote-price">${row.price} <small>${escape(row.quoteCurrency)}</small></span></span>` +
             `<span class="card-quote-daily"><span class="card-quote-label">${escape(labels.dailyChange)}</span><span class="quote-change quote-${change.tone}">${escape(change.label)}</span></span></span>`;
     }
+    function targetMetric(row, labels, prefix = 'card') {
+        return `<span class="card-target-metric" id="${escape(prefix)}-target-${escape(row.ticker)}"><span class="card-label">${escape(labels.priceTarget)}</span>` +
+            `<span class="card-target-value">${escape(row.priceTarget)} <small>${escape(row.quoteCurrency)}</small></span></span>`;
+    }
     function create({grid, dialog, onStar, onChart, onReport, onEtf, onTable}) {
         let rows = [], labels = {}, opener = null, selected = null, lastHtml = '', followUpAction = false;
         const content = dialog.querySelector('[data-overview-content]');
@@ -36,7 +40,7 @@
             content.innerHTML = `<div class="overview-identity">${logo(row)}<div><p class="company-symbol">${escape(row.ticker)}</p>` +
                 `<h2 id="company-overview-title">${escape(row.name)}</h2></div></div>` +
                 `<div class="overview-metrics"><div><span class="card-label">${escape(labels.ev)}</span><div class="card-ev">${row.ev}</div></div>` +
-                `<div><span class="card-label">${escape(labels.driver)}</span>${row.driver}</div></div>` +
+                `<div>${targetMetric(row, labels, 'overview')}</div><div class="overview-metric-driver"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</div></div>` +
                 `<p class="overview-explanation">${escape(labels.evExplanation)}</p>` +
                 `<dl class="overview-facts"><div><dt>${escape(labels.price)}</dt><dd>${row.price} <small>${escape(row.quoteCurrency)}</small></dd></div>` +
                 `<div><dt>${escape(labels.dailyChange)}</dt><dd class="quote-change quote-${dailyChange(row.dailyChange).tone}">${escape(dailyChange(row.dailyChange).label)}</dd></div>` +
@@ -87,10 +91,11 @@
                 const html = rows.map(row => {
                     const starLabel = (row.starred ? labels.unstar : labels.star) + ': ' + row.name;
                     return `<article class="company-card${row.starred ? ' company-starred' : ''}${row.archived ? ' company-archived' : ''}" data-card-ticker="${escape(row.ticker)}">` +
-                        `<button type="button" class="company-card-main" data-company-open="${escape(row.ticker)}" aria-haspopup="dialog" aria-controls="company-overview" aria-describedby="card-quote-${escape(row.ticker)} card-ev-${escape(row.ticker)} card-driver-${escape(row.ticker)}" aria-label="${escape(labels.open + ': ' + row.name)}">` +
+                        `<button type="button" class="company-card-main" data-company-open="${escape(row.ticker)}" aria-haspopup="dialog" aria-controls="company-overview" aria-describedby="card-quote-${escape(row.ticker)} card-ev-${escape(row.ticker)} card-target-${escape(row.ticker)} card-driver-${escape(row.ticker)}" aria-label="${escape(labels.open + ': ' + row.name)}">` +
                         `<span class="company-identity">${logo(row)}<span class="company-identity-text"><span class="company-name">${escape(row.name)}</span><span class="company-symbol">${escape(row.ticker)}</span><span class="company-cap">${escape(row.marketCap)}</span></span></span>` +
                         quote(row, labels) +
-                        `<span class="card-metric" id="card-ev-${escape(row.ticker)}"><span class="card-label">${escape(labels.ev)}</span><span class="card-ev">${row.ev}</span><span class="card-horizon">${escape(labels.horizon)}</span></span>` +
+                        `<span class="card-metrics"><span class="card-metric" id="card-ev-${escape(row.ticker)}"><span class="card-label">${escape(labels.ev)}</span><span class="card-ev">${row.ev}</span></span>` +
+                        targetMetric(row, labels) + `<span class="card-horizon">${escape(labels.horizon)}</span></span>` +
                         `<span class="card-driver" id="card-driver-${escape(row.ticker)}"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</span>` +
                         `<span class="card-bottom"><span>${escape(row.hasReport ? labels.researchAvailable : row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
                         `<button type="button" class="card-star" data-card-star="${escape(row.ticker)}" aria-pressed="${row.starred}" aria-label="${escape(starLabel)}" title="${escape(starLabel)}">${row.starred ? '★' : '☆'}</button></article>`;
@@ -109,7 +114,7 @@
             }
         };
     }
-    const api = {create, escape, companyName, initials, dailyChange, quote};
+    const api = {create, escape, companyName, initials, dailyChange, quote, targetMetric};
     if (typeof module !== 'undefined' && module.exports) module.exports = api;
     else root.CompanyCards = api;
 })(typeof window !== 'undefined' ? window : globalThis);

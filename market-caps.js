@@ -24,10 +24,38 @@
         } catch (_) {}
         return {min: 0, max: Infinity, includeUnknown: false};
     }
+    const REGIONS = ['usa', 'china', 'europe', 'eastasia', 'other'];
+    // Listing markets, not incorporation, quote currency or an ADR's issuer domicile.
+    // These bare symbols represent non-US primary listings in this universe.
+    function regionForTicker(ticker) {
+        const symbol = String(ticker || '').trim().toUpperCase();
+        if (!symbol) return 'other';
+        if (['XFAB', 'ALRIB', 'ABBN', 'HUBN', 'NKT'].includes(symbol)) return 'europe';
+        if (symbol === 'STLTECH') return 'other';
+        const suffix = symbol.includes('.') ? symbol.split('.').pop() : '';
+        if (['HK', 'SS', 'SSE', 'SH', 'SZ', 'SZSE'].includes(suffix)) return 'china';
+        if (['TW', 'TWO', 'T', 'KS', 'KQ'].includes(suffix)) return 'eastasia';
+        if (['L', 'DE', 'F', 'PA', 'AS', 'ST', 'SW', 'VI', 'MI', 'HE', 'OL', 'CO', 'BR', 'LS', 'MC', 'IR'].includes(suffix)) return 'europe';
+        return suffix ? 'other' : 'usa';
+    }
+    function loadRegions(storage) {
+        try {
+            const saved = storage.getItem('portfolioRegions_v2');
+            if (saved !== null) {
+                const values = JSON.parse(saved);
+                return Array.isArray(values) ? REGIONS.filter(r => values.includes(r)) : [];
+            }
+            // Preserve the old China selection; the retired Ex-China choice resets to all.
+            return storage.getItem('regionFilter_v1') === 'china' ? ['china'] : [];
+        } catch (_) { return []; }
+    }
+    const matchesRegions = (ticker, regions) => !regions.length || regions.includes(regionForTicker(ticker));
     function create({container, onChange, labels: initialLabels}) {
-        let snapshot = null, labels = initialLabels, range = loadRange(localStorage);
-        container.innerHTML = `<summary><span data-cap-label="title"></span><strong id="market-cap-summary"></strong><span aria-hidden="true">⌄</span></summary>` +
-            `<div class="cap-panel"><div class="cap-presets">` +
+        let snapshot = null, labels = initialLabels, range = loadRange(localStorage), regions = loadRegions(localStorage);
+        container.innerHTML = `<summary><span data-cap-label="filters"></span><strong id="market-cap-summary"></strong><span aria-hidden="true">⌄</span></summary>` +
+            `<div class="cap-panel"><fieldset class="region-filters"><legend data-cap-label="region"></legend><div class="region-options">` +
+            ['all', ...REGIONS].map(r => `<button type="button" data-region-option="${r}" aria-pressed="false"></button>`).join('') +
+            `</div><p class="cap-note" data-cap-label="regionNote"></p></fieldset><h3 class="cap-heading" data-cap-label="title"></h3><div class="cap-presets">` +
             ['all','small','mid','large','mega'].map(p => `<button type="button" data-cap-preset="${p}" disabled></button>`).join('') + `</div>` +
             `<div class="cap-sliders"><label><span data-cap-label="minimum"></span><output id="market-cap-min-value" for="market-cap-min"></output>` +
             `<input id="market-cap-min" type="range" min="0" max="1000" step="1" value="0" disabled></label>` +
@@ -46,8 +74,14 @@
             container.querySelector('#market-cap-min-value').textContent = low;
             container.querySelector('#market-cap-max-value').textContent = high;
             min.setAttribute('aria-valuetext', low + ' USD'); max.setAttribute('aria-valuetext', high === labels.any ? high : high + ' USD');
-            container.querySelector('#market-cap-summary').textContent = active(range) ? low + ' – ' + high : labels.all;
-            container.classList.toggle('cap-active', active(range));
+            const regionSummary = regions.length ? regions.map(r => labels.regions[r]).join(', ') : labels.allRegions;
+            container.querySelector('#market-cap-summary').textContent = regionSummary + ' · ' + (active(range) ? low + ' – ' + high : labels.all);
+            container.classList.toggle('cap-active', active(range) || regions.length > 0);
+            container.querySelectorAll('[data-region-option]').forEach(button => {
+                const key = button.dataset.regionOption;
+                button.textContent = key === 'all' ? labels.allRegions : labels.regions[key];
+                button.setAttribute('aria-pressed', String(key === 'all' ? !regions.length : regions.includes(key)));
+            });
             container.querySelectorAll('[data-cap-preset]').forEach(button => {
                 const key = button.dataset.capPreset, [a,b] = presets[key];
                 button.textContent = labels[key]; button.disabled = !snapshot;
@@ -61,8 +95,15 @@
         }
         function changed() {
             try { localStorage.setItem('marketCapRange_v1', JSON.stringify({...range, max: range.max === Infinity ? null : range.max})); } catch (_) {}
+            try { localStorage.setItem('portfolioRegions_v2', JSON.stringify(regions)); } catch (_) {}
             sync(); onChange();
         }
+        container.querySelectorAll('[data-region-option]').forEach(button => button.addEventListener('click', () => {
+            const key = button.dataset.regionOption;
+            regions = key === 'all' ? [] : regions.includes(key) ? regions.filter(r => r !== key) : REGIONS.filter(r => r === key || regions.includes(r));
+            if (regions.length === REGIONS.length) regions = [];
+            changed();
+        }));
         min.addEventListener('input', () => {
             range.min = fromSlider(Number(min.value)); if (range.min > range.max) range.max = range.min; changed();
         });
@@ -70,7 +111,7 @@
             range.max = fromSlider(Number(max.value), true); if (range.max < range.min) range.min = range.max; changed();
         });
         unknown.addEventListener('change', () => {range.includeUnknown = unknown.checked; changed();});
-        container.querySelector('#market-cap-reset').addEventListener('click', () => {range = {min: 0, max: Infinity, includeUnknown: false}; changed();});
+        container.querySelector('#market-cap-reset').addEventListener('click', () => {range = {min: 0, max: Infinity, includeUnknown: false}; regions = []; changed();});
         container.querySelectorAll('[data-cap-preset]').forEach(button => button.addEventListener('click', () => {
             const [a,b] = presets[button.dataset.capPreset]; range.min = a; range.max = b; changed();
         }));
@@ -78,7 +119,7 @@
         return {
             amount(ticker) {return snapshot?.tickers[ticker]?.market_cap_usd ?? null;},
             currency(ticker) {return snapshot?.tickers[ticker]?.listing_currency || '';},
-            matches(ticker, isEtf = false) {return (!snapshot && !isEtf) || matches(this.amount(ticker), range, isEtf);},
+            matches(ticker, isEtf = false) {return matchesRegions(ticker, regions) && ((!snapshot && !isEtf) || matches(this.amount(ticker), range, isEtf));},
             setLabels(next) {labels = next; sync();},
             setSnapshot(next) {
                 if (!next || next.currency !== 'USD' || !next.tickers || !Number.isFinite(Date.parse(next.retrieved_at))) return false;
@@ -89,7 +130,7 @@
             }
         };
     }
-    const api = {valid, usd, fromSlider, toSlider, matches, loadRange, create};
+    const api = {valid, usd, fromSlider, toSlider, matches, loadRange, regionForTicker, loadRegions, matchesRegions, create};
     if (typeof module !== 'undefined' && module.exports) module.exports = api;
     else root.MarketCaps = api;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -246,6 +246,19 @@ payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quo
   not restore the signup or old alerts API calls on routine updates.
 - ETFs, including DRAM, use the $100B+ market-cap filter category, not a
   measured company cap or fund AUM. Their raw reported cap remains null.
+- Company cards label the existing Base-weighted EV multiple as Upside; the
+  detailed table retains EV Upside. The adjacent 1 Year Price Target is the
+  current price times (1 + the same EV score / 100), before badge rounding,
+  in native listing units. It is NOT the unweighted quarterly target. Both
+  update with live quotes, the active horizon and Base/Bull/Bull+ scenarios,
+  including DRAM's independently weighted EV. Do not change source valuations.
+- Region controls live in the shared Filters panel alongside USD market cap.
+  Visitors may combine USA, China, Europe, East Asia and Other. Regions follow
+  listing markets, not issuer domicile (US ADRs are in USA); East Asia means
+  Taiwan/Japan/South Korea, and China means Hong Kong/Shanghai/Shenzhen.
+  Bare non-US aliases XFAB/ALRIB/ABBN/HUBN/NKT are European, STLTECH is Other.
+  The old China selection migrates; the retired Ex-China selection resets to
+  All regions. Selections persist and compose with cap and watchlist filters.
 
 The table re-renders on every live poll; the entry fade-in is gated to first
 render only (`body.table-settled`) and tap-expanded rows are preserved by

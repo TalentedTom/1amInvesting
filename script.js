@@ -153,6 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
             parseLooseNumber(row[QUARTER_COLS[0]]),
             parseLooseNumber(row[TARGET_QUARTER]), multipleFactor());
     }
+    // The price equivalent of the same Base-weighted EV score shown on cards.
+    // Never derive this from the rounded one-decimal badge or the unweighted target.
+    function cardPriceTarget(row) {
+        const price = parseLooseNumber(row['Current Price']);
+        const ev = parseLooseNumber(scaledEvUpside(row));
+        return isFinite(price) && price > 0 && isFinite(ev)
+            ? formatQuarterPrice(price * (1 + ev / 100)) : '—';
+    }
 
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
@@ -371,10 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mult_tip_25: 'Bull — every target 25% above Base',
             mult_tip_30: 'Bull+ — every target 50% above Base',
             mult_banner: '{scenario} targets — {p}% above Base',
-            region_label: 'Region',
-            region_all: 'All',
-            region_china: '🇨🇳 China',
-            region_exchina: 'Ex-China',
             watchlist_label: 'Watchlist',
             watchlist_btn: 'Starred',
             watchlist_add: 'Add to watchlist',
@@ -507,10 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mult_tip_25: 'Bull — 所有目标价较 Base 上调 25%',
             mult_tip_30: 'Bull+ — 所有目标价较 Base 上调 50%',
             mult_banner: '{scenario} 目标价 — 较 Base 高 {p}%',
-            region_label: '地区',
-            region_all: '全部',
-            region_china: '🇨🇳 中国',
-            region_exchina: '非中国',
             watchlist_label: '自选',
             watchlist_btn: '自选股',
             watchlist_add: '加入自选',
@@ -554,28 +554,31 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(I18N.en, {
         cards_title: 'Explore companies', cards_intro: 'Compare model upside and what is driving it. Open a company for its quarterly targets and research.',
         cards_view_label: 'Choose your view', cards_view: 'Company cards', table_view: 'Detailed table',
-        cards_search: 'Search any company or ticker', cards_sort: 'Sort by', cards_sort_ev: 'EV Upside: highest first',
-        cards_sort_ev_low: 'EV Upside: lowest first', cards_sort_upside: 'Upside: highest first', cards_sort_growth: 'Growth share: highest first',
+        cards_search: 'Search any company or ticker', cards_sort: 'Sort by', cards_sort_ev: 'Upside: highest first',
+        cards_sort_ev_low: 'Upside: lowest first', cards_sort_upside: 'Unweighted upside: highest first', cards_sort_growth: 'Growth share: highest first',
         cards_sort_name: 'Company name: A–Z', cards_sort_table: 'Current table order', cards_disclaimer: 'Model estimates, not guaranteed returns.',
         cards_count: '{n} companies', cards_horizon: 'Model horizon: {quarter}', cards_driver: 'Main upside driver', cards_open: 'View company',
-        cards_close: 'Back to companies ×', cards_ev: 'EV Upside', cards_price: 'Current price', cards_daily_change: 'Daily change', cards_base: 'Base score',
+        cards_close: 'Back to companies ×', cards_ev: 'Upside', cards_price_target: '1 Year Price Target', cards_price: 'Current price', cards_daily_change: 'Daily change', cards_base: 'Base score',
         cards_upside: 'Unweighted upside', cards_targets: 'Quarterly model targets', cards_currency: 'Prices and targets use the stock’s listing currency.',
         cards_report: 'Read research', cards_research_available: 'Research available', cards_overview: 'Model overview', cards_chart: 'Price chart', cards_etf: 'About this ETF',
-        cards_ev_explanation: 'EV Upside is the model’s Base-weighted target-to-price multiple, not a promised return. The unweighted upside uses the target price without the Base weighting. DRAM averages its holdings’ EV scores separately.',
+        cards_ev_explanation: 'Upside is the model’s Base-weighted target-to-price multiple (EV Upside in the detailed table), not a promised return. The 1 Year Price Target is today’s share price multiplied by that same model multiple, before display rounding. Both use the active model horizon, currently {quarter}. The unweighted upside uses the quarterly target without Base weighting. DRAM averages its holdings’ EV scores separately.',
         cards_driver_explanation: 'Growth (green) compares the first displayed quarterly target with the active target. Re-Rate (purple) compares today’s share price with the first target. The bar shows the relative size of those two percentage moves; it is not a causal attribution or an EV calculation.'
     });
     Object.assign(I18N['zh-CN'], {
         cards_title: '浏览公司', cards_intro: '比较模型上涨空间及其主要驱动。点击公司查看季度目标价和研究报告。',
         cards_view_label: '选择浏览方式', cards_view: '公司卡片', table_view: '详细表格', cards_search: '搜索公司名称或股票代码',
-        cards_sort: '排序', cards_sort_ev: 'EV 上涨空间：从高到低', cards_sort_ev_low: 'EV 上涨空间：从低到高', cards_sort_upside: '上涨空间：从高到低',
+        cards_sort: '排序', cards_sort_ev: '上涨空间：从高到低', cards_sort_ev_low: '上涨空间：从低到高', cards_sort_upside: '未加权上涨倍数：从高到低',
         cards_sort_growth: '增长占比：从高到低', cards_sort_name: '公司名称：A–Z', cards_sort_table: '当前表格排序', cards_disclaimer: '模型估计，并非保证回报。',
         cards_count: '{n} 家公司', cards_horizon: '模型目标期：{quarter}', cards_driver: '主要上涨驱动', cards_open: '查看公司', cards_close: '返回公司列表 ×',
-        cards_ev: 'EV 上涨空间', cards_price: '当前股价', cards_daily_change: '当日涨跌幅', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
+        cards_ev: '上涨空间', cards_price_target: '1年目标价', cards_price: '当前股价', cards_daily_change: '当日涨跌幅', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
         cards_currency: '股价和目标价均使用股票上市交易币种。', cards_report: '阅读研究报告', cards_research_available: '提供研究报告', cards_overview: '模型概览', cards_chart: '价格图表', cards_etf: '了解此 ETF',
-        cards_ev_explanation: 'EV 上涨空间是基础分加权后的目标价与现价倍数，不是承诺回报。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
+        cards_ev_explanation: '上涨空间是基础分加权后的目标价与现价倍数（详细表格中的 EV 上涨空间），不是承诺回报。1年目标价由当前股价乘以同一模型倍数、在显示舍入前计算，两者均使用当前模型目标期 {quarter}。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
         cards_driver_explanation: '增长（绿色）比较首个显示季度目标价与活跃目标价；重估（紫色）比较当前股价与首季度目标价。比例条表示两个阶段涨幅的相对大小，并非因果归因或 EV 计算。'
     });
     Object.assign(I18N.en, {
+        filters_title: 'Filters', filters_region: 'Region', filters_all_regions: 'All regions', filters_usa: 'USA', filters_china: 'China',
+        filters_europe: 'Europe', filters_eastasia: 'East Asia', filters_other: 'Other',
+        filters_region_note: 'Choose one or more listing markets. East Asia includes Taiwan, Japan and South Korea. U.S.-listed ADRs are included in USA.',
         cap_title: 'Market cap (USD)', cap_minimum: 'Minimum (USD)', cap_maximum: 'Maximum (USD)', cap_any: 'No limit',
         cap_all: 'All sizes', cap_small: 'Up to $2B', cap_mid: '$2B–$10B', cap_large: '$10B–$100B', cap_mega: '$100B+',
         cap_include: 'Include unavailable companies', cap_reset: 'Reset', cap_loading: 'Loading USD market caps…',
@@ -584,6 +587,9 @@ document.addEventListener('DOMContentLoaded', () => {
         cap_unavailable: 'Market cap unavailable', cap_etf: 'ETF · $100B+ category'
     });
     Object.assign(I18N['zh-CN'], {
+        filters_title: '筛选', filters_region: '地区', filters_all_regions: '全部地区', filters_usa: '美国', filters_china: '中国',
+        filters_europe: '欧洲', filters_eastasia: '东亚', filters_other: '其他',
+        filters_region_note: '可选择一个或多个上市市场。东亚包括台湾、日本和韩国。在美国上市的 ADR 归入美国。',
         cap_title: '市值（美元）', cap_minimum: '最低市值（美元）', cap_maximum: '最高市值（美元）', cap_any: '不限',
         cap_all: '全部市值', cap_small: '低于20亿美元', cap_mid: '20亿–100亿美元', cap_large: '100亿–1000亿美元', cap_mega: '1000亿美元以上',
         cap_include: '包括暂无市值数据的公司', cap_reset: '重置', cap_loading: '正在加载美元市值…',
@@ -656,7 +662,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardBrowser = null;
     let marketCapFilter = null;
     function marketCapLabels() {
-        return {title: tr('cap_title'), minimum: tr('cap_minimum'), maximum: tr('cap_maximum'), any: tr('cap_any'),
+        return {filters: tr('filters_title'), region: tr('filters_region'), allRegions: tr('filters_all_regions'), regionNote: tr('filters_region_note'),
+            regions: Object.fromEntries(['usa', 'china', 'europe', 'eastasia', 'other'].map(r => [r, tr('filters_' + r)])),
+            title: tr('cap_title'), minimum: tr('cap_minimum'), maximum: tr('cap_maximum'), any: tr('cap_any'),
             all: tr('cap_all'), small: tr('cap_small'), mid: tr('cap_mid'), large: tr('cap_large'), mega: tr('cap_mega'),
             includeUnknown: tr('cap_include'), reset: tr('cap_reset'), loading: tr('cap_loading'), status: tr('cap_status'), note: tr('cap_note'),
             locale: currentLang === 'zh-CN' ? 'zh-CN' : 'en-CA'};
@@ -698,21 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('positionFilter');
         localStorage.removeItem('positionFilter_v2');
     } catch (_) {}
-    // Region filter (single-select): 'all' | 'china' | 'exchina'. Composes
-    // (AND) with the watchlist filter. Persisted in
-    // localStorage; defaults to 'all'.
-    const REGION_STORAGE_KEY = 'regionFilter_v1';
-    let regionFilter = (() => {
-        const stored = localStorage.getItem(REGION_STORAGE_KEY);
-        return (stored === 'china' || stored === 'exchina') ? stored : 'all';
-    })();
-    // "Chinese" = mainland + Hong Kong listings only: Hong Kong (.HK),
-    // Shanghai (.SS / .SSE / .SH) and Shenzhen (.SZ / .SZSE). Taiwan
-    // (.TW/.TWO), Korea (.KS/.KQ) and Japan (.T) are deliberately NOT
-    // counted as China. (.SH is an alternate Shanghai spelling that shows
-    // up in the xlsx alongside the canonical Yahoo .SS — accept both.)
-    const CHINA_SUFFIX_RE = /\.(HK|SS|SSE|SH|SZ|SZSE)$/i;
-    const isChineseTicker = (ticker) => CHINA_SUFFIX_RE.test(String(ticker || '').trim());
+    // Region selections now live alongside USD market-cap controls in MarketCaps.
 
     // === Watchlist ======================================================
     // Per-visitor starred tickers, persisted as a JSON array in
@@ -1076,21 +1070,6 @@ document.addEventListener('DOMContentLoaded', () => {
         p.addEventListener('click', () => applyMultiple(p.getAttribute('data-mult')));
     });
     syncMultiplePillsUI();
-
-    // Region filter (All / China / Ex-China) — single-select, persists in
-    // localStorage. Mirrors the position-type handler pattern.
-    const regionPills = document.querySelectorAll('.region-pill');
-    const applyRegionFilter = (val) => {
-        regionFilter = (val === 'china' || val === 'exchina') ? val : 'all';
-        regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
-        try { localStorage.setItem(REGION_STORAGE_KEY, regionFilter); } catch (_) {}
-        renderData();
-    };
-    regionPills.forEach(btn => {
-        btn.addEventListener('click', () => applyRegionFilter(btn.getAttribute('data-region')));
-    });
-    // Reflect the persisted choice on the pills (no re-render — initial render handles it).
-    regionPills.forEach(b => b.classList.toggle('active', b.getAttribute('data-region') === regionFilter));
 
     // Watchlist toggle — show only starred tickers. Refuses to engage with an
     // empty watchlist (nothing to show); briefly pulses the button instead so
@@ -1970,13 +1949,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!watchlist.has(sym)) return false;
                 }
 
-                // Region filter — China = HK/Shanghai/Shenzhen listings only.
-                if (regionFilter !== 'all') {
-                    const isCN = isChineseTicker((enData[i] && enData[i]['Ticker']) || '');
-                    if (regionFilter === 'china' && !isCN) return false;
-                    if (regionFilter === 'exchina' && isCN) return false;
-                }
-
                 return true;
             });
 
@@ -2137,20 +2109,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const sortChoice = Object.entries(CARD_SORTS).find(([,state]) => state.col === sortState.col && state.asc === sortState.asc);
         document.getElementById('company-sort').value = sortChoice ? sortChoice[0] : 'table-order';
         const labels = {
-            ev: tr('cards_ev'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
+            ev: tr('cards_ev'), priceTarget: tr('cards_price_target'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
             open: tr('cards_open'), star: tr('watchlist_add'), unstar: tr('watchlist_remove'),
             report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
             researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), dailyChange: tr('cards_daily_change'), base: tr('cards_base'),
             upside: tr('cards_upside'), targets: tr('cards_targets'), currency: tr('cards_currency'),
-            evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
+            evExplanation: tr('cards_ev_explanation', {quarter: TARGET_QUARTER}), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
             empty: watchlistOnly ? tr('watchlist_no_match') : tr('no_rows')
         };
         cardBrowser.render(shown.map(row => ({
             ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
             marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
-            ev: formatCell('EV Upside', row['EV Upside'], row), driver: formatCell('_upsideMix', null, row),
+            ev: formatCell('EV Upside', row['EV Upside'], row), priceTarget: cardPriceTarget(row), driver: formatCell('_upsideMix', null, row),
             price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
-            dailyChange: row['Change %'], quoteCurrency: marketCapFilter?.currency(row.Ticker) || '',
+            dailyChange: row['Change %'], quoteCurrency: marketCapFilter?.currency(row.Ticker) || (row.Ticker === 'DRAM' ? 'USD' : ''),
             starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
             quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
         })), labels);

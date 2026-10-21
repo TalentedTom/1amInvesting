@@ -35,3 +35,10 @@ test('card quotes retain listing units and distinguish daily changes from modele
  assert.doesNotMatch(html,/class="card-label"/);
  assert.equal((html.match(/class="card-quote-label"/g)||[]).length,2);
 });
+
+test('one-year price target is shown with native units and escaped text',()=>{
+ const html=cards.targetMetric({ticker:'005930.KS',priceTarget:'984k',quoteCurrency:'KRW'}, {priceTarget:'1 Year Price Target'});
+ assert.match(html,/1 Year Price Target/);assert.match(html,/984k/);assert.match(html,/KRW/);
+ assert.doesNotMatch(html,/USD|undefined/);
+ assert.match(cards.targetMetric({ticker:'X',priceTarget:'—',quoteCurrency:'<USD>'},{priceTarget:'Target'}),/&lt;USD&gt;/);
+});

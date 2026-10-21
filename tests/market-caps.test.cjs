@@ -37,3 +37,28 @@ test('saved bounds validate before use, including the unbounded maximum',()=>{
  assert.deepEqual(caps.loadRange(storage({min:1e9,max:null,includeUnknown:true})),{min:1e9,max:Infinity,includeUnknown:true});
  assert.deepEqual(caps.loadRange(storage({min:1e10,max:1e9})),{min:0,max:Infinity,includeUnknown:false});
 });
+
+test('regions follow listing markets, separating China and East Asia',()=>{
+ const examples={usa:['AAOI','DRAM','SKHY','BABA','TSM'],china:['1888.HK','600330.SH','603629.SSE','603773.SS','300476.SZSE','000636.SZ'],
+ eastasia:['3006.TW','8147.TWO','285A.T','005930.KS','323280.KQ'],europe:['SIVE.ST','LPK.DE','XFAB','ALRIB','ABBN','HUBN','BEAN.SW','FTC.L','BESI.AS','ATS.VI','CRL.MI'],
+ other:['HPS-A.TO','PNG.V','EOS.AX','STLTECH','5286.KL','UNKNOWN.XX','']};
+ for(const [region,tickers]of Object.entries(examples))for(const ticker of tickers)assert.equal(caps.regionForTicker(ticker),region,ticker);
+ assert.equal(caps.regionForTicker('  sive.st  '),'europe');
+});
+
+test('region selections compose as a union, with all regions as the default',()=>{
+ assert.equal(caps.matchesRegions('AAOI',[]),true);
+ assert.equal(caps.matchesRegions('SIVE.ST',['usa','europe']),true);
+ assert.equal(caps.matchesRegions('AAOI',['usa','europe']),true);
+ assert.equal(caps.matchesRegions('3006.TW',['china']),false);
+ assert.equal(caps.matchesRegions('3006.TW',['eastasia']),true);
+});
+
+test('region preferences migrate China, retire Ex-China and reject corrupt saves',()=>{
+ const storage=data=>({getItem:key=>data[key]??null});
+ assert.deepEqual(caps.loadRegions(storage({'regionFilter_v1':'china'})),['china']);
+ assert.deepEqual(caps.loadRegions(storage({'regionFilter_v1':'exchina'})),[]);
+ assert.deepEqual(caps.loadRegions(storage({'portfolioRegions_v2':'["other","china","bogus","china"]'})),['china','other']);
+ assert.deepEqual(caps.loadRegions(storage({'portfolioRegions_v2':'broken'})),[]);
+ assert.deepEqual(caps.loadRegions(storage({'portfolioRegions_v2':'null'})),[]);
+});

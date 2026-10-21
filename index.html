@@ -493,18 +493,6 @@
                     <button class="sc-pill mult-pill" data-mult="30" aria-pressed="false">Bull+</button>
                 </div>
                 <span class="sc-divider" aria-hidden="true"></span>
-                <!-- Region filter (single-select): All / China / Ex-China.
-                     "China" = Hong Kong (.HK), Shanghai (.SS/.SSE/.SH) and
-                     Shenzhen (.SZ/.SZSE) listings only — Taiwan/Korea/Japan
-                     are NOT counted as China. Composes (AND) with the
-                     position-type and SuperCycle filters. -->
-                <div class="filter-group">
-                    <span class="filter-label" data-i18n="region_label">Region</span>
-                    <button class="region-pill active" data-region="all" data-i18n="region_all">All</button>
-                    <button class="region-pill" data-region="china" data-i18n="region_china">🇨🇳 China</button>
-                    <button class="region-pill" data-region="exchina" data-i18n="region_exchina">Ex-China</button>
-                </div>
-                <span class="sc-divider" aria-hidden="true"></span>
                 <!-- Watchlist: shows only tickers the visitor has starred.
                      Selection lives in localStorage (per-browser, no account),
                      so it survives reloads but doesn't sync across devices.
