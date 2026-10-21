@@ -549,6 +549,30 @@ document.addEventListener('DOMContentLoaded', () => {
         report_section: '跳转到报告章节', report_retry: '重新加载此页',
         report_error: '无法显示报告。', report_original: '打开原始报告'
     });
+    Object.assign(I18N.en, {
+        cards_title: 'Explore companies', cards_intro: 'Compare model upside and what is driving it. Open a company for its quarterly targets and research.',
+        cards_view_label: 'Choose your view', cards_view: 'Company cards', table_view: 'Detailed table',
+        cards_search: 'Search any company or ticker', cards_sort: 'Sort by', cards_sort_ev: 'EV Upside: highest first',
+        cards_sort_ev_low: 'EV Upside: lowest first', cards_sort_upside: 'Upside: highest first', cards_sort_growth: 'Growth share: highest first',
+        cards_sort_name: 'Company name: A–Z', cards_sort_table: 'Current table order', cards_disclaimer: 'Model estimates, not guaranteed returns.',
+        cards_count: '{n} companies', cards_horizon: 'Model horizon: {quarter}', cards_driver: 'Main upside driver', cards_open: 'View company',
+        cards_close: 'Back to companies ×', cards_ev: 'EV Upside', cards_price: 'Current price', cards_base: 'Base score',
+        cards_upside: 'Unweighted upside', cards_targets: 'Quarterly model targets', cards_currency: 'Prices and targets use the stock’s listing currency.',
+        cards_report: 'Read research', cards_research_available: 'Research available', cards_overview: 'Model overview', cards_chart: 'Price chart', cards_etf: 'About this ETF',
+        cards_ev_explanation: 'EV Upside is the model’s Base-weighted target-to-price multiple, not a promised return. The unweighted upside uses the target price without the Base weighting. DRAM averages its holdings’ EV scores separately.',
+        cards_driver_explanation: 'Growth (green) compares the first displayed quarterly target with the active target. Re-Rate (purple) compares today’s share price with the first target. The bar shows the relative size of those two percentage moves; it is not a causal attribution or an EV calculation.'
+    });
+    Object.assign(I18N['zh-CN'], {
+        cards_title: '浏览公司', cards_intro: '比较模型上涨空间及其主要驱动。点击公司查看季度目标价和研究报告。',
+        cards_view_label: '选择浏览方式', cards_view: '公司卡片', table_view: '详细表格', cards_search: '搜索公司名称或股票代码',
+        cards_sort: '排序', cards_sort_ev: 'EV 上涨空间：从高到低', cards_sort_ev_low: 'EV 上涨空间：从低到高', cards_sort_upside: '上涨空间：从高到低',
+        cards_sort_growth: '增长占比：从高到低', cards_sort_name: '公司名称：A–Z', cards_sort_table: '当前表格排序', cards_disclaimer: '模型估计，并非保证回报。',
+        cards_count: '{n} 家公司', cards_horizon: '模型目标期：{quarter}', cards_driver: '主要上涨驱动', cards_open: '查看公司', cards_close: '返回公司列表 ×',
+        cards_ev: 'EV 上涨空间', cards_price: '当前股价', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
+        cards_currency: '股价和目标价均使用股票上市交易币种。', cards_report: '阅读研究报告', cards_research_available: '提供研究报告', cards_overview: '模型概览', cards_chart: '价格图表', cards_etf: '了解此 ETF',
+        cards_ev_explanation: 'EV 上涨空间是基础分加权后的目标价与现价倍数，不是承诺回报。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
+        cards_driver_explanation: '增长（绿色）比较首个显示季度目标价与活跃目标价；重估（紫色）比较当前股价与首季度目标价。比例条表示两个阶段涨幅的相对大小，并非因果归因或 EV 计算。'
+    });
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
         let s = dict[key] != null ? dict[key] : (I18N.en[key] != null ? I18N.en[key] : key);
@@ -611,6 +635,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // any header to re-sort; the choice isn't persisted, so a fresh page
     // load always lands back on EV Upside desc.
     let sortState = { col: 'EV Upside', asc: false };
+    let cardBrowser = null;
+    let companyQuery = '';
+    const VIEW_STORAGE_KEY = 'portfolioView_v1';
+    let portfolioView = (() => {
+        try { return localStorage.getItem(VIEW_STORAGE_KEY) === 'table' ? 'table' : 'cards'; }
+        catch (_) { return 'cards'; }
+    })();
+    function setPortfolioView(view, refresh = true) {
+        portfolioView = view === 'table' ? 'table' : 'cards';
+        document.body.classList.toggle('cards-view', portfolioView === 'cards');
+        document.body.classList.toggle('table-view', portfolioView === 'table');
+        document.querySelectorAll('[data-portfolio-view]').forEach(button => {
+            button.setAttribute('aria-pressed', String(button.dataset.portfolioView === portfolioView));
+        });
+        try { localStorage.setItem(VIEW_STORAGE_KEY, portfolioView); } catch (_) {}
+        if (refresh) renderData();
+    }
+    document.querySelectorAll('[data-portfolio-view]').forEach(button => {
+        button.addEventListener('click', () => setPortfolioView(button.dataset.portfolioView));
+    });
+    const CARD_SORTS = {
+        'ev-desc': {col: 'EV Upside', asc: false}, 'ev-asc': {col: 'EV Upside', asc: true},
+        'upside-desc': {col: 'Upside', asc: false}, 'growth-desc': {col: '_upsideMix', asc: false},
+        'name-asc': {col: 'Name', asc: true}
+    };
+    document.getElementById('company-search').addEventListener('input', event => {
+        companyQuery = event.target.value.trim().toLocaleLowerCase(); renderData();
+    });
+    document.getElementById('company-sort').addEventListener('change', event => {
+        const choice = CARD_SORTS[event.target.value];
+        if (choice) { sortState = {...choice}; renderData(); }
+    });
     let hiddenCols = new Set();
     // Retire saved position-type selections so they cannot hide rows.
     try {
@@ -919,7 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeBtns.forEach(btn => {
         btn.addEventListener('click', () => applyTheme(btn.getAttribute('data-theme')));
     });
-    applyTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
+    applyTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
 
     // Basic/ADV mobile column toggle — RETIRED (2026-07 quarterly rebuild).
     // The old toggle swapped the 4 FY columns in/out; with 15 responsive
@@ -1959,10 +2015,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const rawA = col === 'EV Upside' ? scaledEvUpside(a)
                                : col === 'Upside'    ? scaledUpside(a)
                                : col === '_upsideMix' ? upsideMix(a)?.growth
+                               : col === 'Name' ? window.CompanyCards.companyName(a, currentLang, TAIWAN_ENGLISH_NAMES)
                                : a[col];
                     const rawB = col === 'EV Upside' ? scaledEvUpside(b)
                                : col === 'Upside'    ? scaledUpside(b)
                                : col === '_upsideMix' ? upsideMix(b)?.growth
+                               : col === 'Name' ? window.CompanyCards.companyName(b, currentLang, TAIWAN_ENGLISH_NAMES)
                                : b[col];
                     const emptyA = isMissing(rawA);
                     const emptyB = isMissing(rawB);
@@ -1995,6 +2053,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             buildTable(validData);
+            buildCompanyCards(validData);
         } catch (err) {
             console.error("Failed to load data:", err);
             document.getElementById('table-body').innerHTML = `
@@ -2007,6 +2066,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function companyLogoSrc(ticker) {
+        return window.COMPANY_LOGOS?.[ticker]?.src || LOGO_OVERRIDES[ticker] ||
+            `https://financialmodelingprep.com/image-stock/${encodeURIComponent(ticker.split('.')[0])}.png`;
+    }
+    function buildCompanyCards(data) {
+        if (!cardBrowser) return;
+        const shown = data.filter(row => !companyQuery || [row.Ticker, row.Name,
+            window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES),
+            (window.PORTFOLIO_DATA.en || []).find(r => r.Ticker === row.Ticker)?.Name
+        ].some(value => String(value || '').toLocaleLowerCase().includes(companyQuery)));
+        const count = document.getElementById('company-count');
+        const countText = tr('cards_count', {n: String(shown.length)});
+        if (count.textContent !== countText) count.textContent = countText;
+        const sortChoice = Object.entries(CARD_SORTS).find(([,state]) => state.col === sortState.col && state.asc === sortState.asc);
+        document.getElementById('company-sort').value = sortChoice ? sortChoice[0] : 'table-order';
+        const labels = {
+            ev: tr('cards_ev'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
+            open: tr('cards_open'), star: tr('watchlist_add'), unstar: tr('watchlist_remove'),
+            report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
+            researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), base: tr('cards_base'),
+            upside: tr('cards_upside'), targets: tr('cards_targets'), currency: tr('cards_currency'),
+            evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'),
+            empty: watchlistOnly ? tr('watchlist_no_match') : tr('no_rows')
+        };
+        cardBrowser.render(shown.map(row => ({
+            ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
+            ev: formatCell('EV Upside', row['EV Upside'], row), driver: formatCell('_upsideMix', null, row),
+            price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
+            starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
+            quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
+        })), labels);
+    }
     function buildTable(data) {
         const thead = document.getElementById('table-head-row');
         const tbody = document.getElementById('table-body');
@@ -2410,7 +2501,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 200×200 PNGs). Pattern: `https://logo.clearbit.com/<domain>`.
             // Add new entries as you spot a missing logo — just paste
             // ticker + the company's official domain.
-            const logoSrc = LOGO_OVERRIDES[sym] || `https://financialmodelingprep.com/image-stock/${base}.png`;
+            const logoSrc = companyLogoSrc(sym);
             // For exchanges whose tickers are purely numeric, show the
             // company Name instead — '6830.TWO' tells you nothing visually,
             // 'Hiwin' tells you everything. Covers:
@@ -2604,6 +2695,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // are initialized. We render once immediately for fast first paint,
     // then re-render after the deep-dive manifest arrives so the
     // .has-deep-dive class lands on the right tickers.
+    cardBrowser = window.CompanyCards.create({
+        grid: document.getElementById('company-grid'), dialog: document.getElementById('company-overview'),
+        onStar: toggleWatchlist, onChart: openChart, onReport: openDeepDive, onEtf: openEtfInfo,
+        onTable: ticker => {
+            setPortfolioView('table');
+            const row = Array.from(document.querySelectorAll('#table-body tr[data-ticker]')).find(r => r.dataset.ticker === ticker);
+            if (row) { row.classList.add('row-expanded'); row.tabIndex = -1; row.scrollIntoView({block: 'center'}); row.focus({preventScroll: true}); }
+        }
+    });
+    setPortfolioView(portfolioView, false);
     renderData();
     loadDeepDiveManifest().then(() => renderData());
 
