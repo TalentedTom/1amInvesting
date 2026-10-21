@@ -366,10 +366,11 @@ document.addEventListener('DOMContentLoaded', () => {
             pdf_hint: 'If the preview does not display, open the PDF in a new tab.',
             hint_dismiss_label: 'Dismiss tip',
             mult_label: 'Multiple',
-            mult_tip_20: 'Baseline valuation — targets as modelled',
-            mult_tip_25: 'Re-price every target 25% higher (25x vs 20x)',
-            mult_tip_30: 'Re-price every target 50% higher (30x vs 20x)',
-            mult_banner: 'Targets shown at {m}x — {p}% above the 20x baseline',
+            mult_name_20: 'Base', mult_name_25: 'Bull', mult_name_30: 'Bull+',
+            mult_tip_20: 'Base — targets as modelled',
+            mult_tip_25: 'Bull — every target 25% above Base',
+            mult_tip_30: 'Bull+ — every target 50% above Base',
+            mult_banner: '{scenario} targets — {p}% above Base',
             region_label: 'Region',
             region_all: 'All',
             region_china: '🇨🇳 China',
@@ -501,10 +502,11 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: '关闭深度分析',
             hint_dismiss_label: '关闭提示',
             mult_label: '估值倍数',
-            mult_tip_20: '基准估值 — 按模型目标价',
-            mult_tip_25: '所有目标价上调 25%（25x 对比 20x）',
-            mult_tip_30: '所有目标价上调 50%（30x 对比 20x）',
-            mult_banner: '目标价按 {m}x 显示 — 较 20x 基准高 {p}%',
+            mult_name_20: 'Base', mult_name_25: 'Bull', mult_name_30: 'Bull+',
+            mult_tip_20: 'Base — 按模型目标价',
+            mult_tip_25: 'Bull — 所有目标价较 Base 上调 25%',
+            mult_tip_30: 'Bull+ — 所有目标价较 Base 上调 50%',
+            mult_banner: '{scenario} 目标价 — 较 Base 高 {p}%',
             region_label: '地区',
             region_all: '全部',
             region_china: '🇨🇳 中国',
@@ -576,18 +578,18 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(I18N.en, {
         cap_title: 'Market cap (USD)', cap_minimum: 'Minimum (USD)', cap_maximum: 'Maximum (USD)', cap_any: 'No limit',
         cap_all: 'All sizes', cap_small: 'Up to $2B', cap_mid: '$2B–$10B', cap_large: '$10B–$100B', cap_mega: '$100B+',
-        cap_include: 'Include unavailable / ETFs', cap_reset: 'Reset', cap_loading: 'Loading USD market caps…',
-        cap_status: '{n} company caps available; {missing} unavailable / ETF. Snapshot retrieved {time}.',
-        cap_note: 'Approximate company-level caps, converted to USD. Quotes/FX may be delayed. ETF assets are not company market cap. Source:',
-        cap_unavailable: 'Market cap unavailable', cap_etf: 'ETF · Company cap N/A'
+        cap_include: 'Include unavailable companies', cap_reset: 'Reset', cap_loading: 'Loading USD market caps…',
+        cap_status: '{n} reported company caps; {missing} without a reported company cap. Snapshot retrieved {time}.',
+        cap_note: 'Approximate company caps, converted to USD. Quotes/FX may be delayed. ETFs use the $100B+ filter category, not a reported cap or fund size. Source:',
+        cap_unavailable: 'Market cap unavailable', cap_etf: 'ETF · $100B+ category'
     });
     Object.assign(I18N['zh-CN'], {
         cap_title: '市值（美元）', cap_minimum: '最低市值（美元）', cap_maximum: '最高市值（美元）', cap_any: '不限',
         cap_all: '全部市值', cap_small: '低于20亿美元', cap_mid: '20亿–100亿美元', cap_large: '100亿–1000亿美元', cap_mega: '1000亿美元以上',
-        cap_include: '包括暂无市值数据 / ETF', cap_reset: '重置', cap_loading: '正在加载美元市值…',
-        cap_status: '{n}家公司有市值；{missing}项暂无数据 / ETF。快照获取于 {time}。',
-        cap_note: '公司级近似市值，已换算为美元。股价和汇率可能延迟。ETF资产规模不等于公司市值。来源：',
-        cap_unavailable: '暂无市值数据', cap_etf: 'ETF · 公司市值不适用'
+        cap_include: '包括暂无市值数据的公司', cap_reset: '重置', cap_loading: '正在加载美元市值…',
+        cap_status: '{n}家公司有市值数据；{missing}项无公司市值数据。快照获取于 {time}。',
+        cap_note: '公司近似市值，已换算为美元。股价和汇率可能延迟。ETF仅归入1000亿美元以上筛选类别，不代表实际市值或基金规模。来源：',
+        cap_unavailable: '暂无市值数据', cap_etf: 'ETF · 1000亿美元以上类别'
     });
     function tr(key, vars) {
         const dict = I18N[currentLang] || I18N.en;
@@ -1016,7 +1018,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const multPills = document.querySelectorAll('.mult-pill');
     function syncMultiplePillsUI() {
         multPills.forEach(p => {
-            p.classList.toggle('active', parseInt(p.getAttribute('data-mult'), 10) === targetMultiple);
+            const value = parseInt(p.getAttribute('data-mult'), 10);
+            const selected = value === targetMultiple;
+            p.textContent = tr('mult_name_' + value);
+            p.title = tr('mult_tip_' + value);
+            p.classList.toggle('active', selected);
+            p.setAttribute('aria-pressed', String(selected));
         });
         // Off-baseline is a non-obvious state to leave the table in — and it
         // persists across reloads — so badge the body and spell it out in the
@@ -1028,7 +1035,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (banner) {
             banner.textContent = scaled
                 ? tr('mult_banner', {
-                    m: String(targetMultiple),
+                    scenario: tr('mult_name_' + targetMultiple),
                     p: String(Math.round((multipleFactor() - 1) * 100)),
                   })
                 : '';
@@ -1933,7 +1940,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // off English columns so language switches don't break the logic.
             let validData = data.filter((row, i) => {
                 if (row['Rank'] === "") return false;
-                if (marketCapFilter && !marketCapFilter.matches(row.Ticker)) return false;
+                if (marketCapFilter && !marketCapFilter.matches(row.Ticker, !!row._synthetic)) return false;
 
                 // Watchlist filter — starred tickers only. Keyed off the
                 // English row's canonical Ticker so it survives language
@@ -2120,7 +2127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         cardBrowser.render(shown.map(row => ({
             ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
-            marketCap: window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr(row._synthetic ? 'cap_etf' : 'cap_unavailable'),
+            marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
             ev: formatCell('EV Upside', row['EV Upside'], row), driver: formatCell('_upsideMix', null, row),
             price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
             starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,

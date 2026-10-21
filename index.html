@@ -447,9 +447,9 @@
                      paint state. -->
                 <div class="filter-group">
                     <span class="filter-label" data-i18n="mult_label">Multiple</span>
-                    <button class="sc-pill mult-pill active" data-mult="20">20x</button>
-                    <button class="sc-pill mult-pill" data-mult="25">25x</button>
-                    <button class="sc-pill mult-pill" data-mult="30">30x</button>
+                    <button class="sc-pill mult-pill active" data-mult="20" aria-pressed="true">Base</button>
+                    <button class="sc-pill mult-pill" data-mult="25" aria-pressed="false">Bull</button>
+                    <button class="sc-pill mult-pill" data-mult="30" aria-pressed="false">Bull+</button>
                 </div>
                 <span class="sc-divider" aria-hidden="true"></span>
                 <!-- Region filter (single-select): All / China / Ex-China.
@@ -579,8 +579,7 @@
     <script src="company-cards.js"></script>
     <script src="market-caps.js"></script>
     <script src="script.js"></script>
-    <!-- Dilution alert signup. Self-contained: injects its own button, modal and
-         styles. Removing this one line removes the feature entirely. -->
+    <!-- Retire old dilution push subscriptions; no signup UI or alert API calls. -->
     <script src="alerts.js"></script>
 </body>
 </html>

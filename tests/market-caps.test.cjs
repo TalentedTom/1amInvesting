@@ -15,6 +15,19 @@ test('log sliders cover small companies through mega caps without losing all-siz
   assert.ok(Math.abs(caps.fromSlider(caps.toSlider(n))/n-1)<.02);
  }
 });
+
+test('ETFs use the mega-cap category without an invented numeric cap',()=>{
+ assert.equal(caps.matches(null,{min:1e11,max:Infinity,includeUnknown:false},true),true);
+ assert.equal(caps.matches(null,{min:0,max:Infinity,includeUnknown:false},true),true);
+ assert.equal(caps.matches(null,{min:5e11,max:9e11,includeUnknown:false},true),true);
+ for(const [min,max] of [[0,2e9],[2e9,1e10],[1e10,1e11]]){
+  assert.equal(caps.matches(null,{min,max,includeUnknown:false},true),false);
+  assert.equal(caps.matches(null,{min,max,includeUnknown:true},true),false);
+ }
+ // Even an ETF fund-size number never overrides its owner-defined category.
+ assert.equal(caps.matches(1e8,{min:1e11,max:Infinity},true),true);
+ assert.equal(caps.usd(null),null);
+});
 test('unavailable values are not shown as zero or confused with FX',()=>{
  assert.equal(caps.usd(null),null);assert.equal(caps.usd(NaN),null);assert.equal(caps.valid(-1),false);
  assert.equal(caps.usd(2e9),'$2B');assert.equal(caps.usd(0),'$0');

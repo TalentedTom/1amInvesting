@@ -5,8 +5,12 @@
     const fromSlider = (n, upper = false) => upper && n >= 1000 ? Infinity : n <= 0 ? (upper ? 1e6 : 0) : 10 ** (6 + (n - 1) / 999 * 8);
     const toSlider = n => n === Infinity ? 1000 : n <= 0 ? 0 : Math.max(1, Math.min(1000, Math.round(1 + (Math.log10(n) - 6) / 8 * 999)));
     const active = range => range.min > 0 || range.max < Infinity;
-    function matches(value, range) {
+    function matches(value, range, isEtf = false) {
         if (!active(range)) return true;
+        // Owner-defined category only: ETFs overlap ranges extending into
+        // $100B+, without inventing an exact cap or treating AUM as company cap.
+        // A range ending at $100B remains the large-cap (not mega-cap) bucket.
+        if (isEtf) return range.max > 1e11;
         if (!valid(value)) return !!range.includeUnknown;
         return value >= range.min && value <= range.max;
     }
@@ -73,7 +77,7 @@
         sync();
         return {
             amount(ticker) {return snapshot?.tickers[ticker]?.market_cap_usd ?? null;},
-            matches(ticker) {return !snapshot || matches(this.amount(ticker), range);},
+            matches(ticker, isEtf = false) {return (!snapshot && !isEtf) || matches(this.amount(ticker), range, isEtf);},
             setLabels(next) {labels = next; sync();},
             setSnapshot(next) {
                 if (!next || next.currency !== 'USD' || !next.tickers || !Number.isFinite(Date.parse(next.retrieved_at))) return false;

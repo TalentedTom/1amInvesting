@@ -238,8 +238,14 @@ payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quo
   closes it. Arrow keys are left available for scrolling, not report switching.
 - **TradingView chart modal**, **search**, **en/zh i18n** (the `I18N` dict +
   `tr()`), **dark/light themes**, **Basic/ADV mobile column modes**.
-- Controls: 20x/25x/30x valuation selector, Region filter and Starred watchlist.
+- Controls: Base / Bull / Bull+ valuation selector (unchanged internal
+  20x/25x/30x values and 1/1.25/1.5 scaling), Region and Starred watchlist.
   The position-type and SuperCycle filter controls were removed.
+- Dilution-alert signup and browser push delivery were removed October 21.
+  alerts.js and sw.js only retire previous alert subscriptions/workers; do
+  not restore the signup or old alerts API calls on routine updates.
+- ETFs, including DRAM, use the $100B+ market-cap filter category, not a
+  measured company cap or fund AUM. Their raw reported cap remains null.
 
 The table re-renders on every live poll; the entry fade-in is gated to first
 render only (`body.table-settled`) and tap-expanded rows are preserved by
