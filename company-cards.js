@@ -22,8 +22,8 @@
     function quote(row, labels) {
         const change = dailyChange(row.dailyChange);
         return `<span class="card-quote" id="card-quote-${escape(row.ticker)}">` +
-            `<span><span class="card-label">${escape(labels.price)}</span><span class="card-quote-price">${row.price} <small>${escape(row.quoteCurrency)}</small></span></span>` +
-            `<span class="card-quote-daily"><span class="card-label">${escape(labels.dailyChange)}</span><span class="quote-change quote-${change.tone}">${escape(change.label)}</span></span></span>`;
+            `<span><span class="card-quote-label">${escape(labels.price)}</span><span class="card-quote-price">${row.price} <small>${escape(row.quoteCurrency)}</small></span></span>` +
+            `<span class="card-quote-daily"><span class="card-quote-label">${escape(labels.dailyChange)}</span><span class="quote-change quote-${change.tone}">${escape(change.label)}</span></span></span>`;
     }
     function create({grid, dialog, onStar, onChart, onReport, onEtf, onTable}) {
         let rows = [], labels = {}, opener = null, selected = null, lastHtml = '', followUpAction = false;

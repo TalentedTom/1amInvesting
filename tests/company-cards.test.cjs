@@ -32,4 +32,6 @@ test('card quotes retain listing units and distinguish daily changes from modele
   {price:'Current price',dailyChange:'Daily change'});
  assert.match(html,/984k/);assert.match(html,/KRW/);assert.match(html,/Daily change/);
  assert.match(html,/quote-negative/);assert.match(html,/-1.23%/);assert.doesNotMatch(html,/USD|EV Upside/);
+ assert.doesNotMatch(html,/class="card-label"/);
+ assert.equal((html.match(/class="card-quote-label"/g)||[]).length,2);
 });
