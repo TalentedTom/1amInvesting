@@ -30,6 +30,12 @@ window.COMPANY_LOGOS = {
     "symbol": "SZSE:000938",
     "company": "Unisplendour Co., Ltd. Class A"
   },
+  "002353.SZ": {
+    "src": "assets/company-logos/002353.SZ.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/yantai-jereh-oilfi--big.svg",
+    "symbol": "SZSE:002353",
+    "company": "Yantai Jereh Oilfield Services Group Co., Ltd. Class A"
+  },
   "002371.SZ": {
     "src": "assets/company-logos/002371.SZ.svg",
     "source": "https://s3-symbol-logo.tradingview.com/naura-technology-g--big.svg",
@@ -179,6 +185,12 @@ window.COMPANY_LOGOS = {
     "source": "https://s3-symbol-logo.tradingview.com/kioxia--big.svg",
     "symbol": "TSE:285A",
     "company": "Kioxia Holdings Corporation"
+  },
+  "300007.SZ": {
+    "src": "assets/company-logos/300007.SZ.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/hanwei-electronics--big.svg",
+    "symbol": "SZSE:300007",
+    "company": "Hanwei Electronics Group Corporation Class A"
   },
   "300136.SZ": {
     "src": "assets/company-logos/300136.SZ.svg",
@@ -425,6 +437,12 @@ window.COMPANY_LOGOS = {
     "source": "https://s3-symbol-logo.tradingview.com/jcet--big.svg",
     "symbol": "SSE:600584",
     "company": "JCET Group Co., Ltd. Class A"
+  },
+  "603186.SH": {
+    "src": "assets/company-logos/603186.SH.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/zhejiang-wazam-new-material-s--big.svg",
+    "symbol": "SSE:603186",
+    "company": "Zhejiang Wazam New Material Co., Ltd. Class A"
   },
   "603986.SH": {
     "src": "assets/company-logos/603986.SH.svg",
