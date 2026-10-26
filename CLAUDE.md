@@ -342,6 +342,8 @@ don't rebind it per render.
   of visitor filters. Replacing a PDF preserves its link; removing it makes the
   link unavailable. Browser Back/Forward and existing news hash links still work.
   This routing feature never authorizes publishing extra source artifacts.
+  On desktop, Share/Copy link and page/zoom controls sit in a right-hand
+  rail beside the paper; phones use a compact toolbar to preserve page width.
 - The sync script removes public Markdown and PDFs no longer selected from
   deep-dives/. Local Artifacts originals are never deleted or edited. Routine
   morning refreshes preserve this PDF-only policy and the reading screen.

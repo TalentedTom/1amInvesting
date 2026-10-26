@@ -1553,6 +1553,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = 'deep-dives/' + encodeURIComponent(ticker) + '.pdf' + version;
         activeReportReader = window.ReportReader.mount(deepDiveContent, url, {
             translate: tr,
+            toolsHost: document.getElementById('report-reader-tools'),
             isCurrent: () => request === deepDiveRequest
         });
         modalCloseBtn.focus({ preventScroll: true });

@@ -23,7 +23,7 @@
         return libraryPromise;
     }
 
-    function mount(host, url, { translate: tr, isCurrent }) {
+    function mount(host, url, { translate: tr, isCurrent, toolsHost }) {
         let closed = false, task, pdf, observer, resizeObserver, resizeTimer;
         let zoom = 1, currentPage = 1, width = 0;
         const blocks = [], active = new Set();
@@ -53,7 +53,10 @@
         scroll.tabIndex = 0; scroll.setAttribute('aria-label', tr('report_scroll'));
         const pages = document.createElement('div');
         pages.className = 'report-pages';
-        scroll.appendChild(pages); root.append(toolbar, scroll);
+        scroll.appendChild(pages);
+        if (toolsHost) toolsHost.replaceChildren(toolbar);
+        else root.appendChild(toolbar);
+        root.appendChild(scroll);
         host.replaceChildren(root);
 
         function updateProgress() {
@@ -72,7 +75,7 @@
         }
         function layout() {
             if (!alive() || !blocks.length) return;
-            const available = Math.max(240, scroll.clientWidth - (scroll.clientWidth < 600 ? 16 : 48));
+            const available = Math.max(240, scroll.clientWidth - (scroll.clientWidth < 600 ? 16 : 32));
             const nextWidth = Math.round(Math.min(1040, available) * zoom);
             if (nextWidth === width) return;
             const anchor = blocks[currentPage - 1];
@@ -223,6 +226,7 @@
             } catch (_) {
                 if (!alive()) return;
                 host.replaceChildren();
+                toolbar.remove();
                 const message = document.createElement('p'); message.className = 'report-error'; message.textContent = tr('report_error');
                 const link = document.createElement('a'); link.textContent = tr('report_original');
                 link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
@@ -233,6 +237,7 @@
             ready,
             destroy() {
                 closed = true; observer?.disconnect(); resizeObserver?.disconnect(); clearTimeout(resizeTimer);
+                toolbar.remove();
                 blocks.forEach(release);
                 if (task) Promise.resolve(task.destroy()).catch(() => {});
             }
