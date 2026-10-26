@@ -30,6 +30,9 @@
 /report-reader.js
   Cache-Control: no-store
 
+/report-links.js
+  Cache-Control: no-store
+
 /synthetic-portfolios.js
   Cache-Control: no-store
 

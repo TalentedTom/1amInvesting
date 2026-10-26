@@ -540,7 +540,13 @@ document.addEventListener('DOMContentLoaded', () => {
         report_smaller: 'Zoom out', report_larger: 'Zoom in', report_fit: 'Fit',
         report_scroll: 'Scroll to read the report', report_page: 'Page {n} of {total}',
         report_section: 'Go to report section', report_retry: 'Retry page',
-        report_error: 'The report could not be displayed.', report_original: 'Open original report'
+        report_error: 'The report could not be displayed.', report_original: 'Open original report',
+        report_copy_link: 'Copy link', report_link_copied: 'Link copied',
+        report_share: 'Share', report_share_title: 'Share report', report_copy: 'Copy',
+        report_share_close: 'Close sharing options', report_share_more: 'More sharing options…',
+        report_copy_manual: 'Copy this link to share the report.', report_link_label: 'Public report link',
+        report_unavailable_title: 'Report unavailable',
+        report_unavailable: 'This link does not point to an available public report. Return to the company list to browse the published reports.'
     });
     Object.assign(I18N['zh-CN'], {
         hint_text: '点击突出显示的股票，阅读研究报告',
@@ -549,7 +555,13 @@ document.addEventListener('DOMContentLoaded', () => {
         report_smaller: '缩小', report_larger: '放大', report_fit: '适应宽度',
         report_scroll: '滚动阅读报告', report_page: '第 {n} 页，共 {total} 页',
         report_section: '跳转到报告章节', report_retry: '重新加载此页',
-        report_error: '无法显示报告。', report_original: '打开原始报告'
+        report_error: '无法显示报告。', report_original: '打开原始报告',
+        report_copy_link: '复制链接', report_link_copied: '链接已复制',
+        report_share: '分享', report_share_title: '分享报告', report_copy: '复制',
+        report_share_close: '关闭分享选项', report_share_more: '更多分享方式…',
+        report_copy_manual: '复制此链接以分享报告。', report_link_label: '公开报告链接',
+        report_unavailable_title: '报告暂不可用',
+        report_unavailable: '此链接未指向可用的公开报告。请返回公司列表浏览已发布的报告。'
     });
     Object.assign(I18N.en, {
         cards_title: 'Explore companies', cards_intro: 'Compare model upside and what is driving it. Open a company for its quarterly targets and research.',
@@ -1116,6 +1128,125 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeReportReader = null;
     let activeReportTicker = '';
     let deepDiveOpener = null;
+    let reportManifestReady = false;
+    const reportHistoryKey = 'report-' + Date.now() + '-' + Math.random();
+    const reportShare = document.getElementById('report-share');
+    const reportCopyLink = document.getElementById('report-copy-link');
+    const reportShareStatus = document.getElementById('report-share-status');
+    const reportShareUrl = document.getElementById('report-share-url');
+    const reportShareButton = document.getElementById('report-share-button');
+    const shareDialog = document.getElementById('report-share-dialog');
+    const shareDialogUrl = document.getElementById('report-dialog-url');
+    const shareDialogStatus = document.getElementById('report-dialog-status');
+    let reportShareData;
+    function resetReportShare(ticker = '') {
+        if (shareDialog.open) shareDialog.close();
+        reportShare.hidden = !ticker;
+        reportShareStatus.textContent = '';
+        reportCopyLink.textContent = tr('report_copy_link');
+        reportShareUrl.hidden = true;
+        reportShareUrl.value = ticker ? window.ReportLinks.share(location.href, ticker) : '';
+    }
+    async function copyReportLink(inDialog = false) {
+        const ticker = activeReportTicker;
+        if (!deepDiveAvailable.has(ticker)) return;
+        const link = window.ReportLinks.share(location.href, ticker);
+        const status = inDialog ? shareDialogStatus : reportShareStatus;
+        const input = inDialog ? shareDialogUrl : reportShareUrl;
+        try {
+            await navigator.clipboard.writeText(link);
+            if (activeReportTicker !== ticker || reportShare.hidden) return;
+            status.textContent = tr('report_link_copied');
+        } catch (_) {
+            if (activeReportTicker !== ticker || reportShare.hidden) return;
+            status.textContent = tr('report_copy_manual');
+            input.value = link;
+            input.hidden = false;
+            input.focus(); input.select();
+        }
+    }
+    reportCopyLink.addEventListener('click', () => copyReportLink());
+    document.getElementById('report-dialog-copy').addEventListener('click', () => copyReportLink(true));
+    document.getElementById('report-share-close').addEventListener('click', () => shareDialog.close());
+    shareDialog.addEventListener('click', event => {
+        const rect = shareDialog.getBoundingClientRect();
+        if (event.target === shareDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) shareDialog.close();
+    });
+    shareDialog.addEventListener('close', () => {
+        if (!reportShare.hidden) reportShareButton.focus({preventScroll: true});
+    });
+    const socialIcons = {
+        x: '<path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l8.2-9.4L1 2h6.5l5.7 7.5L18.9 2Zm-1.1 18h1.8L6.5 3.9H4.6L17.8 20Z"/>',
+        facebook: '<path d="M14 22v-9h3l.5-4H14V7c0-1.1.3-2 2-2h2V1.4A23 23 0 0 0 15 1c-3 0-5 1.9-5 5.4V9H7v4h3v9Z"/>',
+        whatsapp: '<path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.5L3 21l1.6-4.7a8.5 8.5 0 1 1 15.9-4.5Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 7c-2 3 2 7 5 9 1 .6 3 .1 3-1l-2-2-1.5 1C11 13 10 12 9 10.5L10 9 8 7Z"/>',
+        linkedin: '<path d="M4 8h4v13H4V8Zm2-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm5 6h4v1.8c.7-1.2 1.7-2.1 3.5-2.1 3.4 0 3.5 2.7 3.5 6.2V21h-4v-6.3c0-1.5 0-3-1.5-3S15 13 15 14.7V21h-4V8Z"/>',
+        telegram: '<path d="m22 3-4 18-6-5-3 3 .7-5L19 5 7 12 2 10 22 3Z"/>',
+        email: '<rect x="2" y="4" width="20" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.7"/>'
+    };
+    reportShareButton.addEventListener('click', () => {
+        const ticker = activeReportTicker;
+        if (!deepDiveAvailable.has(ticker)) return;
+        const row = ((window.PORTFOLIO_DATA || {}).en || []).find(row => row.Ticker === ticker);
+        const company = row?.Name || ticker;
+        const title = company + ' (' + ticker + ') · 1amInvesting Research';
+        reportShareData = {title, text:title, url:window.ReportLinks.share(location.href, ticker)};
+        document.getElementById('report-share-company').textContent = company + ' · ' + ticker;
+        const options = document.getElementById('report-share-options');
+        options.replaceChildren();
+        for (const item of window.ReportLinks.social(location.href, ticker, title)) {
+            const link = document.createElement('a');
+            link.className = 'share-option share-' + item.id;
+            link.href = item.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+            link.setAttribute('aria-label', (currentLang === 'zh-CN' ? '分享到 ' : 'Share on ') + item.label);
+            const icon = document.createElement('span'); icon.className = 'share-option-icon';
+            icon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + socialIcons[item.id] + '</svg>';
+            const label = document.createElement('span'); label.textContent = item.label;
+            link.append(icon, label); options.appendChild(link);
+        }
+        shareDialogUrl.value = reportShareData.url;
+        shareDialogStatus.textContent = '';
+        document.getElementById('report-share-device').hidden = typeof navigator.share !== 'function';
+        shareDialog.showModal();
+    });
+    document.getElementById('report-share-device').addEventListener('click', async () => {
+        try { await navigator.share(reportShareData); }
+        catch (error) {
+            if (error.name !== 'AbortError') { shareDialogStatus.textContent = tr('report_copy_manual'); shareDialogUrl.focus(); shareDialogUrl.select(); }
+        }
+    });
+    function setReportRoute(ticker) {
+        const alreadyLinked = window.ReportLinks.requested(location.href) !== null;
+        const state = alreadyLinked ? history.state : { ...history.state, reportEntry: reportHistoryKey };
+        history[alreadyLinked ? 'replaceState' : 'pushState'](state, '', window.ReportLinks.route(location.href, ticker));
+    }
+    function clearReportRoute(goBack = false) {
+        if (window.ReportLinks.requested(location.href) === null) return;
+        if (goBack && history.state?.reportEntry === reportHistoryKey) history.back();
+        else history.replaceState(history.state, '', window.ReportLinks.route(location.href, null));
+    }
+    function openLinkedReport() {
+        if (!reportManifestReady) return;
+        const requested = window.ReportLinks.requested(location.href);
+        if (requested === null) {
+            if (deepDiveModal.classList.contains('pdf-mode')) closeDeepDive(false);
+            return;
+        }
+        const ticker = window.ReportLinks.resolve(requested, deepDiveArtifacts);
+        if (ticker) { openDeepDive(ticker, false); return; }
+        // No guessed paths, Markdown fallbacks or requests for unpublished reports.
+        closeDeepDive(false);
+        deepDiveModal.classList.add('pdf-mode');
+        deepDiveModal.classList.remove('hidden');
+        deepDiveTitle.textContent = tr('report_unavailable_title');
+        modalCloseBtn.setAttribute('aria-label', tr('report_back'));
+        const message = document.createElement('p');
+        message.className = 'report-unavailable';
+        message.textContent = tr('report_unavailable');
+        deepDiveContent.appendChild(message);
+        document.body.style.overflow = 'hidden';
+        modalCloseBtn.focus({preventScroll: true});
+    }
+    window.addEventListener('popstate', openLinkedReport);
     // Prev/next navigation order for the deep-dive modal — rebuilt by
     // buildTable to mirror the table's current sort/filter order.
     let diveOrder = [];
@@ -1386,13 +1517,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.ticker-symbol.has-etf-info')?.focus({preventScroll: true});
     });
 
-    function openDeepDive(ticker) {
+    function openDeepDive(ticker, updateRoute = true) {
         const artifact = deepDiveArtifacts.get(ticker);
         if (artifact?.format !== 'pdf' || !window.ReportReader) return;
+        if (updateRoute) setReportRoute(ticker);
+        if (activeReportTicker === ticker && deepDiveModal.classList.contains('pdf-mode') && !deepDiveModal.classList.contains('hidden')) return;
         if (deepDiveModal.classList.contains('hidden')) deepDiveOpener = document.activeElement;
         const request = ++deepDiveRequest;
         activeReportReader?.destroy();
         activeReportTicker = ticker;
+        resetReportShare(ticker);
         deepDiveModal.classList.add('pdf-mode', 'dive-mode');
         deepDiveContent.classList.remove('modal-chart');
         deepDiveContent.classList.add('modal-pdf');
@@ -1427,10 +1561,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Closes the modal regardless of which mode (research report or
     // TradingView chart) was active. Same close routine for both — single
     // modal element, single set of dismiss handlers.
-    function closeDeepDive() {
+    function closeDeepDive(updateRoute = true) {
+        if (updateRoute) clearReportRoute(true);
         ++deepDiveRequest;
         activeReportReader?.destroy();
         activeReportReader = null;
+        resetReportShare();
         deepDiveModal.classList.add('hidden');
         deepDiveModal.classList.remove('dive-mode', 'pdf-mode');
         document.body.style.overflow = '';
@@ -1559,6 +1695,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openChart(ticker) {
         if (!ticker) return;
+        clearReportRoute();
+        resetReportShare();
         if (deepDiveModal.classList.contains('hidden')) deepDiveOpener = document.activeElement;
         ++deepDiveRequest;
         activeReportReader?.destroy();
@@ -1645,11 +1783,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.closest('[data-modal-close]')) closeDeepDive();
     });
     document.addEventListener('keydown', (e) => {
+        if (shareDialog.open) return; // Native dialog owns Escape/focus while sharing.
         if (deepDiveModal.classList.contains('hidden')) return;
         if (e.key === 'Escape') {
             closeDeepDive();
         } else if (e.key === 'Tab' && deepDiveModal.classList.contains('pdf-mode')) {
-            const focusable = Array.from(deepDiveModal.querySelectorAll('button:not(:disabled), a[href], [tabindex="0"]'))
+            const focusable = Array.from(deepDiveModal.querySelectorAll('button:not(:disabled), a[href], input:not(:disabled), [tabindex="0"]'))
                 .filter(el => el.getClientRects().length);
             const first = focusable[0], last = focusable[focusable.length - 1];
             if (e.shiftKey && (document.activeElement === first || !deepDiveModal.contains(document.activeElement))) {
@@ -2739,7 +2878,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }).catch(() => { /* Keep the table available; a future live snapshot can recover. */ });
     setPortfolioView(portfolioView, false);
     renderData();
-    loadDeepDiveManifest().then(() => renderData());
+    loadDeepDiveManifest().then(() => {
+        renderData();
+        reportManifestReady = true;
+        openLinkedReport();
+    });
 
     // Live-price polling. Fire the first fetch immediately (so the
     // initial paint upgrades to fresh prices within ~500 ms), then on

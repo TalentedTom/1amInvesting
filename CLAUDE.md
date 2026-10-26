@@ -333,6 +333,15 @@ don't rebind it per render.
   page progress, previous/next reports, Back to list and Escape are supported.
   Keyboard focus returns to the opener; a failed load offers the original report.
   Closing or switching reports/charts cancels old work so it cannot reopen a modal.
+- Public reports have stable reader links such as `/?report=SIVE.ST`.
+  The reader's Copy link button shares that URL (with manual-copy fallback).
+  Share opens a dialog with X first, Facebook, WhatsApp, LinkedIn, Telegram,
+  email and the native device share menu where supported. Visitors complete
+  sharing themselves; no social SDK, credentials or automatic posting.
+  Links resolve only PDF entries in the current public manifest, independently
+  of visitor filters. Replacing a PDF preserves its link; removing it makes the
+  link unavailable. Browser Back/Forward and existing news hash links still work.
+  This routing feature never authorizes publishing extra source artifacts.
 - The sync script removes public Markdown and PDFs no longer selected from
   deep-dives/. Local Artifacts originals are never deleted or edited. Routine
   morning refreshes preserve this PDF-only policy and the reading screen.
@@ -340,6 +349,9 @@ don't rebind it per render.
   deployments or downloaded copies. Do not claim retroactive secrecy or
   rewrite history without separate authorization.
 - Tests: python -m unittest discover -s tests -p 'test_sync_deep_dives.py'.
+- Report links: `node --test tests/report-links.test.cjs`; browser flow:
+  `node tests/report-links.browser.cjs` (PLAYWRIGHT_MODULE may point to the
+  bundled runtime). Covers sharing, history, mobile and unavailable links.
 
 ## Portfolio Simulator (removed)
 
