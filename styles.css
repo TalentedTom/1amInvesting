@@ -1933,6 +1933,11 @@ body.light-mode .modal-close:hover {
 .report-link-layer a { position: absolute; pointer-events: auto; }
 .report-link-layer a:hover, .report-link-layer a:focus-visible { background: #2563eb20; outline: 1px solid #2563eb; }
 .report-page-retry { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; color: #1f2937; cursor: pointer; }
+.report-page-error { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 20px; color: #374151; text-align: center; font: .85rem/1.5 var(--font-body); }
+.report-page-error p { max-width: 32em; margin: 0; }
+.report-page-error .report-page-retry { position: static; transform: none; }
+.report-page-error a { color: #1d4ed8; text-decoration: underline; padding: 6px; }
+.report-page-error :focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
 .report-error { padding: 24px; color: var(--text-primary); }
 .report-error a { color: var(--accent); }
 .report-zoom button:focus-visible, .report-scroll:focus-visible, .modal.pdf-mode .modal-close:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }

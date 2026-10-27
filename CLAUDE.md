@@ -333,6 +333,10 @@ don't rebind it per render.
   page progress, previous/next reports, Back to list and Escape are supported.
   Keyboard focus returns to the opener; a failed load offers the original report.
   Closing or switching reports/charts cancels old work so it cannot reopen a modal.
+  Safari compatibility: pass page.streamTextContent() directly to TextLayer;
+  avoid page.getTextContent(), whose async stream iteration fails in some
+  iPhone Safari releases. Text/link overlay failures must preserve the rendered
+  canvas. A canvas failure offers Retry and the versioned original PDF/page.
 - Public reports have stable reader links such as `/?report=SIVE.ST`.
   The reader's Copy link button shares that URL (with manual-copy fallback).
   Share opens a dialog with X first, Facebook, WhatsApp, LinkedIn, Telegram,
@@ -355,6 +359,9 @@ don't rebind it per render.
 - Report links: `node --test tests/report-links.test.cjs`; browser flow:
   `node tests/report-links.browser.cjs` (PLAYWRIGHT_MODULE may point to the
   bundled runtime). Covers sharing, history, mobile and unavailable links.
+- Safari rendering regression: `node tests/report-safari.browser.cjs` checks
+  WebKit with missing stream async iteration, optional overlay failures and
+  canvas failure/recovery. This is browser-engine testing, not a physical iPhone.
 
 ## Portfolio Simulator (removed)
 

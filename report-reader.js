@@ -163,21 +163,40 @@
                 });
                 await block.renderTask.promise;
                 if (!alive() || token !== block.token) return;
-                const content = await page.getTextContent();
+                // getTextContent() uses ReadableStream async iteration, which
+                // some Safari releases lack. TextLayer consumes getReader()
+                // directly and also cancels its stream when the page is released.
+                try {
+                    block.textTask = new block.lib.TextLayer({ textContentSource: page.streamTextContent(), container: text, viewport });
+                    await block.textTask.render();
+                } catch (error) {
+                    if (!alive() || token !== block.token) return;
+                    text.replaceChildren();
+                    console.warn('Research text selection unavailable:', error.message);
+                }
                 if (!alive() || token !== block.token) return;
-                block.textTask = new block.lib.TextLayer({ textContentSource: content, container: text, viewport });
-                await block.textTask.render();
-                if (!alive() || token !== block.token) return;
-                await links(page, viewport, block.el, token, block);
+                // Optional overlays must never erase a successfully drawn page.
+                try { await links(page, viewport, block.el, token, block); }
+                catch (error) {
+                    if (!alive() || token !== block.token) return;
+                    console.warn('Research links unavailable:', error.message);
+                }
                 if (!alive() || token !== block.token) return;
                 block.el.classList.add('report-rendered');
             } catch (error) {
                 if (!alive() || token !== block.token || error.name === 'RenderingCancelledException' || error.name === 'AbortException') return;
                 console.warn('Research page could not be rendered:', error.message);
+                for (const canvas of block.el.querySelectorAll('canvas')) canvas.width = canvas.height = 0;
                 block.el.replaceChildren();
+                const fallback = document.createElement('div'); fallback.className = 'report-page-error';
+                const message = document.createElement('p'); message.textContent = tr('report_page_error');
                 const retry = document.createElement('button');
                 retry.type = 'button'; retry.className = 'report-page-retry'; retry.textContent = tr('report_retry');
-                retry.addEventListener('click', () => render(block)); block.el.appendChild(retry);
+                retry.addEventListener('click', () => render(block));
+                const original = document.createElement('a'); original.textContent = tr('report_original');
+                const target = new URL(url, window.location.href); target.hash = 'page=' + block.number;
+                original.href = target.href; original.target = '_blank'; original.rel = 'noopener noreferrer';
+                fallback.append(message, retry, original); block.el.appendChild(fallback);
             } finally {
                 if (token === block.token) block.rendering = false;
             }
