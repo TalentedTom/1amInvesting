@@ -462,6 +462,12 @@ window.COMPANY_LOGOS = {
     "symbol": "TSE:6146",
     "company": "Disco Corporation"
   },
+  "6166.HK": {
+    "src": "assets/company-logos/6166.HK.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/cig-shanghai-coltd--big.svg",
+    "symbol": "HKEX:6166",
+    "company": "CIG Shanghai Co., Ltd. Class H"
+  },
   "6223.TWO": {
     "src": "assets/company-logos/6223.TWO.svg",
     "source": "https://s3-symbol-logo.tradingview.com/mpi--big.svg",

@@ -4,20 +4,50 @@
     "version": "c9ee1fd5578289bb",
     "updated": "2026-10-07T05:55:25.473000+00:00"
   },
+  "000636.SZ": {
+    "format": "pdf",
+    "version": "aba2b643b5d15abe",
+    "updated": "2026-10-24T07:43:23.983000+00:00"
+  },
   "000660.KS": {
     "format": "pdf",
     "version": "4fad41126d002ce0",
     "updated": "2026-10-15T20:40:12.726000+00:00"
+  },
+  "000938.SZ": {
+    "format": "pdf",
+    "version": "5f3dd3364e195d46",
+    "updated": "2026-10-21T23:04:17.582000+00:00"
+  },
+  "002353.SZ": {
+    "format": "pdf",
+    "version": "e40be001ce859275",
+    "updated": "2026-10-26T06:24:18.024000+00:00"
+  },
+  "002371.SZ": {
+    "format": "pdf",
+    "version": "1e69a75e138d673c",
+    "updated": "2026-10-23T05:02:21.703000+00:00"
   },
   "002384.SZ": {
     "format": "pdf",
     "version": "5a0a2a9a2a9fbccd",
     "updated": "2026-10-05T13:02:25.258000+00:00"
   },
+  "002409.SZ": {
+    "format": "pdf",
+    "version": "09d3ac0568c09fe7",
+    "updated": "2026-10-22T03:02:47.404000+00:00"
+  },
   "002428.SZ": {
     "format": "pdf",
     "version": "eae362f5abc56599",
     "updated": "2026-10-20T02:27:30.541000+00:00"
+  },
+  "002484.SZ": {
+    "format": "pdf",
+    "version": "3b44513283897de1",
+    "updated": "2026-10-22T19:58:27.794000+00:00"
   },
   "002938.SZ": {
     "format": "pdf",
@@ -119,6 +149,26 @@
     "version": "cd640c3b5ce3521c",
     "updated": "2026-10-16T05:59:53.627000+00:00"
   },
+  "300007.SZ": {
+    "format": "pdf",
+    "version": "ad42ffbcd5aceb3d",
+    "updated": "2026-10-26T00:34:49.991000+00:00"
+  },
+  "300136.SZ": {
+    "format": "pdf",
+    "version": "4d6baac192946a9d",
+    "updated": "2026-10-24T11:49:45.079000+00:00"
+  },
+  "300223.SZ": {
+    "format": "pdf",
+    "version": "48b68456b6d7c2cf",
+    "updated": "2026-10-22T10:54:25.008000+00:00"
+  },
+  "300285.SZ": {
+    "format": "pdf",
+    "version": "396fdf77a0798b99",
+    "updated": "2026-10-23T21:38:39.846000+00:00"
+  },
   "300308.SZ": {
     "format": "pdf",
     "version": "ff590e1bad1faf3c",
@@ -128,6 +178,11 @@
     "format": "pdf",
     "version": "f4ac6fa78dc70521",
     "updated": "2026-10-08T00:43:43.097000+00:00"
+  },
+  "300408.SZ": {
+    "format": "pdf",
+    "version": "4e1fd864f7dd2909",
+    "updated": "2026-10-23T06:52:24.910000+00:00"
   },
   "300502.SZ": {
     "format": "pdf",
@@ -143,6 +198,11 @@
     "format": "pdf",
     "version": "355aaf8eb0f4f273",
     "updated": "2026-10-01T12:51:18.320000+00:00"
+  },
+  "301308.SZ": {
+    "format": "pdf",
+    "version": "f4fdafb373abad0c",
+    "updated": "2026-10-21T09:41:48.462000+00:00"
   },
   "3017.TW": {
     "format": "pdf",
@@ -249,6 +309,16 @@
     "version": "7d62ea3c5c731bc5",
     "updated": "2026-10-12T19:43:27.327000+00:00"
   },
+  "4078.T": {
+    "format": "pdf",
+    "version": "613e95bdd2f26fa3",
+    "updated": "2026-10-21T09:59:35.628000+00:00"
+  },
+  "4977.TW": {
+    "format": "pdf",
+    "version": "3ecc2d03b9a5b2c3",
+    "updated": "2026-10-22T07:23:44.480000+00:00"
+  },
   "5274.TWO": {
     "format": "pdf",
     "version": "235d9fb29e667a91",
@@ -274,10 +344,25 @@
     "version": "7fba0ee4a0be5e88",
     "updated": "2026-10-07T15:39:31.811000+00:00"
   },
+  "600330.SH": {
+    "format": "pdf",
+    "version": "e83494fc4e02027a",
+    "updated": "2026-10-25T04:24:32.358000+00:00"
+  },
   "600363.SH": {
     "format": "pdf",
     "version": "517bf9a19108558c",
     "updated": "2026-10-01T12:44:07.738000+00:00"
+  },
+  "600584.SH": {
+    "format": "pdf",
+    "version": "eaffd0459f4381d6",
+    "updated": "2026-10-23T18:50:58.316000+00:00"
+  },
+  "603186.SH": {
+    "format": "pdf",
+    "version": "a19ed9920b21e128",
+    "updated": "2026-10-27T00:11:29.424000+00:00"
   },
   "603986.SH": {
     "format": "pdf",
@@ -293,6 +378,11 @@
     "format": "pdf",
     "version": "cf778e7d70dca9e7",
     "updated": "2026-10-07T07:14:17.981000+00:00"
+  },
+  "6166.HK": {
+    "format": "pdf",
+    "version": "c431c79995d81701",
+    "updated": "2026-10-26T15:19:44.262000+00:00"
   },
   "6223.TWO": {
     "format": "pdf",
@@ -313,6 +403,11 @@
     "format": "pdf",
     "version": "d0a34d495957a181",
     "updated": "2026-10-11T06:06:23.832000+00:00"
+  },
+  "6451.TW": {
+    "format": "pdf",
+    "version": "eb8eab514881dd1a",
+    "updated": "2026-10-21T08:26:39.026000+00:00"
   },
   "6510.TWO": {
     "format": "pdf",
@@ -364,10 +459,35 @@
     "version": "aa0d8d486b4c2e4b",
     "updated": "2026-10-11T22:55:42.394000+00:00"
   },
+  "688008.SH": {
+    "format": "pdf",
+    "version": "efa79f67379d4b86",
+    "updated": "2026-10-23T13:46:21.944000+00:00"
+  },
+  "688010.SH": {
+    "format": "pdf",
+    "version": "f926a16431b508a0",
+    "updated": "2026-10-24T20:02:50.504000+00:00"
+  },
+  "688012.SH": {
+    "format": "pdf",
+    "version": "ac35d6c3113910ab",
+    "updated": "2026-10-24T17:07:44.773000+00:00"
+  },
+  "688072.SH": {
+    "format": "pdf",
+    "version": "94763e4a6d55c105",
+    "updated": "2026-10-24T01:52:06.302000+00:00"
+  },
   "688120.SH": {
     "format": "pdf",
     "version": "2ce822661ad88ccd",
     "updated": "2026-10-01T12:23:50.898000+00:00"
+  },
+  "688409.SH": {
+    "format": "pdf",
+    "version": "004ec4538cebd8a0",
+    "updated": "2026-10-23T11:58:37.229000+00:00"
   },
   "688498.SSE": {
     "format": "pdf",
@@ -484,10 +604,20 @@
     "version": "95bf873aa780189d",
     "updated": "2026-10-12T07:54:54.582000+00:00"
   },
+  "AMKR": {
+    "format": "pdf",
+    "version": "6cc708ad8c1b5485",
+    "updated": "2026-10-21T08:44:38.541000+00:00"
+  },
   "AMPX": {
     "format": "pdf",
     "version": "31a9d0535d18940c",
     "updated": "2026-10-02T13:12:29.834000+00:00"
+  },
+  "AMZN": {
+    "format": "pdf",
+    "version": "00cb4513d66c0b5f",
+    "updated": "2026-10-21T13:23:38.372000+00:00"
   },
   "ANET": {
     "format": "pdf",
@@ -504,6 +634,11 @@
     "version": "b6b673ce558cc830",
     "updated": "2026-10-07T07:34:18.038000+00:00"
   },
+  "ARM": {
+    "format": "pdf",
+    "version": "9368379980311080",
+    "updated": "2026-10-21T06:01:35.440000+00:00"
+  },
   "ASML": {
     "format": "pdf",
     "version": "93fd30f4221eaf36",
@@ -513,6 +648,11 @@
     "format": "pdf",
     "version": "8d1146241e5420e4",
     "updated": "2026-10-12T19:47:16.723000+00:00"
+  },
+  "AVEX": {
+    "format": "pdf",
+    "version": "685f7730ea40f7cc",
+    "updated": "2026-10-22T23:05:32.196000+00:00"
   },
   "AVGO": {
     "format": "pdf",
@@ -548,6 +688,11 @@
     "format": "pdf",
     "version": "b1d773af1d3a9021",
     "updated": "2026-10-07T13:06:33.426000+00:00"
+  },
+  "BTI": {
+    "format": "pdf",
+    "version": "c868c23ac409c81b",
+    "updated": "2026-10-20T15:01:45.617000+00:00"
   },
   "CAMT": {
     "format": "pdf",
@@ -611,8 +756,8 @@
   },
   "CRWV": {
     "format": "pdf",
-    "version": "28dae77e9cc090f9",
-    "updated": "2026-10-06T05:37:45.856000+00:00"
+    "version": "5fe5178a4ba0c8b7",
+    "updated": "2026-10-26T18:49:00.141000+00:00"
   },
   "CSCO": {
     "format": "pdf",
@@ -623,6 +768,11 @@
     "format": "pdf",
     "version": "89ef462279c6341c",
     "updated": "2026-09-30T18:13:16.527000+00:00"
+  },
+  "DELL": {
+    "format": "pdf",
+    "version": "4bed0e696e20562e",
+    "updated": "2026-10-21T06:06:57.953000+00:00"
   },
   "DIOD": {
     "format": "pdf",
@@ -638,6 +788,11 @@
     "format": "pdf",
     "version": "cd107517446550b6",
     "updated": "2026-09-21T23:17:56.579000+00:00"
+  },
+  "EOS.AX": {
+    "format": "pdf",
+    "version": "ecba1103533e4377",
+    "updated": "2026-10-22T12:44:31.329000+00:00"
   },
   "EROC": {
     "format": "pdf",
@@ -663,6 +818,11 @@
     "format": "pdf",
     "version": "63d19a8afd61750d",
     "updated": "2026-09-21T23:13:27.305000+00:00"
+  },
+  "FLNC": {
+    "format": "pdf",
+    "version": "553e0af34ef00ac7",
+    "updated": "2026-10-21T10:10:25.643000+00:00"
   },
   "FORM": {
     "format": "pdf",
@@ -694,10 +854,20 @@
     "version": "7975fe3426dd1ad9",
     "updated": "2026-10-07T18:04:19.518000+00:00"
   },
+  "GOOGL": {
+    "format": "pdf",
+    "version": "7d47c40493e27ae9",
+    "updated": "2026-10-21T12:52:14.257000+00:00"
+  },
   "HPE": {
     "format": "pdf",
     "version": "4bd168a38cf01736",
     "updated": "2026-09-30T18:56:15.163000+00:00"
+  },
+  "HPS-A.TO": {
+    "format": "pdf",
+    "version": "73a680d6024eb49f",
+    "updated": "2026-10-21T11:16:44.908000+00:00"
   },
   "HUBN": {
     "format": "pdf",
@@ -754,6 +924,11 @@
     "version": "c2a7a786b1bd0ddf",
     "updated": "2026-09-30T15:34:30.912000+00:00"
   },
+  "LRCX": {
+    "format": "pdf",
+    "version": "6bf1ed09fac51bb1",
+    "updated": "2026-10-22T00:26:30.084000+00:00"
+  },
   "M7U.DE": {
     "format": "pdf",
     "version": "738ef857368f55b2",
@@ -769,6 +944,11 @@
     "version": "4a0ed5ac7dbdb99c",
     "updated": "2026-09-21T23:18:00.034000+00:00"
   },
+  "MO": {
+    "format": "pdf",
+    "version": "67a77a8052eb848d",
+    "updated": "2026-10-20T15:01:46.712000+00:00"
+  },
   "MOD": {
     "format": "pdf",
     "version": "5be058d9e7913d4f",
@@ -783,6 +963,11 @@
     "format": "pdf",
     "version": "1c433bb89e0d068e",
     "updated": "2026-10-20T02:17:50.274000+00:00"
+  },
+  "MTSI": {
+    "format": "pdf",
+    "version": "d0cc7bf2cb8e9086",
+    "updated": "2026-10-23T15:34:15.002000+00:00"
   },
   "MU": {
     "format": "pdf",
@@ -859,6 +1044,31 @@
     "version": "3bd4a4576004a9fc",
     "updated": "2026-10-07T12:46:53.686000+00:00"
   },
+  "PL": {
+    "format": "pdf",
+    "version": "f781658d9fe89fe7",
+    "updated": "2026-10-25T10:54:15.222000+00:00"
+  },
+  "PLTR": {
+    "format": "pdf",
+    "version": "cfc56f92f45a1948",
+    "updated": "2026-10-24T23:20:56.493000+00:00"
+  },
+  "PM": {
+    "format": "pdf",
+    "version": "108d906a4f21c831",
+    "updated": "2026-10-20T15:01:44.531000+00:00"
+  },
+  "PNG.V": {
+    "format": "pdf",
+    "version": "a2f9dae4fcc44b1b",
+    "updated": "2026-10-23T08:56:57.386000+00:00"
+  },
+  "POET": {
+    "format": "pdf",
+    "version": "d0455909007026cf",
+    "updated": "2026-10-25T14:19:51.855000+00:00"
+  },
   "QCOM": {
     "format": "pdf",
     "version": "6db7a9fdb0503181",
@@ -873,6 +1083,11 @@
     "format": "pdf",
     "version": "191a29d4f322d0b1",
     "updated": "2026-10-08T00:57:27.152000+00:00"
+  },
+  "SE": {
+    "format": "pdf",
+    "version": "d94ce0898c147099",
+    "updated": "2026-10-22T13:41:16.984000+00:00"
   },
   "SEDG": {
     "format": "pdf",
@@ -949,6 +1164,11 @@
     "version": "a619129b746010e1",
     "updated": "2026-10-11T07:40:05.890000+00:00"
   },
+  "STM": {
+    "format": "pdf",
+    "version": "d7d9d74bf85aea8a",
+    "updated": "2026-10-23T03:31:35.079000+00:00"
+  },
   "STX": {
     "format": "pdf",
     "version": "1b6d28583436041e",
@@ -1008,5 +1228,10 @@
     "format": "pdf",
     "version": "13ad4191d588a267",
     "updated": "2026-10-11T12:35:34.104000+00:00"
+  },
+  "XFAB": {
+    "format": "pdf",
+    "version": "0fe821910fa0fa09",
+    "updated": "2026-10-21T07:58:47.880000+00:00"
   }
 }
