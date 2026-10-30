@@ -20,18 +20,18 @@ test('reader routes preserve existing news permalinks and other page parameters'
 });
 test('copied links omit filters, article fragments and version hashes', () => {
     assert.equal(links.share('https://www.1aminvesting.com/?view=table&v=old#story', 'SIVE.ST'),
-        'https://www.1aminvesting.com/?report=SIVE.ST');
+        'https://www.1aminvesting.com/r/SIVE.ST/');
     assert.equal(links.share('https://example.com/?report=MU&v=new#other', 'SIVE.ST'),
-        'https://example.com/?report=SIVE.ST');
+        'https://example.com/r/SIVE.ST/');
 });
 test('X is first and all social composers receive the same clean report link', () => {
     const title = 'Sivers & partners · Research';
     const targets = links.social('https://www.1aminvesting.com/?v=old#story', 'SIVE.ST', title);
-    const link = 'https://www.1aminvesting.com/?report=SIVE.ST';
+    const link = 'https://www.1aminvesting.com/r/SIVE.ST/';
     assert.deepEqual(targets.map(t => t.id), ['x','facebook','whatsapp','linkedin','telegram','email']);
     const x = new URL(targets[0].url);
     assert.equal(x.origin + x.pathname, 'https://x.com/intent/tweet');
-    assert.equal(x.searchParams.get('url'), link); assert.equal(x.searchParams.get('text'), title);
+    assert.equal(x.searchParams.get('url'), link); assert.equal(x.searchParams.get('text'), null);
     assert.equal(new URL(targets[1].url).searchParams.get('u'), link);
     assert.equal(new URL(targets[2].url).searchParams.get('text'), title + '\n' + link);
     assert.equal(new URL(targets[3].url).searchParams.get('url'), link);

@@ -9,7 +9,7 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const root = path.resolve(__dirname, '..');
 const server = http.createServer((req, res) => {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-    const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
+    const file = path.resolve(root, '.' + (pathname.endsWith('/') ? pathname + 'index.html' : pathname));
     if (!file.startsWith(root + path.sep) || !fs.existsSync(file) || !fs.statSync(file).isFile()) { res.writeHead(404); res.end(); return; }
     const types = {'.html':'text/html', '.js':'application/javascript', '.css':'text/css', '.json':'application/json', '.pdf':'application/pdf', '.svg':'image/svg+xml'};
     res.writeHead(200, {'Content-Type':types[path.extname(file)] || 'application/octet-stream'});
@@ -40,20 +40,28 @@ async function readerHidden(page) {
             if (url.startsWith('https://x.com/intent/tweet')) return route.fulfill({body:'Composer test — no post is sent.'});
             return route.abort();
         });
+        const preview = await context.request.get(base + '/r/SIVE.ST/');
+        const previewHtml = await preview.text();
+        assert.match(previewHtml, /name="twitter:card" content="summary"/);
+        assert.match(previewHtml, /property="og:title" content="Sivers Semiconductors \(SIVE.ST\)/);
+        assert.match(previewHtml, /\/r\/SIVE.ST\/cover.png\?v=/);
+        await page.goto(base + '/r/SIVE.ST/', {waitUntil:'domcontentloaded'});
+        await page.waitForURL(base + '/?report=SIVE.ST');
+        await rendered(page);
         await page.goto(base + '/?report=SIVE.ST', {waitUntil:'domcontentloaded'});
         await rendered(page);
         assert.match(await page.locator('#deep-dive-title').innerText(), /Sivers/i);
         await page.locator('#report-copy-link').click();
         await page.waitForFunction(() => document.querySelector('#report-share-status').textContent === 'Link copied');
-        assert.equal(await page.evaluate(() => navigator.clipboard.readText()), base + '/?report=SIVE.ST');
+        assert.equal(await page.evaluate(() => navigator.clipboard.readText()), base + '/r/SIVE.ST/');
         await page.locator('#report-share-button').click();
         await page.waitForSelector('#report-share-dialog[open]');
         assert.ok(await page.locator('#report-share-dialog').evaluate(el => Math.abs(el.getBoundingClientRect().left + el.clientWidth / 2 - innerWidth / 2) < 2));
         assert.deepEqual(await page.locator('.share-option').allTextContents(), ['X','Facebook','WhatsApp','LinkedIn','Telegram','Email']);
-        assert.equal(await page.locator('#report-dialog-url').inputValue(), base + '/?report=SIVE.ST');
+        assert.equal(await page.locator('#report-dialog-url').inputValue(), base + '/r/SIVE.ST/');
         const [popup] = await Promise.all([page.waitForEvent('popup'), page.locator('.share-x').click()]);
         await popup.waitForLoadState('domcontentloaded');
-        assert.equal(new URL(popup.url()).searchParams.get('url'), base + '/?report=SIVE.ST');
+        assert.equal(new URL(popup.url()).searchParams.get('url'), base + '/r/SIVE.ST/');
         await popup.close();
         await page.screenshot({path:path.join(screenshots, 'desktop-share.png')});
         await page.keyboard.press('Escape');
@@ -81,7 +89,7 @@ async function readerHidden(page) {
         await page.evaluate(() => Object.defineProperty(navigator, 'share', {configurable:true, value:async data => { window.sharedData = data; }}));
         await page.locator('#report-share-button').click();
         await page.locator('#report-share-device').click();
-        assert.equal(await page.evaluate(() => window.sharedData.url), base + '/?report=SIVE.ST');
+        assert.equal(await page.evaluate(() => window.sharedData.url), base + '/r/SIVE.ST/');
         // Clipboard denial exposes a selectable URL inside the same dialog.
         await page.evaluate(() => Object.defineProperty(navigator.clipboard, 'writeText', {configurable:true, value:async () => { throw new Error('denied'); }}));
         await page.locator('#report-dialog-copy').click();

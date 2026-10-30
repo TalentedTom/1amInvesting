@@ -228,6 +228,9 @@ def main():
     print(f"\nWrote manifest with {len(manifest)} tickers: {manifest_path.relative_to(REPO)}")
     print(f"Public formats: {sum(v['format'] == 'pdf' for v in manifest.values())} PDFs, "
           f"{sum(v['format'] == 'md' for v in manifest.values())} Markdown files")
+    if (REPO / "data.js").exists():
+        from report_social_previews import generate_all
+        generate_all(REPO, manifest)
 
 
 if __name__ == "__main__":

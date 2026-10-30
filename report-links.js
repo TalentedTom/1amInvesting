@@ -21,7 +21,7 @@
     function share(href, ticker) {
         const url = new URL(href);
         url.search = ''; url.hash = '';
-        url.searchParams.set('report', ticker);
+        url.pathname = '/r/' + encodeURIComponent(ticker) + '/';
         return url.href;
     }
     function social(href, ticker, title) {
@@ -32,7 +32,7 @@
             return url.href;
         }
         return [
-            {id:'x', label:'X', url:target('https://x.com/intent/tweet', {text:title, url:link})},
+            {id:'x', label:'X', url:target('https://x.com/intent/tweet', {url:link})},
             {id:'facebook', label:'Facebook', url:target('https://www.facebook.com/sharer/sharer.php', {u:link})},
             {id:'whatsapp', label:'WhatsApp', url:target('https://wa.me/', {text:title + '\n' + link})},
             {id:'linkedin', label:'LinkedIn', url:target('https://www.linkedin.com/sharing/share-offsite/', {url:link})},

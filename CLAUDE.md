@@ -338,13 +338,21 @@ don't rebind it per render.
   iPhone Safari releases. Text/link overlay failures must preserve the rendered
   canvas. A canvas failure offers Retry and the versioned original PDF/page.
 - Public reports have stable reader links such as `/?report=SIVE.ST`.
-  The reader's Copy link button shares that URL (with manual-copy fallback).
+  The reader's Copy link button shares the social-preview URL (with manual-copy fallback).
   Share opens a dialog with X first, Facebook, WhatsApp, LinkedIn, Telegram,
   email and the native device share menu where supported. Visitors complete
   sharing themselves; no social SDK, credentials or automatic posting.
   Links resolve only PDF entries in the current public manifest, independently
   of visitor filters. Replacing a PDF preserves its link; removing it makes the
   link unavailable. Browser Back/Forward and existing news hash links still work.
+  Share and Copy now use `/r/SIVE.ST/`, a static crawler-readable page with
+  report-specific Open Graph and X summary-card metadata and a square cover
+  image. It opens the existing reader at `/?report=SIVE.ST`; old query links
+  still work. `scripts/report_social_previews.py` generates these pages from
+  the public PDF manifest and data.js during `sync_deep_dives.py`. Commit the
+  resulting `r/` files with report changes. Images use the public PDF first
+  page when pdftoppm is available and a company-labeled fallback otherwise.
+  On removal, delete only generated preview pages; never expose private sources.
   This routing feature never authorizes publishing extra source artifacts.
   Share/Copy link belong at the top right of the title bar, alongside the
   page/zoom controls, never in a side rail. Phones wrap the header compactly;
