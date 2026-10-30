@@ -7,6 +7,7 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"samsung-reports-record-q3-memory-revenue-as-ai-demand-grows-20261029": {"en":[{"company":"Samsung (005930.KS)","metric":"Q3 revenue ≈₩195tn; memory ≈₩141tn","reason":"AI demand, higher market prices and HBM4 sales supported results; figures remain subject to external review adjustments."}]},
 "cerebras-and-oracle-plan-oci-inference-availability-in-2027-20261029": {"en":[{"company":"Cerebras (CBRS) / Oracle","metric":"OCI inference availability planned during 2027","reason":"Committed volumes, pricing and financial split undisclosed; impact depends on capacity, adoption and costs."}]},
 "sivers-receives-lidar-production-orders-and-approves-employee-options-20261028": {"en":[{"company":"Sivers (SIVE.ST)","metric":"LiDAR production orders; Q4'26 first shipments expected","reason":"USD 53–138m lifecycle potential depends on customer forecasts, deliveries and rollout; initial order value undisclosed."}]},
 "sk-hynix-reports-record-q3-profit-and-broadens-long-term-supply-commitments-20261028": {"en":[{"company":"SK hynix (000660.KS / SKHY)","metric":"Q3 preliminary revenue ≈KRW 105tn; operating profit KRW 83tn","reason":"Agreements cover over half of 2027–28 capacity; future realized prices and shipments remain uncertain."}]},
