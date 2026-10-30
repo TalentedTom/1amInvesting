@@ -7,6 +7,7 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"micron-upgrades-employee-rewards-as-taiwan-labor-talks-continue-20261030": {"en":[{"company":"Micron (MU)","metric":"Quarterly employee awards: 50% cash / 50% stock","reason":"Taiwan negotiations continue; Nov 6 session tentative. Incremental cost and company-wide production effects unquantified."}]},
 "sandisk-expands-data-center-sales-buys-back-5-billion-and-announces-stock-split-20261030": {"en":[{"company":"SanDisk (SNDK)","metric":"FY27 Q1 data-center sales ≈US$5bn, +61% QoQ","reason":"US$5bn repurchased; 8-for-1 split planned, post-split trading expected Nov 20. Figures remain subject to closing and Form 10-Q review."}]},
 "samsung-reports-record-q3-memory-revenue-as-ai-demand-grows-20261029": {"en":[{"company":"Samsung (005930.KS)","metric":"Q3 revenue ≈₩195tn; memory ≈₩141tn","reason":"AI demand, higher market prices and HBM4 sales supported results; figures remain subject to external review adjustments."}]},
 "cerebras-and-oracle-plan-oci-inference-availability-in-2027-20261029": {"en":[{"company":"Cerebras (CBRS) / Oracle","metric":"OCI inference availability planned during 2027","reason":"Committed volumes, pricing and financial split undisclosed; impact depends on capacity, adoption and costs."}]},
