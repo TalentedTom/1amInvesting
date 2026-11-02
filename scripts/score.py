@@ -296,12 +296,12 @@ def ev_upside(base: int, high: float, price: float) -> int:
 
 
 # Column name for the target price that drives Upside + EV Upside.
-# Rolled from Q3 2027 to Q4 2027 on 2026-09-30, ahead of October 1.
+# Owner selected Q3 2027 on 2026-11-01 to keep the horizon within a year.
 # Next planned horizon review: 2027-01-01 (no automatic calendar rollover).
 # Keep in sync with script.js TARGET_QUARTER, which also drives frontend DRAM.
 # Upside = target/price; EV Upside = Base * target/price - 100.
-# Legacy annual/range names remain supported, but Q3 2027 is not a fallback.
-TARGET_COLS = ("Q4 2027", "FY2028", "1y EV", "Ceiling Target")
+# Legacy annual/range names remain supported; other quarters are not fallbacks.
+TARGET_COLS = ("Q3 2027", "FY2028", "1y EV", "Ceiling Target")
 
 
 def target_cell(row):

@@ -28,10 +28,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 376.79072285939435,
             "Q1 2030": 386.2492898725188,
             "Change %": "-13.64%",
-            "Entry": 110,
-            "Total": 98,
-            "Upside": "5.0x",
-            "EV Upside": 349
+            "Entry": 93,
+            "Total": 91,
+            "Upside": "3.7x",
+            "EV Upside": 235
         },
         {
             "Rank": 8.0,
@@ -61,10 +61,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": "n.a.",
             "Q1 2030": "n.a.",
             "Change %": "-11.85%",
-            "Entry": 85,
-            "Total": 77,
-            "Upside": "3.4x",
-            "EV Upside": 146
+            "Entry": 83,
+            "Total": 76,
+            "Upside": "3.3x",
+            "EV Upside": 140
         },
         {
             "Rank": 10.0,
@@ -94,10 +94,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 189.33441157551022,
             "Q1 2030": 217.65601959183675,
             "Change %": "-1.80%",
-            "Entry": 78,
-            "Total": 78,
-            "Upside": "3.1x",
-            "EV Upside": 144
+            "Entry": 57,
+            "Total": 70,
+            "Upside": "2.3x",
+            "EV Upside": 79
         },
         {
             "Rank": 29.0,
@@ -127,10 +127,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 3622.8971197949327,
             "Q1 2030": 3787.4412568917724,
             "Change %": "-4.75%",
-            "Entry": 50,
-            "Total": 72,
-            "Upside": "2.0x",
-            "EV Upside": 74
+            "Entry": 43,
+            "Total": 69,
+            "Upside": "1.9x",
+            "EV Upside": 64
         },
         {
             "Rank": 7.0,
@@ -160,10 +160,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 677145.3787791574,
             "Q1 2030": 662238.2648178433,
             "Change %": "+3.88%",
-            "Entry": 73,
-            "Total": 83,
-            "Upside": "2.9x",
-            "EV Upside": 164
+            "Entry": 63,
+            "Total": 79,
+            "Upside": "2.5x",
+            "EV Upside": 126
         },
         {
             "Rank": 9.0,
@@ -193,10 +193,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 3747309.7158276094,
             "Q1 2030": 3636590.166036492,
             "Change %": "+1.15%",
-            "Entry": 72,
-            "Total": 83,
-            "Upside": "2.9x",
-            "EV Upside": 158
+            "Entry": 64,
+            "Total": 80,
+            "Upside": "2.6x",
+            "EV Upside": 132
         },
         {
             "Rank": 11.0,
@@ -225,10 +225,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 24.277237918516143,
             "Q4 2029": 25.62787024164189,
             "Q1 2030": 27.10231800872104,
-            "Entry": 80,
-            "Total": 75,
-            "Upside": "3.2x",
-            "EV Upside": 130
+            "Entry": 73,
+            "Total": 72,
+            "Upside": "2.9x",
+            "EV Upside": 109
         },
         {
             "Rank": 12.0,
@@ -258,10 +258,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 766.064115771207,
             "Q1 2030": 813.5994707183474,
             "Change %": "+0.79%",
-            "Entry": 79,
-            "Total": 75,
-            "Upside": "3.2x",
-            "EV Upside": 127
+            "Entry": 69,
+            "Total": 71,
+            "Upside": "2.8x",
+            "EV Upside": 100
         },
         {
             "Rank": 20.0,
@@ -291,10 +291,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1118.3782195496617,
             "Q1 2030": 1164.8448408516822,
             "Change %": "-9.42%",
-            "Entry": 60,
-            "Total": 74,
-            "Upside": "2.4x",
-            "EV Upside": 99
+            "Entry": 53,
+            "Total": 71,
+            "Upside": "2.1x",
+            "EV Upside": 75
         },
         {
             "Rank": 4.0,
@@ -325,8 +325,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 968.6796908185808,
             "Entry": 100,
             "Total": 72,
-            "Upside": "4.8x",
-            "EV Upside": 153
+            "Upside": "4.4x",
+            "EV Upside": 132
         },
         {
             "Rank": 244.0,
@@ -359,7 +359,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "0.2x",
-            "EV Upside": -83
+            "EV Upside": -86
         },
         {
             "Rank": 2.0,
@@ -389,10 +389,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 5581.389557503723,
             "Q1 2030": 5922.181616373284,
             "Change %": "-4.40%",
-            "Entry": 97,
-            "Total": 86,
-            "Upside": "3.9x",
-            "EV Upside": 202
+            "Entry": 74,
+            "Total": 76,
+            "Upside": "3.0x",
+            "EV Upside": 131
         },
         {
             "Rank": 25.0,
@@ -422,10 +422,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1908.0049988180795,
             "Q1 2030": 1882.525376625523,
             "Change %": "-2.99%",
-            "Entry": 51,
-            "Total": 74,
-            "Upside": "2.0x",
-            "EV Upside": 83
+            "Entry": 47,
+            "Total": 73,
+            "Upside": "1.9x",
+            "EV Upside": 75
         },
         {
             "Rank": 15.0,
@@ -454,10 +454,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 93.28493094672224,
             "Q4 2029": 94.223689968653,
             "Q1 2030": 93.43885052105429,
-            "Entry": 75,
-            "Total": 72,
-            "Upside": "3.0x",
-            "EV Upside": 111
+            "Entry": 64,
+            "Total": 68,
+            "Upside": "2.6x",
+            "EV Upside": 80
         },
         {
             "Rank": 43.0,
@@ -486,10 +486,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1132.3425084757487,
             "Q4 2029": 1167.5831667451635,
             "Q1 2030": 1203.054041026002,
-            "Entry": 45,
-            "Total": 63,
-            "Upside": "1.9x",
-            "EV Upside": 44
+            "Entry": 40,
+            "Total": 61,
+            "Upside": "1.8x",
+            "EV Upside": 37
         },
         {
             "Rank": 18.0,
@@ -518,10 +518,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 58903.78150562406,
             "Q4 2029": 59438.83581666164,
             "Q1 2030": 59965.527653585516,
-            "Entry": 65,
-            "Total": 73,
-            "Upside": "2.6x",
-            "EV Upside": 103
+            "Entry": 58,
+            "Total": 70,
+            "Upside": "2.3x",
+            "EV Upside": 80
         },
         {
             "Rank": 13.0,
@@ -551,10 +551,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 89.45000000000005,
             "Q1 2030": 101.00000000000001,
             "Change %": "-7.83%",
-            "Entry": 73,
-            "Total": 75,
-            "Upside": "2.9x",
-            "EV Upside": 125
+            "Entry": 61,
+            "Total": 71,
+            "Upside": "2.4x",
+            "EV Upside": 87
         },
         {
             "Rank": 30.0,
@@ -583,10 +583,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 713.809752397906,
             "Q4 2029": 735.8946844795797,
             "Q1 2030": 754.2214152847185,
-            "Entry": 51,
-            "Total": 70,
-            "Upside": "2.0x",
-            "EV Upside": 67
+            "Entry": 40,
+            "Total": 65,
+            "Upside": "1.8x",
+            "EV Upside": 50
         },
         {
             "Rank": 47.0,
@@ -615,10 +615,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.87485541927686,
             "Q4 2029": 147.13617315851064,
             "Q1 2030": 155.78648585657353,
-            "Entry": 43,
-            "Total": 60,
-            "Upside": "1.9x",
-            "EV Upside": 36
+            "Entry": 38,
+            "Total": 58,
+            "Upside": "1.8x",
+            "EV Upside": 30
         },
         {
             "Rank": 147.0,
@@ -650,8 +650,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.42%",
             "Entry": 0,
             "Total": 35,
-            "Upside": "1.0x",
-            "EV Upside": -42
+            "Upside": "0.9x",
+            "EV Upside": -48
         },
         {
             "Rank": 14.0,
@@ -680,10 +680,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 670.9937134564026,
             "Q4 2029": 668.5656263436522,
             "Q1 2030": 666.2050255587045,
-            "Entry": 79,
-            "Total": 72,
+            "Entry": 81,
+            "Total": 73,
             "Upside": "3.2x",
-            "EV Upside": 111
+            "EV Upside": 117
         },
         {
             "Rank": 6.0,
@@ -712,10 +712,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 387.2961326530168,
             "Q4 2029": 377.38778156497847,
             "Q1 2030": 366.237327388464,
-            "Entry": 75,
-            "Total": 84,
-            "Upside": "3.0x",
-            "EV Upside": 168
+            "Entry": 73,
+            "Total": 83,
+            "Upside": "2.9x",
+            "EV Upside": 163
         },
         {
             "Rank": 65.0,
@@ -744,10 +744,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 65,
             "Q4 2029": 61,
             "Q1 2030": 57,
-            "Entry": 25,
-            "Total": 58,
-            "Upside": "1.6x",
-            "EV Upside": 28
+            "Entry": 15,
+            "Total": 54,
+            "Upside": "1.4x",
+            "EV Upside": 16
         },
         {
             "Rank": 116.0,
@@ -776,10 +776,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 4268.2999974698405,
             "Q4 2029": 4287.814222636533,
             "Q1 2030": 4313.010455690727,
-            "Entry": 1,
+            "Entry": 0,
             "Total": 39,
-            "Upside": "1.2x",
-            "EV Upside": -21
+            "Upside": "1.1x",
+            "EV Upside": -26
         },
         {
             "Rank": 26.0,
@@ -809,10 +809,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 451.2265074037257,
             "Q1 2030": 478.7325552701281,
             "Change %": "-6.31%",
-            "Entry": 53,
-            "Total": 70,
-            "Upside": "2.1x",
-            "EV Upside": 75
+            "Entry": 43,
+            "Total": 66,
+            "Upside": "1.9x",
+            "EV Upside": 55
         },
         {
             "Rank": 87.0,
@@ -842,10 +842,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 144.35376637344953,
             "Q1 2030": 140.98698949885068,
             "Change %": "-1.84%",
-            "Entry": 12,
-            "Total": 50,
+            "Entry": 14,
+            "Total": 51,
             "Upside": "1.4x",
-            "EV Upside": 5
+            "EV Upside": 6
         },
         {
             "Rank": 82.0,
@@ -875,10 +875,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 806.9857629247502,
             "Q1 2030": 838.0512238836823,
             "Change %": "-1.31%",
-            "Entry": 14,
-            "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 10
+            "Entry": 6,
+            "Total": 49,
+            "Upside": "1.3x",
+            "EV Upside": 1
         },
         {
             "Rank": 39.0,
@@ -907,10 +907,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 193.4569583328706,
             "Q4 2029": 206.8812896135367,
             "Q1 2030": 212.8877082428141,
-            "Entry": 51,
-            "Total": 64,
-            "Upside": "2.0x",
-            "EV Upside": 46
+            "Entry": 39,
+            "Total": 59,
+            "Upside": "1.8x",
+            "EV Upside": 32
         },
         {
             "Rank": 62.0,
@@ -939,10 +939,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1137.001740890688,
             "Q4 2029": 1183.1231983805667,
             "Q1 2030": 1231.754777327935,
-            "Entry": 26,
-            "Total": 60,
-            "Upside": "1.6x",
-            "EV Upside": 32
+            "Entry": 13,
+            "Total": 54,
+            "Upside": "1.4x",
+            "EV Upside": 16
         },
         {
             "Rank": 66.0,
@@ -971,10 +971,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 78.68099555555565,
             "Q4 2029": 84.38915555555566,
             "Q1 2030": 90.73155555555553,
-            "Entry": 49,
-            "Total": 47,
-            "Upside": "2.0x",
-            "EV Upside": -11
+            "Entry": 40,
+            "Total": 43,
+            "Upside": "1.8x",
+            "EV Upside": -18
         },
         {
             "Rank": 126.0,
@@ -1005,8 +1005,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 24.134957211088356,
             "Entry": 0,
             "Total": 36,
-            "Upside": "1.1x",
-            "EV Upside": -31
+            "Upside": "0.3x",
+            "EV Upside": -79
         },
         {
             "Rank": 76.0,
@@ -1036,10 +1036,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 438.83314952519555,
             "Q1 2030": 446.7423030152801,
             "Change %": "-2.41%",
-            "Entry": 19,
-            "Total": 51,
-            "Upside": "1.5x",
-            "EV Upside": 10
+            "Entry": 11,
+            "Total": 48,
+            "Upside": "1.4x",
+            "EV Upside": 1
         },
         {
             "Rank": 93.0,
@@ -1068,10 +1068,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 218.13938438449347,
             "Q4 2029": 200.74467209950862,
             "Q1 2030": 182.66268900805466,
-            "Entry": 15,
-            "Total": 43,
-            "Upside": "1.4x",
-            "EV Upside": -11
+            "Entry": 20,
+            "Total": 45,
+            "Upside": "1.5x",
+            "EV Upside": -6
         },
         {
             "Rank": 70.0,
@@ -1100,10 +1100,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 572.9497395129932,
             "Q4 2029": 575.8265545990032,
             "Q1 2030": 575.3363740892621,
-            "Entry": 16,
-            "Total": 57,
-            "Upside": "1.5x",
-            "EV Upside": 24
+            "Entry": 13,
+            "Total": 56,
+            "Upside": "1.4x",
+            "EV Upside": 20
         },
         {
             "Rank": 61.0,
@@ -1133,10 +1133,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 285.72390282131664,
             "Q1 2030": 298.79623824451414,
             "Change %": "-14.14%",
-            "Entry": 22,
-            "Total": 65,
-            "Upside": "1.6x",
-            "EV Upside": 44
+            "Entry": 6,
+            "Total": 58,
+            "Upside": "1.3x",
+            "EV Upside": 21
         },
         {
             "Rank": 90.0,
@@ -1167,8 +1167,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1022.3856993423299,
             "Entry": 9,
             "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 8
+            "Upside": "1.3x",
+            "EV Upside": 7
         },
         {
             "Rank": 99.0,
@@ -1198,10 +1198,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 723.1898173515982,
             "Q1 2030": 741.3459999999999,
             "Change %": "-6.20%",
-            "Entry": 6,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 4
+            "Entry": 0,
+            "Total": 48,
+            "Upside": "1.2x",
+            "EV Upside": -5
         },
         {
             "Rank": 19.0,
@@ -1231,10 +1231,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 144.4800803842162,
             "Q1 2030": 149.02446122224706,
             "Change %": "-2.63%",
-            "Entry": 62,
-            "Total": 75,
-            "Upside": "2.5x",
-            "EV Upside": 107
+            "Entry": 57,
+            "Total": 73,
+            "Upside": "2.3x",
+            "EV Upside": 89
         },
         {
             "Rank": 59.0,
@@ -1263,10 +1263,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 133.06179916140204,
             "Q4 2029": 136.7224570579519,
             "Q1 2030": 139.7401721352029,
-            "Entry": 36,
-            "Total": 55,
-            "Upside": "1.8x",
-            "EV Upside": 19
+            "Entry": 22,
+            "Total": 49,
+            "Upside": "1.6x",
+            "EV Upside": 4
         },
         {
             "Rank": 75.0,
@@ -1295,10 +1295,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 297.4129652582161,
             "Q4 2029": 304.8226280373832,
             "Q1 2030": 311.682217877095,
-            "Entry": 17,
-            "Total": 54,
-            "Upside": "1.5x",
-            "EV Upside": 15
+            "Entry": 10,
+            "Total": 51,
+            "Upside": "1.4x",
+            "EV Upside": 6
         },
         {
             "Rank": 141.0,
@@ -1330,7 +1330,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 53,
             "Upside": "1.0x",
-            "EV Upside": -10
+            "EV Upside": -14
         },
         {
             "Rank": 118.0,
@@ -1362,7 +1362,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 52,
             "Upside": "1.1x",
-            "EV Upside": -1
+            "EV Upside": -4
         },
         {
             "Rank": 153.0,
@@ -1394,7 +1394,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "1.0x",
-            "EV Upside": -20
+            "EV Upside": -22
         },
         {
             "Rank": 69.0,
@@ -1424,10 +1424,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1533.1116810693236,
             "Q1 2030": 1556.9110523683785,
             "Change %": "-8.61%",
-            "Entry": 12,
-            "Total": 64,
-            "Upside": "1.4x",
-            "EV Upside": 39
+            "Entry": 3,
+            "Total": 61,
+            "Upside": "1.3x",
+            "EV Upside": 24
         },
         {
             "Rank": 63.0,
@@ -1456,10 +1456,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 243.91689538461554,
             "Q4 2029": 264.71859230769235,
             "Q1 2030": 292.9202892307691,
-            "Entry": 30,
-            "Total": 56,
-            "Upside": "1.7x",
-            "EV Upside": 23
+            "Entry": 11,
+            "Total": 48,
+            "Upside": "1.4x",
+            "EV Upside": 1
         },
         {
             "Rank": 130.0,
@@ -1490,8 +1490,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 67.88107661631007,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.1x",
-            "EV Upside": -27
+            "Upside": "1.0x",
+            "EV Upside": -31
         },
         {
             "Rank": 179.0,
@@ -1522,8 +1522,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 164.97907909088838,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -42
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 195.0,
@@ -1555,8 +1555,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%",
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.7x",
-            "EV Upside": -44
+            "Upside": "0.6x",
+            "EV Upside": -52
         },
         {
             "Rank": 3.0,
@@ -1585,10 +1585,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 214.926250262069,
             "Q4 2029": 213.4541526575343,
             "Q1 2030": 212.0020835918368,
-            "Entry": 94,
-            "Total": 81,
-            "Upside": "3.8x",
-            "EV Upside": 175
+            "Entry": 82,
+            "Total": 77,
+            "Upside": "3.3x",
+            "EV Upside": 139
         },
         {
             "Rank": 159.0,
@@ -1620,8 +1620,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%",
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.9x",
-            "EV Upside": -38
+            "Upside": "0.8x",
+            "EV Upside": -45
         },
         {
             "Rank": 88.0,
@@ -1650,10 +1650,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 174.86367662975204,
             "Q4 2029": 173.85090220772116,
             "Q1 2030": 173.25336919879226,
-            "Entry": 11,
-            "Total": 51,
+            "Entry": 12,
+            "Total": 52,
             "Upside": "1.4x",
-            "EV Upside": 7
+            "EV Upside": 9
         },
         {
             "Rank": 74.0,
@@ -1683,10 +1683,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 634.7219221961419,
             "Q1 2030": 660.0826637962174,
             "Change %": "-8.79%",
-            "Entry": 19,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 13
+            "Entry": 8,
+            "Total": 48,
+            "Upside": "1.3x",
+            "EV Upside": 0
         },
         {
             "Rank": 98.0,
@@ -1716,10 +1716,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 664.3042067330813,
             "Q1 2030": 736.4792077543858,
             "Change %": "-3.18%",
-            "Entry": 6,
-            "Total": 53,
-            "Upside": "1.3x",
-            "EV Upside": 11
+            "Entry": 0,
+            "Total": 51,
+            "Upside": "1.1x",
+            "EV Upside": -2
         },
         {
             "Rank": 51.0,
@@ -1748,10 +1748,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 917.9288200290276,
             "Q4 2029": 965.6530210181154,
             "Q1 2030": 986.7124751505926,
-            "Entry": 41,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 26
+            "Entry": 36,
+            "Total": 55,
+            "Upside": "1.8x",
+            "EV Upside": 21
         },
         {
             "Rank": 79.0,
@@ -1780,10 +1780,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1307.3096846958115,
             "Q4 2029": 1385.3312251871178,
             "Q1 2030": 1469.3544226392944,
-            "Entry": 14,
-            "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 10
+            "Entry": 7,
+            "Total": 49,
+            "Upside": "1.3x",
+            "EV Upside": 2
         },
         {
             "Rank": 102.0,
@@ -1812,10 +1812,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 13.329979771717852,
             "Q4 2029": 13.994558906679265,
             "Q1 2030": 14.710095404040096,
-            "Entry": 10,
-            "Total": 36,
-            "Upside": "1.4x",
-            "EV Upside": -28
+            "Entry": 3,
+            "Total": 33,
+            "Upside": "1.2x",
+            "EV Upside": -34
         },
         {
             "Rank": 144.0,
@@ -1847,8 +1847,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%",
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.8x",
+            "EV Upside": -45
         },
         {
             "Rank": 104.0,
@@ -1877,10 +1877,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 643.5650226012758,
             "Q4 2029": 665.1792491427376,
             "Q1 2030": 684.5424767123285,
-            "Entry": 3,
-            "Total": 47,
-            "Upside": "1.2x",
-            "EV Upside": -4
+            "Entry": 0,
+            "Total": 46,
+            "Upside": "1.1x",
+            "EV Upside": -12
         },
         {
             "Rank": 92.0,
@@ -1909,10 +1909,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 114.39984634146339,
             "Q4 2029": 120.82769477351917,
             "Q1 2030": 126.78197931034484,
-            "Entry": 13,
-            "Total": 45,
-            "Upside": "1.4x",
-            "EV Upside": -5
+            "Entry": 7,
+            "Total": 43,
+            "Upside": "1.3x",
+            "EV Upside": -12
         },
         {
             "Rank": 170.0,
@@ -1944,8 +1944,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%",
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.9x",
-            "EV Upside": -36
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 111.0,
@@ -1975,7 +1975,7 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 11.053871337506672,
             "Q1 2030": 12.541451079434069,
             "Change %": "+4.13%",
-            "Entry": 2,
+            "Entry": 3,
             "Total": 42,
             "Upside": "1.2x",
             "EV Upside": -16
@@ -2010,8 +2010,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.55%",
             "Entry": 0,
             "Total": 39,
-            "Upside": "1.2x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -34
         },
         {
             "Rank": 84.0,
@@ -2041,10 +2041,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 655.1671843837594,
             "Q1 2030": 686.2203346455362,
             "Change %": "-9.51%",
-            "Entry": 12,
-            "Total": 54,
-            "Upside": "1.4x",
-            "EV Upside": 14
+            "Entry": 0,
+            "Total": 49,
+            "Upside": "1.2x",
+            "EV Upside": -4
         },
         {
             "Rank": 100.0,
@@ -2073,10 +2073,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 385.49630878402013,
             "Q4 2029": 393.4338797479461,
             "Q1 2030": 401.9139442231076,
-            "Entry": 4,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 1
+            "Entry": 0,
+            "Total": 48,
+            "Upside": "1.2x",
+            "EV Upside": -4
         },
         {
             "Rank": 103.0,
@@ -2105,10 +2105,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 235.72619707630616,
             "Q4 2029": 246.8331649036794,
             "Q1 2030": 258.97867661298153,
-            "Entry": 8,
-            "Total": 39,
-            "Upside": "1.3x",
-            "EV Upside": -21
+            "Entry": 2,
+            "Total": 37,
+            "Upside": "1.2x",
+            "EV Upside": -26
         },
         {
             "Rank": 135.0,
@@ -2140,8 +2140,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.25%",
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.1x",
-            "EV Upside": -18
+            "Upside": "1.0x",
+            "EV Upside": -21
         },
         {
             "Rank": 209.0,
@@ -2173,8 +2173,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%",
             "Entry": 0,
             "Total": 37,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -80
         },
         {
             "Rank": 178.0,
@@ -2205,8 +2205,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 86.25087772261757,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.8x",
-            "EV Upside": -47
+            "Upside": "0.7x",
+            "EV Upside": -55
         },
         {
             "Rank": 106.0,
@@ -2235,10 +2235,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1034.6592582177168,
             "Q4 2029": 1125.5223608516042,
             "Q1 2030": 1229.4531617101816,
-            "Entry": 2,
-            "Total": 50,
-            "Upside": "1.2x",
-            "EV Upside": 1
+            "Entry": 0,
+            "Total": 49,
+            "Upside": "1.1x",
+            "EV Upside": -11
         },
         {
             "Rank": 163.0,
@@ -2270,8 +2270,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.80%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.9x",
-            "EV Upside": -36
+            "Upside": "0.8x",
+            "EV Upside": -39
         },
         {
             "Rank": 127.0,
@@ -2302,8 +2302,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 720.1348518618328,
             "Entry": 0,
             "Total": 41,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -29
         },
         {
             "Rank": 197.0,
@@ -2334,8 +2334,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 133.93597621529594,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.6x",
-            "EV Upside": -53
+            "Upside": "0.5x",
+            "EV Upside": -59
         },
         {
             "Rank": 134.0,
@@ -2366,8 +2366,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 2162311.3354161335,
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.1x",
-            "EV Upside": -18
+            "Upside": "1.0x",
+            "EV Upside": -25
         },
         {
             "Rank": 182.0,
@@ -2398,8 +2398,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 72.7209358472973,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.8x",
-            "EV Upside": -42
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 35.0,
@@ -2432,7 +2432,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 52,
             "Total": 64,
             "Upside": "2.1x",
-            "EV Upside": 51
+            "EV Upside": 49
         },
         {
             "Rank": 86.0,
@@ -2461,10 +2461,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 359.77186198862654,
             "Q4 2029": 378.7999262361481,
             "Q1 2030": 401.70570329639696,
-            "Entry": 16,
-            "Total": 47,
-            "Upside": "1.4x",
-            "EV Upside": -3
+            "Entry": 9,
+            "Total": 44,
+            "Upside": "1.3x",
+            "EV Upside": -10
         },
         {
             "Rank": 154.0,
@@ -2495,8 +2495,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 190.08608680935714,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -30
+            "Upside": "0.9x",
+            "EV Upside": -36
         },
         {
             "Rank": 78.0,
@@ -2525,10 +2525,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9205.073180936171,
             "Q4 2029": 9728.289745164355,
             "Q1 2030": 10283.473398251572,
-            "Entry": 17,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 13
+            "Entry": 3,
+            "Total": 47,
+            "Upside": "1.3x",
+            "EV Upside": -3
         },
         {
             "Rank": 228.0,
@@ -2591,8 +2591,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 455.60516723505975,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.6x",
-            "EV Upside": -59
+            "Upside": "0.5x",
+            "EV Upside": -62
         },
         {
             "Rank": 181.0,
@@ -2623,8 +2623,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 129.62794928443856,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -43
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 220.0,
@@ -2656,7 +2656,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
-            "EV Upside": -72
+            "EV Upside": -74
         },
         {
             "Rank": 160.0,
@@ -2687,8 +2687,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 237.8095029223857,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.9x",
-            "EV Upside": -37
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 177.0,
@@ -2720,8 +2720,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.8x",
-            "EV Upside": -43
+            "Upside": "0.7x",
+            "EV Upside": -49
         },
         {
             "Rank": 237.0,
@@ -2753,7 +2753,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.2x",
-            "EV Upside": -86
+            "EV Upside": -87
         },
         {
             "Rank": 77.0,
@@ -2783,10 +2783,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 11.311850000000002,
             "Q1 2030": 12.091935483870966,
             "Change %": "-9.54%",
-            "Entry": 25,
-            "Total": 46,
-            "Upside": "1.6x",
-            "EV Upside": -4
+            "Entry": 2,
+            "Total": 37,
+            "Upside": "1.2x",
+            "EV Upside": -26
         },
         {
             "Rank": 218.0,
@@ -2817,8 +2817,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 222.5544534670449,
             "Entry": 0,
             "Total": 48,
-            "Upside": "0.5x",
-            "EV Upside": -62
+            "Upside": "0.4x",
+            "EV Upside": -65
         },
         {
             "Rank": 185.0,
@@ -2850,7 +2850,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.7x",
-            "EV Upside": -46
+            "EV Upside": -51
         },
         {
             "Rank": 176.0,
@@ -2881,8 +2881,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 138.5714139070219,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.8x",
-            "EV Upside": -44
+            "Upside": "0.7x",
+            "EV Upside": -49
         },
         {
             "Rank": 225.0,
@@ -2914,7 +2914,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
-            "EV Upside": -73
+            "EV Upside": -74
         },
         {
             "Rank": 236.0,
@@ -2946,7 +2946,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.2x",
-            "EV Upside": -86
+            "EV Upside": -88
         },
         {
             "Rank": 238.0,
@@ -2977,8 +2977,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 190.3867814495656,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.2x",
-            "EV Upside": -86
+            "Upside": "0.1x",
+            "EV Upside": -89
         },
         {
             "Rank": 199.0,
@@ -3011,7 +3011,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.6x",
-            "EV Upside": -51
+            "EV Upside": -57
         },
         {
             "Rank": 187.0,
@@ -3042,8 +3042,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 66.4868700565173,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.7x",
-            "EV Upside": -54
+            "Upside": "0.6x",
+            "EV Upside": -58
         },
         {
             "Rank": 234.0,
@@ -3075,7 +3075,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "0.3x",
-            "EV Upside": -75
+            "EV Upside": -78
         },
         {
             "Rank": 169.0,
@@ -3107,7 +3107,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 32,
             "Upside": "0.8x",
-            "EV Upside": -57
+            "EV Upside": -58
         },
         {
             "Rank": 46.0,
@@ -3136,10 +3136,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 16.17992046444122,
             "Q4 2029": 17.042213256484153,
             "Q1 2030": 17.936559656652364,
-            "Entry": 51,
-            "Total": 58,
-            "Upside": "2.0x",
-            "EV Upside": 27
+            "Entry": 38,
+            "Total": 53,
+            "Upside": "1.8x",
+            "EV Upside": 13
         },
         {
             "Rank": 230.0,
@@ -3170,8 +3170,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 41.622535945110535,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.3x",
-            "EV Upside": -83
+            "Upside": "0.2x",
+            "EV Upside": -85
         },
         {
             "Rank": 202.0,
@@ -3202,8 +3202,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 22.466028993346832,
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.5x",
-            "EV Upside": -64
+            "Upside": "0.6x",
+            "EV Upside": -62
         },
         {
             "Rank": 129.0,
@@ -3234,8 +3234,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 311.6694158115004,
             "Entry": 0,
             "Total": 41,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -30
         },
         {
             "Rank": 233.0,
@@ -3267,8 +3267,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.82%",
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.3x",
-            "EV Upside": -80
+            "Upside": "0.2x",
+            "EV Upside": -84
         },
         {
             "Rank": 249.0,
@@ -3300,8 +3300,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "-0.5x",
-            "EV Upside": -133
+            "Upside": "-0.6x",
+            "EV Upside": -142
         },
         {
             "Rank": 242.0,
@@ -3333,7 +3333,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 31,
             "Upside": "-0.2x",
-            "EV Upside": -111
+            "EV Upside": -113
         },
         {
             "Rank": 222.0,
@@ -3365,7 +3365,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.4x",
-            "EV Upside": -69
+            "EV Upside": -73
         },
         {
             "Rank": 241.0,
@@ -3397,7 +3397,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 34,
             "Upside": "-0.1x",
-            "EV Upside": -105
+            "EV Upside": -108
         },
         {
             "Rank": "",
@@ -3429,8 +3429,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.36%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "-0.2x",
-            "EV Upside": -117
+            "Upside": "-0.3x",
+            "EV Upside": -119
         },
         {
             "Rank": 248.0,
@@ -3461,8 +3461,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 63.77426651019195,
             "Entry": 0,
             "Total": 35,
-            "Upside": "-0.7x",
-            "EV Upside": -140
+            "Upside": "-0.9x",
+            "EV Upside": -154
         },
         {
             "Rank": 247.0,
@@ -3493,8 +3493,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 11.506333006210495,
             "Entry": 0,
             "Total": 36,
-            "Upside": "-0.5x",
-            "EV Upside": -131
+            "Upside": "-0.6x",
+            "EV Upside": -135
         },
         {
             "Rank": 24.0,
@@ -3523,10 +3523,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 436.1306753006475,
             "Q4 2029": 409.1930728323699,
             "Q1 2030": 377.97503467406375,
-            "Entry": 60,
+            "Entry": 59,
             "Total": 64,
             "Upside": "2.4x",
-            "EV Upside": 61
+            "EV Upside": 58
         },
         {
             "Rank": 232.0,
@@ -3557,8 +3557,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 9.00181488203267,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.3x",
-            "EV Upside": -82
+            "Upside": "0.1x",
+            "EV Upside": -90
         },
         {
             "Rank": 21.0,
@@ -3587,10 +3587,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 119.61646451612906,
             "Q4 2029": 122.82929169349644,
             "Q1 2030": 126.16452442159384,
-            "Entry": 68,
-            "Total": 67,
-            "Upside": "2.7x",
-            "EV Upside": 82
+            "Entry": 64,
+            "Total": 66,
+            "Upside": "2.6x",
+            "EV Upside": 72
         },
         {
             "Rank": 33.0,
@@ -3619,10 +3619,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 441.6072591587516,
             "Q4 2029": 443.8181262729123,
             "Q1 2030": 446.7173913043478,
-            "Entry": 54,
-            "Total": 64,
-            "Upside": "2.2x",
-            "EV Upside": 52
+            "Entry": 53,
+            "Total": 63,
+            "Upside": "2.1x",
+            "EV Upside": 48
         },
         {
             "Rank": 16.0,
@@ -3651,10 +3651,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 31.34514484356895,
             "Q4 2029": 32.67824074074075,
             "Q1 2030": 33.906936416184976,
-            "Entry": 74,
-            "Total": 72,
-            "Upside": "3.0x",
-            "EV Upside": 108
+            "Entry": 70,
+            "Total": 70,
+            "Upside": "2.8x",
+            "EV Upside": 97
         },
         {
             "Rank": 37.0,
@@ -3683,10 +3683,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 42.75067209775967,
             "Q4 2029": 44.047022900763345,
             "Q1 2030": 45.42217700915564,
-            "Entry": 51,
-            "Total": 64,
+            "Entry": 48,
+            "Total": 63,
             "Upside": "2.0x",
-            "EV Upside": 49
+            "EV Upside": 43
         },
         {
             "Rank": 55.0,
@@ -3715,10 +3715,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 64.35065590404369,
             "Q4 2029": 67.37650085803845,
             "Q1 2030": 71.01986519039953,
-            "Entry": 39,
-            "Total": 56,
-            "Upside": "1.8x",
-            "EV Upside": 22
+            "Entry": 32,
+            "Total": 53,
+            "Upside": "1.7x",
+            "EV Upside": 14
         },
         {
             "Rank": 145.0,
@@ -3749,8 +3749,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 69.28151583410626,
             "Entry": 0,
             "Total": 35,
-            "Upside": "1.0x",
-            "EV Upside": -41
+            "Upside": "0.9x",
+            "EV Upside": -48
         },
         {
             "Rank": 201.0,
@@ -3782,7 +3782,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 48,
             "Upside": "0.6x",
-            "EV Upside": -50
+            "EV Upside": -53
         },
         {
             "Rank": 67.0,
@@ -3811,10 +3811,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 564.4351912985588,
             "Q4 2029": 588.7293629032258,
             "Q1 2030": 614.4473387601753,
-            "Entry": 22,
-            "Total": 56,
-            "Upside": "1.6x",
-            "EV Upside": 21
+            "Entry": 17,
+            "Total": 54,
+            "Upside": "1.5x",
+            "EV Upside": 15
         },
         {
             "Rank": 68.0,
@@ -3843,10 +3843,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1804.2725892933008,
             "Q4 2029": 1885.1525092722104,
             "Q1 2030": 1973.023938890774,
-            "Entry": 20,
-            "Total": 55,
-            "Upside": "1.5x",
-            "EV Upside": 18
+            "Entry": 14,
+            "Total": 52,
+            "Upside": "1.4x",
+            "EV Upside": 11
         },
         {
             "Rank": 40.0,
@@ -3875,10 +3875,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1207.4341727598633,
             "Q4 2029": 1262.0870922623471,
             "Q1 2030": 1321.4354965868276,
-            "Entry": 46,
-            "Total": 65,
-            "Upside": "1.9x",
-            "EV Upside": 49
+            "Entry": 39,
+            "Total": 62,
+            "Upside": "1.8x",
+            "EV Upside": 41
         },
         {
             "Rank": 115.0,
@@ -3909,8 +3909,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 427.34435806889394,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.2x",
-            "EV Upside": -10
+            "Upside": "1.1x",
+            "EV Upside": -16
         },
         {
             "Rank": 71.0,
@@ -3939,10 +3939,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1176.143885775345,
             "Q4 2029": 1231.6520532540012,
             "Q1 2030": 1283.371236508697,
-            "Entry": 20,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 14
+            "Entry": 8,
+            "Total": 48,
+            "Upside": "1.3x",
+            "EV Upside": 0
         },
         {
             "Rank": 34.0,
@@ -3971,10 +3971,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 458.1481905452359,
             "Q4 2029": 482.83478306705257,
             "Q1 2030": 509.27417684843,
-            "Entry": 50,
-            "Total": 68,
-            "Upside": "2.0x",
-            "EV Upside": 60
+            "Entry": 36,
+            "Total": 62,
+            "Upside": "1.8x",
+            "EV Upside": 42
         },
         {
             "Rank": 105.0,
@@ -4003,10 +4003,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1296.4859772034688,
             "Q4 2029": 1334.892345366054,
             "Q1 2030": 1376.2520458869717,
-            "Entry": 4,
-            "Total": 45,
-            "Upside": "1.3x",
-            "EV Upside": -9
+            "Entry": 0,
+            "Total": 43,
+            "Upside": "1.2x",
+            "EV Upside": -13
         },
         {
             "Rank": 89.0,
@@ -4035,10 +4035,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 703.9178990488699,
             "Q4 2029": 721.7339585337505,
             "Q1 2030": 740.920274444979,
-            "Entry": 13,
-            "Total": 47,
-            "Upside": "1.4x",
-            "EV Upside": -2
+            "Entry": 9,
+            "Total": 46,
+            "Upside": "1.3x",
+            "EV Upside": -6
         },
         {
             "Rank": 44.0,
@@ -4067,10 +4067,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 270.62305471339783,
             "Q4 2029": 276.49138231635027,
             "Q1 2030": 279.7944451257983,
-            "Entry": 48,
-            "Total": 60,
-            "Upside": "2.0x",
-            "EV Upside": 34
+            "Entry": 40,
+            "Total": 57,
+            "Upside": "1.8x",
+            "EV Upside": 25
         },
         {
             "Rank": 221.0,
@@ -4102,7 +4102,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "0.3x",
-            "EV Upside": -77
+            "EV Upside": -79
         },
         {
             "Rank": 45.0,
@@ -4131,10 +4131,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 160.14337735538047,
             "Q4 2029": 165.11596617340473,
             "Q1 2030": 169.27058117326817,
-            "Entry": 47,
-            "Total": 60,
-            "Upside": "2.0x",
-            "EV Upside": 33
+            "Entry": 43,
+            "Total": 58,
+            "Upside": "1.9x",
+            "EV Upside": 28
         },
         {
             "Rank": 48.0,
@@ -4163,10 +4163,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 322.5479584956078,
             "Q4 2029": 339.6602938592121,
             "Q1 2030": 358.81236215702194,
-            "Entry": 50,
-            "Total": 58,
-            "Upside": "2.0x",
-            "EV Upside": 26
+            "Entry": 41,
+            "Total": 54,
+            "Upside": "1.9x",
+            "EV Upside": 17
         },
         {
             "Rank": 60.0,
@@ -4195,10 +4195,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 931.2737108884636,
             "Q4 2029": 951.1618673396927,
             "Q1 2030": 971.0547042993705,
-            "Entry": 39,
-            "Total": 53,
+            "Entry": 36,
+            "Total": 52,
             "Upside": "1.8x",
-            "EV Upside": 13
+            "EV Upside": 10
         },
         {
             "Rank": 42.0,
@@ -4227,10 +4227,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 462.7737687392864,
             "Q4 2029": 474.3163706934556,
             "Q1 2030": 483.59298091413507,
-            "Entry": 50,
-            "Total": 62,
-            "Upside": "2.0x",
-            "EV Upside": 40
+            "Entry": 33,
+            "Total": 55,
+            "Upside": "1.7x",
+            "EV Upside": 21
         },
         {
             "Rank": 189.0,
@@ -4262,7 +4262,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.7x",
-            "EV Upside": -47
+            "EV Upside": -51
         },
         {
             "Rank": 22.0,
@@ -4291,10 +4291,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 34887.77181400496,
             "Q4 2029": 35607.35030361295,
             "Q1 2030": 36355.10316797495,
-            "Entry": 60,
-            "Total": 70,
-            "Upside": "2.4x",
-            "EV Upside": 84
+            "Entry": 58,
+            "Total": 69,
+            "Upside": "2.3x",
+            "EV Upside": 79
         },
         {
             "Rank": 122.0,
@@ -4326,7 +4326,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "1.1x",
-            "EV Upside": -7
+            "EV Upside": -12
         },
         {
             "Rank": 138.0,
@@ -4357,8 +4357,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 11392.691385810589,
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.0x",
-            "EV Upside": -19
+            "Upside": "0.9x",
+            "EV Upside": -27
         },
         {
             "Rank": 57.0,
@@ -4387,10 +4387,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 820.853452517289,
             "Q4 2029": 836.7107041163996,
             "Q1 2030": 855.3220660853248,
-            "Entry": 32,
-            "Total": 58,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 24,
+            "Total": 55,
+            "Upside": "1.6x",
+            "EV Upside": 19
         },
         {
             "Rank": 213.0,
@@ -4451,10 +4451,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 234.04646909007727,
             "Q4 2029": 235.19566930608798,
             "Q1 2030": 234.57328963189786,
-            "Entry": 28,
-            "Total": 56,
-            "Upside": "1.7x",
-            "EV Upside": 24
+            "Entry": 15,
+            "Total": 51,
+            "Upside": "1.4x",
+            "EV Upside": 8
         },
         {
             "Rank": 109.0,
@@ -4483,10 +4483,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 5719.265734355814,
             "Q4 2029": 5838.565351306668,
             "Q1 2030": 5962.731463067265,
-            "Entry": 1,
+            "Entry": 0,
             "Total": 47,
             "Upside": "1.2x",
-            "EV Upside": -5
+            "EV Upside": -10
         },
         {
             "Rank": 133.0,
@@ -4517,8 +4517,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3826.447513950599,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.1x",
-            "EV Upside": -20
+            "Upside": "1.0x",
+            "EV Upside": -23
         },
         {
             "Rank": 123.0,
@@ -4550,7 +4550,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "1.1x",
-            "EV Upside": -13
+            "EV Upside": -19
         },
         {
             "Rank": 83.0,
@@ -4579,10 +4579,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 3276.9754336512065,
             "Q4 2029": 3313.834480537636,
             "Q1 2030": 3346.172193168981,
-            "Entry": 15,
-            "Total": 49,
-            "Upside": "1.4x",
-            "EV Upside": 4
+            "Entry": 7,
+            "Total": 46,
+            "Upside": "1.3x",
+            "EV Upside": -5
         },
         {
             "Rank": 219.0,
@@ -4613,8 +4613,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 103.4210981320896,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -77
         },
         {
             "Rank": 50.0,
@@ -4643,10 +4643,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 109.20271963218424,
             "Q4 2029": 111.95164685800438,
             "Q1 2030": 115.04531825373903,
-            "Entry": 44,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 24
+            "Entry": 39,
+            "Total": 55,
+            "Upside": "1.8x",
+            "EV Upside": 19
         },
         {
             "Rank": 23.0,
@@ -4675,10 +4675,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 759.8677584640895,
             "Q4 2029": 781.8295997996382,
             "Q1 2030": 796.4722005633655,
-            "Entry": 60,
-            "Total": 66,
-            "Upside": "2.4x",
-            "EV Upside": 69
+            "Entry": 57,
+            "Total": 65,
+            "Upside": "2.3x",
+            "EV Upside": 61
         },
         {
             "Rank": 171.0,
@@ -4710,7 +4710,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 39,
             "Upside": "0.8x",
-            "EV Upside": -47
+            "EV Upside": -50
         },
         {
             "Rank": 196.0,
@@ -4741,8 +4741,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 127.02638717632553,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.7x",
-            "EV Upside": -51
+            "Upside": "0.6x",
+            "EV Upside": -54
         },
         {
             "Rank": 28.0,
@@ -4771,10 +4771,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23377.192715321853,
             "Q4 2029": 23730.683702696577,
             "Q1 2030": 24082.961055731765,
-            "Entry": 55,
-            "Total": 67,
-            "Upside": "2.2x",
-            "EV Upside": 65
+            "Entry": 53,
+            "Total": 66,
+            "Upside": "2.1x",
+            "EV Upside": 59
         },
         {
             "Rank": 41.0,
@@ -4803,10 +4803,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 522.0010976762296,
             "Q4 2029": 523.3659305437099,
             "Q1 2030": 525.1421074055803,
-            "Entry": 50,
-            "Total": 63,
-            "Upside": "2.0x",
-            "EV Upside": 44
+            "Entry": 41,
+            "Total": 60,
+            "Upside": "1.9x",
+            "EV Upside": 33
         },
         {
             "Rank": 168.0,
@@ -4837,8 +4837,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 569.160235104889,
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.9x",
-            "EV Upside": -33
+            "Upside": "0.8x",
+            "EV Upside": -36
         },
         {
             "Rank": 193.0,
@@ -4869,8 +4869,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 798.5476649783479,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.7x",
-            "EV Upside": -51
+            "Upside": "0.6x",
+            "EV Upside": -55
         },
         {
             "Rank": 172.0,
@@ -4902,7 +4902,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.8x",
-            "EV Upside": -35
+            "EV Upside": -37
         },
         {
             "Rank": 80.0,
@@ -4931,10 +4931,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 8184.583118948462,
             "Q4 2029": 8508.02350857794,
             "Q1 2030": 8799.559540320686,
-            "Entry": 16,
-            "Total": 50,
-            "Upside": "1.5x",
-            "EV Upside": 6
+            "Entry": 8,
+            "Total": 47,
+            "Upside": "1.3x",
+            "EV Upside": -4
         },
         {
             "Rank": 198.0,
@@ -4966,7 +4966,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.6x",
-            "EV Upside": -56
+            "EV Upside": -58
         },
         {
             "Rank": 240.0,
@@ -5029,8 +5029,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 21.078339380575205,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.1x",
-            "EV Upside": -95
+            "Upside": "0.0x",
+            "EV Upside": -100
         },
         {
             "Rank": 132.0,
@@ -5061,8 +5061,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3158.8708455614924,
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.1x",
-            "EV Upside": -25
+            "Upside": "1.0x",
+            "EV Upside": -29
         },
         {
             "Rank": 166.0,
@@ -5093,8 +5093,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 19.99713055520602,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.9x",
-            "EV Upside": -39
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 203.0,
@@ -5125,8 +5125,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 166.3482526612978,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.6x",
-            "EV Upside": -59
+            "Upside": "0.5x",
+            "EV Upside": -65
         },
         {
             "Rank": 97.0,
@@ -5155,10 +5155,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 6138.483060136976,
             "Q4 2029": 6214.906828426299,
             "Q1 2030": 6273.171164125234,
-            "Entry": 9,
-            "Total": 49,
+            "Entry": 4,
+            "Total": 47,
             "Upside": "1.3x",
-            "EV Upside": 1
+            "EV Upside": -5
         },
         {
             "Rank": 49.0,
@@ -5187,10 +5187,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9154.84071229778,
             "Q4 2029": 9348.987629741525,
             "Q1 2030": 9542.987788363904,
-            "Entry": 43,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 27
+            "Entry": 39,
+            "Total": 56,
+            "Upside": "1.8x",
+            "EV Upside": 22
         },
         {
             "Rank": 142.0,
@@ -5222,7 +5222,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "1.0x",
-            "EV Upside": -22
+            "EV Upside": -26
         },
         {
             "Rank": 136.0,
@@ -5254,7 +5254,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -30
         },
         {
             "Rank": 124.0,
@@ -5286,7 +5286,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "1.1x",
-            "EV Upside": -23
+            "EV Upside": -27
         },
         {
             "Rank": 229.0,
@@ -5317,8 +5317,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 150.45145359739678,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.3x",
-            "EV Upside": -77
+            "Upside": "0.2x",
+            "EV Upside": -86
         },
         {
             "Rank": 151.0,
@@ -5349,8 +5349,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 15545.739962919935,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.9x",
+            "EV Upside": -33
         },
         {
             "Rank": 183.0,
@@ -5381,8 +5381,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 390.7282735129242,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -45
+            "Upside": "0.7x",
+            "EV Upside": -48
         },
         {
             "Rank": 155.0,
@@ -5413,8 +5413,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 224.25924441666172,
             "Entry": 0,
             "Total": 37,
-            "Upside": "1.0x",
-            "EV Upside": -40
+            "Upside": "0.9x",
+            "EV Upside": -44
         },
         {
             "Rank": 164.0,
@@ -5445,8 +5445,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 75.09091430728577,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.9x",
-            "EV Upside": -37
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 121.0,
@@ -5477,8 +5477,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 5436.051350399321,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.2x",
-            "EV Upside": -22
+            "Upside": "1.1x",
+            "EV Upside": -26
         },
         {
             "Rank": 214.0,
@@ -5509,8 +5509,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3251.229977240649,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.5x",
-            "EV Upside": -67
+            "Upside": "0.4x",
+            "EV Upside": -69
         },
         {
             "Rank": 226.0,
@@ -5541,8 +5541,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 28448.443724661432,
             "Entry": 0,
             "Total": 36,
-            "Upside": "0.2x",
-            "EV Upside": -87
+            "Upside": "0.1x",
+            "EV Upside": -93
         },
         {
             "Rank": 200.0,
@@ -5574,7 +5574,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.6x",
-            "EV Upside": -57
+            "EV Upside": -59
         },
         {
             "Rank": 162.0,
@@ -5606,7 +5606,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "0.9x",
-            "EV Upside": -40
+            "EV Upside": -41
         },
         {
             "Rank": 190.0,
@@ -5637,8 +5637,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 20.7266399820156,
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.7x",
-            "EV Upside": -53
+            "Upside": "0.6x",
+            "EV Upside": -61
         },
         {
             "Rank": 224.0,
@@ -5669,8 +5669,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 30.868650720056607,
             "Entry": 0,
             "Total": 37,
-            "Upside": "0.3x",
-            "EV Upside": -83
+            "Upside": "0.1x",
+            "EV Upside": -91
         },
         {
             "Rank": 52.0,
@@ -5699,10 +5699,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 7425.218105783216,
             "Q4 2029": 7428.22384965637,
             "Q1 2030": 7437.618100218753,
-            "Entry": 43,
-            "Total": 56,
-            "Upside": "1.9x",
-            "EV Upside": 22
+            "Entry": 35,
+            "Total": 53,
+            "Upside": "1.8x",
+            "EV Upside": 15
         },
         {
             "Rank": 231.0,
@@ -5734,7 +5734,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.3x",
-            "EV Upside": -74
+            "EV Upside": -78
         },
         {
             "Rank": 110.0,
@@ -5763,10 +5763,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 19.065241515310877,
             "Q4 2029": 19.591349516225417,
             "Q1 2030": 20.252599677747156,
-            "Entry": 4,
-            "Total": 41,
-            "Upside": "1.3x",
-            "EV Upside": -18
+            "Entry": 0,
+            "Total": 39,
+            "Upside": "1.2x",
+            "EV Upside": -24
         },
         {
             "Rank": 119.0,
@@ -5797,8 +5797,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3277.3845892786476,
             "Entry": 0,
             "Total": 46,
-            "Upside": "1.2x",
-            "EV Upside": -11
+            "Upside": "1.1x",
+            "EV Upside": -15
         },
         {
             "Rank": 146.0,
@@ -5830,7 +5830,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "1.0x",
-            "EV Upside": -33
+            "EV Upside": -32
         },
         {
             "Rank": 211.0,
@@ -5861,8 +5861,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 32.00757265321985,
             "Entry": 0,
             "Total": 38,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -79
         },
         {
             "Rank": 156.0,
@@ -5893,8 +5893,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 528.5305026879038,
             "Entry": 0,
             "Total": 44,
-            "Upside": "1.0x",
-            "EV Upside": -30
+            "Upside": "0.9x",
+            "EV Upside": -34
         },
         {
             "Rank": 174.0,
@@ -5926,7 +5926,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.8x",
-            "EV Upside": -35
+            "EV Upside": -38
         },
         {
             "Rank": 175.0,
@@ -5958,7 +5958,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.8x",
-            "EV Upside": -40
+            "EV Upside": -43
         },
         {
             "Rank": 239.0,
@@ -5990,7 +5990,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 38,
             "Upside": "0.0x",
-            "EV Upside": -98
+            "EV Upside": -100
         },
         {
             "Rank": 216.0,
@@ -6021,8 +6021,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3724.926012022445,
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.5x",
-            "EV Upside": -65
+            "Upside": "0.4x",
+            "EV Upside": -67
         },
         {
             "Rank": 243.0,
@@ -6083,10 +6083,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 389.01799474345455,
             "Q4 2029": 397.1911879337694,
             "Q1 2030": 398.0228069847239,
-            "Entry": 37,
-            "Total": 59,
-            "Upside": "1.8x",
-            "EV Upside": 30
+            "Entry": 28,
+            "Total": 55,
+            "Upside": "1.6x",
+            "EV Upside": 20
         },
         {
             "Rank": 85.0,
@@ -6115,10 +6115,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 182.46891383860697,
             "Q4 2029": 189.41152110891184,
             "Q1 2030": 196.52644339227376,
-            "Entry": 15,
-            "Total": 48,
-            "Upside": "1.4x",
-            "EV Upside": 0
+            "Entry": 8,
+            "Total": 45,
+            "Upside": "1.3x",
+            "EV Upside": -7
         },
         {
             "Rank": 212.0,
@@ -6179,10 +6179,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.28940384635283,
             "Q4 2029": 194.49890701775027,
             "Q1 2030": 202.86185516080616,
-            "Entry": 9,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 3
+            "Entry": 1,
+            "Total": 47,
+            "Upside": "1.2x",
+            "EV Upside": -6
         },
         {
             "Rank": 152.0,
@@ -6214,7 +6214,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 38,
             "Upside": "1.0x",
-            "EV Upside": -38
+            "EV Upside": -39
         },
         {
             "Rank": 139.0,
@@ -6246,7 +6246,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -28
         },
         {
             "Rank": 205.0,
@@ -6278,7 +6278,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.5x",
-            "EV Upside": -65
+            "EV Upside": -66
         },
         {
             "Rank": 210.0,
@@ -6310,7 +6310,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.5x",
-            "EV Upside": -60
+            "EV Upside": -63
         },
         {
             "Rank": 150.0,
@@ -6342,7 +6342,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -28
+            "EV Upside": -30
         },
         {
             "Rank": 215.0,
@@ -6373,8 +6373,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 217.1092484744303,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.5x",
-            "EV Upside": -67
+            "Upside": "0.4x",
+            "EV Upside": -70
         },
         {
             "Rank": 72.0,
@@ -6403,10 +6403,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 330.25797243401763,
             "Q4 2029": 339.66126201641276,
             "Q1 2030": 349.8122612770943,
-            "Entry": 25,
-            "Total": 49,
-            "Upside": "1.6x",
-            "EV Upside": 4
+            "Entry": 20,
+            "Total": 47,
+            "Upside": "1.5x",
+            "EV Upside": -1
         },
         {
             "Rank": 191.0,
@@ -6438,7 +6438,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.7x",
-            "EV Upside": -49
+            "EV Upside": -51
         },
         {
             "Rank": 161.0,
@@ -6470,7 +6470,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.9x",
-            "EV Upside": -32
+            "EV Upside": -35
         },
         {
             "Rank": 94.0,
@@ -6499,10 +6499,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 813.0385716213905,
             "Q4 2029": 834.807900639929,
             "Q1 2030": 856.4242381665337,
-            "Entry": 8,
-            "Total": 53,
-            "Upside": "1.3x",
-            "EV Upside": 10
+            "Entry": 2,
+            "Total": 51,
+            "Upside": "1.2x",
+            "EV Upside": 3
         },
         {
             "Rank": 245.0,
@@ -6533,8 +6533,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 96.85927975813499,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.1x",
-            "EV Upside": -96
+            "Upside": "0.0x",
+            "EV Upside": -99
         },
         {
             "Rank": 38.0,
@@ -6563,10 +6563,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9882.315774592375,
             "Q4 2029": 10311.379000673722,
             "Q1 2030": 10750.25695850495,
-            "Entry": 53,
-            "Total": 60,
-            "Upside": "2.1x",
-            "EV Upside": 39
+            "Entry": 51,
+            "Total": 59,
+            "Upside": "2.0x",
+            "EV Upside": 31
         },
         {
             "Rank": 73.0,
@@ -6595,10 +6595,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 4880.088070829452,
             "Q4 2029": 5016.126354607664,
             "Q1 2030": 5152.150150429991,
-            "Entry": 18,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 15
+            "Entry": 14,
+            "Total": 52,
+            "Upside": "1.4x",
+            "EV Upside": 10
         },
         {
             "Rank": 217.0,
@@ -6630,7 +6630,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.4x",
-            "EV Upside": -69
+            "EV Upside": -68
         },
         {
             "Rank": 157.0,
@@ -6661,8 +6661,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 2238.6130498383764,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.9x",
+            "EV Upside": -34
         },
         {
             "Rank": 54.0,
@@ -6691,10 +6691,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 44023.593057027945,
             "Q4 2029": 46020.11140168872,
             "Q1 2030": 48134.63162974179,
-            "Entry": 34,
-            "Total": 60,
-            "Upside": "1.7x",
-            "EV Upside": 34
+            "Entry": 27,
+            "Total": 57,
+            "Upside": "1.6x",
+            "EV Upside": 26
         },
         {
             "Rank": 143.0,
@@ -6725,8 +6725,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1206838.5134679615,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.0x",
-            "EV Upside": -32
+            "Upside": "0.9x",
+            "EV Upside": -42
         },
         {
             "Rank": 192.0,
@@ -6758,7 +6758,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.7x",
-            "EV Upside": -43
+            "EV Upside": -46
         },
         {
             "Rank": 173.0,
@@ -6790,7 +6790,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 42,
             "Upside": "0.8x",
-            "EV Upside": -43
+            "EV Upside": -46
         },
         {
             "Rank": 91.0,
@@ -6819,10 +6819,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9148.802893593345,
             "Q4 2029": 9627.477515614219,
             "Q1 2030": 10126.394482138927,
-            "Entry": 9,
-            "Total": 52,
-            "Upside": "1.3x",
-            "EV Upside": 8
+            "Entry": 3,
+            "Total": 49,
+            "Upside": "1.2x",
+            "EV Upside": 0
         },
         {
             "Rank": 167.0,
@@ -6853,8 +6853,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 52605.649295414565,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.9x",
-            "EV Upside": -34
+            "Upside": "0.8x",
+            "EV Upside": -40
         },
         {
             "Rank": 58.0,
@@ -6883,10 +6883,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 11939.821176707468,
             "Q4 2029": 12493.376440775062,
             "Q1 2030": 13065.10745945006,
-            "Entry": 31,
-            "Total": 57,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 23,
+            "Total": 54,
+            "Upside": "1.6x",
+            "EV Upside": 18
         },
         {
             "Rank": 137.0,
@@ -6918,7 +6918,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -24
+            "EV Upside": -27
         },
         {
             "Rank": 180.0,
@@ -6949,8 +6949,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 74.51601426414275,
             "Entry": 0,
             "Total": 38,
-            "Upside": "0.8x",
-            "EV Upside": -53
+            "Upside": "0.7x",
+            "EV Upside": -57
         },
         {
             "Rank": 140.0,
@@ -6982,7 +6982,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -30
         },
         {
             "Rank": 184.0,
@@ -7014,7 +7014,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 42,
             "Upside": "0.7x",
-            "EV Upside": -49
+            "EV Upside": -53
         },
         {
             "Rank": 56.0,
@@ -7043,10 +7043,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 223.9611003694687,
             "Q4 2029": 229.49102977449542,
             "Q1 2030": 236.18669368603247,
-            "Entry": 34,
-            "Total": 57,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 26,
+            "Total": 54,
+            "Upside": "1.6x",
+            "EV Upside": 18
         },
         {
             "Rank": 108.0,
@@ -7075,10 +7075,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 862.7380402582999,
             "Q4 2029": 886.4864584893545,
             "Q1 2030": 912.1950594766279,
-            "Entry": 2,
-            "Total": 46,
+            "Entry": 0,
+            "Total": 45,
             "Upside": "1.2x",
-            "EV Upside": -7
+            "EV Upside": -11
         },
         {
             "Rank": 188.0,
@@ -7110,7 +7110,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.7x",
-            "EV Upside": -42
+            "EV Upside": -45
         },
         {
             "Rank": 148.0,
@@ -7141,8 +7141,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 531.4700642787706,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -28
+            "Upside": "0.9x",
+            "EV Upside": -33
         },
         {
             "Rank": 107.0,
@@ -7171,10 +7171,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 49.06908892135452,
             "Q4 2029": 51.418970920349636,
             "Q1 2030": 53.77012715357276,
-            "Entry": 3,
-            "Total": 44,
-            "Upside": "1.3x",
-            "EV Upside": -10
+            "Entry": 0,
+            "Total": 43,
+            "Upside": "1.2x",
+            "EV Upside": -15
         },
         {
             "Rank": 101.0,
@@ -7203,10 +7203,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 333.2773490875912,
             "Q4 2029": 347.39638116244106,
             "Q1 2030": 361.50245094508665,
-            "Entry": 4,
-            "Total": 47,
-            "Upside": "1.3x",
-            "EV Upside": -5
+            "Entry": 0,
+            "Total": 45,
+            "Upside": "1.2x",
+            "EV Upside": -14
         },
         {
             "Rank": 114.0,
@@ -7237,8 +7237,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1821.6688821616015,
             "Entry": 0,
             "Total": 44,
-            "Upside": "1.2x",
-            "EV Upside": -12
+            "Upside": "1.1x",
+            "EV Upside": -18
         },
         {
             "Rank": 27.0,
@@ -7267,10 +7267,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 100.7278302730736,
             "Q4 2029": 103.61449999856589,
             "Q1 2030": 106.50305289904543,
-            "Entry": 59,
-            "Total": 64,
-            "Upside": "2.4x",
-            "EV Upside": 58
+            "Entry": 57,
+            "Total": 63,
+            "Upside": "2.3x",
+            "EV Upside": 53
         },
         {
             "Rank": 223.0,
@@ -7302,7 +7302,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.3x",
-            "EV Upside": -77
+            "EV Upside": -79
         },
         {
             "Rank": 206.0,
@@ -7333,8 +7333,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 51.44531021454613,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.5x",
-            "EV Upside": -69
+            "Upside": "0.4x",
+            "EV Upside": -73
         },
         {
             "Rank": 208.0,
@@ -7365,8 +7365,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 201.95356304224242,
             "Entry": 0,
             "Total": 29,
-            "Upside": "0.2x",
-            "EV Upside": -88
+            "Upside": "0.1x",
+            "EV Upside": -94
         },
         {
             "Rank": 131.0,
@@ -7397,8 +7397,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 10.622671945828072,
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -28
         },
         {
             "Rank": 17.0,
@@ -7427,10 +7427,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 437.2780847224385,
             "Q4 2029": 464.7788603692956,
             "Q1 2030": 486.86648097462324,
-            "Entry": 71,
-            "Total": 72,
-            "Upside": "2.8x",
-            "EV Upside": 104
+            "Entry": 65,
+            "Total": 69,
+            "Upside": "2.6x",
+            "EV Upside": 86
         },
         {
             "Rank": 165.0,
@@ -7461,8 +7461,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 573.9470906100156,
             "Entry": 0,
             "Total": 36,
-            "Upside": "0.8x",
-            "EV Upside": -49
+            "Upside": "0.6x",
+            "EV Upside": -63
         },
         {
             "Rank": 227.0,
@@ -7493,8 +7493,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1.366204981435539,
             "Entry": 0,
             "Total": 30,
-            "Upside": "0.1x",
-            "EV Upside": -97
+            "Upside": "0.0x",
+            "EV Upside": -100
         },
         {
             "Rank": 194.0,
@@ -7525,8 +7525,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1257.9115779047245,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.7x",
-            "EV Upside": -53
+            "Upside": "0.6x",
+            "EV Upside": -56
         },
         {
             "Rank": 112.0,
@@ -7555,10 +7555,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 89.92592445393228,
             "Q4 2029": 94.47208795188384,
             "Q1 2030": 99.77380422719412,
-            "Entry": 3,
-            "Total": 41,
-            "Upside": "1.2x",
-            "EV Upside": -17
+            "Entry": 0,
+            "Total": 40,
+            "Upside": "1.1x",
+            "EV Upside": -23
         },
         {
             "Rank": 81.0,
@@ -7587,9 +7587,9 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 212.24154601876486,
             "Q4 2029": 209.34995923220183,
             "Q1 2030": 206.94878327488175,
-            "Entry": 15,
+            "Entry": 16,
             "Total": 50,
-            "Upside": "1.4x",
+            "Upside": "1.5x",
             "EV Upside": 6
         },
         {
@@ -7621,8 +7621,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 16.633893750180878,
             "Entry": 0,
             "Total": 38,
-            "Upside": "1.1x",
-            "EV Upside": -29
+            "Upside": "0.8x",
+            "EV Upside": -47
         },
         {
             "Rank": 235.0,
@@ -7654,7 +7654,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.3x",
-            "EV Upside": -79
+            "EV Upside": -80
         },
         {
             "Rank": 31.0,
@@ -7683,10 +7683,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 447.5788535839913,
             "Q4 2029": 453.2570815788234,
             "Q1 2030": 459.07886077619503,
-            "Entry": 56,
-            "Total": 63,
-            "Upside": "2.3x",
-            "EV Upside": 51
+            "Entry": 53,
+            "Total": 61,
+            "Upside": "2.1x",
+            "EV Upside": 41
         },
         {
             "Rank": 32.0,
@@ -7715,10 +7715,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 668.139586385308,
             "Q4 2029": 671.4943554149746,
             "Q1 2030": 670.9227363348946,
-            "Entry": 48,
-            "Total": 70,
-            "Upside": "2.0x",
-            "EV Upside": 68
+            "Entry": 44,
+            "Total": 69,
+            "Upside": "1.9x",
+            "EV Upside": 62
         },
         {
             "Rank": 186.0,
@@ -7750,7 +7750,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.7x",
-            "EV Upside": -51
+            "EV Upside": -54
         },
         {
             "Rank": 95.0,
@@ -7779,10 +7779,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.39004692899366,
             "Q4 2029": 142.99244065373927,
             "Q1 2030": 146.6581665938659,
-            "Entry": 11,
-            "Total": 46,
-            "Upside": "1.4x",
-            "EV Upside": -3
+            "Entry": 8,
+            "Total": 45,
+            "Upside": "1.3x",
+            "EV Upside": -8
         },
         {
             "Rank": 158.0,
@@ -7814,7 +7814,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 35,
             "Upside": "0.9x",
-            "EV Upside": -46
+            "EV Upside": -47
         },
         {
             "Rank": 113.0,
@@ -7907,10 +7907,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 158.57083017992872,
             "Q4 2029": 150.7384704806162,
             "Q1 2030": 143.7498362736306,
-            "Entry": 0,
-            "Total": 40,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Entry": 2,
+            "Total": 41,
+            "Upside": "1.2x",
+            "EV Upside": -18
         },
         {
             "Rank": 207.0,
@@ -7942,7 +7942,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 37,
             "Upside": "0.4x",
-            "EV Upside": -72
+            "EV Upside": -74
         },
         {
             "Rank": 117.0,
@@ -8003,10 +8003,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 299.31638887395025,
             "Q4 2029": 279.07747894717943,
             "Q1 2030": 253.88125756554493,
-            "Entry": 93,
-            "Total": 77,
-            "Upside": "3.7x",
-            "EV Upside": 150
+            "Entry": 86,
+            "Total": 75,
+            "Upside": "3.5x",
+            "EV Upside": 132
         },
         {
             "Rank": 36.0,
@@ -8035,10 +8035,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2440.5816584531553,
             "Q4 2029": 2554.707386081477,
             "Q1 2030": 2000.6439756854097,
-            "Entry": 51,
-            "Total": 64,
-            "Upside": "2.1x",
-            "EV Upside": 48
+            "Entry": 41,
+            "Total": 60,
+            "Upside": "1.9x",
+            "EV Upside": 33
         },
         {
             "Rank": 1,
@@ -8112,10 +8112,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2027": 145.64994863170557,
             "Q4 2028": 156.88249252960324,
             "Q4 2029": 152.9840091632179,
-            "Upside": "2.4x",
-            "EV Upside": 108.23,
-            "Entry": 59,
-            "Total": 76
+            "Upside": "2.1x",
+            "EV Upside": 87.95,
+            "Entry": 53,
+            "Total": 73
         }
     ],
     "zh-CN": [
@@ -8147,10 +8147,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 376.79072285939435,
             "Q1 2030": 386.2492898725188,
             "Change %": "-13.64%",
-            "Entry": 110,
-            "Total": 98,
-            "Upside": "5.0x",
-            "EV Upside": 349
+            "Entry": 93,
+            "Total": 91,
+            "Upside": "3.7x",
+            "EV Upside": 235
         },
         {
             "Rank": 8.0,
@@ -8180,10 +8180,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": "n.a.",
             "Q1 2030": "n.a.",
             "Change %": "-11.85%",
-            "Entry": 85,
-            "Total": 77,
-            "Upside": "3.4x",
-            "EV Upside": 146
+            "Entry": 83,
+            "Total": 76,
+            "Upside": "3.3x",
+            "EV Upside": 140
         },
         {
             "Rank": 10.0,
@@ -8213,10 +8213,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 189.33441157551022,
             "Q1 2030": 217.65601959183675,
             "Change %": "-1.80%",
-            "Entry": 78,
-            "Total": 78,
-            "Upside": "3.1x",
-            "EV Upside": 144
+            "Entry": 57,
+            "Total": 70,
+            "Upside": "2.3x",
+            "EV Upside": 79
         },
         {
             "Rank": 29.0,
@@ -8246,10 +8246,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 3622.8971197949327,
             "Q1 2030": 3787.4412568917724,
             "Change %": "-4.75%",
-            "Entry": 50,
-            "Total": 72,
-            "Upside": "2.0x",
-            "EV Upside": 74
+            "Entry": 43,
+            "Total": 69,
+            "Upside": "1.9x",
+            "EV Upside": 64
         },
         {
             "Rank": 7.0,
@@ -8279,10 +8279,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 677145.3787791574,
             "Q1 2030": 662238.2648178433,
             "Change %": "+3.88%",
-            "Entry": 73,
-            "Total": 83,
-            "Upside": "2.9x",
-            "EV Upside": 164
+            "Entry": 63,
+            "Total": 79,
+            "Upside": "2.5x",
+            "EV Upside": 126
         },
         {
             "Rank": 9.0,
@@ -8312,10 +8312,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 3747309.7158276094,
             "Q1 2030": 3636590.166036492,
             "Change %": "+1.15%",
-            "Entry": 72,
-            "Total": 83,
-            "Upside": "2.9x",
-            "EV Upside": 158
+            "Entry": 64,
+            "Total": 80,
+            "Upside": "2.6x",
+            "EV Upside": 132
         },
         {
             "Rank": 11.0,
@@ -8344,10 +8344,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 24.277237918516143,
             "Q4 2029": 25.62787024164189,
             "Q1 2030": 27.10231800872104,
-            "Entry": 80,
-            "Total": 75,
-            "Upside": "3.2x",
-            "EV Upside": 130
+            "Entry": 73,
+            "Total": 72,
+            "Upside": "2.9x",
+            "EV Upside": 109
         },
         {
             "Rank": 12.0,
@@ -8377,10 +8377,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 766.064115771207,
             "Q1 2030": 813.5994707183474,
             "Change %": "+0.79%",
-            "Entry": 79,
-            "Total": 75,
-            "Upside": "3.2x",
-            "EV Upside": 127
+            "Entry": 69,
+            "Total": 71,
+            "Upside": "2.8x",
+            "EV Upside": 100
         },
         {
             "Rank": 20.0,
@@ -8410,10 +8410,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1118.3782195496617,
             "Q1 2030": 1164.8448408516822,
             "Change %": "-9.42%",
-            "Entry": 60,
-            "Total": 74,
-            "Upside": "2.4x",
-            "EV Upside": 99
+            "Entry": 53,
+            "Total": 71,
+            "Upside": "2.1x",
+            "EV Upside": 75
         },
         {
             "Rank": 4.0,
@@ -8444,8 +8444,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 968.6796908185808,
             "Entry": 100,
             "Total": 72,
-            "Upside": "4.8x",
-            "EV Upside": 153
+            "Upside": "4.4x",
+            "EV Upside": 132
         },
         {
             "Rank": 244.0,
@@ -8478,7 +8478,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "0.2x",
-            "EV Upside": -83
+            "EV Upside": -86
         },
         {
             "Rank": 2.0,
@@ -8508,10 +8508,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 5581.389557503723,
             "Q1 2030": 5922.181616373284,
             "Change %": "-4.40%",
-            "Entry": 97,
-            "Total": 86,
-            "Upside": "3.9x",
-            "EV Upside": 202
+            "Entry": 74,
+            "Total": 76,
+            "Upside": "3.0x",
+            "EV Upside": 131
         },
         {
             "Rank": 25.0,
@@ -8541,10 +8541,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1908.0049988180795,
             "Q1 2030": 1882.525376625523,
             "Change %": "-2.99%",
-            "Entry": 51,
-            "Total": 74,
-            "Upside": "2.0x",
-            "EV Upside": 83
+            "Entry": 47,
+            "Total": 73,
+            "Upside": "1.9x",
+            "EV Upside": 75
         },
         {
             "Rank": 15.0,
@@ -8573,10 +8573,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 93.28493094672224,
             "Q4 2029": 94.223689968653,
             "Q1 2030": 93.43885052105429,
-            "Entry": 75,
-            "Total": 72,
-            "Upside": "3.0x",
-            "EV Upside": 111
+            "Entry": 64,
+            "Total": 68,
+            "Upside": "2.6x",
+            "EV Upside": 80
         },
         {
             "Rank": 43.0,
@@ -8605,10 +8605,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1132.3425084757487,
             "Q4 2029": 1167.5831667451635,
             "Q1 2030": 1203.054041026002,
-            "Entry": 45,
-            "Total": 63,
-            "Upside": "1.9x",
-            "EV Upside": 44
+            "Entry": 40,
+            "Total": 61,
+            "Upside": "1.8x",
+            "EV Upside": 37
         },
         {
             "Rank": 18.0,
@@ -8637,10 +8637,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 58903.78150562406,
             "Q4 2029": 59438.83581666164,
             "Q1 2030": 59965.527653585516,
-            "Entry": 65,
-            "Total": 73,
-            "Upside": "2.6x",
-            "EV Upside": 103
+            "Entry": 58,
+            "Total": 70,
+            "Upside": "2.3x",
+            "EV Upside": 80
         },
         {
             "Rank": 13.0,
@@ -8670,10 +8670,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 89.45000000000005,
             "Q1 2030": 101.00000000000001,
             "Change %": "-7.83%",
-            "Entry": 73,
-            "Total": 75,
-            "Upside": "2.9x",
-            "EV Upside": 125
+            "Entry": 61,
+            "Total": 71,
+            "Upside": "2.4x",
+            "EV Upside": 87
         },
         {
             "Rank": 30.0,
@@ -8702,10 +8702,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 713.809752397906,
             "Q4 2029": 735.8946844795797,
             "Q1 2030": 754.2214152847185,
-            "Entry": 51,
-            "Total": 70,
-            "Upside": "2.0x",
-            "EV Upside": 67
+            "Entry": 40,
+            "Total": 65,
+            "Upside": "1.8x",
+            "EV Upside": 50
         },
         {
             "Rank": 47.0,
@@ -8734,10 +8734,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.87485541927686,
             "Q4 2029": 147.13617315851064,
             "Q1 2030": 155.78648585657353,
-            "Entry": 43,
-            "Total": 60,
-            "Upside": "1.9x",
-            "EV Upside": 36
+            "Entry": 38,
+            "Total": 58,
+            "Upside": "1.8x",
+            "EV Upside": 30
         },
         {
             "Rank": 147.0,
@@ -8769,8 +8769,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-3.42%",
             "Entry": 0,
             "Total": 35,
-            "Upside": "1.0x",
-            "EV Upside": -42
+            "Upside": "0.9x",
+            "EV Upside": -48
         },
         {
             "Rank": 14.0,
@@ -8799,10 +8799,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 670.9937134564026,
             "Q4 2029": 668.5656263436522,
             "Q1 2030": 666.2050255587045,
-            "Entry": 79,
-            "Total": 72,
+            "Entry": 81,
+            "Total": 73,
             "Upside": "3.2x",
-            "EV Upside": 111
+            "EV Upside": 117
         },
         {
             "Rank": 6.0,
@@ -8831,10 +8831,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 387.2961326530168,
             "Q4 2029": 377.38778156497847,
             "Q1 2030": 366.237327388464,
-            "Entry": 75,
-            "Total": 84,
-            "Upside": "3.0x",
-            "EV Upside": 168
+            "Entry": 73,
+            "Total": 83,
+            "Upside": "2.9x",
+            "EV Upside": 163
         },
         {
             "Rank": 65.0,
@@ -8863,10 +8863,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 65,
             "Q4 2029": 61,
             "Q1 2030": 57,
-            "Entry": 25,
-            "Total": 58,
-            "Upside": "1.6x",
-            "EV Upside": 28
+            "Entry": 15,
+            "Total": 54,
+            "Upside": "1.4x",
+            "EV Upside": 16
         },
         {
             "Rank": 116.0,
@@ -8895,10 +8895,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 4268.2999974698405,
             "Q4 2029": 4287.814222636533,
             "Q1 2030": 4313.010455690727,
-            "Entry": 1,
+            "Entry": 0,
             "Total": 39,
-            "Upside": "1.2x",
-            "EV Upside": -21
+            "Upside": "1.1x",
+            "EV Upside": -26
         },
         {
             "Rank": 26.0,
@@ -8928,10 +8928,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 451.2265074037257,
             "Q1 2030": 478.7325552701281,
             "Change %": "-6.31%",
-            "Entry": 53,
-            "Total": 70,
-            "Upside": "2.1x",
-            "EV Upside": 75
+            "Entry": 43,
+            "Total": 66,
+            "Upside": "1.9x",
+            "EV Upside": 55
         },
         {
             "Rank": 87.0,
@@ -8961,10 +8961,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 144.35376637344953,
             "Q1 2030": 140.98698949885068,
             "Change %": "-1.84%",
-            "Entry": 12,
-            "Total": 50,
+            "Entry": 14,
+            "Total": 51,
             "Upside": "1.4x",
-            "EV Upside": 5
+            "EV Upside": 6
         },
         {
             "Rank": 82.0,
@@ -8994,10 +8994,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 806.9857629247502,
             "Q1 2030": 838.0512238836823,
             "Change %": "-1.31%",
-            "Entry": 14,
-            "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 10
+            "Entry": 6,
+            "Total": 49,
+            "Upside": "1.3x",
+            "EV Upside": 1
         },
         {
             "Rank": 39.0,
@@ -9026,10 +9026,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 193.4569583328706,
             "Q4 2029": 206.8812896135367,
             "Q1 2030": 212.8877082428141,
-            "Entry": 51,
-            "Total": 64,
-            "Upside": "2.0x",
-            "EV Upside": 46
+            "Entry": 39,
+            "Total": 59,
+            "Upside": "1.8x",
+            "EV Upside": 32
         },
         {
             "Rank": 62.0,
@@ -9058,10 +9058,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1137.001740890688,
             "Q4 2029": 1183.1231983805667,
             "Q1 2030": 1231.754777327935,
-            "Entry": 26,
-            "Total": 60,
-            "Upside": "1.6x",
-            "EV Upside": 32
+            "Entry": 13,
+            "Total": 54,
+            "Upside": "1.4x",
+            "EV Upside": 16
         },
         {
             "Rank": 66.0,
@@ -9090,10 +9090,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 78.68099555555565,
             "Q4 2029": 84.38915555555566,
             "Q1 2030": 90.73155555555553,
-            "Entry": 49,
-            "Total": 47,
-            "Upside": "2.0x",
-            "EV Upside": -11
+            "Entry": 40,
+            "Total": 43,
+            "Upside": "1.8x",
+            "EV Upside": -18
         },
         {
             "Rank": 126.0,
@@ -9124,8 +9124,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 24.134957211088356,
             "Entry": 0,
             "Total": 36,
-            "Upside": "1.1x",
-            "EV Upside": -31
+            "Upside": "0.3x",
+            "EV Upside": -79
         },
         {
             "Rank": 76.0,
@@ -9155,10 +9155,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 438.83314952519555,
             "Q1 2030": 446.7423030152801,
             "Change %": "-2.41%",
-            "Entry": 19,
-            "Total": 51,
-            "Upside": "1.5x",
-            "EV Upside": 10
+            "Entry": 11,
+            "Total": 48,
+            "Upside": "1.4x",
+            "EV Upside": 1
         },
         {
             "Rank": 93.0,
@@ -9187,10 +9187,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 218.13938438449347,
             "Q4 2029": 200.74467209950862,
             "Q1 2030": 182.66268900805466,
-            "Entry": 15,
-            "Total": 43,
-            "Upside": "1.4x",
-            "EV Upside": -11
+            "Entry": 20,
+            "Total": 45,
+            "Upside": "1.5x",
+            "EV Upside": -6
         },
         {
             "Rank": 70.0,
@@ -9219,10 +9219,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 572.9497395129932,
             "Q4 2029": 575.8265545990032,
             "Q1 2030": 575.3363740892621,
-            "Entry": 16,
-            "Total": 57,
-            "Upside": "1.5x",
-            "EV Upside": 24
+            "Entry": 13,
+            "Total": 56,
+            "Upside": "1.4x",
+            "EV Upside": 20
         },
         {
             "Rank": 61.0,
@@ -9252,10 +9252,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 285.72390282131664,
             "Q1 2030": 298.79623824451414,
             "Change %": "-14.14%",
-            "Entry": 22,
-            "Total": 65,
-            "Upside": "1.6x",
-            "EV Upside": 44
+            "Entry": 6,
+            "Total": 58,
+            "Upside": "1.3x",
+            "EV Upside": 21
         },
         {
             "Rank": 90.0,
@@ -9286,8 +9286,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1022.3856993423299,
             "Entry": 9,
             "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 8
+            "Upside": "1.3x",
+            "EV Upside": 7
         },
         {
             "Rank": 99.0,
@@ -9317,10 +9317,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 723.1898173515982,
             "Q1 2030": 741.3459999999999,
             "Change %": "-6.20%",
-            "Entry": 6,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 4
+            "Entry": 0,
+            "Total": 48,
+            "Upside": "1.2x",
+            "EV Upside": -5
         },
         {
             "Rank": 19.0,
@@ -9350,10 +9350,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 144.4800803842162,
             "Q1 2030": 149.02446122224706,
             "Change %": "-2.63%",
-            "Entry": 62,
-            "Total": 75,
-            "Upside": "2.5x",
-            "EV Upside": 107
+            "Entry": 57,
+            "Total": 73,
+            "Upside": "2.3x",
+            "EV Upside": 89
         },
         {
             "Rank": 59.0,
@@ -9382,10 +9382,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 133.06179916140204,
             "Q4 2029": 136.7224570579519,
             "Q1 2030": 139.7401721352029,
-            "Entry": 36,
-            "Total": 55,
-            "Upside": "1.8x",
-            "EV Upside": 19
+            "Entry": 22,
+            "Total": 49,
+            "Upside": "1.6x",
+            "EV Upside": 4
         },
         {
             "Rank": 75.0,
@@ -9414,10 +9414,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 297.4129652582161,
             "Q4 2029": 304.8226280373832,
             "Q1 2030": 311.682217877095,
-            "Entry": 17,
-            "Total": 54,
-            "Upside": "1.5x",
-            "EV Upside": 15
+            "Entry": 10,
+            "Total": 51,
+            "Upside": "1.4x",
+            "EV Upside": 6
         },
         {
             "Rank": 141.0,
@@ -9449,7 +9449,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 53,
             "Upside": "1.0x",
-            "EV Upside": -10
+            "EV Upside": -14
         },
         {
             "Rank": 118.0,
@@ -9481,7 +9481,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 52,
             "Upside": "1.1x",
-            "EV Upside": -1
+            "EV Upside": -4
         },
         {
             "Rank": 153.0,
@@ -9513,7 +9513,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "1.0x",
-            "EV Upside": -20
+            "EV Upside": -22
         },
         {
             "Rank": 69.0,
@@ -9543,10 +9543,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 1533.1116810693236,
             "Q1 2030": 1556.9110523683785,
             "Change %": "-8.61%",
-            "Entry": 12,
-            "Total": 64,
-            "Upside": "1.4x",
-            "EV Upside": 39
+            "Entry": 3,
+            "Total": 61,
+            "Upside": "1.3x",
+            "EV Upside": 24
         },
         {
             "Rank": 63.0,
@@ -9575,10 +9575,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 243.91689538461554,
             "Q4 2029": 264.71859230769235,
             "Q1 2030": 292.9202892307691,
-            "Entry": 30,
-            "Total": 56,
-            "Upside": "1.7x",
-            "EV Upside": 23
+            "Entry": 11,
+            "Total": 48,
+            "Upside": "1.4x",
+            "EV Upside": 1
         },
         {
             "Rank": 130.0,
@@ -9609,8 +9609,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 67.88107661631007,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.1x",
-            "EV Upside": -27
+            "Upside": "1.0x",
+            "EV Upside": -31
         },
         {
             "Rank": 179.0,
@@ -9641,8 +9641,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 164.97907909088838,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -42
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 195.0,
@@ -9674,8 +9674,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+1.48%",
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.7x",
-            "EV Upside": -44
+            "Upside": "0.6x",
+            "EV Upside": -52
         },
         {
             "Rank": 3.0,
@@ -9704,10 +9704,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 214.926250262069,
             "Q4 2029": 213.4541526575343,
             "Q1 2030": 212.0020835918368,
-            "Entry": 94,
-            "Total": 81,
-            "Upside": "3.8x",
-            "EV Upside": 175
+            "Entry": 82,
+            "Total": 77,
+            "Upside": "3.3x",
+            "EV Upside": 139
         },
         {
             "Rank": 159.0,
@@ -9739,8 +9739,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.73%",
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.9x",
-            "EV Upside": -38
+            "Upside": "0.8x",
+            "EV Upside": -45
         },
         {
             "Rank": 88.0,
@@ -9769,10 +9769,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 174.86367662975204,
             "Q4 2029": 173.85090220772116,
             "Q1 2030": 173.25336919879226,
-            "Entry": 11,
-            "Total": 51,
+            "Entry": 12,
+            "Total": 52,
             "Upside": "1.4x",
-            "EV Upside": 7
+            "EV Upside": 9
         },
         {
             "Rank": 74.0,
@@ -9802,10 +9802,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 634.7219221961419,
             "Q1 2030": 660.0826637962174,
             "Change %": "-8.79%",
-            "Entry": 19,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 13
+            "Entry": 8,
+            "Total": 48,
+            "Upside": "1.3x",
+            "EV Upside": 0
         },
         {
             "Rank": 98.0,
@@ -9835,10 +9835,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 664.3042067330813,
             "Q1 2030": 736.4792077543858,
             "Change %": "-3.18%",
-            "Entry": 6,
-            "Total": 53,
-            "Upside": "1.3x",
-            "EV Upside": 11
+            "Entry": 0,
+            "Total": 51,
+            "Upside": "1.1x",
+            "EV Upside": -2
         },
         {
             "Rank": 51.0,
@@ -9867,10 +9867,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 917.9288200290276,
             "Q4 2029": 965.6530210181154,
             "Q1 2030": 986.7124751505926,
-            "Entry": 41,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 26
+            "Entry": 36,
+            "Total": 55,
+            "Upside": "1.8x",
+            "EV Upside": 21
         },
         {
             "Rank": 79.0,
@@ -9899,10 +9899,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1307.3096846958115,
             "Q4 2029": 1385.3312251871178,
             "Q1 2030": 1469.3544226392944,
-            "Entry": 14,
-            "Total": 52,
-            "Upside": "1.4x",
-            "EV Upside": 10
+            "Entry": 7,
+            "Total": 49,
+            "Upside": "1.3x",
+            "EV Upside": 2
         },
         {
             "Rank": 102.0,
@@ -9931,10 +9931,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 13.329979771717852,
             "Q4 2029": 13.994558906679265,
             "Q1 2030": 14.710095404040096,
-            "Entry": 10,
-            "Total": 36,
-            "Upside": "1.4x",
-            "EV Upside": -28
+            "Entry": 3,
+            "Total": 33,
+            "Upside": "1.2x",
+            "EV Upside": -34
         },
         {
             "Rank": 144.0,
@@ -9966,8 +9966,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-15.00%",
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.8x",
+            "EV Upside": -45
         },
         {
             "Rank": 104.0,
@@ -9996,10 +9996,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 643.5650226012758,
             "Q4 2029": 665.1792491427376,
             "Q1 2030": 684.5424767123285,
-            "Entry": 3,
-            "Total": 47,
-            "Upside": "1.2x",
-            "EV Upside": -4
+            "Entry": 0,
+            "Total": 46,
+            "Upside": "1.1x",
+            "EV Upside": -12
         },
         {
             "Rank": 92.0,
@@ -10028,10 +10028,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 114.39984634146339,
             "Q4 2029": 120.82769477351917,
             "Q1 2030": 126.78197931034484,
-            "Entry": 13,
-            "Total": 45,
-            "Upside": "1.4x",
-            "EV Upside": -5
+            "Entry": 7,
+            "Total": 43,
+            "Upside": "1.3x",
+            "EV Upside": -12
         },
         {
             "Rank": 170.0,
@@ -10063,8 +10063,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-7.86%",
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.9x",
-            "EV Upside": -36
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 111.0,
@@ -10094,7 +10094,7 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 11.053871337506672,
             "Q1 2030": 12.541451079434069,
             "Change %": "+4.13%",
-            "Entry": 2,
+            "Entry": 3,
             "Total": 42,
             "Upside": "1.2x",
             "EV Upside": -16
@@ -10129,8 +10129,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.55%",
             "Entry": 0,
             "Total": 39,
-            "Upside": "1.2x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -34
         },
         {
             "Rank": 84.0,
@@ -10160,10 +10160,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 655.1671843837594,
             "Q1 2030": 686.2203346455362,
             "Change %": "-9.51%",
-            "Entry": 12,
-            "Total": 54,
-            "Upside": "1.4x",
-            "EV Upside": 14
+            "Entry": 0,
+            "Total": 49,
+            "Upside": "1.2x",
+            "EV Upside": -4
         },
         {
             "Rank": 100.0,
@@ -10192,10 +10192,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 385.49630878402013,
             "Q4 2029": 393.4338797479461,
             "Q1 2030": 401.9139442231076,
-            "Entry": 4,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 1
+            "Entry": 0,
+            "Total": 48,
+            "Upside": "1.2x",
+            "EV Upside": -4
         },
         {
             "Rank": 103.0,
@@ -10224,10 +10224,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 235.72619707630616,
             "Q4 2029": 246.8331649036794,
             "Q1 2030": 258.97867661298153,
-            "Entry": 8,
-            "Total": 39,
-            "Upside": "1.3x",
-            "EV Upside": -21
+            "Entry": 2,
+            "Total": 37,
+            "Upside": "1.2x",
+            "EV Upside": -26
         },
         {
             "Rank": 135.0,
@@ -10259,8 +10259,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.25%",
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.1x",
-            "EV Upside": -18
+            "Upside": "1.0x",
+            "EV Upside": -21
         },
         {
             "Rank": 209.0,
@@ -10292,8 +10292,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+5.87%",
             "Entry": 0,
             "Total": 37,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -80
         },
         {
             "Rank": 178.0,
@@ -10324,8 +10324,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 86.25087772261757,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.8x",
-            "EV Upside": -47
+            "Upside": "0.7x",
+            "EV Upside": -55
         },
         {
             "Rank": 106.0,
@@ -10354,10 +10354,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1034.6592582177168,
             "Q4 2029": 1125.5223608516042,
             "Q1 2030": 1229.4531617101816,
-            "Entry": 2,
-            "Total": 50,
-            "Upside": "1.2x",
-            "EV Upside": 1
+            "Entry": 0,
+            "Total": 49,
+            "Upside": "1.1x",
+            "EV Upside": -11
         },
         {
             "Rank": 163.0,
@@ -10389,8 +10389,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-5.80%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.9x",
-            "EV Upside": -36
+            "Upside": "0.8x",
+            "EV Upside": -39
         },
         {
             "Rank": 127.0,
@@ -10421,8 +10421,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 720.1348518618328,
             "Entry": 0,
             "Total": 41,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -29
         },
         {
             "Rank": 197.0,
@@ -10453,8 +10453,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 133.93597621529594,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.6x",
-            "EV Upside": -53
+            "Upside": "0.5x",
+            "EV Upside": -59
         },
         {
             "Rank": 134.0,
@@ -10485,8 +10485,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 2162311.3354161335,
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.1x",
-            "EV Upside": -18
+            "Upside": "1.0x",
+            "EV Upside": -25
         },
         {
             "Rank": 182.0,
@@ -10517,8 +10517,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 72.7209358472973,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.8x",
-            "EV Upside": -42
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 35.0,
@@ -10551,7 +10551,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 52,
             "Total": 64,
             "Upside": "2.1x",
-            "EV Upside": 51
+            "EV Upside": 49
         },
         {
             "Rank": 86.0,
@@ -10580,10 +10580,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 359.77186198862654,
             "Q4 2029": 378.7999262361481,
             "Q1 2030": 401.70570329639696,
-            "Entry": 16,
-            "Total": 47,
-            "Upside": "1.4x",
-            "EV Upside": -3
+            "Entry": 9,
+            "Total": 44,
+            "Upside": "1.3x",
+            "EV Upside": -10
         },
         {
             "Rank": 154.0,
@@ -10614,8 +10614,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 190.08608680935714,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -30
+            "Upside": "0.9x",
+            "EV Upside": -36
         },
         {
             "Rank": 78.0,
@@ -10644,10 +10644,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9205.073180936171,
             "Q4 2029": 9728.289745164355,
             "Q1 2030": 10283.473398251572,
-            "Entry": 17,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 13
+            "Entry": 3,
+            "Total": 47,
+            "Upside": "1.3x",
+            "EV Upside": -3
         },
         {
             "Rank": 228.0,
@@ -10710,8 +10710,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 455.60516723505975,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.6x",
-            "EV Upside": -59
+            "Upside": "0.5x",
+            "EV Upside": -62
         },
         {
             "Rank": 181.0,
@@ -10742,8 +10742,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 129.62794928443856,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -43
+            "Upside": "0.7x",
+            "EV Upside": -47
         },
         {
             "Rank": 220.0,
@@ -10775,7 +10775,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
-            "EV Upside": -72
+            "EV Upside": -74
         },
         {
             "Rank": 160.0,
@@ -10806,8 +10806,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 237.8095029223857,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.9x",
-            "EV Upside": -37
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 177.0,
@@ -10839,8 +10839,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-2.02%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.8x",
-            "EV Upside": -43
+            "Upside": "0.7x",
+            "EV Upside": -49
         },
         {
             "Rank": 237.0,
@@ -10872,7 +10872,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.2x",
-            "EV Upside": -86
+            "EV Upside": -87
         },
         {
             "Rank": 77.0,
@@ -10902,10 +10902,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2029": 11.311850000000002,
             "Q1 2030": 12.091935483870966,
             "Change %": "-9.54%",
-            "Entry": 25,
-            "Total": 46,
-            "Upside": "1.6x",
-            "EV Upside": -4
+            "Entry": 2,
+            "Total": 37,
+            "Upside": "1.2x",
+            "EV Upside": -26
         },
         {
             "Rank": 218.0,
@@ -10936,8 +10936,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 222.5544534670449,
             "Entry": 0,
             "Total": 48,
-            "Upside": "0.5x",
-            "EV Upside": -62
+            "Upside": "0.4x",
+            "EV Upside": -65
         },
         {
             "Rank": 185.0,
@@ -10969,7 +10969,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.7x",
-            "EV Upside": -46
+            "EV Upside": -51
         },
         {
             "Rank": 176.0,
@@ -11000,8 +11000,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 138.5714139070219,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.8x",
-            "EV Upside": -44
+            "Upside": "0.7x",
+            "EV Upside": -49
         },
         {
             "Rank": 225.0,
@@ -11033,7 +11033,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
-            "EV Upside": -73
+            "EV Upside": -74
         },
         {
             "Rank": 236.0,
@@ -11065,7 +11065,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.2x",
-            "EV Upside": -86
+            "EV Upside": -88
         },
         {
             "Rank": 238.0,
@@ -11096,8 +11096,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 190.3867814495656,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.2x",
-            "EV Upside": -86
+            "Upside": "0.1x",
+            "EV Upside": -89
         },
         {
             "Rank": 199.0,
@@ -11130,7 +11130,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.6x",
-            "EV Upside": -51
+            "EV Upside": -57
         },
         {
             "Rank": 187.0,
@@ -11161,8 +11161,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 66.4868700565173,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.7x",
-            "EV Upside": -54
+            "Upside": "0.6x",
+            "EV Upside": -58
         },
         {
             "Rank": 234.0,
@@ -11194,7 +11194,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "0.3x",
-            "EV Upside": -75
+            "EV Upside": -78
         },
         {
             "Rank": 169.0,
@@ -11226,7 +11226,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 32,
             "Upside": "0.8x",
-            "EV Upside": -57
+            "EV Upside": -58
         },
         {
             "Rank": 46.0,
@@ -11255,10 +11255,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 16.17992046444122,
             "Q4 2029": 17.042213256484153,
             "Q1 2030": 17.936559656652364,
-            "Entry": 51,
-            "Total": 58,
-            "Upside": "2.0x",
-            "EV Upside": 27
+            "Entry": 38,
+            "Total": 53,
+            "Upside": "1.8x",
+            "EV Upside": 13
         },
         {
             "Rank": 230.0,
@@ -11289,8 +11289,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 41.622535945110535,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.3x",
-            "EV Upside": -83
+            "Upside": "0.2x",
+            "EV Upside": -85
         },
         {
             "Rank": 202.0,
@@ -11321,8 +11321,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 22.466028993346832,
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.5x",
-            "EV Upside": -64
+            "Upside": "0.6x",
+            "EV Upside": -62
         },
         {
             "Rank": 129.0,
@@ -11353,8 +11353,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 311.6694158115004,
             "Entry": 0,
             "Total": 41,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -30
         },
         {
             "Rank": 233.0,
@@ -11386,8 +11386,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "+0.82%",
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.3x",
-            "EV Upside": -80
+            "Upside": "0.2x",
+            "EV Upside": -84
         },
         {
             "Rank": 249.0,
@@ -11419,8 +11419,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-16.41%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "-0.5x",
-            "EV Upside": -133
+            "Upside": "-0.6x",
+            "EV Upside": -142
         },
         {
             "Rank": 242.0,
@@ -11452,7 +11452,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 31,
             "Upside": "-0.2x",
-            "EV Upside": -111
+            "EV Upside": -113
         },
         {
             "Rank": 222.0,
@@ -11484,7 +11484,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.4x",
-            "EV Upside": -69
+            "EV Upside": -73
         },
         {
             "Rank": 241.0,
@@ -11516,7 +11516,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 34,
             "Upside": "-0.1x",
-            "EV Upside": -105
+            "EV Upside": -108
         },
         {
             "Rank": "",
@@ -11548,8 +11548,8 @@ window.PORTFOLIO_DATA = {
             "Change %": "-1.36%",
             "Entry": 0,
             "Total": 43,
-            "Upside": "-0.2x",
-            "EV Upside": -117
+            "Upside": "-0.3x",
+            "EV Upside": -119
         },
         {
             "Rank": 248.0,
@@ -11580,8 +11580,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 63.77426651019195,
             "Entry": 0,
             "Total": 35,
-            "Upside": "-0.7x",
-            "EV Upside": -140
+            "Upside": "-0.9x",
+            "EV Upside": -154
         },
         {
             "Rank": 247.0,
@@ -11612,8 +11612,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 11.506333006210495,
             "Entry": 0,
             "Total": 36,
-            "Upside": "-0.5x",
-            "EV Upside": -131
+            "Upside": "-0.6x",
+            "EV Upside": -135
         },
         {
             "Rank": 24.0,
@@ -11642,10 +11642,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 436.1306753006475,
             "Q4 2029": 409.1930728323699,
             "Q1 2030": 377.97503467406375,
-            "Entry": 60,
+            "Entry": 59,
             "Total": 64,
             "Upside": "2.4x",
-            "EV Upside": 61
+            "EV Upside": 58
         },
         {
             "Rank": 232.0,
@@ -11676,8 +11676,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 9.00181488203267,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.3x",
-            "EV Upside": -82
+            "Upside": "0.1x",
+            "EV Upside": -90
         },
         {
             "Rank": 21.0,
@@ -11706,10 +11706,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 119.61646451612906,
             "Q4 2029": 122.82929169349644,
             "Q1 2030": 126.16452442159384,
-            "Entry": 68,
-            "Total": 67,
-            "Upside": "2.7x",
-            "EV Upside": 82
+            "Entry": 64,
+            "Total": 66,
+            "Upside": "2.6x",
+            "EV Upside": 72
         },
         {
             "Rank": 33.0,
@@ -11738,10 +11738,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 441.6072591587516,
             "Q4 2029": 443.8181262729123,
             "Q1 2030": 446.7173913043478,
-            "Entry": 54,
-            "Total": 64,
-            "Upside": "2.2x",
-            "EV Upside": 52
+            "Entry": 53,
+            "Total": 63,
+            "Upside": "2.1x",
+            "EV Upside": 48
         },
         {
             "Rank": 16.0,
@@ -11770,10 +11770,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 31.34514484356895,
             "Q4 2029": 32.67824074074075,
             "Q1 2030": 33.906936416184976,
-            "Entry": 74,
-            "Total": 72,
-            "Upside": "3.0x",
-            "EV Upside": 108
+            "Entry": 70,
+            "Total": 70,
+            "Upside": "2.8x",
+            "EV Upside": 97
         },
         {
             "Rank": 37.0,
@@ -11802,10 +11802,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 42.75067209775967,
             "Q4 2029": 44.047022900763345,
             "Q1 2030": 45.42217700915564,
-            "Entry": 51,
-            "Total": 64,
+            "Entry": 48,
+            "Total": 63,
             "Upside": "2.0x",
-            "EV Upside": 49
+            "EV Upside": 43
         },
         {
             "Rank": 55.0,
@@ -11834,10 +11834,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 64.35065590404369,
             "Q4 2029": 67.37650085803845,
             "Q1 2030": 71.01986519039953,
-            "Entry": 39,
-            "Total": 56,
-            "Upside": "1.8x",
-            "EV Upside": 22
+            "Entry": 32,
+            "Total": 53,
+            "Upside": "1.7x",
+            "EV Upside": 14
         },
         {
             "Rank": 145.0,
@@ -11868,8 +11868,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 69.28151583410626,
             "Entry": 0,
             "Total": 35,
-            "Upside": "1.0x",
-            "EV Upside": -41
+            "Upside": "0.9x",
+            "EV Upside": -48
         },
         {
             "Rank": 201.0,
@@ -11901,7 +11901,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 48,
             "Upside": "0.6x",
-            "EV Upside": -50
+            "EV Upside": -53
         },
         {
             "Rank": 67.0,
@@ -11930,10 +11930,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 564.4351912985588,
             "Q4 2029": 588.7293629032258,
             "Q1 2030": 614.4473387601753,
-            "Entry": 22,
-            "Total": 56,
-            "Upside": "1.6x",
-            "EV Upside": 21
+            "Entry": 17,
+            "Total": 54,
+            "Upside": "1.5x",
+            "EV Upside": 15
         },
         {
             "Rank": 68.0,
@@ -11962,10 +11962,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1804.2725892933008,
             "Q4 2029": 1885.1525092722104,
             "Q1 2030": 1973.023938890774,
-            "Entry": 20,
-            "Total": 55,
-            "Upside": "1.5x",
-            "EV Upside": 18
+            "Entry": 14,
+            "Total": 52,
+            "Upside": "1.4x",
+            "EV Upside": 11
         },
         {
             "Rank": 40.0,
@@ -11994,10 +11994,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1207.4341727598633,
             "Q4 2029": 1262.0870922623471,
             "Q1 2030": 1321.4354965868276,
-            "Entry": 46,
-            "Total": 65,
-            "Upside": "1.9x",
-            "EV Upside": 49
+            "Entry": 39,
+            "Total": 62,
+            "Upside": "1.8x",
+            "EV Upside": 41
         },
         {
             "Rank": 115.0,
@@ -12028,8 +12028,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 427.34435806889394,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.2x",
-            "EV Upside": -10
+            "Upside": "1.1x",
+            "EV Upside": -16
         },
         {
             "Rank": 71.0,
@@ -12058,10 +12058,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1176.143885775345,
             "Q4 2029": 1231.6520532540012,
             "Q1 2030": 1283.371236508697,
-            "Entry": 20,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 14
+            "Entry": 8,
+            "Total": 48,
+            "Upside": "1.3x",
+            "EV Upside": 0
         },
         {
             "Rank": 34.0,
@@ -12090,10 +12090,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 458.1481905452359,
             "Q4 2029": 482.83478306705257,
             "Q1 2030": 509.27417684843,
-            "Entry": 50,
-            "Total": 68,
-            "Upside": "2.0x",
-            "EV Upside": 60
+            "Entry": 36,
+            "Total": 62,
+            "Upside": "1.8x",
+            "EV Upside": 42
         },
         {
             "Rank": 105.0,
@@ -12122,10 +12122,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1296.4859772034688,
             "Q4 2029": 1334.892345366054,
             "Q1 2030": 1376.2520458869717,
-            "Entry": 4,
-            "Total": 45,
-            "Upside": "1.3x",
-            "EV Upside": -9
+            "Entry": 0,
+            "Total": 43,
+            "Upside": "1.2x",
+            "EV Upside": -13
         },
         {
             "Rank": 89.0,
@@ -12154,10 +12154,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 703.9178990488699,
             "Q4 2029": 721.7339585337505,
             "Q1 2030": 740.920274444979,
-            "Entry": 13,
-            "Total": 47,
-            "Upside": "1.4x",
-            "EV Upside": -2
+            "Entry": 9,
+            "Total": 46,
+            "Upside": "1.3x",
+            "EV Upside": -6
         },
         {
             "Rank": 44.0,
@@ -12186,10 +12186,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 270.62305471339783,
             "Q4 2029": 276.49138231635027,
             "Q1 2030": 279.7944451257983,
-            "Entry": 48,
-            "Total": 60,
-            "Upside": "2.0x",
-            "EV Upside": 34
+            "Entry": 40,
+            "Total": 57,
+            "Upside": "1.8x",
+            "EV Upside": 25
         },
         {
             "Rank": 221.0,
@@ -12221,7 +12221,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "0.3x",
-            "EV Upside": -77
+            "EV Upside": -79
         },
         {
             "Rank": 45.0,
@@ -12250,10 +12250,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 160.14337735538047,
             "Q4 2029": 165.11596617340473,
             "Q1 2030": 169.27058117326817,
-            "Entry": 47,
-            "Total": 60,
-            "Upside": "2.0x",
-            "EV Upside": 33
+            "Entry": 43,
+            "Total": 58,
+            "Upside": "1.9x",
+            "EV Upside": 28
         },
         {
             "Rank": 48.0,
@@ -12282,10 +12282,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 322.5479584956078,
             "Q4 2029": 339.6602938592121,
             "Q1 2030": 358.81236215702194,
-            "Entry": 50,
-            "Total": 58,
-            "Upside": "2.0x",
-            "EV Upside": 26
+            "Entry": 41,
+            "Total": 54,
+            "Upside": "1.9x",
+            "EV Upside": 17
         },
         {
             "Rank": 60.0,
@@ -12314,10 +12314,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 931.2737108884636,
             "Q4 2029": 951.1618673396927,
             "Q1 2030": 971.0547042993705,
-            "Entry": 39,
-            "Total": 53,
+            "Entry": 36,
+            "Total": 52,
             "Upside": "1.8x",
-            "EV Upside": 13
+            "EV Upside": 10
         },
         {
             "Rank": 42.0,
@@ -12346,10 +12346,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 462.7737687392864,
             "Q4 2029": 474.3163706934556,
             "Q1 2030": 483.59298091413507,
-            "Entry": 50,
-            "Total": 62,
-            "Upside": "2.0x",
-            "EV Upside": 40
+            "Entry": 33,
+            "Total": 55,
+            "Upside": "1.7x",
+            "EV Upside": 21
         },
         {
             "Rank": 189.0,
@@ -12381,7 +12381,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.7x",
-            "EV Upside": -47
+            "EV Upside": -51
         },
         {
             "Rank": 22.0,
@@ -12410,10 +12410,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 34887.77181400496,
             "Q4 2029": 35607.35030361295,
             "Q1 2030": 36355.10316797495,
-            "Entry": 60,
-            "Total": 70,
-            "Upside": "2.4x",
-            "EV Upside": 84
+            "Entry": 58,
+            "Total": 69,
+            "Upside": "2.3x",
+            "EV Upside": 79
         },
         {
             "Rank": 122.0,
@@ -12445,7 +12445,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 49,
             "Upside": "1.1x",
-            "EV Upside": -7
+            "EV Upside": -12
         },
         {
             "Rank": 138.0,
@@ -12476,8 +12476,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 11392.691385810589,
             "Entry": 0,
             "Total": 47,
-            "Upside": "1.0x",
-            "EV Upside": -19
+            "Upside": "0.9x",
+            "EV Upside": -27
         },
         {
             "Rank": 57.0,
@@ -12506,10 +12506,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 820.853452517289,
             "Q4 2029": 836.7107041163996,
             "Q1 2030": 855.3220660853248,
-            "Entry": 32,
-            "Total": 58,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 24,
+            "Total": 55,
+            "Upside": "1.6x",
+            "EV Upside": 19
         },
         {
             "Rank": 213.0,
@@ -12570,10 +12570,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 234.04646909007727,
             "Q4 2029": 235.19566930608798,
             "Q1 2030": 234.57328963189786,
-            "Entry": 28,
-            "Total": 56,
-            "Upside": "1.7x",
-            "EV Upside": 24
+            "Entry": 15,
+            "Total": 51,
+            "Upside": "1.4x",
+            "EV Upside": 8
         },
         {
             "Rank": 109.0,
@@ -12602,10 +12602,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 5719.265734355814,
             "Q4 2029": 5838.565351306668,
             "Q1 2030": 5962.731463067265,
-            "Entry": 1,
+            "Entry": 0,
             "Total": 47,
             "Upside": "1.2x",
-            "EV Upside": -5
+            "EV Upside": -10
         },
         {
             "Rank": 133.0,
@@ -12636,8 +12636,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3826.447513950599,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.1x",
-            "EV Upside": -20
+            "Upside": "1.0x",
+            "EV Upside": -23
         },
         {
             "Rank": 123.0,
@@ -12669,7 +12669,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "1.1x",
-            "EV Upside": -13
+            "EV Upside": -19
         },
         {
             "Rank": 83.0,
@@ -12698,10 +12698,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 3276.9754336512065,
             "Q4 2029": 3313.834480537636,
             "Q1 2030": 3346.172193168981,
-            "Entry": 15,
-            "Total": 49,
-            "Upside": "1.4x",
-            "EV Upside": 4
+            "Entry": 7,
+            "Total": 46,
+            "Upside": "1.3x",
+            "EV Upside": -5
         },
         {
             "Rank": 219.0,
@@ -12732,8 +12732,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 103.4210981320896,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -77
         },
         {
             "Rank": 50.0,
@@ -12762,10 +12762,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 109.20271963218424,
             "Q4 2029": 111.95164685800438,
             "Q1 2030": 115.04531825373903,
-            "Entry": 44,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 24
+            "Entry": 39,
+            "Total": 55,
+            "Upside": "1.8x",
+            "EV Upside": 19
         },
         {
             "Rank": 23.0,
@@ -12794,10 +12794,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 759.8677584640895,
             "Q4 2029": 781.8295997996382,
             "Q1 2030": 796.4722005633655,
-            "Entry": 60,
-            "Total": 66,
-            "Upside": "2.4x",
-            "EV Upside": 69
+            "Entry": 57,
+            "Total": 65,
+            "Upside": "2.3x",
+            "EV Upside": 61
         },
         {
             "Rank": 171.0,
@@ -12829,7 +12829,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 39,
             "Upside": "0.8x",
-            "EV Upside": -47
+            "EV Upside": -50
         },
         {
             "Rank": 196.0,
@@ -12860,8 +12860,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 127.02638717632553,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.7x",
-            "EV Upside": -51
+            "Upside": "0.6x",
+            "EV Upside": -54
         },
         {
             "Rank": 28.0,
@@ -12890,10 +12890,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23377.192715321853,
             "Q4 2029": 23730.683702696577,
             "Q1 2030": 24082.961055731765,
-            "Entry": 55,
-            "Total": 67,
-            "Upside": "2.2x",
-            "EV Upside": 65
+            "Entry": 53,
+            "Total": 66,
+            "Upside": "2.1x",
+            "EV Upside": 59
         },
         {
             "Rank": 41.0,
@@ -12922,10 +12922,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 522.0010976762296,
             "Q4 2029": 523.3659305437099,
             "Q1 2030": 525.1421074055803,
-            "Entry": 50,
-            "Total": 63,
-            "Upside": "2.0x",
-            "EV Upside": 44
+            "Entry": 41,
+            "Total": 60,
+            "Upside": "1.9x",
+            "EV Upside": 33
         },
         {
             "Rank": 168.0,
@@ -12956,8 +12956,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 569.160235104889,
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.9x",
-            "EV Upside": -33
+            "Upside": "0.8x",
+            "EV Upside": -36
         },
         {
             "Rank": 193.0,
@@ -12988,8 +12988,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 798.5476649783479,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.7x",
-            "EV Upside": -51
+            "Upside": "0.6x",
+            "EV Upside": -55
         },
         {
             "Rank": 172.0,
@@ -13021,7 +13021,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.8x",
-            "EV Upside": -35
+            "EV Upside": -37
         },
         {
             "Rank": 80.0,
@@ -13050,10 +13050,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 8184.583118948462,
             "Q4 2029": 8508.02350857794,
             "Q1 2030": 8799.559540320686,
-            "Entry": 16,
-            "Total": 50,
-            "Upside": "1.5x",
-            "EV Upside": 6
+            "Entry": 8,
+            "Total": 47,
+            "Upside": "1.3x",
+            "EV Upside": -4
         },
         {
             "Rank": 198.0,
@@ -13085,7 +13085,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.6x",
-            "EV Upside": -56
+            "EV Upside": -58
         },
         {
             "Rank": 240.0,
@@ -13148,8 +13148,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 21.078339380575205,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.1x",
-            "EV Upside": -95
+            "Upside": "0.0x",
+            "EV Upside": -100
         },
         {
             "Rank": 132.0,
@@ -13180,8 +13180,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3158.8708455614924,
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.1x",
-            "EV Upside": -25
+            "Upside": "1.0x",
+            "EV Upside": -29
         },
         {
             "Rank": 166.0,
@@ -13212,8 +13212,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 19.99713055520602,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.9x",
-            "EV Upside": -39
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 203.0,
@@ -13244,8 +13244,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 166.3482526612978,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.6x",
-            "EV Upside": -59
+            "Upside": "0.5x",
+            "EV Upside": -65
         },
         {
             "Rank": 97.0,
@@ -13274,10 +13274,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 6138.483060136976,
             "Q4 2029": 6214.906828426299,
             "Q1 2030": 6273.171164125234,
-            "Entry": 9,
-            "Total": 49,
+            "Entry": 4,
+            "Total": 47,
             "Upside": "1.3x",
-            "EV Upside": 1
+            "EV Upside": -5
         },
         {
             "Rank": 49.0,
@@ -13306,10 +13306,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9154.84071229778,
             "Q4 2029": 9348.987629741525,
             "Q1 2030": 9542.987788363904,
-            "Entry": 43,
-            "Total": 57,
-            "Upside": "1.9x",
-            "EV Upside": 27
+            "Entry": 39,
+            "Total": 56,
+            "Upside": "1.8x",
+            "EV Upside": 22
         },
         {
             "Rank": 142.0,
@@ -13341,7 +13341,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "1.0x",
-            "EV Upside": -22
+            "EV Upside": -26
         },
         {
             "Rank": 136.0,
@@ -13373,7 +13373,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -30
         },
         {
             "Rank": 124.0,
@@ -13405,7 +13405,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "1.1x",
-            "EV Upside": -23
+            "EV Upside": -27
         },
         {
             "Rank": 229.0,
@@ -13436,8 +13436,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 150.45145359739678,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.3x",
-            "EV Upside": -77
+            "Upside": "0.2x",
+            "EV Upside": -86
         },
         {
             "Rank": 151.0,
@@ -13468,8 +13468,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 15545.739962919935,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.9x",
+            "EV Upside": -33
         },
         {
             "Rank": 183.0,
@@ -13500,8 +13500,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 390.7282735129242,
             "Entry": 0,
             "Total": 44,
-            "Upside": "0.8x",
-            "EV Upside": -45
+            "Upside": "0.7x",
+            "EV Upside": -48
         },
         {
             "Rank": 155.0,
@@ -13532,8 +13532,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 224.25924441666172,
             "Entry": 0,
             "Total": 37,
-            "Upside": "1.0x",
-            "EV Upside": -40
+            "Upside": "0.9x",
+            "EV Upside": -44
         },
         {
             "Rank": 164.0,
@@ -13564,8 +13564,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 75.09091430728577,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.9x",
-            "EV Upside": -37
+            "Upside": "0.8x",
+            "EV Upside": -41
         },
         {
             "Rank": 121.0,
@@ -13596,8 +13596,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 5436.051350399321,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.2x",
-            "EV Upside": -22
+            "Upside": "1.1x",
+            "EV Upside": -26
         },
         {
             "Rank": 214.0,
@@ -13628,8 +13628,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3251.229977240649,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.5x",
-            "EV Upside": -67
+            "Upside": "0.4x",
+            "EV Upside": -69
         },
         {
             "Rank": 226.0,
@@ -13660,8 +13660,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 28448.443724661432,
             "Entry": 0,
             "Total": 36,
-            "Upside": "0.2x",
-            "EV Upside": -87
+            "Upside": "0.1x",
+            "EV Upside": -93
         },
         {
             "Rank": 200.0,
@@ -13693,7 +13693,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.6x",
-            "EV Upside": -57
+            "EV Upside": -59
         },
         {
             "Rank": 162.0,
@@ -13725,7 +13725,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "0.9x",
-            "EV Upside": -40
+            "EV Upside": -41
         },
         {
             "Rank": 190.0,
@@ -13756,8 +13756,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 20.7266399820156,
             "Entry": 0,
             "Total": 40,
-            "Upside": "0.7x",
-            "EV Upside": -53
+            "Upside": "0.6x",
+            "EV Upside": -61
         },
         {
             "Rank": 224.0,
@@ -13788,8 +13788,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 30.868650720056607,
             "Entry": 0,
             "Total": 37,
-            "Upside": "0.3x",
-            "EV Upside": -83
+            "Upside": "0.1x",
+            "EV Upside": -91
         },
         {
             "Rank": 52.0,
@@ -13818,10 +13818,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 7425.218105783216,
             "Q4 2029": 7428.22384965637,
             "Q1 2030": 7437.618100218753,
-            "Entry": 43,
-            "Total": 56,
-            "Upside": "1.9x",
-            "EV Upside": 22
+            "Entry": 35,
+            "Total": 53,
+            "Upside": "1.8x",
+            "EV Upside": 15
         },
         {
             "Rank": 231.0,
@@ -13853,7 +13853,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.3x",
-            "EV Upside": -74
+            "EV Upside": -78
         },
         {
             "Rank": 110.0,
@@ -13882,10 +13882,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 19.065241515310877,
             "Q4 2029": 19.591349516225417,
             "Q1 2030": 20.252599677747156,
-            "Entry": 4,
-            "Total": 41,
-            "Upside": "1.3x",
-            "EV Upside": -18
+            "Entry": 0,
+            "Total": 39,
+            "Upside": "1.2x",
+            "EV Upside": -24
         },
         {
             "Rank": 119.0,
@@ -13916,8 +13916,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3277.3845892786476,
             "Entry": 0,
             "Total": 46,
-            "Upside": "1.2x",
-            "EV Upside": -11
+            "Upside": "1.1x",
+            "EV Upside": -15
         },
         {
             "Rank": 146.0,
@@ -13949,7 +13949,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 40,
             "Upside": "1.0x",
-            "EV Upside": -33
+            "EV Upside": -32
         },
         {
             "Rank": 211.0,
@@ -13980,8 +13980,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 32.00757265321985,
             "Entry": 0,
             "Total": 38,
-            "Upside": "0.4x",
-            "EV Upside": -75
+            "Upside": "0.3x",
+            "EV Upside": -79
         },
         {
             "Rank": 156.0,
@@ -14012,8 +14012,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 528.5305026879038,
             "Entry": 0,
             "Total": 44,
-            "Upside": "1.0x",
-            "EV Upside": -30
+            "Upside": "0.9x",
+            "EV Upside": -34
         },
         {
             "Rank": 174.0,
@@ -14045,7 +14045,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.8x",
-            "EV Upside": -35
+            "EV Upside": -38
         },
         {
             "Rank": 175.0,
@@ -14077,7 +14077,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.8x",
-            "EV Upside": -40
+            "EV Upside": -43
         },
         {
             "Rank": 239.0,
@@ -14109,7 +14109,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 38,
             "Upside": "0.0x",
-            "EV Upside": -98
+            "EV Upside": -100
         },
         {
             "Rank": 216.0,
@@ -14140,8 +14140,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 3724.926012022445,
             "Entry": 0,
             "Total": 46,
-            "Upside": "0.5x",
-            "EV Upside": -65
+            "Upside": "0.4x",
+            "EV Upside": -67
         },
         {
             "Rank": 243.0,
@@ -14202,10 +14202,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 389.01799474345455,
             "Q4 2029": 397.1911879337694,
             "Q1 2030": 398.0228069847239,
-            "Entry": 37,
-            "Total": 59,
-            "Upside": "1.8x",
-            "EV Upside": 30
+            "Entry": 28,
+            "Total": 55,
+            "Upside": "1.6x",
+            "EV Upside": 20
         },
         {
             "Rank": 85.0,
@@ -14234,10 +14234,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 182.46891383860697,
             "Q4 2029": 189.41152110891184,
             "Q1 2030": 196.52644339227376,
-            "Entry": 15,
-            "Total": 48,
-            "Upside": "1.4x",
-            "EV Upside": 0
+            "Entry": 8,
+            "Total": 45,
+            "Upside": "1.3x",
+            "EV Upside": -7
         },
         {
             "Rank": 212.0,
@@ -14298,10 +14298,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.28940384635283,
             "Q4 2029": 194.49890701775027,
             "Q1 2030": 202.86185516080616,
-            "Entry": 9,
-            "Total": 50,
-            "Upside": "1.3x",
-            "EV Upside": 3
+            "Entry": 1,
+            "Total": 47,
+            "Upside": "1.2x",
+            "EV Upside": -6
         },
         {
             "Rank": 152.0,
@@ -14333,7 +14333,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 38,
             "Upside": "1.0x",
-            "EV Upside": -38
+            "EV Upside": -39
         },
         {
             "Rank": 139.0,
@@ -14365,7 +14365,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -28
         },
         {
             "Rank": 205.0,
@@ -14397,7 +14397,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.5x",
-            "EV Upside": -65
+            "EV Upside": -66
         },
         {
             "Rank": 210.0,
@@ -14429,7 +14429,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.5x",
-            "EV Upside": -60
+            "EV Upside": -63
         },
         {
             "Rank": 150.0,
@@ -14461,7 +14461,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -28
+            "EV Upside": -30
         },
         {
             "Rank": 215.0,
@@ -14492,8 +14492,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 217.1092484744303,
             "Entry": 0,
             "Total": 43,
-            "Upside": "0.5x",
-            "EV Upside": -67
+            "Upside": "0.4x",
+            "EV Upside": -70
         },
         {
             "Rank": 72.0,
@@ -14522,10 +14522,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 330.25797243401763,
             "Q4 2029": 339.66126201641276,
             "Q1 2030": 349.8122612770943,
-            "Entry": 25,
-            "Total": 49,
-            "Upside": "1.6x",
-            "EV Upside": 4
+            "Entry": 20,
+            "Total": 47,
+            "Upside": "1.5x",
+            "EV Upside": -1
         },
         {
             "Rank": 191.0,
@@ -14557,7 +14557,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 43,
             "Upside": "0.7x",
-            "EV Upside": -49
+            "EV Upside": -51
         },
         {
             "Rank": 161.0,
@@ -14589,7 +14589,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 45,
             "Upside": "0.9x",
-            "EV Upside": -32
+            "EV Upside": -35
         },
         {
             "Rank": 94.0,
@@ -14618,10 +14618,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 813.0385716213905,
             "Q4 2029": 834.807900639929,
             "Q1 2030": 856.4242381665337,
-            "Entry": 8,
-            "Total": 53,
-            "Upside": "1.3x",
-            "EV Upside": 10
+            "Entry": 2,
+            "Total": 51,
+            "Upside": "1.2x",
+            "EV Upside": 3
         },
         {
             "Rank": 245.0,
@@ -14652,8 +14652,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 96.85927975813499,
             "Entry": 0,
             "Total": 42,
-            "Upside": "0.1x",
-            "EV Upside": -96
+            "Upside": "0.0x",
+            "EV Upside": -99
         },
         {
             "Rank": 38.0,
@@ -14682,10 +14682,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9882.315774592375,
             "Q4 2029": 10311.379000673722,
             "Q1 2030": 10750.25695850495,
-            "Entry": 53,
-            "Total": 60,
-            "Upside": "2.1x",
-            "EV Upside": 39
+            "Entry": 51,
+            "Total": 59,
+            "Upside": "2.0x",
+            "EV Upside": 31
         },
         {
             "Rank": 73.0,
@@ -14714,10 +14714,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 4880.088070829452,
             "Q4 2029": 5016.126354607664,
             "Q1 2030": 5152.150150429991,
-            "Entry": 18,
-            "Total": 53,
-            "Upside": "1.5x",
-            "EV Upside": 15
+            "Entry": 14,
+            "Total": 52,
+            "Upside": "1.4x",
+            "EV Upside": 10
         },
         {
             "Rank": 217.0,
@@ -14749,7 +14749,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "0.4x",
-            "EV Upside": -69
+            "EV Upside": -68
         },
         {
             "Rank": 157.0,
@@ -14780,8 +14780,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 2238.6130498383764,
             "Entry": 0,
             "Total": 45,
-            "Upside": "1.0x",
-            "EV Upside": -29
+            "Upside": "0.9x",
+            "EV Upside": -34
         },
         {
             "Rank": 54.0,
@@ -14810,10 +14810,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 44023.593057027945,
             "Q4 2029": 46020.11140168872,
             "Q1 2030": 48134.63162974179,
-            "Entry": 34,
-            "Total": 60,
-            "Upside": "1.7x",
-            "EV Upside": 34
+            "Entry": 27,
+            "Total": 57,
+            "Upside": "1.6x",
+            "EV Upside": 26
         },
         {
             "Rank": 143.0,
@@ -14844,8 +14844,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1206838.5134679615,
             "Entry": 0,
             "Total": 40,
-            "Upside": "1.0x",
-            "EV Upside": -32
+            "Upside": "0.9x",
+            "EV Upside": -42
         },
         {
             "Rank": 192.0,
@@ -14877,7 +14877,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.7x",
-            "EV Upside": -43
+            "EV Upside": -46
         },
         {
             "Rank": 173.0,
@@ -14909,7 +14909,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 42,
             "Upside": "0.8x",
-            "EV Upside": -43
+            "EV Upside": -46
         },
         {
             "Rank": 91.0,
@@ -14938,10 +14938,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9148.802893593345,
             "Q4 2029": 9627.477515614219,
             "Q1 2030": 10126.394482138927,
-            "Entry": 9,
-            "Total": 52,
-            "Upside": "1.3x",
-            "EV Upside": 8
+            "Entry": 3,
+            "Total": 49,
+            "Upside": "1.2x",
+            "EV Upside": 0
         },
         {
             "Rank": 167.0,
@@ -14972,8 +14972,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 52605.649295414565,
             "Entry": 0,
             "Total": 45,
-            "Upside": "0.9x",
-            "EV Upside": -34
+            "Upside": "0.8x",
+            "EV Upside": -40
         },
         {
             "Rank": 58.0,
@@ -15002,10 +15002,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 11939.821176707468,
             "Q4 2029": 12493.376440775062,
             "Q1 2030": 13065.10745945006,
-            "Entry": 31,
-            "Total": 57,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 23,
+            "Total": 54,
+            "Upside": "1.6x",
+            "EV Upside": 18
         },
         {
             "Rank": 137.0,
@@ -15037,7 +15037,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -24
+            "EV Upside": -27
         },
         {
             "Rank": 180.0,
@@ -15068,8 +15068,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 74.51601426414275,
             "Entry": 0,
             "Total": 38,
-            "Upside": "0.8x",
-            "EV Upside": -53
+            "Upside": "0.7x",
+            "EV Upside": -57
         },
         {
             "Rank": 140.0,
@@ -15101,7 +15101,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 44,
             "Upside": "1.0x",
-            "EV Upside": -25
+            "EV Upside": -30
         },
         {
             "Rank": 184.0,
@@ -15133,7 +15133,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 42,
             "Upside": "0.7x",
-            "EV Upside": -49
+            "EV Upside": -53
         },
         {
             "Rank": 56.0,
@@ -15162,10 +15162,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 223.9611003694687,
             "Q4 2029": 229.49102977449542,
             "Q1 2030": 236.18669368603247,
-            "Entry": 34,
-            "Total": 57,
-            "Upside": "1.7x",
-            "EV Upside": 28
+            "Entry": 26,
+            "Total": 54,
+            "Upside": "1.6x",
+            "EV Upside": 18
         },
         {
             "Rank": 108.0,
@@ -15194,10 +15194,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 862.7380402582999,
             "Q4 2029": 886.4864584893545,
             "Q1 2030": 912.1950594766279,
-            "Entry": 2,
-            "Total": 46,
+            "Entry": 0,
+            "Total": 45,
             "Upside": "1.2x",
-            "EV Upside": -7
+            "EV Upside": -11
         },
         {
             "Rank": 188.0,
@@ -15229,7 +15229,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 46,
             "Upside": "0.7x",
-            "EV Upside": -42
+            "EV Upside": -45
         },
         {
             "Rank": 148.0,
@@ -15260,8 +15260,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 531.4700642787706,
             "Entry": 0,
             "Total": 43,
-            "Upside": "1.0x",
-            "EV Upside": -28
+            "Upside": "0.9x",
+            "EV Upside": -33
         },
         {
             "Rank": 107.0,
@@ -15290,10 +15290,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 49.06908892135452,
             "Q4 2029": 51.418970920349636,
             "Q1 2030": 53.77012715357276,
-            "Entry": 3,
-            "Total": 44,
-            "Upside": "1.3x",
-            "EV Upside": -10
+            "Entry": 0,
+            "Total": 43,
+            "Upside": "1.2x",
+            "EV Upside": -15
         },
         {
             "Rank": 101.0,
@@ -15322,10 +15322,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 333.2773490875912,
             "Q4 2029": 347.39638116244106,
             "Q1 2030": 361.50245094508665,
-            "Entry": 4,
-            "Total": 47,
-            "Upside": "1.3x",
-            "EV Upside": -5
+            "Entry": 0,
+            "Total": 45,
+            "Upside": "1.2x",
+            "EV Upside": -14
         },
         {
             "Rank": 114.0,
@@ -15356,8 +15356,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1821.6688821616015,
             "Entry": 0,
             "Total": 44,
-            "Upside": "1.2x",
-            "EV Upside": -12
+            "Upside": "1.1x",
+            "EV Upside": -18
         },
         {
             "Rank": 27.0,
@@ -15386,10 +15386,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 100.7278302730736,
             "Q4 2029": 103.61449999856589,
             "Q1 2030": 106.50305289904543,
-            "Entry": 59,
-            "Total": 64,
-            "Upside": "2.4x",
-            "EV Upside": 58
+            "Entry": 57,
+            "Total": 63,
+            "Upside": "2.3x",
+            "EV Upside": 53
         },
         {
             "Rank": 223.0,
@@ -15421,7 +15421,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.3x",
-            "EV Upside": -77
+            "EV Upside": -79
         },
         {
             "Rank": 206.0,
@@ -15452,8 +15452,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 51.44531021454613,
             "Entry": 0,
             "Total": 39,
-            "Upside": "0.5x",
-            "EV Upside": -69
+            "Upside": "0.4x",
+            "EV Upside": -73
         },
         {
             "Rank": 208.0,
@@ -15484,8 +15484,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 201.95356304224242,
             "Entry": 0,
             "Total": 29,
-            "Upside": "0.2x",
-            "EV Upside": -88
+            "Upside": "0.1x",
+            "EV Upside": -94
         },
         {
             "Rank": 131.0,
@@ -15516,8 +15516,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 10.622671945828072,
             "Entry": 0,
             "Total": 42,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Upside": "1.0x",
+            "EV Upside": -28
         },
         {
             "Rank": 17.0,
@@ -15546,10 +15546,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 437.2780847224385,
             "Q4 2029": 464.7788603692956,
             "Q1 2030": 486.86648097462324,
-            "Entry": 71,
-            "Total": 72,
-            "Upside": "2.8x",
-            "EV Upside": 104
+            "Entry": 65,
+            "Total": 69,
+            "Upside": "2.6x",
+            "EV Upside": 86
         },
         {
             "Rank": 165.0,
@@ -15580,8 +15580,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 573.9470906100156,
             "Entry": 0,
             "Total": 36,
-            "Upside": "0.8x",
-            "EV Upside": -49
+            "Upside": "0.6x",
+            "EV Upside": -63
         },
         {
             "Rank": 227.0,
@@ -15612,8 +15612,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1.366204981435539,
             "Entry": 0,
             "Total": 30,
-            "Upside": "0.1x",
-            "EV Upside": -97
+            "Upside": "0.0x",
+            "EV Upside": -100
         },
         {
             "Rank": 194.0,
@@ -15644,8 +15644,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 1257.9115779047245,
             "Entry": 0,
             "Total": 41,
-            "Upside": "0.7x",
-            "EV Upside": -53
+            "Upside": "0.6x",
+            "EV Upside": -56
         },
         {
             "Rank": 112.0,
@@ -15674,10 +15674,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 89.92592445393228,
             "Q4 2029": 94.47208795188384,
             "Q1 2030": 99.77380422719412,
-            "Entry": 3,
-            "Total": 41,
-            "Upside": "1.2x",
-            "EV Upside": -17
+            "Entry": 0,
+            "Total": 40,
+            "Upside": "1.1x",
+            "EV Upside": -23
         },
         {
             "Rank": 81.0,
@@ -15706,9 +15706,9 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 212.24154601876486,
             "Q4 2029": 209.34995923220183,
             "Q1 2030": 206.94878327488175,
-            "Entry": 15,
+            "Entry": 16,
             "Total": 50,
-            "Upside": "1.4x",
+            "Upside": "1.5x",
             "EV Upside": 6
         },
         {
@@ -15740,8 +15740,8 @@ window.PORTFOLIO_DATA = {
             "Q1 2030": 16.633893750180878,
             "Entry": 0,
             "Total": 38,
-            "Upside": "1.1x",
-            "EV Upside": -29
+            "Upside": "0.8x",
+            "EV Upside": -47
         },
         {
             "Rank": 235.0,
@@ -15773,7 +15773,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 47,
             "Upside": "0.3x",
-            "EV Upside": -79
+            "EV Upside": -80
         },
         {
             "Rank": 31.0,
@@ -15802,10 +15802,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 447.5788535839913,
             "Q4 2029": 453.2570815788234,
             "Q1 2030": 459.07886077619503,
-            "Entry": 56,
-            "Total": 63,
-            "Upside": "2.3x",
-            "EV Upside": 51
+            "Entry": 53,
+            "Total": 61,
+            "Upside": "2.1x",
+            "EV Upside": 41
         },
         {
             "Rank": 32.0,
@@ -15834,10 +15834,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 668.139586385308,
             "Q4 2029": 671.4943554149746,
             "Q1 2030": 670.9227363348946,
-            "Entry": 48,
-            "Total": 70,
-            "Upside": "2.0x",
-            "EV Upside": 68
+            "Entry": 44,
+            "Total": 69,
+            "Upside": "1.9x",
+            "EV Upside": 62
         },
         {
             "Rank": 186.0,
@@ -15869,7 +15869,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 41,
             "Upside": "0.7x",
-            "EV Upside": -51
+            "EV Upside": -54
         },
         {
             "Rank": 95.0,
@@ -15898,10 +15898,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.39004692899366,
             "Q4 2029": 142.99244065373927,
             "Q1 2030": 146.6581665938659,
-            "Entry": 11,
-            "Total": 46,
-            "Upside": "1.4x",
-            "EV Upside": -3
+            "Entry": 8,
+            "Total": 45,
+            "Upside": "1.3x",
+            "EV Upside": -8
         },
         {
             "Rank": 158.0,
@@ -15933,7 +15933,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 35,
             "Upside": "0.9x",
-            "EV Upside": -46
+            "EV Upside": -47
         },
         {
             "Rank": 113.0,
@@ -16026,10 +16026,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 158.57083017992872,
             "Q4 2029": 150.7384704806162,
             "Q1 2030": 143.7498362736306,
-            "Entry": 0,
-            "Total": 40,
-            "Upside": "1.1x",
-            "EV Upside": -24
+            "Entry": 2,
+            "Total": 41,
+            "Upside": "1.2x",
+            "EV Upside": -18
         },
         {
             "Rank": 207.0,
@@ -16061,7 +16061,7 @@ window.PORTFOLIO_DATA = {
             "Entry": 0,
             "Total": 37,
             "Upside": "0.4x",
-            "EV Upside": -72
+            "EV Upside": -74
         },
         {
             "Rank": 117.0,
@@ -16122,10 +16122,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 299.31638887395025,
             "Q4 2029": 279.07747894717943,
             "Q1 2030": 253.88125756554493,
-            "Entry": 93,
-            "Total": 77,
-            "Upside": "3.7x",
-            "EV Upside": 150
+            "Entry": 86,
+            "Total": 75,
+            "Upside": "3.5x",
+            "EV Upside": 132
         },
         {
             "Rank": 36.0,
@@ -16154,10 +16154,10 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2440.5816584531553,
             "Q4 2029": 2554.707386081477,
             "Q1 2030": 2000.6439756854097,
-            "Entry": 51,
-            "Total": 64,
-            "Upside": "2.1x",
-            "EV Upside": 48
+            "Entry": 41,
+            "Total": 60,
+            "Upside": "1.9x",
+            "EV Upside": 33
         },
         {
             "Rank": 1,
@@ -16231,10 +16231,10 @@ window.PORTFOLIO_DATA = {
             "Q4 2027": 145.64994863170557,
             "Q4 2028": 156.88249252960324,
             "Q4 2029": 152.9840091632179,
-            "Upside": "2.4x",
-            "EV Upside": 108.23,
-            "Entry": 59,
-            "Total": 76
+            "Upside": "2.1x",
+            "EV Upside": 87.95,
+            "Entry": 53,
+            "Total": 73
         }
     ]
 };

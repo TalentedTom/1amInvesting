@@ -88,8 +88,10 @@ only a display limit. Never restore those columns during routine refreshes.
 ### Quarterly roll-forward (authorized October 2, 2026)
 - On January 1, April 1, July 1 and October 1, advance the six-quarter
   display window by one quarter. Next: January 1, 2027, Q1 2027–Q2 2028.
-- Also advance the active Upside/EV Upside horizon to the same quarter next
-  year, keeping frontend/Python/live/DRAM in sync (next target Q1 2028).
+- Advance the active Upside/EV Upside horizon one quarter while keeping it
+  within the following twelve months, keeping frontend/Python/live/DRAM in
+  sync. The owner selected Q3 2027 on November 1, 2026; the next target is
+  Q4 2027 on January 1, 2027.
 - The recurring thread automation `roll-portfolio-quarter-forward` runs at
   8:45 a.m. America/Toronto on those dates, starting January 1, 2027.
 - Verify the needed source targets exist before shipping. Do not manufacture
@@ -105,7 +107,7 @@ only a display limit. Never restore those columns during routine refreshes.
 - Immediately right of EV Upside, but NOT an EV calculation: no Base score
   or probability weighting. `upside-breakdown.js` computes the display-only
   heuristic from current/live price P, first displayed quarter N (currently
-  Q4 2026), and active target T (currently Q4 2027).
+  Q4 2026), and active target T (currently Q3 2027).
 - R = max(0, N/P − 1); G = max(0, T/N − 1). Normalize R and G to 100%.
   The two percentage moves have different denominators; this is NOT an
   additive attribution of total return or proof of actual multiple expansion.
@@ -119,14 +121,14 @@ only a display limit. Never restore those columns during routine refreshes.
 - Test: `node --test tests/upside-breakdown.test.js`.
 
 ### Scoring (scripts/score.py) — the heart of it
-- **Active target = Q4 2027** (Master Portfolio column Q). Rolled forward from
-  Q3 2027 on September 30, 2026, ahead of October 1. The next authorized
-  quarterly roll is January 1, 2027 (see the scheduled roll-forward above).
+- **Active target = Q3 2027** (Master Portfolio column P), selected by the
+  owner November 1, 2026 to keep the horizon within a year. The next authorized
+  quarterly roll is January 1, 2027, to Q4 2027.
 - **EV Upside** (headline metric, replaced the old "Total") =
   `round(Base × target/price − 100)`. Displayed as `(1 + EV Upside/100)x`,
   equivalent to the Base-weighted target/price multiple, subject to rounding.
   Both derived fields are always recalculated, never preserved from stale
-  workbook or live-feed Q3 values. Base and quarterly forecasts stay untouched.
+  workbook or live-feed values from other quarters. Base and quarterly forecasts stay untouched.
   DRAM is the exception: its EV Upside averages the holdings' individual EV
   scores with portfolio weights, independently of its weighted Base (see below).
 - Keep `script.js` `TARGET_QUARTER` and `scripts/score.py` `TARGET_COLS[0]`
@@ -230,7 +232,7 @@ payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quo
 - **Live pill**: reports DATA freshness (live.json's `ts`), not fetch time —
   amber "As of Fri 16:59" when >20 min stale.
 - **Research archive**: unranked rows collapse behind a toggle (`body.archive-open`).
-- **Trim ⚠**: ranked names trading above their active Q4 2027 target get an amber
+- **Trim ⚠**: ranked names trading above their active Q3 2027 target get an amber
   flag, using the visitor's selected valuation multiple.
 - **Research reader**: report-reader.js renders stock PDFs as a full-screen
   scrollable reading view; previous/next report buttons follow table order.

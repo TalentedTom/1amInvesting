@@ -23,6 +23,13 @@ def fixture():
 
 
 class SyntheticTests(unittest.TestCase):
+    def setUp(self):
+        # These fixed-quarter arithmetic fixtures are independent of the active
+        # site horizon; test_target_horizon covers the selected quarter.
+        target = patch.object(score, 'TARGET_COLS', ('Q4 2027', 'FY2028', '1y EV', 'Ceiling Target'))
+        target.start()
+        self.addCleanup(target.stop)
+
     def test_fixed_base_overrides_components_in_regen_and_live_scoring(self):
         rows = fixture()
         rows[-1]['_synthetic'].update(base_method='fixed', base=100)
