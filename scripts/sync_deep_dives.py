@@ -52,6 +52,9 @@ def candidate_prefixes(ticker):
 
     # 1. Exact ticker
     yield from add(ticker)
+    # DapuStor's source report uses the company name as its filename.
+    if ticker.upper() == "301666.SZ":
+        yield from add("DAPUSTOR")
     # 2. Strip dots and dashes (HPS-A.TO -> HPSATO, AIXA.DE -> AIXADE)
     yield from add(ticker.replace(".", "").replace("-", ""))
     # 3. Just the base before first dot (BESI.AS -> BESI, EOS.AX -> EOS)

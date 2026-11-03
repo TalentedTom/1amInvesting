@@ -191,6 +191,8 @@ def main():
         # nothing the site uses and would otherwise leak into data.js
         # (observed: 'Unnamed: 15' duplicated across both language blocks).
         df = df.loc[:, ~df.columns.astype(str).str.startswith("Unnamed")]
+        # Drop cleared stock rows retained by worksheet formatting.
+        df = df.dropna(how="all")
         df = df.fillna("")
         data_en = df.to_dict(orient="records")
 

@@ -780,6 +780,12 @@ window.COMPANY_LOGOS = {
     "symbol": "NASDAQ:ASML",
     "company": "ASML Holding NV Sponsored ADR"
   },
+  "ASTS": {
+    "src": "assets/company-logos/ASTS.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/ast-spacemobile--big.svg",
+    "symbol": "NASDAQ:ASTS",
+    "company": "AST SpaceMobile, Inc. Class A"
+  },
   "ATS.VI": {
     "src": "assets/company-logos/ATS.VI.svg",
     "source": "https://s3-symbol-logo.tradingview.com/at-s-austr-t-systemt--big.svg",
