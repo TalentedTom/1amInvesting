@@ -44,6 +44,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/refresh-live-prices.yml'
       - 'data.js'
       - 'scripts/fetch_live.py'
       - 'scripts/fetch_yahoo.py'
@@ -85,13 +86,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Check out main (for data.js + scripts)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: main
           fetch-depth: 1
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: 'pip'
@@ -135,7 +136,20 @@ jobs:
           # has 'contents: write' permission (set on this workflow above).
           # Force-push because we replace the entire branch every run.
           REMOTE_URL="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git push "$REMOTE_URL" HEAD:refs/heads/live-prices --force --quiet
+          # GitHub can reject an otherwise valid push with commit_refs / HTTP
+          # 500 errors. Retry the same snapshot, with a bounded wait per push.
+          for attempt in 1 2 3; do
+            if timeout --kill-after=5s 90s git push "$REMOTE_URL" HEAD:refs/heads/live-prices --force --quiet; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "::error::Live-price upload failed after 3 attempts."
+              exit 1
+            fi
+            delay=$((attempt * 10))
+            echo "::warning::Live-price upload attempt $attempt failed; retrying in ${delay}s."
+            sleep "$delay"
+          done
 
-          echo "Pushed to live-prices. CDN URL (statically.io):"
-          echo "  https://cdn.statically.io/gh/${GITHUB_REPOSITORY}@live-prices/live.json"
+          echo "Pushed to live-prices:"
+          echo "  https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/refs/heads/live-prices/live.json"
