@@ -1138,6 +1138,12 @@ window.COMPANY_LOGOS = {
     "symbol": "NASDAQ:LRCX",
     "company": "Lam Research Corporation"
   },
+  "LWLG": {
+    "src": "assets/company-logos/LWLG.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/lightwave-logic--big.svg",
+    "symbol": "NASDAQ:LWLG",
+    "company": "Lightwave Logic, Inc."
+  },
   "M7U.DE": {
     "src": "assets/company-logos/M7U.DE.svg",
     "source": "https://s3-symbol-logo.tradingview.com/nynomic-ag--big.svg",
@@ -1317,6 +1323,12 @@ window.COMPANY_LOGOS = {
     "source": "https://s3-symbol-logo.tradingview.com/reddit--big.svg",
     "symbol": "NYSE:RDDT",
     "company": "Reddit, Inc. Class A"
+  },
+  "RKLB": {
+    "src": "assets/company-logos/RKLB.svg",
+    "source": "https://s3-symbol-logo.tradingview.com/rocket-lab--big.svg",
+    "symbol": "NASDAQ:RKLB",
+    "company": "Rocket Lab Corporation"
   },
   "RRX": {
     "src": "assets/company-logos/RRX.svg",
