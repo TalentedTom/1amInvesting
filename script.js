@@ -853,7 +853,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!carousel) return;
         const viewport = document.getElementById('news-viewport');
         const ticker = document.getElementById('news-ticker');
-        const track = document.getElementById('news-ticker-track');
+        const tickerLanes = document.getElementById('news-ticker-track');
+        tickerLanes.className = 'news-ticker-lanes';
+        const desktopNews = window.matchMedia('(min-width: 1024px)');
         const slides = Array.from(viewport.querySelectorAll('[data-news-slide]'));
         const postedAt = slide => Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '') || 0;
         slides.sort((a, b) => postedAt(b) - postedAt(a));
@@ -868,8 +870,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let index = 0, paused = false, hovered = false, settleTimer;
 
         function syncMotion() {
-            track.style.animationPlayState = viewport.hidden && !paused && !hovered && !ticker.contains(document.activeElement)
+            const state = viewport.hidden && !paused && !hovered && !ticker.contains(document.activeElement)
                 && !document.hidden && !reducedMotion.matches ? 'running' : 'paused';
+            tickerLanes.querySelectorAll('.news-ticker-track').forEach(track => {
+                track.style.animationPlayState = state;
+            });
         }
         function updateControls() {
             const collapsed = viewport.hidden;
@@ -898,15 +903,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         function sizeTicker() {
             if (!viewport.hidden || !ticker.clientWidth) return;
-            Array.from(track.children).forEach(group => group.style.minWidth = ticker.clientWidth + 'px');
-            const width = track.firstElementChild?.getBoundingClientRect().width || 0;
-            if (width) track.style.setProperty('--news-crawl-duration', (width / 42) + 's');
+            tickerLanes.querySelectorAll('.news-ticker-lane').forEach((lane, i) => {
+                const track = lane.firstElementChild;
+                Array.from(track.children).forEach(group => group.style.minWidth = lane.clientWidth + 'px');
+                const width = track.firstElementChild?.getBoundingClientRect().width || 0;
+                const pixelsPerSecond = i === 0 ? 42 : 30;
+                if (width) track.style.setProperty('--news-crawl-duration', (width / pixelsPerSecond) + 's');
+            });
         }
         function buildHeadlines() {
-            track.replaceChildren();
-            const group = document.createElement('div');
-            group.className = 'news-ticker-group';
+            tickerLanes.replaceChildren();
+            const groups = Array.from({ length: desktopNews.matches && slides.length > 1 ? 2 : 1 }, () => {
+                const group = document.createElement('div');
+                group.className = 'news-ticker-group';
+                return group;
+            });
             slides.forEach((slide, i) => {
+              // Keep every teaser from one article together; the other lane covers different stories.
+              const group = groups[i % groups.length];
               window.NewsHeadlines.fromSlide(slide, currentLang).forEach(entry => {
                 const button = document.createElement('button');
                 button.type = 'button';
@@ -934,13 +948,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 group.appendChild(button);
               });
             });
-            // The second copy makes the crawl seamless, without duplicate tab stops.
-            const duplicate = group.cloneNode(true);
-            duplicate.classList.add('news-ticker-copy');
-            duplicate.setAttribute('aria-hidden', 'true');
-            duplicate.querySelectorAll('button').forEach(button => button.tabIndex = -1);
-            track.append(group, duplicate);
+            groups.forEach(group => {
+                const lane = document.createElement('div');
+                lane.className = 'news-ticker-lane';
+                const track = document.createElement('div');
+                track.className = 'news-ticker-track';
+                // Each lane has its own seamless loop; duplicate headlines stay outside the tab order.
+                const duplicate = group.cloneNode(true);
+                duplicate.classList.add('news-ticker-copy');
+                duplicate.setAttribute('aria-hidden', 'true');
+                duplicate.querySelectorAll('button').forEach(button => button.tabIndex = -1);
+                track.append(group, duplicate);
+                lane.appendChild(track);
+                tickerLanes.appendChild(lane);
+            });
             ticker.scrollLeft = 0;
+            tickerLanes.querySelectorAll('.news-ticker-lane').forEach(lane => lane.scrollLeft = 0);
             sizeTicker();
             syncMotion();
         }
@@ -988,13 +1011,17 @@ document.addEventListener('DOMContentLoaded', () => {
             paused = false; // Minimizing resumes the headlines even after an explicit pause.
             updateControls();
             ticker.scrollLeft = 0;
+            tickerLanes.querySelectorAll('.news-ticker-lane').forEach(lane => lane.scrollLeft = 0);
             sizeTicker();
         });
         ticker.addEventListener('focusin', syncMotion);
         ticker.addEventListener('pointerenter', event => { hovered = event.pointerType !== 'touch'; syncMotion(); });
         ticker.addEventListener('pointerleave', () => { hovered = false; syncMotion(); });
         ticker.addEventListener('focusout', () => setTimeout(() => {
-            if (!ticker.contains(document.activeElement)) ticker.scrollLeft = 0;
+            if (!ticker.contains(document.activeElement)) {
+                ticker.scrollLeft = 0;
+                tickerLanes.querySelectorAll('.news-ticker-lane').forEach(lane => lane.scrollLeft = 0);
+            }
             syncMotion();
         }, 0));
         carousel.addEventListener('keydown', event => {
@@ -1007,6 +1034,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('visibilitychange', syncMotion);
         document.addEventListener('portfolio:languagechange', () => { buildHeadlines(); updateControls(); });
         reducedMotion.addEventListener('change', updateControls);
+        desktopNews.addEventListener('change', buildHeadlines);
         new ResizeObserver(() => {
             sizeTicker();
             if (!viewport.hidden) viewport.scrollTo({ left: index * viewport.clientWidth, behavior: 'instant' });

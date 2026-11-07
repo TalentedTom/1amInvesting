@@ -451,20 +451,15 @@ body.light-mode .news-headline .news-revision-negative { color: #b91c1c; }
 body.light-mode .news-headline .news-revision-neutral { color: var(--text-secondary); }
 .news-headline:hover { color: var(--accent); }
 .news-headline:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-/* Desktop headlines run in two stacked rows within each seamless crawl copy. */
+/* Separate news lanes keep stories distinct and scroll at independent speeds. */
+.news-ticker-lanes { display: grid; gap: 0.25rem; width: 100%; }
+.news-ticker-lane { min-width: 0; overflow: hidden; }
 @media (min-width: 1024px) {
-    .news-ticker-group {
-        display: grid;
-        grid-template-rows: repeat(2, 40px);
-        grid-auto-flow: column;
-        gap: 0.25rem 1.15rem;
-        align-items: stretch;
-    }
     .news-collapsed .news-carousel-toolbar { padding-top: 0.3rem; padding-bottom: 0.3rem; }
 }
 @keyframes news-crawl { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
-    .news-ticker { overflow-x: auto; }
+    .news-ticker-lane { overflow-x: auto; }
     .news-ticker-track { animation: none; }
     .news-ticker-copy { display: none; }
 }
