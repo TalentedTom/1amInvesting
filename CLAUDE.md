@@ -389,6 +389,9 @@ don't rebind it per render.
   post timestamp on startup so future bulletins follow this rule automatically.
 - The prior NAND/memory-first override is revoked. No topic is pinned.
 - Start minimized on every page load with a continuous, clickable headline strip.
+  Desktop widths of 1024px and above show two stacked headline rows in the
+  same scrolling loop. Smaller screens keep the single row. Preserve pause,
+  click-to-expand, newest-first order and reduced-motion manual scrolling.
   Compact two-line teasers prioritize company + signed, color-coded model-target
   revision, target quarter, then a short reason. news-headlines.js extracts
   structured model-change lists and keeps approved historical copy unchanged.
