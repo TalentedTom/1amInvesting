@@ -61,6 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 20x -> 1.0, 25x -> 1.25, 30x -> 1.5
     const multipleFactor = () => targetMultiple / BASE_MULTIPLE;
 
+    const personalBases = window.PersonalBase.create();
+    let displayRows = [];
+
     // Class-based sizing keeps the new split column independent of position.
     function colExtraClasses(col) {
         if (col === '_upsideMix') return ' col-upside-mix';
@@ -135,8 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function scaledEvUpside(row) {
         const k = multipleFactor();
         if (row._synthetic?.ev_method === 'weighted') {
-            const rows = window.PORTFOLIO_DATA[currentLang] || window.PORTFOLIO_DATA.en;
-            return window.SyntheticPortfolios.evUpside(row, rows, parseLooseNumber, TARGET_QUARTER, k);
+            const weighted = window.SyntheticPortfolios.evUpside(row, displayRows, parseLooseNumber, TARGET_QUARTER, k);
+            const ratio = k * parseLooseNumber(row[TARGET_QUARTER]) / parseLooseNumber(row['Current Price']);
+            return window.PersonalBase.syntheticEV(row, weighted, ratio);
         }
         const price = parseLooseNumber(row['Current Price']);
         const tgt = parseLooseNumber(row[TARGET_QUARTER]);
@@ -1465,7 +1469,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const etfInfoClose = document.getElementById('etf-info-close');
     let etfInfoPreviousOverflow = '';
     function openEtfInfo() {
-        const rows = (window.PORTFOLIO_DATA || {}).en || [];
+        const rows = displayRows;
         const row = rows.find(r => r.Ticker === 'DRAM');
         if (!row || !row._synthetic || etfInfoModal.open) return;
         const zh = currentLang === 'zh-CN';
@@ -1518,7 +1522,8 @@ document.addEventListener('DOMContentLoaded', () => {
         textElement('p', `${copy.total}: ${+(total * 100).toFixed(2)}%`).className = 'etf-weight-total';
         textElement('h3', copy.how);
         textElement('p', copy.formula);
-        textElement('p', `${copy.base} ${Number(row.Base).toFixed(0)}`);
+        textElement('p', `${row._baseCustom ? window.PersonalBase.labels(currentLang).personal + ':' : copy.base} ${Number(row.Base).toFixed(0)}`);
+        if (row._baseCustom) textElement('p', window.PersonalBase.labels(currentLang).etf).className = 'etf-model-note';
         if (row._synthetic.ev_method === 'weighted') {
             textElement('p', zh
                 ? 'EV Upside 为各持仓 EV Upside 的加权平均值，使用当前价格和有效目标季度。Base 分数单独取加权平均值。'
@@ -2096,13 +2101,15 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const fullData = window.PORTFOLIO_DATA;
             if (!fullData || !fullData[currentLang]) return;
-            const data = fullData[currentLang];
+            const data = personalBases.project(fullData[currentLang]);
+            displayRows = data;
             const enData = fullData['en'] || data;
             marketCapFilter?.setLabels(marketCapLabels());
 
             // Rebuild ETF forecasts after live quotes and before filtering/sorting.
             // Only synthetic rows change; ordinary Excel targets stay untouched.
             window.SyntheticPortfolios.refresh(data, QUARTER_COLS, parseLooseNumber, TARGET_QUARTER);
+            personalBases.finish(data, parseLooseNumber, TARGET_QUARTER);
             data.filter(row => row._synthetic).forEach(row => _qPctCache.delete(row));
 
             // Filter out empty rows AND apply the active filters. All are keyed
@@ -2516,6 +2523,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Archive divider has its own button handler; clicks on the
                 // divider row shouldn't fall through to row-expand.
                 if (e.target.closest('.archive-divider')) return;
+                if (e.target.closest('[data-base-ticker]')) return;
                 // Star must be tested BEFORE .ticker-symbol below: it lives
                 // inside the ticker cell, so without this the click would
                 // fall through and open the deep-dive modal.
@@ -2642,6 +2650,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function formatCell(colName, value, row) {
+        if (colName === 'Base' && row && (value == null || value === '')) {
+            return window.PersonalBase.badge(row, '<span>—</span>', currentLang);
+        }
         if (colName === '_upsideMix') {
             const mix = row && upsideMix(row);
             if (!mix) return `<span class="mix-na" title="${tr('mix_na')}">—</span>`;
@@ -2870,7 +2881,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ? `background:${c.bg};color:${c.text};`
                     : `background:${c.bg};color:${c.text};border-color:${c.bg};`;
                 const displayScore = colName === 'Base' ? scoreNum.toFixed(0) : value;
-                return `<span class="${cls}" style="${style}">${displayScore}</span>`;
+                const badge = `<span class="${cls}" style="${style}">${displayScore}</span>`;
+                return colName === 'Base' ? window.PersonalBase.badge(row, badge, currentLang) : badge;
             }
             return `<span style="font-weight: 600;">${value}</span>`;
         }
@@ -2903,6 +2915,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (row) { row.classList.add('row-expanded'); row.tabIndex = -1; row.scrollIntoView({block: 'center'}); row.focus({preventScroll: true}); }
         }
     });
+    window.PersonalBase.editor({store: personalBases, getRows: () => displayRows, language: () => currentLang, onChange: renderData});
     marketCapFilter = window.MarketCaps.create({container: document.getElementById('market-cap-filter'), onChange: renderData, labels: marketCapLabels()});
     fetch('market-caps.json', {cache: 'no-store'}).then(r => r.ok ? r.json() : null).then(snapshot => {
         if (marketCapFilter.setSnapshot(snapshot)) renderData();

@@ -12,7 +12,7 @@ immediately. If you're reading this on a new machine, also read the
 A static, single-page portfolio dashboard at **www.1aminvesting.com** tracking
 the owner's "AI infrastructure & supply chain" stock book. Deployed on
 **Netlify** (Pro, ~3000 build credits/month). The owner is **Tom Szczypka**
-(GitHub: `TalentedTom`, X: `@TomSzczypka`). Repo:
+(GitHub: `TalentedTom`, X: `@StocksMathPoker`, TradingView: `TalentedInvestor`). Repo:
 `https://github.com/TalentedTom/1amInvesting`.
 
 The site is plain HTML/CSS/vanilla JS — no framework, no build step. Netlify
@@ -268,6 +268,31 @@ ticker across rebuilds. The tbody click handler is bound ONCE (guard flag) —
 don't rebind it per render.
 
 ---
+
+## Personal Base scores (November 7, 2026)
+
+- The header has small X (@StocksMathPoker) and TradingView (TalentedInvestor)
+  profile links immediately before language controls. Preserve these links.
+- `base-overrides.js` stores whole-number 0–100 personal scores by canonical
+  ticker in localStorage `personalBaseScores_v1`. Changes apply to the visitor's
+  browser and survive reloads, language/view/scenario changes and live quotes.
+- Click a Base in the detailed table, card footer or company overview to edit.
+  Amber highlights identify personal scores and DRAM Bases affected by holdings.
+  Use Excel Base resets that ticker to the current source. The ETF reset uses
+  its model Base. A failed storage write is disclosed as applying for this visit.
+- Project fresh display copies on each render. Preserve `PORTFOLIO_DATA`, source
+  Base scores, quarterly targets, PDFs and all public/publisher valuations.
+  Derive EV, the card price target and Base-dependent ranks from personal scores.
+  Unweighted upside, quarterly forecasts and the upside driver retain their
+  established target/price formulas. Default visitors keep existing calculations.
+- Apply constituent overrides before rebuilding DRAM: its weighted Base and
+  separately weighted holdings EV reflect those choices. A direct DRAM override
+  scales its holdings-weighted return multiple by personal Base / current
+  weighted Base; resetting it retains any constituent choices. Zero weighted
+  Base uses the ETF target/price ratio as its defined fallback. Explain this
+  in the editor, and preserve the original ETF formulas for default visitors.
+- Tests: `node --test tests/base-overrides.test.cjs` plus browser checks of both
+  views, live prices, reset, persistence, zero scores, language, scenarios and DRAM.
 
 ## Custom DRAM ETF model (September 2026)
 

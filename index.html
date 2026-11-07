@@ -21,7 +21,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@TomSzczypka">
+    <meta name="twitter:creator" content="@StocksMathPoker">
     <meta name="twitter:title" content="1amInvesting — AI supply-chain portfolio, live-scored">
     <meta name="twitter:description" content="Investing in the generational AI buildout. Live EV-scored portfolio of AI infrastructure &amp; supply-chain stocks.">
     <meta name="twitter:image" content="https://www.1aminvesting.com/assets/og-card.png">
@@ -59,6 +59,10 @@
                     </div>
                 </div>
                 <div class="controls-area">
+                    <nav class="profile-links" aria-label="Follow the author">
+                        <a class="profile-link" href="https://x.com/StocksMathPoker" target="_blank" rel="noopener noreferrer" aria-label="@StocksMathPoker on X" title="@StocksMathPoker on X"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.1-8.2L.8 2h6.5l4.5 6.7L18.9 2Zm-1.1 18h1.7L6.4 3.9H4.6L17.8 20Z"/></svg></a>
+                        <a class="profile-link" href="https://www.tradingview.com/u/TalentedInvestor/" target="_blank" rel="noopener noreferrer" aria-label="TalentedInvestor on TradingView" title="TalentedInvestor on TradingView"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 7h10M7 7v11M12 12l4 6 6-11"/></svg></a>
+                    </nav>
                     <div class="lang-selector">
                         <button class="lang-btn flag-btn active" data-lang="en" aria-label="English" title="English">
                             <svg class="flag-icon" viewBox="0 0 22 14" width="22" height="14" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -1277,6 +1281,19 @@
         <p id="report-dialog-status" role="status" aria-live="polite"></p>
     </dialog>
 
+    <dialog id="base-score-dialog" class="base-score-dialog" aria-labelledby="base-score-title" aria-describedby="base-score-note">
+        <form novalidate>
+            <h2 id="base-score-title" data-base-title>Your Base score</h2>
+            <p data-base-source></p>
+            <label for="base-score-input">Your score (0–100)</label>
+            <input id="base-score-input" type="number" min="0" max="100" step="1" inputmode="numeric" required autocomplete="off">
+            <p id="base-score-note" data-base-note></p>
+            <p data-base-etf hidden></p>
+            <p data-base-status role="status" aria-live="polite"></p>
+            <div class="base-score-actions"><button type="button" data-base-reset>Use Excel Base</button><button type="button" data-base-cancel>Cancel</button><button type="submit" data-base-save>Save Base</button></div>
+        </form>
+    </dialog>
+
     <dialog id="company-overview" class="company-overview" aria-labelledby="company-overview-title">
         <button type="button" class="overview-close" data-overview-close autofocus data-i18n="cards_close">Back to companies ×</button>
         <div data-overview-content></div>
@@ -1292,6 +1309,7 @@
 
     <script src="data.js"></script>
     <script src="synthetic-portfolios.js"></script>
+    <script src="base-overrides.js"></script>
     <script src="upside-breakdown.js"></script>
     <script src="report-reader.js"></script>
     <script src="report-links.js"></script>

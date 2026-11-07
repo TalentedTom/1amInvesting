@@ -56,6 +56,7 @@
             dialog.scrollTop = scrollTop;
         }
         grid.addEventListener('click', event => {
+            if (event.target.closest('[data-base-ticker]')) return;
             const star = event.target.closest('[data-card-star]');
             if (star) { onStar(star.dataset.cardStar); return; }
             const button = event.target.closest('[data-company-open]');
@@ -86,8 +87,8 @@
             render(nextRows, nextLabels) {
                 rows = nextRows; labels = nextLabels;
                 const focused = grid.contains(document.activeElement) ? document.activeElement : null;
-                const focusTicker = focused?.dataset.cardStar || focused?.dataset.companyOpen;
-                const focusKind = focused?.dataset.cardStar ? 'data-card-star' : 'data-company-open';
+                const focusTicker = focused?.dataset.cardStar || focused?.dataset.baseTicker || focused?.dataset.companyOpen;
+                const focusKind = focused?.dataset.cardStar ? 'data-card-star' : focused?.dataset.baseTicker ? 'data-base-ticker' : 'data-company-open';
                 const html = rows.map(row => {
                     const starLabel = (row.starred ? labels.unstar : labels.star) + ': ' + row.name;
                     return `<article class="company-card${row.starred ? ' company-starred' : ''}${row.archived ? ' company-archived' : ''}" data-card-ticker="${escape(row.ticker)}">` +
@@ -98,6 +99,7 @@
                         targetMetric(row, labels) + `<span class="card-horizon">${escape(labels.horizon)}</span></span>` +
                         `<span class="card-driver" id="card-driver-${escape(row.ticker)}"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</span>` +
                         `<span class="card-bottom"><span>${escape(row.hasReport ? labels.researchAvailable : row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
+                        `<div class="card-base-control"><span class="card-label">${escape(labels.base)}</span>${row.base}</div>` +
                         `<button type="button" class="card-star" data-card-star="${escape(row.ticker)}" aria-pressed="${row.starred}" aria-label="${escape(starLabel)}" title="${escape(starLabel)}">${row.starred ? '★' : '☆'}</button></article>`;
                 }).join('') || `<p class="company-empty">${escape(labels.empty)}</p>`;
                 // Avoid replacing focused buttons on no-change polls.
