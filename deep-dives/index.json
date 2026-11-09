@@ -51,8 +51,8 @@
   },
   "005930.KS": {
     "format": "pdf",
-    "version": "c61bdca30e9fd325",
-    "updated": "2026-11-06T20:26:30.895000+00:00"
+    "version": "64158eb3840c3bee",
+    "updated": "2026-11-07T01:56:37.182000+00:00"
   },
   "009150.KS": {
     "format": "pdf",
@@ -541,13 +541,13 @@
   },
   "COHR": {
     "format": "pdf",
-    "version": "e9ede990df55f9a3",
-    "updated": "2026-11-05T04:12:21.383000+00:00"
+    "version": "d92f95eae30bde96",
+    "updated": "2026-11-08T09:32:57.210000+00:00"
   },
   "CRDO": {
     "format": "pdf",
-    "version": "fa2d113f8ad77e5a",
-    "updated": "2026-10-12T20:23:23.564000+00:00"
+    "version": "f682b228b9ba3782",
+    "updated": "2026-11-07T06:45:39.970000+00:00"
   },
   "CRWV": {
     "format": "pdf",
@@ -566,8 +566,8 @@
   },
   "DELL": {
     "format": "pdf",
-    "version": "4bed0e696e20562e",
-    "updated": "2026-10-21T06:06:57.953000+00:00"
+    "version": "bcdf3ef7c613fbd5",
+    "updated": "2026-11-07T05:03:43.086000+00:00"
   },
   "ENS": {
     "format": "pdf",
@@ -641,8 +641,8 @@
   },
   "HPE": {
     "format": "pdf",
-    "version": "4bd168a38cf01736",
-    "updated": "2026-09-30T18:56:15.163000+00:00"
+    "version": "9a8f0e8fddf2fd4d",
+    "updated": "2026-11-08T03:42:30.899000+00:00"
   },
   "HPS-A.TO": {
     "format": "pdf",
@@ -696,8 +696,8 @@
   },
   "META": {
     "format": "pdf",
-    "version": "fcd795498eb764bc",
-    "updated": "2026-10-22T01:10:44.180000+00:00"
+    "version": "27f1d7387baa804a",
+    "updated": "2026-11-07T06:24:23.362000+00:00"
   },
   "MITK": {
     "format": "pdf",
@@ -721,8 +721,8 @@
   },
   "MSFT": {
     "format": "pdf",
-    "version": "41cdabb7f2df16a7",
-    "updated": "2026-11-04T20:44:45.759000+00:00"
+    "version": "e8d6c855a43387ca",
+    "updated": "2026-11-07T11:37:42.777000+00:00"
   },
   "MTSI": {
     "format": "pdf",
@@ -756,8 +756,8 @@
   },
   "NVDA": {
     "format": "pdf",
-    "version": "0d3788c5dc6d06f3",
-    "updated": "2026-10-11T04:57:46.131000+00:00"
+    "version": "1dfd1fe91d92be6b",
+    "updated": "2026-11-07T10:16:54.670000+00:00"
   },
   "NVTS": {
     "format": "pdf",
@@ -921,8 +921,8 @@
   },
   "TSEM": {
     "format": "pdf",
-    "version": "287c470e47fe4308",
-    "updated": "2026-11-04T22:04:19.103000+00:00"
+    "version": "345ae410e76ddbaa",
+    "updated": "2026-11-08T07:34:25.063000+00:00"
   },
   "TSM": {
     "format": "pdf",
@@ -936,8 +936,8 @@
   },
   "TXN": {
     "format": "pdf",
-    "version": "ba588041cd979a8b",
-    "updated": "2026-10-08T01:10:07.943000+00:00"
+    "version": "4cc1e0725ab7ba46",
+    "updated": "2026-11-07T04:00:34.521000+00:00"
   },
   "VIAV": {
     "format": "pdf",
