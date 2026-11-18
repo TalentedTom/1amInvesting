@@ -76,8 +76,8 @@
   },
   "2344.TW": {
     "format": "pdf",
-    "version": "6e936f4738536f92",
-    "updated": "2026-10-29T08:36:48.328000+00:00"
+    "version": "376e66043dde2e4e",
+    "updated": "2026-11-18T09:31:11.442000+00:00"
   },
   "2408.TW": {
     "format": "pdf",
@@ -166,8 +166,8 @@
   },
   "3017.TW": {
     "format": "pdf",
-    "version": "b1f7835dd8b188ac",
-    "updated": "2026-10-07T15:35:43.615000+00:00"
+    "version": "e61ab99a5b07fdd4",
+    "updated": "2026-11-18T09:42:22.972000+00:00"
   },
   "3037.TW": {
     "format": "pdf",
@@ -221,8 +221,8 @@
   },
   "4977.TW": {
     "format": "pdf",
-    "version": "3ecc2d03b9a5b2c3",
-    "updated": "2026-10-22T07:23:44.480000+00:00"
+    "version": "347148cda2d23f24",
+    "updated": "2026-11-18T09:53:53.482000+00:00"
   },
   "600330.SH": {
     "format": "pdf",
@@ -276,13 +276,13 @@
   },
   "6789.TW": {
     "format": "pdf",
-    "version": "c781eec86e9d607a",
-    "updated": "2026-10-08T00:06:17.362000+00:00"
+    "version": "a22bc8d5eedad74c",
+    "updated": "2026-11-18T10:28:44.801000+00:00"
   },
   "6805.TW": {
     "format": "pdf",
-    "version": "27abc8a362cfae24",
-    "updated": "2026-10-07T15:24:52.980000+00:00"
+    "version": "33bedd3c42300fcf",
+    "updated": "2026-11-18T07:51:51.706000+00:00"
   },
   "6830.TWO": {
     "format": "pdf",
@@ -371,8 +371,8 @@
   },
   "ACMR": {
     "format": "pdf",
-    "version": "54cc77c62f14fee6",
-    "updated": "2026-10-02T13:12:29.523000+00:00"
+    "version": "8463fd44f6f70ec0",
+    "updated": "2026-11-18T09:25:36.827000+00:00"
   },
   "AEHR": {
     "format": "pdf",
@@ -421,8 +421,8 @@
   },
   "AMPX": {
     "format": "pdf",
-    "version": "31a9d0535d18940c",
-    "updated": "2026-10-02T13:12:29.834000+00:00"
+    "version": "e9368c020d110555",
+    "updated": "2026-11-18T10:11:16.730000+00:00"
   },
   "AMZN": {
     "format": "pdf",
@@ -446,8 +446,8 @@
   },
   "APLD": {
     "format": "pdf",
-    "version": "b6b673ce558cc830",
-    "updated": "2026-10-07T07:34:18.038000+00:00"
+    "version": "981434f35c8ac6a4",
+    "updated": "2026-11-18T08:20:49.159000+00:00"
   },
   "ARM": {
     "format": "pdf",
@@ -461,8 +461,8 @@
   },
   "ASTS": {
     "format": "pdf",
-    "version": "8e7a9824fb1e8064",
-    "updated": "2026-11-03T02:07:18.572000+00:00"
+    "version": "0c2bd4172c17470a",
+    "updated": "2026-11-18T10:22:51.305000+00:00"
   },
   "ATS.VI": {
     "format": "pdf",
@@ -501,8 +501,8 @@
   },
   "BRUN": {
     "format": "pdf",
-    "version": "b1d773af1d3a9021",
-    "updated": "2026-10-07T13:06:33.426000+00:00"
+    "version": "fd0cc28fa1a937f0",
+    "updated": "2026-11-18T07:34:26.438000+00:00"
   },
   "BTI": {
     "format": "pdf",
@@ -521,8 +521,8 @@
   },
   "CBRS": {
     "format": "pdf",
-    "version": "d25c41c7dd7c5054",
-    "updated": "2026-10-29T11:26:48.010000+00:00"
+    "version": "993a71fcbc447022",
+    "updated": "2026-11-18T08:29:44.641000+00:00"
   },
   "CGNX": {
     "format": "pdf",
@@ -616,8 +616,8 @@
   },
   "FORM": {
     "format": "pdf",
-    "version": "3ac77374f77d5da3",
-    "updated": "2026-10-13T01:43:33.445000+00:00"
+    "version": "9905e30baaa48ce4",
+    "updated": "2026-11-18T09:36:50.802000+00:00"
   },
   "FSLR": {
     "format": "pdf",
@@ -731,8 +731,8 @@
   },
   "MTSI": {
     "format": "pdf",
-    "version": "d0cc7bf2cb8e9086",
-    "updated": "2026-10-23T15:34:15.002000+00:00"
+    "version": "c27add32e47907cb",
+    "updated": "2026-11-18T09:48:12.912000+00:00"
   },
   "MU": {
     "format": "pdf",
@@ -751,8 +751,8 @@
   },
   "NRG": {
     "format": "pdf",
-    "version": "46c26ba50ec7326f",
-    "updated": "2026-10-11T08:18:55.892000+00:00"
+    "version": "560df17b45aa792d",
+    "updated": "2026-11-18T08:57:56.807000+00:00"
   },
   "NRGV": {
     "format": "pdf",
@@ -771,8 +771,8 @@
   },
   "ON": {
     "format": "pdf",
-    "version": "fc0ffb2be4dffe51",
-    "updated": "2026-10-08T00:23:01.214000+00:00"
+    "version": "b1961fe55c393b2c",
+    "updated": "2026-11-18T09:14:12.062000+00:00"
   },
   "ORCL": {
     "format": "pdf",
@@ -781,8 +781,8 @@
   },
   "OSS": {
     "format": "pdf",
-    "version": "5baf9909661a2159",
-    "updated": "2026-09-21T23:13:25.616000+00:00"
+    "version": "e1227b10f8767550",
+    "updated": "2026-11-18T09:19:52.201000+00:00"
   },
   "OUST": {
     "format": "pdf",
@@ -806,8 +806,8 @@
   },
   "PLTR": {
     "format": "pdf",
-    "version": "cfc56f92f45a1948",
-    "updated": "2026-10-24T23:20:56.493000+00:00"
+    "version": "adac100e7a4ab4b1",
+    "updated": "2026-11-18T08:43:18.605000+00:00"
   },
   "PM": {
     "format": "pdf",
@@ -836,13 +836,13 @@
   },
   "RKLB": {
     "format": "pdf",
-    "version": "6258e13cb79830d3",
-    "updated": "2026-11-03T10:29:46.791000+00:00"
+    "version": "2b40264a8e1aa5b1",
+    "updated": "2026-11-18T10:17:11.148000+00:00"
   },
   "RRX": {
     "format": "pdf",
-    "version": "191a29d4f322d0b1",
-    "updated": "2026-10-08T00:57:27.152000+00:00"
+    "version": "7397f9b2353bddfc",
+    "updated": "2026-11-18T10:05:32.067000+00:00"
   },
   "SE": {
     "format": "pdf",
@@ -856,8 +856,8 @@
   },
   "SHLS": {
     "format": "pdf",
-    "version": "24487204f6559d39",
-    "updated": "2026-09-21T23:17:58.335000+00:00"
+    "version": "f0c3029d660d3ca5",
+    "updated": "2026-11-18T07:43:54.573000+00:00"
   },
   "SHMD": {
     "format": "pdf",
@@ -916,13 +916,13 @@
   },
   "SYNA": {
     "format": "pdf",
-    "version": "c644843533492ec1",
-    "updated": "2026-10-08T00:23:04.128000+00:00"
+    "version": "4108446ea2a6802b",
+    "updated": "2026-11-18T09:08:38.821000+00:00"
   },
   "TER": {
     "format": "pdf",
-    "version": "12b7dbbdae37848b",
-    "updated": "2026-10-20T10:52:21.146000+00:00"
+    "version": "ac3624e9a3ba90fd",
+    "updated": "2026-11-18T08:37:01.545000+00:00"
   },
   "TSEM": {
     "format": "pdf",
@@ -946,13 +946,13 @@
   },
   "VIAV": {
     "format": "pdf",
-    "version": "ec70776592818c3e",
-    "updated": "2026-10-11T14:55:53.239000+00:00"
+    "version": "4ea640f074087e2e",
+    "updated": "2026-11-18T09:59:49.884000+00:00"
   },
   "VICR": {
     "format": "pdf",
-    "version": "7a8c3c17a0bd8b68",
-    "updated": "2026-10-01T05:02:49.861000+00:00"
+    "version": "ef4ae9ac04c8af4d",
+    "updated": "2026-11-18T08:12:18.741000+00:00"
   },
   "VRT": {
     "format": "pdf",
