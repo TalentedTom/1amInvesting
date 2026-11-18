@@ -166,7 +166,27 @@
         ['Cerebras (CBRS) / Oracle', ['Cerebras (CBRS)', 'Oracle']]
     ]);
 
+    function compactRevision(change) {
+        const value = String(change || '').trim();
+        const base = value.match(/^[↑↓]?\s*(Base|基础分)\s+(\d+)\s*→\s*(\d+)$/i);
+        if (base) {
+            const points = Number(base[3]) - Number(base[2]);
+            return points ? base[1] + ' ' + (points < 0 ? '−' : '+') + Math.abs(points) : '';
+        }
+
+        const percentage = value
+            .replace(/^(?:about\b|approximately\b|approx\.?|around\b|[≈~约約])\s*/i, '')
+            .match(/^([+−\-↑↓])\s*(<|less\s+than|低于|低於|不到)?\s*(\d+(?:\.\d+)?)\s*%$/i);
+        if (!percentage || !Number(percentage[3])) return '';
+        const [, direction, bound, amount] = percentage;
+        const down = tone(direction) === 'negative';
+        const prefix = bound ? (down ? '↓ <' : '↑ <') : (down ? '−' : '+');
+        return prefix + amount + '%';
+    }
+
     function companyEntries(entry, companies) {
+        const change = compactRevision(entry.change);
+        if (!change) return [];
         const labels = COMPANY_GROUPS.get(entry.company) || [entry.company];
         return labels.flatMap(label => {
             const tag = label.match(/\s*\(([A-Z0-9][A-Z0-9.-]*(?:\s*\/\s*[A-Z0-9][A-Z0-9.-]*)*)\)$/);
@@ -175,13 +195,13 @@
             if (!entry.ticker && !tag && !TICKER_ALIASES.has(label) && !companies.has(label)) return [];
             const bareTicker = symbols.includes(label) && companies.has(label);
             const name = tag ? label.slice(0, tag.index).trim() : bareTicker ? companies.get(label) : label;
-            return [{...entry, company: name, tickers}];
+            return [{...entry, company: name, tickers, change}];
         });
     }
     function render(entry) {
-        const change = entry.change
-            ? '<span class="news-revision news-revision-' + tone(entry.change) + '">' + escape(entry.change) + '</span>' : '';
-        return '<strong>' + escape(entry.company) + '</strong>' + change;
+        if (!entry.change) return '';
+        return '<strong>' + escape(entry.company) + '</strong>' +
+            '<span class="news-revision news-revision-' + tone(entry.change) + '">' + escape(entry.change) + '</span>';
     }
     function fromSlide(slide, language) {
         const chinese = language === 'zh-CN', pick = (en, zh) => chinese ? zh : en;

@@ -6,15 +6,25 @@ test('signed and qualified revisions retain their direction, including less-than
  for(const value of ['−5%','-0.96%','≈−4%','↓ <1%'])assert.equal(news.tone(value),'negative');
  assert.equal(news.tone('0%'),'neutral');assert.equal(news.tone(''),'neutral');
 });
-test('compact headlines show the company and qualified revision only', () => {
-    const html = news.render({
-        company: 'AAOI', change: '↓ <1%', metric: 'Q4’27 model target',
+test('compact headlines reduce qualified revisions to simple signed figures', () => {
+    const [entry] = news.companyEntries({
+        company: 'AAOI', change: '↓ less than 1%', metric: 'Q4’27 model target',
         reason: 'Accepted shipments remain the key test.'
-    });
+    }, new Map([['AAOI', 'AAOI']]));
+    const html = news.render(entry);
     assert.match(html, /<strong>AAOI<\/strong>/);
     assert.match(html, /news-revision-negative/);
     assert.match(html, /↓ &lt;1%/);
-    assert.doesNotMatch(html, /Q4’27|Accepted shipments/);
+    assert.doesNotMatch(html, /less than|Q4’27|Accepted shipments/);
+    const cases = [
+        ['about +5%', '+5%'], ['approximately −0.25%', '−0.25%'],
+        ['≈−35.5%', '−35.5%'], ['约+4%', '+4%'], ['↑ less than 0.5%', '↑ <0.5%'],
+        ['↑ Base 93→99', 'Base +6'], ['↓ 基础分 99→95', '基础分 −4']
+    ];
+    for (const [change, expected] of cases) {
+        const [headline] = news.companyEntries({company: 'Samsung (005930.KS)', change}, new Map());
+        assert.equal(headline.change, expected);
+    }
 });
 
 test('company and change text are escaped', () => {
@@ -29,19 +39,19 @@ test('stock labels use canonical watchlist symbols for listings and company alia
     assert.deepEqual(news.companyEntries({company: 'AAOI', change: '+5%'}, companies), [
         {company: 'Applied Optoelectronics', change: '+5%', tickers: ['AAOI']}
     ]);
-    assert.deepEqual(news.companyEntries({company: '爱思强 (AIXA)'}, companies), [
-        {company: '爱思强', tickers: ['AIXA.DE']}
+    assert.deepEqual(news.companyEntries({company: '爱思强 (AIXA)', change: '+2%'}, companies), [
+        {company: '爱思强', tickers: ['AIXA.DE'], change: '+2%'}
     ]);
-    assert.deepEqual(news.companyEntries({company: 'SK hynix (000660.KS / SKHY)'}, companies)[0].tickers, ['000660.KS', 'SKHY']);
-    assert.deepEqual(news.companyEntries({company: 'Anthropic'}, companies)[0].tickers, ['ANT']);
-    assert.deepEqual(news.companyEntries({company: 'Quarterly roll-forward'}, companies), []);
+    assert.deepEqual(news.companyEntries({company: 'SK hynix (000660.KS / SKHY)', change: '−2%'}, companies)[0].tickers, ['000660.KS', 'SKHY']);
+    assert.deepEqual(news.companyEntries({company: 'Anthropic', change: '+2%'}, companies)[0].tickers, ['ANT']);
+    assert.deepEqual(news.companyEntries({company: 'Quarterly roll-forward', change: '+2%'}, companies), []);
 });
 
-test('headlines split grouped stock updates while retaining the shared qualifier', () => {
+test('headlines split grouped stock updates and preserve the shared bound', () => {
     const group = {company: 'Coherent (COHR) and Tower (TSEM)', change: '↑ less than 0.5%'};
     const entries = news.companyEntries(group, new Map());
     assert.deepEqual(entries.map(({company, tickers, change}) => [company, tickers, change]), [
-        ['Coherent', ['COHR'], group.change], ['Tower', ['TSEM'], group.change]
+        ['Coherent', ['COHR'], '↑ <0.5%'], ['Tower', ['TSEM'], '↑ <0.5%']
     ]);
 });
 
@@ -64,5 +74,11 @@ test('new articles without supplied percentages retain approved text without inv
   querySelectorAll:()=>[]
  },'en')[0];
  assert.equal(entry.company,'New observation');assert.equal(entry.reason,'A scenario, not a confirmed forecast.');
- assert.equal(entry.change,undefined);assert.doesNotMatch(news.render(entry),/news-revision/);
+ assert.equal(entry.change,undefined);assert.equal(news.render(entry), '');
+});
+
+test('headlines omit named companies with missing, zero, or unchanged revisions', () => {
+    for (const change of [undefined, '', '0%', '+0.00%', '↑ Base 99→99', 'unchanged']) {
+        assert.deepEqual(news.companyEntries({company: 'Samsung (005930.KS)', change}, new Map()), []);
+    }
 });

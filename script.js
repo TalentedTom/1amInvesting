@@ -282,8 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
             news_starred: "Starred",
             news_starred_only: "Starred news only",
             news_no_stars: "Star a stock to see its news here.",
-            news_no_matches: "No bulletins for your starred stocks.",
-            news_no_headlines: "No company headlines.",
+            news_no_matches: "No revisions for your starred stocks.",
+            news_no_headlines: "No company revisions.",
             oct7_news_label: "Portfolio update",
             oct7_news_title: "58 new stocks added; SKHY Base rises to 99",
             oct7_news_date: "Posted 7 Oct 2026, 5:20 pm EDT",
@@ -421,8 +421,8 @@ document.addEventListener('DOMContentLoaded', () => {
             news_starred: "自选",
             news_starred_only: "只看自选股新闻",
             news_no_stars: "收藏股票后，即可在此查看相关消息。",
-            news_no_matches: "自选股暂无相关公告。",
-            news_no_headlines: "暂无公司新闻。",
+            news_no_matches: "自选股暂无调整。",
+            news_no_headlines: "暂无公司调整。",
             oct7_news_label: "股票覆盖更新",
             oct7_news_title: "新增 58 只股票；SKHY 基础分升至 99",
             oct7_news_date: "发布于 2026年10月7日 17:20 EDT",
@@ -994,14 +994,8 @@ document.addEventListener('DOMContentLoaded', () => {
             headlineStories = slides.flatMap(slide => {
                 const entries = window.NewsHeadlines.fromSlide(slide, currentLang)
                     .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies));
-                if (starredOnly) {
-                    slide.querySelectorAll('.news-stock-list li[data-news-ticker]').forEach(item => {
-                        const ticker = item.dataset.newsTicker;
-                        if (watchlist.has(ticker)) entries.push({company: companies.get(ticker) || ticker, tickers: [ticker]});
-                    });
-                }
                 const shown = entries.filter(entry => !starredOnly || entry.tickers.some(ticker => watchlist.has(ticker)));
-                const unique = [...new Map(shown.map(entry => [entry.company + ' ' + (entry.change || ''), entry])).values()];
+                const unique = [...new Map(shown.map(entry => [entry.company + ' ' + entry.change, entry])).values()];
                 return unique.length ? [{slide, entries: unique}] : [];
             });
             const matching = new Set(headlineStories.map(story => story.slide));
