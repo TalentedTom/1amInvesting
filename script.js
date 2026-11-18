@@ -279,6 +279,11 @@ document.addEventListener('DOMContentLoaded', () => {
             news_expand: "Expand news",
             news_position: "Bulletin {n} of {total}",
             news_slide: "slide",
+            news_starred: "Starred",
+            news_starred_only: "Starred news only",
+            news_no_stars: "Star a stock to see its news here.",
+            news_no_matches: "No bulletins for your starred stocks.",
+            news_no_headlines: "No company headlines.",
             oct7_news_label: "Portfolio update",
             oct7_news_title: "58 new stocks added; SKHY Base rises to 99",
             oct7_news_date: "Posted 7 Oct 2026, 5:20 pm EDT",
@@ -413,6 +418,11 @@ document.addEventListener('DOMContentLoaded', () => {
             news_expand: "\u5c55\u5f00\u65b0\u95fb",
             news_position: "\u7b2c {n} \u6761\uff0c\u5171 {total} \u6761",
             news_slide: "\u5e7b\u706f\u7247",
+            news_starred: "自选",
+            news_starred_only: "只看自选股新闻",
+            news_no_stars: "收藏股票后，即可在此查看相关消息。",
+            news_no_matches: "自选股暂无相关公告。",
+            news_no_headlines: "暂无公司新闻。",
             oct7_news_label: "股票覆盖更新",
             oct7_news_title: "新增 58 只股票；SKHY 基础分升至 99",
             oct7_news_date: "发布于 2026年10月7日 17:20 EDT",
@@ -780,6 +790,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (watchlistOnly && watchlist.size === 0) watchlistOnly = false;
         saveWatchlist();
         syncWatchlistButton();
+        document.dispatchEvent(new Event('portfolio:watchlistchange'));
         renderData();
     };
 
@@ -858,7 +869,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const viewport = document.getElementById('news-viewport');
         const ticker = document.getElementById('news-ticker');
         const tickerLanes = document.getElementById('news-ticker-track');
-        tickerLanes.className = 'news-ticker-lanes';
+        const empty = document.getElementById('news-empty');
         const desktopNews = window.matchMedia('(min-width: 1024px)');
         const slides = Array.from(viewport.querySelectorAll('[data-news-slide]'));
         const postedAt = slide => Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '') || 0;
@@ -868,10 +879,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const next = document.getElementById('news-next');
         const autoplay = document.getElementById('news-autoplay');
         const collapse = document.getElementById('news-collapse');
+        const starred = document.getElementById('news-starred');
         const position = document.getElementById('news-position');
         const announcement = document.getElementById('news-announcement');
         const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const newsFilterKey = 'newsStarredOnly_v1';
+        let starredOnly = false;
+        try { starredOnly = localStorage.getItem(newsFilterKey) === '1'; } catch (_) {}
         let index = 0, paused = false, hovered = false, settleTimer;
+        let visibleSlides = slides, headlineStories = [], linkedSlide = null;
 
         function syncMotion() {
             const state = viewport.hidden && !paused && !hovered && !ticker.contains(document.activeElement)
@@ -884,11 +900,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const collapsed = viewport.hidden;
             carousel.classList.toggle('news-collapsed', collapsed);
             ticker.hidden = !collapsed;
-            position.textContent = (index + 1) + ' / ' + slides.length;
-            position.setAttribute('aria-label', tr('news_position', { n: index + 1, total: slides.length }));
+            position.textContent = (index + 1) + ' / ' + visibleSlides.length;
+            position.setAttribute('aria-label', tr('news_position', { n: index + 1, total: visibleSlides.length }));
             previous.hidden = next.hidden = position.hidden = collapsed;
-            previous.disabled = next.disabled = slides.length < 2;
-            autoplay.hidden = !collapsed || reducedMotion.matches;
+            previous.disabled = next.disabled = visibleSlides.length < 2;
+            autoplay.hidden = !collapsed || !headlineStories.length || reducedMotion.matches;
+            collapse.disabled = collapsed && !visibleSlides.length;
+            starred.setAttribute('aria-pressed', String(starredOnly));
             autoplay.textContent = paused ? '\u25b6' : '\u23f8';
             autoplay.setAttribute('aria-label', tr(paused ? 'news_play' : 'news_pause'));
             autoplay.title = tr(paused ? 'news_play' : 'news_pause');
@@ -896,12 +914,15 @@ document.addEventListener('DOMContentLoaded', () => {
             collapse.setAttribute('aria-expanded', String(!collapsed));
             collapse.setAttribute('aria-label', tr(collapsed ? 'news_expand' : 'news_collapse'));
             collapse.title = tr(collapsed ? 'news_expand' : 'news_collapse');
-            slides.forEach((slide, i) => {
-                slide.inert = collapsed || i !== index;
-                slide.setAttribute('aria-hidden', String(collapsed || i !== index));
+            const active = visibleSlides[index];
+            slides.forEach(slide => {
+                slide.inert = collapsed || slide !== active;
+                slide.setAttribute('aria-hidden', String(slide.inert));
+            });
+            visibleSlides.forEach((slide, i) => {
                 slide.setAttribute('role', 'group');
                 slide.setAttribute('aria-roledescription', tr('news_slide'));
-                slide.setAttribute('aria-label', tr('news_position', { n: i + 1, total: slides.length }));
+                slide.setAttribute('aria-label', tr('news_position', { n: i + 1, total: visibleSlides.length }));
             });
             syncMotion();
         }
@@ -909,50 +930,44 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!viewport.hidden || !ticker.clientWidth) return;
             tickerLanes.querySelectorAll('.news-ticker-lane').forEach((lane, i) => {
                 const track = lane.firstElementChild;
-                Array.from(track.children).forEach(group => group.style.minWidth = lane.clientWidth + 'px');
-                const width = track.firstElementChild?.getBoundingClientRect().width || 0;
+                const width = track.firstElementChild.getBoundingClientRect().width;
+                lane.classList.toggle('news-lane-static', width <= lane.clientWidth);
                 const pixelsPerSecond = i === 0 ? 42 : 30;
                 if (width) track.style.setProperty('--news-crawl-duration', (width / pixelsPerSecond) + 's');
             });
         }
         function buildHeadlines() {
             tickerLanes.replaceChildren();
-            const groups = Array.from({ length: desktopNews.matches && slides.length > 1 ? 2 : 1 }, () => {
+            empty.hidden = headlineStories.length > 0;
+            if (!empty.hidden) {
+                empty.textContent = tr(starredOnly
+                    ? (watchlist.size ? 'news_no_matches' : 'news_no_stars')
+                    : 'news_no_headlines');
+            }
+            const groups = Array.from({ length: desktopNews.matches && headlineStories.length > 1 ? 2 : 1 }, () => {
                 const group = document.createElement('div');
                 group.className = 'news-ticker-group';
                 return group;
             });
-            slides.forEach((slide, i) => {
-              // Keep every teaser from one article together; the other lane covers different stories.
-              const group = groups[i % groups.length];
-              window.NewsHeadlines.fromSlide(slide, currentLang).forEach(entry => {
-                const button = document.createElement('button');
-                button.type = 'button';
-                button.className = 'news-headline';
-                button.dataset.newsIndex = i;
-                button.dataset.newsArticle = slide.id;
-                button.innerHTML = window.NewsHeadlines.render(entry);
+            headlineStories.forEach(({slide, entries}, i) => {
+                const group = groups[i % groups.length];
                 const posted = slide.querySelector('.news-timestamps time[datetime]');
-                if (posted && Number.isFinite(Date.parse(posted.dateTime))) {
-                    const date = document.createElement('time');
-                    date.className = 'news-headline-date';
-                    date.dateTime = posted.dateTime;
-                    date.textContent = new Date(posted.dateTime).toLocaleDateString(currentLang, {
-                        timeZone: 'America/Toronto', month: 'short', day: 'numeric', year: '2-digit'
-                    });
-                    date.title = posted.textContent;
-                    button.querySelector('.news-headline-top').append(date);
-                }
-                const accessible = [entry.company, entry.change, entry.metric, entry.reason, posted?.textContent, tr('news_expand')].filter(Boolean).join('. ');
-                button.title = accessible;
-                button.setAttribute('aria-label', accessible);
-                button.lang = entry.lang || slide.lang || currentLang;
-                button.setAttribute('aria-controls', 'news-viewport');
-                button.setAttribute('aria-expanded', 'false');
-                group.appendChild(button);
-              });
+                entries.forEach(entry => {
+                    const button = document.createElement('button');
+                    button.type = 'button';
+                    button.className = 'news-headline';
+                    button.dataset.newsArticle = slide.id;
+                    button.innerHTML = window.NewsHeadlines.render(entry);
+                    const accessible = [entry.company, entry.change, entry.metric, posted?.textContent, tr('news_expand')].filter(Boolean).join('. ');
+                    button.title = accessible;
+                    button.setAttribute('aria-label', accessible);
+                    button.lang = entry.lang || slide.lang || currentLang;
+                    button.setAttribute('aria-controls', 'news-viewport');
+                    button.setAttribute('aria-expanded', 'false');
+                    group.appendChild(button);
+                });
             });
-            groups.forEach(group => {
+            groups.filter(group => group.childElementCount).forEach(group => {
                 const lane = document.createElement('div');
                 lane.className = 'news-ticker-lane';
                 const track = document.createElement('div');
@@ -971,37 +986,75 @@ document.addEventListener('DOMContentLoaded', () => {
             sizeTicker();
             syncMotion();
         }
+        function refreshNews() {
+            clearTimeout(settleTimer);
+            const active = visibleSlides[index];
+            const data = window.PORTFOLIO_DATA;
+            const companies = new Map((data?.[currentLang] || data?.en || []).map(row => [row.Ticker, row.Name || row.Ticker]));
+            headlineStories = slides.flatMap(slide => {
+                const entries = window.NewsHeadlines.fromSlide(slide, currentLang)
+                    .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies));
+                if (starredOnly) {
+                    slide.querySelectorAll('.news-stock-list li[data-news-ticker]').forEach(item => {
+                        const ticker = item.dataset.newsTicker;
+                        if (watchlist.has(ticker)) entries.push({company: companies.get(ticker) || ticker, tickers: [ticker]});
+                    });
+                }
+                const shown = entries.filter(entry => !starredOnly || entry.tickers.some(ticker => watchlist.has(ticker)));
+                const unique = [...new Map(shown.map(entry => [entry.company + ' ' + (entry.change || ''), entry])).values()];
+                return unique.length ? [{slide, entries: unique}] : [];
+            });
+            const matching = new Set(headlineStories.map(story => story.slide));
+            visibleSlides = starredOnly ? slides.filter(slide => slide === linkedSlide || matching.has(slide)) : slides;
+            const visible = new Set(visibleSlides);
+            slides.forEach(slide => { slide.hidden = !visible.has(slide); });
+            index = Math.max(0, visibleSlides.indexOf(active));
+            if (!visibleSlides.length) viewport.hidden = true;
+            buildHeadlines();
+            if (viewport.hidden) updateControls();
+            else goTo(index, true);
+        }
         function goTo(target, instant = false) {
-            if (viewport.hidden || !slides.length) return;
-            index = (target + slides.length) % slides.length;
+            if (viewport.hidden || !visibleSlides.length) return;
+            index = (target + visibleSlides.length) % visibleSlides.length;
             updateControls();
             viewport.scrollTo({ left: index * viewport.clientWidth, behavior: instant || reducedMotion.matches ? 'instant' : 'smooth' });
-            announcement.textContent = slides[index].querySelector('.news-title').textContent;
+            announcement.textContent = visibleSlides[index].querySelector('.news-title').textContent;
         }
         function expand(target = index) {
+            if (target < 0 || !visibleSlides.length) return;
             clearTimeout(settleTimer);
             viewport.hidden = false;
             goTo(target, true);
             viewport.focus({ preventScroll: true });
         }
-        // A shared bulletin link opens that article; ordinary visits stay minimized.
+        // Shared bulletin links remain readable even with a starred-only feed.
         function openLinkedBulletin() {
             let id;
             try { id = decodeURIComponent(window.location.hash.slice(1)); }
             catch (_) { return; }
-            const target = slides.findIndex(slide => slide.id === id);
-            if (target !== -1) expand(target);
+            const slide = slides.find(item => item.id === id);
+            if (!slide) return;
+            linkedSlide = slide;
+            refreshNews();
+            expand(visibleSlides.indexOf(slide));
         }
         window.addEventListener('hashchange', openLinkedBulletin);
         ticker.addEventListener('click', event => {
-            const button = event.target.closest('[data-news-index]');
-            if (button) expand(Number(button.dataset.newsIndex));
+            const button = event.target.closest('[data-news-article]');
+            if (button) expand(visibleSlides.findIndex(slide => slide.id === button.dataset.newsArticle));
+        });
+        starred.addEventListener('click', () => {
+            starredOnly = !starredOnly;
+            linkedSlide = null;
+            try { localStorage.setItem(newsFilterKey, starredOnly ? '1' : '0'); } catch (_) {}
+            refreshNews();
         });
         viewport.addEventListener('scroll', () => {
             clearTimeout(settleTimer);
             settleTimer = setTimeout(() => {
                 if (viewport.hidden || !viewport.clientWidth) return;
-                index = Math.max(0, Math.min(slides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
+                index = Math.max(0, Math.min(visibleSlides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
                 updateControls();
             }, 150);
         });
@@ -1012,11 +1065,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (viewport.hidden) { expand(); return; }
             clearTimeout(settleTimer);
             viewport.hidden = true;
-            paused = false; // Minimizing resumes the headlines even after an explicit pause.
-            updateControls();
-            ticker.scrollLeft = 0;
-            tickerLanes.querySelectorAll('.news-ticker-lane').forEach(lane => lane.scrollLeft = 0);
-            sizeTicker();
+            paused = false;
+            if (linkedSlide) {
+                linkedSlide = null;
+                refreshNews();
+            } else {
+                updateControls();
+                tickerLanes.querySelectorAll('.news-ticker-lane').forEach(lane => lane.scrollLeft = 0);
+                sizeTicker();
+            }
         });
         ticker.addEventListener('focusin', syncMotion);
         ticker.addEventListener('pointerenter', event => { hovered = event.pointerType !== 'touch'; syncMotion(); });
@@ -1036,7 +1093,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         document.addEventListener('visibilitychange', syncMotion);
-        document.addEventListener('portfolio:languagechange', () => { buildHeadlines(); updateControls(); });
+        document.addEventListener('portfolio:languagechange', refreshNews);
+        document.addEventListener('portfolio:watchlistchange', () => {
+            if (starredOnly) refreshNews();
+        });
         reducedMotion.addEventListener('change', updateControls);
         desktopNews.addEventListener('change', buildHeadlines);
         new ResizeObserver(() => {
@@ -1044,8 +1104,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!viewport.hidden) viewport.scrollTo({ left: index * viewport.clientWidth, behavior: 'instant' });
         }).observe(carousel);
         viewport.hidden = true;
-        updateControls();
-        buildHeadlines();
+        refreshNews();
         openLinkedBulletin();
         document.fonts.ready.then(sizeTicker);
     })();

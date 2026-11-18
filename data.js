@@ -73,7 +73,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 372
         },
         {
-            "Rank": 8.0,
+            "Rank": 7.0,
             "Ticker": "LPK.DE",
             "Name": "LPKF Laser & Electronics",
             "EV = Base% x (Upside - 1)": 1.6631763727490998,
@@ -99,7 +99,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 167.90184334693876,
             "Q4 2029": 189.33441157551022,
             "Q1 2030": 217.65601959183675,
-            "Original rank": 8.0,
+            "Original rank": 7.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.6631763727490998,
             "Change %": "-1.80%",
@@ -217,7 +217,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 79
         },
         {
-            "Rank": 9.0,
+            "Rank": 8.0,
             "Ticker": "XFAB",
             "Name": "X-Fab Silicon Foundries",
             "EV = Base% x (Upside - 1)": 1.5846176356345285,
@@ -243,7 +243,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 24.277237918516143,
             "Q4 2029": 25.62787024164189,
             "Q1 2030": 27.10231800872104,
-            "Original rank": 9.0,
+            "Original rank": 8.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.5846176356345285,
             "Entry": 73,
@@ -252,7 +252,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 109
         },
         {
-            "Rank": 10.0,
+            "Rank": 9.0,
             "Ticker": "8147.TWO",
             "Name": "Nextronics Engineering",
             "EV = Base% x (Upside - 1)": 1.5526866675436528,
@@ -278,7 +278,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 722.4699380941047,
             "Q4 2029": 766.064115771207,
             "Q1 2030": 813.5994707183474,
-            "Original rank": 10.0,
+            "Original rank": 9.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.5526866675436528,
             "Change %": "+0.79%",
@@ -395,7 +395,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -92
         },
         {
-            "Rank": 70.0,
+            "Rank": 69.0,
             "Ticker": "3363.TWO",
             "Name": "FOCI (上詮)",
             "EV = Base% x (Upside - 1)": 0.3343592425541632,
@@ -421,7 +421,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1393.1926089873293,
             "Q4 2029": 1401.0782585510897,
             "Q1 2030": 1407.6632587309127,
-            "Original rank": 70.0,
+            "Original rank": 69.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3343592425541632,
             "Change %": "-4.40%",
@@ -467,7 +467,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 29
         },
         {
-            "Rank": 13.0,
+            "Rank": 12.0,
             "Ticker": "BRUN",
             "Name": "Boost Run",
             "EV = Base% x (Upside - 1)": 1.4066479650859351,
@@ -493,7 +493,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 93.28493094672224,
             "Q4 2029": 94.223689968653,
             "Q1 2030": 93.43885052105429,
-            "Original rank": 13.0,
+            "Original rank": 12.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.4066479650859351,
             "Entry": 64,
@@ -572,7 +572,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 40
         },
         {
-            "Rank": 11.0,
+            "Rank": 10.0,
             "Ticker": "AMPX",
             "Name": "Amprius Technologies",
             "EV = Base% x (Upside - 1)": 1.4815189873417725,
@@ -598,7 +598,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 80.21000000000004,
             "Q4 2029": 89.45000000000005,
             "Q1 2030": 101.00000000000001,
-            "Original rank": 11.0,
+            "Original rank": 10.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.4815189873417725,
             "Change %": "-7.83%",
@@ -678,7 +678,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 32
         },
         {
-            "Rank": 119.0,
+            "Rank": 118.0,
             "Ticker": "ALRIB",
             "Name": "Riber SA (MBE equipment)",
             "EV = Base% x (Upside - 1)": 0.002486958975716877,
@@ -704,7 +704,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 14.719917057298192,
             "Q4 2029": 14.87851302378202,
             "Q1 2030": 17.376540781242984,
-            "Original rank": 118.0,
+            "Original rank": 117.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.002486958975716877,
             "Change %": "-3.42%",
@@ -714,7 +714,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 12.0,
+            "Rank": 11.0,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV = Base% x (Upside - 1)": 1.444725923099844,
@@ -740,7 +740,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 670.9937134564026,
             "Q4 2029": 668.5656263436522,
             "Q1 2030": 666.2050255587045,
-            "Original rank": 12.0,
+            "Original rank": 11.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.444725923099844,
             "Entry": 81,
@@ -891,7 +891,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 73.0,
+            "Rank": 72.0,
             "Ticker": "3105.TW",
             "Name": "Win Semiconductors",
             "EV = Base% x (Upside - 1)": 0.324754156751622,
@@ -917,7 +917,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 773.1204038989852,
             "Q4 2029": 806.9857629247502,
             "Q1 2030": 838.0512238836823,
-            "Original rank": 73.0,
+            "Original rank": 72.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.324754156751622,
             "Change %": "-1.31%",
@@ -1032,7 +1032,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -18
         },
         {
-            "Rank": 105.0,
+            "Rank": 104.0,
             "Ticker": "FLNC",
             "Name": "Fluence Energy",
             "EV = Base% x (Upside - 1)": 0.08622180145254296,
@@ -1058,7 +1058,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 21.957480348430025,
             "Q4 2029": 23.909883054909553,
             "Q1 2030": 24.134957211088356,
-            "Original rank": 105.0,
+            "Original rank": 104.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.08622180145254296,
             "Entry": 0,
@@ -1209,7 +1209,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 50
         },
         {
-            "Rank": 82.0,
+            "Rank": 81.0,
             "Ticker": "META",
             "Name": "Meta Platforms",
             "EV = Base% x (Upside - 1)": 0.26429470299168684,
@@ -1235,7 +1235,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 918.2459690757746,
             "Q4 2029": 941.8566760840761,
             "Q1 2030": 974.9313384175873,
-            "Original rank": 82.0,
+            "Original rank": 81.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.26429470299168684,
             "Entry": 7,
@@ -1244,7 +1244,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 5
         },
         {
-            "Rank": 18.0,
+            "Rank": 17.0,
             "Ticker": "COHR",
             "Name": "Coherent Corp",
             "EV = Base% x (Upside - 1)": 1.188347457499944,
@@ -1270,7 +1270,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 636.2363841844898,
             "Q4 2029": 648.7845484846312,
             "Q1 2030": 654.3715385481543,
-            "Original rank": 18.0,
+            "Original rank": 17.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.188347457499944,
             "Change %": "-6.20%",
@@ -1280,7 +1280,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 80
         },
         {
-            "Rank": 17.0,
+            "Rank": 16.0,
             "Ticker": "AIXA.DE",
             "Name": "Aixtron SE",
             "EV = Base% x (Upside - 1)": 1.2375231727444576,
@@ -1306,7 +1306,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.93526898186778,
             "Q4 2029": 144.4800803842162,
             "Q1 2030": 149.02446122224706,
-            "Original rank": 17.0,
+            "Original rank": 16.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.2375231727444576,
             "Change %": "-2.63%",
@@ -1386,7 +1386,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 127.0,
+            "Rank": 126.0,
             "Ticker": "GOOGL",
             "Name": "Alphabet Inc.",
             "EV = Base% x (Upside - 1)": -0.057897885030610316,
@@ -1412,7 +1412,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 464.61148395014055,
             "Q4 2029": 486.9187437160318,
             "Q1 2030": 511.41664847576703,
-            "Original rank": 184.0,
+            "Original rank": 183.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.057897885030610316,
             "Entry": 0,
@@ -1421,7 +1421,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -22
         },
         {
-            "Rank": 123.0,
+            "Rank": 122.0,
             "Ticker": "MSFT",
             "Name": "Microsoft",
             "EV = Base% x (Upside - 1)": -0.018563757005690466,
@@ -1447,7 +1447,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 572.1004854532977,
             "Q4 2029": 571.3155892566634,
             "Q1 2030": 569.934554024367,
-            "Original rank": 180.0,
+            "Original rank": 179.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.018563757005690466,
             "Entry": 0,
@@ -1456,7 +1456,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -16
         },
         {
-            "Rank": 86.0,
+            "Rank": 85.0,
             "Ticker": "AMZN",
             "Name": "Amazon.com, Inc.",
             "EV = Base% x (Upside - 1)": 0.24658244325900555,
@@ -1482,7 +1482,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 426.2176999548288,
             "Q4 2029": 438.2239024031452,
             "Q1 2030": 449.3982063841283,
-            "Original rank": 86.0,
+            "Original rank": 85.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24658244325900555,
             "Entry": 2,
@@ -1491,7 +1491,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 1
         },
         {
-            "Rank": 157.0,
+            "Rank": 156.0,
             "Ticker": "LITE",
             "Name": "Lumentum Holdings",
             "EV = Base% x (Upside - 1)": -0.313283587303708,
@@ -1517,7 +1517,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1732.1236156310779,
             "Q4 2029": 1897.273657166935,
             "Q1 2030": 2079.766374791502,
-            "Original rank": 214.0,
+            "Original rank": 213.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.313283587303708,
             "Change %": "-8.61%",
@@ -1562,7 +1562,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 1
         },
         {
-            "Rank": 108.0,
+            "Rank": 107.0,
             "Ticker": "000938.SZ",
             "Name": "Unisplendour (紫光股份)",
             "EV = Base% x (Upside - 1)": 0.05773748176968267,
@@ -1588,7 +1588,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 61.167624932966,
             "Q4 2029": 63.90403250737201,
             "Q1 2030": 67.88107661631007,
-            "Original rank": 108.0,
+            "Original rank": 107.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.05773748176968267,
             "Entry": 0,
@@ -1597,7 +1597,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -31
         },
         {
-            "Rank": 140.0,
+            "Rank": 139.0,
             "Ticker": "002409.SZ",
             "Name": "雅克科技 Yoke Technology",
             "EV = Base% x (Upside - 1)": -0.15347598197396406,
@@ -1623,7 +1623,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 159.84081910417768,
             "Q4 2029": 163.93577154551178,
             "Q1 2030": 164.97907909088838,
-            "Original rank": 197.0,
+            "Original rank": 196.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.15347598197396406,
             "Entry": 0,
@@ -1632,7 +1632,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 148.0,
+            "Rank": 147.0,
             "Ticker": "FTC.L",
             "Name": "Filtronic PLC",
             "EV = Base% x (Upside - 1)": -0.21456678667505297,
@@ -1658,7 +1658,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 417.7870405128704,
             "Q4 2029": 456.3222296704368,
             "Q1 2030": 496.02072518525745,
-            "Original rank": 205.0,
+            "Original rank": 204.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.21456678667505297,
             "Change %": "+1.48%",
@@ -1668,42 +1668,42 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -52
         },
         {
-            "Rank": 4.0,
+            "Rank": 19.0,
             "Ticker": "SHAZ",
             "Name": "SharonAI Holdings, Inc.",
-            "EV = Base% x (Upside - 1)": 2.0215193884304563,
+            "EV = Base% x (Upside - 1)": 1.04585754752481,
             "Base": 73.0,
             "Port": "",
             "Current Price": 49.79,
-            "Upside (Q4 2027)": 3.769204641685557,
+            "Upside (Q4 2027)": 2.4326815719517945,
             "Earnings Multiple": 20,
-            "Artifact Updated": "7 Oct 2026: Base 73; manual Base overrides removed. Earlier research note: 2026-10-02 | USD356M conditional facility (A150/B206), unknown draws; initial parent guarantee covers both. Financing execution evidence for existing 120MW +92MW case, not new cash/revenue. Model, 20x OP, shares, Excel Base80 and analytical Base73 unchanged. Q4 2027 active horizon. See SHAZ_SharonAI_DeepDive_2026.pdf.",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 72 | Excel 73 | SHAZ_SharonAI_DeepDive_2026.md | SHAZ_SharonAI_DeepDive_2026.pdf | SHAZ_SharonAI_DeepDive_2026_model.xlsx",
             "SuperCycle": "AI",
             "Q3 2026": 22.57163238111112,
-            "Q4 2026": 56.58231652000003,
-            "Q1 2027": 93.97208313168049,
-            "Q2 2027": 129.77509338032795,
-            "Q3 2027": 163.28028081505383,
-            "Q4 2027": 187.66869910952389,
-            "Q1 2028": 204.53662265384625,
-            "Q2 2028": 214.71694173631852,
-            "Q3 2028": 218.0881494985508,
-            "Q4 2028": 216.7136299957747,
-            "Q1 2029": 217.02085789137533,
-            "Q2 2029": 216.41879366666672,
-            "Q3 2029": 214.926250262069,
-            "Q4 2029": 213.4541526575343,
-            "Q1 2030": 212.0020835918368,
-            "Original rank": 4.0,
+            "Q4 2026": 0.1421069621007606,
+            "Q1 2027": 31.20673999833365,
+            "Q2 2027": 61.83293061514805,
+            "Q3 2027": 93.06303636975701,
+            "Q4 2027": 121.12321546747984,
+            "Q1 2028": 141.75582976128717,
+            "Q2 2028": 155.1187158208955,
+            "Q3 2028": 162.01074565797097,
+            "Q4 2028": 163.77333386901404,
+            "Q1 2029": 165.18833912680648,
+            "Q2 2029": 165.04529366666662,
+            "Q3 2029": 163.9070502620689,
+            "Q4 2029": 162.78439923287667,
+            "Q1 2030": 161.6770223673469,
+            "Original rank": 19.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 2.0215193884304563,
-            "Entry": 82,
-            "Total": 77,
-            "Upside": "3.3x",
-            "EV Upside": 139
+            "Comparable EV": 1.04585754752481,
+            "Entry": 42,
+            "Total": 61,
+            "Upside": "1.9x",
+            "EV Upside": 36
         },
         {
-            "Rank": 126.0,
+            "Rank": 125.0,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (眾達-KY)",
             "EV = Base% x (Upside - 1)": -0.04928070989796583,
@@ -1729,7 +1729,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 134.86140385884076,
             "Q4 2029": 151.0116975579462,
             "Q1 2030": 153.8480661275041,
-            "Original rank": 183.0,
+            "Original rank": 182.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04928070989796583,
             "Change %": "-7.73%",
@@ -1810,7 +1810,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 0
         },
         {
-            "Rank": 84.0,
+            "Rank": 83.0,
             "Ticker": "MRVL",
             "Name": "Marvell Technology",
             "EV = Base% x (Upside - 1)": 0.2561540923839323,
@@ -1836,7 +1836,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 599.4098117517817,
             "Q4 2029": 664.3042067330813,
             "Q1 2030": 736.4792077543858,
-            "Original rank": 84.0,
+            "Original rank": 83.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2561540923839323,
             "Change %": "-3.18%",
@@ -1881,7 +1881,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 69.0,
+            "Rank": 68.0,
             "Ticker": "3711.TW",
             "Name": "ASE Technology 日月光投控",
             "EV = Base% x (Upside - 1)": 0.3555786445911664,
@@ -1907,7 +1907,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1317.3794972783808,
             "Q4 2029": 1393.6651180961626,
             "Q1 2030": 1475.9242734363452,
-            "Original rank": 69.0,
+            "Original rank": 68.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3555786445911664,
             "Entry": 10,
@@ -1916,7 +1916,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 4
         },
         {
-            "Rank": 92.0,
+            "Rank": 91.0,
             "Ticker": "000725.SZ",
             "Name": "京东方A BOE Technology",
             "EV = Base% x (Upside - 1)": 0.19477150553749145,
@@ -1942,7 +1942,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 13.329979771717852,
             "Q4 2029": 13.994558906679265,
             "Q1 2030": 14.710095404040096,
-            "Original rank": 92.0,
+            "Original rank": 91.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19477150553749145,
             "Entry": 3,
@@ -1951,7 +1951,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -34
         },
         {
-            "Rank": 116.0,
+            "Rank": 115.0,
             "Ticker": "IQE.L",
             "Name": "IQE plc",
             "EV = Base% x (Upside - 1)": 0.005147457203002314,
@@ -1977,7 +1977,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 110.34271273235107,
             "Q4 2029": 116.31671463253623,
             "Q1 2030": 122.85919701319509,
-            "Original rank": 116.0,
+            "Original rank": 115.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.005147457203002314,
             "Change %": "-15.00%",
@@ -1987,7 +1987,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -45
         },
         {
-            "Rank": 94.0,
+            "Rank": 93.0,
             "Ticker": "CIEN",
             "Name": "Ciena Corporation",
             "EV = Base% x (Upside - 1)": 0.1889242489291139,
@@ -2013,7 +2013,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 643.5650226012758,
             "Q4 2029": 665.1792491427376,
             "Q1 2030": 684.5424767123285,
-            "Original rank": 94.0,
+            "Original rank": 93.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1889242489291139,
             "Entry": 0,
@@ -2057,7 +2057,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 95.0,
+            "Rank": 94.0,
             "Ticker": "TSEM",
             "Name": "Tower Semiconductor",
             "EV = Base% x (Upside - 1)": 0.1763222087154121,
@@ -2083,7 +2083,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 527.7678625915225,
             "Q4 2029": 574.3259652341318,
             "Q1 2030": 620.3455569474695,
-            "Original rank": 95.0,
+            "Original rank": 94.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1763222087154121,
             "Change %": "-7.86%",
@@ -2093,7 +2093,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -13
         },
         {
-            "Rank": 98.0,
+            "Rank": 97.0,
             "Ticker": "EOS.AX",
             "Name": "Electro Optic Systems",
             "EV = Base% x (Upside - 1)": 0.16158581130593605,
@@ -2119,7 +2119,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9.742931317958206,
             "Q4 2029": 11.053871337506672,
             "Q1 2030": 12.541451079434069,
-            "Original rank": 98.0,
+            "Original rank": 97.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16158581130593605,
             "Change %": "+4.13%",
@@ -2129,7 +2129,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -16
         },
         {
-            "Rank": 102.0,
+            "Rank": 101.0,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (汎銓科技)",
             "EV = Base% x (Upside - 1)": 0.11470619225158032,
@@ -2155,7 +2155,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 931.7714285714286,
             "Q4 2029": 1010.168253968254,
             "Q1 2030": 1088.0377952755907,
-            "Original rank": 102.0,
+            "Original rank": 101.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.11470619225158032,
             "Change %": "+0.55%",
@@ -2165,7 +2165,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -34
         },
         {
-            "Rank": 74.0,
+            "Rank": 73.0,
             "Ticker": "VICR",
             "Name": "Vicor Corporation",
             "EV = Base% x (Upside - 1)": 0.3218260609673673,
@@ -2191,7 +2191,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 622.0366016743542,
             "Q4 2029": 655.1671843837594,
             "Q1 2030": 686.2203346455362,
-            "Original rank": 74.0,
+            "Original rank": 73.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3218260609673673,
             "Change %": "-9.51%",
@@ -2201,7 +2201,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 90.0,
+            "Rank": 89.0,
             "Ticker": "LRCX",
             "Name": "Lam Research",
             "EV = Base% x (Upside - 1)": 0.20611201685556058,
@@ -2227,7 +2227,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 385.49630878402013,
             "Q4 2029": 393.4338797479461,
             "Q1 2030": 401.9139442231076,
-            "Original rank": 90.0,
+            "Original rank": 89.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.20611201685556058,
             "Entry": 0,
@@ -2236,7 +2236,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 93.0,
+            "Rank": 92.0,
             "Ticker": "SE",
             "Name": "Sea Limited",
             "EV = Base% x (Upside - 1)": 0.19345879087274914,
@@ -2262,7 +2262,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 235.72619707630616,
             "Q4 2029": 246.8331649036794,
             "Q1 2030": 258.97867661298153,
-            "Original rank": 93.0,
+            "Original rank": 92.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19345879087274914,
             "Entry": 2,
@@ -2271,7 +2271,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 110.0,
+            "Rank": 109.0,
             "Ticker": "BESI.AS",
             "Name": "BE Semiconductor Industries",
             "EV = Base% x (Upside - 1)": 0.04297614808028615,
@@ -2297,7 +2297,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 300.71733326957684,
             "Q4 2029": 310.53222467324633,
             "Q1 2030": 320.0027595520098,
-            "Original rank": 110.0,
+            "Original rank": 109.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.04297614808028615,
             "Change %": "-2.25%",
@@ -2307,7 +2307,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -21
         },
         {
-            "Rank": 161.0,
+            "Rank": 160.0,
             "Ticker": "AVEX",
             "Name": "AEVEX Aerospace",
             "EV = Base% x (Upside - 1)": -0.36621416009327434,
@@ -2333,7 +2333,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 25.266557938243444,
             "Q4 2029": 25.197949970896264,
             "Q1 2030": 24.84763770342977,
-            "Original rank": 218.0,
+            "Original rank": 217.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.36621416009327434,
             "Change %": "+5.87%",
@@ -2343,7 +2343,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -80
         },
         {
-            "Rank": 131.0,
+            "Rank": 130.0,
             "Ticker": "STM",
             "Name": "STMicroelectronics",
             "EV = Base% x (Upside - 1)": -0.08258748600606035,
@@ -2369,7 +2369,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 83.74333022685376,
             "Q4 2029": 87.73137186996982,
             "Q1 2030": 92.45156279558142,
-            "Original rank": 188.0,
+            "Original rank": 187.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.08258748600606035,
             "Entry": 0,
@@ -2378,7 +2378,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -49
         },
         {
-            "Rank": 85.0,
+            "Rank": 84.0,
             "Ticker": "AMD",
             "Name": "Advanced Micro Devices",
             "EV = Base% x (Upside - 1)": 0.2530874646773534,
@@ -2404,7 +2404,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1086.8882379949885,
             "Q4 2029": 1182.7900064596524,
             "Q1 2030": 1293.7714024093416,
-            "Original rank": 85.0,
+            "Original rank": 84.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2530874646773534,
             "Entry": 0,
@@ -2413,7 +2413,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 130.0,
+            "Rank": 129.0,
             "Ticker": "BE",
             "Name": "Bloom Energy",
             "EV = Base% x (Upside - 1)": -0.07699490483213865,
@@ -2439,7 +2439,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 286.152238972243,
             "Q4 2029": 294.37198376564476,
             "Q1 2030": 305.5144859480588,
-            "Original rank": 187.0,
+            "Original rank": 186.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.07699490483213865,
             "Change %": "-5.80%",
@@ -2449,7 +2449,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -39
         },
         {
-            "Rank": 103.0,
+            "Rank": 102.0,
             "Ticker": "FN",
             "Name": "Fabrinet",
             "EV = Base% x (Upside - 1)": 0.10371890646629608,
@@ -2475,7 +2475,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 707.9966960186755,
             "Q4 2029": 723.4827970400822,
             "Q1 2030": 736.4148229391899,
-            "Original rank": 103.0,
+            "Original rank": 102.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.10371890646629608,
             "Entry": 0,
@@ -2484,7 +2484,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 151.0,
+            "Rank": 150.0,
             "Ticker": "ACMR",
             "Name": "ACM Research",
             "EV = Base% x (Upside - 1)": -0.28423211038267426,
@@ -2510,7 +2510,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 112.32149416387577,
             "Q4 2029": 122.42373216089828,
             "Q1 2030": 133.93597621529594,
-            "Original rank": 208.0,
+            "Original rank": 207.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.28423211038267426,
             "Entry": 0,
@@ -2519,7 +2519,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -59
         },
         {
-            "Rank": 111.0,
+            "Rank": 110.0,
             "Ticker": "009150.KS",
             "Name": "Samsung Electro-Mechanics",
             "EV = Base% x (Upside - 1)": 0.040279654174230434,
@@ -2545,7 +2545,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1978089.41951095,
             "Q4 2029": 2066829.5909537259,
             "Q1 2030": 2162311.3354161335,
-            "Original rank": 111.0,
+            "Original rank": 110.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.040279654174230434,
             "Entry": 0,
@@ -2554,7 +2554,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 134.0,
+            "Rank": 133.0,
             "Ticker": "AXTI",
             "Name": "AXT Inc.",
             "EV = Base% x (Upside - 1)": -0.12553634644382217,
@@ -2580,7 +2580,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 59.55516182907567,
             "Q4 2029": 59.39614908569437,
             "Q1 2030": 57.82794587901811,
-            "Original rank": 191.0,
+            "Original rank": 190.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.12553634644382217,
             "Entry": 0,
@@ -2625,7 +2625,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 49
         },
         {
-            "Rank": 88.0,
+            "Rank": 87.0,
             "Ticker": "RDDT",
             "Name": "Reddit, Inc.",
             "EV = Base% x (Upside - 1)": 0.24303913364744606,
@@ -2651,7 +2651,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 432.16774727784883,
             "Q4 2029": 465.4155098645035,
             "Q1 2030": 504.6003782812271,
-            "Original rank": 88.0,
+            "Original rank": 87.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24303913364744606,
             "Entry": 0,
@@ -2660,7 +2660,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -19
         },
         {
-            "Rank": 153.0,
+            "Rank": 152.0,
             "Ticker": "INTC",
             "Name": "Intel Corporation",
             "EV = Base% x (Upside - 1)": -0.2874147169025176,
@@ -2686,7 +2686,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 114.15919663120458,
             "Q4 2029": 123.32705610877726,
             "Q1 2030": 133.00533529387258,
-            "Original rank": 210.0,
+            "Original rank": 209.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.2874147169025176,
             "Entry": 0,
@@ -2695,7 +2695,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -61
         },
         {
-            "Rank": 97.0,
+            "Rank": 96.0,
             "Ticker": "2454.TW",
             "Name": "聯發科 MediaTek",
             "EV = Base% x (Upside - 1)": 0.16853316306073826,
@@ -2721,7 +2721,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 7465.1224726217315,
             "Q4 2029": 7899.49726350074,
             "Q1 2030": 8334.244909148356,
-            "Original rank": 97.0,
+            "Original rank": 96.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16853316306073826,
             "Entry": 0,
@@ -2765,7 +2765,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -77
         },
         {
-            "Rank": 158.0,
+            "Rank": 157.0,
             "Ticker": "002371.SZ",
             "Name": "北方华创 NAURA",
             "EV = Base% x (Upside - 1)": -0.32399224003445265,
@@ -2791,7 +2791,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 453.12063547632914,
             "Q4 2029": 452.9960464452085,
             "Q1 2030": 455.60516723505975,
-            "Original rank": 215.0,
+            "Original rank": 214.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.32399224003445265,
             "Entry": 0,
@@ -2800,7 +2800,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 141.0,
+            "Rank": 140.0,
             "Ticker": "300408.SZ",
             "Name": "Three-Circle Group",
             "EV = Base% x (Upside - 1)": -0.16341653463035669,
@@ -2826,7 +2826,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 122.45389073798921,
             "Q4 2029": 125.62276358687026,
             "Q1 2030": 129.62794928443856,
-            "Original rank": 198.0,
+            "Original rank": 197.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.16341653463035669,
             "Entry": 0,
@@ -2870,7 +2870,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 124.0,
+            "Rank": 123.0,
             "Ticker": "GLW",
             "Name": "Corning",
             "EV = Base% x (Upside - 1)": -0.04617320743801742,
@@ -2896,7 +2896,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 242.9806452870758,
             "Q4 2029": 256.83834929920084,
             "Q1 2030": 270.83658629226653,
-            "Original rank": 181.0,
+            "Original rank": 180.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04617320743801742,
             "Entry": 0,
@@ -2905,7 +2905,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -40
         },
         {
-            "Rank": 137.0,
+            "Rank": 136.0,
             "Ticker": "PNG.V",
             "Name": "Kraken Robotics",
             "EV = Base% x (Upside - 1)": -0.14831598412232389,
@@ -2931,7 +2931,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 8.188211551352934,
             "Q4 2029": 8.821656224661,
             "Q1 2030": 9.518314114723967,
-            "Original rank": 194.0,
+            "Original rank": 193.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14831598412232389,
             "Change %": "-2.02%",
@@ -2976,43 +2976,43 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -87
         },
         {
-            "Rank": 68.0,
+            "Rank": 168.0,
             "Ticker": "NRGV",
             "Name": "Energy Vault Holdings",
-            "EV = Base% x (Upside - 1)": 0.3619233524355299,
+            "EV = Base% x (Upside - 1)": -0.41855746264838306,
             "Base": 60.0,
             "Port": "",
             "Current Price": 3.49,
-            "Upside (Q4 2027)": 1.60320558739255,
+            "Upside (Q4 2027)": 0.3024042289193616,
             "Earnings Multiple": 15,
-            "Artifact Updated": "7 Oct 2026: Base 60; manual Base overrides removed. Earlier research note: 2026-09-30 | Framework 8.0. Goshe modeled at 70%, Q1 2028 half-quarter start; $30M conditional annual project EBITDA translated through depreciation, corporate costs and funding. Procurement not double-counted. Excel Base 57; analytical Base 60. Locked 15x economic OP; shares unchanged.",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 58 | Excel 60 | NRGV_EnergyVault_DeepDive.md | NRGV_EnergyVault_DeepDive.pdf | NRGV_EnergyVault_DeepDive_model.xlsx",
             "SuperCycle": "Other",
             "Q3 2026": -0.0020203636363635012,
-            "Q4 2026": 2.4183796363636367,
-            "Q1 2027": 2.6892857142857145,
-            "Q2 2027": 3.3619553571428575,
-            "Q3 2027": 4.323616071428572,
-            "Q4 2027": 5.5951875,
-            "Q1 2028": 6.88383620689655,
-            "Q2 2028": 7.31596551724138,
-            "Q3 2028": 7.818620689655173,
-            "Q4 2028": 8.461965517241378,
-            "Q1 2029": 8.98,
-            "Q2 2029": 9.575300000000002,
-            "Q3 2029": 10.357000000000001,
-            "Q4 2029": 11.311850000000002,
-            "Q1 2030": 12.091935483870966,
-            "Original rank": 68.0,
+            "Q4 2026": -1.2506693181818183,
+            "Q1 2027": -1.714285714285714,
+            "Q2 2027": -1.2797631696428564,
+            "Q3 2027": -0.3694527455357141,
+            "Q4 2027": 1.055390758928572,
+            "Q1 2028": 2.766338275862069,
+            "Q2 2028": 3.4052975172413795,
+            "Q3 2028": 4.200118383620691,
+            "Q4 2028": 5.201687224137931,
+            "Q1 2029": 6.242315312500001,
+            "Q2 2029": 6.967367387499999,
+            "Q3 2029": 7.8619234375000016,
+            "Q4 2029": 8.886729175,
+            "Q1 2030": 9.822394052419355,
+            "Original rank": 224.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 0.3619233524355299,
+            "Comparable EV": -0.41855746264838306,
             "Change %": "-9.54%",
-            "Entry": 2,
-            "Total": 37,
-            "Upside": "1.2x",
-            "EV Upside": -26
+            "Entry": 0,
+            "Total": 36,
+            "Upside": "-0.1x",
+            "EV Upside": -106
         },
         {
-            "Rank": 168.0,
+            "Rank": 167.0,
             "Ticker": "688008.SH",
             "Name": "澜起科技 Montage Technology",
             "EV = Base% x (Upside - 1)": -0.41634750209281157,
@@ -3038,7 +3038,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 185.54741067588742,
             "Q4 2029": 203.2726929177632,
             "Q1 2030": 222.5544534670449,
-            "Original rank": 224.0,
+            "Original rank": 223.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.41634750209281157,
             "Entry": 0,
@@ -3047,7 +3047,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -65
         },
         {
-            "Rank": 143.0,
+            "Rank": 142.0,
             "Ticker": "MTSI",
             "Name": "MACOM Technology Solutions",
             "EV = Base% x (Upside - 1)": -0.188308628683608,
@@ -3073,7 +3073,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 361.90574370872645,
             "Q4 2029": 383.47720221830986,
             "Q1 2030": 408.39725398948605,
-            "Original rank": 200.0,
+            "Original rank": 199.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.188308628683608,
             "Entry": 0,
@@ -3082,7 +3082,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -51
         },
         {
-            "Rank": 136.0,
+            "Rank": 135.0,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV = Base% x (Upside - 1)": -0.14193953306814724,
@@ -3108,7 +3108,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 118.58782869535274,
             "Q4 2029": 128.385708186603,
             "Q1 2030": 138.5714139070219,
-            "Original rank": 193.0,
+            "Original rank": 192.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14193953306814724,
             "Entry": 0,
@@ -3222,7 +3222,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -89
         },
         {
-            "Rank": 150.0,
+            "Rank": 149.0,
             "Ticker": "ALAB",
             "Name": "Astera Labs",
             "EV = Base% x (Upside - 1)": -0.2615773953080125,
@@ -3248,7 +3248,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 409.55858153292263,
             "Q4 2029": 441.4722913013179,
             "Q1 2030": 476.0041124425265,
-            "Original rank": 207.0,
+            "Original rank": 206.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.2615773953080125,
             "Change %": "-6.70%",
@@ -3258,7 +3258,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -54
         },
         {
-            "Rank": 144.0,
+            "Rank": 143.0,
             "Ticker": "300136.SZ",
             "Name": "信维通信 Sunway Communication",
             "EV = Base% x (Upside - 1)": -0.19104860207982388,
@@ -3284,7 +3284,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 57.04772799118616,
             "Q4 2029": 61.376902261572575,
             "Q1 2030": 66.4868700565173,
-            "Original rank": 201.0,
+            "Original rank": 200.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.19104860207982388,
             "Entry": 0,
@@ -3328,7 +3328,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -78
         },
         {
-            "Rank": 138.0,
+            "Rank": 137.0,
             "Ticker": "AAPL",
             "Name": "Apple Inc.",
             "EV = Base% x (Upside - 1)": -0.14966441439988173,
@@ -3354,7 +3354,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 313.8050934659579,
             "Q4 2029": 322.3348283594963,
             "Q1 2030": 333.0058129446469,
-            "Original rank": 195.0,
+            "Original rank": 194.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14966441439988173,
             "Entry": 0,
@@ -3433,7 +3433,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -85
         },
         {
-            "Rank": 155.0,
+            "Rank": 154.0,
             "Ticker": "688825.SH",
             "Name": "长鑫科技 CXMT",
             "EV = Base% x (Upside - 1)": -0.3054626595830129,
@@ -3459,7 +3459,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 21.537023609486454,
             "Q4 2029": 21.825319241684817,
             "Q1 2030": 22.466028993346832,
-            "Original rank": 212.0,
+            "Original rank": 211.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3054626595830129,
             "Entry": 0,
@@ -3468,7 +3468,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 107.0,
+            "Rank": 106.0,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV = Base% x (Upside - 1)": 0.07569605570067492,
@@ -3494,7 +3494,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 293.29246388732525,
             "Q4 2029": 302.7254532203873,
             "Q1 2030": 311.6694158115004,
-            "Original rank": 107.0,
+            "Original rank": 106.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.07569605570067492,
             "Entry": 0,
@@ -3856,7 +3856,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -90
         },
         {
-            "Rank": 19.0,
+            "Rank": 18.0,
             "Ticker": "FIVN",
             "Name": "Five9",
             "EV = Base% x (Upside - 1)": 1.1469084125146067,
@@ -3882,7 +3882,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 119.61646451612906,
             "Q4 2029": 122.82929169349644,
             "Q1 2030": 126.16452442159384,
-            "Original rank": 19.0,
+            "Original rank": 18.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.1469084125146067,
             "Entry": 64,
@@ -3926,7 +3926,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 48
         },
         {
-            "Rank": 14.0,
+            "Rank": 13.0,
             "Ticker": "SHLS",
             "Name": "Shoals Technologies Group",
             "EV = Base% x (Upside - 1)": 1.3787571476881455,
@@ -3952,7 +3952,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 31.34514484356895,
             "Q4 2029": 32.67824074074075,
             "Q1 2030": 33.906936416184976,
-            "Original rank": 14.0,
+            "Original rank": 13.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3787571476881455,
             "Entry": 70,
@@ -4031,7 +4031,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 117.0,
+            "Rank": 116.0,
             "Ticker": "2409.TW",
             "Name": "AUO Corporation",
             "EV = Base% x (Upside - 1)": 0.005115995554710295,
@@ -4057,7 +4057,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 59.69124526301842,
             "Q4 2029": 64.48638054856235,
             "Q1 2030": 69.28151583410626,
-            "Original rank": 117.0,
+            "Original rank": 116.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.005115995554710295,
             "Entry": 0,
@@ -4066,7 +4066,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 154.0,
+            "Rank": 153.0,
             "Ticker": "6510.TWO",
             "Name": "Chunghwa Precision Test",
             "EV = Base% x (Upside - 1)": -0.3034786096256684,
@@ -4092,7 +4092,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2842.5058823529416,
             "Q4 2029": 2931.3647058823526,
             "Q1 2030": 3027.0588235294117,
-            "Original rank": 211.0,
+            "Original rank": 210.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3034786096256684,
             "Entry": 0,
@@ -4206,7 +4206,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 41
         },
         {
-            "Rank": 91.0,
+            "Rank": 90.0,
             "Ticker": "VRT",
             "Name": "Vertiv",
             "EV = Base% x (Upside - 1)": 0.19715055801611325,
@@ -4232,7 +4232,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 414.31311069283646,
             "Q4 2029": 425.87948316869034,
             "Q1 2030": 438.1393954604809,
-            "Original rank": 91.0,
+            "Original rank": 90.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19715055801611325,
             "Entry": 0,
@@ -4311,7 +4311,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 42
         },
         {
-            "Rank": 89.0,
+            "Rank": 88.0,
             "Ticker": "300308.SZ",
             "Name": "Zhongji Innolight",
             "EV = Base% x (Upside - 1)": 0.20786165817878782,
@@ -4337,7 +4337,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1315.9775984745713,
             "Q4 2029": 1353.8119494253556,
             "Q1 2030": 1394.515100158015,
-            "Original rank": 89.0,
+            "Original rank": 88.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.20786165817878782,
             "Entry": 2,
@@ -4346,7 +4346,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -12
         },
         {
-            "Rank": 100.0,
+            "Rank": 99.0,
             "Ticker": "300502.SZ",
             "Name": "Eoptolink Technology",
             "EV = Base% x (Upside - 1)": 0.1444810776986284,
@@ -4372,7 +4372,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 655.7635602737438,
             "Q4 2029": 674.2183587876839,
             "Q1 2030": 692.5820634983035,
-            "Original rank": 100.0,
+            "Original rank": 99.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1444810776986284,
             "Entry": 0,
@@ -4591,7 +4591,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 114.0,
+            "Rank": 113.0,
             "Ticker": "6515.TW",
             "Name": "WinWay Technology",
             "EV = Base% x (Upside - 1)": 0.02563005108317644,
@@ -4617,7 +4617,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 10574.693815693581,
             "Q4 2029": 11008.47548228955,
             "Q1 2030": 11392.691385810589,
-            "Original rank": 114.0,
+            "Original rank": 113.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.02563005108317644,
             "Entry": 0,
@@ -4836,7 +4836,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 61
         },
         {
-            "Rank": 149.0,
+            "Rank": 148.0,
             "Ticker": "FORM",
             "Name": "FormFactor",
             "EV = Base% x (Upside - 1)": -0.26140778626681727,
@@ -4862,7 +4862,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 120.52825710754017,
             "Q4 2029": 123.8884938271605,
             "Q1 2030": 127.02638717632553,
-            "Original rank": 206.0,
+            "Original rank": 205.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.26140778626681727,
             "Entry": 0,
@@ -4906,7 +4906,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 133.0,
+            "Rank": 132.0,
             "Ticker": "ETN",
             "Name": "Eaton",
             "EV = Base% x (Upside - 1)": -0.0975486670023565,
@@ -4932,7 +4932,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 525.753154865417,
             "Q4 2029": 547.5701162010754,
             "Q1 2030": 569.160235104889,
-            "Original rank": 190.0,
+            "Original rank": 189.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.0975486670023565,
             "Entry": 0,
@@ -4941,7 +4941,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -36
         },
         {
-            "Rank": 147.0,
+            "Rank": 146.0,
             "Ticker": "3189.TW",
             "Name": "Kinsus",
             "EV = Base% x (Upside - 1)": -0.20822521282991535,
@@ -4967,7 +4967,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 805.3464307006319,
             "Q4 2029": 788.4741339789465,
             "Q1 2030": 772.3329630473784,
-            "Original rank": 204.0,
+            "Original rank": 203.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.20822521282991535,
             "Entry": 0,
@@ -4976,7 +4976,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -55
         },
         {
-            "Rank": 152.0,
+            "Rank": 151.0,
             "Ticker": "8046.TW",
             "Name": "Nan Ya PCB",
             "EV = Base% x (Upside - 1)": -0.28736177316540945,
@@ -5002,7 +5002,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1264.4724107652464,
             "Q4 2029": 1292.007367185788,
             "Q1 2030": 1312.747258484753,
-            "Original rank": 209.0,
+            "Original rank": 208.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.28736177316540945,
             "Entry": 0,
@@ -5081,7 +5081,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 109.0,
+            "Rank": 108.0,
             "Ticker": "6805.TW",
             "Name": "Fositek",
             "EV = Base% x (Upside - 1)": 0.05084283129348918,
@@ -5107,7 +5107,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 3113.103476960352,
             "Q4 2029": 3136.8512691011706,
             "Q1 2030": 3158.8708455614924,
-            "Original rank": 109.0,
+            "Original rank": 108.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.05084283129348918,
             "Entry": 0,
@@ -5116,7 +5116,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -29
         },
         {
-            "Rank": 135.0,
+            "Rank": 134.0,
             "Ticker": "EROC",
             "Name": "ERock",
             "EV = Base% x (Upside - 1)": -0.13173171476629764,
@@ -5142,7 +5142,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23.868113633636753,
             "Q4 2029": 25.30197455155862,
             "Q1 2030": 26.662571112585077,
-            "Original rank": 192.0,
+            "Original rank": 191.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.13173171476629764,
             "Entry": 0,
@@ -5151,7 +5151,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 156.0,
+            "Rank": 155.0,
             "Ticker": "P",
             "Name": "Everpure",
             "EV = Base% x (Upside - 1)": -0.31133562688654237,
@@ -5177,7 +5177,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 149.05973250581127,
             "Q4 2029": 157.03395369700348,
             "Q1 2030": 166.3482526612978,
-            "Original rank": 213.0,
+            "Original rank": 212.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.31133562688654237,
             "Entry": 0,
@@ -5186,7 +5186,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -65
         },
         {
-            "Rank": 83.0,
+            "Rank": 82.0,
             "Ticker": "3017.TW",
             "Name": "Asia Vital Components",
             "EV = Base% x (Upside - 1)": 0.25866713855114926,
@@ -5212,7 +5212,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 6138.483060136976,
             "Q4 2029": 6214.906828426299,
             "Q1 2030": 6273.171164125234,
-            "Original rank": 83.0,
+            "Original rank": 82.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.25866713855114926,
             "Entry": 4,
@@ -5221,7 +5221,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -5
         },
         {
-            "Rank": 75.0,
+            "Rank": 74.0,
             "Ticker": "AMAT",
             "Name": "Applied Materials",
             "EV = Base% x (Upside - 1)": 0.3182638543829022,
@@ -5247,7 +5247,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 626.0019344901042,
             "Q4 2029": 642.0975777791667,
             "Q1 2030": 659.6841579041668,
-            "Original rank": 75.0,
+            "Original rank": 74.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3182638543829022,
             "Entry": 9,
@@ -5256,7 +5256,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 3
         },
         {
-            "Rank": 112.0,
+            "Rank": 111.0,
             "Ticker": "3563.TW",
             "Name": "Machvision",
             "EV = Base% x (Upside - 1)": 0.029388636560296194,
@@ -5282,7 +5282,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1041.573652140855,
             "Q4 2029": 1061.5991416469412,
             "Q1 2030": 1083.1886601007102,
-            "Original rank": 112.0,
+            "Original rank": 111.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.029388636560296194,
             "Entry": 0,
@@ -5291,7 +5291,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -30
         },
         {
-            "Rank": 132.0,
+            "Rank": 131.0,
             "Ticker": "QCOM",
             "Name": "Qualcomm",
             "EV = Base% x (Upside - 1)": -0.09336177567849042,
@@ -5317,7 +5317,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 286.8978225947584,
             "Q4 2029": 301.79464239361175,
             "Q1 2030": 316.85631758346597,
-            "Original rank": 189.0,
+            "Original rank": 188.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.09336177567849042,
             "Entry": 0,
@@ -5361,7 +5361,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -86
         },
         {
-            "Rank": 142.0,
+            "Rank": 141.0,
             "Ticker": "TER",
             "Name": "Teradyne",
             "EV = Base% x (Upside - 1)": -0.17712687824539128,
@@ -5387,7 +5387,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 373.74055432033686,
             "Q4 2029": 381.43190402898995,
             "Q1 2030": 390.7282735129242,
-            "Original rank": 199.0,
+            "Original rank": 198.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.17712687824539128,
             "Entry": 0,
@@ -5396,7 +5396,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 96.0,
+            "Rank": 95.0,
             "Ticker": "NOK",
             "Name": "Nokia",
             "EV = Base% x (Upside - 1)": 0.16976302391478193,
@@ -5422,7 +5422,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 19.065241515310877,
             "Q4 2029": 19.591349516225417,
             "Q1 2030": 20.252599677747156,
-            "Original rank": 96.0,
+            "Original rank": 95.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16976302391478193,
             "Entry": 0,
@@ -5466,7 +5466,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 15.0,
+            "Rank": 14.0,
             "Ticker": "MOD",
             "Name": "Modine Manufacturing Company",
             "EV = Base% x (Upside - 1)": 1.3369907338559242,
@@ -5492,7 +5492,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 370.44133927598784,
             "Q4 2029": 380.9990204488087,
             "Q1 2030": 390.05106600648935,
-            "Original rank": 15.0,
+            "Original rank": 14.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3369907338559242,
             "Entry": 67,
@@ -5501,7 +5501,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 94
         },
         {
-            "Rank": 72.0,
+            "Rank": 71.0,
             "Ticker": "AAON",
             "Name": "AAON Inc.",
             "EV = Base% x (Upside - 1)": 0.32595381803540036,
@@ -5527,7 +5527,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 183.38501680952584,
             "Q4 2029": 190.09034554174127,
             "Q1 2030": 197.01125876754497,
-            "Original rank": 72.0,
+            "Original rank": 71.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.32595381803540036,
             "Entry": 9,
@@ -5571,7 +5571,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 81.0,
+            "Rank": 80.0,
             "Ticker": "ON",
             "Name": "ON Semiconductor Corporation",
             "EV = Base% x (Upside - 1)": 0.2648301123332749,
@@ -5597,7 +5597,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.28940384635283,
             "Q4 2029": 194.49890701775027,
             "Q1 2030": 202.86185516080616,
-            "Original rank": 81.0,
+            "Original rank": 80.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2648301123332749,
             "Entry": 1,
@@ -5606,7 +5606,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -6
         },
         {
-            "Rank": 122.0,
+            "Rank": 121.0,
             "Ticker": "SYNA",
             "Name": "Synaptics Incorporated",
             "EV = Base% x (Upside - 1)": -0.0115408211035305,
@@ -5632,7 +5632,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 124.93420029283755,
             "Q4 2029": 125.77685813321642,
             "Q1 2030": 126.65112144371875,
-            "Original rank": 179.0,
+            "Original rank": 178.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.0115408211035305,
             "Entry": 0,
@@ -5641,7 +5641,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -39
         },
         {
-            "Rank": 115.0,
+            "Rank": 114.0,
             "Ticker": "ABBN",
             "Name": "ABB Ltd",
             "EV = Base% x (Upside - 1)": 0.023814626474869743,
@@ -5667,7 +5667,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 101.94903424872321,
             "Q4 2029": 104.56860164640207,
             "Q1 2030": 107.2932800082057,
-            "Original rank": 115.0,
+            "Original rank": 114.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.023814626474869743,
             "Entry": 0,
@@ -5676,7 +5676,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -28
         },
         {
-            "Rank": 159.0,
+            "Rank": 158.0,
             "Ticker": "002938.SZ",
             "Name": "Avary Holding",
             "EV = Base% x (Upside - 1)": -0.3303970531212312,
@@ -5702,7 +5702,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 48.561080398068775,
             "Q4 2029": 49.48057668076995,
             "Q1 2030": 50.4597047950121,
-            "Original rank": 216.0,
+            "Original rank": 215.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3303970531212312,
             "Entry": 0,
@@ -5711,7 +5711,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -66
         },
         {
-            "Rank": 162.0,
+            "Rank": 161.0,
             "Ticker": "SNPS",
             "Name": "Synopsys, Inc.",
             "EV = Base% x (Upside - 1)": -0.3734703577351478,
@@ -5737,7 +5737,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 393.30091315220875,
             "Q4 2029": 414.05162989565576,
             "Q1 2030": 434.10675804916946,
-            "Original rank": 219.0,
+            "Original rank": 218.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3734703577351478,
             "Entry": 0,
@@ -5746,7 +5746,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -63
         },
         {
-            "Rank": 121.0,
+            "Rank": 120.0,
             "Ticker": "CAT",
             "Name": "Caterpillar Inc.",
             "EV = Base% x (Upside - 1)": -0.005452303788441748,
@@ -5772,7 +5772,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 927.7966989188064,
             "Q4 2029": 939.232341555603,
             "Q1 2030": 951.1342930926992,
-            "Original rank": 178.0,
+            "Original rank": 177.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.005452303788441748,
             "Entry": 0,
@@ -5781,35 +5781,35 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -30
         },
         {
-            "Rank": 165.0,
+            "Rank": 162.0,
             "Ticker": "300394.SZ",
             "Name": "Suzhou TFC Optical Communication",
-            "EV = Base% x (Upside - 1)": -0.3947016536835806,
+            "EV = Base% x (Upside - 1)": -0.3841521720613996,
             "Base": 72.0,
             "Port": "",
             "Current Price": 260.77,
-            "Upside (Q4 2027)": 0.45180325877280464,
+            "Upside (Q4 2027)": 0.4664553165813894,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-07 | Full Framework 8.0 | TFC_300394_SZ_Deep_Dive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 73 | Excel 72 | TFC_300394_SZ_Deep_Dive.md | TFC_300394_SZ_Deep_Dive.pdf | TFC_300394_SZ_Deep_Dive_model.xlsx",
             "SuperCycle": "Optical components and precision packaging",
             "Q3 2026": 69.43483156101107,
-            "Q4 2026": 77.90631366709398,
-            "Q1 2027": 88.79417336518527,
-            "Q2 2027": 97.53882285525921,
-            "Q3 2027": 107.08006388657057,
-            "Q4 2027": 117.81673579018425,
-            "Q1 2028": 130.147532328039,
-            "Q2 2028": 139.70630252974533,
-            "Q3 2028": 150.15909531961043,
-            "Q4 2028": 161.95350851134089,
-            "Q1 2029": 175.53697661315852,
-            "Q2 2029": 184.2679982859585,
-            "Q3 2029": 193.82979656110538,
-            "Q4 2029": 204.6382907506667,
-            "Q1 2030": 217.1092484744303,
-            "Original rank": 222.0,
+            "Q4 2026": 80.20135727640671,
+            "Q1 2027": 91.38153645978868,
+            "Q2 2027": 100.47310774468936,
+            "Q3 2027": 110.41632044511759,
+            "Q4 2027": 121.6375529049289,
+            "Q1 2028": 134.56302784761215,
+            "Q2 2028": 144.88256782794454,
+            "Q3 2028": 156.1771943606882,
+            "Q4 2028": 168.93508075804084,
+            "Q1 2029": 183.6442222227971,
+            "Q2 2029": 193.2649707146663,
+            "Q3 2029": 203.795591575468,
+            "Q4 2029": 215.69160788845025,
+            "Q1 2030": 229.40837660046645,
+            "Original rank": 219.0,
             "Rank eligible": 1.0,
-            "Comparable EV": -0.3947016536835806,
+            "Comparable EV": -0.3841521720613996,
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
@@ -5851,7 +5851,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -1
         },
         {
-            "Rank": 146.0,
+            "Rank": 145.0,
             "Ticker": "CGNX",
             "Name": "Cognex Corporation",
             "EV = Base% x (Upside - 1)": -0.20797075354923286,
@@ -5877,7 +5877,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 57.93194423003787,
             "Q4 2029": 60.662819311936815,
             "Q1 2030": 63.07357244575315,
-            "Original rank": 203.0,
+            "Original rank": 202.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.20797075354923286,
             "Entry": 0,
@@ -5886,7 +5886,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -51
         },
         {
-            "Rank": 129.0,
+            "Rank": 128.0,
             "Ticker": "TXN",
             "Name": "Texas Instruments",
             "EV = Base% x (Upside - 1)": -0.06974259546728384,
@@ -5912,7 +5912,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 327.76257844475776,
             "Q4 2029": 336.0903102231588,
             "Q1 2030": 344.88107929380254,
-            "Original rank": 186.0,
+            "Original rank": 185.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.06974259546728384,
             "Entry": 0,
@@ -5991,7 +5991,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -99
         },
         {
-            "Rank": 167.0,
+            "Rank": 166.0,
             "Ticker": "6257.TW",
             "Name": "Sigurd Microelectronics",
             "EV = Base% x (Upside - 1)": -0.41627726220616224,
@@ -6017,7 +6017,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 153.68831836797767,
             "Q4 2029": 156.6527177104368,
             "Q1 2030": 159.6734393441333,
-            "Original rank": 223.0,
+            "Original rank": 222.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.41627726220616224,
             "Entry": 0,
@@ -6026,7 +6026,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -68
         },
         {
-            "Rank": 125.0,
+            "Rank": 124.0,
             "Ticker": "ASML",
             "Name": "ASML Holding",
             "EV = Base% x (Upside - 1)": -0.04839628949061988,
@@ -6052,7 +6052,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2123.7939769197933,
             "Q4 2029": 2178.5436843701505,
             "Q1 2030": 2238.6130498383764,
-            "Original rank": 182.0,
+            "Original rank": 181.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04839628949061988,
             "Entry": 0,
@@ -6061,7 +6061,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -13
         },
         {
-            "Rank": 113.0,
+            "Rank": 112.0,
             "Ticker": "CSCO",
             "Name": "Cisco Systems",
             "EV = Base% x (Upside - 1)": 0.025852769070576542,
@@ -6087,7 +6087,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 154.43333432326943,
             "Q4 2029": 158.3008435296597,
             "Q1 2030": 161.7115358468287,
-            "Original rank": 113.0,
+            "Original rank": 112.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.025852769070576542,
             "Entry": 0,
@@ -6096,7 +6096,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -27
         },
         {
-            "Rank": 16.0,
+            "Rank": 15.0,
             "Ticker": "NRG",
             "Name": "NRG Energy",
             "EV = Base% x (Upside - 1)": 1.3165765244386545,
@@ -6122,7 +6122,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 437.2780847224385,
             "Q4 2029": 464.7788603692956,
             "Q1 2030": 486.86648097462324,
-            "Original rank": 16.0,
+            "Original rank": 15.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3165765244386545,
             "Entry": 65,
@@ -6166,7 +6166,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 145.0,
+            "Rank": 144.0,
             "Ticker": "3037.TW",
             "Name": "Unimicron",
             "EV = Base% x (Upside - 1)": -0.19709747443391637,
@@ -6192,7 +6192,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1198.9868279987054,
             "Q4 2029": 1233.8271862467736,
             "Q1 2030": 1287.6060581857835,
-            "Original rank": 202.0,
+            "Original rank": 201.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.19709747443391637,
             "Entry": 0,
@@ -6201,7 +6201,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -55
         },
         {
-            "Rank": 99.0,
+            "Rank": 98.0,
             "Ticker": "VIAV",
             "Name": "VIAVI Solutions",
             "EV = Base% x (Upside - 1)": 0.16088490957144824,
@@ -6227,7 +6227,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 89.92592445393228,
             "Q4 2029": 94.47208795188384,
             "Q1 2030": 99.77380422719412,
-            "Original rank": 99.0,
+            "Original rank": 98.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16088490957144824,
             "Entry": 0,
@@ -6236,7 +6236,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -23
         },
         {
-            "Rank": 71.0,
+            "Rank": 70.0,
             "Ticker": "6869.HK",
             "Name": "长飞光纤光缆 YOFC",
             "EV = Base% x (Upside - 1)": 0.3266537467707822,
@@ -6262,7 +6262,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 212.24154601876486,
             "Q4 2029": 209.34995923220183,
             "Q1 2030": 206.94878327488175,
-            "Original rank": 71.0,
+            "Original rank": 70.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3266537467707822,
             "Entry": 16,
@@ -6271,7 +6271,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 106.0,
+            "Rank": 105.0,
             "Ticker": "3896.HK",
             "Name": "金山云 Kingsoft Cloud",
             "EV = Base% x (Upside - 1)": 0.07907149586950818,
@@ -6297,7 +6297,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 11.478882177373238,
             "Q4 2029": 13.418096425450065,
             "Q1 2030": 16.633893750180878,
-            "Original rank": 106.0,
+            "Original rank": 105.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.07907149586950818,
             "Entry": 0,
@@ -6411,7 +6411,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 62
         },
         {
-            "Rank": 139.0,
+            "Rank": 138.0,
             "Ticker": "ANET",
             "Name": "Arista Networks, Inc.",
             "EV = Base% x (Upside - 1)": -0.1498675332270595,
@@ -6437,7 +6437,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.17750799620939,
             "Q4 2029": 192.44559341234532,
             "Q1 2030": 199.21708651876816,
-            "Original rank": 196.0,
+            "Original rank": 195.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.1498675332270595,
             "Entry": 0,
@@ -6446,42 +6446,42 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -49
         },
         {
-            "Rank": 80.0,
+            "Rank": 75.0,
             "Ticker": "APH",
             "Name": "Amphenol Corporation",
-            "EV = Base% x (Upside - 1)": 0.26661102406515647,
+            "EV = Base% x (Upside - 1)": 0.29241470132268227,
             "Base": 70.0,
             "Port": "",
             "Current Price": 81.49,
-            "Upside (Q4 2027)": 1.3808728915216522,
+            "Upside (Q4 2027)": 1.4177352876038318,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-15 | Full Framework 8.0 | APH_Amphenol_DeepDive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 72 | Excel 70 | APH_Amphenol_DeepDive.md | APH_Amphenol_DeepDive.pdf | APH_Amphenol_DeepDive.html | APH_Amphenol_Model.xlsx",
             "SuperCycle": "High-speed data, power and sensor interconnects",
             "Q3 2026": 90.10899729057462,
-            "Q4 2026": 94.58031467614215,
-            "Q1 2027": 98.67016403966296,
-            "Q2 2027": 103.00986407710245,
-            "Q3 2027": 107.62927539340414,
-            "Q4 2027": 112.52733193009944,
-            "Q1 2028": 117.50966631644764,
-            "Q2 2028": 121.03130273385423,
-            "Q3 2028": 124.78290361492591,
-            "Q4 2028": 128.76359264533767,
-            "Q1 2029": 132.8136100195549,
-            "Q2 2029": 135.99683669346643,
-            "Q3 2029": 139.39004692899366,
-            "Q4 2029": 142.99244065373927,
-            "Q1 2030": 146.6581665938659,
-            "Original rank": 80.0,
+            "Q4 2026": 98.5099867244819,
+            "Q1 2027": 101.9957976283047,
+            "Q2 2027": 106.2418406985734,
+            "Q3 2027": 110.75035382881474,
+            "Q4 2027": 115.53124858683624,
+            "Q1 2028": 120.39453273631912,
+            "Q2 2028": 123.76785846815915,
+            "Q3 2028": 127.36208757832676,
+            "Q4 2028": 131.1763783110813,
+            "Q1 2029": 135.05727383314812,
+            "Q2 2029": 138.09423337650412,
+            "Q3 2029": 141.33219236378017,
+            "Q4 2029": 144.7703849851541,
+            "Q1 2030": 148.26920873507206,
+            "Original rank": 75.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 0.26661102406515647,
-            "Entry": 8,
-            "Total": 45,
-            "Upside": "1.3x",
-            "EV Upside": -8
+            "Comparable EV": 0.29241470132268227,
+            "Entry": 10,
+            "Total": 46,
+            "Upside": "1.4x",
+            "EV Upside": -5
         },
         {
-            "Rank": 128.0,
+            "Rank": 127.0,
             "Ticker": "PM",
             "Name": "Philip Morris International Inc.",
             "EV = Base% x (Upside - 1)": -0.06955472816397736,
@@ -6507,7 +6507,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 209.03294036464536,
             "Q4 2029": 211.95499544205185,
             "Q1 2030": 214.6500111120728,
-            "Original rank": 185.0,
+            "Original rank": 184.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.06955472816397736,
             "Entry": 0,
@@ -6516,7 +6516,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -10
         },
         {
-            "Rank": 87.0,
+            "Rank": 86.0,
             "Ticker": "BTI",
             "Name": "British American Tobacco p.l.c.",
             "EV = Base% x (Upside - 1)": 0.24347198828824068,
@@ -6542,7 +6542,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 80.48031399481042,
             "Q4 2029": 81.2981558643277,
             "Q1 2030": 82.18142508340635,
-            "Original rank": 87.0,
+            "Original rank": 86.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24347198828824068,
             "Entry": 5,
@@ -6551,7 +6551,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 120.0,
+            "Rank": 119.0,
             "Ticker": "MO",
             "Name": "Altria Group, Inc.",
             "EV = Base% x (Upside - 1)": -0.004805498116714779,
@@ -6577,7 +6577,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 73.28941753650416,
             "Q4 2029": 73.25689547728986,
             "Q1 2030": 73.22564879294671,
-            "Original rank": 177.0,
+            "Original rank": 176.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.004805498116714779,
             "Entry": 0,
@@ -6586,7 +6586,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -10
         },
         {
-            "Rank": 104.0,
+            "Rank": 103.0,
             "Ticker": "603186.SH",
             "Name": "Wazam New Materials",
             "EV = Base% x (Upside - 1)": 0.09294160443360289,
@@ -6612,7 +6612,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 158.57083017992872,
             "Q4 2029": 150.7384704806162,
             "Q1 2030": 143.7498362736306,
-            "Original rank": 104.0,
+            "Original rank": 103.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.09294160443360289,
             "Entry": 2,
@@ -6621,7 +6621,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -18
         },
         {
-            "Rank": 160.0,
+            "Rank": 159.0,
             "Ticker": "300007.SZ",
             "Name": "Hanwei Electronics Group",
             "EV = Base% x (Upside - 1)": -0.3430182219185875,
@@ -6647,7 +6647,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23.82699916508395,
             "Q4 2029": 24.717836334623804,
             "Q1 2030": 25.496916229830845,
-            "Original rank": 217.0,
+            "Original rank": 216.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3430182219185875,
             "Entry": 0,
@@ -6656,7 +6656,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 101.0,
+            "Rank": 100.0,
             "Ticker": "002353.SZ",
             "Name": "Jereh Group",
             "EV = Base% x (Upside - 1)": 0.12509141047270092,
@@ -6682,7 +6682,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 122.93147250408,
             "Q4 2029": 125.78207543891756,
             "Q1 2030": 129.39072342627003,
-            "Original rank": 101.0,
+            "Original rank": 100.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.12509141047270092,
             "Entry": 0,
@@ -6691,39 +6691,39 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -19
         },
         {
-            "Rank": 7.0,
+            "Rank": 4.0,
             "Ticker": "6166.HK",
             "Name": "CIG Shanghai",
-            "EV = Base% x (Upside - 1)": 1.8273937642796187,
+            "EV = Base% x (Upside - 1)": 2.1046261031685187,
             "Base": 67.0,
             "Port": "",
             "Current Price": 68.8,
-            "Upside (Q4 2027)": 3.727453379521819,
+            "Upside (Q4 2027)": 4.141232989803759,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-26 | 6166HK_CIGShanghai_DeepDive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 68 | Excel 67 | 6166HK_CIGShanghai_DeepDive.md | 6166HK_CIGShanghai_DeepDive.pdf | 6166HK_CIGShanghai_DeepDive.html | 6166HK_CIGShanghai_FormulaModel.xlsx | 6166HK_CIGShanghai_CalculationGraph.json.gz",
             "SuperCycle": "AI optics manufacturing beneficiary. Qualification, 1.6T/NPO mix, price erosion and funding determine capacity-to-cash conversion.",
             "Q3 2026": "",
-            "Q4 2026": 174.11889310294745,
-            "Q1 2027": 202.0362843532606,
-            "Q2 2027": 219.96498322026878,
-            "Q3 2027": 237.78040205261703,
-            "Q4 2027": 256.44879251110115,
-            "Q1 2028": 274.56651493517154,
-            "Q2 2028": 293.36752628107564,
-            "Q3 2028": 308.84406769080374,
-            "Q4 2028": 321.3227441845409,
-            "Q1 2029": 326.865303054365,
-            "Q2 2029": 315.3926389979517,
-            "Q3 2029": 299.31638887395025,
-            "Q4 2029": 279.07747894717943,
-            "Q1 2030": 253.88125756554493,
-            "Original rank": 7.0,
+            "Q4 2026": 201.3684935459836,
+            "Q1 2027": 234.9423153408741,
+            "Q2 2027": 251.97456188687607,
+            "Q3 2027": 268.17299616226893,
+            "Q4 2027": 284.91682969849865,
+            "Q1 2028": 300.532250895788,
+            "Q2 2028": 317.7540439952752,
+            "Q3 2028": 330.9988111871188,
+            "Q4 2028": 340.26453203725515,
+            "Q1 2029": 341.49313788755586,
+            "Q2 2029": 327.876726463837,
+            "Q3 2029": 309.3808406534806,
+            "Q4 2029": 286.4290832473232,
+            "Q1 2030": 258.33892780630333,
+            "Original rank": 4.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 1.8273937642796187,
-            "Entry": 86,
-            "Total": 75,
-            "Upside": "3.5x",
-            "EV Upside": 132
+            "Comparable EV": 2.1046261031685187,
+            "Entry": 97,
+            "Total": 79,
+            "Upside": "3.9x",
+            "EV Upside": 161
         },
         {
             "Rank": 34.0,
@@ -6761,7 +6761,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 118.0,
+            "Rank": 117.0,
             "Ticker": "301666.SZ",
             "Name": "DapuStor",
             "EV = Base% x (Upside - 1)": 0.004470762592790503,
@@ -6796,7 +6796,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -42
         },
         {
-            "Rank": 166.0,
+            "Rank": 165.0,
             "Ticker": "ASTS",
             "Name": "AST SpaceMobile, Inc.",
             "EV = Base% x (Upside - 1)": -0.41556492322524236,
@@ -7052,7 +7052,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 372
         },
         {
-            "Rank": 8.0,
+            "Rank": 7.0,
             "Ticker": "LPK.DE",
             "Name": "LPKF 激光与电子",
             "EV = Base% x (Upside - 1)": 1.6631763727490998,
@@ -7078,7 +7078,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 167.90184334693876,
             "Q4 2029": 189.33441157551022,
             "Q1 2030": 217.65601959183675,
-            "Original rank": 8.0,
+            "Original rank": 7.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.6631763727490998,
             "Change %": "-1.80%",
@@ -7196,7 +7196,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 79
         },
         {
-            "Rank": 9.0,
+            "Rank": 8.0,
             "Ticker": "XFAB",
             "Name": "X-Fab 硅铸造厂",
             "EV = Base% x (Upside - 1)": 1.5846176356345285,
@@ -7222,7 +7222,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 24.277237918516143,
             "Q4 2029": 25.62787024164189,
             "Q1 2030": 27.10231800872104,
-            "Original rank": 9.0,
+            "Original rank": 8.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.5846176356345285,
             "Entry": 73,
@@ -7231,7 +7231,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 109
         },
         {
-            "Rank": 10.0,
+            "Rank": 9.0,
             "Ticker": "8147.TWO",
             "Name": "明思电子工程",
             "EV = Base% x (Upside - 1)": 1.5526866675436528,
@@ -7257,7 +7257,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 722.4699380941047,
             "Q4 2029": 766.064115771207,
             "Q1 2030": 813.5994707183474,
-            "Original rank": 10.0,
+            "Original rank": 9.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.5526866675436528,
             "Change %": "+0.79%",
@@ -7374,7 +7374,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -92
         },
         {
-            "Rank": 70.0,
+            "Rank": 69.0,
             "Ticker": "3363.TWO",
             "Name": "FOCI (上转)",
             "EV = Base% x (Upside - 1)": 0.3343592425541632,
@@ -7400,7 +7400,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1393.1926089873293,
             "Q4 2029": 1401.0782585510897,
             "Q1 2030": 1407.6632587309127,
-            "Original rank": 70.0,
+            "Original rank": 69.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3343592425541632,
             "Change %": "-4.40%",
@@ -7446,7 +7446,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 29
         },
         {
-            "Rank": 13.0,
+            "Rank": 12.0,
             "Ticker": "BRUN",
             "Name": "加速跑",
             "EV = Base% x (Upside - 1)": 1.4066479650859351,
@@ -7472,7 +7472,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 93.28493094672224,
             "Q4 2029": 94.223689968653,
             "Q1 2030": 93.43885052105429,
-            "Original rank": 13.0,
+            "Original rank": 12.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.4066479650859351,
             "Entry": 64,
@@ -7551,7 +7551,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 40
         },
         {
-            "Rank": 11.0,
+            "Rank": 10.0,
             "Ticker": "AMPX",
             "Name": "安普瑞斯科技",
             "EV = Base% x (Upside - 1)": 1.4815189873417725,
@@ -7577,7 +7577,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 80.21000000000004,
             "Q4 2029": 89.45000000000005,
             "Q1 2030": 101.00000000000001,
-            "Original rank": 11.0,
+            "Original rank": 10.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.4815189873417725,
             "Change %": "-7.83%",
@@ -7657,7 +7657,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 32
         },
         {
-            "Rank": 119.0,
+            "Rank": 118.0,
             "Ticker": "ALRIB",
             "Name": "Riber SA（MBE设备）",
             "EV = Base% x (Upside - 1)": 0.002486958975716877,
@@ -7683,7 +7683,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 14.719917057298192,
             "Q4 2029": 14.87851302378202,
             "Q1 2030": 17.376540781242984,
-            "Original rank": 118.0,
+            "Original rank": 117.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.002486958975716877,
             "Change %": "-3.42%",
@@ -7693,7 +7693,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 12.0,
+            "Rank": 11.0,
             "Ticker": "301308.SZ",
             "Name": "Longsys 江波龙",
             "EV = Base% x (Upside - 1)": 1.444725923099844,
@@ -7719,7 +7719,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 670.9937134564026,
             "Q4 2029": 668.5656263436522,
             "Q1 2030": 666.2050255587045,
-            "Original rank": 12.0,
+            "Original rank": 11.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.444725923099844,
             "Entry": 81,
@@ -7870,7 +7870,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 73.0,
+            "Rank": 72.0,
             "Ticker": "3105.TW",
             "Name": "永胜半导体",
             "EV = Base% x (Upside - 1)": 0.324754156751622,
@@ -7896,7 +7896,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 773.1204038989852,
             "Q4 2029": 806.9857629247502,
             "Q1 2030": 838.0512238836823,
-            "Original rank": 73.0,
+            "Original rank": 72.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.324754156751622,
             "Change %": "-1.31%",
@@ -8011,7 +8011,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -18
         },
         {
-            "Rank": 105.0,
+            "Rank": 104.0,
             "Ticker": "FLNC",
             "Name": "流量能量",
             "EV = Base% x (Upside - 1)": 0.08622180145254296,
@@ -8037,7 +8037,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 21.957480348430025,
             "Q4 2029": 23.909883054909553,
             "Q1 2030": 24.134957211088356,
-            "Original rank": 105.0,
+            "Original rank": 104.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.08622180145254296,
             "Entry": 0,
@@ -8188,7 +8188,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 50
         },
         {
-            "Rank": 82.0,
+            "Rank": 81.0,
             "Ticker": "META",
             "Name": "元平台",
             "EV = Base% x (Upside - 1)": 0.26429470299168684,
@@ -8214,7 +8214,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 918.2459690757746,
             "Q4 2029": 941.8566760840761,
             "Q1 2030": 974.9313384175873,
-            "Original rank": 82.0,
+            "Original rank": 81.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.26429470299168684,
             "Entry": 7,
@@ -8223,7 +8223,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 5
         },
         {
-            "Rank": 18.0,
+            "Rank": 17.0,
             "Ticker": "COHR",
             "Name": "相干公司",
             "EV = Base% x (Upside - 1)": 1.188347457499944,
@@ -8249,7 +8249,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 636.2363841844898,
             "Q4 2029": 648.7845484846312,
             "Q1 2030": 654.3715385481543,
-            "Original rank": 18.0,
+            "Original rank": 17.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.188347457499944,
             "Change %": "-6.20%",
@@ -8259,7 +8259,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 80
         },
         {
-            "Rank": 17.0,
+            "Rank": 16.0,
             "Ticker": "AIXA.DE",
             "Name": "爱思强公司",
             "EV = Base% x (Upside - 1)": 1.2375231727444576,
@@ -8285,7 +8285,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 139.93526898186778,
             "Q4 2029": 144.4800803842162,
             "Q1 2030": 149.02446122224706,
-            "Original rank": 17.0,
+            "Original rank": 16.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.2375231727444576,
             "Change %": "-2.63%",
@@ -8365,7 +8365,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 127.0,
+            "Rank": 126.0,
             "Ticker": "GOOGL",
             "Name": "字母表公司",
             "EV = Base% x (Upside - 1)": -0.057897885030610316,
@@ -8391,7 +8391,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 464.61148395014055,
             "Q4 2029": 486.9187437160318,
             "Q1 2030": 511.41664847576703,
-            "Original rank": 184.0,
+            "Original rank": 183.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.057897885030610316,
             "Entry": 0,
@@ -8400,7 +8400,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -22
         },
         {
-            "Rank": 123.0,
+            "Rank": 122.0,
             "Ticker": "MSFT",
             "Name": "微软",
             "EV = Base% x (Upside - 1)": -0.018563757005690466,
@@ -8426,7 +8426,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 572.1004854532977,
             "Q4 2029": 571.3155892566634,
             "Q1 2030": 569.934554024367,
-            "Original rank": 180.0,
+            "Original rank": 179.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.018563757005690466,
             "Entry": 0,
@@ -8435,7 +8435,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -16
         },
         {
-            "Rank": 86.0,
+            "Rank": 85.0,
             "Ticker": "AMZN",
             "Name": "亚马逊公司",
             "EV = Base% x (Upside - 1)": 0.24658244325900555,
@@ -8461,7 +8461,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 426.2176999548288,
             "Q4 2029": 438.2239024031452,
             "Q1 2030": 449.3982063841283,
-            "Original rank": 86.0,
+            "Original rank": 85.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24658244325900555,
             "Entry": 2,
@@ -8470,7 +8470,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 1
         },
         {
-            "Rank": 157.0,
+            "Rank": 156.0,
             "Ticker": "LITE",
             "Name": "鲁门图姆控股",
             "EV = Base% x (Upside - 1)": -0.313283587303708,
@@ -8496,7 +8496,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1732.1236156310779,
             "Q4 2029": 1897.273657166935,
             "Q1 2030": 2079.766374791502,
-            "Original rank": 214.0,
+            "Original rank": 213.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.313283587303708,
             "Change %": "-8.61%",
@@ -8541,7 +8541,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 1
         },
         {
-            "Rank": 108.0,
+            "Rank": 107.0,
             "Ticker": "000938.SZ",
             "Name": "Unisplendour (紫光股份)",
             "EV = Base% x (Upside - 1)": 0.05773748176968267,
@@ -8567,7 +8567,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 61.167624932966,
             "Q4 2029": 63.90403250737201,
             "Q1 2030": 67.88107661631007,
-            "Original rank": 108.0,
+            "Original rank": 107.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.05773748176968267,
             "Entry": 0,
@@ -8576,7 +8576,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -31
         },
         {
-            "Rank": 140.0,
+            "Rank": 139.0,
             "Ticker": "002409.SZ",
             "Name": "雅克科技 Yoke Technology",
             "EV = Base% x (Upside - 1)": -0.15347598197396406,
@@ -8602,7 +8602,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 159.84081910417768,
             "Q4 2029": 163.93577154551178,
             "Q1 2030": 164.97907909088838,
-            "Original rank": 197.0,
+            "Original rank": 196.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.15347598197396406,
             "Entry": 0,
@@ -8611,7 +8611,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 148.0,
+            "Rank": 147.0,
             "Ticker": "FTC.L",
             "Name": "菲尔创力PLC",
             "EV = Base% x (Upside - 1)": -0.21456678667505297,
@@ -8637,7 +8637,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 417.7870405128704,
             "Q4 2029": 456.3222296704368,
             "Q1 2030": 496.02072518525745,
-            "Original rank": 205.0,
+            "Original rank": 204.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.21456678667505297,
             "Change %": "+1.48%",
@@ -8647,42 +8647,42 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -52
         },
         {
-            "Rank": 4.0,
+            "Rank": 19.0,
             "Ticker": "SHAZ",
             "Name": "莎朗人工智能控股有限公司",
-            "EV = Base% x (Upside - 1)": 2.0215193884304563,
+            "EV = Base% x (Upside - 1)": 1.04585754752481,
             "Base": 73.0,
             "Port": "",
             "Current Price": 49.79,
-            "Upside (Q4 2027)": 3.769204641685557,
+            "Upside (Q4 2027)": 2.4326815719517945,
             "Earnings Multiple": 20,
-            "Artifact Updated": "7 Oct 2026: Base 73; manual Base overrides removed. Earlier research note: 2026-10-02 | USD356M conditional facility (A150/B206), unknown draws; initial parent guarantee covers both. Financing execution evidence for existing 120MW +92MW case, not new cash/revenue. Model, 20x OP, shares, Excel Base80 and analytical Base73 unchanged. Q4 2027 active horizon. See SHAZ_SharonAI_DeepDive_2026.pdf.",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 72 | Excel 73 | SHAZ_SharonAI_DeepDive_2026.md | SHAZ_SharonAI_DeepDive_2026.pdf | SHAZ_SharonAI_DeepDive_2026_model.xlsx",
             "SuperCycle": "AI",
             "Q3 2026": 22.57163238111112,
-            "Q4 2026": 56.58231652000003,
-            "Q1 2027": 93.97208313168049,
-            "Q2 2027": 129.77509338032795,
-            "Q3 2027": 163.28028081505383,
-            "Q4 2027": 187.66869910952389,
-            "Q1 2028": 204.53662265384625,
-            "Q2 2028": 214.71694173631852,
-            "Q3 2028": 218.0881494985508,
-            "Q4 2028": 216.7136299957747,
-            "Q1 2029": 217.02085789137533,
-            "Q2 2029": 216.41879366666672,
-            "Q3 2029": 214.926250262069,
-            "Q4 2029": 213.4541526575343,
-            "Q1 2030": 212.0020835918368,
-            "Original rank": 4.0,
+            "Q4 2026": 0.1421069621007606,
+            "Q1 2027": 31.20673999833365,
+            "Q2 2027": 61.83293061514805,
+            "Q3 2027": 93.06303636975701,
+            "Q4 2027": 121.12321546747984,
+            "Q1 2028": 141.75582976128717,
+            "Q2 2028": 155.1187158208955,
+            "Q3 2028": 162.01074565797097,
+            "Q4 2028": 163.77333386901404,
+            "Q1 2029": 165.18833912680648,
+            "Q2 2029": 165.04529366666662,
+            "Q3 2029": 163.9070502620689,
+            "Q4 2029": 162.78439923287667,
+            "Q1 2030": 161.6770223673469,
+            "Original rank": 19.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 2.0215193884304563,
-            "Entry": 82,
-            "Total": 77,
-            "Upside": "3.3x",
-            "EV Upside": 139
+            "Comparable EV": 1.04585754752481,
+            "Entry": 42,
+            "Total": 61,
+            "Upside": "1.9x",
+            "EV Upside": 36
         },
         {
-            "Rank": 126.0,
+            "Rank": 125.0,
             "Ticker": "4977.TW",
             "Name": "PCL Technologies (众达-KY)",
             "EV = Base% x (Upside - 1)": -0.04928070989796583,
@@ -8708,7 +8708,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 134.86140385884076,
             "Q4 2029": 151.0116975579462,
             "Q1 2030": 153.8480661275041,
-            "Original rank": 183.0,
+            "Original rank": 182.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04928070989796583,
             "Change %": "-7.73%",
@@ -8789,7 +8789,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 0
         },
         {
-            "Rank": 84.0,
+            "Rank": 83.0,
             "Ticker": "MRVL",
             "Name": "迈维尔科技",
             "EV = Base% x (Upside - 1)": 0.2561540923839323,
@@ -8815,7 +8815,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 599.4098117517817,
             "Q4 2029": 664.3042067330813,
             "Q1 2030": 736.4792077543858,
-            "Original rank": 84.0,
+            "Original rank": 83.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2561540923839323,
             "Change %": "-3.18%",
@@ -8860,7 +8860,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 69.0,
+            "Rank": 68.0,
             "Ticker": "3711.TW",
             "Name": "ASE Technology 日月光投控",
             "EV = Base% x (Upside - 1)": 0.3555786445911664,
@@ -8886,7 +8886,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1317.3794972783808,
             "Q4 2029": 1393.6651180961626,
             "Q1 2030": 1475.9242734363452,
-            "Original rank": 69.0,
+            "Original rank": 68.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3555786445911664,
             "Entry": 10,
@@ -8895,7 +8895,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 4
         },
         {
-            "Rank": 92.0,
+            "Rank": 91.0,
             "Ticker": "000725.SZ",
             "Name": "京东方A BOE Technology",
             "EV = Base% x (Upside - 1)": 0.19477150553749145,
@@ -8921,7 +8921,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 13.329979771717852,
             "Q4 2029": 13.994558906679265,
             "Q1 2030": 14.710095404040096,
-            "Original rank": 92.0,
+            "Original rank": 91.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19477150553749145,
             "Entry": 3,
@@ -8930,7 +8930,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -34
         },
         {
-            "Rank": 116.0,
+            "Rank": 115.0,
             "Ticker": "IQE.L",
             "Name": "IQE公司",
             "EV = Base% x (Upside - 1)": 0.005147457203002314,
@@ -8956,7 +8956,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 110.34271273235107,
             "Q4 2029": 116.31671463253623,
             "Q1 2030": 122.85919701319509,
-            "Original rank": 116.0,
+            "Original rank": 115.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.005147457203002314,
             "Change %": "-15.00%",
@@ -8966,7 +8966,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -45
         },
         {
-            "Rank": 94.0,
+            "Rank": 93.0,
             "Ticker": "CIEN",
             "Name": "西耶纳公司",
             "EV = Base% x (Upside - 1)": 0.1889242489291139,
@@ -8992,7 +8992,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 643.5650226012758,
             "Q4 2029": 665.1792491427376,
             "Q1 2030": 684.5424767123285,
-            "Original rank": 94.0,
+            "Original rank": 93.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1889242489291139,
             "Entry": 0,
@@ -9036,7 +9036,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 95.0,
+            "Rank": 94.0,
             "Ticker": "TSEM",
             "Name": "塔半导体",
             "EV = Base% x (Upside - 1)": 0.1763222087154121,
@@ -9062,7 +9062,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 527.7678625915225,
             "Q4 2029": 574.3259652341318,
             "Q1 2030": 620.3455569474695,
-            "Original rank": 95.0,
+            "Original rank": 94.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1763222087154121,
             "Change %": "-7.86%",
@@ -9072,7 +9072,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -13
         },
         {
-            "Rank": 98.0,
+            "Rank": 97.0,
             "Ticker": "EOS.AX",
             "Name": "光电系统",
             "EV = Base% x (Upside - 1)": 0.16158581130593605,
@@ -9098,7 +9098,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 9.742931317958206,
             "Q4 2029": 11.053871337506672,
             "Q1 2030": 12.541451079434069,
-            "Original rank": 98.0,
+            "Original rank": 97.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16158581130593605,
             "Change %": "+4.13%",
@@ -9108,7 +9108,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -16
         },
         {
-            "Rank": 102.0,
+            "Rank": 101.0,
             "Ticker": "6830.TWO",
             "Name": "MSScorps (泛铨科技)",
             "EV = Base% x (Upside - 1)": 0.11470619225158032,
@@ -9134,7 +9134,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 931.7714285714286,
             "Q4 2029": 1010.168253968254,
             "Q1 2030": 1088.0377952755907,
-            "Original rank": 102.0,
+            "Original rank": 101.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.11470619225158032,
             "Change %": "+0.55%",
@@ -9144,7 +9144,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -34
         },
         {
-            "Rank": 74.0,
+            "Rank": 73.0,
             "Ticker": "VICR",
             "Name": "维科公司",
             "EV = Base% x (Upside - 1)": 0.3218260609673673,
@@ -9170,7 +9170,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 622.0366016743542,
             "Q4 2029": 655.1671843837594,
             "Q1 2030": 686.2203346455362,
-            "Original rank": 74.0,
+            "Original rank": 73.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3218260609673673,
             "Change %": "-9.51%",
@@ -9180,7 +9180,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 90.0,
+            "Rank": 89.0,
             "Ticker": "LRCX",
             "Name": "泛林研究",
             "EV = Base% x (Upside - 1)": 0.20611201685556058,
@@ -9206,7 +9206,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 385.49630878402013,
             "Q4 2029": 393.4338797479461,
             "Q1 2030": 401.9139442231076,
-            "Original rank": 90.0,
+            "Original rank": 89.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.20611201685556058,
             "Entry": 0,
@@ -9215,7 +9215,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 93.0,
+            "Rank": 92.0,
             "Ticker": "SE",
             "Name": "海运有限公司",
             "EV = Base% x (Upside - 1)": 0.19345879087274914,
@@ -9241,7 +9241,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 235.72619707630616,
             "Q4 2029": 246.8331649036794,
             "Q1 2030": 258.97867661298153,
-            "Original rank": 93.0,
+            "Original rank": 92.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19345879087274914,
             "Entry": 2,
@@ -9250,7 +9250,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 110.0,
+            "Rank": 109.0,
             "Ticker": "BESI.AS",
             "Name": "BE半导体工业公司",
             "EV = Base% x (Upside - 1)": 0.04297614808028615,
@@ -9276,7 +9276,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 300.71733326957684,
             "Q4 2029": 310.53222467324633,
             "Q1 2030": 320.0027595520098,
-            "Original rank": 110.0,
+            "Original rank": 109.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.04297614808028615,
             "Change %": "-2.25%",
@@ -9286,7 +9286,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -21
         },
         {
-            "Rank": 161.0,
+            "Rank": 160.0,
             "Ticker": "AVEX",
             "Name": "AEVEX 航空航天",
             "EV = Base% x (Upside - 1)": -0.36621416009327434,
@@ -9312,7 +9312,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 25.266557938243444,
             "Q4 2029": 25.197949970896264,
             "Q1 2030": 24.84763770342977,
-            "Original rank": 218.0,
+            "Original rank": 217.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.36621416009327434,
             "Change %": "+5.87%",
@@ -9322,7 +9322,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -80
         },
         {
-            "Rank": 131.0,
+            "Rank": 130.0,
             "Ticker": "STM",
             "Name": "意法半导体",
             "EV = Base% x (Upside - 1)": -0.08258748600606035,
@@ -9348,7 +9348,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 83.74333022685376,
             "Q4 2029": 87.73137186996982,
             "Q1 2030": 92.45156279558142,
-            "Original rank": 188.0,
+            "Original rank": 187.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.08258748600606035,
             "Entry": 0,
@@ -9357,7 +9357,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -49
         },
         {
-            "Rank": 85.0,
+            "Rank": 84.0,
             "Ticker": "AMD",
             "Name": "超微半导体公司",
             "EV = Base% x (Upside - 1)": 0.2530874646773534,
@@ -9383,7 +9383,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1086.8882379949885,
             "Q4 2029": 1182.7900064596524,
             "Q1 2030": 1293.7714024093416,
-            "Original rank": 85.0,
+            "Original rank": 84.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2530874646773534,
             "Entry": 0,
@@ -9392,7 +9392,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -4
         },
         {
-            "Rank": 130.0,
+            "Rank": 129.0,
             "Ticker": "BE",
             "Name": "布鲁姆能源",
             "EV = Base% x (Upside - 1)": -0.07699490483213865,
@@ -9418,7 +9418,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 286.152238972243,
             "Q4 2029": 294.37198376564476,
             "Q1 2030": 305.5144859480588,
-            "Original rank": 187.0,
+            "Original rank": 186.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.07699490483213865,
             "Change %": "-5.80%",
@@ -9428,7 +9428,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -39
         },
         {
-            "Rank": 103.0,
+            "Rank": 102.0,
             "Ticker": "FN",
             "Name": "工厂",
             "EV = Base% x (Upside - 1)": 0.10371890646629608,
@@ -9454,7 +9454,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 707.9966960186755,
             "Q4 2029": 723.4827970400822,
             "Q1 2030": 736.4148229391899,
-            "Original rank": 103.0,
+            "Original rank": 102.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.10371890646629608,
             "Entry": 0,
@@ -9463,7 +9463,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 151.0,
+            "Rank": 150.0,
             "Ticker": "ACMR",
             "Name": "ACM研究",
             "EV = Base% x (Upside - 1)": -0.28423211038267426,
@@ -9489,7 +9489,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 112.32149416387577,
             "Q4 2029": 122.42373216089828,
             "Q1 2030": 133.93597621529594,
-            "Original rank": 208.0,
+            "Original rank": 207.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.28423211038267426,
             "Entry": 0,
@@ -9498,7 +9498,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -59
         },
         {
-            "Rank": 111.0,
+            "Rank": 110.0,
             "Ticker": "009150.KS",
             "Name": "三星电机",
             "EV = Base% x (Upside - 1)": 0.040279654174230434,
@@ -9524,7 +9524,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1978089.41951095,
             "Q4 2029": 2066829.5909537259,
             "Q1 2030": 2162311.3354161335,
-            "Original rank": 111.0,
+            "Original rank": 110.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.040279654174230434,
             "Entry": 0,
@@ -9533,7 +9533,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -26
         },
         {
-            "Rank": 134.0,
+            "Rank": 133.0,
             "Ticker": "AXTI",
             "Name": "AXT公司",
             "EV = Base% x (Upside - 1)": -0.12553634644382217,
@@ -9559,7 +9559,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 59.55516182907567,
             "Q4 2029": 59.39614908569437,
             "Q1 2030": 57.82794587901811,
-            "Original rank": 191.0,
+            "Original rank": 190.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.12553634644382217,
             "Entry": 0,
@@ -9604,7 +9604,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 49
         },
         {
-            "Rank": 88.0,
+            "Rank": 87.0,
             "Ticker": "RDDT",
             "Name": "雷迪特公司",
             "EV = Base% x (Upside - 1)": 0.24303913364744606,
@@ -9630,7 +9630,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 432.16774727784883,
             "Q4 2029": 465.4155098645035,
             "Q1 2030": 504.6003782812271,
-            "Original rank": 88.0,
+            "Original rank": 87.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24303913364744606,
             "Entry": 0,
@@ -9639,7 +9639,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -19
         },
         {
-            "Rank": 153.0,
+            "Rank": 152.0,
             "Ticker": "INTC",
             "Name": "英特尔公司",
             "EV = Base% x (Upside - 1)": -0.2874147169025176,
@@ -9665,7 +9665,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 114.15919663120458,
             "Q4 2029": 123.32705610877726,
             "Q1 2030": 133.00533529387258,
-            "Original rank": 210.0,
+            "Original rank": 209.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.2874147169025176,
             "Entry": 0,
@@ -9674,7 +9674,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -61
         },
         {
-            "Rank": 97.0,
+            "Rank": 96.0,
             "Ticker": "2454.TW",
             "Name": "联发科联发科技",
             "EV = Base% x (Upside - 1)": 0.16853316306073826,
@@ -9700,7 +9700,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 7465.1224726217315,
             "Q4 2029": 7899.49726350074,
             "Q1 2030": 8334.244909148356,
-            "Original rank": 97.0,
+            "Original rank": 96.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16853316306073826,
             "Entry": 0,
@@ -9744,7 +9744,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -77
         },
         {
-            "Rank": 158.0,
+            "Rank": 157.0,
             "Ticker": "002371.SZ",
             "Name": "北方华创 NAURA",
             "EV = Base% x (Upside - 1)": -0.32399224003445265,
@@ -9770,7 +9770,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 453.12063547632914,
             "Q4 2029": 452.9960464452085,
             "Q1 2030": 455.60516723505975,
-            "Original rank": 215.0,
+            "Original rank": 214.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.32399224003445265,
             "Entry": 0,
@@ -9779,7 +9779,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 141.0,
+            "Rank": 140.0,
             "Ticker": "300408.SZ",
             "Name": "三环集团",
             "EV = Base% x (Upside - 1)": -0.16341653463035669,
@@ -9805,7 +9805,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 122.45389073798921,
             "Q4 2029": 125.62276358687026,
             "Q1 2030": 129.62794928443856,
-            "Original rank": 198.0,
+            "Original rank": 197.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.16341653463035669,
             "Entry": 0,
@@ -9849,7 +9849,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 124.0,
+            "Rank": 123.0,
             "Ticker": "GLW",
             "Name": "康宁",
             "EV = Base% x (Upside - 1)": -0.04617320743801742,
@@ -9875,7 +9875,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 242.9806452870758,
             "Q4 2029": 256.83834929920084,
             "Q1 2030": 270.83658629226653,
-            "Original rank": 181.0,
+            "Original rank": 180.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04617320743801742,
             "Entry": 0,
@@ -9884,7 +9884,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -40
         },
         {
-            "Rank": 137.0,
+            "Rank": 136.0,
             "Ticker": "PNG.V",
             "Name": "克拉肯机器人公司",
             "EV = Base% x (Upside - 1)": -0.14831598412232389,
@@ -9910,7 +9910,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 8.188211551352934,
             "Q4 2029": 8.821656224661,
             "Q1 2030": 9.518314114723967,
-            "Original rank": 194.0,
+            "Original rank": 193.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14831598412232389,
             "Change %": "-2.02%",
@@ -9955,43 +9955,43 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -87
         },
         {
-            "Rank": 68.0,
+            "Rank": 168.0,
             "Ticker": "NRGV",
             "Name": "能源库控股",
-            "EV = Base% x (Upside - 1)": 0.3619233524355299,
+            "EV = Base% x (Upside - 1)": -0.41855746264838306,
             "Base": 60.0,
             "Port": "",
             "Current Price": 3.49,
-            "Upside (Q4 2027)": 1.60320558739255,
+            "Upside (Q4 2027)": 0.3024042289193616,
             "Earnings Multiple": 15,
-            "Artifact Updated": "7 Oct 2026: Base 60; manual Base overrides removed. Earlier research note: 2026-09-30 | Framework 8.0. Goshe modeled at 70%, Q1 2028 half-quarter start; $30M conditional annual project EBITDA translated through depreciation, corporate costs and funding. Procurement not double-counted. Excel Base 57; analytical Base 60. Locked 15x economic OP; shares unchanged.",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 58 | Excel 60 | NRGV_EnergyVault_DeepDive.md | NRGV_EnergyVault_DeepDive.pdf | NRGV_EnergyVault_DeepDive_model.xlsx",
             "SuperCycle": "Other",
             "Q3 2026": -0.0020203636363635012,
-            "Q4 2026": 2.4183796363636367,
-            "Q1 2027": 2.6892857142857145,
-            "Q2 2027": 3.3619553571428575,
-            "Q3 2027": 4.323616071428572,
-            "Q4 2027": 5.5951875,
-            "Q1 2028": 6.88383620689655,
-            "Q2 2028": 7.31596551724138,
-            "Q3 2028": 7.818620689655173,
-            "Q4 2028": 8.461965517241378,
-            "Q1 2029": 8.98,
-            "Q2 2029": 9.575300000000002,
-            "Q3 2029": 10.357000000000001,
-            "Q4 2029": 11.311850000000002,
-            "Q1 2030": 12.091935483870966,
-            "Original rank": 68.0,
+            "Q4 2026": -1.2506693181818183,
+            "Q1 2027": -1.714285714285714,
+            "Q2 2027": -1.2797631696428564,
+            "Q3 2027": -0.3694527455357141,
+            "Q4 2027": 1.055390758928572,
+            "Q1 2028": 2.766338275862069,
+            "Q2 2028": 3.4052975172413795,
+            "Q3 2028": 4.200118383620691,
+            "Q4 2028": 5.201687224137931,
+            "Q1 2029": 6.242315312500001,
+            "Q2 2029": 6.967367387499999,
+            "Q3 2029": 7.8619234375000016,
+            "Q4 2029": 8.886729175,
+            "Q1 2030": 9.822394052419355,
+            "Original rank": 224.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 0.3619233524355299,
+            "Comparable EV": -0.41855746264838306,
             "Change %": "-9.54%",
-            "Entry": 2,
-            "Total": 37,
-            "Upside": "1.2x",
-            "EV Upside": -26
+            "Entry": 0,
+            "Total": 36,
+            "Upside": "-0.1x",
+            "EV Upside": -106
         },
         {
-            "Rank": 168.0,
+            "Rank": 167.0,
             "Ticker": "688008.SH",
             "Name": "澜起科技 Montage Technology",
             "EV = Base% x (Upside - 1)": -0.41634750209281157,
@@ -10017,7 +10017,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 185.54741067588742,
             "Q4 2029": 203.2726929177632,
             "Q1 2030": 222.5544534670449,
-            "Original rank": 224.0,
+            "Original rank": 223.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.41634750209281157,
             "Entry": 0,
@@ -10026,7 +10026,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -65
         },
         {
-            "Rank": 143.0,
+            "Rank": 142.0,
             "Ticker": "MTSI",
             "Name": "MACOM技术解决方案",
             "EV = Base% x (Upside - 1)": -0.188308628683608,
@@ -10052,7 +10052,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 361.90574370872645,
             "Q4 2029": 383.47720221830986,
             "Q1 2030": 408.39725398948605,
-            "Original rank": 200.0,
+            "Original rank": 199.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.188308628683608,
             "Entry": 0,
@@ -10061,7 +10061,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -51
         },
         {
-            "Rank": 136.0,
+            "Rank": 135.0,
             "Ticker": "600584.SH",
             "Name": "长电科技 JCET Group",
             "EV = Base% x (Upside - 1)": -0.14193953306814724,
@@ -10087,7 +10087,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 118.58782869535274,
             "Q4 2029": 128.385708186603,
             "Q1 2030": 138.5714139070219,
-            "Original rank": 193.0,
+            "Original rank": 192.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14193953306814724,
             "Entry": 0,
@@ -10201,7 +10201,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -89
         },
         {
-            "Rank": 150.0,
+            "Rank": 149.0,
             "Ticker": "ALAB",
             "Name": "阿斯特拉实验室",
             "EV = Base% x (Upside - 1)": -0.2615773953080125,
@@ -10227,7 +10227,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 409.55858153292263,
             "Q4 2029": 441.4722913013179,
             "Q1 2030": 476.0041124425265,
-            "Original rank": 207.0,
+            "Original rank": 206.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.2615773953080125,
             "Change %": "-6.70%",
@@ -10237,7 +10237,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -54
         },
         {
-            "Rank": 144.0,
+            "Rank": 143.0,
             "Ticker": "300136.SZ",
             "Name": "信威通讯",
             "EV = Base% x (Upside - 1)": -0.19104860207982388,
@@ -10263,7 +10263,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 57.04772799118616,
             "Q4 2029": 61.376902261572575,
             "Q1 2030": 66.4868700565173,
-            "Original rank": 201.0,
+            "Original rank": 200.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.19104860207982388,
             "Entry": 0,
@@ -10307,7 +10307,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -78
         },
         {
-            "Rank": 138.0,
+            "Rank": 137.0,
             "Ticker": "AAPL",
             "Name": "苹果公司",
             "EV = Base% x (Upside - 1)": -0.14966441439988173,
@@ -10333,7 +10333,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 313.8050934659579,
             "Q4 2029": 322.3348283594963,
             "Q1 2030": 333.0058129446469,
-            "Original rank": 195.0,
+            "Original rank": 194.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.14966441439988173,
             "Entry": 0,
@@ -10412,7 +10412,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -85
         },
         {
-            "Rank": 155.0,
+            "Rank": 154.0,
             "Ticker": "688825.SH",
             "Name": "长鑫科技 CXMT",
             "EV = Base% x (Upside - 1)": -0.3054626595830129,
@@ -10438,7 +10438,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 21.537023609486454,
             "Q4 2029": 21.825319241684817,
             "Q1 2030": 22.466028993346832,
-            "Original rank": 212.0,
+            "Original rank": 211.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3054626595830129,
             "Entry": 0,
@@ -10447,7 +10447,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -62
         },
         {
-            "Rank": 107.0,
+            "Rank": 106.0,
             "Ticker": "002384.SZ",
             "Name": "东山精密 Dongshan Precision",
             "EV = Base% x (Upside - 1)": 0.07569605570067492,
@@ -10473,7 +10473,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 293.29246388732525,
             "Q4 2029": 302.7254532203873,
             "Q1 2030": 311.6694158115004,
-            "Original rank": 107.0,
+            "Original rank": 106.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.07569605570067492,
             "Entry": 0,
@@ -10835,7 +10835,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -90
         },
         {
-            "Rank": 19.0,
+            "Rank": 18.0,
             "Ticker": "FIVN",
             "Name": "Five9",
             "EV = Base% x (Upside - 1)": 1.1469084125146067,
@@ -10861,7 +10861,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 119.61646451612906,
             "Q4 2029": 122.82929169349644,
             "Q1 2030": 126.16452442159384,
-            "Original rank": 19.0,
+            "Original rank": 18.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.1469084125146067,
             "Entry": 64,
@@ -10905,7 +10905,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 48
         },
         {
-            "Rank": 14.0,
+            "Rank": 13.0,
             "Ticker": "SHLS",
             "Name": "Shoals Technologies Group",
             "EV = Base% x (Upside - 1)": 1.3787571476881455,
@@ -10931,7 +10931,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 31.34514484356895,
             "Q4 2029": 32.67824074074075,
             "Q1 2030": 33.906936416184976,
-            "Original rank": 14.0,
+            "Original rank": 13.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3787571476881455,
             "Entry": 70,
@@ -11010,7 +11010,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 14
         },
         {
-            "Rank": 117.0,
+            "Rank": 116.0,
             "Ticker": "2409.TW",
             "Name": "AUO Corporation",
             "EV = Base% x (Upside - 1)": 0.005115995554710295,
@@ -11036,7 +11036,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 59.69124526301842,
             "Q4 2029": 64.48638054856235,
             "Q1 2030": 69.28151583410626,
-            "Original rank": 117.0,
+            "Original rank": 116.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.005115995554710295,
             "Entry": 0,
@@ -11045,7 +11045,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 154.0,
+            "Rank": 153.0,
             "Ticker": "6510.TWO",
             "Name": "Chunghwa Precision Test",
             "EV = Base% x (Upside - 1)": -0.3034786096256684,
@@ -11071,7 +11071,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2842.5058823529416,
             "Q4 2029": 2931.3647058823526,
             "Q1 2030": 3027.0588235294117,
-            "Original rank": 211.0,
+            "Original rank": 210.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3034786096256684,
             "Entry": 0,
@@ -11185,7 +11185,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 41
         },
         {
-            "Rank": 91.0,
+            "Rank": 90.0,
             "Ticker": "VRT",
             "Name": "Vertiv",
             "EV = Base% x (Upside - 1)": 0.19715055801611325,
@@ -11211,7 +11211,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 414.31311069283646,
             "Q4 2029": 425.87948316869034,
             "Q1 2030": 438.1393954604809,
-            "Original rank": 91.0,
+            "Original rank": 90.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.19715055801611325,
             "Entry": 0,
@@ -11290,7 +11290,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 42
         },
         {
-            "Rank": 89.0,
+            "Rank": 88.0,
             "Ticker": "300308.SZ",
             "Name": "Zhongji Innolight",
             "EV = Base% x (Upside - 1)": 0.20786165817878782,
@@ -11316,7 +11316,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1315.9775984745713,
             "Q4 2029": 1353.8119494253556,
             "Q1 2030": 1394.515100158015,
-            "Original rank": 89.0,
+            "Original rank": 88.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.20786165817878782,
             "Entry": 2,
@@ -11325,7 +11325,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -12
         },
         {
-            "Rank": 100.0,
+            "Rank": 99.0,
             "Ticker": "300502.SZ",
             "Name": "Eoptolink Technology",
             "EV = Base% x (Upside - 1)": 0.1444810776986284,
@@ -11351,7 +11351,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 655.7635602737438,
             "Q4 2029": 674.2183587876839,
             "Q1 2030": 692.5820634983035,
-            "Original rank": 100.0,
+            "Original rank": 99.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.1444810776986284,
             "Entry": 0,
@@ -11570,7 +11570,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 21
         },
         {
-            "Rank": 114.0,
+            "Rank": 113.0,
             "Ticker": "6515.TW",
             "Name": "WinWay Technology",
             "EV = Base% x (Upside - 1)": 0.02563005108317644,
@@ -11596,7 +11596,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 10574.693815693581,
             "Q4 2029": 11008.47548228955,
             "Q1 2030": 11392.691385810589,
-            "Original rank": 114.0,
+            "Original rank": 113.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.02563005108317644,
             "Entry": 0,
@@ -11815,7 +11815,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 61
         },
         {
-            "Rank": 149.0,
+            "Rank": 148.0,
             "Ticker": "FORM",
             "Name": "外形尺寸",
             "EV = Base% x (Upside - 1)": -0.26140778626681727,
@@ -11841,7 +11841,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 120.52825710754017,
             "Q4 2029": 123.8884938271605,
             "Q1 2030": 127.02638717632553,
-            "Original rank": 206.0,
+            "Original rank": 205.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.26140778626681727,
             "Entry": 0,
@@ -11885,7 +11885,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 133.0,
+            "Rank": 132.0,
             "Ticker": "ETN",
             "Name": "Eaton",
             "EV = Base% x (Upside - 1)": -0.0975486670023565,
@@ -11911,7 +11911,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 525.753154865417,
             "Q4 2029": 547.5701162010754,
             "Q1 2030": 569.160235104889,
-            "Original rank": 190.0,
+            "Original rank": 189.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.0975486670023565,
             "Entry": 0,
@@ -11920,7 +11920,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -36
         },
         {
-            "Rank": 147.0,
+            "Rank": 146.0,
             "Ticker": "3189.TW",
             "Name": "Kinsus",
             "EV = Base% x (Upside - 1)": -0.20822521282991535,
@@ -11946,7 +11946,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 805.3464307006319,
             "Q4 2029": 788.4741339789465,
             "Q1 2030": 772.3329630473784,
-            "Original rank": 204.0,
+            "Original rank": 203.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.20822521282991535,
             "Entry": 0,
@@ -11955,7 +11955,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -55
         },
         {
-            "Rank": 152.0,
+            "Rank": 151.0,
             "Ticker": "8046.TW",
             "Name": "Nan Ya PCB",
             "EV = Base% x (Upside - 1)": -0.28736177316540945,
@@ -11981,7 +11981,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1264.4724107652464,
             "Q4 2029": 1292.007367185788,
             "Q1 2030": 1312.747258484753,
-            "Original rank": 209.0,
+            "Original rank": 208.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.28736177316540945,
             "Entry": 0,
@@ -12060,7 +12060,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 109.0,
+            "Rank": 108.0,
             "Ticker": "6805.TW",
             "Name": "Fositek",
             "EV = Base% x (Upside - 1)": 0.05084283129348918,
@@ -12086,7 +12086,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 3113.103476960352,
             "Q4 2029": 3136.8512691011706,
             "Q1 2030": 3158.8708455614924,
-            "Original rank": 109.0,
+            "Original rank": 108.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.05084283129348918,
             "Entry": 0,
@@ -12095,7 +12095,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -29
         },
         {
-            "Rank": 135.0,
+            "Rank": 134.0,
             "Ticker": "EROC",
             "Name": "ERock",
             "EV = Base% x (Upside - 1)": -0.13173171476629764,
@@ -12121,7 +12121,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23.868113633636753,
             "Q4 2029": 25.30197455155862,
             "Q1 2030": 26.662571112585077,
-            "Original rank": 192.0,
+            "Original rank": 191.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.13173171476629764,
             "Entry": 0,
@@ -12130,7 +12130,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -47
         },
         {
-            "Rank": 156.0,
+            "Rank": 155.0,
             "Ticker": "P",
             "Name": "Everpure",
             "EV = Base% x (Upside - 1)": -0.31133562688654237,
@@ -12156,7 +12156,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 149.05973250581127,
             "Q4 2029": 157.03395369700348,
             "Q1 2030": 166.3482526612978,
-            "Original rank": 213.0,
+            "Original rank": 212.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.31133562688654237,
             "Entry": 0,
@@ -12165,7 +12165,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -65
         },
         {
-            "Rank": 83.0,
+            "Rank": 82.0,
             "Ticker": "3017.TW",
             "Name": "Asia Vital Components",
             "EV = Base% x (Upside - 1)": 0.25866713855114926,
@@ -12191,7 +12191,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 6138.483060136976,
             "Q4 2029": 6214.906828426299,
             "Q1 2030": 6273.171164125234,
-            "Original rank": 83.0,
+            "Original rank": 82.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.25866713855114926,
             "Entry": 4,
@@ -12200,7 +12200,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -5
         },
         {
-            "Rank": 75.0,
+            "Rank": 74.0,
             "Ticker": "AMAT",
             "Name": "Applied Materials",
             "EV = Base% x (Upside - 1)": 0.3182638543829022,
@@ -12226,7 +12226,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 626.0019344901042,
             "Q4 2029": 642.0975777791667,
             "Q1 2030": 659.6841579041668,
-            "Original rank": 75.0,
+            "Original rank": 74.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3182638543829022,
             "Entry": 9,
@@ -12235,7 +12235,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 3
         },
         {
-            "Rank": 112.0,
+            "Rank": 111.0,
             "Ticker": "3563.TW",
             "Name": "Machvision",
             "EV = Base% x (Upside - 1)": 0.029388636560296194,
@@ -12261,7 +12261,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1041.573652140855,
             "Q4 2029": 1061.5991416469412,
             "Q1 2030": 1083.1886601007102,
-            "Original rank": 112.0,
+            "Original rank": 111.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.029388636560296194,
             "Entry": 0,
@@ -12270,7 +12270,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -30
         },
         {
-            "Rank": 132.0,
+            "Rank": 131.0,
             "Ticker": "QCOM",
             "Name": "Qualcomm",
             "EV = Base% x (Upside - 1)": -0.09336177567849042,
@@ -12296,7 +12296,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 286.8978225947584,
             "Q4 2029": 301.79464239361175,
             "Q1 2030": 316.85631758346597,
-            "Original rank": 189.0,
+            "Original rank": 188.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.09336177567849042,
             "Entry": 0,
@@ -12340,7 +12340,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -86
         },
         {
-            "Rank": 142.0,
+            "Rank": 141.0,
             "Ticker": "TER",
             "Name": "泰瑞达",
             "EV = Base% x (Upside - 1)": -0.17712687824539128,
@@ -12366,7 +12366,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 373.74055432033686,
             "Q4 2029": 381.43190402898995,
             "Q1 2030": 390.7282735129242,
-            "Original rank": 199.0,
+            "Original rank": 198.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.17712687824539128,
             "Entry": 0,
@@ -12375,7 +12375,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -48
         },
         {
-            "Rank": 96.0,
+            "Rank": 95.0,
             "Ticker": "NOK",
             "Name": "Nokia",
             "EV = Base% x (Upside - 1)": 0.16976302391478193,
@@ -12401,7 +12401,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 19.065241515310877,
             "Q4 2029": 19.591349516225417,
             "Q1 2030": 20.252599677747156,
-            "Original rank": 96.0,
+            "Original rank": 95.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16976302391478193,
             "Entry": 0,
@@ -12445,7 +12445,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 15.0,
+            "Rank": 14.0,
             "Ticker": "MOD",
             "Name": "Modine Manufacturing Company",
             "EV = Base% x (Upside - 1)": 1.3369907338559242,
@@ -12471,7 +12471,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 370.44133927598784,
             "Q4 2029": 380.9990204488087,
             "Q1 2030": 390.05106600648935,
-            "Original rank": 15.0,
+            "Original rank": 14.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3369907338559242,
             "Entry": 67,
@@ -12480,7 +12480,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 94
         },
         {
-            "Rank": 72.0,
+            "Rank": 71.0,
             "Ticker": "AAON",
             "Name": "AAON Inc.",
             "EV = Base% x (Upside - 1)": 0.32595381803540036,
@@ -12506,7 +12506,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 183.38501680952584,
             "Q4 2029": 190.09034554174127,
             "Q1 2030": 197.01125876754497,
-            "Original rank": 72.0,
+            "Original rank": 71.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.32595381803540036,
             "Entry": 9,
@@ -12550,7 +12550,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 81.0,
+            "Rank": 80.0,
             "Ticker": "ON",
             "Name": "ON Semiconductor Corporation",
             "EV = Base% x (Upside - 1)": 0.2648301123332749,
@@ -12576,7 +12576,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.28940384635283,
             "Q4 2029": 194.49890701775027,
             "Q1 2030": 202.86185516080616,
-            "Original rank": 81.0,
+            "Original rank": 80.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.2648301123332749,
             "Entry": 1,
@@ -12585,7 +12585,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -6
         },
         {
-            "Rank": 122.0,
+            "Rank": 121.0,
             "Ticker": "SYNA",
             "Name": "Synaptics Incorporated",
             "EV = Base% x (Upside - 1)": -0.0115408211035305,
@@ -12611,7 +12611,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 124.93420029283755,
             "Q4 2029": 125.77685813321642,
             "Q1 2030": 126.65112144371875,
-            "Original rank": 179.0,
+            "Original rank": 178.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.0115408211035305,
             "Entry": 0,
@@ -12620,7 +12620,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -39
         },
         {
-            "Rank": 115.0,
+            "Rank": 114.0,
             "Ticker": "ABBN",
             "Name": "ABB Ltd",
             "EV = Base% x (Upside - 1)": 0.023814626474869743,
@@ -12646,7 +12646,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 101.94903424872321,
             "Q4 2029": 104.56860164640207,
             "Q1 2030": 107.2932800082057,
-            "Original rank": 115.0,
+            "Original rank": 114.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.023814626474869743,
             "Entry": 0,
@@ -12655,7 +12655,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -28
         },
         {
-            "Rank": 159.0,
+            "Rank": 158.0,
             "Ticker": "002938.SZ",
             "Name": "Avary Holding",
             "EV = Base% x (Upside - 1)": -0.3303970531212312,
@@ -12681,7 +12681,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 48.561080398068775,
             "Q4 2029": 49.48057668076995,
             "Q1 2030": 50.4597047950121,
-            "Original rank": 216.0,
+            "Original rank": 215.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3303970531212312,
             "Entry": 0,
@@ -12690,7 +12690,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -66
         },
         {
-            "Rank": 162.0,
+            "Rank": 161.0,
             "Ticker": "SNPS",
             "Name": "Synopsys, Inc.",
             "EV = Base% x (Upside - 1)": -0.3734703577351478,
@@ -12716,7 +12716,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 393.30091315220875,
             "Q4 2029": 414.05162989565576,
             "Q1 2030": 434.10675804916946,
-            "Original rank": 219.0,
+            "Original rank": 218.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3734703577351478,
             "Entry": 0,
@@ -12725,7 +12725,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -63
         },
         {
-            "Rank": 121.0,
+            "Rank": 120.0,
             "Ticker": "CAT",
             "Name": "Caterpillar Inc.",
             "EV = Base% x (Upside - 1)": -0.005452303788441748,
@@ -12751,7 +12751,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 927.7966989188064,
             "Q4 2029": 939.232341555603,
             "Q1 2030": 951.1342930926992,
-            "Original rank": 178.0,
+            "Original rank": 177.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.005452303788441748,
             "Entry": 0,
@@ -12760,35 +12760,35 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -30
         },
         {
-            "Rank": 165.0,
+            "Rank": 162.0,
             "Ticker": "300394.SZ",
             "Name": "Suzhou TFC Optical Communication",
-            "EV = Base% x (Upside - 1)": -0.3947016536835806,
+            "EV = Base% x (Upside - 1)": -0.3841521720613996,
             "Base": 72.0,
             "Port": "",
             "Current Price": 260.77,
-            "Upside (Q4 2027)": 0.45180325877280464,
+            "Upside (Q4 2027)": 0.4664553165813894,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-07 | Full Framework 8.0 | TFC_300394_SZ_Deep_Dive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 73 | Excel 72 | TFC_300394_SZ_Deep_Dive.md | TFC_300394_SZ_Deep_Dive.pdf | TFC_300394_SZ_Deep_Dive_model.xlsx",
             "SuperCycle": "Optical components and precision packaging",
             "Q3 2026": 69.43483156101107,
-            "Q4 2026": 77.90631366709398,
-            "Q1 2027": 88.79417336518527,
-            "Q2 2027": 97.53882285525921,
-            "Q3 2027": 107.08006388657057,
-            "Q4 2027": 117.81673579018425,
-            "Q1 2028": 130.147532328039,
-            "Q2 2028": 139.70630252974533,
-            "Q3 2028": 150.15909531961043,
-            "Q4 2028": 161.95350851134089,
-            "Q1 2029": 175.53697661315852,
-            "Q2 2029": 184.2679982859585,
-            "Q3 2029": 193.82979656110538,
-            "Q4 2029": 204.6382907506667,
-            "Q1 2030": 217.1092484744303,
-            "Original rank": 222.0,
+            "Q4 2026": 80.20135727640671,
+            "Q1 2027": 91.38153645978868,
+            "Q2 2027": 100.47310774468936,
+            "Q3 2027": 110.41632044511759,
+            "Q4 2027": 121.6375529049289,
+            "Q1 2028": 134.56302784761215,
+            "Q2 2028": 144.88256782794454,
+            "Q3 2028": 156.1771943606882,
+            "Q4 2028": 168.93508075804084,
+            "Q1 2029": 183.6442222227971,
+            "Q2 2029": 193.2649707146663,
+            "Q3 2029": 203.795591575468,
+            "Q4 2029": 215.69160788845025,
+            "Q1 2030": 229.40837660046645,
+            "Original rank": 219.0,
             "Rank eligible": 1.0,
-            "Comparable EV": -0.3947016536835806,
+            "Comparable EV": -0.3841521720613996,
             "Entry": 0,
             "Total": 43,
             "Upside": "0.4x",
@@ -12830,7 +12830,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -1
         },
         {
-            "Rank": 146.0,
+            "Rank": 145.0,
             "Ticker": "CGNX",
             "Name": "Cognex Corporation",
             "EV = Base% x (Upside - 1)": -0.20797075354923286,
@@ -12856,7 +12856,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 57.93194423003787,
             "Q4 2029": 60.662819311936815,
             "Q1 2030": 63.07357244575315,
-            "Original rank": 203.0,
+            "Original rank": 202.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.20797075354923286,
             "Entry": 0,
@@ -12865,7 +12865,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -51
         },
         {
-            "Rank": 129.0,
+            "Rank": 128.0,
             "Ticker": "TXN",
             "Name": "Texas Instruments",
             "EV = Base% x (Upside - 1)": -0.06974259546728384,
@@ -12891,7 +12891,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 327.76257844475776,
             "Q4 2029": 336.0903102231588,
             "Q1 2030": 344.88107929380254,
-            "Original rank": 186.0,
+            "Original rank": 185.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.06974259546728384,
             "Entry": 0,
@@ -12970,7 +12970,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -99
         },
         {
-            "Rank": 167.0,
+            "Rank": 166.0,
             "Ticker": "6257.TW",
             "Name": "Sigurd Microelectronics",
             "EV = Base% x (Upside - 1)": -0.41627726220616224,
@@ -12996,7 +12996,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 153.68831836797767,
             "Q4 2029": 156.6527177104368,
             "Q1 2030": 159.6734393441333,
-            "Original rank": 223.0,
+            "Original rank": 222.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.41627726220616224,
             "Entry": 0,
@@ -13005,7 +13005,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -68
         },
         {
-            "Rank": 125.0,
+            "Rank": 124.0,
             "Ticker": "ASML",
             "Name": "ASML Holding",
             "EV = Base% x (Upside - 1)": -0.04839628949061988,
@@ -13031,7 +13031,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 2123.7939769197933,
             "Q4 2029": 2178.5436843701505,
             "Q1 2030": 2238.6130498383764,
-            "Original rank": 182.0,
+            "Original rank": 181.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.04839628949061988,
             "Entry": 0,
@@ -13040,7 +13040,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -13
         },
         {
-            "Rank": 113.0,
+            "Rank": 112.0,
             "Ticker": "CSCO",
             "Name": "Cisco Systems",
             "EV = Base% x (Upside - 1)": 0.025852769070576542,
@@ -13066,7 +13066,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 154.43333432326943,
             "Q4 2029": 158.3008435296597,
             "Q1 2030": 161.7115358468287,
-            "Original rank": 113.0,
+            "Original rank": 112.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.025852769070576542,
             "Entry": 0,
@@ -13075,7 +13075,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -27
         },
         {
-            "Rank": 16.0,
+            "Rank": 15.0,
             "Ticker": "NRG",
             "Name": "NRG Energy",
             "EV = Base% x (Upside - 1)": 1.3165765244386545,
@@ -13101,7 +13101,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 437.2780847224385,
             "Q4 2029": 464.7788603692956,
             "Q1 2030": 486.86648097462324,
-            "Original rank": 16.0,
+            "Original rank": 15.0,
             "Rank eligible": 1.0,
             "Comparable EV": 1.3165765244386545,
             "Entry": 65,
@@ -13145,7 +13145,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -100
         },
         {
-            "Rank": 145.0,
+            "Rank": 144.0,
             "Ticker": "3037.TW",
             "Name": "欣兴微光",
             "EV = Base% x (Upside - 1)": -0.19709747443391637,
@@ -13171,7 +13171,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 1198.9868279987054,
             "Q4 2029": 1233.8271862467736,
             "Q1 2030": 1287.6060581857835,
-            "Original rank": 202.0,
+            "Original rank": 201.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.19709747443391637,
             "Entry": 0,
@@ -13180,7 +13180,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -55
         },
         {
-            "Rank": 99.0,
+            "Rank": 98.0,
             "Ticker": "VIAV",
             "Name": "VIAVI Solutions",
             "EV = Base% x (Upside - 1)": 0.16088490957144824,
@@ -13206,7 +13206,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 89.92592445393228,
             "Q4 2029": 94.47208795188384,
             "Q1 2030": 99.77380422719412,
-            "Original rank": 99.0,
+            "Original rank": 98.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.16088490957144824,
             "Entry": 0,
@@ -13215,7 +13215,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -23
         },
         {
-            "Rank": 71.0,
+            "Rank": 70.0,
             "Ticker": "6869.HK",
             "Name": "长飞光纤光缆 YOFC",
             "EV = Base% x (Upside - 1)": 0.3266537467707822,
@@ -13241,7 +13241,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 212.24154601876486,
             "Q4 2029": 209.34995923220183,
             "Q1 2030": 206.94878327488175,
-            "Original rank": 71.0,
+            "Original rank": 70.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.3266537467707822,
             "Entry": 16,
@@ -13250,7 +13250,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 6
         },
         {
-            "Rank": 106.0,
+            "Rank": 105.0,
             "Ticker": "3896.HK",
             "Name": "金山云 Kingsoft Cloud",
             "EV = Base% x (Upside - 1)": 0.07907149586950818,
@@ -13276,7 +13276,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 11.478882177373238,
             "Q4 2029": 13.418096425450065,
             "Q1 2030": 16.633893750180878,
-            "Original rank": 106.0,
+            "Original rank": 105.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.07907149586950818,
             "Entry": 0,
@@ -13390,7 +13390,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 62
         },
         {
-            "Rank": 139.0,
+            "Rank": 138.0,
             "Ticker": "ANET",
             "Name": "Arista Networks, Inc.",
             "EV = Base% x (Upside - 1)": -0.1498675332270595,
@@ -13416,7 +13416,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 186.17750799620939,
             "Q4 2029": 192.44559341234532,
             "Q1 2030": 199.21708651876816,
-            "Original rank": 196.0,
+            "Original rank": 195.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.1498675332270595,
             "Entry": 0,
@@ -13425,42 +13425,42 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -49
         },
         {
-            "Rank": 80.0,
+            "Rank": 75.0,
             "Ticker": "APH",
             "Name": "Amphenol Corporation",
-            "EV = Base% x (Upside - 1)": 0.26661102406515647,
+            "EV = Base% x (Upside - 1)": 0.29241470132268227,
             "Base": 70.0,
             "Port": "",
             "Current Price": 81.49,
-            "Upside (Q4 2027)": 1.3808728915216522,
+            "Upside (Q4 2027)": 1.4177352876038318,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-15 | Full Framework 8.0 | APH_Amphenol_DeepDive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 72 | Excel 70 | APH_Amphenol_DeepDive.md | APH_Amphenol_DeepDive.pdf | APH_Amphenol_DeepDive.html | APH_Amphenol_Model.xlsx",
             "SuperCycle": "High-speed data, power and sensor interconnects",
             "Q3 2026": 90.10899729057462,
-            "Q4 2026": 94.58031467614215,
-            "Q1 2027": 98.67016403966296,
-            "Q2 2027": 103.00986407710245,
-            "Q3 2027": 107.62927539340414,
-            "Q4 2027": 112.52733193009944,
-            "Q1 2028": 117.50966631644764,
-            "Q2 2028": 121.03130273385423,
-            "Q3 2028": 124.78290361492591,
-            "Q4 2028": 128.76359264533767,
-            "Q1 2029": 132.8136100195549,
-            "Q2 2029": 135.99683669346643,
-            "Q3 2029": 139.39004692899366,
-            "Q4 2029": 142.99244065373927,
-            "Q1 2030": 146.6581665938659,
-            "Original rank": 80.0,
+            "Q4 2026": 98.5099867244819,
+            "Q1 2027": 101.9957976283047,
+            "Q2 2027": 106.2418406985734,
+            "Q3 2027": 110.75035382881474,
+            "Q4 2027": 115.53124858683624,
+            "Q1 2028": 120.39453273631912,
+            "Q2 2028": 123.76785846815915,
+            "Q3 2028": 127.36208757832676,
+            "Q4 2028": 131.1763783110813,
+            "Q1 2029": 135.05727383314812,
+            "Q2 2029": 138.09423337650412,
+            "Q3 2029": 141.33219236378017,
+            "Q4 2029": 144.7703849851541,
+            "Q1 2030": 148.26920873507206,
+            "Original rank": 75.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 0.26661102406515647,
-            "Entry": 8,
-            "Total": 45,
-            "Upside": "1.3x",
-            "EV Upside": -8
+            "Comparable EV": 0.29241470132268227,
+            "Entry": 10,
+            "Total": 46,
+            "Upside": "1.4x",
+            "EV Upside": -5
         },
         {
-            "Rank": 128.0,
+            "Rank": 127.0,
             "Ticker": "PM",
             "Name": "Philip Morris International Inc.",
             "EV = Base% x (Upside - 1)": -0.06955472816397736,
@@ -13486,7 +13486,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 209.03294036464536,
             "Q4 2029": 211.95499544205185,
             "Q1 2030": 214.6500111120728,
-            "Original rank": 185.0,
+            "Original rank": 184.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.06955472816397736,
             "Entry": 0,
@@ -13495,7 +13495,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -10
         },
         {
-            "Rank": 87.0,
+            "Rank": 86.0,
             "Ticker": "BTI",
             "Name": "British American Tobacco p.l.c.",
             "EV = Base% x (Upside - 1)": 0.24347198828824068,
@@ -13521,7 +13521,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 80.48031399481042,
             "Q4 2029": 81.2981558643277,
             "Q1 2030": 82.18142508340635,
-            "Original rank": 87.0,
+            "Original rank": 86.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.24347198828824068,
             "Entry": 5,
@@ -13530,7 +13530,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 8
         },
         {
-            "Rank": 120.0,
+            "Rank": 119.0,
             "Ticker": "MO",
             "Name": "Altria Group, Inc.",
             "EV = Base% x (Upside - 1)": -0.004805498116714779,
@@ -13556,7 +13556,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 73.28941753650416,
             "Q4 2029": 73.25689547728986,
             "Q1 2030": 73.22564879294671,
-            "Original rank": 177.0,
+            "Original rank": 176.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.004805498116714779,
             "Entry": 0,
@@ -13565,7 +13565,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -10
         },
         {
-            "Rank": 104.0,
+            "Rank": 103.0,
             "Ticker": "603186.SH",
             "Name": "Wazam New Materials",
             "EV = Base% x (Upside - 1)": 0.09294160443360289,
@@ -13591,7 +13591,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 158.57083017992872,
             "Q4 2029": 150.7384704806162,
             "Q1 2030": 143.7498362736306,
-            "Original rank": 104.0,
+            "Original rank": 103.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.09294160443360289,
             "Entry": 2,
@@ -13600,7 +13600,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -18
         },
         {
-            "Rank": 160.0,
+            "Rank": 159.0,
             "Ticker": "300007.SZ",
             "Name": "Hanwei Electronics Group",
             "EV = Base% x (Upside - 1)": -0.3430182219185875,
@@ -13626,7 +13626,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 23.82699916508395,
             "Q4 2029": 24.717836334623804,
             "Q1 2030": 25.496916229830845,
-            "Original rank": 217.0,
+            "Original rank": 216.0,
             "Rank eligible": 1.0,
             "Comparable EV": -0.3430182219185875,
             "Entry": 0,
@@ -13635,7 +13635,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -74
         },
         {
-            "Rank": 101.0,
+            "Rank": 100.0,
             "Ticker": "002353.SZ",
             "Name": "Jereh Group",
             "EV = Base% x (Upside - 1)": 0.12509141047270092,
@@ -13661,7 +13661,7 @@ window.PORTFOLIO_DATA = {
             "Q3 2029": 122.93147250408,
             "Q4 2029": 125.78207543891756,
             "Q1 2030": 129.39072342627003,
-            "Original rank": 101.0,
+            "Original rank": 100.0,
             "Rank eligible": 1.0,
             "Comparable EV": 0.12509141047270092,
             "Entry": 0,
@@ -13670,39 +13670,39 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -19
         },
         {
-            "Rank": 7.0,
+            "Rank": 4.0,
             "Ticker": "6166.HK",
             "Name": "CIG上海",
-            "EV = Base% x (Upside - 1)": 1.8273937642796187,
+            "EV = Base% x (Upside - 1)": 2.1046261031685187,
             "Base": 67.0,
             "Port": "",
             "Current Price": 68.8,
-            "Upside (Q4 2027)": 3.727453379521819,
+            "Upside (Q4 2027)": 4.141232989803759,
             "Earnings Multiple": 20,
-            "Artifact Updated": "2026-10-26 | 6166HK_CIGShanghai_DeepDive.pdf",
+            "Artifact Updated": "2026-11-18 earnings rescore | Analytical 68 | Excel 67 | 6166HK_CIGShanghai_DeepDive.md | 6166HK_CIGShanghai_DeepDive.pdf | 6166HK_CIGShanghai_DeepDive.html | 6166HK_CIGShanghai_FormulaModel.xlsx | 6166HK_CIGShanghai_CalculationGraph.json.gz",
             "SuperCycle": "AI optics manufacturing beneficiary. Qualification, 1.6T/NPO mix, price erosion and funding determine capacity-to-cash conversion.",
             "Q3 2026": "",
-            "Q4 2026": 174.11889310294745,
-            "Q1 2027": 202.0362843532606,
-            "Q2 2027": 219.96498322026878,
-            "Q3 2027": 237.78040205261703,
-            "Q4 2027": 256.44879251110115,
-            "Q1 2028": 274.56651493517154,
-            "Q2 2028": 293.36752628107564,
-            "Q3 2028": 308.84406769080374,
-            "Q4 2028": 321.3227441845409,
-            "Q1 2029": 326.865303054365,
-            "Q2 2029": 315.3926389979517,
-            "Q3 2029": 299.31638887395025,
-            "Q4 2029": 279.07747894717943,
-            "Q1 2030": 253.88125756554493,
-            "Original rank": 7.0,
+            "Q4 2026": 201.3684935459836,
+            "Q1 2027": 234.9423153408741,
+            "Q2 2027": 251.97456188687607,
+            "Q3 2027": 268.17299616226893,
+            "Q4 2027": 284.91682969849865,
+            "Q1 2028": 300.532250895788,
+            "Q2 2028": 317.7540439952752,
+            "Q3 2028": 330.9988111871188,
+            "Q4 2028": 340.26453203725515,
+            "Q1 2029": 341.49313788755586,
+            "Q2 2029": 327.876726463837,
+            "Q3 2029": 309.3808406534806,
+            "Q4 2029": 286.4290832473232,
+            "Q1 2030": 258.33892780630333,
+            "Original rank": 4.0,
             "Rank eligible": 1.0,
-            "Comparable EV": 1.8273937642796187,
-            "Entry": 86,
-            "Total": 75,
-            "Upside": "3.5x",
-            "EV Upside": 132
+            "Comparable EV": 2.1046261031685187,
+            "Entry": 97,
+            "Total": 79,
+            "Upside": "3.9x",
+            "EV Upside": 161
         },
         {
             "Rank": 34.0,
@@ -13740,7 +13740,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": 33
         },
         {
-            "Rank": 118.0,
+            "Rank": 117.0,
             "Ticker": "301666.SZ",
             "Name": "DapuStor",
             "EV = Base% x (Upside - 1)": 0.004470762592790503,
@@ -13775,7 +13775,7 @@ window.PORTFOLIO_DATA = {
             "EV Upside": -42
         },
         {
-            "Rank": 166.0,
+            "Rank": 165.0,
             "Ticker": "ASTS",
             "Name": "AST SpaceMobile, Inc.",
             "EV = Base% x (Upside - 1)": -0.41556492322524236,

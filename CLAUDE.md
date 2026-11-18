@@ -419,16 +419,16 @@ don't rebind it per render.
   keep each lane newest-first. The upper lane scrolls at 42px/s and the lower
   at 30px/s. Smaller screens combine all stories into one row. Preserve pause,
   click-to-expand and reduced-motion manual scrolling for each lane.
-  Compact two-line teasers prioritize company + signed, color-coded model-target
-  revision, target quarter, then a short reason. news-headlines.js extracts
-  structured model-change lists and keeps approved historical copy unchanged.
-  Show positive revisions green, negative red and zero neutral; retain supplied
-  precision and qualifiers such as about/less than, probability assumptions and
-  currencies. These are dated model revisions, not live stock-price returns.
-  Dates stay visible; each teaser opens its source article. Never derive news
-  revisions from live prices or publish duplicate bulletins just to improve
-  headline presentation. For new research posts supply a concise company-level
-  summary alongside the full approved article; keep uncertainty in both.
+  Each minimized company headline shows its name and, when supplied, the
+  signed revision. Use green for increases, red for decreases and neutral for
+  zero. Keep the quarter, currencies, timestamps, assumptions and supporting
+  details in the article. Preserve source precision and qualifiers. Use
+  verified model targets for revision percentages and keep live price moves
+  out of the news ticker.
+  The Starred toggle uses the existing symbol watchlist and saves its own
+  preference. Both lanes and expanded navigation follow that filter. Shared
+  article permalinks still open directly. Associate new headline entries with
+  canonical symbols. Retain historical article bodies and receipt hashes.
   No visible section title: keep the accessible region name, not a heading
   that takes space away from the ticker.
   Clicking a headline opens that exact bulletin and stops automatic motion.

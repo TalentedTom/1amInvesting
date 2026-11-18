@@ -6,15 +6,45 @@ test('signed and qualified revisions retain their direction, including less-than
  for(const value of ['−5%','-0.96%','≈−4%','↓ <1%'])assert.equal(news.tone(value),'negative');
  assert.equal(news.tone('0%'),'neutral');assert.equal(news.tone(''),'neutral');
 });
-test('rendered teasers preserve the quarter, uncertainty, reason and signed percentage',()=>{
- const html=news.render({company:'AAOI',change:'↓ <1%',metric:'Q4’27 model target → ≈$463',reason:'Temporary delay; accepted shipments remain the key test.'});
- assert.match(html,/news-revision-negative/);assert.match(html,/↓ &lt;1%/);
- assert.match(html,/Q4’27 model target/);assert.match(html,/≈\$463/);assert.match(html,/accepted shipments/);
+test('compact headlines show the company and qualified revision only', () => {
+    const html = news.render({
+        company: 'AAOI', change: '↓ <1%', metric: 'Q4’27 model target',
+        reason: 'Accepted shipments remain the key test.'
+    });
+    assert.match(html, /<strong>AAOI<\/strong>/);
+    assert.match(html, /news-revision-negative/);
+    assert.match(html, /↓ &lt;1%/);
+    assert.doesNotMatch(html, /Q4’27|Accepted shipments/);
 });
-test('all teaser text is escaped; no source HTML can become executable markup',()=>{
- const html=news.render({company:'<img onerror=x>',change:'+5%',metric:'A&B',reason:'<script>alert(1)</script>'});
- assert.doesNotMatch(html,/<img|<script/);assert.match(html,/&lt;script&gt;/);assert.match(html,/A&amp;B/);
+
+test('company and change text are escaped', () => {
+    const html = news.render({company: '<img onerror=x>', change: '+5% <script>'});
+    assert.doesNotMatch(html, /<img|<script/);
+    assert.match(html, /&lt;img onerror=x&gt;/);
+    assert.match(html, /&lt;script&gt;/);
 });
+
+test('stock labels use canonical watchlist symbols for listings and company aliases', () => {
+    const companies = new Map([['AAOI', 'Applied Optoelectronics']]);
+    assert.deepEqual(news.companyEntries({company: 'AAOI', change: '+5%'}, companies), [
+        {company: 'Applied Optoelectronics', change: '+5%', tickers: ['AAOI']}
+    ]);
+    assert.deepEqual(news.companyEntries({company: '爱思强 (AIXA)'}, companies), [
+        {company: '爱思强', tickers: ['AIXA.DE']}
+    ]);
+    assert.deepEqual(news.companyEntries({company: 'SK hynix (000660.KS / SKHY)'}, companies)[0].tickers, ['000660.KS', 'SKHY']);
+    assert.deepEqual(news.companyEntries({company: 'Anthropic'}, companies)[0].tickers, ['ANT']);
+    assert.deepEqual(news.companyEntries({company: 'Quarterly roll-forward'}, companies), []);
+});
+
+test('headlines split grouped stock updates while retaining the shared qualifier', () => {
+    const group = {company: 'Coherent (COHR) and Tower (TSEM)', change: '↑ less than 0.5%'};
+    const entries = news.companyEntries(group, new Map());
+    assert.deepEqual(entries.map(({company, tickers, change}) => [company, tickers, change]), [
+        ['Coherent', ['COHR'], group.change], ['Tower', ['TSEM'], group.change]
+    ]);
+});
+
 test('approved research qualifications are not replaced with fabricated precision',()=>{
  const ter=news.fromSlide({id:'teradyne-forecast-rises-with-stronger-ai-testing-demand-20261020'},'en');
  assert.equal(ter[0].change,'≈+4%');assert.match(ter[0].reason,/25%-probability/);

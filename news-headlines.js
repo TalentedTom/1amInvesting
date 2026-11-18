@@ -7,6 +7,7 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"optical-shipments-rise-as-financing-and-delivery-dates-shape-power-and-hosting-forecasts-20261118": {"en":[{"company":"TFC Optical (300394.SZ)","change":"≈+3.2%","metric":"Q4’27 model target revision","reason":"Revenue beat the prior estimate. The model weighs capacity costs and financing."},{"company":"CIG Shanghai (6166.HK)","change":"≈+11.1%","metric":"Q4’27 model target revision","reason":"Revenue beat the prior estimate. The model weighs repeat orders and financing."},{"company":"Sharon AI (SHAZ)","change":"≈−35.5%","metric":"Q4’27 model target revision","reason":"GPU cluster billing timing and higher capital costs."},{"company":"Energy Vault (NRGV)","change":"≈−81.1%","metric":"Q4’27 model target revision","reason":"Project financing and commissioning dates shape the estimate."},{"company":"Amphenol (APH)","change":"≈+2.7%","metric":"Q4’27 model target revision","reason":"Connector shipments and acquired revenue were updated separately."}]},
 "earnings-sharpen-forecasts-for-ai-optical-assembly-and-data-center-power-20261118": {"en":[{"company":"FOCI (3363.TWO)","change":"−63.2%","metric":"Q4’27 model: TWD 831/share","reason":"Optical assembly capacity ramps over time. The model weighs customer acceptance and operating costs."},{"company":"Astera Labs (ALAB)","change":"+5.2%","metric":"Q4’27 model: USD 222","reason":"Scorpio switches became Astera’s largest product family by revenue."}]},
 "ai-buildout-lifts-arista-vertiv-and-selected-chip-suppliers-in-new-research-forecasts-20261117": {"en":[{"company":"Arista (ANET)","change":"about +7.9%","metric":"Q4’27 model: USD 145","reason":"Arista projects about USD 7bn from AI networking fabrics in 2027."},{"company":"Vertiv (VRT)","change":"+5.4%","metric":"Q4’27 model: USD 317","reason":"Vertiv closed its UtilityInnovation Group acquisition."},{"company":"Unimicron (3037.TW)","change":"about +3.3%","metric":"Q4’27 model: TWD 902","reason":"The forecast allows time for equipment installation, customer qualification and shipment acceptance."},{"company":"Fabrinet (FN)","change":"about +3.1%","metric":"Q4’27 model estimate","reason":"The forecast accounts for when manufacturers can recognize revenue."},{"company":"Amkor (AMKR)","change":"about +2.8%","metric":"Q4’27 model estimate","reason":"The forecast accounts for when manufacturers can recognize revenue."}]},
 "nvidia-secures-more-chip-packaging-capacity-as-co-packaged-optics-enters-production-20261117": {"en":[{"company":"ASE Technology (3711.TW)","change":"about +2.2%","metric":"Q4’27 model: TWD 855 per Taiwan-listed share","reason":"Stronger advanced packaging guidance supports the revision."},{"company":"Kinsus (3189.TW)","change":"about +0.6%","metric":"Q4’27 model: TWD 752","reason":"Kinsus targets initial output in H2’27. Expansion financing lowers the Q1’30 estimate about 3.3%."},{"company":"Coherent (COHR) and Tower (TSEM)","change":"↑ less than 0.5%","metric":"Research estimate revisions","reason":"Lambda’s production deployment shifts the model toward faster co-packaged optics adoption."}]},
@@ -153,29 +154,46 @@
         if (/[+↑]/.test(text)) return 'positive';
         return 'neutral';
     }
+    const TICKER_ALIASES = new Map([
+        ['AIXA', 'AIXA.DE'], ['Anthropic', 'ANT'], ['SK hynix Korea', '000660.KS'],
+        ['Samsung', '005930.KS'], ['Oracle', 'ORCL'], ['AT&T', 'T']
+    ]);
+    const COMPANY_GROUPS = new Map([
+        ['Coherent (COHR) and Tower (TSEM)', ['Coherent (COHR)', 'Tower (TSEM)']],
+        ['Micron (MU) / Sandisk (SNDK) / SK hynix U.S. ADS (SKHY)', ['Micron (MU)', 'Sandisk (SNDK)', 'SK hynix U.S. ADS (SKHY)']],
+        ['Kioxia (285A.T) / SK hynix Korea / Samsung', ['Kioxia (285A.T)', 'SK hynix Korea', 'Samsung']],
+        ['AST SpaceMobile (ASTS) / AT&T', ['AST SpaceMobile (ASTS)', 'AT&T']],
+        ['Cerebras (CBRS) / Oracle', ['Cerebras (CBRS)', 'Oracle']]
+    ]);
+
+    function companyEntries(entry, companies) {
+        const labels = COMPANY_GROUPS.get(entry.company) || [entry.company];
+        return labels.flatMap(label => {
+            const tag = label.match(/\s*\(([A-Z0-9][A-Z0-9.-]*(?:\s*\/\s*[A-Z0-9][A-Z0-9.-]*)*)\)$/);
+            const symbols = entry.ticker ? [entry.ticker] : tag ? tag[1].split(/\s*\/\s*/) : [label];
+            const tickers = symbols.map(symbol => TICKER_ALIASES.get(symbol) || symbol);
+            if (!entry.ticker && !tag && !TICKER_ALIASES.has(label) && !companies.has(label)) return [];
+            const bareTicker = symbols.includes(label) && companies.has(label);
+            const name = tag ? label.slice(0, tag.index).trim() : bareTicker ? companies.get(label) : label;
+            return [{...entry, company: name, tickers}];
+        });
+    }
     function render(entry) {
         const change = entry.change
             ? '<span class="news-revision news-revision-' + tone(entry.change) + '">' + escape(entry.change) + '</span>' : '';
-        return '<span class="news-headline-top"><strong>' + escape(entry.company) + (change ? ' ' + change : '') + '</strong>' +
-            (entry.metric ? '<span class="news-headline-context">' + escape(entry.metric) + '</span>' : '') + '</span>' +
-            (entry.reason ? '<span class="news-headline-reason">' + escape(entry.reason) + '</span>' : '');
+        return '<strong>' + escape(entry.company) + '</strong>' + change;
     }
     function fromSlide(slide, language) {
         const chinese = language === 'zh-CN', pick = (en, zh) => chinese ? zh : en;
         const supplied = RESEARCH[slide.id]?.[language] || RESEARCH[slide.id]?.en;
         if (supplied) return supplied.map(item => ({...item, lang:RESEARCH[slide.id]?.[language] ? language : 'en'}));
         if (slide.id === 'oct7-expansion-news') return [{
-            company: pick('58 new stocks', '新增58只股票'), metric: pick('Coverage expansion', '股票覆盖扩展'),
-            reason: pick('131→189 stocks + DRAM; SKHY Base 93→99; no stocks removed.', '131→189只股票，另加DRAM；SKHY Base 93→99；无股票移除。')
+            company: 'SKHY', ticker: 'SKHY', change: pick('↑ Base 93→99', '↑ 基础分 93→99')
         }];
-        if (slide.id === 'quarter-rollover-news') return [{
-            company: pick('Upside + EV Upside', 'Upside + EV Upside'), metric:'Q3’27 → Q4’27',
-            reason: pick('Horizon rolled forward; Base/forecasts unchanged. Next roll: Jan 1, 2027.', '参考季度向前滚动；Base与预测不变。下次滚动：2027年1月1日。')
-        }];
-        if (slide.id === 'portfolio-news') return [{
-            company: pick('10 new stocks', '新增10只股票'), metric: pick('Base-score updates', 'Base评分更新'),
-            reason: pick('Kioxia Base 80→90; META 80→99; coverage 108→118 stocks.', '铠侠Base 80→90；META 80→99；股票覆盖108→118只。')
-        }];
+        if (slide.id === 'portfolio-news') return [
+            {company:'Kioxia', ticker:'285A.T', change:pick('↑ Base 80→90', '↑ 基础分 80→90')},
+            {company:'META', ticker:'META', change:pick('↑ Base 80→99', '↑ 基础分 80→99')}
+        ];
         const quarter = (slide.querySelector('.news-title')?.textContent + ' ' +
             slide.querySelector('.news-ceilings-heading h2')?.textContent).match(/Q([1-4])\s+(20\d{2})/);
         const metric = (quarter ? 'Q' + quarter[1] + '’' + quarter[2].slice(2) + ' ' : '') +
@@ -188,6 +206,7 @@
             const body = item.cloneNode(true);
             body.querySelector('strong')?.remove();
             return [{
+                ticker: item.dataset.newsTicker,
                 company: title.textContent.replace(/[:：.\s]+$/, '').trim(),
                 change: revision.textContent.trim(), metric,
                 reason: SHORT_REASONS[item.dataset.i18n]?.[chinese ? 1 : 0] || body.textContent.trim()
@@ -200,6 +219,7 @@
             const target = card.querySelector('.news-values strong')?.textContent.trim();
             const currency = card.querySelector('.news-ticker')?.textContent.split('·')[1]?.trim() || '';
             return [{
+                ticker: card.dataset.newsTicker || card.querySelector('.news-ticker')?.textContent.split('·')[0]?.trim(),
                 company: card.querySelector('h3')?.textContent.trim() || card.querySelector('.news-ticker')?.textContent.trim(),
                 change: revision.textContent.trim(),
                 metric: metric + (target ? ' → ' + target + (currency ? ' ' + currency : '') : ''),
@@ -215,7 +235,7 @@
         return [{company:slide.querySelector('.news-title')?.textContent.trim() || '',
             reason:slide.querySelector('.news-story')?.textContent.trim() || ''}];
     }
-    const api = {tone, render, fromSlide};
+    const api = {tone, render, fromSlide, companyEntries};
     if (typeof module !== 'undefined' && module.exports) module.exports = api;
     else root.NewsHeadlines = api;
 })(typeof window !== 'undefined' ? window : globalThis);
