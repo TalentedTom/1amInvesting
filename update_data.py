@@ -1,6 +1,7 @@
 import argparse
 import pandas as pd
 import json
+import math
 import os
 import re
 import subprocess
@@ -41,6 +42,38 @@ EXCEL_PATH = os.environ.get("PORTFOLIO_XLSX") or str(
 )
 OUTPUT_PATH = "data.js"
 CACHE_PATH = "translation_cache.json"
+
+# Temporary website adjustment for the Nov. 20, 2026 Sandisk 8-for-1 split.
+# Match each old workbook value independently so a split-adjusted edit flows
+# through as soon as it lands. Unrecognized values retain their source basis.
+_SNDK_PRE_SPLIT_VALUES = {
+    "Current Price": 1212.21,
+    "Q3 2026": 2307.3106820959633,
+    "Q4 2026": 1296.9147708626247,
+    "Q1 2027": 1454.2348533883949,
+    "Q2 2027": 1552.3094790304344,
+    "Q3 2027": 1672.8582837591568,
+    "Q4 2027": 1758.7080937510761,
+    "Q1 2028": 1825.0926545029622,
+    "Q2 2028": 1904.729460031512,
+    "Q3 2028": 2000.8004556861663,
+    "Q4 2028": 2099.0736280899214,
+    "Q1 2029": 2201.68689854933,
+    "Q2 2029": 2304.320932603954,
+    "Q3 2029": 2425.0272616420607,
+    "Q4 2029": 2544.8014016747834,
+    "Q1 2030": 2673.149099330952,
+}
+
+
+def apply_sandisk_split(row):
+    if str(row.get("Ticker", "")).strip() != "SNDK":
+        return
+
+    for field, old in _SNDK_PRE_SPLIT_VALUES.items():
+        value = row.get(field)
+        if isinstance(value, (int, float)) and math.isclose(value, old, rel_tol=1e-12):
+            row[field] = value / 8
 
 # Fields we actually want to translate
 TRANSLATE_COLS = [
@@ -200,6 +233,7 @@ def main():
         # by ticker. New tickers (no prior entry) just don't get those
         # fields set — the next cron tick fills them in normally.
         for row in data_en:
+            apply_sandisk_split(row)
             t = str(row.get("Ticker") or "").strip()
             if t and t in prior:
                 for k, v in prior[t].items():
