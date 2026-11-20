@@ -7,6 +7,7 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"longsys-revenue-rises-as-third-quarter-operating-cash-flow-turns-positive-20261119": {"en":[{"company":"Longsys (301308.SZ)","change":"−2.0%","metric":"Q4’27 model target revision","reason":"The model reflects weaker NAND pricing in some markets, inventory costs, and enterprise qualification timing."}]},
 "hanwei-reports-softer-third-quarter-sales-and-discusses-early-robotics-sensor-deployments-20261119": {"en":[{"company":"Hanwei Electronics (300007.SZ)","change":"−11.6%","metric":"Q4’27 model target revision","reason":"Third-quarter margins weakened. The forecast ties newer sensor sales to qualification, accepted shipments, and repeat orders."}]},
 "naura-reports-modest-third-quarter-growth-and-closes-bonding-equipment-acquisition-20261119": {"en":[{"company":"NAURA (002371.SZ)","change":"−5.5%","metric":"Q4’27 model target revision","reason":"Component shortages and qualification costs put pressure on deliveries and margins."}]},
 "unisplendour-s-third-quarter-sales-rise-as-operating-cash-flow-weakens-20261119": {"en":[{"company":"Unisplendour (000938.SZ)","change":"−4.6%","metric":"Q4’27 model target revision","reason":"Higher component costs and a greater share of lower-margin systems lowered forecast operating profit."}]},
