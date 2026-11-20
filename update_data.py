@@ -75,6 +75,24 @@ def apply_sandisk_split(row):
         if isinstance(value, (int, float)) and math.isclose(value, old, rel_tol=1e-12):
             row[field] = value / 8
 
+# The Nov. 19 Anthropic artifact uses this fully diluted IPO share count.
+# Convert only the workbook's explicitly labeled USD-billion equity row.
+# A per-share workbook row passes through once the unit label is removed.
+_ANT_EQUITY_CAP_SUFFIX = " (Equity MC, USD B)"
+_ANT_FULLY_DILUTED_IPO_SHARES = 18_137_587_873
+
+
+def apply_anthropic_share_basis(row):
+    name = str(row.get("Name", "")).strip()
+    if str(row.get("Ticker", "")).strip() != "ANT" or not name.endswith(_ANT_EQUITY_CAP_SUFFIX):
+        return
+
+    row["Name"] = name.removesuffix(_ANT_EQUITY_CAP_SUFFIX)
+    for field, value in row.items():
+        if (field == "Current Price" or re.fullmatch(r"Q[1-4] 20\d{2}", field)) and isinstance(value, (int, float)):
+            row[field] = value * 1_000_000_000 / _ANT_FULLY_DILUTED_IPO_SHARES
+
+
 # Fields we actually want to translate
 TRANSLATE_COLS = [
     "Name", "Rating", "Supercycle", "Position Type",
@@ -234,6 +252,7 @@ def main():
         # fields set — the next cron tick fills them in normally.
         for row in data_en:
             apply_sandisk_split(row)
+            apply_anthropic_share_basis(row)
             t = str(row.get("Ticker") or "").strip()
             if t and t in prior:
                 for k, v in prior[t].items():
