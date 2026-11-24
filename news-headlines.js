@@ -7,6 +7,9 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"sandisk-s-eight-for-one-split-brings-the-q4-2027-estimate-to-about-220-per-share-20261124": {"en":[{"company":"SanDisk (SNDK)","metric":"Q4’27 model: USD 219.84 per split-adjusted share","reason":"The share split converts the model figure to the new share count."}]},
+"semtech-s-laser-progress-sharpens-the-competition-for-sivers-20261124": {"en":[{"company":"Sivers (SIVE.ST)","change":"≈−0.2%","metric":"Q4’27 model target revision","reason":"The model lowers the odds that three early customer programs reach volume production."}]},
+"semtech-expects-another-quarter-of-data-center-growth-20261124": {"en":[{"company":"Semtech (SMTC)","change":"≈+1.1%","metric":"Q4’27 model target revision","reason":"The forecast weighs optical shipments, customer qualification, and copper program timing."}]},
 "longsys-revenue-rises-as-third-quarter-operating-cash-flow-turns-positive-20261119": {"en":[{"company":"Longsys (301308.SZ)","change":"−2.0%","metric":"Q4’27 model target revision","reason":"The model reflects weaker NAND pricing in some markets, inventory costs, and enterprise qualification timing."}]},
 "hanwei-reports-softer-third-quarter-sales-and-discusses-early-robotics-sensor-deployments-20261119": {"en":[{"company":"Hanwei Electronics (300007.SZ)","change":"−11.6%","metric":"Q4’27 model target revision","reason":"Third-quarter margins weakened. The forecast ties newer sensor sales to qualification, accepted shipments, and repeat orders."}]},
 "naura-reports-modest-third-quarter-growth-and-closes-bonding-equipment-acquisition-20261119": {"en":[{"company":"NAURA (002371.SZ)","change":"−5.5%","metric":"Q4’27 model target revision","reason":"Component shortages and qualification costs put pressure on deliveries and margins."}]},

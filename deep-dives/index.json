@@ -736,8 +736,8 @@
   },
   "MTSI": {
     "format": "pdf",
-    "version": "c27add32e47907cb",
-    "updated": "2026-11-18T09:48:12.912000+00:00"
+    "version": "50da3e16de084726",
+    "updated": "2026-11-24T05:45:27.495000+00:00"
   },
   "MU": {
     "format": "pdf",
@@ -876,8 +876,8 @@
   },
   "SIVE.ST": {
     "format": "pdf",
-    "version": "50419764f63824ef",
-    "updated": "2026-11-18T02:22:00.278000+00:00"
+    "version": "917ab489aeb0e113",
+    "updated": "2026-11-24T06:05:41.096000+00:00"
   },
   "SKHY": {
     "format": "pdf",
@@ -886,13 +886,13 @@
   },
   "SMTC": {
     "format": "pdf",
-    "version": "2cb2da01c656653f",
-    "updated": "2026-10-19T02:45:42.120000+00:00"
+    "version": "990e9638954b0b61",
+    "updated": "2026-11-24T05:19:43.222000+00:00"
   },
   "SNDK": {
     "format": "pdf",
-    "version": "2be3a7d1a10f2b26",
-    "updated": "2026-11-14T01:04:36.406000+00:00"
+    "version": "79271fe640dbc074",
+    "updated": "2026-11-24T06:32:35.311000+00:00"
   },
   "SNPS": {
     "format": "pdf",
