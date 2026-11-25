@@ -7,6 +7,8 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"dell-raises-its-outlook-as-infrastructure-profit-grows-20261124": {"en":[{"company":"Dell (DELL)","change":"≈+30.6%","metric":"Q4’27 model target revision","reason":"Higher modeled operating profit across infrastructure and client businesses."}]},
+"tower-s-customer-commitments-support-its-silicon-photonics-ramp-20261124": {"en":[{"company":"Tower Semiconductor (TSEM)","change":"≈+0.4%","metric":"Q4’27 model target revision","reason":"Customer commitments raise the model’s probability of a timely silicon photonics ramp."}]},
 "sandisk-s-eight-for-one-split-brings-the-q4-2027-estimate-to-about-220-per-share-20261124": {"en":[{"company":"SanDisk (SNDK)","metric":"Q4’27 model: USD 219.84 per split-adjusted share","reason":"The share split converts the model figure to the new share count."}]},
 "semtech-s-laser-progress-sharpens-the-competition-for-sivers-20261124": {"en":[{"company":"Sivers (SIVE.ST)","change":"≈−0.2%","metric":"Q4’27 model target revision","reason":"The model lowers the odds that three early customer programs reach volume production."}]},
 "semtech-expects-another-quarter-of-data-center-growth-20261124": {"en":[{"company":"Semtech (SMTC)","change":"≈+1.1%","metric":"Q4’27 model target revision","reason":"The forecast weighs optical shipments, customer qualification, and copper program timing."}]},
