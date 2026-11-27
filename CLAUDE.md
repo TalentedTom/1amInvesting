@@ -254,6 +254,11 @@ payload partial. Checks: `python -m unittest discover -s tests -p 'test_live_quo
   in native listing units. It is NOT the unweighted quarterly target. Both
   update with live quotes, the active horizon and Base/Bull/Bull+ scenarios,
   including DRAM's independently weighted EV. Do not change source valuations.
+- Both views share a company/ticker search with direct public report results.
+  The Filters panel holds region, USD market cap, valuation scenario and card sort.
+  Card and overview research links open the existing public report reader. Company
+  details show the selected quarter forecast × effective Base alongside the displayed
+  weighted target. DRAM uses its independently holdings-weighted calculation.
 - Region controls live in the shared Filters panel alongside USD market cap.
   Visitors may combine USA, China, Europe, East Asia and Other. Regions follow
   listing markets, not issuer domicile (US ADRs are in USA); East Asia means
@@ -419,12 +424,17 @@ don't rebind it per render.
   keep each lane newest-first. The upper lane scrolls at 42px/s and the lower
   at 30px/s. Smaller screens combine all stories into one row. Preserve pause,
   click-to-expand and reduced-motion manual scrolling for each lane.
-  Minimized headlines show the company name and a nonzero model-target or
-  Base revision. Use green for increases and red for decreases. Display the
-  supplied precision with a sign and use < for a stated upper bound. Keep
-  approximation wording, quarters, currencies, dates and the reasoning in
-  the full article. Use verified model targets for revision percentages.
-  Exclude live stock-price moves from the news ticker.
+  Each minimized entry shows the company, its signed nonzero target or Base revision,
+  and one short sentence explaining the main driver. Keep the supplied percentage
+  precision, bound and color. For each new revision, supply a `brief` in
+  `news-headlines.js` using the dated bulletin or its published research report.
+  Some financial news headlines cover a different development from the model driver.
+  Check the model explanation before writing the sentence. Keep scenario language.
+  Supply the quarter and verified previous and revised targets in listing units
+  in `metric` and `levels` for the expanded summary. Use only documented figures
+  on a comparable share basis. A rounded percentage cannot establish a prior price.
+  Keep all public article copy and dates intact. Verify with
+  `node --test tests/news-headlines.test.cjs` before publishing new headline entries.
   The Starred toggle uses the existing symbol watchlist and saves its own
   preference. Both lanes and expanded navigation follow that filter. Shared
   article permalinks still open directly. Associate new headline entries with

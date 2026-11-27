@@ -52,6 +52,7 @@
     const matchesRegions = (ticker, regions) => !regions.length || regions.includes(regionForTicker(ticker));
     function create({container, onChange, labels: initialLabels}) {
         let snapshot = null, labels = initialLabels, range = loadRange(localStorage), regions = loadRegions(localStorage);
+        const options = container.querySelector('.discovery-options');
         container.innerHTML = `<summary><span data-cap-label="filters"></span><strong id="market-cap-summary"></strong><span aria-hidden="true">⌄</span></summary>` +
             `<div class="cap-panel"><fieldset class="region-filters"><legend data-cap-label="region"></legend><div class="region-options">` +
             ['all', ...REGIONS].map(r => `<button type="button" data-region-option="${r}" aria-pressed="false"></button>`).join('') +
@@ -64,6 +65,16 @@
             `<div class="cap-bottom"><label class="cap-unknown"><input id="market-cap-unknown" type="checkbox"><span data-cap-label="includeUnknown"></span></label>` +
             `<button type="button" id="market-cap-reset" data-cap-label="reset"></button></div>` +
             `<p id="market-cap-status" class="cap-note"></p><p class="cap-note"><span data-cap-label="note"></span> <a href="https://www.tradingview.com/support/solutions/43000597015-market-capitalization/" target="_blank" rel="noopener noreferrer">TradingView</a>.</p></div>`;
+        if (options) container.querySelector('.cap-panel').prepend(options);
+        document.addEventListener('click', event => {
+            if (container.open && !container.contains(event.target)) container.open = false;
+        });
+        container.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && container.open) {
+                container.open = false;
+                container.querySelector('summary').focus();
+            }
+        });
         const min = container.querySelector('#market-cap-min'), max = container.querySelector('#market-cap-max');
         const unknown = container.querySelector('#market-cap-unknown');
         const presets = {all: [0, Infinity], small: [0, 2e9], mid: [2e9, 1e10], large: [1e10, 1e11], mega: [1e11, Infinity]};

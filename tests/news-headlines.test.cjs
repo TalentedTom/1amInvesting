@@ -15,7 +15,9 @@ test('compact headlines reduce qualified revisions to simple signed figures', ()
     assert.match(html, /<strong>AAOI<\/strong>/);
     assert.match(html, /news-revision-negative/);
     assert.match(html, /↓ &lt;1%/);
-    assert.doesNotMatch(html, /less than|Q4’27|Accepted shipments/);
+    assert.doesNotMatch(html, /less than|Q4’27/);
+    assert.match(html, /Accepted shipments remain the key test/);
+    assert.match(news.render(entry, true), /Q4’27/);
     const cases = [
         ['about +5%', '+5%'], ['approximately −0.25%', '−0.25%'],
         ['≈−35.5%', '−35.5%'], ['约+4%', '+4%'], ['↑ less than 0.5%', '↑ <0.5%'],
@@ -80,5 +82,30 @@ test('new articles without supplied percentages retain approved text without inv
 test('headlines omit named companies with missing, zero, or unchanged revisions', () => {
     for (const change of [undefined, '', '0%', '+0.00%', '↑ Base 99→99', 'unchanged']) {
         assert.deepEqual(news.companyEntries({company: 'Samsung (005930.KS)', change}, new Map()), []);
+    }
+});
+
+test('headline drivers stay within one sentence and verified target pairs open with the revision', () => {
+    const entry = {company:'Example', change:'+4%', metric:'Q4 2027', levels:'USD 10 → 10.40',
+        reason:'Demand rose. Capacity remains limited.'};
+    assert.equal(news.shortReason(entry), 'Demand rose.');
+    assert.doesNotMatch(news.render(entry), /Capacity|USD 10/);
+    assert.match(news.render(entry, true), /USD 10 → 10.40/);
+    assert.equal(news.shortReason({...entry, brief:'Orders rose.'}), 'Orders rose.');
+    assert.doesNotMatch(news.render({...entry, brief:'<script>'}), /<script>/);
+});
+
+test('every published research revision in the strip has a short editorial explanation', () => {
+    const fs = require('node:fs');
+    const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
+    const ids = [...html.matchAll(/<article[^>]+id="([^"]+)"[^>]*data-news-slide/g)].map(match => match[1]);
+    const companies = new Map([['AAOI', 'Applied Optoelectronics'], ['AMD', 'AMD']]);
+    for (const id of ids.filter(id => /-\d{8}$/.test(id))) {
+        const slide = {id, querySelector: () => null, querySelectorAll: () => []};
+        for (const item of news.fromSlide(slide, 'en').flatMap(item => news.companyEntries(item, companies))) {
+            const brief = news.shortReason(item);
+            assert.ok(brief && brief.split(/\s+/).length <= 22, id);
+            assert.equal([...new Intl.Segmenter('en', {granularity:'sentence'}).segment(brief)].length, 1, id);
+        }
     }
 });

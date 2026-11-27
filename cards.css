@@ -1,6 +1,6 @@
 /* The original table remains intact. Cards are an additive, reversible view. */
 body.cards-view .table-container, body.cards-view .dropdown-container,
-body.cards-view #deep-dive-hint, body.cards-view #sc-search,
+body.cards-view #deep-dive-hint,
 body.table-view .company-browser { display: none; }
 body.cards-view .app-container { max-width: 1480px; height: auto; min-height: 100vh; margin-inline: auto; }
 body.light-mode .logo-area h1 { color: var(--text-primary); }
@@ -165,3 +165,45 @@ body.light-mode .card-ev .badge.ev-badge.ev-0 { color: var(--text-primary) !impo
 /* Base editing is a separate button beside the card's model overview action. */
 .card-base-control { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 5px 20px; border-top: 1px solid var(--border); }
 .card-base-control .base-edit { min-width: 64px; min-height: 44px; }
+
+/* The same discovery controls serve both stock views. */
+.discovery-tools, .explore-toolbar { width: calc(100% - 64px); margin-inline: auto; }
+.explore-toolbar { flex-direction: row; align-items: center; margin-block: 12px 8px; gap: 8px; }
+.discovery-tools { position: relative; z-index: 5; display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px; flex-shrink: 0; }
+.company-lookup { position: relative; flex: 1; min-width: 0; }
+.company-lookup input, .discovery-tools > button, .discovery-tools summary {
+    min-height: 44px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-panel);
+    color: var(--text-primary); font: 600 .82rem var(--font-body);
+}
+.company-lookup input { width: 100%; padding: 0 12px; font-weight: 400; }
+.company-lookup .sc-search-results { left: 0; right: auto; width: min(440px, calc(100vw - 32px)); max-height: min(45vh, 320px); z-index: 2; }
+.company-lookup .sc-search-result { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; width: 100%; background: var(--bg-panel); color: var(--text-primary); font: inherit; text-align: left; border: 0; min-height: 44px; }
+.lookup-report { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin-left: auto; font-size: .7rem; color: var(--accent); }
+.discovery-tools > button { padding: 0 12px; }
+.discovery-tools .market-cap-filter { position: static; width: auto; margin: 0; border: 0; }
+.discovery-tools summary { padding: 0 12px; gap: 6px; }
+.discovery-tools .cap-active summary, body.mult-scaled .discovery-tools summary { border-color: var(--accent); }
+.discovery-tools #market-cap-summary { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.discovery-tools .cap-panel { position: absolute; top: calc(100% + 5px); right: 0; z-index: 3; width: min(510px, 100%); max-height: min(64dvh, 540px); overflow-y: auto; padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg-panel); box-shadow: 0 8px 24px #0002; }
+.discovery-options { display: grid; gap: 12px; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
+.discovery-options .filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.discovery-options .sc-pill { min-height: 44px; }
+body.table-view .discovery-options .company-sort-label { display: none; }
+.company-list-caption { margin-block: 3px 10px; }
+.card-base-control .card-label { margin-left: auto; }
+.research-link { display: inline-flex; align-items: center; justify-content: center; padding: 4px 10px; min-height: 44px; color: var(--accent); background: transparent; border: 0; border-radius: 8px; text-decoration: underline; text-underline-offset: 3px; font: 600 .8rem var(--font-body); cursor: pointer; }
+.overview-research { margin-left: auto; }
+.target-calculation { grid-column: 1/-1; color: var(--text-primary); font-size: .86rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.overview-metrics { row-gap: 12px; }
+@media (max-width: 700px) {
+    .explore-toolbar, .discovery-tools { width: calc(100% - 28px); }
+    .explore-title { font-size: 1.05rem; }
+    .view-switch button { padding-inline: 9px; font-size: .72rem; }
+    .explore-toolbar { margin-block: 8px; }
+    .discovery-tools { gap: 5px; }
+    .discovery-tools > button, .discovery-tools summary { padding-inline: 8px; font-size: .76rem; }
+    .company-lookup input { font-size: 16px; padding-inline: 8px; }
+    .company-list-caption { flex-direction: row; flex-wrap: wrap; gap: 2px 10px; }
+    .overview-identity { flex-wrap: wrap; gap: 10px; }
+    .card-quote { margin-top: 10px; }
+}

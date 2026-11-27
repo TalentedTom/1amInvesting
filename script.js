@@ -166,6 +166,22 @@ document.addEventListener('DOMContentLoaded', () => {
             ? formatQuarterPrice(price * (1 + ev / 100)) : '—';
     }
 
+    function targetCalculation(row, target, currency) {
+        const price = parseLooseNumber(row['Current Price']);
+        if (target === '—' || !(price > 0)) return '';
+        const amount = number => [number, currency].filter(Boolean).join(' ');
+        if (row._synthetic?.ev_method === 'weighted') {
+            const multiple = 1 + scaledEvUpside(row) / 100;
+            return tr(row._baseCustom ? 'target_math_etf_custom' : 'target_math_etf', {
+                price: amount(formatQuarterPrice(price)), multiple: Number(multiple.toFixed(4)) + '×', target: amount(target)
+            });
+        }
+        const forecast = parseLooseNumber(row[TARGET_QUARTER]) * multipleFactor();
+        if (!Number.isFinite(forecast) || !Number.isFinite(parseFloat(row.Base))) return '';
+        return tr('target_math', {quarter: TARGET_QUARTER, forecast: amount(formatQuarterPrice(forecast)),
+            base: String(parseFloat(row.Base)), target: amount(target)});
+    }
+
     // Display-only aliases. The underlying data keys stay as the Excel column names so
     // data lookups, sorting, and `update_data.py` regeneration all keep working.
     const displayNames = {
@@ -582,14 +598,17 @@ document.addEventListener('DOMContentLoaded', () => {
     Object.assign(I18N.en, {
         cards_title: 'Explore companies', cards_intro: 'Compare model upside and what is driving it. Open a company for its quarterly targets and research.',
         cards_view_label: 'Choose your view', cards_view: 'Company cards', table_view: 'Detailed table',
-        cards_search: 'Search any company or ticker', cards_sort: 'Sort by', cards_sort_ev: 'Upside: highest first',
+        cards_search: 'Search company or ticker', cards_sort: 'Sort by', cards_sort_ev: 'Upside: highest first',
         cards_sort_ev_low: 'Upside: lowest first', cards_sort_upside: 'Unweighted upside: highest first', cards_sort_growth: 'Growth share: highest first',
         cards_sort_name: 'Company name: A–Z', cards_sort_table: 'Current table order', cards_disclaimer: 'Model estimates, not guaranteed returns.',
         cards_count: '{n} companies', cards_horizon: 'Model horizon: {quarter}', cards_driver: 'Main upside driver', cards_open: 'View company',
         cards_close: 'Back to companies ×', cards_ev: 'Upside', cards_price_target: '1 Year Price Target', cards_price: 'Current price', cards_daily_change: 'Daily change', cards_base: 'Base score',
         cards_upside: 'Unweighted upside', cards_targets: 'Quarterly model targets', cards_currency: 'Prices and targets use the stock’s listing currency.',
         cards_report: 'Read research', cards_research_available: 'Research available', cards_overview: 'Model overview', cards_chart: 'Price chart', cards_etf: 'About this ETF',
-        cards_ev_explanation: 'Upside is the model’s Base-weighted target-to-price multiple (EV Upside in the detailed table), not a promised return. The 1 Year Price Target is today’s share price multiplied by that same model multiple, before display rounding. Both use the active model horizon, currently {quarter}. The unweighted upside uses the quarterly target without Base weighting. DRAM averages its holdings’ EV scores separately.',
+        target_math: '{quarter} forecast {forecast} × {base}% Base ≈ {target}.',
+        target_math_etf: '{price} × {multiple} ≈ {target}, using the holdings-weighted upside.',
+        target_math_etf_custom: '{price} × {multiple} ≈ {target}, including your Base adjustment.',
+        cards_ev_explanation: 'Upside shows how many times today’s price the model target represents. The target calculation uses the rounded EV score.',
         cards_driver_explanation: 'Growth (green) compares the first displayed quarterly target with the active target. Re-Rate (purple) compares today’s share price with the first target. The bar shows the relative size of those two percentage moves; it is not a causal attribution or an EV calculation.'
     });
     Object.assign(I18N['zh-CN'], {
@@ -600,7 +619,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cards_count: '{n} 家公司', cards_horizon: '模型目标期：{quarter}', cards_driver: '主要上涨驱动', cards_open: '查看公司', cards_close: '返回公司列表 ×',
         cards_ev: '上涨空间', cards_price_target: '1年目标价', cards_price: '当前股价', cards_daily_change: '当日涨跌幅', cards_base: '基础分', cards_upside: '未加权上涨倍数', cards_targets: '季度模型目标价',
         cards_currency: '股价和目标价均使用股票上市交易币种。', cards_report: '阅读研究报告', cards_research_available: '提供研究报告', cards_overview: '模型概览', cards_chart: '价格图表', cards_etf: '了解此 ETF',
-        cards_ev_explanation: '上涨空间是基础分加权后的目标价与现价倍数（详细表格中的 EV 上涨空间），不是承诺回报。1年目标价由当前股价乘以同一模型倍数、在显示舍入前计算，两者均使用当前模型目标期 {quarter}。未加权上涨倍数不使用基础分权重。DRAM 单独加权平均持仓公司的 EV 分数。',
+        target_math: '{quarter}预测值 {forecast} × {base}% 基础分 ≈ {target}。',
+        target_math_etf: '{price} × {multiple} ≈ {target}，按持仓上涨空间加权计算。',
+        target_math_etf_custom: '{price} × {multiple} ≈ {target}，已应用个人基础分调整。',
+        cards_ev_explanation: '上涨空间表示模型目标价相当于当前价格的倍数。目标价使用取整后的 EV 分数计算。',
         cards_driver_explanation: '增长（绿色）比较首个显示季度目标价与活跃目标价；重估（紫色）比较当前股价与首季度目标价。比例条表示两个阶段涨幅的相对大小，并非因果归因或 EV 计算。'
     });
     Object.assign(I18N.en, {
@@ -721,9 +743,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'upside-desc': {col: 'Upside', asc: false}, 'growth-desc': {col: '_upsideMix', asc: false},
         'name-asc': {col: 'Name', asc: true}
     };
-    document.getElementById('company-search').addEventListener('input', event => {
-        companyQuery = event.target.value.trim().toLocaleLowerCase(); renderData();
-    });
     document.getElementById('company-sort').addEventListener('change', event => {
         const choice = CARD_SORTS[event.target.value];
         if (choice) { sortState = {...choice}; renderData(); }
@@ -952,13 +971,14 @@ document.addEventListener('DOMContentLoaded', () => {
             headlineStories.forEach(({slide, entries}, i) => {
                 const group = groups[i % groups.length];
                 const posted = slide.querySelector('.news-timestamps time[datetime]');
-                entries.forEach(entry => {
+                entries.forEach((entry, entryIndex) => {
                     const button = document.createElement('button');
                     button.type = 'button';
                     button.className = 'news-headline';
                     button.dataset.newsArticle = slide.id;
+                    button.dataset.entryIndex = String(entryIndex);
                     button.innerHTML = window.NewsHeadlines.render(entry);
-                    const accessible = [entry.company, entry.change, entry.metric, posted?.textContent, tr('news_expand')].filter(Boolean).join('. ');
+                    const accessible = [entry.company, entry.change, window.NewsHeadlines.shortReason(entry), entry.metric, posted?.textContent, tr('news_expand')].filter(Boolean).join('. ');
                     button.title = accessible;
                     button.setAttribute('aria-label', accessible);
                     button.lang = entry.lang || slide.lang || currentLang;
@@ -995,7 +1015,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const entries = window.NewsHeadlines.fromSlide(slide, currentLang)
                     .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies));
                 const shown = entries.filter(entry => !starredOnly || entry.tickers.some(ticker => watchlist.has(ticker)));
-                const unique = [...new Map(shown.map(entry => [entry.company + ' ' + entry.change, entry])).values()];
+                const unique = [...new Map(shown.map(entry => [[entry.company, entry.change, entry.metric].join('|'), entry])).values()];
                 return unique.length ? [{slide, entries: unique}] : [];
             });
             const matching = new Set(headlineStories.map(story => story.slide));
@@ -1008,18 +1028,37 @@ document.addEventListener('DOMContentLoaded', () => {
             if (viewport.hidden) updateControls();
             else goTo(index, true);
         }
-        function goTo(target, instant = false) {
+        function renderRevisionSummary(slide, selectedIndex = 0) {
+            const content = slide?.querySelector('.news-content');
+            if (!content) return;
+            content.querySelector('.news-revision-summary')?.remove();
+            const entries = headlineStories.find(story => story.slide === slide)?.entries;
+            if (!entries?.length) return;
+            const summary = document.createElement('div');
+            summary.className = 'news-revision-summary';
+            const selected = entries[selectedIndex] || entries[0];
+            for (const entry of [selected, ...entries.filter(other => other !== selected)]) {
+                const line = document.createElement('div');
+                line.lang = entry.lang || slide.lang || currentLang;
+                line.innerHTML = window.NewsHeadlines.render(entry, true);
+                summary.appendChild(line);
+            }
+            content.prepend(summary);
+            content.scrollTop = 0;
+        }
+        function goTo(target, instant = false, selectedIndex = 0) {
             if (viewport.hidden || !visibleSlides.length) return;
             index = (target + visibleSlides.length) % visibleSlides.length;
+            renderRevisionSummary(visibleSlides[index], selectedIndex);
             updateControls();
             viewport.scrollTo({ left: index * viewport.clientWidth, behavior: instant || reducedMotion.matches ? 'instant' : 'smooth' });
             announcement.textContent = visibleSlides[index].querySelector('.news-title').textContent;
         }
-        function expand(target = index) {
+        function expand(target = index, selectedIndex = 0) {
             if (target < 0 || !visibleSlides.length) return;
             clearTimeout(settleTimer);
             viewport.hidden = false;
-            goTo(target, true);
+            goTo(target, true, selectedIndex);
             viewport.focus({ preventScroll: true });
         }
         // Shared bulletin links remain readable even with a starred-only feed.
@@ -1036,7 +1075,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('hashchange', openLinkedBulletin);
         ticker.addEventListener('click', event => {
             const button = event.target.closest('[data-news-article]');
-            if (button) expand(visibleSlides.findIndex(slide => slide.id === button.dataset.newsArticle));
+            if (button) expand(visibleSlides.findIndex(slide => slide.id === button.dataset.newsArticle), Number(button.dataset.entryIndex));
         });
         starred.addEventListener('click', () => {
             starredOnly = !starredOnly;
@@ -1048,7 +1087,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clearTimeout(settleTimer);
             settleTimer = setTimeout(() => {
                 if (viewport.hidden || !viewport.clientWidth) return;
-                index = Math.max(0, Math.min(visibleSlides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
+                const nextIndex = Math.max(0, Math.min(visibleSlides.length - 1, Math.round(viewport.scrollLeft / viewport.clientWidth)));
+                if (index !== nextIndex) renderRevisionSummary(visibleSlides[nextIndex]);
+                index = nextIndex;
                 updateControls();
             }, 150);
         });
@@ -1355,18 +1396,8 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(() => { /* leave set empty — no tickers will appear clickable */ });
     }
-    // With deep dives off, hide the (now functionless) "Search deep-dives" box.
-    if (!DEEP_DIVES_ENABLED) {
-        const scSearchEl = document.getElementById('sc-search');
-        if (scSearchEl) scSearchEl.style.display = 'none';
-    }
-
-    // === Deep-Dive Search ===
-    // Input on the right side of the filter bar. Filters tickers that
-    // have a deep-dive on file (manifest-gated) and matches against ticker
-    // symbol OR company Name (case-insensitive substring). Selecting a
-    // result opens the deep-dive modal directly.
-    const searchInput = document.getElementById('sc-search-input');
+    // One field filters both stock views and offers matching public reports.
+    const searchInput = document.getElementById('company-search');
     const searchResults = document.getElementById('sc-search-results');
     const SEARCH_MAX_RESULTS = 8;
 
@@ -1388,7 +1419,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // users can find tickers by either language.
             const enName = (row.Name || '').trim();
             const localName = ((langData[i] && langData[i].Name) || enName).trim();
-            out.push({ ticker, displayName: localName, enName });
+            out.push({ ticker, displayName: currentLang === 'en' ? TAIWAN_ENGLISH_NAMES[ticker] || localName : localName, enName });
         }
         return out;
     }
@@ -1423,30 +1454,34 @@ document.addEventListener('DOMContentLoaded', () => {
             .slice(0, SEARCH_MAX_RESULTS);
 
         if (!matches.length) {
-            searchResults.innerHTML = `<div class="sc-search-empty">${tr('search_no_results')}</div>`;
-            searchResults.classList.remove('hidden');
+            searchResults.classList.add('hidden');
+            searchResults.replaceChildren();
             return;
         }
 
         searchResults.innerHTML = matches.map(({ row }) => {
             const safeTicker = row.ticker.replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
             const safeName = (row.displayName || '').replace(/[<>&]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-            return `<div class="sc-search-result" role="option" data-ticker="${safeTicker}">` +
+            return `<button type="button" class="sc-search-result" data-ticker="${safeTicker}">` +
                        `<span class="sc-search-result-ticker">${safeTicker}</span>` +
                        (safeName ? `<span class="sc-search-result-name">${safeName}</span>` : '') +
-                   `</div>`;
+                   `<span class="lookup-report">${tr('cards_report')}</span></button>`;
         }).join('');
         searchResults.classList.remove('hidden');
     }
 
     function clearSearch() {
-        if (searchInput) searchInput.value = '';
+        searchInput.value = '';
+        companyQuery = '';
+        renderData();
         searchResults.classList.add('hidden');
         searchResults.innerHTML = '';
     }
 
     if (searchInput && searchResults) {
         searchInput.addEventListener('input', (e) => {
+            companyQuery = e.target.value.trim().toLocaleLowerCase();
+            renderData();
             renderSearchResults(e.target.value);
         });
         // Re-open dropdown if the user clicks back into a non-empty input.
@@ -1459,8 +1494,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!row) return;
             const ticker = row.getAttribute('data-ticker');
             if (ticker) {
-                openDeepDive(ticker);
                 clearSearch();
+                searchInput.focus({preventScroll:true});
+                openDeepDive(ticker);
             }
         });
         // Escape clears + closes; Enter activates the first result if any.
@@ -1474,16 +1510,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const ticker = first.getAttribute('data-ticker');
                     if (ticker) {
-                        openDeepDive(ticker);
                         clearSearch();
+                        openDeepDive(ticker);
                     }
                 }
             }
         });
         // Click outside the search container closes the dropdown (keeps the
         // query so the user can re-focus to continue refining).
+        const searchBox = document.getElementById('sc-search');
+        searchBox.addEventListener('focusout', e => {
+            if (!searchBox.contains(e.relatedTarget)) searchResults.classList.add('hidden');
+        });
         document.addEventListener('click', (e) => {
-            const container = document.getElementById('sc-search');
+            const container = searchBox;
             if (container && !container.contains(e.target)) {
                 searchResults.classList.add('hidden');
             }
@@ -1664,8 +1704,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // open gets normal padding back.
         deepDiveContent.innerHTML = '';
         deepDiveContent.classList.remove('modal-chart', 'modal-pdf');
-        const opener = deepDiveOpener?.isConnected ? deepDiveOpener
-            : document.querySelector('.ticker-symbol[data-ticker="' + CSS.escape(activeReportTicker) + '"]');
+        const selector = portfolioView === 'cards' ? '[data-card-report="' : '.ticker-symbol[data-ticker="';
+        const replacement = document.querySelector(selector + CSS.escape(activeReportTicker) + '"]');
+        const opener = deepDiveOpener?.isConnected && deepDiveOpener !== document.body && deepDiveOpener.getClientRects().length
+            ? deepDiveOpener : replacement;
         opener?.focus({ preventScroll: true });
         deepDiveOpener = null;
         activeReportTicker = '';
@@ -2309,8 +2351,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            buildTable(validData);
-            buildCompanyCards(validData);
+            const shown = companyQuery ? validData.filter(row => [row.Ticker, row.Name, TAIWAN_ENGLISH_NAMES[row.Ticker],
+                window.PORTFOLIO_DATA.en.find(r => r.Ticker === row.Ticker)?.Name
+            ].some(value => String(value || '').toLocaleLowerCase().includes(companyQuery))) : validData;
+            buildTable(shown);
+            buildCompanyCards(shown);
         } catch (err) {
             console.error("Failed to load data:", err);
             document.getElementById('table-body').innerHTML = `
@@ -2327,12 +2372,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return window.COMPANY_LOGOS?.[ticker]?.src || LOGO_OVERRIDES[ticker] ||
             `https://financialmodelingprep.com/image-stock/${encodeURIComponent(ticker.split('.')[0])}.png`;
     }
-    function buildCompanyCards(data) {
+    function buildCompanyCards(shown) {
         if (!cardBrowser) return;
-        const shown = data.filter(row => !companyQuery || [row.Ticker, row.Name,
-            window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES),
-            (window.PORTFOLIO_DATA.en || []).find(r => r.Ticker === row.Ticker)?.Name
-        ].some(value => String(value || '').toLocaleLowerCase().includes(companyQuery)));
         const count = document.getElementById('company-count');
         const countText = tr('cards_count', {n: String(shown.length)});
         if (count.textContent !== countText) count.textContent = countText;
@@ -2342,20 +2383,25 @@ document.addEventListener('DOMContentLoaded', () => {
             ev: tr('cards_ev'), priceTarget: tr('cards_price_target'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
             open: tr('cards_open'), star: tr('watchlist_add'), unstar: tr('watchlist_remove'),
             report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
-            researchAvailable: tr('cards_research_available'), modelOverview: tr('cards_overview'), price: tr('cards_price'), dailyChange: tr('cards_daily_change'), base: tr('cards_base'),
+            modelOverview: tr('cards_overview'), price: tr('cards_price'), dailyChange: tr('cards_daily_change'), base: tr('cards_base'),
             upside: tr('cards_upside'), targets: tr('cards_targets'), currency: tr('cards_currency'),
-            evExplanation: tr('cards_ev_explanation', {quarter: TARGET_QUARTER}), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
+            evExplanation: tr('cards_ev_explanation'), driverExplanation: tr('cards_driver_explanation'), disclaimer: tr('cards_disclaimer'), marketCap: tr('cap_title'),
             empty: watchlistOnly ? tr('watchlist_no_match') : tr('no_rows')
         };
-        cardBrowser.render(shown.map(row => ({
-            ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
-            marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
-            ev: formatCell('EV Upside', row['EV Upside'], row), priceTarget: cardPriceTarget(row), driver: formatCell('_upsideMix', null, row),
-            price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
-            dailyChange: row['Change %'], quoteCurrency: marketCapFilter?.currency(row.Ticker) || (row.Ticker === 'DRAM' ? 'USD' : ''),
-            starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
-            quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
-        })), labels);
+        const cards = shown.map(row => {
+            const priceTarget = cardPriceTarget(row);
+            const quoteCurrency = marketCapFilter?.currency(row.Ticker) || (row.Ticker === 'DRAM' ? 'USD' : '');
+            return {
+                ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
+                marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
+                ev: formatCell('EV Upside', row['EV Upside'], row), priceTarget, calculation: targetCalculation(row, priceTarget, quoteCurrency), driver: formatCell('_upsideMix', null, row),
+                price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
+                dailyChange: row['Change %'], quoteCurrency,
+                starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
+                quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
+            };
+        });
+        cardBrowser.render(cards, labels);
     }
     function buildTable(data) {
         const thead = document.getElementById('table-head-row');

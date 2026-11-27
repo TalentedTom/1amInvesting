@@ -38,9 +38,11 @@
             if (!row) { if (dialog.open) close(); return; }
             const scrollTop = dialog.scrollTop;
             content.innerHTML = `<div class="overview-identity">${logo(row)}<div><p class="company-symbol">${escape(row.ticker)}</p>` +
-                `<h2 id="company-overview-title">${escape(row.name)}</h2></div></div>` +
+                `<h2 id="company-overview-title">${escape(row.name)}</h2></div>` +
+                (row.hasReport ? `<button type="button" class="research-link overview-research" data-overview-action="report">${escape(labels.report)}</button>` : '') +
+                `</div>` +
                 `<div class="overview-metrics"><div><span class="card-label">${escape(labels.ev)}</span><div class="card-ev">${row.ev}</div></div>` +
-                `<div>${targetMetric(row, labels, 'overview')}</div><div class="overview-metric-driver"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</div></div>` +
+                `<div>${targetMetric(row, labels, 'overview')}</div>${row.calculation ? `<p class="target-calculation">${escape(row.calculation)}</p>` : ''}<div class="overview-metric-driver"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</div></div>` +
                 `<p class="overview-explanation">${escape(labels.evExplanation)}</p>` +
                 `<dl class="overview-facts"><div><dt>${escape(labels.price)}</dt><dd>${row.price} <small>${escape(row.quoteCurrency)}</small></dd></div>` +
                 `<div><dt>${escape(labels.dailyChange)}</dt><dd class="quote-change quote-${dailyChange(row.dailyChange).tone}">${escape(dailyChange(row.dailyChange).label)}</dd></div>` +
@@ -49,7 +51,7 @@
                 `<h3 class="overview-heading">${escape(labels.targets)}</h3><p class="overview-currency">${escape(labels.currency)}</p>` +
                 `<div class="overview-quarters">${row.quarters.map(q => `<div${q.active ? ' class="overview-target"' : ''}><span class="card-label">${escape(q.label)}</span><strong>${q.html}</strong></div>`).join('')}</div>` +
                 `<h3 class="overview-heading">${escape(labels.driver)}</h3><p class="overview-explanation">${escape(labels.driverExplanation)}</p>` +
-                `<div class="overview-actions">${row.hasReport ? `<button type="button" class="overview-primary" data-overview-action="report">${escape(labels.report)}</button>` : ''}` +
+                `<div class="overview-actions">` +
                 `${row.isEtf ? `<button type="button" class="overview-primary" data-overview-action="etf">${escape(labels.etf)}</button>` : ''}` +
                 `<button type="button" data-overview-action="chart">${escape(labels.chart)}</button><button type="button" data-overview-action="table">${escape(labels.table)}</button></div>` +
                 `<p class="overview-currency">${escape(labels.disclaimer)}</p>`;
@@ -57,6 +59,12 @@
         }
         grid.addEventListener('click', event => {
             if (event.target.closest('[data-base-ticker]')) return;
+            const report = event.target.closest('[data-card-report]');
+            if (report && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
+                event.preventDefault();
+                onReport(report.dataset.cardReport);
+                return;
+            }
             const star = event.target.closest('[data-card-star]');
             if (star) { onStar(star.dataset.cardStar); return; }
             const button = event.target.closest('[data-company-open]');
@@ -87,8 +95,8 @@
             render(nextRows, nextLabels) {
                 rows = nextRows; labels = nextLabels;
                 const focused = grid.contains(document.activeElement) ? document.activeElement : null;
-                const focusTicker = focused?.dataset.cardStar || focused?.dataset.baseTicker || focused?.dataset.companyOpen;
-                const focusKind = focused?.dataset.cardStar ? 'data-card-star' : focused?.dataset.baseTicker ? 'data-base-ticker' : 'data-company-open';
+                const focusTicker = focused?.dataset.cardReport || focused?.dataset.cardStar || focused?.dataset.baseTicker || focused?.dataset.companyOpen;
+                const focusKind = focused?.dataset.cardReport ? 'data-card-report' : focused?.dataset.cardStar ? 'data-card-star' : focused?.dataset.baseTicker ? 'data-base-ticker' : 'data-company-open';
                 const html = rows.map(row => {
                     const starLabel = (row.starred ? labels.unstar : labels.star) + ': ' + row.name;
                     return `<article class="company-card${row.starred ? ' company-starred' : ''}${row.archived ? ' company-archived' : ''}" data-card-ticker="${escape(row.ticker)}">` +
@@ -98,8 +106,8 @@
                         `<span class="card-metrics"><span class="card-metric" id="card-ev-${escape(row.ticker)}"><span class="card-label">${escape(labels.ev)}</span><span class="card-ev">${row.ev}</span></span>` +
                         targetMetric(row, labels) + `<span class="card-horizon">${escape(labels.horizon)}</span></span>` +
                         `<span class="card-driver" id="card-driver-${escape(row.ticker)}"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</span>` +
-                        `<span class="card-bottom"><span>${escape(row.hasReport ? labels.researchAvailable : row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
-                        `<div class="card-base-control"><span class="card-label">${escape(labels.base)}</span>${row.base}</div>` +
+                        `<span class="card-bottom"><span>${escape(row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
+                        `<div class="card-base-control">${row.hasReport ? `<a class="research-link" data-card-report="${escape(row.ticker)}" href="/r/${encodeURIComponent(row.ticker)}/" aria-label="${escape(labels.report + ' · ' + row.name)}">${escape(labels.report)}</a>` : ''}<span class="card-label">${escape(labels.base)}</span>${row.base}</div>` +
                         `<button type="button" class="card-star" data-card-star="${escape(row.ticker)}" aria-pressed="${row.starred}" aria-label="${escape(starLabel)}" title="${escape(starLabel)}">${row.starred ? '★' : '☆'}</button></article>`;
                 }).join('') || `<p class="company-empty">${escape(labels.empty)}</p>`;
                 // Avoid replacing focused buttons on no-change polls.
