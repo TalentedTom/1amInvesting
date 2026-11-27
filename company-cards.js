@@ -107,7 +107,7 @@
                         targetMetric(row, labels) + `<span class="card-horizon">${escape(labels.horizon)}</span></span>` +
                         `<span class="card-driver" id="card-driver-${escape(row.ticker)}"><span class="card-label">${escape(labels.driver)}</span>${row.driver}</span>` +
                         `<span class="card-bottom"><span>${escape(row.isEtf ? labels.etf : labels.modelOverview)}</span><span class="card-open">${escape(labels.open)} <span aria-hidden="true">↗</span></span></span></button>` +
-                        `<div class="card-base-control">${row.hasReport ? `<a class="research-link" data-card-report="${escape(row.ticker)}" href="/r/${encodeURIComponent(row.ticker)}/" aria-label="${escape(labels.report + ' · ' + row.name)}">${escape(labels.report)}</a>` : ''}<span class="card-label">${escape(labels.base)}</span>${row.base}</div>` +
+                        `<div class="card-base-control">${row.hasReport ? `<a class="research-link" data-card-report="${escape(row.ticker)}" href="/r/${encodeURIComponent(row.ticker)}/${labels.language === 'zh-CN' ? 'zh/' : ''}" aria-label="${escape(labels.report + ' · ' + row.name)}">${escape(labels.report)}</a>` : ''}<span class="card-label">${escape(labels.base)}</span>${row.base}</div>` +
                         `<button type="button" class="card-star" data-card-star="${escape(row.ticker)}" aria-pressed="${row.starred}" aria-label="${escape(starLabel)}" title="${escape(starLabel)}">${row.starred ? '★' : '☆'}</button></article>`;
                 }).join('') || `<p class="company-empty">${escape(labels.empty)}</p>`;
                 // Avoid replacing focused buttons on no-change polls.

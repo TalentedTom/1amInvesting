@@ -40,3 +40,12 @@ test('X is first and all social composers receive the same clean report link', (
     assert.equal(email.protocol, 'mailto:'); assert.equal(email.searchParams.get('subject'), title);
     assert.equal(email.searchParams.get('body'), title + '\n\n' + link);
 });
+
+test('sharing a Chinese report keeps its language on the public link and in social composers', () => {
+    const url = 'https://example.com/?report=MU&lang=zh-CN#news';
+    const expected = 'https://example.com/r/MU/zh/';
+    assert.equal(links.share(url, 'MU', 'zh-CN'), expected);
+    const options = links.social(url, 'MU', '美光研究报告', 'zh-CN');
+    assert.equal(new URL(options[0].url).searchParams.get('url'), expected);
+    assert.equal(options.find(option => option.id === 'email').label, '电子邮件');
+});

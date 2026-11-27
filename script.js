@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const forecast = parseLooseNumber(row[TARGET_QUARTER]) * multipleFactor();
         if (!Number.isFinite(forecast) || !Number.isFinite(parseFloat(row.Base))) return '';
-        return tr('target_math', {quarter: TARGET_QUARTER, forecast: amount(formatQuarterPrice(forecast)),
+        return tr('target_math', {quarter: currentLang === 'zh-CN' ? window.Mandarin.quarter(TARGET_QUARTER) : TARGET_QUARTER, forecast: amount(formatQuarterPrice(forecast)),
             base: String(parseFloat(row.Base)), target: amount(target)});
     }
 
@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
             oct7_news_title: "新增 58 只股票；SKHY 基础分升至 99",
             oct7_news_date: "发布于 2026年10月7日 17:20 EDT",
             oct7_news_story: "本次大幅扩展股票覆盖：根据最新主 Excel，<strong>新增 58 只股票</strong>。覆盖从 <strong>131 只增至 189 只股票</strong>，另含自定义 DRAM ETF，主表共 <strong>190 个标的</strong>。没有移除股票。",
-            oct7_news_skhy: "<strong>SKHY 基础分：93 &rarr; 99。</strong> EV 上涨使用更新后的基础分、现行 2027 年第四季度目标价及当前股价计算。",
+            oct7_news_skhy: "<strong>SKHY 基础分：93 &rarr; 99。</strong> 概率加权上涨空间使用更新后的基础分、现行 2027 年第四季度目标价及当前股价计算。",
             oct7_news_added: "新增的 58 只股票",
             oct7_news_note: "所有新增股票均已列入主表。在本公告内滚动可查看下方完整名单。这是有日期的更新记录，实时股价仍持续刷新。",
             rollover_news_label: "季度滚动更新",
@@ -451,8 +451,8 @@ document.addEventListener('DOMContentLoaded', () => {
             rollover_news_date: "发布：2026年9月30日 22:51 EDT",
             rollover_news_intro: "随着第三季度结束、10月1日进入第四季度，我们已将<strong>Upside 与 EV Upside 的参考季度从2027年第三季度滚动至第四季度</strong>，使看板继续聚焦约12个月后的前景。本次调整已于9月30日提前实施。",
             rollover_news_upside: "<strong>Upside：</strong>2027年第四季度目标价除以当前股价。",
-            rollover_news_ev: "<strong>EV Upside：</strong>采用相同的2027年第四季度目标价和当前股价，沿用现有Base评分加权方法。",
-            rollover_news_context: "数值可能因预测参考期向后延伸一个季度而变化，并不一定代表公司前景获得上调。本次滚动调整本身不改变Base评分或各季度预测。",
+            rollover_news_ev: "<strong>EV Upside：</strong>采用相同的2027年第四季度目标价和当前股价，沿用现有基础分加权方法。",
+            rollover_news_context: "数值可能因预测参考期向后延伸一个季度而变化，并不一定代表公司前景获得上调。本次滚动调整本身不改变基础分或各季度预测。",
             rollover_news_next: "下一次计划滚动更新：2027年1月1日。",
             model_news_label: "模型更新",
             model_news_title: "9月28–30日：2027年第三季度模型目标价调整",
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
             model_news_aaoi: "<strong>AAOI <span class=\"news-revision\">+1.29%</span>：</strong>计入按概率加权的更高800G/1.6T产能利用率，同时保留原有产能和定价假设。",
             model_news_avgo: "<strong>博通 (AVGO) <span class=\"news-revision\">+1.09%</span>：</strong>基于更高的AI半导体收入预测，计入按25%概率加权的上调。",
             model_news_amd: "<strong>AMD <span class=\"news-revision news-revision-negative\">−0.96%</span>：</strong>加入收购相关的预计股权稀释，未上调经营预测。",
-            model_news_micron: "<strong>美光 (MU) <span class=\"news-revision news-revision-neutral\">0%</span>：</strong>更高的供应协议覆盖率使研究报告Base评分从88升至90，目标价和Excel Base评分99保持不变。",
+            model_news_micron: "<strong>美光 (MU) <span class=\"news-revision news-revision-neutral\">0%</span>：</strong>更高的供应协议覆盖率使研究报告基础分从88升至90，目标价和工作簿基础分99保持不变。",
             portfolio_news_label: "\u80a1\u7968\u8986\u76d6\u66f4\u65b0",
             portfolio_news_title: "\u65b0\u589e10\u53ea\u80a1\u7968\uff1b\u94e0\u4fa0\u57fa\u7840\u520690\uff0cMETA\u57fa\u7840\u520699",
             portfolio_news_date: "\u53d1\u5e03\uff1a2026\u5e749\u670821\u65e5 14:13 EDT",
@@ -498,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hint_text: '点击股票代码 <span class="hint-arrow">↗</span> 查看深度分析',
             col_Ticker: '代码',
             col_Total: '总分',
-            col_EVUp: 'EV 上涨',
+            col_EVUp: '概率加权上涨空间',
             col_UpsideMix: '上涨驱动',
             mix_r: '重估',
             mix_g: '增长',
@@ -516,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
             col_FY30: "FY'30",
             caption_FY27: '市场前瞻约 12 个月 — 即今日合理估值',
             caption_FY28: '约 1 年后的合理估值',
-            caption_EVUp: 'EV 上涨使用 2027 年第三季度目标价和当前股价。显示倍数 =（基础分 / 100）×（目标价 / 当前股价），包含所选估值倍数。例：4.3x ≈ 330% 预期涨幅。低于 1.0x 表示概率加权回报为负。DRAM 则使用其持仓 EV 上涨分数的加权平均值。',
+            caption_EVUp: '概率加权上涨空间使用 2027 年第三季度目标价和当前股价。显示倍数 =（基础分 / 100）×（目标价 / 当前股价），包含所选估值倍数。例：4.3x ≈ 330% 预期涨幅。低于 1.0x 表示概率加权回报为负。DRAM 则使用其持仓 概率加权上涨空间分数的加权平均值。',
             archive_show: '显示研究存档（{n}）',
             archive_hide: '隐藏研究存档',
             modal_updated: '分析更新于 {date}',
@@ -536,11 +536,11 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_close_label: '关闭深度分析',
             hint_dismiss_label: '关闭提示',
             mult_label: '估值倍数',
-            mult_name_20: 'Base', mult_name_25: 'Bull', mult_name_30: 'Bull+',
-            mult_tip_20: 'Base — 按模型目标价',
-            mult_tip_25: 'Bull — 所有目标价较 Base 上调 25%',
-            mult_tip_30: 'Bull+ — 所有目标价较 Base 上调 50%',
-            mult_banner: '{scenario} 目标价 — 较 Base 高 {p}%',
+            mult_name_20: '基准', mult_name_25: '乐观', mult_name_30: '更乐观',
+            mult_tip_20: '基准情景，采用模型目标价',
+            mult_tip_25: '乐观情景，所有目标价较基准 上调 25%',
+            mult_tip_30: '更乐观情景，所有目标价较基准 上调 50%',
+            mult_banner: '{scenario} 目标价 — 较基准高 {p}%',
             watchlist_label: '自选',
             watchlist_btn: '自选股',
             watchlist_add: '加入自选',
@@ -565,6 +565,17 @@ document.addEventListener('DOMContentLoaded', () => {
     I18N['zh-CN'].pdf_hint = '\u5982\u679c\u9884\u89c8\u65e0\u6cd5\u663e\u793a\uff0c\u8bf7\u5728\u65b0\u6807\u7b7e\u9875\u6253\u5f00 PDF\u3002';
     Object.assign(I18N.en, {
         hint_text: 'Click a highlighted stock to read its research report',
+        follow: "Follow the author",
+        on_x: "@StocksMathPoker on X",
+        on_tv: "TalentedInvestor on TradingView",
+        dark_theme: "Dark mode",
+        light_theme: "Light mode",
+        browser_label: "Company browser",
+        controls_label: "Company controls",
+        reader_nav: "Deep-dive navigation",
+        close_etf: "Close ETF information",
+        etf_name: "DRAM - Roundhill Memory ETF",
+        companies_loading: "Loading companies…",
         report_title: '{company} · Research', report_back: 'Back to list',
         report_updated: 'Report saved {date}',
         report_smaller: 'Zoom out', report_larger: 'Zoom in', report_fit: 'Fit',
@@ -581,6 +592,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     Object.assign(I18N['zh-CN'], {
         hint_text: '点击突出显示的股票，阅读研究报告',
+        follow: "关注作者",
+        on_x: "X 账号 @StocksMathPoker",
+        on_tv: "TradingView 账号 TalentedInvestor",
+        dark_theme: "深色模式",
+        light_theme: "浅色模式",
+        browser_label: "浏览公司",
+        controls_label: "公司筛选与显示设置",
+        reader_nav: "切换研究报告",
+        close_etf: "关闭 ETF 资料",
+        etf_name: "DRAM · Roundhill 存储芯片 ETF",
+        companies_loading: "正在加载公司…",
         report_title: '{company} · 研究报告', report_back: '返回列表',
         report_updated: '报告保存日期 {date}',
         report_smaller: '缩小', report_larger: '放大', report_fit: '适应宽度',
@@ -667,6 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         document.documentElement.lang = currentLang === 'zh-CN' ? 'zh-CN' : 'en';
+        window.Mandarin.apply(currentLang);
         document.dispatchEvent(new Event('portfolio:languagechange'));
     }
     // Header label for a column. Looks up the English display name first
@@ -684,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const labelFor = (col) => {
         if (col === '_chart') return '';
         // Quarter headers are language-neutral ("Q4'26") — return directly.
-        if (QUARTER_COLS.indexOf(col) !== -1) return displayNames[col];
+        if (QUARTER_COLS.indexOf(col) !== -1) return currentLang === 'zh-CN' ? window.Mandarin.quarter(col) : displayNames[col];
         const eng = displayNames[col] || col;
         const label = tr(`col_${eng}`);
         const capKey = COL_CAPTION_KEYS[col];
@@ -700,7 +723,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Language preference persists across reloads.
     const LANG_STORAGE_KEY = 'currentLang';
     let currentLang = (() => {
-        const stored = localStorage.getItem(LANG_STORAGE_KEY);
+        const explicit = new URL(location.href).searchParams.get('lang');
+        if (explicit === 'en' || explicit === 'zh-CN') return explicit;
+        let stored;
+        try { stored = localStorage.getItem(LANG_STORAGE_KEY); } catch (_) {}
         return (stored === 'en' || stored === 'zh-CN') ? stored : 'en';
     })();
     // Default sort: EV Upside, descending — the table opens ranked by the
@@ -866,6 +892,11 @@ document.addEventListener('DOMContentLoaded', () => {
             langBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentLang = btn.getAttribute('data-lang');
+            const url = new URL(location.href);
+            if (url.searchParams.has('lang')) {
+                url.searchParams.set('lang', currentLang);
+                history.replaceState(history.state, '', url);
+            }
             try { localStorage.setItem(LANG_STORAGE_KEY, currentLang); } catch (_) {}
             applyChromeTranslations();
             // The multiple banner is built from tr() but carries no data-i18n
@@ -874,6 +905,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // rather than inside applyChromeTranslations because that also runs
             // at init, before multPills is declared — a TDZ error.
             syncMultiplePillsUI();
+            updateLiveStatus();
             renderData();
         });
     });
@@ -1013,7 +1045,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const companies = new Map((data?.[currentLang] || data?.en || []).map(row => [row.Ticker, row.Name || row.Ticker]));
             headlineStories = slides.flatMap(slide => {
                 const entries = window.NewsHeadlines.fromSlide(slide, currentLang)
-                    .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies));
+                    .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies))
+                    .map(entry => currentLang === 'zh-CN' ? window.Mandarin.headline(entry, companies) : entry);
                 const shown = entries.filter(entry => !starredOnly || entry.tickers.some(ticker => watchlist.has(ticker)));
                 const unique = [...new Map(shown.map(entry => [[entry.company, entry.change, entry.metric].join('|'), entry])).values()];
                 return unique.length ? [{slide, entries: unique}] : [];
@@ -1129,6 +1162,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         document.addEventListener('visibilitychange', syncMotion);
         document.addEventListener('portfolio:languagechange', refreshNews);
+        document.addEventListener('portfolio:newstranslated', refreshNews);
         document.addEventListener('portfolio:watchlistchange', () => {
             if (starredOnly) refreshNews();
         });
@@ -1273,12 +1307,12 @@ document.addEventListener('DOMContentLoaded', () => {
         reportShareStatus.textContent = '';
         reportCopyLink.textContent = tr('report_copy_link');
         reportShareUrl.hidden = true;
-        reportShareUrl.value = ticker ? window.ReportLinks.share(location.href, ticker) : '';
+        reportShareUrl.value = ticker ? window.ReportLinks.share(location.href, ticker, currentLang) : '';
     }
     async function copyReportLink(inDialog = false) {
         const ticker = activeReportTicker;
         if (!deepDiveAvailable.has(ticker)) return;
-        const link = window.ReportLinks.share(location.href, ticker);
+        const link = window.ReportLinks.share(location.href, ticker, currentLang);
         const status = inDialog ? shareDialogStatus : reportShareStatus;
         const input = inDialog ? shareDialogUrl : reportShareUrl;
         try {
@@ -1314,14 +1348,14 @@ document.addEventListener('DOMContentLoaded', () => {
     reportShareButton.addEventListener('click', () => {
         const ticker = activeReportTicker;
         if (!deepDiveAvailable.has(ticker)) return;
-        const row = ((window.PORTFOLIO_DATA || {}).en || []).find(row => row.Ticker === ticker);
-        const company = row?.Name || ticker;
-        const title = company + ' (' + ticker + ') · 1amInvesting Research';
-        reportShareData = {title, text:title, url:window.ReportLinks.share(location.href, ticker)};
+        const row = ((window.PORTFOLIO_DATA || {})[currentLang] || []).find(row => row.Ticker === ticker);
+        const company = currentLang === 'zh-CN' ? window.Mandarin.name(ticker, row?.Name) : row?.Name || ticker;
+        const title = company + ' (' + ticker + (currentLang === 'zh-CN' ? ') · 1amInvesting 研究报告' : ') · 1amInvesting Research');
+        reportShareData = {title, text:title, url:window.ReportLinks.share(location.href, ticker, currentLang)};
         document.getElementById('report-share-company').textContent = company + ' · ' + ticker;
         const options = document.getElementById('report-share-options');
         options.replaceChildren();
-        for (const item of window.ReportLinks.social(location.href, ticker, title)) {
+        for (const item of window.ReportLinks.social(location.href, ticker, title, currentLang)) {
             const link = document.createElement('a');
             link.className = 'share-option share-' + item.id;
             link.href = item.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
@@ -1419,7 +1453,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // users can find tickers by either language.
             const enName = (row.Name || '').trim();
             const localName = ((langData[i] && langData[i].Name) || enName).trim();
-            out.push({ ticker, displayName: currentLang === 'en' ? TAIWAN_ENGLISH_NAMES[ticker] || localName : localName, enName });
+            out.push({ ticker, displayName: currentLang === 'en' ? TAIWAN_ENGLISH_NAMES[ticker] || localName : window.Mandarin.name(ticker, localName), enName });
         }
         return out;
     }
@@ -1619,7 +1653,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (row._baseCustom) textElement('p', window.PersonalBase.labels(currentLang).etf).className = 'etf-model-note';
         if (row._synthetic.ev_method === 'weighted') {
             textElement('p', zh
-                ? 'EV Upside 为各持仓 EV Upside 的加权平均值，使用当前价格和有效目标季度。Base 分数单独取加权平均值。'
+                ? 'DRAM 的概率加权上涨空间按各持仓的对应指标加权计算，采用当前股价和目标季度。基础分按持仓权重单独计算。'
                 : 'EV Upside is the weighted average of the holdings’ EV Upside scores, using current prices and the active target quarter. Base is averaged separately.');
         }
         textElement('p', copy.note).className = 'etf-model-note';
@@ -1659,12 +1693,12 @@ document.addEventListener('DOMContentLoaded', () => {
         deepDiveContent.classList.remove('modal-chart');
         deepDiveContent.classList.add('modal-pdf');
         dismissHint(true);
-        const rows = (window.PORTFOLIO_DATA || {}).en || [];
+        const rows = (window.PORTFOLIO_DATA || {})[currentLang] || [];
         const row = rows.find(r => String(r.Ticker || '').trim() === ticker);
-        deepDiveTitle.textContent = tr('report_title', { company: row?.Name || ticker });
+        deepDiveTitle.textContent = tr('report_title', { company: currentLang === 'zh-CN' ? window.Mandarin.name(ticker, row?.Name) : row?.Name || ticker });
         const saved = new Date(artifact.updated || '');
         if (Number.isFinite(saved.getTime())) {
-            const date = new Intl.DateTimeFormat('en-CA', {
+            const date = new Intl.DateTimeFormat(currentLang === 'zh-CN' ? 'zh-CN' : 'en-CA', {
                 timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit'
             }).format(saved);
             const stamp = document.createElement('span');
@@ -1873,6 +1907,17 @@ document.addEventListener('DOMContentLoaded', () => {
             studies: 'MASimple@tv-basicstudies',
             hideideas: '1',
         });
+        if (currentLang === 'zh-CN') {
+            const up = isLight ? '#b42332' : '#fb8890';
+            const down = isLight ? '#087348' : '#43dba4';
+            const candles = {};
+            for (const prefix of ['', 'border', 'wick']) {
+                candles['mainSeriesProperties.candleStyle.' + (prefix ? prefix + 'UpColor' : 'upColor')] = up;
+                candles['mainSeriesProperties.candleStyle.' + (prefix ? prefix + 'DownColor' : 'downColor')] = down;
+            }
+            params.set('overrides', JSON.stringify(candles));
+            params.set('studies_overrides', JSON.stringify({'volume.volume.color.0':down, 'volume.volume.color.1':up}));
+        }
         const iframeSrc = `https://www.tradingview.com/widgetembed/?${params.toString()}`;
         // Direct link to TradingView's own chart page — persistent escape
         // hatch in the top-right of the modal. Always visible, so even if
@@ -2137,11 +2182,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // the heartbeat timer so the "Xs ago" counter keeps ticking visibly.
     function formatAgo(ms) {
         const sec = Math.max(0, Math.floor(ms / 1000));
-        if (sec < 60) return `${sec}s ago`;
+        if (sec < 60) return currentLang === 'zh-CN' ? sec + '秒前' : `${sec}s ago`;
         const min = Math.floor(sec / 60);
-        if (min < 60) return `${min}m ago`;
+        if (min < 60) return currentLang === 'zh-CN' ? min + '分钟前' : `${min}m ago`;
         const hr = Math.floor(min / 60);
-        return `${hr}h ago`;
+        return currentLang === 'zh-CN' ? hr + '小时前' : `${hr}h ago`;
     }
     // The pill reports DATA freshness (live.json's own generation
     // timestamp), not fetch freshness. Two states:
@@ -2197,6 +2242,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const fullData = window.PORTFOLIO_DATA;
             if (!fullData || !fullData[currentLang]) return;
             const data = personalBases.project(fullData[currentLang]);
+            if (currentLang === 'zh-CN') {
+                for (const row of data) row.Name = window.Mandarin.name(row.Ticker, row.Name);
+            }
             displayRows = data;
             const enData = fullData['en'] || data;
             marketCapFilter?.setLabels(marketCapLabels());
@@ -2380,7 +2428,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const sortChoice = Object.entries(CARD_SORTS).find(([,state]) => state.col === sortState.col && state.asc === sortState.asc);
         document.getElementById('company-sort').value = sortChoice ? sortChoice[0] : 'table-order';
         const labels = {
-            ev: tr('cards_ev'), priceTarget: tr('cards_price_target'), driver: tr('cards_driver'), horizon: tr('cards_horizon', {quarter: TARGET_QUARTER}),
+            ev: tr('cards_ev'), priceTarget: tr('cards_price_target'), driver: tr('cards_driver'), language: currentLang, horizon: tr('cards_horizon', {quarter: currentLang === 'zh-CN' ? window.Mandarin.quarter(TARGET_QUARTER) : TARGET_QUARTER}),
             open: tr('cards_open'), star: tr('watchlist_add'), unstar: tr('watchlist_remove'),
             report: tr('cards_report'), chart: tr('cards_chart'), etf: tr('cards_etf'), table: tr('table_view'),
             modelOverview: tr('cards_overview'), price: tr('cards_price'), dailyChange: tr('cards_daily_change'), base: tr('cards_base'),
@@ -2390,15 +2438,16 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         const cards = shown.map(row => {
             const priceTarget = cardPriceTarget(row);
+            const cap = window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker), currentLang);
             const quoteCurrency = marketCapFilter?.currency(row.Ticker) || (row.Ticker === 'DRAM' ? 'USD' : '');
             return {
                 ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
-                marketCap: row._synthetic ? tr('cap_etf') : window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker)) ? window.MarketCaps.usd(marketCapFilter.amount(row.Ticker)) + ' USD' : tr('cap_unavailable'),
+                marketCap: row._synthetic ? tr('cap_etf') : cap ? cap + (currentLang === 'zh-CN' ? '' : ' USD') : tr('cap_unavailable'),
                 ev: formatCell('EV Upside', row['EV Upside'], row), priceTarget, calculation: targetCalculation(row, priceTarget, quoteCurrency), driver: formatCell('_upsideMix', null, row),
                 price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
                 dailyChange: row['Change %'], quoteCurrency,
                 starred: watchlist.has(row.Ticker), archived: row._displayRank === '—', hasReport: deepDiveAvailable.has(row.Ticker), isEtf: !!row._synthetic,
-                quarters: QUARTER_COLS.map(q => ({label: displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
+                quarters: QUARTER_COLS.map(q => ({label: currentLang === 'zh-CN' ? window.Mandarin.quarter(q) : displayNames[q], html: formatCell(q, row[q], row), active: q === TARGET_QUARTER}))
             };
         });
         cardBrowser.render(cards, labels);
@@ -2887,9 +2936,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Change %: color-code green for positive, red for negative.
         if (colName === 'Change %') {
             const str = String(value).trim();
-            const num = parseFloat(str.replace(/[+%\s]/g, ''));
+            const num = parseFloat(str.replace('−', '-').replace(/[+%\s]/g, ''));
             if (isNaN(num)) return str;
-            const color = num > 0 ? '#10b981' : (num < 0 ? '#ef4444' : 'var(--text-secondary)');
+            const color = num > 0 ? 'var(--move-up, #10b981)' : (num < 0 ? 'var(--move-down, #ef4444)' : 'var(--text-secondary)');
             return `<span style="color: ${color}; font-weight: 600;">${str}</span>`;
         }
 
@@ -2917,7 +2966,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const pcts = quarterPctChanges(row);
                 if (pcts.has(colName)) {
                     const pct = pcts.get(colName);
-                    const cls = pct >= 0 ? 'fy-pct fy-pos qoq-badge' : 'fy-pct fy-neg qoq-badge';
+                    const cls = 'fy-pct qoq-badge ' + (Math.round(pct) === 0 ? 'fy-flat' : pct > 0 ? 'fy-pos' : 'fy-neg');
                     const pctStr = `${pct >= 0 ? '+' : ''}${Math.round(pct)}%`;
                     return `${out}<span class="${cls}">${pctStr}</span>`;
                 }
@@ -2962,7 +3011,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // The color tiers (evUpsideStyle) still key off the raw score v, and
             // data.js stores the bare number, so sorting (which reads the raw
             // value) is unaffected.
-            return `<span class="badge ev-badge ${t.cls}" style="background:${t.bg};color:${t.text};">${(1 + v / 100).toFixed(1)}x</span>`;
+            return `<span class="badge ev-badge ${t.cls} ${v > 0 ? 'ev-up' : v < 0 ? 'ev-down' : 'ev-flat'}" style="background:${t.bg};color:${t.text};">${(1 + v / 100).toFixed(1)}x</span>`;
         }
 
         // Score Badge Styling (Base, Entry) — continuous red → yellow → green gradient

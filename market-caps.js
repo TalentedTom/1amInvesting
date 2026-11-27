@@ -1,7 +1,12 @@
 (function (root) {
     'use strict';
     const valid = n => typeof n === 'number' && Number.isFinite(n) && n > 0;
-    const usd = n => valid(n) || n === 0 ? new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', notation: 'compact', maximumFractionDigits: 1}).format(n) : null;
+    const compactUsd = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', notation:'compact', maximumFractionDigits:1});
+    const compactChinese = new Intl.NumberFormat('zh-CN', {notation:'compact', maximumFractionDigits:1});
+    function usd(n, locale) {
+        if (!valid(n) && n !== 0) return null;
+        return locale === 'zh-CN' ? compactChinese.format(n) + '美元' : compactUsd.format(n);
+    }
     const fromSlider = (n, upper = false) => upper && n >= 1000 ? Infinity : n <= 0 ? (upper ? 1e6 : 0) : 10 ** (6 + (n - 1) / 999 * 8);
     const toSlider = n => n === Infinity ? 1000 : n <= 0 ? 0 : Math.max(1, Math.min(1000, Math.round(1 + (Math.log10(n) - 6) / 8 * 999)));
     const active = range => range.min > 0 || range.max < Infinity;
@@ -81,10 +86,11 @@
         function sync() {
             container.querySelectorAll('[data-cap-label]').forEach(el => el.textContent = labels[el.dataset.capLabel] || '');
             min.value = toSlider(range.min); max.value = toSlider(range.max); unknown.checked = range.includeUnknown;
-            const low = usd(range.min), high = range.max === Infinity ? labels.any : usd(range.max);
+            const low = usd(range.min, labels.locale), high = range.max === Infinity ? labels.any : usd(range.max, labels.locale);
             container.querySelector('#market-cap-min-value').textContent = low;
             container.querySelector('#market-cap-max-value').textContent = high;
-            min.setAttribute('aria-valuetext', low + ' USD'); max.setAttribute('aria-valuetext', high === labels.any ? high : high + ' USD');
+            const currency = labels.locale === 'zh-CN' ? '' : ' USD';
+            min.setAttribute('aria-valuetext', low + currency); max.setAttribute('aria-valuetext', high === labels.any ? high : high + currency);
             const regionSummary = regions.length ? regions.map(r => labels.regions[r]).join(', ') : labels.allRegions;
             container.querySelector('#market-cap-summary').textContent = regionSummary + ' · ' + (active(range) ? low + ' – ' + high : labels.all);
             container.classList.toggle('cap-active', active(range) || regions.length > 0);

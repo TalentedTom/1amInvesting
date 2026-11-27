@@ -435,6 +435,14 @@ don't rebind it per render.
   on a comparable share basis. A rounded percentage cannot establish a prior price.
   Keep all public article copy and dates intact. Verify with
   `node --test tests/news-headlines.test.cjs` before publishing new headline entries.
+- The 简体中文 edition includes both news lanes and full article text. After a public
+  bulletin or its headline changes, update the corresponding public strings in
+  `news-zh.json`. Run `python scripts/translate_public_news.py` to check coverage
+  and percentages. The optional `--update` drafts missing translations from the
+  public website. Review estimates, dates, currency units, directions and scenario
+  conditions before publishing. Include updated translations in the same release.
+  Chinese uses red for increases and green for decreases. All display translations
+  live on the website. Research PDFs retain their original text.
   The Starred toggle uses the existing symbol watchlist and saves its own
   preference. Both lanes and expanded navigation follow that filter. Shared
   article permalinks still open directly. Associate new headline entries with

@@ -286,7 +286,8 @@
         ];
         const quarter = (slide.querySelector('.news-title')?.textContent + ' ' +
             slide.querySelector('.news-ceilings-heading h2')?.textContent).match(/Q([1-4])\s+(20\d{2})/);
-        const metric = (quarter ? 'Q' + quarter[1] + '’' + quarter[2].slice(2) + ' ' : '') +
+        const localQuarter = chinese && ['nand-news', 'model-ceiling-news'].includes(slide.id) ? '2027年第三季度' : '';
+        const metric = (localQuarter || (quarter ? 'Q' + quarter[1] + '’' + quarter[2].slice(2) + ' ' : '')) +
             pick('model target', '模型目标价');
         const revisions = Array.from(slide.querySelectorAll('.news-model-list li[data-news-ticker]')).flatMap(item => {
             const revision = item.querySelector('.news-revision'), strong = item.querySelector('strong');
@@ -329,6 +330,6 @@
             reason:slide.querySelector('.news-story')?.textContent.trim() || ''}];
     }
     const api = {tone, shortReason, render, fromSlide, companyEntries};
-    if (typeof module !== 'undefined' && module.exports) module.exports = api;
+    if (typeof module !== 'undefined' && module.exports) module.exports = {...api, research: RESEARCH};
     else root.NewsHeadlines = api;
 })(typeof window !== 'undefined' ? window : globalThis);

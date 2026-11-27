@@ -2562,3 +2562,41 @@ body.light-mode .base-score-dialog [data-base-status] { color: #b91c1c; }
 .news-revision-summary > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 9px; padding: 6px 10px; border-left: 2px solid var(--accent); background: var(--row-hover); font-size: .82rem; }
 .news-revision-summary .news-driver { flex-basis: 100%; }
 .news-revision-detail { font-size: .76rem; font-variant-numeric: tabular-nums; }
+
+/* Mainland market convention. A flat quote or model revision is neutral. */
+html[lang="zh-CN"] body {
+    --move-up: #fb8890;
+    --move-down: #43dba4;
+}
+html[lang="zh-CN"] body.light-mode {
+    --move-up: #b42332;
+    --move-down: #087348;
+}
+html[lang="zh-CN"] body :is(.quote-positive, .fy-pos, .news-revision) { color: var(--move-up); }
+html[lang="zh-CN"] body :is(.quote-negative, .fy-neg, .news-revision.news-revision-negative) { color: var(--move-down); }
+html[lang="zh-CN"] body .news-revision.news-revision-neutral, .fy-flat { color: var(--text-secondary); }
+html[lang="zh-CN"] body .badge.ev-badge {
+    animation: none;
+    box-shadow: none;
+    border-color: var(--border);
+}
+html[lang="zh-CN"] body .badge.ev-badge.ev-up {
+    background: #982a37 !important;
+    color: white !important;
+}
+html[lang="zh-CN"] body .badge.ev-badge.ev-200 { background: #ab2333 !important; }
+html[lang="zh-CN"] body .badge.ev-badge.ev-100 { background: #b72d3b !important; }
+html[lang="zh-CN"] body .badge.ev-badge.ev-up:is(.ev-0, .ev-50) {
+    background: color-mix(in srgb, var(--move-up) 12%, transparent) !important;
+    color: var(--move-up) !important;
+}
+html[lang="zh-CN"] body .badge.ev-badge.ev-down {
+    background: #0c6947 !important;
+    color: white !important;
+}
+html[lang="zh-CN"] body .card-ev .badge.ev-badge:is(.ev-up, .ev-down, .ev-flat) {
+    background: transparent !important;
+}
+html[lang="zh-CN"] body .card-ev .badge.ev-badge.ev-up { color: var(--move-up) !important; }
+html[lang="zh-CN"] body .card-ev .badge.ev-badge.ev-down { color: var(--move-down) !important; }
+html[lang="zh-CN"] body .card-ev .badge.ev-badge.ev-flat { color: var(--text-secondary) !important; }

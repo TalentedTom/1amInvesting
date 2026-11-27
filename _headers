@@ -67,3 +67,12 @@
 
 /sw.js
   Cache-Control: no-store
+
+/mandarin.js
+  Cache-Control: no-cache
+
+/company-names-zh.js
+  Cache-Control: no-cache
+
+/news-zh.json
+  Cache-Control: no-cache

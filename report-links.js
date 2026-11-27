@@ -18,14 +18,14 @@
         if (ticker !== null) url.searchParams.set('report', ticker);
         return url.href;
     }
-    function share(href, ticker) {
+    function share(href, ticker, language = 'en') {
         const url = new URL(href);
         url.search = ''; url.hash = '';
-        url.pathname = '/r/' + encodeURIComponent(ticker) + '/';
+        url.pathname = '/r/' + encodeURIComponent(ticker) + (language === 'zh-CN' ? '/zh/' : '/');
         return url.href;
     }
-    function social(href, ticker, title) {
-        const link = share(href, ticker);
+    function social(href, ticker, title, language = 'en') {
+        const link = share(href, ticker, language);
         function target(base, params) {
             const url = new URL(base);
             url.search = new URLSearchParams(params).toString();
@@ -37,7 +37,7 @@
             {id:'whatsapp', label:'WhatsApp', url:target('https://wa.me/', {text:title + '\n' + link})},
             {id:'linkedin', label:'LinkedIn', url:target('https://www.linkedin.com/sharing/share-offsite/', {url:link})},
             {id:'telegram', label:'Telegram', url:target('https://t.me/share/url', {url:link, text:title})},
-            {id:'email', label:'Email', url:'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(title + '\n\n' + link)}
+            {id:'email', label:language === 'zh-CN' ? '电子邮件' : 'Email', url:'mailto:?subject=' + encodeURIComponent(title) + '&body=' + encodeURIComponent(title + '\n\n' + link)}
         ];
     }
     const api = { requested, resolve, route, share, social };
