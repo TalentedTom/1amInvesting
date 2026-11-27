@@ -7,6 +7,10 @@
     const escape = value => String(value ?? '').replace(/[&<>"']/g, c =>
         ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const RESEARCH = {
+"lightwave-logic-now-expects-volume-production-to-begin-in-2028-20261126": {"en":[{"company":"Lightwave Logic (LWLG)","change":"−87%","metric":"Q4’27 model target revision"}]},
+"twist-bioscience-projects-550-million-to-560-million-of-fiscal-2027-revenue-20261126": {"en":[{"company":"Twist Bioscience (TWST)","change":"−100%","metric":"Q4’27 model target revision"}]},
+"enersys-reports-3-22-in-adjusted-earnings-per-share-for-its-fiscal-second-quarter-20261126": {"en":[{"company":"EnerSys (ENS)","change":"−3.9%","metric":"Q4’27 model target revision"}]},
+"aevex-raises-its-2026-revenue-outlook-to-820-million-840-million-20261126": {"en":[{"company":"AEVEX (AVEX)","change":"+97.5%","metric":"Q4’27 model target revision"}]},
 "sea-s-revenue-rises-43-as-its-lending-business-expands-20261126": {"en":[{"company":"Sea (SE)","change":"≈−0.3%","metric":"Q4’27 model target revision"}]},
 "msscorps-reports-32-quarterly-sales-growth-and-demonstrates-its-optical-test-equipment-20261126": {"en":[{"company":"MSSCORPS (6830.TWO)","change":"≈−16.3%","metric":"Q4’27 model target revision"}]},
 "five9-buys-level-ai-for-325-million-in-cash-20261126": {"en":[{"company":"Five9 (FIVN)","change":"≈−2.9%","metric":"Q4’27 model target revision"}]},
