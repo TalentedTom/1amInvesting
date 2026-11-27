@@ -1410,8 +1410,10 @@
         </section>
 
         <section class="explore-toolbar" aria-label="Company browser" data-i18n-attr="aria-label:browser_label">
-            <div>
+            <div class="company-heading">
                 <h2 class="explore-title" data-i18n="cards_title">Explore companies</h2>
+                <a id="account-link" href="/account/" hidden>Sign in</a>
+                <button type="button" id="account-feedback" hidden aria-live="polite"></button>
             </div>
             <div class="view-switch" role="group" data-i18n-attr="aria-label:cards_view_label" aria-label="Choose your view">
                 <button type="button" data-portfolio-view="cards" aria-controls="company-browser" aria-pressed="true" data-i18n="cards_view">Company cards</button>
@@ -1566,6 +1568,9 @@
     <script src="company-descriptions.js"></script>
     <script src="model-snapshots.js"></script>
     <script src="research-tools.js"></script>
+    <script src="account-config.js"></script>
+    <script src="accounts-client.js"></script>
+    <script src="watchlist-account.js"></script>
     <script src="script.js"></script>
     <!-- Retire old dilution push subscriptions; no signup UI or alert API calls. -->
     <script src="alerts.js"></script>

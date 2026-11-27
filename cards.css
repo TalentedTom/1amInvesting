@@ -251,3 +251,8 @@ body.table-view .discovery-options .company-sort-label { display: none; }
 }
 
 .research-tools .compare-table th { text-transform:none; letter-spacing:normal; }
+
+#account-link, #account-feedback { color:var(--accent); font:600 .82rem var(--font-body); min-height:44px; align-items:center; }
+#account-link:not([hidden]), #account-feedback:not([hidden]) { display:inline-flex; }
+#account-feedback { border:0; background:transparent; cursor:pointer; }
+.company-heading { display:flex; align-items:center; gap:0 12px; flex-wrap:wrap; }

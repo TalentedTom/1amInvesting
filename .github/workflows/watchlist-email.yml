@@ -1,0 +1,25 @@
+name: Starred company email digest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 * * * *'
+permissions:
+  contents: read
+concurrency:
+  group: production-watchlist-email
+  cancel-in-progress: false
+jobs:
+  deliver:
+    if: ${{ vars.ACCOUNT_EMAIL_ENABLED == 'true' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: node scripts/send-watch-digests.cjs
+        env:
+          ACCOUNT_PROJECT_URL: ${{ vars.ACCOUNT_PROJECT_URL }}
+          ACCOUNT_FROM: ${{ vars.ACCOUNT_FROM }}
+          ACCOUNT_SERVICE_KEY: ${{ secrets.ACCOUNT_SERVICE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}

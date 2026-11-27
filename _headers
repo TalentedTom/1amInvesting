@@ -85,3 +85,14 @@
 
 /model-snapshots.js
   Cache-Control: no-cache
+
+/account/*
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  X-Frame-Options: DENY
+
+/account-config.js
+  Cache-Control: no-store
+
+/watch-updates.json
+  Cache-Control: no-store

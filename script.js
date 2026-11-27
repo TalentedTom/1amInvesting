@@ -801,9 +801,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // visitor with a blank table and no obvious cause.
     let watchlistOnly = localStorage.getItem(WATCHLIST_ONLY_KEY) === '1' && watchlist.size > 0;
 
+    let accountWatchlist = null;
     const saveWatchlist = () => {
         try {
-            localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify([...watchlist]));
+            if (!accountWatchlist || accountWatchlist.isGuest()) localStorage.setItem(WATCHLIST_STORAGE_KEY, JSON.stringify([...watchlist]));
             localStorage.setItem(WATCHLIST_ONLY_KEY, watchlistOnly ? '1' : '0');
         } catch (_) {}   // private mode / quota — feature degrades, page doesn't
     };
@@ -828,6 +829,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleWatchlist = (ticker) => {
         const sym = String(ticker || '').trim();
         if (!sym) return;
+        if (accountWatchlist?.toggle(sym,!watchlist.has(sym))) return;
         if (watchlist.has(sym)) watchlist.delete(sym);
         else watchlist.add(sym);
         // Un-starring the last name while filtering would strand the visitor
@@ -3126,6 +3128,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // a 60-second interval thereafter. Initial poll patches data
     // before the next render; subsequent polls trigger their own
     // re-render only if values actually changed (de-duped via ts).
+    accountWatchlist = window.connectAccountWatchlist({
+        language: () => currentLang,
+        replace(symbols) {
+            watchlist = new Set(symbols);
+            if (!watchlist.size) watchlistOnly = false;
+            syncWatchlistButton();
+            document.dispatchEvent(new Event('portfolio:watchlistchange'));
+            renderData();
+        }
+    });
     pollLiveData(true).then(() => renderData());
     setInterval(pollLiveData, LIVE_POLL_INTERVAL_MS);
 });
