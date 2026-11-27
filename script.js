@@ -913,6 +913,27 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtns.forEach(b => b.classList.toggle('active', b.getAttribute('data-lang') === currentLang));
     applyChromeTranslations();
 
+    function listingUnit(row) {
+        const history = window.MODEL_SNAPSHOTS?.[row.Ticker];
+        return marketCapFilter?.currency(row.Ticker) || history?.at(-1)?.inputs.currency || (row._synthetic ? 'USD' : '');
+    }
+    const listingName = row => window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES);
+    const researchTools = window.ResearchTools.create({
+        language: () => currentLang, stars: () => watchlist,
+        roster: () => displayRows.filter(r => r.Ticker).map(r => ({ticker:r.Ticker, name:listingName(r)})),
+        metrics: ticker => {
+            const row = displayRows.find(r => r.Ticker === ticker);
+            if (!row) return null;
+            const ev = parseFloat(scaledEvUpside(row));
+            const mix = upsideMix(row);
+            const dominant = mix && window.UpsideBreakdown.dominantDriver(mix);
+            const driver = dominant ? dominant.share + '% ' + tr(dominant.driver === 'growth' ? 'mix_g' : dominant.driver === 'rerating' ? 'mix_r' : 'mix_balanced') : '—';
+            return {ticker, name:listingName(row), ev:Number.isFinite(ev) ? ev : null,
+                target:cardPriceTarget(row), price:compactPriceString(row['Current Price']) || '—', unit:listingUnit(row),
+                base:row.Base == null || row.Base === '' ? '—' : Number(row.Base).toFixed(0), personal:row._baseCustom, derived:row._baseDerived, driver};
+        },
+        openArticle: (id,ticker,entryIndex) => document.dispatchEvent(new CustomEvent('portfolio:openrevision', {detail:{id,ticker,entryIndex}}))
+    });
     // Headlines scroll while minimized; expanded news stays still for reading.
     (() => {
         const carousel = document.getElementById('news-carousel');
@@ -926,6 +947,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const postedAt = slide => Date.parse(slide.querySelector('.news-timestamps time[datetime]')?.dateTime || '') || 0;
         slides.sort((a, b) => postedAt(b) - postedAt(a));
         slides.forEach(slide => viewport.appendChild(slide));
+        const researchDates = new Map(slides.map(slide => [slide.id,
+            slide.querySelector('.news-timestamps')?.textContent.match(/Research\s+(\d{4}-\d{2}-\d{2})/i)?.[1] || '']));
         const previous = document.getElementById('news-prev');
         const next = document.getElementById('news-next');
         const autoplay = document.getElementById('news-autoplay');
@@ -938,7 +961,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let starredOnly = false;
         try { starredOnly = localStorage.getItem(newsFilterKey) === '1'; } catch (_) {}
         let index = 0, paused = false, hovered = false, settleTimer;
-        let visibleSlides = slides, headlineStories = [], linkedSlide = null;
+        let visibleSlides = slides, headlineStories = [], allStories = [], linkedSlide = null;
 
         function syncMotion() {
             const state = viewport.hidden && !paused && !hovered && !ticker.contains(document.activeElement)
@@ -1043,14 +1066,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const active = visibleSlides[index];
             const data = window.PORTFOLIO_DATA;
             const companies = new Map((data?.[currentLang] || data?.en || []).map(row => [row.Ticker, row.Name || row.Ticker]));
-            headlineStories = slides.flatMap(slide => {
+            allStories = slides.flatMap(slide => {
                 const entries = window.NewsHeadlines.fromSlide(slide, currentLang)
                     .flatMap(entry => window.NewsHeadlines.companyEntries(entry, companies))
                     .map(entry => currentLang === 'zh-CN' ? window.Mandarin.headline(entry, companies) : entry);
-                const shown = entries.filter(entry => !starredOnly || entry.tickers.some(ticker => watchlist.has(ticker)));
-                const unique = [...new Map(shown.map(entry => [[entry.company, entry.change, entry.metric].join('|'), entry])).values()];
+                const unique = [...new Map(entries.map(entry => [[entry.company, entry.change, entry.metric].join('|'), entry])).values()];
                 return unique.length ? [{slide, entries: unique}] : [];
             });
+            researchTools.setNews(allStories.map(({slide,entries}) => ({id:slide.id, entries,
+                posted:slide.querySelector('.news-timestamps time[datetime]').dateTime, research:researchDates.get(slide.id)})), slides.map(slide => slide.id));
+            headlineStories = starredOnly ? allStories.map(({slide, entries}) => ({
+                slide, entries: entries.filter(entry => entry.tickers.some(ticker => watchlist.has(ticker)))
+            })).filter(story => story.entries.length) : allStories;
             const matching = new Set(headlineStories.map(story => story.slide));
             visibleSlides = starredOnly ? slides.filter(slide => slide === linkedSlide || matching.has(slide)) : slides;
             const visible = new Set(visibleSlides);
@@ -1065,7 +1092,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = slide?.querySelector('.news-content');
             if (!content) return;
             content.querySelector('.news-revision-summary')?.remove();
-            const entries = headlineStories.find(story => story.slide === slide)?.entries;
+            const entries = (slide === linkedSlide ? allStories : headlineStories).find(story => story.slide === slide)?.entries;
             if (!entries?.length) return;
             const summary = document.createElement('div');
             summary.className = 'news-revision-summary';
@@ -1106,6 +1133,18 @@ document.addEventListener('DOMContentLoaded', () => {
             expand(visibleSlides.indexOf(slide));
         }
         window.addEventListener('hashchange', openLinkedBulletin);
+        document.addEventListener('portfolio:openrevision', ({detail}) => {
+            const slide = slides.find(item => item.id === detail.id);
+            if (!slide) return;
+            linkedSlide = slide;
+            if (location.hash !== '#' + slide.id) history.pushState(history.state, '', '#' + slide.id);
+            refreshNews();
+            const story = allStories.find(item => item.slide === slide);
+            const selected = story?.entries[detail.entryIndex]?.tickers.includes(detail.ticker)
+                ? detail.entryIndex : story?.entries.findIndex(entry => entry.tickers.includes(detail.ticker)) ?? 0;
+            expand(visibleSlides.indexOf(slide), Math.max(0, selected));
+            carousel.scrollIntoView({block:'start', behavior:'instant'});
+        });
         ticker.addEventListener('click', event => {
             const button = event.target.closest('[data-news-article]');
             if (button) expand(visibleSlides.findIndex(slide => slide.id === button.dataset.newsArticle), Number(button.dataset.entryIndex));
@@ -1165,6 +1204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('portfolio:newstranslated', refreshNews);
         document.addEventListener('portfolio:watchlistchange', () => {
             if (starredOnly) refreshNews();
+            else researchTools.watchlistChanged();
         });
         reducedMotion.addEventListener('change', updateControls);
         desktopNews.addEventListener('change', buildHeadlines);
@@ -2404,6 +2444,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ].some(value => String(value || '').toLocaleLowerCase().includes(companyQuery))) : validData;
             buildTable(shown);
             buildCompanyCards(shown);
+            researchTools.refresh();
         } catch (err) {
             console.error("Failed to load data:", err);
             document.getElementById('table-body').innerHTML = `
@@ -2439,9 +2480,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const cards = shown.map(row => {
             const priceTarget = cardPriceTarget(row);
             const cap = window.MarketCaps.usd(marketCapFilter?.amount(row.Ticker), currentLang);
-            const quoteCurrency = marketCapFilter?.currency(row.Ticker) || (row.Ticker === 'DRAM' ? 'USD' : '');
+            const quoteCurrency = listingUnit(row);
             return {
                 ticker: row.Ticker, name: window.CompanyCards.companyName(row, currentLang, TAIWAN_ENGLISH_NAMES), logo: companyLogoSrc(row.Ticker),
+                description: window.COMPANY_DESCRIPTIONS[row.Ticker]?.[currentLang === 'zh-CN' ? 1 : 0] || '',
+                historyLabel: researchTools.stamp(row.Ticker), historyAction:window.ResearchTools.copy[currentLang].history,
+                compareLabel:window.ResearchTools.copy[currentLang].compare,
                 marketCap: row._synthetic ? tr('cap_etf') : cap ? cap + (currentLang === 'zh-CN' ? '' : ' USD') : tr('cap_unavailable'),
                 ev: formatCell('EV Upside', row['EV Upside'], row), priceTarget, calculation: targetCalculation(row, priceTarget, quoteCurrency), driver: formatCell('_upsideMix', null, row),
                 price: formatCell('Current Price', row['Current Price'], row), base: formatCell('Base', row.Base, row), upside: scaledUpside(row),
@@ -3056,6 +3100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // .has-deep-dive class lands on the right tickers.
     cardBrowser = window.CompanyCards.create({
         grid: document.getElementById('company-grid'), dialog: document.getElementById('company-overview'),
+        onResearchTool: (mode, ticker, opener) => researchTools.open(mode, ticker, opener),
         onStar: toggleWatchlist, onChart: openChart, onReport: openDeepDive, onEtf: openEtfInfo,
         onTable: ticker => {
             setPortfolioView('table');

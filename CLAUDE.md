@@ -473,6 +473,12 @@ don't rebind it per render.
 
 ---
 
+## Company profiles and research history
+
+When adding a listing, add one short business description in English and Simplified Chinese to `company-descriptions.js`. Cards and company overviews share these descriptions. The comparison uses the same active targets, listing currencies, prices and visitor Base settings as the company view.
+
+`update_data.py` records changes to published quarterly forecasts, original Base scores and synthetic holdings in `model-snapshots.js`. Include this file with changed data on publication. The initial history uses dated public portfolio revisions. A first snapshot establishes a baseline. Research bulletin entries retain their own quarter, units and dates. The starred update count uses article IDs saved in the visitor’s browser.
+
 ## NEW MACHINE SETUP
 
 1. `git clone https://github.com/TalentedTom/1amInvesting.git`

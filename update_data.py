@@ -280,6 +280,11 @@ def main():
             if proc.returncode != 0:
                 sys.stderr.write(proc.stderr)
                 print(f"score.py exited {proc.returncode} (continuing).")
+            else:
+                history_path = os.path.join(os.path.dirname(score_path), "model_snapshots.py")
+                history_run = subprocess.run([sys.executable, history_path])
+                if history_run.returncode:
+                    raise SystemExit(history_run.returncode)
         
     except Exception as e:
         print(f"Error extracting data: {e}")

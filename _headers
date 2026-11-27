@@ -76,3 +76,12 @@
 
 /news-zh.json
   Cache-Control: no-cache
+
+/company-descriptions.js
+  Cache-Control: no-cache
+
+/research-tools.js
+  Cache-Control: no-cache
+
+/model-snapshots.js
+  Cache-Control: no-cache

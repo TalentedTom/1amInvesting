@@ -135,6 +135,7 @@
                 </div>
                 <div class="news-carousel-controls">
                     <button type="button" class="news-starred" id="news-starred" aria-pressed="false" aria-controls="news-ticker news-viewport" aria-label="Starred news only" data-i18n-attr="aria-label:news_starred_only,title:news_starred_only"><span aria-hidden="true">★</span><span data-i18n="news_starred">Starred</span></button>
+                    <button type="button" class="news-updates" id="news-updates" aria-haspopup="dialog" aria-controls="research-tools">Updates</button>
                     <button type="button" id="news-prev" aria-controls="news-viewport" aria-label="Previous bulletin" data-i18n-attr="aria-label:news_previous,title:news_previous">&lsaquo;</button>
                     <span id="news-position">1 / 7</span>
                     <button type="button" id="news-next" aria-controls="news-viewport" aria-label="Next bulletin" data-i18n-attr="aria-label:news_next,title:news_next">&rsaquo;</button>
@@ -1533,6 +1534,10 @@
         </form>
     </dialog>
 
+    <dialog id="research-tools" class="company-overview research-tools" aria-labelledby="research-tool-title">
+        <header class="research-tool-header"><h2 id="research-tool-title"></h2><button type="button" data-tool-close aria-label="Close">×</button></header>
+        <div data-research-body></div>
+    </dialog>
     <dialog id="company-overview" class="company-overview" aria-labelledby="company-overview-title">
         <button type="button" class="overview-close" data-overview-close autofocus data-i18n="cards_close">Back to companies ×</button>
         <div data-overview-content></div>
@@ -1558,6 +1563,9 @@
     <script src="company-names-zh.js"></script>
     <script src="mandarin.js"></script>
     <script src="news-headlines.js"></script>
+    <script src="company-descriptions.js"></script>
+    <script src="model-snapshots.js"></script>
+    <script src="research-tools.js"></script>
     <script src="script.js"></script>
     <!-- Retire old dilution push subscriptions; no signup UI or alert API calls. -->
     <script src="alerts.js"></script>
