@@ -196,5 +196,6 @@ window.COMPANY_DESCRIPTIONS = {
     "ASTS": ["Builds a satellite network to connect ordinary mobile phones to cellular broadband.","建设可让普通手机接入移动宽带的卫星网络。"],
     "RKLB": ["Builds rockets and spacecraft and provides launch services.","制造火箭和航天器，并提供发射服务。"],
     "LWLG": ["Develops materials that use electrical signals to control light in high-speed data links.","开发用电信号调制光信号的材料，用于高速数据互连。"],
+    "KLAC": ["Makes inspection and measurement equipment for chipmakers and services the installed tools.","为芯片制造商生产检测和量测设备，并为已安装的设备提供服务。"],
     "DRAM": ["This ETF holds a basket of memory and storage companies.","这只ETF投资于多家内存和数据存储企业。"]
 };
